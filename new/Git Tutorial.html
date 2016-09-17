@@ -287,7 +287,8 @@
       <p><u><i>Computers Elsewhere</i></u>:&nbsp; If you are working on
         computers elsewhere, you need to install Git and TortoiseGit.&nbsp;
         Installation instructions are below in 3.1 and 3.2.&nbsp; After
-        performing these installations, if your designated Git server is <span
+        performing these installations, if your designated Git server is <span
+
           class="File_Name">cci-git </span>you can proceed to Section 5. If
         your server is either&nbsp; <span class="File_Name">Bitbucket</span> or
         <span class="File_Name">git-viscenter</span>, you also need to also
@@ -365,7 +366,8 @@
                 <ol class="Instruction">
                   <li>Open a git-bash shell via Start Menu→Git→Git Bash</li>
                   <li>In the shell run plink:&nbsp; <br>
-                    <table class="Code_Example" id="Code_Example0_0" style="width: 1125px;"
+                    <table class="Code_Example" id="Code_Example0_0" style="width: 1125px;"
+
                       border="1">
                       <tbody style="height: 150px;">
                         <tr>
@@ -420,7 +422,8 @@
         </ol>
         <li>Check for SSH Keys <br>
           &nbsp;<br>
-          <table class="Code_Example" id="Code_Example0_0" style="width: 1125px;"
+          <table class="Code_Example" id="Code_Example0_0" style="width: 1125px;"
+
             border="1">
             <tbody style="height: 150px;">
               <tr>
@@ -468,158 +471,173 @@ This
             will disable your Git account at the end of the semester.)</p>
         </li>
         <li><a name="_Ref363944720"><b>Examine Your Public Key:<br>
-            </b>The public key is the file named </a><span class="Program_Name">id_rsa.pub</span>.&nbsp;&nbsp;
+            </b>The public key is the file named </a><span class="File_Name">id_rsa.pub</span>.&nbsp;&nbsp;
 Type
           the following:<br>
           <br>
-          <b><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image011.png"
+          <b><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image011.png"
+
               alt="$ cat id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCurna4/V+HziLaUCULlA8x9X3Y7814EoUE+Je3joeIBrKGWHy/LkB3jCm5GY2QaSGHyYKsFEeW+kvGhYzsgxkiUiLxD0XLYXDrHlfjkVeX+BJ10E1TlLxVDgY2lRjVq8kvEAG+/0nrU6Lj9O8Sbu/nWtQo8J8w+afHAWBQDpVMRONaSqvjB/NF4IryKaG0AXshOQkaRThIutjhmPfMmYFyMKH7MvRF2ER7IFTFMhcoNSDoXYLIQZanYSLHdm63ML1DT1eODbPa6fuaMP5z4NPCSO4Se0FbwmLuw3mVnzVuoCqk0SVIwF7yT+H4VO34sK5nLdeYJR2WS5tC0We8Vjrn student4120_wartell                         [your output should look similar]"
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCurna4/V+HziLaUCULlA8x9X3Y7814EoUE+Je3joeIBrKGWHy/LkB3jCm5GY2QaSGHyYKsFEeW+kvGhYzsgxkiUiLxD0XLYXDrHlfjkVeX+BJ10E1TlLxVDgY2lRjVq8kvEAG+/0nrU6Lj9O8Sbu/nWtQo8J8w+afHAWBQDpVMRONaSqvjB/NF4IryKaG0AXshOQkaRThIutjhmPfMmYFyMKH7MvRF2ER7IFTFMhcoNSDoXYLIQZanYSLHdm63ML1DT1eODbPa6fuaMP5z4NPCSO4Se0FbwmLuw3mVnzVuoCqk0SVIwF7yT+H4VO34sK5nLdeYJR2WS5tC0We8Vjrn student4120_wartell                         [your output should look similar]"
+
               border="0" height="164" width="562"><br>
             <br>
-          </b><span class="Program_Name">id_rsa.pub </span>is a plain text
+          </b><span class="File_Name">id_rsa.pub </span>is a plain text
           file.&nbsp;&nbsp; (Some operating systems may incorrectly identify the
-          file as some other type of file).&nbsp;&nbsp; Open <span class="Program_Name">id_rsa.pub</span>
+          file as some other type of file).&nbsp;&nbsp; Open <span class="File_Name">id_rsa.pub</span>
           using your preferred text editor (such as notepad.exe,
           etc.).&nbsp;&nbsp;&nbsp; If you ever need to copy and paste the public
           key into another application (web browser, etc.) you can do that from
           within the text editor.</li>
         <li><a name="_Ref429762632"><b>Submit Your Public Key:</b></a></li>
         <ol class="Instruction_Option">
-          <li><a name="_Ref429762632"></a><span class="Program_Name"><span style="font-family:&quot;Times New Roman&quot;,serif">[<i>YourServer</i>=</span>git-viscenter]</span><b><br>
+          <li><a name="_Ref429762632"></a><span class="File_Name"><span style="font-family:&quot;Times New Roman&quot;,serif">[<i>YourServer</i>=</span>git-viscenter]</span><b><br>
               <br>
-            </b>The file you submit <i><u>must</u></i> be renamed from <span class="Program_Name">id_rsa.pub</span>
-            to <span class="UserInputChar"><u><span style="font-size:9.0pt">your_uncc_id</span></u></span><span
-              class="Program_Name">.pub</span> where your standard UNCC email is
-            <span class="UserInputChar"><u><span style="font-size:9.0pt">your_uncc_id</span></u></span><span
-              class="Program_Name">@uncc.edu.<br>
+            </b>The file you submit <i><u>must</u></i> be renamed from <span class="File_Name">id_rsa.pub</span>
+            to <span class="UserInputChar"><u><span style="font-size:9.0pt">your_uncc_id</span></u></span><span
+
+              class="File_Name">.pub</span> where your standard UNCC email is <span
+
+              class="UserInputChar"><u><span style="font-size:9.0pt">your_uncc_id</span></u></span><span
+
+              class="File_Name">@uncc.edu.<br>
               <br>
             </span>You submit your <span class="UserInputChar"><u><span style="font-size:
-9.0pt">your_uncc_id</span></u></span><span class="Program_Name">.pub</span> file
+9.0pt">your_uncc_id</span></u></span><span class="File_Name">.pub</span> file
             via a Moodle assignment indicated by your instructor.</li>
-          <li><span class="Program_Name"><span style="font-family:&quot;Times New Roman&quot;,serif">[<i>YourServer</i>=</span>Bitbucket]</span></li>
+          <li><span class="File_Name"><span style="font-family:&quot;Times New Roman&quot;,serif">[<i>YourServer</i>=</span>Bitbucket]</span></li>
           <ol class="Instruction">
-            <li>Create a Bitbucket account as described in Section 7.3 <span class="Program_Name">Bitbucket
+            <li>Create a Bitbucket account as described in Section 7.3 <span class="File_Name">Bitbucket
                 </span>Server URL.</li>
-            <li>Login to <span class="Program_Name">Bitbucket</span> and goto <span
-                class="Program_Name">Manage Account:</span><br>
-              <img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image013.jpg"
-                border="0" height="92" width="516"></li>
-            <li>Select <span class="Program_Name">SSH keys:<br>
-              </span><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image014.jpg"
-                border="0" height="255" width="357"></li>
-            <li>Follow the <span class="Program_Name">Bitbucket’s</span>
-              instructions to <span class="Program_Name">Add key</span></li>
+            <li>Login to <span class="File_Name">Bitbucket</span> and goto <span
+
+                class="File_Name">Manage Account:</span><br>
+              <img alt="BitBucket" src="images/BitBucket-Manage.png"></li>
+            <li>Select <span class="File_Name">SSH keys:<br>
+              </span><img alt="SSH Keys" src="images/BitBucket-SSHkeys.png"></li>
+            <li>Follow the <span class="File_Name">Bitbucket’s</span>
+              instructions to <span class="File_Name">Add key</span></li>
             <li><span style="font-family:Consolas"><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span>Submit
-              your <span class="Program_Name">Bitbucket</span> user id to the
-              TA and instructor via the Moodle assignment indicated by your
+              your <span class="File_Name">Bitbucket</span> user id to the TA
+              and instructor via the Moodle assignment indicated by your
               instructor.</li>
           </ol>
-          <li><span class="Program_Name"><span style="font-family:&quot;Times New Roman&quot;,serif">[<i>YourServer</i>=</span>cci-git]<br>
+          <li><span class="File_Name"><span style="font-family:&quot;Times New Roman&quot;,serif">[<i>YourServer</i>=</span>cci-git]<br>
             </span><br>
-            <span style="color:red;background:yellow">Warning: </span><span class="Program_Name"><span
-                style="color:red;background:yellow">cci-git </span></span><span
+            <span style="color:red;background:yellow">Warning: </span><span class="File_Name"><span
+
+                style="color:red;background:yellow">cci-git </span></span><span
+
               style="color:red;background:yellow">SSH protocol is no longer
-              recommended, see instead this document’s <b>Section </b></span><span
-              class="Program_Name"><b><i><span style="color:red;background:yellow">cci-git
+              recommended, see instead this document’s <b>Section </b></span><span
+
+              class="File_Name"><b><i><span style="color:red;background:yellow">cci-git
                     </span></i></b></span><b><span style="color:red;background:yellow">Server
                 URL</span></b><span style="color:red;background:yellow"> and <b>Section
-                </b></span><b><span style="color:red;background:yellow">7.5</span></b><b><span
+                </b></span><b><span style="color:red;background:yellow">7.5</span></b><b><span
+
                 style="color:red;
 background:yellow"> </span></b><b><span style="color:red;background:yellow">Accessing
                 Git Server Using HTTPS and Git Credentials</span></b><span style="color:red;background:yellow">.&nbsp;
               <br></span></li>
           <ol>
             <li><span style="font-family:Consolas"><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
-                  </span></span>Login to <span class="Program_Name">https://cci-git.uncc.edu/</span>
-              using your standard UNCC username and password<span style="font-family:Consolas"><span
+                  </span></span>Login to <span class="File_Name">https://cci-git.uncc.edu/</span>
+              using your standard UNCC username and password<span style="font-family:Consolas"><span
+
                   style="font:7.0pt &quot;Times New Roman&quot;">.</span></span></li>
-            <li><span style="font-family:Consolas"><span style="font:7.0pt &quot;Times New Roman&quot;"></span><span
-                  style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span><span
+            <li><span style="font-family:Consolas"><span style="font:7.0pt &quot;Times New Roman&quot;"></span><span
+
+                  style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span><span
+
                 style="position:relative;z-index:251648000"><span style="left:0px;position:
-absolute;left:555px;top:-1564px;width:13px;height:19px"><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image015.png"
-                    height="19" width="13"></span></span>Select "<span class="Program_Name">Profile
+absolute;left:555px;top:-1564px;width:13px;height:19px"><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image015.png"
+
+                    height="19" width="13"></span></span>Select "<span class="File_Name">Profile
                 Settings"</span>:<br>
-              <p class="MsoNormal" style="margin-left:1.25in;text-indent:-1.25in">
-                <img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image016.jpg"
-                  border="0" height="112" width="478"><span style="font-family:Consolas"><span
-                    style="font:7.0pt &quot;Times New Roman&quot;"></span></span></p>
+              <img alt="Profile Settings" src="images/cci-git-Profile-Settings.png"><br>
             </li>
             <li>
-              <p class="MsoNormal" style="margin-left:1.25in;text-indent:-1.25in"><span
-                  style="font-family:Consolas"><span style="font:7.0pt &quot;Times New Roman&quot;"></span><span
-                    style="font:7.0pt &quot;Times New Roman&quot;"></span></span><span
+              <p style="margin-left:1.25in;text-indent:-1.25in"><span style="font-family:Consolas"><span
+
+                    style="font:7.0pt &quot;Times New Roman&quot;"></span><span
+
+                    style="font:7.0pt &quot;Times New Roman&quot;"></span></span><span
+
                   style="position:relative;z-index:251649024"><span style="left:0px;position:
-absolute;left:123px;top:-1563px;width:30px;height:11px"><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image017.png"
-                      height="11" width="30"></span></span>Select "<span class="Program_Name">SSH
+absolute;left:123px;top:-1563px;width:30px;height:11px"><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image017.png"
+
+                      height="11" width="30"></span></span>Select "<span class="File_Name">SSH
                   Keys"</span></p>
-              <p class="MsoNormal" style="margin-left:1.25in;text-indent:-1.25in">
-                <img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image018.jpg"
-                  border="0" height="75" width="474"></p>
+              <img alt="cci-git-SSH-Keys.png" src="images/cci-git-SSH-Keys.png">
             </li>
             <li>
-              <p class="MsoNormal" style="margin-left:1.25in;text-indent:-1.25in">Select
-                <span class="Program_Name">"Add SSH Key"</span></p>
-              <span class="Program_Name"></span>
-              <p class="MsoNormal" style="margin-left:1.25in;text-indent:-1.25in"><span
-                  class="Program_Name"> </span><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image020.jpg"
-                  border="0" height="61" width="474"><span class="Program_Name"><span
-                    style="font:7.0pt &quot;Times New Roman&quot;"></span></span></p>
-            </li>
+              <p style="margin-left:1.25in;text-indent:-1.25in">Select <span class="File_Name">"Add
+                  SSH Key"</span></p>
+              <span class="File_Name"></span> <img alt="cci-git-Add-SSH-Key.png"
+
+                src="images/cci-git-Add-SSH-Key.png"> </li>
             <li>
-              <p class="MsoNormal" style="margin-left:1.25in;text-indent:-1.25in"><span
-                  class="Program_Name"><span style="font:7.0pt &quot;Times New Roman&quot;"></span></span>Cut
+              <p style="margin-left:1.25in;text-indent:-1.25in"><span class="File_Name"><span
+
+                    style="font:7.0pt &quot;Times New Roman&quot;"></span></span>Cut
                 and paste the text from <u>your</u> public key file into the
-                dialog box and give the key a title.</p>
-              <p class="MsoNormal" style="margin-left: 0.8366in; text-indent: -1.25in;">
-                <img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image021.jpg"
-                  border="0" height="96" width="474"></p>
+                dialog box and give the key a title.<br>
+                <img alt="cci-git-Paste-Key.png" src="images/cci-git-Paste-Key.png"></p>
+            </li>
+            <li>
+              <p style="margin-left:1.25in;text-indent:-1.25in"><br>
+              </p>
+              <p style="margin-left: 0.8366in; text-indent: -1.25in;"> </p>
             </li>
           </ol>
         </ol>
-        <li><span class="Program_Name"><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span>[<i>YourOS</i>=Windows]
+        <li><span class="File_Name"><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span>[<i>YourOS</i>=Windows]
           Window users also need to perform the next section, 4.3 [Windows]
           Create PuTTY Private Key.</li>
       </ol>
       <br>
-      <h2 style="margin-left:0in;text-indent:0in"><a name="_Ref364457563">4.3.<span
+      <h2 style="margin-left:0in;text-indent:0in"><a name="_Ref364457563">4.3.<span
+
             style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </span>[Windows] Create PuTTY Private Key</a><br>
       </h2>
       <div style="border:solid windowtext 1.0pt;padding:1.0pt 0in 1.0pt 4.0pt;
 margin-left:.5in;margin-right:0in">
-        <p class="MsoNormal" style="text-align:center;border:none;
+        <p style="text-align:center;border:none;
 padding:0in" align="center">This section is for Windows only</p>
-        <p class="MsoNormal" style="text-align:center;border:none;
-padding:0in" align="center">(only servers <span class="Program_Name">git-viscenter
-            </span>and <span class="Program_Name">Bitbucket)</span></p>
+        <p style="text-align:center;border:none;
+padding:0in" align="center">(only servers <span class="File_Name">git-viscenter
+          </span>and <span class="File_Name">Bitbucket)</span></p>
       </div>
-      <p class="MsoNormal">&nbsp;After:</p>
+      <p>&nbsp;After:</p>
       <ul style="margin-top:0in" type="disc">
-        <li class="MsoNormal">installing PuTTY (Section 4.1, Step #1) </li>
-        <li class="MsoNormal">and after following the general key generation
-          instructions in 4.2 Create an SSH private and public key<br>
+        <li>installing PuTTY (Section 4.1, Step #1) </li>
+        <li>and after following the general key generation instructions in 4.2
+          Create an SSH private and public key<br>
         </li>
       </ul>
-      <p class="MsoNormal">then the following is required to generate PuTTY
-        compatible version of your private key.<br>
+      <p>then the following is required to generate PuTTY compatible version of
+        your private key.<br>
       </p>
-      <ol>
-        <li><span style="font:7.0pt &quot;Times New Roman&quot;"></span>Run
-          PuTTYgen:&nbsp; <br>
-          General:&nbsp;&nbsp;&nbsp; <span class="Program_Name">Start Menu</span>?<span
-            class="Program_Name">Putty</span>?<span class="Program_Name">PuTTYgen</span></li>
-        <li>Select <span class="Program_Name">MenuBar</span>?<span class="Program_Name">Conversions</span>
-          and then <span class="Program_Name">Import Key</span> on the
-          drop-down menu.<br>
-          This pop’s up dialog: <span class="Program_Name">Load Private Key.</span></li>
-        <li>In <span class="Program_Name">Load Private Key</span> find the
-          private key file you created in Section 4.2 and open it.&nbsp;&nbsp;
-          You will be prompted for your passphrase.</li>
-        <li>In the <span class="Program_Name">PuTTY Key Generator </span>window
-          select <span class="Program_Name">Save Private Key</span>.</li>
+      <ol class="Instruction">
+        <li>Run PuTTYgen:&nbsp;&nbsp;&nbsp; <span style="font-family: Courier,monospace;"></span><span
+
+            class="File_Name">Start Menu:</span><span class="File_Name">Putty:</span><span
+
+            class="File_Name">PuTTYgen</span></li>
+        <li>Select <span class="File_Name">MenuBar</span><span style="font-family: Courier,monospace;">:</span><span
+
+            class="File_Name">Conversions</span> and then <span class="File_Name">Import
+            Key</span> on the drop-down menu.<br>
+          This pop’s up dialog: <span class="File_Name">Load Private Key.</span></li>
+        <li>In <span class="File_Name">Load Private Key</span> find the private
+          key file you created in Section 4.2 and open it.&nbsp;&nbsp; You will
+          be prompted for your passphrase.</li>
+        <li>In the <span class="File_Name">PuTTY Key Generator </span>window
+          select <span class="File_Name">Save Private Key</span>.</li>
         <ol>
-          <li>Save the key to a file named <span class="Program_Name">id_rsa.ppk</span>
+          <li>Save the key to a file named <span class="File_Name">id_rsa.ppk</span>
             in the same directory as where you stored your standard private key
             file.<br>
             <br>
@@ -627,12 +645,6 @@ padding:0in" align="center">(only servers <span class="Program_Name">git-viscent
             safe as described in Section 4.2.</li>
         </ol>
       </ol>
-      <p class="MsoNormal" style="margin-left:.75in;text-indent:-.25in"><br>
-      </p>
-      <p class="MsoNormal">&nbsp;</p>
-      <h1 style="margin-left:0in;text-indent:0in"><br>
-      </h1>
-      <br>
       <ol>
         <ol class="Instruction_Option">
         </ol>
