@@ -558,7 +558,7 @@ absolute;left:555px;top:-1564px;width:13px;height:19px"><img src="file:///D:/Use
               <img alt="Profile Settings" src="images/cci-git-Profile-Settings.png"><br>
             </li>
             <li>
-              <p style="margin-left:1.25in;text-indent:-1.25in"><span style="font-family:Consolas"><span
+              <p><span style="font-family:Consolas"><span
 
                     style="font:7.0pt &quot;Times New Roman&quot;"></span><span
 
@@ -572,13 +572,13 @@ absolute;left:123px;top:-1563px;width:30px;height:11px"><img src="file:///D:/Use
               <img alt="cci-git-SSH-Keys.png" src="images/cci-git-SSH-Keys.png">
             </li>
             <li>
-              <p style="margin-left:1.25in;text-indent:-1.25in">Select <span class="File_Name">"Add
+              <p>Select <span class="File_Name">"Add
                   SSH Key"</span></p>
               <span class="File_Name"></span> <img alt="cci-git-Add-SSH-Key.png"
 
                 src="images/cci-git-Add-SSH-Key.png"> </li>
             <li>
-              <p style="margin-left:1.25in;text-indent:-1.25in"><span class="File_Name"><span
+              <p><span class="File_Name"><span
 
                     style="font:7.0pt &quot;Times New Roman&quot;"></span></span>Cut
                 and paste the text from <u>your</u> public key file into the
@@ -586,7 +586,7 @@ absolute;left:123px;top:-1563px;width:30px;height:11px"><img src="file:///D:/Use
                 <img alt="cci-git-Paste-Key.png" src="images/cci-git-Paste-Key.png"></p>
             </li>
             <li>
-              <p style="margin-left:1.25in;text-indent:-1.25in"><br>
+              <p><br>
               </p>
               <p style="margin-left: 0.8366in; text-indent: -1.25in;"> </p>
             </li>

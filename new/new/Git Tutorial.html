@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<!-- saved from url=(0130)file:///D:/Users/Zachary/Dropbox%20(UNC%20Charlotte)/classes/Repository_Usage/new/ITCS%203120%20Fall%202016%20-%20Project%202.html -->
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Git Tutorial</title>
+    <script>
+            /* 
+             *   Toggle a Code_Example table between scrolled presentation and expanded presentation
+             *   @param {String} - ID HTML Element ID of table
+             */
+            function Code_Example_Toggle(ID)
+            {
+                document.getElementById(ID).classList.toggle('Code_Example_Expand');
+            }
+        </script>
+    <style type="text/css">
+
+            /*   Shell Code Output  */
+            .File_Name
+            {
+                font-family: "Courier", monospace;
+            }
+
+            /*   Code Examples (put in 1x1 table) 
+            table.Hide_Code_Example:target
+            {
+                width: 400px;
+                position: relative;
+                margin: 10% auto;
+                padding: 5px 20px 13px 20px;
+                border-radius: 10px;
+                background-color: black;
+            }
+            */
+
+            /*   Code Examples are put in small 1x1 table */
+            table.Code_Example
+            {
+                width: 100%;
+                background-color: black;
+            }
+
+            /*  Code Example Expand style when displaying at full height, instead of with scroll bar
+            */
+            table.Code_Example_Expand > tbody > tr > td > div
+            {
+                width: 100%;
+                height: 100% !important;
+                /* overflow-y: scroll; */
+            }            
+
+            /*  Code Example Table Cell that contains expand button
+            */
+            table.Code_Example > tbody > tr > td:first-child
+            {
+                vertical-align:text-top;
+                text-align : left;
+                width: 25px;
+                background-color: transparent;
+                padding:0;
+                margin:0;
+            }            
+
+            /* Code Example Expand style when displaying code in compact, scrollable mode.               
+            */
+            table.Code_Example > tbody > tr > td > div
+            {
+                width: 100%;
+                overflow-y: scroll;
+            }
+
+            /*   Shell Code Input */
+            code.Shell_Code_Input
+            {
+                font-family: "Courier", monospace;
+                color: white;
+            }
+
+            /*   Shell Code Output  */
+            code.Shell_Code_Output
+            {
+                font-family: "Courier", monospace;
+                color: lightgreen;
+            }
+
+            /*   Shell Code Output  */
+            code.Shell_Code_Prompt
+            {
+                font-family: "Courier", monospace;
+                color: cyan;
+            }
+            
+            /*  User Input Required
+            */
+            .User_Input
+            {
+                background-color : grey;
+                font-style: italic;
+                color : black;
+                text-decoration: underline;
+                text-decoration-style: dotted;
+            }
+
+            /*  User Input Required
+            */
+            .User_Input_Generic
+            {
+                background-color : blue;                
+                color : white;                
+            }
+
+            span.File_Name
+            {
+                font-family: Courier, monospace;
+            }
+
+            span.Function_Name
+            {
+                font-family: Courier, monospace;
+            }            
+
+            /*   Comments in Shell Code
+            */
+            span.Shell_Code_Comment
+            {
+                font-family: Courier, monospace;
+                text-align: center;
+                color: pink;
+                background-color: grey;
+                font-style: italic;
+                font-weight : bold;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+
+            /*   Hierarchical List of Option Instructions
+            */
+            ol.Instruction_Option
+            {
+                font-size: large;           
+                list-style-type: lower-greek;
+            }
+
+
+            /*   Hierarchical List of Sequential Instructions
+            */
+            ol.Instruction
+            {
+                font-size: large;
+                list-style-type: decimal;                
+            }
+
+            ol.Instruction > li > ol
+            {
+                font-size: large;
+                list-style-type: lower-alpha;
+            }
+
+            ol.Instruction > li > ol > li > ol
+            {
+                font-size: large;
+                list-style-type: lower-roman;
+            }
+
+
+            span.Grade_Points
+            {
+                font-weight: bold;
+            }
+            h1.Title, h2.Title, h3.Title
+            {
+                text-align : center
+            }
+        </style>
+    <style media="print" type="text/css">
+            /* 
+            If printing, don't use scroll bars, just expand code examples to full height.
+            
+            When printing to PDF, if in Chromne you must also enable "Background Graphics".
+            */
+            table.Code_Example > tbody > tr > td > div
+            {
+                width: 100%;
+                height: 100% ! important;
+                overflow-y: hidden;
+            }
+
+        </style>
+  </head>
+  <body><br>
+    <h1 class="Title">Git Tutorial<br>
+    </h1>
+    <br>
+    <h2 class="Title">Fall 2016</h2>
+    <h2 class="Title">Professor: Zachary Wartell</h2>
+    <h3 class="Title">Revision: 9/11/2016<br>
+    </h3>
+    <section>
+      <h2>Due: X, X XXX 2016, 11:55 PM</h2>
+      <h1>Compatibility</h1>
+      <p>This page has been tested on Firefox v41 and Chrome v46.&nbsp; A PDF
+        version is available at location <a target="_blank" href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/ITCS%203120%20Fall%202015%20-%20Project%202.pdf">.\ITCS
+
+          3120 Fall 2015 - Project 2.pdf</a><br>
+      </p>
+      <ol>
+      </ol>
+    </section>
+    <section>
+      <h1>Prerequisites</h1>
+      <p> This document assumes the reader has the following prerequisite
+        knowledge: </p>
+      <ol class="Instruction">
+        <li> Basic knowledge of Unix style command-line shell. o Note: You
+          should understand Unix style shells at the level discussed in [1].
+          Section 3 discusses installing a suitable command-line shell for OS’s
+          that do not automatically come with one. All remaining sections
+          Section 4 assumes knowledge at the level of [1]. </li>
+        <li> Knowledge of environment variables, what they are and how to set
+          them. o Note: You should understand environment variables at the level
+          discussed in [5] and specifically PATH [6]. See also [3] for Windows
+          and [7] for Mac specifics. </li>
+      </ol>
+      <h1>Guide to Reading these Instructions</h1>
+      <p> Various section, sub-sections and specific numbered instructions are
+        either “generic” or operating system specific or Git server specific.
+        Generic instructions apply to all operating systems and all Git servers
+        while specific sections apply only specific Git servers or operating
+        systems. </p>
+      <p>Your instructor will tell you which Git server you must use for your
+        course work. It will be one of the following: </p>
+      <ol>
+        <li><span class="File_Name"> cci-git.uncc.edu </span> </li>
+        <li><span class="File_Name"> git-viscenter@cci-subv.uncc.edu</span> </li>
+        <li><span class="File_Name">bitbucket.org </span> </li>
+      </ol>
+      <p> Instructions that are specific to one of the above Git servers will
+        have the following headings: </p>
+      <ul>
+        <li> [<i>YourServer</i>=<span class="File_Name">cci-git</span>] </li>
+        <li> [<i>YourServer</i>=<span class="File_Name">git-viscenter</span>] </li>
+        <li> [<i>YourServer</i>=<span class="File_Name">Bitbucket</span>] </li>
+      </ul>
+      <p> Your instructor will have told you which operating systems you must
+        use for your course work. Instructions that are specific to a specific
+        operating system will have the following headings: </p>
+      <ul>
+        <li> [<i>YourOS</i>=<b>Windows</b>]</li>
+        <li> [<i>YourOS</i>=<b>Linux</b>] </li>
+        <li> [<i>YourOS</i>=<b>Mac</b>]</li>
+      </ul>
+      <p> Depending on the course you are taking you may be required to use only
+        one designated operating system. This information will be given to you
+        in class. </p>
+      <p> Screen shots in this document are optimized for electronic viewing
+        only where you can zoom in on the image to see full detail. Printing
+        this document is not recommended. </p>
+      <p> Fonts: <br>
+      </p>
+      <ul>
+        <li><span class="User_Input"> your_user_id</span> – this indicates you
+          should input a specific text string. The specifics will be indicated
+          in the instructions. </li>
+        <li><span class="User_Input_Generic">path_to_a_directory_where_you_can_save_your_work</span>
+          – this indicates you should input a specific text string. It is
+          assumed the reader can interpret what to type based on the context and
+          their general computer science knowledge.</li>
+        <li><span class="Shell_Code_Comment">[…additional output will appear…]</span>
+          – this a comment describing output from a command-line command. </li>
+      </ul>
+      <h1>Installing Git</h1>
+      <p>Git is a command-line program. Git servers uses various access protocol
+        for security and authorization. Depending what access protocol your
+        designated Git server uses you may need to have or install additional
+        software beyond command-line Git.&nbsp; You will be told which access
+        protocol your designated Git server uses by your instructor.</p>
+      <p>First you may need to install the Git command-line tools.</p>
+      <p><u><i>Woodward Labs</i></u>:&nbsp; Windows computers in Woodward labs
+        should have both the command-line Git, OpenSSH and TortoiseGit
+        installed.&nbsp; <br>
+        If you are using UNCC computers with a different operating system please
+        email the TA. If your designated Git server is either <span class="File_Name">Bitbucket</span>
+        or <span class="File_Name">git-viscenter</span>, you go to Section
+        4.2.&nbsp; For <span class="File_Name">cci-git</span> skip to Section
+        5.</p>
+      <p><u><i>Computers Elsewhere</i></u>:&nbsp; If you are working on
+        computers elsewhere, you need to install Git and TortoiseGit.&nbsp;
+        Installation instructions are below in 3.1 and 3.2.&nbsp; After
+        performing these installations, if your designated Git server is <span
+          class="File_Name">cci-git </span>you can proceed to Section 5. If
+        your server is either&nbsp; <span class="File_Name">Bitbucket</span> or
+        <span class="File_Name">git-viscenter</span>, you also need to also
+        perform Section 4 before proceeding to Section 5.</p>
+      <h2>Installation and Setup of Command-Line Git</h2>
+      <p>If you are working from a UNCC computer that already has Git installed
+        you can skip this section.</p>
+      <p><em>Instructions below vary with your operating system.</em></p>
+      <ol class="Instruction_Option">
+        <li> [<em>YourOS</em>=<strong>Windows</strong>] </li>
+        <ol class="Instruction">
+          <li>Download and Install Git for Windows,
+            https://git-for-windows.github.io/. <br>
+            <br>
+            This installs a minimal Unix style shell (called ‘git-bash’), the
+            basic OpenSSH tools as well as git.&nbsp; During install select the
+            following (for any other options given choose the defaults):<br>
+            <img alt="" src="images/Git-Bash-A.png"><img alt="" src="images/Git-Bash-B.png"><br>
+            <img alt="" src="images/Git-Bash-C.png"><img alt="" src="images/Git-Bash-D.png"><br>
+            <img alt="" src="images/Git-Bash-E.png"></li>
+        </ol>
+        <li>[<em>YourOS</em>=<strong>Linux</strong>] Download and install Git
+          from <a href="http://git-scm.com/">http://git-scm.com/</a>.</li>
+        <li>[<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp; Download and
+          Install Git from <a href="http://git-scm.com/%20">http://git-scm.com/</a>.
+        </li>
+      </ol>
+      <h2>Installation and Setup of Git GUI’s</h2>
+      <p>Generally, the Git instructions in this document and any Git
+        instructions given in this course will be given on using Git
+        command-line examples for generality.&nbsp; But many GUI Git tools are
+        available as well. Use of GUI Git tools is optional.</p>
+      <ol class="Instruction_Option">
+        <li> [<em>YourOS</em>=<strong>Window</strong>] <br>
+          Download and install TortoiseGit from <a href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/tortoisegit/.">https://code.google.com/p/tortoisegit/</a>.</li>
+        <li> [<em>YourOS</em>=<strong>Mac/Linux</strong>] <br>
+          Various Git GUIs are found here <a href="http://git-scm.com/downloads/guis.%20%20">http://git-scm.com/downloads/guis</a>.&nbsp;
+          </li>
+      </ol>
+      <h1>Installation and Setup of OpenSSH</h1>
+      <table style="width: 100%" border="1">
+        <tbody>
+          <tr>
+            <td style="text-align: center; background-color: white;">All of
+              Section 4 is only for servers:&nbsp;&nbsp;&nbsp; <span class="File_Name">git-viscenter</span>
+              and <span class="File_Name">Bitbucket</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>This section is for Git servers that use the SSH protocol.&nbsp;&nbsp;
+        The SSH public-key mechanism is for security and authorization. Hence
+        you need to install OpenSSH.</p>
+      <h2>Download and Install OpenSSH</h2>
+      <p>If you are working from a UNCC lab computer that already has Git for
+        Windows and Putty installed, skip this section and go to the next
+        section.<br>
+        <br>
+        Instructions below vary with your operating system.</p>
+      <ol class="Instruction">
+      </ol>
+      <ol class="Instruction_Option">
+        <li>[<em>YourOS</em>=<strong>Windows</strong>]</li>
+        <ol class="Instruction">
+          <li>Download and install PuTTY. Specifically:
+            <ol class="Instruction">
+              <li>Download the Windows installer, putty-x.xx-installer.exe, from
+                <a href="http://www.putty.org/">http://www.putty.org/</a>.&nbsp;&nbsp;
+                Install it.</li>
+              <li>Modify the PATH environment variable (Read Prerequisite P2). <br>
+                <br>
+                Add to the end of PATH the directory to where PuTTY is
+                installed. Typically PuTTY is at "C:\Program Files
+                (x86)\PuTTY".&nbsp; </li>
+              <li>To verify the PATH setting:
+                <ol class="Instruction">
+                  <li>Open a git-bash shell via Start Menu→Git→Git Bash</li>
+                  <li>In the shell run plink:&nbsp; <br>
+                    <table class="Code_Example" id="Code_Example0_0" style="width: 1125px;"
+                      border="1">
+                      <tbody style="height: 150px;">
+                        <tr>
+                          <td><button onclick="Code_Example_Toggle('Code_Example0_0');">▽</button></td>
+                          <td>
+                            <div style="height: 100px;"> <code class="Shell_Code_Prompt">lucretius@CCIWD-435B-1
+                                ~/ITCS_4120<br>
+                              </code> <code class="Shell_Code_Input"> $ plink<br>
+                              </code> <code class="Shell_Code_Output">PuTTY
+                                Link: command-line connection utility<br>
+                                Release 0.63<br>
+                                Usage: plink [options] [user@]host [command]<br>
+                                ("host" can also be a PuTTY saved session name)
+                                <br>
+                                <span class="Shell_Code_Comment">[…misc
+                                  additional output will appear…]</span></code>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <li>[<em>YourOS</em>=<strong>Linux</strong>] Generally this OS already
+          has OpenSSH installed; if not see <a href="http://www.openssh.org/">http://www.openssh.org/</a>.</li>
+        <li>[<em>YourOS</em>=<strong>Mac</strong>] Download and Install OpenSSH
+          from <a href="%20http://www.openssh.org/"> http://www.openssh.org/</a>
+        </li>
+      </ol>
+      <h2>&nbsp;Create an SSH private and public key</h2>
+      <p>If you are already familiar with SSH private and public keys and you
+        already have a public SSH key that you use regularly, then skip to step
+        4, but still do Section 4.3 if you are using Windows. <br>
+        <br>
+        Key creation has to be done only once. Afterwards, you can re-use your
+        private key file for authorized access to the Git server from multiple
+        computers.&nbsp; <br>
+        <br>
+        The instructions below are fairly generic to any Unix like shell and
+        assume basic knowledge as per Prerequisite P2.</p>
+      <ol>
+        <li class="Instruction"><strong>Open a shell prompt:</strong></li>
+        <ol class="Instruction_Option">
+          <li><a name="_Ref364326058">[<i>YourOS=</i><b>Windows</b>]:&nbsp;
+              Run:&nbsp; Start =&gt; All Programs =&gt; Git =&gt; Git Bash</a></li>
+          <li><a name="_Ref364326058"></a><a name="_Ref364326058">[<i>YourOS=</i><b>Linux/Mac]:
+                </b>&nbsp;&nbsp;Open a terminal window</a>.</li>
+        </ol>
+        <li>Check for SSH Keys <br>
+          &nbsp;<br>
+          <table class="Code_Example" id="Code_Example0_0" style="width: 1125px;"
+            border="1">
+            <tbody style="height: 150px;">
+              <tr>
+                <td><button>▽</button></td>
+                <td>
+                  <div style="height: 75px;"> <code class="Shell_Code_Prompt">lucretius@CCIWD-435B-1
+                      ~/<br>
+                    </code> <code class="Shell_Code_Input">$ cd ~/.ssh<br>
+                      $ ls<br>
+                    </code> <span class="Shell_Code_Comment">[…misc additional
+                      output will appear…]</span> </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          Check the directory listing for a file named <span class="File_Name">id_rsa.pub</span>.&nbsp;
+This
+          file should <i>not</i> exist, unless you must have previously created
+          a public/private key pair. If you already created one, goto step 4.
+          Otherwise proceed with step 3.</li>
+        <li><a name="_Ref363940970"><b>Generate a new SSH Key</b></a>
+          <p>Now you need to enter a passphrase.&nbsp;&nbsp; Enter one and write
+            it down in a safe place. When using Git, you will have to enter this
+            each time you login to your computer.</p>
+          <p>You will see output similar to this:&nbsp; </p>
+          <p>This creates two files a private key file <span class="File_Name">id_rsa</span>
+            and a public key file <span class="File_Name">id_rsa.pub</span>.&nbsp;
+            The private key file must be kept in a secure directory and must be
+            available on any computer from which you plan to access the Git
+            server. </p>
+          <p style="margin-left:.25in"><b><i>Securing Your Private Key:</i></b><br>
+            Best practices for private key management are that you never store
+            the private key on a public computer or in shared home directories
+            (H: drive, etc.). Rather you store them on your personal computer(s)
+            and on a USB device used solely as a SSH key backup device. A
+            reasonable way to transfer the private key to another personal
+            computer is using a USB device. <br>
+            <br>
+            If you intend to use Git on multiple, different public or shared
+            computers on campus, keeping the private key on a USB stick or drive
+            that you regularly carry is a reasonable compromise. (If you are <i>certain</i>
+            you will never use this key again outside of one particular course,
+            it’s acceptable to store it on your H: drive since the course TA
+            will disable your Git account at the end of the semester.)</p>
+        </li>
+        <li><a name="_Ref363944720"><b>Examine Your Public Key:<br>
+            </b>The public key is the file named </a><span class="File_Name">id_rsa.pub</span>.&nbsp;&nbsp;
+Type
+          the following:<br>
+          <br>
+          <b><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image011.png"
+              alt="$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCurna4/V+HziLaUCULlA8x9X3Y7814EoUE+Je3joeIBrKGWHy/LkB3jCm5GY2QaSGHyYKsFEeW+kvGhYzsgxkiUiLxD0XLYXDrHlfjkVeX+BJ10E1TlLxVDgY2lRjVq8kvEAG+/0nrU6Lj9O8Sbu/nWtQo8J8w+afHAWBQDpVMRONaSqvjB/NF4IryKaG0AXshOQkaRThIutjhmPfMmYFyMKH7MvRF2ER7IFTFMhcoNSDoXYLIQZanYSLHdm63ML1DT1eODbPa6fuaMP5z4NPCSO4Se0FbwmLuw3mVnzVuoCqk0SVIwF7yT+H4VO34sK5nLdeYJR2WS5tC0We8Vjrn student4120_wartell                         [your output should look similar]"
+              border="0" height="164" width="562"><br>
+            <br>
+          </b><span class="File_Name">id_rsa.pub </span>is a plain text
+          file.&nbsp;&nbsp; (Some operating systems may incorrectly identify the
+          file as some other type of file).&nbsp;&nbsp; Open <span class="File_Name">id_rsa.pub</span>
+          using your preferred text editor (such as notepad.exe,
+          etc.).&nbsp;&nbsp;&nbsp; If you ever need to copy and paste the public
+          key into another application (web browser, etc.) you can do that from
+          within the text editor.</li>
+        <li><a name="_Ref429762632"><b>Submit Your Public Key:</b></a></li>
+        <ol class="Instruction_Option">
+          <li><a name="_Ref429762632"></a><span class="File_Name"><span style="font-family:&quot;Times New Roman&quot;,serif">[<i>YourServer</i>=</span>git-viscenter]</span><b><br>
+              <br>
+            </b>The file you submit <i><u>must</u></i> be renamed from <span class="File_Name">id_rsa.pub</span>
+            to <span class="UserInputChar"><u><span style="font-size:9.0pt">your_uncc_id</span></u></span><span
+              class="File_Name">.pub</span> where your standard UNCC email is <span
+              class="UserInputChar"><u><span style="font-size:9.0pt">your_uncc_id</span></u></span><span
+              class="File_Name">@uncc.edu.<br>
+              <br>
+            </span>You submit your <span class="UserInputChar"><u><span style="font-size:
+9.0pt">your_uncc_id</span></u></span><span class="File_Name">.pub</span> file
+            via a Moodle assignment indicated by your instructor.</li>
+          <li><span class="File_Name"><span style="font-family:&quot;Times New Roman&quot;,serif">[<i>YourServer</i>=</span>Bitbucket]</span></li>
+          <ol class="Instruction">
+            <li>Create a Bitbucket account as described in Section 7.3 <span class="File_Name">Bitbucket
+                </span>Server URL.</li>
+            <li>Login to <span class="File_Name">Bitbucket</span> and goto <span
+                class="File_Name">Manage Account:</span><br>
+              <img alt="BitBucket" src="images/BitBucket-Manage.png"></li>
+            <li>Select <span class="File_Name">SSH keys:<br>
+              </span><img alt="SSH Keys" src="images/BitBucket-SSHkeys.png"></li>
+            <li>Follow the <span class="File_Name">Bitbucket’s</span>
+              instructions to <span class="File_Name">Add key</span></li>
+            <li><span style="font-family:Consolas"><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span>Submit
+              your <span class="File_Name">Bitbucket</span> user id to the TA
+              and instructor via the Moodle assignment indicated by your
+              instructor.</li>
+          </ol>
+          <li><span class="File_Name"><span style="font-family:&quot;Times New Roman&quot;,serif">[<i>YourServer</i>=</span>cci-git]<br>
+            </span><br>
+            <span style="color:red;background:yellow">Warning: </span><span class="File_Name"><span
+                style="color:red;background:yellow">cci-git </span></span><span
+              style="color:red;background:yellow">SSH protocol is no longer
+              recommended, see instead this document’s <b>Section </b></span><span
+              class="File_Name"><b><i><span style="color:red;background:yellow">cci-git
+                    </span></i></b></span><b><span style="color:red;background:yellow">Server
+                URL</span></b><span style="color:red;background:yellow"> and <b>Section
+                </b></span><b><span style="color:red;background:yellow">7.5</span></b><b><span
+                style="color:red;
+background:yellow"> </span></b><b><span style="color:red;background:yellow">Accessing
+                Git Server Using HTTPS and Git Credentials</span></b><span style="color:red;background:yellow">.&nbsp;
+              <br></span></li>
+          <ol>
+            <li><span style="font-family:Consolas"><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
+                  </span></span>Login to <span class="File_Name">https://cci-git.uncc.edu/</span>
+              using your standard UNCC username and password<span style="font-family:Consolas"><span
+                  style="font:7.0pt &quot;Times New Roman&quot;">.</span></span></li>
+            <li><span style="font-family:Consolas"><span style="font:7.0pt &quot;Times New Roman&quot;"></span><span
+                  style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span><span
+                style="position:relative;z-index:251648000"><span style="left:0px;position:
+absolute;left:555px;top:-1564px;width:13px;height:19px"><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image015.png"
+                    height="19" width="13"></span></span>Select "<span class="File_Name">Profile
+                Settings"</span>:<br>
+              <img alt="Profile Settings" src="images/cci-git-Profile-Settings.png"><br>
+            </li>
+            <li>
+              <p><span style="font-family:Consolas"><span style="font:7.0pt &quot;Times New Roman&quot;"></span><span
+                    style="font:7.0pt &quot;Times New Roman&quot;"></span></span><span
+                  style="position:relative;z-index:251649024"><span style="left:0px;position:
+absolute;left:123px;top:-1563px;width:30px;height:11px"><img src="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/original%20export/Git%20Tutorial_files/image017.png"
+                      height="11" width="30"></span></span>Select "<span class="File_Name">SSH
+                  Keys"</span></p>
+              <img alt="cci-git-SSH-Keys.png" src="images/cci-git-SSH-Keys.png">
+            </li>
+            <li>
+              <p>Select <span class="File_Name">"Add SSH Key"</span></p>
+              <img alt="cci-git-Add-SSH-Key.png" src="images/cci-git-Add-SSH-Key.png">
+            </li>
+            <li>
+              <p>Cut and paste the text from <u>your</u> public key file into
+                the dialog box and give the key a title.<br>
+                <img alt="cci-git-Paste-Key.png" src="images/cci-git-Paste-Key.png"></p>
+            </li>
+            <li> <br>
+            </li>
+          </ol>
+        </ol>
+        <li>[<i>YourOS</i>=Windows] Window users also need to perform the next
+          section, 4.3 [Windows] Create PuTTY Private Key.</li>
+      </ol>
+      <br>
+      <h2><a name="_Ref364457563">4.3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>[Windows] Create PuTTY Private Key</a><br>
+      </h2>
+      <div style="border:solid windowtext 1.0pt;padding:1.0pt 0in 1.0pt 4.0pt;
+margin-left:.5in;margin-right:0in">
+        <p style="text-align:center;border:none;
+padding:0in" align="center">This section is for Windows only</p>
+        <p style="text-align:center;border:none;
+padding:0in" align="center">(only servers <span class="File_Name">git-viscenter
+          </span>and <span class="File_Name">Bitbucket)</span></p>
+      </div>
+      <p>&nbsp;After:</p>
+      <ul style="margin-top:0in" type="disc">
+        <li>installing PuTTY (Section 4.1, Step #1) </li>
+        <li>and after following the general key generation instructions in 4.2
+          Create an SSH private and public key<br>
+        </li>
+      </ul>
+      <p>then the following is required to generate PuTTY compatible version of
+        your private key.<br>
+      </p>
+      <ol class="Instruction">
+        <li>Run PuTTYgen:&nbsp;&nbsp;&nbsp; <span style="font-family: Courier,monospace;"></span><span
+            class="File_Name">Start Menu:</span><span class="File_Name">Putty:</span><span
+            class="File_Name">PuTTYgen</span></li>
+        <li>Select <span class="File_Name">MenuBar</span><span style="font-family: Courier,monospace;">:</span><span
+            class="File_Name">Conversions</span> and then <span class="File_Name">Import
+            Key</span> on the drop-down menu.<br>
+          This pop’s up dialog: <span class="File_Name">Load Private Key.</span></li>
+        <li>In <span class="File_Name">Load Private Key</span> find the private
+          key file you created in Section 4.2 and open it.&nbsp;&nbsp; You will
+          be prompted for your passphrase.</li>
+        <li>In the <span class="File_Name">PuTTY Key Generator </span>window
+          select <span class="File_Name">Save Private Key</span>.</li>
+        <ol>
+          <li>Save the key to a file named <span class="File_Name">id_rsa.ppk</span>
+            in the same directory as where you stored your standard private key
+            file.<br>
+            <br>
+            You should keep the PuTTY private key and the standard private key
+            safe as described in Section 4.2.</li>
+        </ol>
+      </ol>
+      <ol>
+        <ol class="Instruction_Option">
+        </ol>
+      </ol>
+      <ol class="Instruction">
+        <ol>
+          <ol>
+          </ol>
+        </ol>
+      </ol>
+    </section>
+  </body>
+</html>
