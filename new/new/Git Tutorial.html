@@ -19,184 +19,92 @@
             document.getElementById(ID).classList.toggle('Code_Example_Expand');
         }
     </script>
-    <style type="text/css">
-        .File_Name {
-            font-family: "Courier", monospace;
-        }
-
-        .Program_Name {
-            font-family: "Courier", monospace;
-        }
-
-        .Server_Name {
-            font-family: "Courier", monospace;
-        }
-        
-        p.Title {
-            font-weight: bold;
+    <style type="text/css">        
+    .File_Name {font-family: "Courier", monospace;}
+        .Program_Name {font-family: "Courier", monospace;}
+        .Server_Name {font-family: "Courier", monospace;}
+        p.Title {font-weight: bold;
             text-align: center;
-            font-size: x-large;
-        }
-
-        /*   Shell Code Output  */
-
+            font-size: x-large;}
         /*   Code Examples (put in 1x1 table)
                         table.Hide_Code_Example:target
-                        {
-                            width: 400px;
+                        {width: 400px;
                             position: relative;
-                            margin: 10% auto;
                             padding: 5px 20px 13px 20px;
                             border-radius: 10px;
-                            background-color: black;
-                        }
+                            background-color: black;}
             */
-
-        /*   Code Examples are put in small 1x1 table */
-        table.Code_Example {
-            width: 100%;
-            background-color: black;
-        }
-
+        table.Code_Example {width: 100%;
+            background-color: black;}
         /*  Code Example Expand style when displaying at full height, instead of with scroll bar
             */
-        table.Code_Example_Expand > tbody > tr > td > div {
-            width: 100%;
-            height: 100% !important;
-            /* overflow-y: scroll; */
-        }
-
+        table.Code_Example_Expand > tbody > tr > td > div {width: 100%;
+            height: 100% !important;}
         /*  Code Example Table Cell that contains expand button
             */
-        table.Code_Example > tbody > tr > td:first-child {
-            vertical-align: text-top;
+        table.Code_Example > tbody > tr > td:first-child {vertical-align: text-top;
             text-align: left;
             width: 25px;
             background-color: transparent;
-            padding: 0;
-            margin: 0;
-        }
-
+            padding: 0;}
         /* Code Example Expand style when displaying code in compact, scrollable mode.
             */
-        table.Code_Example > tbody > tr > td > div {
-            width: 100%;
-            overflow-y: auto;
-        }
-
-        /*   Shell Code Input */
-        code.Shell_Code_Input {
-            font-family: "Courier", monospace;
-            color: white;
-        }
-
-        /*   Shell Code Output  */
-        code.Shell_Code_Output {
-            font-family: "Courier", monospace;
-            color: lightgreen;
-        }
-
-        /*   Shell Code Output  */
-        code.Shell_Code_Prompt {
-            font-family: "Courier", monospace;
-            color: cyan;
-        }
-
+        table.Code_Example > tbody > tr > td > div {width: 100%;
+            overflow-y: auto;}
+        code.Shell_Code_Input {font-family: "Courier", monospace;
+            color: white;}
+        code.Shell_Code_Output {font-family: "Courier", monospace;
+            color: lightgreen;}
+        code.Shell_Code_Prompt {font-family: "Courier", monospace;
+            color: cyan;}
         /*  User Input Required
             */
-        .User_Input {
-            background-color: grey;
+        .User_Input {background-color: grey;
             font-style: italic;
             color: white;
             text-decoration: underline;
-            text-decoration-style: dotted;
-        }
-
-        table.Code_Example .User_Input {
-            background-color: darkgrey;
+            text-decoration-style: dotted;}
+        table.Code_Example .User_Input {background-color: darkgrey;
             font-style: italic;
             color: white;
             text-decoration: underline;
-            text-decoration-style: dotted;
-        }
-
+            text-decoration-style: dotted;}
         /*  User Input Required
             */
-        .User_Input_Generic {
-            background-color: blue;
-            color: white;
-        }
-
-        span.File_Name {
-            font-family: Courier, monospace;
-        }
-
-        span.Function_Name {
-            font-family: Courier, monospace;
-        }
-
+        .User_Input_Generic {background-color: blue;
+            color: white;}
+        span.File_Name {font-family: Courier, monospace;}
+        span.Function_Name {font-family: Courier, monospace;}
         /*   Comments in Shell Code
             */
-        span.Shell_Code_Comment {
-            font-family: Courier, monospace;
+        span.Shell_Code_Comment {font-family: Courier, monospace;
             text-align: center;
             color: pink;
             background-color: grey;
             font-style: italic;
-            font-weight: bold;
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-
+            font-weight: bold;}
         /*   Hierarchical List of Option Instructions
             */
-        ol.Instruction_Option {
-            font-size: large;
-            list-style-type: lower-greek !important;
-        }
-        
-        ol.Instruction_Option > li {
-            font-size: large;
-            list-style-type: lower-greek;
-        }
+        ol.Instruction_Option {font-size: large;
+            list-style-type: lower-greek !important;}
+        ol.Instruction_Option > li {font-size: large;
+            list-style-type: lower-greek;}
         /*
-                li ol li {
-                }
             */
-
         /*   Hierarchical List of Sequential Instructions
             */
-        ol.Instruction {
-            font-size: large;
-            list-style-type: decimal;
-        }
-
-
-            ol.Instruction > li > ol {
-                font-size: large;
-                list-style-type: lower-alpha;
-            }
-
-                ol.Instruction > li > ol > li > ol {
-                    font-size: large;
-                    list-style-type: lower-roman;
-                }
-
-        span.Grade_Points {
-            font-weight: bold;
-        }
-
-        h1.Title, h2.Title, h3.Title {
-            text-align: center;
-        }
-
+        ol.Instruction {font-size: large;
+            list-style-type: decimal;}
+            ol.Instruction > li > ol {font-size: large;
+                list-style-type: lower-alpha;}
+                ol.Instruction > li > ol > li > ol {font-size: large;
+                    list-style-type: lower-roman;}
+        span.Grade_Points {font-weight: bold;}
+        h1.Title, h2.Title, h3.Title {text-align: center;}
         /** Figures that are Screen_Capture's
              ** from [R1]
              **/
-        figure.Screen_Capture {
-            width: 500px;
-            /* float: left; */
-            margin: 0 20px 0 0;
+        figure.Screen_Capture {width: 500px;
             background: white;
             border: 10px solid white;
             -webkit-box-shadow: 0 3px 10px #ccc;
@@ -207,28 +115,16 @@
             -moz-transition: all 1s ease;
             -o-transition: all 1s ease;
             transition: all 1s ease;
-            position: relative;
-        }
-
-            figure.Screen_Capture img {
-                width: 100%; /* Scale down */
-            }
-
-            figure.Screen_Capture:hover {
-                /* -webkit-transform: rotate(-1deg); -moz-transform: rotate(1deg); */
-                -webkit-box-shadow: 0 3px 10px #F1EA35;
-                -moz-box-shadow: 0 3px 10px #F1EA35;
-            }
-
-            figure.Screen_Capture:focus {
-                outline: none;
+            position: relative;}
+            figure.Screen_Capture img {width: 100%;}
+            figure.Screen_Capture:hover {-webkit-box-shadow: 0 3px 10px #F1EA35;
+                -moz-box-shadow: 0 3px 10px #F1EA35;}
+            figure.Screen_Capture:focus {outline: none;
                 -webkit-transform: translate(500px,350px) scale(3.0);
                 -moz-transform: translate(500px,350px) scale(3.0);
                 -webkit-box-shadow: 0 3px 10px #666;
                 -moz-box-shadow: 0 3px 10px #666;
-                z-index: 9999;
-            }
-            
+                z-index: 9999;}
         /* Heading Numbering (from [R2])
         */
         body {counter-reset: h1}
@@ -237,29 +133,31 @@
         h3 {counter-reset: h4}
         h4 {counter-reset: h5}
         h5 {counter-reset: h6}
-        
         h1:before {counter-increment: h1; content: counter(h1) ". "}
         h2:before {counter-increment: h2; content: counter(h1) "." counter(h2) ". "}
         h3:before {counter-increment: h3; content: counter(h1) "." counter(h2) "." counter(h3) ". "}
         h4:before {counter-increment: h4; content: counter(h1) "." counter(h2) "." counter(h4) "." counter(h4) ". "}
         h5:before {counter-increment: h5; content: counter(h1) "." counter(h2) "." counter(h4) "." counter(h4) "." counter(h5) ". "}
-
-        h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before { content: ""; counter-increment: none }
+        h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {content: ""; counter-increment: none}
     </style>
-    <style media="print" type="text/css">
-        /*
+    <style media="print" type="text/css">        
+    /*
         If printing, don't use scroll bars, just expand code examples to full height.
-
         When printing to PDF, if in Chromne you must also enable "Background Graphics".
         */
-        table.Code_Example > tbody > tr > td > div {
-            width: 100%;
+        table.Code_Example > tbody > tr > td > div {width: 100%;
             height: 100% !important;
-            overflow-y: hidden;
-        }
+            overflow-y: hidden;}
+    </style>
+    <style type="text/css">    
+    span.UserInputChar {font-family:"Courier New";
+	color:#F2F2F2;
+	background:#7F7F7F;
+	font-style:italic;
+	text-decoration:underline;}
     </style>
   </head>
-  <body>
+<body>
     <br>
     <div align="center">
       <p class="Title"> Git Tutorial<br>
@@ -464,10 +362,10 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
     <section>
       <h1 id="Installation_and_Setup_of_OpenSSH">Installation and Setup
         of OpenSSH</h1>
-      <table style="width: 100%" border="1">
+      <table border="1">
         <tbody>
           <tr>
-            <td style="text-align: center; background-color: white;">
+            <td>
               All of Section 4 is only for servers:&nbsp;&nbsp;&nbsp; <span
                 class="File_Name">git-viscenter</span> and <span
                 class="File_Name">Bitbucket</span> </td>
@@ -507,8 +405,7 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
                       <li> Open a git-bash shell via Start Menu→Git→Git
                         Bash </li>
                       <li> In the shell run plink:&nbsp; <br>
-                        <table class="Code_Example" id="Code_Example0_0"
-                          style="width: 1125px;" border="1">
+                        <table id="Code_Example0_0" border="1">
                           <tbody style="height: 150px;">
                             <tr>
                               <td> <button
@@ -578,8 +475,7 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
           </li>
           <li> Check for SSH Keys <br>
             &nbsp;<br>
-            <table class="Code_Example" id="Code_Example0_2"
-              style="width: 1125px;" border="1">
+            <table id="Code_Example0_2" border="1">
               <tbody style="height: 150px;">
                 <tr>
                   <td><button
@@ -605,8 +501,7 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
             one, goto step 4. Otherwise proceed with step 3. </li>
           <li> <a id="_Ref363940970"> <b> Generate a new SSH Key<br>
               </b> </a>
-            <table class="Code_Example" id="Code_Example0_3a"
-              style="width: 1125px;" border="1">
+            <table id="Code_Example0_3a" border="1">
               <tbody style="height: 150px;">
                 <tr>
                   <td><button
@@ -637,8 +532,7 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
               one and write it down in a safe place. When using Git, you
               will have to enter this each time you login to your
               computer. </p>
-            <table class="Code_Example" id="Code_Example0_3b"
-              style="width: 1125px;" border="1">
+            <table id="Code_Example0_3b" border="1">
               <tbody style="height: 50px;">
                 <tr>
                   <td><button
@@ -664,7 +558,7 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
               key file must be kept in a secure directory and must be
               available on any computer from which you plan to access
               the Git server. </p>
-            <p style="margin-left: .25in"> <b> <i> Securing Your
+            <p> <b> <i> Securing Your
                   Private Key: </i> </b><br>
               Best practices for private key management are that you
               never store the private key on a public computer or in
@@ -687,8 +581,7 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
               </b>The public key is the file named </a><span
               class="File_Name">id_rsa.pub</span>.&nbsp;&nbsp; Type the
             following:<br>
-            <table class="Code_Example" id="Code_Example_42_4"
-              style="width:1125px;" border="1">
+            <table id="Code_Example_42_4" border="1">
               <tbody style="height: 150px;">
                 <tr>
                   <td><button
@@ -772,8 +665,7 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
                     background: yellow">Server URL</span> </b><span
                   style="color: red; background: yellow"> and <b>
                     Section </b> </span><b> <span style="color: red;
-                    background: yellow">5</span> </b><b> <span
-                    style="color: red; background: yellow"></span> </b><b>
+                    background: yellow">5</span> </b><b> </b><b>
                   <span style="color: red; background: yellow">
                     Accessing Git Server Using HTTPS and Git Credentials
                   </span> </b><span style="color: red; background:
@@ -824,7 +716,7 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
         <h2 id="Windows_Create_PuTTY_Private_Key">[Windows] Create PuTTY
           Private Key</h2>
         <div style="border: solid windowtext 1.0pt; padding: 1.0pt 0in
-          1.0pt 4.0pt; margin-left: .5in; margin-right: 0in">
+          1.0pt 4.0pt;  ">
           <p style="text-align: center; border: none; padding: 0in"
             align="center">This section is for Windows only</p>
           <p style="text-align: center; border: none; padding: 0in"
@@ -833,7 +725,7 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
           </p>
         </div>
         <p>&nbsp;After:</p>
-        <ul style="margin-top: 0in" type="disc">
+        <ul type="disc">
           <li>installing PuTTY (Section <a
               href="#Download_and_Install_OpenSSH">#Download_and_Install_OpenSSH</a>,
             Step #1)</li>
@@ -946,8 +838,7 @@ href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Checkin
                 <li> From the class website download <span
                     class="File_Name">HelloWorld.tar.gz</span> to
                   git-tutorial and uncompress it.<br>
-                  <table class="Code_Example" id="Code_Example_0_3ai"
-                    style="width:1125px;" border="1">
+                  <table id="Code_Example_0_3ai" border="1">
                     <tbody style="height: 150px;">
                       <tr>
                         <td><button
@@ -1005,8 +896,7 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-
                   the .gz file.<br>
                   Perform the exercises in Chapter 2.2 from this in that
                   directory:<br>
-                  <table class="Code_Example" id="Code_Example_0_3bi"
-                    style="width:1125px;" border="1">
+                  <table id="Code_Example_0_3bi" border="1">
                     <tbody style="height: 110px;">
                       <tr>
                         <td><button
@@ -1141,9 +1031,8 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewi
                             <li> [<em>OS</em>=<strong>Windows</strong>]
                               Assuming you are using the recommended
                               Git-Bash<br>
-                              <table class="Code_Example"
-                                id="Code_Example_0_3cii"
-                                style="width:1125px;" border="1">
+                              <table
+                                id="Code_Example_0_3cii" border="1">
                                 <tbody style="height: 25px;">
                                   <tr>
                                     <td><button
@@ -1191,8 +1080,7 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewi
               <br>
             </li>
             <li> Compress <span class="File_Name">git-tutorial</span><br>
-              <table class="Code_Example" id="Code_Example_0_4b"
-                style="width:1125px;" border="1">
+              <table id="Code_Example_0_4b" border="1">
                 <tbody style="height: 125px;">
                   <tr>
                     <td><button
@@ -1249,8 +1137,7 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewi
                 </ol>
                 </li>
                 <li> [<em>YourServer</em>=<strong>git-viscenter</strong>]<br>
-                  <table class="Code_Example" id="Code_Example_0_4bi"
-                    style="width:1125px;" border="1">
+                  <table id="Code_Example_0_4bi" border="1">
                     <tbody style="height: 125px;">
                       <tr>
                         <td><button
@@ -1315,8 +1202,7 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewi
                     class="User_Input">/ITCS_XXXX<em>/</em>students/FirstName_LastName</span></li>
               </ol>
               <br>
-              <table class="Code_Example" id="Code_Example_0_5"
-                style="width:1125px;" border="1">
+              <table id="Code_Example_0_5" border="1">
                 <tbody style="height: 105px;">
                   <tr>
                     <td><button
@@ -1416,8 +1302,7 @@ href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
             <li> <strong>[</strong><em>YourServer</em>=<strong>git-viscenter]</strong>
               git-viscenter@cci-subv.uncc.edu:wartell</li>
           </ol>
-          <table class="Code_Example" id="Code_Example_6_3"
-            style="width:1125px;" border="1">
+          <table id="Code_Example_6_3" border="1">
             <tbody style="height: 105px;">
               <tr>
                 <td><button
@@ -1441,8 +1326,7 @@ href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
           </table>
         </li>
         <li>Create a new file:<br>
-          <table class="Code_Example" id="Code_Example_6_4"
-            style="width:1125px;" border="1">
+          <table id="Code_Example_6_4" border="1">
             <tbody style="height: 25px;">
               <tr>
                 <td><button
@@ -1458,27 +1342,22 @@ href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
           </table>
         </li>
         <li> Add, commit and push to the Git server remote repo.
-          <table class="Code_Example" id="Code_Example_6_5"
-            style="width:1125px;" border="1">
+          <table id="Code_Example_6_5" border="1">
             <tbody>
               <tr>
                 <td><button
                     onclick="Code_Example_Toggle('Code_Example_6_5');">▽</button></td>
-                <td>
-                  <div> <code class="Shell_Code_Input"> $ git add . </code><br>
-                    <div align="center"> <span
+                <td><code class="Shell_Code_Input"> $ git add . </code><br>
+                  <div align="center"> <span
                         class="Shell_Code_Comment"> [..misc output...]</span></div>
-                    <code class="Shell_Code_Input"> $ git commit -a -m
-                      "-submitted git-micro-tutorial assignment" </code>
-                    <br>
-                    <div align="center"> <span
+                  <code class="Shell_Code_Input"> $ git commit -a -m
+                      "-submitted git-micro-tutorial assignment" </code> <br>
+                      <div align="center"> <span
                         class="Shell_Code_Comment"> [..misc output...]</span></div>
-                    <code class="Shell_Code_Input"> $ git push -u origin
+                      <code class="Shell_Code_Input"> $ git push -u origin
                       master </code> <br>
-                    <div align="center"> <span
-                        class="Shell_Code_Comment"> [..misc output...]</span></div>
-                  </div>
-                </td>
+                <div align="center"> <span
+                        class="Shell_Code_Comment"> [..misc output...]</span></div></td>
               </tr>
             </tbody>
           </table>
@@ -1487,7 +1366,7 @@ href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
           below, Section 9.3 Verify Your Remote Repository ).</li>
       </ol>
     </section>
-    <section>
+<section>
       <h1 id="Git_Server_Access">Git Server Access</h1>
       This section’s subsections describe access method specifics for
       various Git servers. Your instructor will tell you which server
@@ -1668,8 +1547,7 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
                   </strong>ssh-agent is successfully passing your key
                   through ssh to Bitbucket. </li>
                 <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
-                  <table class="Code_Example" id="Code_Example_741_4c"
-                    style="width:1125px;" border="1">
+                  <table id="Code_Example_741_4c" border="1">
                     <tbody style="height: 105px;">
                       <tr>
                         <td><button
@@ -1730,8 +1608,7 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
                   git@cci-git.uncc.edu:zwartell/welcome.git </li>
                 <li> [<strong>git-viscenter]</strong>
                   git-viscenter@cci-subv.uncc.edu:wartell/welcome.git<br>
-                  <table class="Code_Example" id="Code_Example_741_5"
-                    style="width:1125px;" border="1">
+                  <table id="Code_Example_741_5" border="1">
                     <tbody style="height: 105px;">
                       <tr>
                         <td><button
@@ -1807,7 +1684,7 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
               This starts PuTTY’s version of the ssh-agent daemon. The
               ssh-agent will continue to run until you log off your
               computer.
-              <p style="text-indent:-25px"><u>Start and Use the
+              <p><u>Start and Use the
                   Command-Line Shell</u></p>
             </li>
             <li>Start the Git-Bash shell: Start Menu→Git→Git-Bash</li>
@@ -1859,29 +1736,24 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
         <p> As of September 2016, there is a problem with the server’s
           SSL certificate.&nbsp;&nbsp; You must disable Git’s automatic
           checking for a SSL certificate as follows:</p>
-        <div>
-          <table class="Code_Example" id="Code_Example_751_1"
-            style="width:1125px;" border="1">
-            <tbody>
-              <tr>
-                <td><button
+        <table id="Code_Example_751_1" border="1">
+          <tbody>
+            <tr>
+              <td><button
                     onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button></td>
-                <td>
-                  <div> <code class="Shell_Code_Input">$ git config
-                      --global http.sslVerify false<br>
-                    </code> </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p>(The above Git setting is saved on your computer, so you
-            only need to set it once).<br>
-          </p>
-        </div>
+              <td><code class="Shell_Code_Input">$ git config
+                --global http.sslVerify false<br>
+              </code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>(The above Git setting is saved on your computer, so you
+          only need to set it once).<br>
+        </p>
+
         To test and verify read-access to the server, clone the welcome
         repo:
-        <table class="Code_Example" id="Code_Example_75_1"
-          style="width:1125px;" border="1">
+        <table id="Code_Example_75_1" border="1">
           <tbody style="height: 105px;">
             <tr>
               <td><button
@@ -1932,18 +1804,15 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
               <ol class="Instruction_Option">
                 <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you
                   are using Git-Bash
-                  <table class="Code_Example" id="Code_Example_751_1"
-                    style="width:1125px;" border="1">
+                  <table id="Code_Example_751_1" border="1">
                     <tbody>
                       <tr>
                         <td><button
                             onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button></td>
-                        <td>
-                          <div> <code class="Shell_Code_Input">$
+                        <td><code class="Shell_Code_Input">$
                               &nbsp;git config --global
                               credential.helper wincred<br>
-                            </code> </div>
-                        </td>
+                        </code></td>
                       </tr>
                     </tbody>
                   </table>
@@ -1957,6 +1826,249 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
           </ol>
         </section>
       </section>
+  </section>
+  <section>
+    <h1>Common Git Operations</h1>
+    <p>
+    This section describes several operations referenced by other tutorial sections of this document. Hence, this section assumes you already have a command-line shell setup as described for your designated Git server.</p>
+    <section>
+    <h2>Basic Git Operations</h2>
+    <ol class="Instruction">
+      <li><b>How to Clone Existing Repository</b><br>
+        <br>
+        Below, for the input text <span class="User_Input">git_server_url</span> substitute the appropriate Server URL
+        from Section 7 Git Server Access:</li>
+      <li><strong>How to Create New Remote Repository</strong>:<br>
+      <em> Instructions below vary based on your server.</em>
+      <ol class="Instruction_Option">
+      <li><a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
+        <ol>
+      <li>Login to the cci-git Web Server (See 7.1 cci-git Server URL)</li>
+      <li>To go the GitLab Dashboard, select<span class="Program_Name"> New Project</span></li>
+      <li>Add project name as directed by your assignment’s instructions:</li>
+      <li>Select <span class="Program_Name">Private</span> (pictured above).</li>
+      <li>Select <span class="Program_Name">Create Project</span> (pictured above). This should display the image in the next step.</li>
+      <li>Select <span class="Program_Name">Settings</span>.</li>
+      <li>Select <span class="Program_Name">Add Members</span>.</li>
+      <li>Add the TA and Professor (get their UNCC user name from their email address) under People. Give both of them Reporter access in the <span class="Program_Name">Project Access</span> menu. Select <span class="Program_Name">Add Users to Project</span>.</li>
+      </ol>
+      </li>
+      <li><a name="_Ref431823815">[<em>YourServer</em><b>=git-viscenter</b>]</a><br>
+        <br>
+        The above works as long as you were give “Create” permissions under the indicated  Note, git-viscenter uses the gitolite server which has a special feature that creates a remote repo if it does not already exist when you attempt to clone it. git-viscenter access permissions are managed by the TA and generally already set-up for the course</li>
+      <li>[<em>YourServer</em><b>=git-viscenter</b>]
+        <ol>
+          <li>Select create</li>
+          <li>Here are some recommended settings (assume you name the repo MyRepoName)</li>
+          <li>Set up repo access permission (“sharing”): </li>
+          <li>If the project is a team project, add your team members.</li>
+          <li>Add the course TA and Professor get their email from class website 
+           <div align="center">
+                <table style="border-collapse:collapse;border:none" border="1" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td style="width:2.0in;border:solid windowtext 1.0pt;
+          padding:0in 5.4pt 0in 5.4pt" valign="top" width="192">
+                        <p style="margin-left:.5in">Dr. Wartell</p>
+                      </td>
+                      <td style="width:184.1pt;border:solid windowtext 1.0pt;
+          border-left:none;padding:0in 5.4pt 0in 5.4pt" valign="top" width="245">
+                        <p style="margin-left:.5in">Zwartell</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width:2.0in;border:solid windowtext 1.0pt;
+          border-top:none;padding:0in 5.4pt 0in 5.4pt" valign="top" width="192">
+                        <p style="margin-left:.5in">TA</p>
+                      </td>
+                      <td style="width:184.1pt;border-top:none;border-left:
+          none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"
+        
+                        valign="top" width="245">
+                        <p> <i>get their email from class website</i></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </li>
+          <li><strong>Example:</strong> Example steps to populate the remote repo is by creating a local repo and performing a git push as follows:</li>
+        </ol>
+      </li>
+      </ol>
+      </li>
+      <li><strong>How to Push to New Remote Repository:</strong><br>
+        To push files to a new <u>empty</u>, <u>remote</u> repository, such as one created in following Item #2 (above) do as follows. Assume the remote is called <u><span class="User_Input">Project_Example.git</span></u>:        <br>
+        <ol class="Instruction_Option">
+        <li>[<em>YourServer</em>=<strong>cci-git</strong>] </li>
+        <ol>
+        <li><strong>Option I</strong>: <strong>git clone</strong>:  <br>
+          If you have <u>not</u> already created files in a local directory that you want to import, performing the following:<br>
+          &lt;INSERT CODE&gt;<br>
+        </li>
+        <li><strong>Option II</strong>:  <strong>git init:</strong><br>
+          If you <u>already</u> created files in a local directory (call it <u>Project_Example</u>) and that local directory is <u>not</u> already a local Git repo, perform the following: (1) initialize that directory as a local Git repo and (2) push it the remote Git repo:<br>
+          &lt;INSERT CODE&gt;
+          <br>
+        </li>
+          </ol>
+        <li>[<em>YourServer</em>=<strong>git-viscenter,Bitbucket</strong>] <br>
+          <br>
+          Perform the same instructions as above, Option II, for [<strong>cci-git</strong>] but replace:<br>
+               <span class="Server_Name">https://cci-git.uncc.edu/<u><span class="User_Input">your_user_id</span></u>/</span><br>
+          with<br>
+           [<strong>bitbucket</strong>]   <span class="Server_Name"> git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u> </span><br>
+           [<strong>git-viscenter]</strong> <span class="Server_Name">git-viscenter@cci-subv.uncc.edu:wartell/<u><span class="User_Input">ITCS_XXXX</span></u><em>/</em>students/<u><span class="User_Input">FirstName_LastName</span></u>        </span></li>
+        <li>[<em>YourServer</em>=<strong>Bitbucket</strong>] </li>
+        
+        </ol>
+      </li>
+      <li>To delete a remote repo:
+      <ol class="Instruction_Option">
+      <li>
+      [<em>YourServer</em>=<strong>git-viscenter</strong>] <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        (For Windows using Git-Bash substitute ssh above with plink)</li>
+      <li>[<em>YourServer</em>=<strong>Bitbucket</strong>] <em>See Bitbucket Website.</em></li>
+      <li>[<em>YourServer=</em><strong>cci-git</strong>]<em> See cci-git Website.</em><br>
+      </li>
+      </ol>
+      </li>
+      <li><br>
+      </li>
+    </ol>
+
+
     </section>
-  </body>
+  </section>
+  <h1>Course Git Policies</h1>
+  <section>
+  <h2>Submitting Class Assignments</h2>
+  <p>Submit all your assignments by using Git add, commit and push to upload your code to your Git repository subdirectory.</p>
+  <div>
+    <p>Your projects will be graded based on the version of your code that is git-push&rsquo;ed to the Git server at the time of the due date for the project.</p>
+  </div>
+  </section>
+  <section>
+  <h2>Keep the repository clean!!!</h2>
+  <p><br>
+    It is standard practice when using version control software to not commit intermediate or output files generated by the compiler into the repository.  Intermediate or output compilation files are all regenerated when someone else checkout&rsquo;s the source code and recompiles it. Like all compilers MSVS 20xx C++ compiler generates lots of these (*.ncb, *.ilk, *.exe, *.obj, etc.).  <br>
+    <br>
+  </p>
+  <p align="center">Rule: Do not commit such intermediate files to your Git repository!</p>
+  <p> </p>
+  <p>Fortunately, you can automate this process using the .gitignore mechanism (see</p>
+  <p>[2]).</p>
+  <p> </p>
+  <p>Reasoning:</p>
+  <p>Adding intermediate auto-generated files to the repository is wasteful, messy and can create subtle problems.  Many intermediate files will create compilation problems if they are copied between different computers. Putting them in the repository is equivalent to such copying.</p>
+  <p> </p>
+  <p>By convention, the following files should be put in the repository:</p>
+  <setion>
+  <h3><a name="_Toc460323713">9.2.1.                  C++ Code Rules</a><br>
+    <br>
+  </h3>
+  <p>The following files should be put in the repository:<br>
+    <br>
+  </p>
+  <ul type="disc">
+    <li>source code files (.cpp, .h, etc.)</li>
+    <li>compilation scripts or project files</li>
+    <ul type="circle">
+      <li>Under MSVS 2010 for C++:  <br>
+        .vcxproj, .sln, .vcxproj.user</li>
+    </ul>
+  </ul>
+  <p>Under earlier MSVS versions:  <br>
+    .vcproj, .sln, .vcproj.&lt;username&gt;.&lt;machinename&gt;.user</p>
+  <ul type="disc">
+    <li>a .txt file or .doc file describing what parts of the project you completed or left incomplete, etc.</li>
+    <li>any input files such as image files or other data files required by your program</li>
+    <li>any subdirectories containing the above files<br>
+      <br>
+      <br>
+    </li>
+  </ul>
+  <p>When adding subdirectories, be careful not to blindly submit their entire contents because often they contain additional automatically generated files.    If you make a mistake just delete the intermediate files from the repo.</p>
+  </section>
+  <section>
+  <h3><a name="_Toc460323714">9.2.2.                  JavaScript and WebGL</a></h3>
+  <p> </p>
+  <p>The following files should be put in the repository:<br>
+    <br>
+  </p>
+  <ul type="disc">
+    <li>source code files:</li>
+    <ul type="circle">
+      <li>.js, .html</li>
+    </ul>
+    <li>compilation scripts or project files</li>
+    <ul type="circle">
+      <li>at the moment our projects are too trivial to use any</li>
+    </ul>
+    <li>a .txt file or .doc file describing what parts of the project you completed or left incomplete, etc.</li>
+    <li>any input files such as image files or other data files required by your program</li>
+    <li>of course, any subdirectories containing the above files<br>
+      <br>
+    </li>
+  </ul>
+  <p>When adding subdirectories, be careful not to blindly submit their entire contents because often they contain additional automatically generated files.    If you make a mistake just delete the intermediate files from the repo.</p>
+  <p> </p>
+  </section>
+  </section>
+<section>
+  <h2>Verify Your Remote Repository</h2>
+  <p>The TA only sees your remote Git server repo&rsquo;s.</p>
+  <p> Rule:  Always make sure your assignment appears as you expect in the remote repo (on the Git server).</p>
+  <p><em>The Ultimate Verification</em>:</p>
+  <p>The ultimate way to verify the remote repo contains the files you think it does is to clone it into to another directory and check that second cloned copy for completeness.   You should do this when you are completely done with your assignment.</p>
+  <p> <em>Some Safety Checks:</em><br>
+  </p>
+  <p>Performing<em> The Ultimate Verification</em> while you are developing code is tedious. During software development the following are good practices to keep track of your commit&rsquo;s and push&rsquo;s.<br>
+  </p>
+  <ul type="disc">
+    <li><strong>git-status</strong><br>
+      <br>
+      <em>Good Result</em>:<br>
+      <br>
+      The above indicates everything is good.   You have no file changes that have not been committed to the local repo and no local repo commits that have not been pushed to the remote repo.<br>
+      <br>
+      <em>Maybe Bad:</em><br>
+      If you get messages like:<br>
+      <br>
+      then you have untracked files (but you have push&rsquo;ed all your commits).  This maybe ok as along as these files aren&rsquo;t files that belong in a repo (such as temporary files).  You might consider adding to the .gitignore file (see [2]).<br>
+      <br>
+      <em>Bad:</em><br>
+      If you get a message like:<br>
+      <br>
+      then <br>
+      then you have not pushed all your latest changes to the remote repo. Do a git-push before the final assignment deadline. <br>
+      <br>
+    </li>
+    <li><strong>[Optional] TortoiseGit</strong> – Optionally, another good way to check with the TortoiseGit shell extension is using Check for Modifications. This will show you whether you have any changes not commited to the local repo (but make sure to check the box, Show Unversioned Files).   Below we see one file is untracked.<br>
+      <br>
+      However, Check for Modifications will not tell you whether you have pushed all your commits to the remote repo.  <br>
+      <br>
+      For that use the TortoiseGit shell extension and select Git Sync. The following Git Sync dialog box would indicate your local repo has committed changes that you have not pushed to the git-viscenter remote:<br>
+    </li>
+  </ul>
+  <p>However, Git Sync does not show you if you have changes to local files that you have not commited to the local repo!</p>
+  <p> </p>
+  </section>
+  <section>
+  <h1>Citations</h1>
+  <ol class="Citation_List">
+    <li>    Unix Primer - Basic Commands In the Unix Shell, <a href="http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html">http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html</a></li>
+    <li>Scott Chacon, Pro Git, Apress, <a href="http://git-scm.com/book">http://git-scm.com/book</a>. </li>
+    <li>&quot;To add or change the values of environment variables&quot;, Windows XP Professional Product Documentation, Performance and maintenance.   <a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true">http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true</a></li>
+    <li>Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html">http://www.gnu.org/software/bash/manual/html_node/index.html</a></li>
+    <li>&quot;Environment Variable : Details&quot;, Wikipedia.  <a href="https://en.wikipedia.org/wiki/Environment_variable#Details">https://en.wikipedia.org/wiki/Environment_variable#Details</a></li>
+    <li>&quot;PATH (variable)&quot;, Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
+    <li>“Environment Variables”,  Mac Developer Library. <a href="https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html ">https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html </a></li>
+  </ol>
+  </section>
+</body>
 </html>
