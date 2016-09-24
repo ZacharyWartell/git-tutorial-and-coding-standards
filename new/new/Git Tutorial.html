@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0130)file:///D:/Users/Zachary/Dropbox%20(UNC%20Charlotte)/classes/Repository_Usage/new/ITCS%203120%20Fall%202016%20-%20Project%202.html -->
 <!--
-  References  - [R1] https://css-tricks.com/expanding-images-html5/  
-              - [R2] http://philarcher.org/diary/2013/headingnumbers/
--->
+  References  - [R1] https://css-tricks.com/expanding-images-html5/                - [R2] http://philarcher.org/diary/2013/headingnumbers/-->
 <html>
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
@@ -20,12 +18,30 @@
         }
     </script>
     <style type="text/css">        
-    .File_Name {font-family: "Courier", monospace;}
-        .Program_Name {font-family: "Courier", monospace;}
-        .Server_Name {font-family: "Courier", monospace;}
-        p.Title {font-weight: bold;
+        
+        span.Program_Name {font-family: "Courier", monospace;}
+        span.Server_Name {font-family: "Courier", monospace;}
+        span.File_Name {font-family: Courier, monospace;}
+        span.Function_Name {font-family: Courier, monospace;}        
+        
+        span.Grade_Points {font-weight: bold;}       
+        span.Text_Button 
+        {
+            font-family: Courier, monospace; 
+            background-color: lightgrey; 
+            border-color: black;
+            border-style: solid;
+            border-width: 1;
+        }        
+        
+        h1.Title, h2.Title, h3.Title {text-align: center;}
+        
+        p.Title 
+        {
+            font-weight: bold;
             text-align: center;
-            font-size: x-large;}
+            font-size: x-large;
+        }
         /*   Code Examples (put in 1x1 table)
                         table.Hide_Code_Example:target
                         {width: 400px;
@@ -34,78 +50,122 @@
                             border-radius: 10px;
                             background-color: black;}
             */
-        table.Code_Example {
-			width: 100%;
+        table.Code_Example 
+        {
+            width: 100%;
             background-color: black;
-			}
+        }
         /*  Code Example Expand style when displaying at full height, instead of with scroll bar
             */
-        table.Code_Example_Expand > tbody > tr > td > div {width: 100%;
-            height: 100% !important;}
+        table.Code_Example_Expand > tbody > tr > td > div 
+        {
+            width: 100%;
+            height: 100% !important;
+        }
         /*  Code Example Table Cell that contains expand button
             */
-        table.Code_Example > tbody > tr > td:first-child {vertical-align: text-top;
+        table.Code_Example > tbody > tr > td:first-child 
+        {
+            vertical-align: text-top;
             text-align: left;
             width: 25px;
             background-color: transparent;
-            padding: 0;}
+            padding: 0;
+        }
         /* Code Example Expand style when displaying code in compact, scrollable mode.
             */
-        table.Code_Example > tbody > tr > td > div {width: 100%;
-            overflow-y: auto;}
-        code.Shell_Code_Input {font-family: "Courier", monospace;
-            color: white;}
-        code.Shell_Code_Output {font-family: "Courier", monospace;
-            color: lightgreen;}
-        code.Shell_Code_Prompt {font-family: "Courier", monospace;
-            color: cyan;}
-        /*  User Input Required
-            */
-        .User_Input {background-color: grey;
+        table.Code_Example > tbody > tr > td > div 
+        {
+            width: 100%;
+            overflow-y: auto;
+        }
+        
+        code.Shell_Code_Input 
+        {
+            font-family: "Courier", monospace;
+            color: white;
+        }
+        code.Shell_Code_Output 
+        {
+            font-family: "Courier", monospace;
+            color: lightgreen;
+        }
+        code.Shell_Code_Prompt 
+        {
+            font-family: "Courier", monospace;
+            color: cyan;
+        }
+        /*  
+        User Input
+        */
+        /* when outside Code_Example */
+        .User_Input 
+        {
+            background-color: grey;
             font-style: italic;
             color: white;
             text-decoration: underline;
-            text-decoration-style: dotted;}
-        table.Code_Example .User_Input {background-color: darkgrey;
+            text-decoration-style: dotted;
+        }
+        /* when inside Code_Example */
+        table.Code_Example .User_Input 
+        {
+            background-color: darkgrey;
             font-style: italic;
             color: white;
             text-decoration: underline;
-            text-decoration-style: dotted;}
-        /*  User Input Required
-            */
-        .User_Input_Generic {background-color: blue;
-            color: white;}
-        span.File_Name {font-family: Courier, monospace;}
-        span.Function_Name {font-family: Courier, monospace;}
-        /*   Comments in Shell Code
-            */
+            text-decoration-style: dotted;
+        }
+        /*  
+        User Input 
+        */
+        span.User_Input_Generic 
+        {
+            background-color: blue;
+            color: white;
+        }
+                
+        /*   
+        Comments in Shell Code
+        */
         span.Shell_Code_Comment {font-family: Courier, monospace;
             text-align: center;
             color: pink;
             background-color: grey;
             font-style: italic;
             font-weight: bold;}
-        /*   Hierarchical List of Option Instructions
-            */
+        /*   
+        Hierarchical List of Option Instructions
+        */
         ol.Instruction_Option {font-size: large;
             list-style-type: lower-greek !important;}
         ol.Instruction_Option > li {font-size: large;
             list-style-type: lower-greek;}
+        
+        /*   
+        Hierarchical List of Sequential Instructions
+        */
+        ol.Instruction 
+        {
+            font-size: large;
+            list-style-type: decimal;
+        }
+        ol.Instruction > li > ol 
+        {
+            font-size: large;
+            list-style-type: lower-alpha;
+        }
+        ol.Instruction > li > ol > li > ol 
+        {
+            font-size: large;
+            list-style-type: lower-roman;
+        }
+        
+        
         /*
-            */
-        /*   Hierarchical List of Sequential Instructions
-            */
-        ol.Instruction {font-size: large;
-            list-style-type: decimal;}
-            ol.Instruction > li > ol {font-size: large;
-                list-style-type: lower-alpha;}
-                ol.Instruction > li > ol > li > ol {font-size: large;
-                    list-style-type: lower-roman;}
-        span.Grade_Points {font-weight: bold;}
-        h1.Title, h2.Title, h3.Title {text-align: center;}
-        /** Figures that are Screen_Capture's
-             ** from [R1]
-             **/
+        Figures that are Screen_Capture's
+        (Resourse [R1])
+        */
         figure.Screen_Capture {width: 500px;
             background: white;
             border: 10px solid white;
@@ -118,36 +178,49 @@
             -o-transition: all 1s ease;
             transition: all 1s ease;
             position: relative;}
-            figure.Screen_Capture img {width: 100%;}
-            figure.Screen_Capture:hover {-webkit-box-shadow: 0 3px 10px #F1EA35;
-                -moz-box-shadow: 0 3px 10px #F1EA35;}
-            figure.Screen_Capture:focus {outline: none;
-                -webkit-transform: translate(500px,350px) scale(3.0);
-                -moz-transform: translate(500px,350px) scale(3.0);
-                -webkit-box-shadow: 0 3px 10px #666;
-                -moz-box-shadow: 0 3px 10px #666;
-                z-index: 9999;}
-				
-		/*
-		Citation_List
-		*/
+        
+        figure.Screen_Capture img 
+        {
+            width: 100%;
+        }
+
+        figure.Screen_Capture:hover 
+        {
+            -webkit-box-shadow: 0 3px 10px #F1EA35;
+            -moz-box-shadow: 0 3px 10px #F1EA35;
+        }
+
+        figure.Screen_Capture:focus 
+        {
+            outline: none;
+            -webkit-transform: translate(500px,350px) scale(3.0);
+            -moz-transform: translate(500px,350px) scale(3.0);
+            -webkit-box-shadow: 0 3px 10px #666;
+            -moz-box-shadow: 0 3px 10px #666;
+            z-index: 9999;
+        }
+
+        /*
+        Citation_List
+        */
         ol.Citation_List {
-			counter-reset: item;
-			list-style-type: none;
-			margin-left: 0;
+            counter-reset: item;
+            list-style-type: none;
+            margin-left: 0;
             padding-left: 0;
-		}
-		ol.Citation_List > li
-		{
-			margin-left: 2em;
-		}		
-		ol.Citation_List > li:before 
-		{			
-			content: "[" counter(item) "] ";
-			counter-increment: item; 
-			margin-left: -2em;
-		}
-        /* Heading Numbering (from [R2])
+            }
+        ol.Citation_List > li
+            {
+                margin-left: 2em;
+            }		
+        ol.Citation_List > li:before 
+            {			
+                content: "[" counter(item) "] ";
+                counter-increment: item; 
+                margin-left: -2em;
+            }
+        /* 
+        Heading Numbering (Resource [R2])
         */
         body {counter-reset: h1}
         h1 {counter-reset: h2}
@@ -163,7 +236,7 @@
         h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {content: ""; counter-increment: none}
     </style>
     <style media="print" type="text/css">        
-    /*
+        /*
         If printing, don't use scroll bars, just expand code examples to full height.
         When printing to PDF, if in Chromne you must also enable "Background Graphics".
         */
@@ -179,234 +252,258 @@
 	text-decoration:underline;}
     </style>
   </head>
-<body>
-    <br>
+  <body> <br>
     <div align="center">
       <p class="Title"> Git Tutorial<br>
       </p>
+      Author: Dr. Zachary Wartell, UNC Charlotte<br>
+      Contributors: ....<br>
       <br>
-      <p class="Title">Fall 2016</p>
-      <p class="Title">Professor: Zachary Wartell</p>
-      <p class="Title">Revision: 9/11/2016</p>
-    </div>
+      Revision: 9-23-2016 </div>
     <section>
-      <p class="Title">Due: X, X XXX 2016, 11:55 PM</p>
-      <p class="Title">Compatibility</p>
-      <p> This page has been tested on Firefox v41 and Chrome v46.&nbsp;
-        A PDF version is available at location <a target="_blank"
-href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/ITCS%203120%20Fall%202015%20-%20Project%202.pdf">
+      <p style="text-align: left;" class="Title">Compatibility</p>
+      <p> This document has been tested on Firefox v41 and Chrome v46.&nbsp; A
+        PDF version is available at location <a target="_blank" href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/ITCS%203120%20Fall%202015%20-%20Project%202.pdf">
           .\ITCS 3120 Fall 2015 - Project 2.pdf </a><br>
       </p>
     </section>
     <section>
       <h1 id="Prerequisites">Prerequisites</h1>
-      <p> This document assumes the reader has the following
-        prerequisite knowledge: </p>
+      <p> This document assumes the reader has the following prerequisite
+        knowledge: </p>
       <ol class="Instruction">
         <li> Basic knowledge of Unix style command-line shell. <br>
           <br>
-          Note: You should understand Unix style shells at the level
-          discussed in [1]. <a href="#Installing_Git">#Installing_Git</a>
-          discusses installing a suitable command-line shell for OS’s
-          that do not automatically come with one. All remaining
-          sections assume knowledge at the level of [1]. </li>
-        <li> Knowledge of environment variables, what they are and how
-          to set them. <br>
+          <em>Note</em>: The reader should understand Unix command-line shells
+          at the level discussed in [1]. Section <a href="#Installing_Git">#Installing_Git</a>
+          discusses installing a suitable command-line shell for OS’s that do
+          not automatically come with one. All remaining sections assume
+          knowledge at the level of [1]. <br>
+        </li>
+        <li> Knowledge of environment variables, what they are and how to set
+          them. <br>
           <br>
-          Note: You should understand environment variables at the level
-          discussed in [5] and specifically PATH [6]. See also [3] for
-          Windows and [7] for Mac specifics. </li>
+          <em>Note</em>: The reader should understand environment variables at
+          the level discussed in [5] and specifically the variable PATH [6]. See
+          also [3] for Windows and [7] for Mac specifics. </li>
       </ol>
     </section>
     <section>
-      <h1 id="Guide_to_Reading_these_Instructions"> Guide to Reading
-        these Instructions</h1>
-      <p> Various section, sub-sections and specific numbered
-        instructions are either “generic” or operating system specific
-        or Git server specific. Generic instructions apply to all
-        operating systems and all Git servers while specific sections
-        apply only specific Git servers or operating systems. </p>
+      <h1 id="Guide_to_Reading_these_Instructions"> Guide to Reading these
+        Instructions</h1>
+      <p> Various section, sub-sections and specific numbered instructions are
+        either “generic” or operating system specific or Git server specific.
+        Generic instructions apply to all operating systems and all Git servers
+        while specific sections apply only specific Git servers or operating
+        systems. </p>
       <ul>
-        <li><b>Server:&nbsp; </b>Your instructor will tell you which
-          Git server you must use for your course work. It will be one
-          of the following:
-        <ul>
-          <li><span class="File_Name">cci-git.uncc.edu </span></li>
-        </ul>
-        <ul>
-          <li><span class="File_Name"> git-viscenter@cci-subv.uncc.edu</span></li>
-        </ul>
-        <ul>
-          <li><span class="File_Name">bitbucket.org</span></li>
-        </ul>
-        <p> Instructions that are specific to one of the above Git
-          servers will have the following headings:</p>
-        <ul>
-          <li>[<i>YourServer</i>=<span class="File_Name">cci-git</span>]
-          </li>
-        </ul>
-        <ul>
-          <li> [<i>YourServer</i>=<span class="File_Name">git-viscenter</span>]
-          </li>
-        </ul>
-        <ul>
-          <li> [<i>YourServer</i>=<span class="File_Name">Bitbucket</span>]</li>
-        </ul>
+        <li><b>Server:&nbsp; </b>Your instructor will tell you which Git server
+          you will use for your course work. It will be one of the following:
+          <ul>
+            <li><span class="File_Name">cci-git.uncc.edu </span></li>
+          </ul>
+          <ul>
+            <li><span class="File_Name"> git-viscenter@cci-subv.uncc.edu</span></li>
+          </ul>
+          <ul>
+            <li><span class="File_Name">bitbucket.org</span></li>
+          </ul>
+          <p> Instructions in this document that are specific to one of the
+            above Git servers will have the following headings:</p>
+          <ul>
+            <li>[<i>YourServer</i>=<span class="File_Name">cci-git</span>] </li>
+          </ul>
+          <ul>
+            <li> [<i>YourServer</i>=<span class="File_Name">git-viscenter</span>]
+            </li>
+          </ul>
+          <ul>
+            <li> [<i>YourServer</i>=<span class="File_Name">Bitbucket</span>]</li>
+          </ul>
         </li>
-        <li><b>Operating System:</b> Your instructor will have told you
-          which operating systems you must use for your course work.
-          Instructions in this document that are specific to a
-          particular operating system will have the following headings:
-        <ul>
-          <li>[<i>OS</i>=<b>Windows</b>]</li>
-          <li>[<i>OS</i>=<b>Linux</b>] </li>
-          <li>[<i>OS</i>=<b>Mac</b>]</li>
-        </ul>
-        <p>Depending on the course you are taking you may be required
-          to use only one designated operating system. This information
-          will be given to you in class.</p>
+        <li><b>Operating System:</b> Your instructor will tell you which
+          operating systems you must use for your course work. Instructions in
+          this document that are specific to a particular operating system will
+          have the following headings:
+          <ul>
+            <li>[<i>OS</i>=<b>Windows</b>]</li>
+            <li>[<i>OS</i>=<b>Linux</b>] </li>
+            <li>[<i>OS</i>=<b>Mac</b>]</li>
+          </ul>
+          <p>Depending on the course you are taking you may be required to use
+            only one designated operating system. This information will be given
+            to you in class.</p>
         </li>
-        <li><b>Screen Shot Figures</b>: Screen captures in this document
-          can be zoomed by clicking on the image.&nbsp;&nbsp; Click
-          anywhere else to return the image to it's original size.  For example, click on the image below:<br>
-             <figure class="Screen_Capture" tabindex="1"> <img
-                        src="images/Screen_Capture.png"
-                        alt="Screen_Capture"> </figure>
+        <li><b>Screen Shot Figures</b>: Screen captures in this document can be
+          zoomed by clicking on the image.&nbsp;&nbsp; Click anywhere else to
+          return the image to it's original size. For example, click on the
+          image below:<br>
+          <figure class="Screen_Capture" tabindex="1"> <img src="images/Screen_Capture.png"
+
+              alt="Screen_Capture"> </figure>
         </li>
-        <li><b>Fonts:</b> 
-            <ul>
-                <li><span class="User_Input">your_user_id</span> – this
-                    indicates you should input a specific text string. The
-                    specifics will be indicated in the instructions. </li>
-            </ul>
-            <ul>
-                <li> <span class="User_Input_Generic">path_to_a_directory_where_you_can_save_your_work</span>
-                    – this indicates you should input a specific text string. It
-                    is assumed the reader can interpret what to type based on
-                    the context and their general computer science knowledge. </li>
-            </ul>
-            <ul>
-                <li> <span class="Shell_Code_Comment"> […additional output
-                        will appear…] </span> – this a comment describing output
-                    from a command-line command. </li>
-            </ul>
+        <li><b>Fonts:</b>
+          <ul>
+            <li><span class="User_Input">your_user_id</span> – this indicates
+              you should input a specific text string. The specifics will be
+              indicated in the instructions. </li>
+            <li> <span class="User_Input_Generic">path_to_a_directory_where_you_can_save_your_work</span>
+              – this indicates you should input a specific text string. It is
+              assumed the reader can interpret what to type based on the context
+              and their general computer science knowledge. </li>
+            <li> <span class="Shell_Code_Comment"> […additional output will
+                appear…] </span> – this a comment describing output from a
+              command-line command. </li>
+          </ul>
+        </li>
+        <li><b>Shell Code Examples:</b> Shell code instructions appear in black
+          boxes. For lengthy code examples there is an interactive scroll bar on
+          the right. Additionally, on the right there is a button,&nbsp;<span class="Text_Button">&nbsp;▽&nbsp;</span>
+          , clicking the button will expand the box to display it's entire
+          contests without scrolling. An example is below:<br>
+          <table class="Code_Example" id="Code_Example_Example" border="1">
+            <tbody style="height: 150px;">
+              <tr>
+                <td> <button onclick="Code_Example_Toggle('Code_Example_Example');">
+                    ▽ </button> </td>
+                <td>
+                  <div style="height: 100px;"> <code class="Shell_Code_Prompt">
+                      lucretius@CCIWD-435B-1 ~/ITCS_4120<br>
+                    </code> <code class="Shell_Code_Input"> $ ls -la <br>
+                    </code> <code class="Shell_Code_Output"> total 20<br>
+                      drwxr-xr-x 1 lucretius 197609 0 Sep 23 21:57 ./<br>
+                      drwxr-xr-x 1 </code><code class="Shell_Code_Output"><code
+
+                        class="Shell_Code_Output">lucretius</code> 197609 0 Sep
+                      23 21:37 ../<br>
+                      -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
+
+                        class="Shell_Code_Output">lucretius</code> 197609 0 Sep
+                      23 21:55 'The Hitchhickers Guide to the Galaxy.azw'<br>
+                      -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
+
+                        class="Shell_Code_Output">lucretius</code> 197609 0 Sep
+                      23 21:36 'On the nature of things - Lucretius.pdf'<br>
+                      -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
+
+                        class="Shell_Code_Output">lucretius</code> 197609 0 Sep
+                      23 21:56 'Ethica - Spinzoa.pdf'<br>
+                      -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
+
+                        class="Shell_Code_Output">lucretius</code> 197609 0 Sep
+                      23 21:57 'Moses the Egyptian: The Memory of Egypt in
+                      Western Monotheism.azw'<br>
+                      -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
+
+                        class="Shell_Code_Output">lucretius </code>197609 0 Sep
+                      23 21:37 Notes.docx<br>
+                      <span class="Shell_Code_Comment"> […misc additional output
+                        will appear…] </span> </code> </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </li>
       </ul>
     </section>
     <section>
       <h1 id="Installing_Git"> Installing Git </h1>
       <p> Git is a command-line program. Git servers uses various access
-        protocols for security and authorization. Depending what access
-        protocol your designated Git server uses you may need to have or
-        install additional software beyond command-line Git.&nbsp; You
-        will be told which access protocol your designated Git server
-        uses by your instructor. Generally, it will be either SSH or
-        HTTPS.<br>
+        protocols for security and authorization. Depending what access protocol
+        your designated Git server uses you may need to have or install
+        additional software beyond command-line Git.&nbsp; You will be told
+        which access protocol your designated Git server uses by your
+        instructor. Generally, it will be either SSH or HTTPS.<br>
       </p>
       <p>First you may need to install the Git command-line tools.</p>
-      <p> <u><i>Woodward Labs</i></u>:&nbsp; Windows computers in
-        Woodward labs should have both the command-line Git, OpenSSH and
-        TortoiseGit installed.&nbsp; <br>
-        If you are using UNCC computers with a different operating
-        system please email the TA. If your designated Git server is
-        either <span class="File_Name">Bitbucket</span> or <span
-          class="File_Name">git-viscenter</span>, go to&nbsp;<a
-          href="#Download_and_Install_OpenSSH">#Download_and_Install_OpenSSH</a>.&nbsp;
-        For <span class="File_Name">cci-git</span> skip to <a
-          href="#Full_Git_Tutorial">#Full_Git_Tutorial</a>. </p>
-      <p> <u><i>Computers Elsewhere</i></u>:&nbsp; If you are working
-        on computers elsewhere, you need to install Git and
-        TortoiseGit.&nbsp; Installation instructions are below in <a
-          href="#Installation_and_Setup_of_Command-Line">#Installation_and_Setup_of_Command-Line</a>
+      <p> <u><i>Woodward Labs</i></u>:&nbsp; Windows computers in Woodward labs
+        should have both the command-line Git, OpenSSH and TortoiseGit
+        installed.&nbsp; <br>
+        If you are using UNCC computers with a different operating system please
+        email the TA. If your designated Git server is either <span class="File_Name">Bitbucket</span>
+        or <span class="File_Name">git-viscenter</span>, go to&nbsp;<a href="#Download_and_Install_OpenSSH">#Download_and_Install_OpenSSH</a>.&nbsp;
+        For <span class="File_Name">cci-git</span> skip to <a href="#Full_Git_Tutorial">#Full_Git_Tutorial</a>.
+      </p>
+      <p> <u><i>Computers Elsewhere</i></u>:&nbsp; If you are working on
+        computers elsewhere, you need to install Git and TortoiseGit.&nbsp;
+        Installation instructions are below in <a href="#Installation_and_Setup_of_Command-Line">#Installation_and_Setup_of_Command-Line</a>
         and <a href="#Installation_and_Setup_of_Git_GUIs">#Installation_and_Setup_of_Git_GUIs</a>.&nbsp;
-        After performing these installations, if your designated Git
-        server is <span class="Server_Name"> cci-git </span>you can
-        proceed to <a
-href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">#Full_Git_Tutorial</a>.
+        After performing these installations, if your designated Git server is <span
+
+          class="Server_Name"> cci-git </span>you can proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">#Full_Git_Tutorial</a>.
         If your server is either&nbsp; <span class="File_Name">Bitbucket</span>
-        or <span class="File_Name">git-viscenter</span>, you also need
-        to also perform <a href="#Installation_and_Setup_of_OpenSSH">#Installation_and_Setup_of_OpenSSH</a>
-        and then proceed to
-        <a
-href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">#Full_Git_Tutorial</a>.
+        or <span class="File_Name">git-viscenter</span>, you also need to also
+        perform <a href="#Installation_and_Setup_of_OpenSSH">#Installation_and_Setup_of_OpenSSH</a>
+        and then proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">#Full_Git_Tutorial</a>.
       </p>
       <section>
-        <h2 id="Installation_and_Setup_of_Command-Line_Git"><a
-            name="Installation_and_Setup_of_Command-Line"></a>Installation
+        <h2 id="Installation_and_Setup_of_Command-Line_Git"><a name="Installation_and_Setup_of_Command-Line"></a>Installation
           and Setup of Command-Line Git</h2>
         <p> If you are working from a UNCC computer that already has Git
           installed you can skip this section. </p>
-        <p> <em>Instructions below vary with your operating system.</em>
-        </p>
+        <p> <em>Instructions below vary with your operating system.</em> </p>
         <ol class="Instruction_Option">
           <li> [<em>YourOS</em>=<strong>Windows</strong>]
             <ol class="Instruction">
               <li> Download and Install Git for Windows,
                 https://git-for-windows.github.io/. <br>
                 <br>
-                This installs a minimal Unix style shell (called
-                ‘git-bash’), the basic OpenSSH tools as well as
-                git.&nbsp; During install select the following (for any
-                other options given choose the defaults):<br>
-                <img alt="" src="images/Git-Bash-A.png"><img alt=""
-                  src="images/Git-Bash-B.png"><br>
-                <img alt="" src="images/Git-Bash-C.png"><img alt=""
-                  src="images/Git-Bash-D.png"><br>
+                This installs a minimal Unix style shell (called ‘git-bash’),
+                the basic OpenSSH tools as well as git.&nbsp; During install
+                select the following (for any other options given choose the
+                defaults):<br>
+                <img alt="" src="images/Git-Bash-A.png"><img alt="" src="images/Git-Bash-B.png"><br>
+                <img alt="" src="images/Git-Bash-C.png"><img alt="" src="images/Git-Bash-D.png"><br>
                 <img alt="" src="images/Git-Bash-E.png"> </li>
             </ol>
           </li>
-          <li> [<em>YourOS</em>=<strong>Linux</strong>] Download and
-            install Git from <a href="http://git-scm.com/">http://git-scm.com/</a>.
+          <li> [<em>YourOS</em>=<strong>Linux</strong>] Download and install Git
+            from <a href="http://git-scm.com/">http://git-scm.com/</a>. </li>
+          <li> [<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp; Download and
+            Install Git from <a href="http://git-scm.com/%20">http://git-scm.com/</a>.
           </li>
-          <li> [<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp;
-            Download and Install Git from <a
-              href="http://git-scm.com/%20">http://git-scm.com/</a>. </li>
         </ol>
       </section>
       <section>
-        <h2 id="Installation_and_Setup_of_Git_GUIs">Installation and
-          Setup of Git GUI’s</h2>
+        <h2 id="Installation_and_Setup_of_Git_GUIs">Installation and Setup of
+          Git GUI’s</h2>
         <p> Generally, the Git instructions in this document and any Git
           instructions given in this course will be given on using Git
-          command-line examples for generality.&nbsp; But many GUI Git
-          tools are available as well. Use of GUI Git tools is <u>optional</u>.
-        </p>
+          command-line examples for generality.&nbsp; But many GUI Git tools are
+          available as well. Use of GUI Git tools is <u>optional</u>. </p>
         <ol class="Instruction_Option">
           <li> [<em>YourOS</em>=<strong>Window</strong>] <br>
-            Download and install TortoiseGit from <a
-href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/tortoisegit/.">https://code.google.com/p/tortoisegit/</a>.
+            Download and install TortoiseGit from <a href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/tortoisegit/.">https://code.google.com/p/tortoisegit/</a>.
           </li>
           <li> [<em>YourOS</em>=<strong>Mac/Linux</strong>] <br>
-            Various Git GUIs are found here <a
-              href="http://git-scm.com/downloads/guis.%20%20">http://git-scm.com/downloads/guis</a>.&nbsp;
+            Various Git GUIs are found here <a href="http://git-scm.com/downloads/guis.%20%20">http://git-scm.com/downloads/guis</a>.&nbsp;
 
 
-          </li>
+            </li>
         </ol>
       </section>
     </section>
     <section>
-      <h1 id="Installation_and_Setup_of_OpenSSH">Installation and Setup
-        of OpenSSH</h1>
+      <h1 id="Installation_and_Setup_of_OpenSSH">Installation and Setup of
+        OpenSSH</h1>
       <table border="1">
         <tbody>
           <tr>
-            <td>
-              All of Section 4 is only for servers:&nbsp;&nbsp;&nbsp; <span
-                class="File_Name">git-viscenter</span> and <span
-                class="File_Name">Bitbucket</span> </td>
+            <td> All of Section 4 is only for servers:&nbsp;&nbsp;&nbsp; <span
+
+                class="File_Name">git-viscenter</span> and <span class="File_Name">Bitbucket</span>
+            </td>
           </tr>
         </tbody>
       </table>
-      <p> This section is for Git servers that use the SSH protocol and
-        the SSH public-key mechanism is for security and authorization.
-        Your computer needs to have OpenSSH installed. </p>
+      <p> This section is for Git servers that use the SSH protocol and the SSH
+        public-key mechanism is for security and authorization. Your computer
+        needs to have OpenSSH installed. </p>
       <section>
-        <h2 id="Download_and_Install_OpenSSH">Download and Install
-          OpenSSH</h2>
-        <p> If you are working from a UNCC lab computer that already has
-          Git for Windows and Putty installed, skip this section and go
-          to the next section.<br>
+        <h2 id="Download_and_Install_OpenSSH">Download and Install OpenSSH</h2>
+        <p> If you are working from a UNCC lab computer that already has Git for
+          Windows and Putty installed, skip this section and go to the next
+          section.<br>
           <br>
           Instructions below vary with your operating system. </p>
         <ol class="Instruction_Option">
@@ -414,47 +511,40 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
             <ol class="Instruction">
               <li> Download and install PuTTY as follows:
                 <ol class="Instruction">
-                  <li> Download the Windows installer,
-                    putty-x.xx-installer.exe, from <a
-                      href="http://www.putty.org/">http://www.putty.org/</a>.&nbsp;&nbsp;
+                  <li> Download the Windows installer, putty-x.xx-installer.exe,
+                    from <a href="http://www.putty.org/">http://www.putty.org/</a>.&nbsp;&nbsp;
 
 
                     Install it. </li>
-                  <li> Modify the PATH environment variable (Read
-                    Prerequisite P2). <br>
+                  <li> Modify the PATH environment variable (Read Prerequisite
+                    P2). <br>
                     <br>
-                    Add to the end of PATH the directory to where PuTTY
-                    is installed. Typically PuTTY is at "C:\Program
-                    Files (x86)\PuTTY".&nbsp; </li>
+                    Add to the end of PATH the directory to where PuTTY is
+                    installed. Typically PuTTY is at "C:\Program Files
+                    (x86)\PuTTY".&nbsp; </li>
                   <li> To verify the PATH setting:
                     <ol class="Instruction">
-                      <li> Open a git-bash shell via Start Menu→Git→Git
-                        Bash </li>
+                      <li> Open a git-bash shell via Start Menu→Git→Git Bash </li>
                       <li> In the shell run plink:&nbsp; <br>
                         <table class="Code_Example" id="Code_Example0_0" border="1">
                           <tbody style="height: 150px;">
                             <tr>
-                              <td> <button
-                                  onclick="Code_Example_Toggle('Code_Example0_0');">
+                              <td> <button onclick="Code_Example_Toggle('Code_Example0_0');">
                                   ▽ </button> </td>
                               <td>
-                                <div style="height: 100px;"> <code
-                                    class="Shell_Code_Prompt">
+                                <div style="height: 100px;"> <code class="Shell_Code_Prompt">
                                     lucretius@CCIWD-435B-1 ~/ITCS_4120<br>
-                                  </code> <code
-                                    class="Shell_Code_Input"> $ plink<br>
-                                  </code> <code
-                                    class="Shell_Code_Output"> PuTTY
-                                    Link: command-line connection
-                                    utility<br>
+                                  </code> <code class="Shell_Code_Input"> $
+                                    plink<br>
+                                  </code> <code class="Shell_Code_Output">
+                                    PuTTY Link: command-line connection utility<br>
                                     Release 0.63<br>
-                                    Usage: plink [options] [user@]host
-                                    [command]<br>
-                                    ("host" can also be a PuTTY saved
-                                    session name) <br>
-                                    <span class="Shell_Code_Comment">
-                                      […misc additional output will
-                                      appear…] </span> </code> </div>
+                                    Usage: plink [options] [user@]host [command]<br>
+                                    ("host" can also be a PuTTY saved session
+                                    name) <br>
+                                    <span class="Shell_Code_Comment"> […misc
+                                      additional output will appear…] </span> </code>
+                                </div>
                               </td>
                             </tr>
                           </tbody>
@@ -466,37 +556,35 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
               </li>
             </ol>
           </li>
-          <li> [<em>YourOS</em>=<strong>Linux</strong>] Generally this
-            OS already has OpenSSH installed; if not see <a
-              href="http://www.openssh.org/">http://www.openssh.org/</a>.
+          <li> [<em>YourOS</em>=<strong>Linux</strong>] Generally this OS
+            already has OpenSSH installed; if not see <a href="http://www.openssh.org/">http://www.openssh.org/</a>.
           </li>
-          <li> [<em>YourOS</em>=<strong>Mac</strong>] Download and
-            Install OpenSSH from <a href="%20http://www.openssh.org/">
+          <li> [<em>YourOS</em>=<strong>Mac</strong>] Download and Install
+            OpenSSH from <a href="%20http://www.openssh.org/">
               http://www.openssh.org/ </a> </li>
         </ol>
       </section>
       <section>
-        <h2 id="Create_an_SSH_private_and_public_key">Create an SSH
-          private and public key</h2>
-        <p> If you are already familiar with SSH private and public keys
-          and you already have a public SSH key that you use regularly,
-          then skip to step 4 below, but if you are using Windows still
-          do Section <a href="#Windows_Create_PuTTY_Private_Key">#Windows_Create_PuTTY_Private_Key</a>
+        <h2 id="Create_an_SSH_private_and_public_key">Create an SSH private and
+          public key</h2>
+        <p> If you are already familiar with SSH private and public keys and you
+          already have a public SSH key that you use regularly, then skip to
+          step 4 below, but if you are using Windows still do Section <a href="#Windows_Create_PuTTY_Private_Key">#Windows_Create_PuTTY_Private_Key</a>
           . <br>
           <br>
-          Key creation has to be done only once. Afterwards, you can
-          re-use your private key file for authorized access to the Git
-          server from multiple computers.<br>
+          Key creation has to be done only once. Afterwards, you can re-use your
+          private key file for authorized access to the Git server from multiple
+          computers.<br>
           <br>
-          The instructions below are fairly generic to any Unix like
-          shell and assume basic knowledge as per Prerequisite P2. </p>
+          The instructions below are fairly generic to any Unix like shell and
+          assume basic knowledge as per Prerequisite P2. </p>
         <ol>
           <li class="Instruction"> <strong>Open a shell prompt:</strong>
             <ol class="Instruction_Option">
-              <li> [<i>YourOS=</i><b>Windows</b>]:&nbsp; Run:&nbsp;
-                Start =&gt; All Programs =&gt; Git =&gt; Git Bash </li>
-              <li> [<i>YourOS=</i><b> Linux/Mac]: </b>&nbsp;&nbsp;Open
-                a terminal window. </li>
+              <li> [<i>YourOS=</i><b>Windows</b>]:&nbsp; Run:&nbsp; Start =&gt;
+                All Programs =&gt; Git =&gt; Git Bash </li>
+              <li> [<i>YourOS=</i><b> Linux/Mac]: </b>&nbsp;&nbsp;Open a
+                terminal window. </li>
             </ol>
           </li>
           <li> Check for SSH Keys <br>
@@ -504,14 +592,11 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
             <table class="Code_Example" id="Code_Example0_2" border="1">
               <tbody style="height: 150px;">
                 <tr>
-                  <td><button
-                      onclick="Code_Example_Toggle('Code_Example0_2');">▽</button></td>
+                  <td><button onclick="Code_Example_Toggle('Code_Example0_2');">▽</button></td>
                   <td>
-                    <div style="height: 75px;"> <code
-                        class="Shell_Code_Prompt">
+                    <div style="height: 75px;"> <code class="Shell_Code_Prompt">
                         lucretius@CCIWD-435B-1 ~/<br>
-                      </code> <code class="Shell_Code_Input"> $ cd
-                        ~/.ssh<br>
+                      </code> <code class="Shell_Code_Input"> $ cd ~/.ssh<br>
                         $ ls<br>
                       </code> <span class="Shell_Code_Comment"> […misc
                         additional output will appear…] </span> </div>
@@ -520,102 +605,87 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
               </tbody>
             </table>
             <br>
-            Check the directory listing for a file named <span
-              class="File_Name">id_rsa.pub</span>.&nbsp; This file
-            should <i>not</i> exist, unless you must have previously
-            created a public/private key pair. If you already created
-            one, goto step 4. Otherwise proceed with step 3. </li>
+            Check the directory listing for a file named <span class="File_Name">id_rsa.pub</span>.&nbsp;
+            This file should <i>not</i> exist, unless you must have previously
+            created a public/private key pair. If you already created one, goto
+            step 4. Otherwise proceed with step 3. </li>
           <li> <a id="_Ref363940970"> <b> Generate a new SSH Key<br>
               </b> </a>
             <table class="Code_Example" id="Code_Example0_3a" border="1">
               <tbody style="height: 150px;">
                 <tr>
-                  <td><button
-                      onclick="Code_Example_Toggle('Code_Example0_3a');">▽</button></td>
+                  <td><button onclick="Code_Example_Toggle('Code_Example0_3a');">▽</button></td>
                   <td>
-                    <div style="height: 75px;"> <code
-                        class="Shell_Code_Prompt">
+                    <div style="height: 75px;"> <code class="Shell_Code_Prompt">
                         lucretius@CCIWD-435B-1 ~/<br>
-                      </code> <code class="Shell_Code_Input"> $
-                        ssh-keygen -t rsa -C "<span class="User_Input">your_email</span>@uncc.edu"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      </code> <code class="Shell_Code_Input"> $ ssh-keygen -t
+                        rsa -C "<span class="User_Input">your_email</span>@uncc.edu"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-                      </code><span class="Shell_Code_Comment"> [Use your
-                        UNCC email] </span><br>
-                      <code class="Shell_Code_Output"> Generating
-                        public/private rsa key pair.<br>
+                        </code><span class="Shell_Code_Comment"> [Use your UNCC
+                        email] </span><br>
+                      <code class="Shell_Code_Output"> Generating public/private
+                        rsa key pair.<br>
                         Enter file in which to save the key
-                        (/home/Zachary/.ssh/id_rsa): </code> <span
-                        class="Shell_Code_Comment">[Press Enter]</span>
-                    </div>
+                        (/home/Zachary/.ssh/id_rsa): </code> <span class="Shell_Code_Comment">[Press
+                        Enter]</span> </div>
                   </td>
                 </tr>
               </tbody>
             </table>
             <a> <br>
             </a>
-            <p> Now you need to enter a passphrase.&nbsp;&nbsp; Enter
-              one and write it down in a safe place. When using Git, you
-              will have to enter this each time you login to your
-              computer. </p>
+            <p> Now you need to enter a passphrase.&nbsp;&nbsp; Enter one and
+              write it down in a safe place. When using Git, you will have to
+              enter this each time you login to your computer. </p>
             <table class="Code_Example" id="Code_Example0_3b" border="1">
               <tbody style="height: 50px;">
                 <tr>
-                  <td><button
-                      onclick="Code_Example_Toggle('Code_Example0_3b');">▽</button></td>
+                  <td><button onclick="Code_Example_Toggle('Code_Example0_3b');">▽</button></td>
                   <td>
-                    <div style="height: 50px;"> <code
-                        class="Shell_Code_Output">Enter passphrase
-                        (empty for no passphrase):</code> <span
-                        class="Shell_Code_Comment">[Type a passphrase]</span><br>
-                      <code class="Shell_Code_Output">Enter same
-                        passphrase again: </code> <span
-                        class="Shell_Code_Comment">[reenter the
-                        passphrase]</span><br>
+                    <div style="height: 50px;"> <code class="Shell_Code_Output">Enter
+                        passphrase (empty for no passphrase):</code> <span class="Shell_Code_Comment">[Type
+                        a passphrase]</span><br>
+                      <code class="Shell_Code_Output">Enter same passphrase
+                        again: </code> <span class="Shell_Code_Comment">[reenter
+                        the passphrase]</span><br>
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
             <p>You will see output similar to this:&nbsp;</p>
-            <p> This creates two files a private key file <span
-                class="File_Name">id_rsa</span> and a public key file <span
-                class="File_Name">id_rsa.pub</span>.&nbsp; The private
-              key file must be kept in a secure directory and must be
-              available on any computer from which you plan to access
-              the Git server. </p>
-            <p> <b> <i> Securing Your
-                  Private Key: </i> </b><br>
-              Best practices for private key management are that you
-              never store the private key on a public computer or in
-              shared home directories (H: drive, etc.). Rather you store
-              them on your personal computer(s) and on a USB device used
-              solely as a SSH key backup device. A reasonable way to
-              transfer the private key to another personal computer is
-              using a USB device. <br>
+            <p> This creates two files a private key file <span class="File_Name">id_rsa</span>
+              and a public key file <span class="File_Name">id_rsa.pub</span>.&nbsp;
+              The private key file must be kept in a secure directory and must
+              be available on any computer from which you plan to access the Git
+              server. </p>
+            <p> <b> <i> Securing Your Private Key: </i> </b><br>
+              Best practices for private key management are that you never store
+              the private key on a public computer or in shared home directories
+              (H: drive, etc.). Rather you store them on your personal
+              computer(s) and on a USB device used solely as a SSH key backup
+              device. A reasonable way to transfer the private key to another
+              personal computer is using a USB device. <br>
               <br>
-              If you intend to use Git on multiple, different public or
-              shared computers on campus, keeping the private key on a
-              USB stick or drive that you regularly carry is a
-              reasonable compromise. (If you are <i>certain</i> you
-              will never use this key again outside of one particular
-              course, it’s acceptable to store it on your H: drive since
-              the course TA will disable your Git account at the end of
-              the semester.) </p>
+              If you intend to use Git on multiple, different public or shared
+              computers on campus, keeping the private key on a USB stick or
+              drive that you regularly carry is a reasonable compromise. (If you
+              are <i>certain</i> you will never use this key again outside of
+              one particular course, it’s acceptable to store it on your H:
+              drive since the course TA will disable your Git account at the end
+              of the semester.) </p>
           </li>
           <li> <a id="_Ref363944720"> <b> Examine Your Public Key:<br>
-              </b>The public key is the file named </a><span
-              class="File_Name">id_rsa.pub</span>.&nbsp;&nbsp; Type the
-            following:<br>
+              </b>The public key is the file named </a><span class="File_Name">id_rsa.pub</span>.&nbsp;&nbsp;
+            Type the following:<br>
             <table class="Code_Example" id="Code_Example_42_4" border="1">
               <tbody style="height: 150px;">
                 <tr>
-                  <td><button
-                      onclick="Code_Example_Toggle('Code_Example_42_4');">▽</button></td>
+                  <td><button onclick="Code_Example_Toggle('Code_Example_42_4');">▽</button></td>
                   <td>
-                    <div style="height: 75px;"> <code
-                        class="Shell_Code_Input"> $ cat id_rsa.pub
-                        ssh-rsa </code> <br>
+                    <div style="height: 75px;"> <code class="Shell_Code_Input">
+                        $ cat id_rsa.pub ssh-rsa </code> <br>
                       <code class="Shell_Code_Output"> ssh-rsa <br>
                         AAAAB3NzaC1yc2EAAAADAQABAAABAQCurna4/V+HziLaUCULlA8x9X3Y7814EoUE+Je3joeIBrKGWHy/LkB3jCm5GY2QaS
                         <br>
@@ -625,105 +695,102 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
                         <br>
                         63ML1DT1eODbPa6fuaMP5z4NPCSO4Se0FbwmLuw3mVnzVuoCqk0SVIwF7yT+H4VO34sK5nLdeYJR2WS5tC0We8Vjrn
                         student4120_wartell </code> <br>
-                      <span class="Shell_Code_Comment"> [your output
-                        should look similar] </span> </div>
+                      <span class="Shell_Code_Comment"> [your output should look
+                        similar] </span> </div>
                   </td>
                 </tr>
               </tbody>
             </table>
             <br>
             <span class="File_Name">id_rsa.pub </span>is a plain text
-            file.&nbsp;&nbsp; (Some operating systems may incorrectly
-            identify the file as some other type of file).&nbsp;&nbsp;
-            Open <span class="File_Name">id_rsa.pub</span> using your
-            preferred text editor (such as notepad.exe,
-            etc.).&nbsp;&nbsp;&nbsp; If you ever need to copy and paste
-            the public key into another application (web browser, etc.)
-            you can do that from within the text editor. </li>
+            file.&nbsp;&nbsp; (Some operating systems may incorrectly identify
+            the file as some other type of file).&nbsp;&nbsp; Open <span class="File_Name">id_rsa.pub</span>
+            using your preferred text editor (such as notepad.exe,
+            etc.).&nbsp;&nbsp;&nbsp; If you ever need to copy and paste the
+            public key into another application (web browser, etc.) you can do
+            that from within the text editor. </li>
           <li> <a id="_Ref429762632"><b>Submit Your Public Key:</b></a>
             <ol class="Instruction_Option">
-              <li> [<i>YourServer</i>=<b>git-viscenter</b>]The file you
-                submit <i><u>must</u></i> be renamed from <span
-                  class="File_Name">id_rsa.pub</span> to <span
-                  class="User_Input"><u>your_uncc_id</u></span><span
-                  class="File_Name">.pub</span> where your standard UNCC
-                email is <span class="User_Input"><u>your_uncc_id</u></span><span
+              <li> [<i>YourServer</i>=<b>git-viscenter</b>]The file you submit <i><u>must</u></i>
+                be renamed from <span class="File_Name">id_rsa.pub</span> to <span
+
+                  class="User_Input"><u>your_uncc_id</u></span><span class="File_Name">.pub</span>
+                where your standard UNCC email is <span class="User_Input"><u>your_uncc_id</u></span><span
+
                   class="File_Name">@uncc.edu.<br>
                   <br>
                 </span>You submit your <span class="User_Input"><u>your_uncc_id</u></span><span
-                  class="File_Name">.pub</span> file via a Moodle
-                assignment indicated by your instructor. </li>
+
+                  class="File_Name">.pub</span> file via a Moodle assignment
+                indicated by your instructor. </li>
               <li> [<i>YourServer</i>=<b>Bitbucket</b>]
                 <ol class="Instruction">
-                  <li> Create a Bitbucket account as described in <a
-                      href="#Bitbucket_URL_List">#Bitbucket_URL_List</a>.
+                  <li> Create a Bitbucket account as described in <a href="#Bitbucket_URL_List">#Bitbucket_URL_List</a>.
                   </li>
-                  <li> Login to <span class="File_Name">Bitbucket</span>
-                    and goto <span class="File_Name">Manage Account:</span><br>
-                    <figure class="Screen_Capture" tabindex="1"> <img
-                        src="images/BitBucket-Manage.png"
+                  <li> Login to <span class="File_Name">Bitbucket</span> and
+                    goto <span class="File_Name">Manage Account:</span><br>
+                    <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Manage.png"
+
                         alt="BitBucket"> </figure>
                   </li>
                   <li> Select <span class="File_Name"> SSH keys:<br>
                     </span>
-                    <figure class="Screen_Capture" tabindex="1"> <img
-                        src="images/BitBucket-SSHkeys.png" alt="SSH
+                    <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-SSHkeys.png"
+
+                        alt="SSH
                         Keys" width="500"> </figure>
                   </li>
                   <li> Follow the <span class="File_Name">Bitbucket’s</span>
-                    instructions to <span class="File_Name">Add key</span>
-                  </li>
+                    instructions to <span class="File_Name">Add key</span> </li>
                   <li> Submit your <span class="File_Name">Bitbucket</span>
-                    user id to the TA and instructor via the Moodle
-                    assignment indicated by your instructor. </li>
+                    user id to the TA and instructor via the Moodle assignment
+                    indicated by your instructor. </li>
                 </ol>
               </li>
               <li> [<i>YourServer</i>=<b>cci-git</b>]<br>
                 <br>
                 <span style="color: red; background: yellow">Warning: </span><span
+
                   class="File_Name"> <span style="color: red;
-                    background: yellow">cci-git</span> </span><span
-                  style="color: red; background: yellow"> SSH protocol
-                  is no longer recommended, see instead this document’s
-                  <b>Section </b> </span><span class="File_Name"> <b>
-                    <i> <span style="color: red; background: yellow">cci-git</span>
+                    background: yellow">cci-git</span> </span><span style="color: red; background: yellow">
+                  SSH protocol is no longer recommended, see instead this
+                  document’s <b>Section </b> </span><span class="File_Name">
+                  <b> <i> <span style="color: red; background: yellow">cci-git</span>
                     </i> </b> </span><b> <span style="color: red;
-                    background: yellow">Server URL</span> </b><span
-                  style="color: red; background: yellow"> and <b>
-                    Section </b> </span><b> <span style="color: red;
-                    background: yellow">5</span> </b><b> </b><b>
-                  <span style="color: red; background: yellow">
-                    Accessing Git Server Using HTTPS and Git Credentials
-                  </span> </b><span style="color: red; background:
+                    background: yellow">Server URL</span> </b><span style="color: red; background: yellow">
+                  and <b> Section </b> </span><b> <span style="color: red;
+                    background: yellow">5</span> </b><b> </b><b> <span style="color: red; background: yellow">
+                    Accessing Git Server Using HTTPS and Git Credentials </span>
+                </b><span style="color: red; background:
                   yellow"> .&nbsp; <br>
                 </span>
                 <ol>
                   <li> Login to <span class="File_Name">https://cci-git.uncc.edu/</span>
-                    using your standard UNCC username and password. You
-                    should then see your "Dashboard" (below). Select <span
-                      class="File_Name">Profile Settings</span><br>
-                    <figure class="Screen_Capture" tabindex="1"> <img
-                        src="images/cci-git-Profile-Settings.png" alt=""
-                        height="311" width="500"> </figure>
+                    using your standard UNCC username and password. You should
+                    then see your "Dashboard" (below). Select <span class="File_Name">Profile
+                      Settings</span><br>
+                    <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Profile-Settings.png"
+
+                        alt="" height="311" width="500"> </figure>
                     <br>
                   </li>
                   <li> Select <span class="File_Name">"SSH Keys"</span><br>
-                    <figure class="Screen_Capture" tabindex="1"> <img
-                        src="images/cci-git-SSH-Keys.png" alt=""
-                        height="297" width="500"> <br>
+                    <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-SSH-Keys.png"
+
+                        alt="" height="297" width="500"> <br>
                     </figure>
                   </li>
                   <li> Select <span class="File_Name">"Add SSH Key"</span><br>
-                    <figure class="Screen_Capture" tabindex="1"> <img
-                        src="images/cci-git-Add-SSH-Key.png"
+                    <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Add-SSH-Key.png"
+
                         alt="cci-git-Add-SSH-Key.png" width="500"> </figure>
                   </li>
                   <li> Cut and paste the text from <u>your</u> <strong>public</strong>
-                    key file into the dialog box, give the key a title,
-                    and press <span class="File_Name">Add Key</span>:<br>
-                    <figure class="Screen_Capture" tabindex="1"> <img
-                        src="images/cci-git-Paste-Key.png" alt=""
-                        height="311" width="500"> </figure>
+                    key file into the dialog box, give the key a title, and
+                    press <span class="File_Name">Add Key</span>:<br>
+                    <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Paste-Key.png"
+
+                        alt="" height="311" width="500"> </figure>
                     <br>
                     <br>
                   </li>
@@ -731,64 +798,59 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
               </li>
             </ol>
           </li>
-          <li> [<i>YourOS</i>=Windows] Window users also need to perform
-            the next section, <a
-              href="#Windows_Create_PuTTY_Private_Key">#Windows_Create_PuTTY_Private_Key</a>.
+          <li> [<i>YourOS</i>=Windows] Window users also need to perform the
+            next section, <a href="#Windows_Create_PuTTY_Private_Key">#Windows_Create_PuTTY_Private_Key</a>.
           </li>
         </ol>
         <br>
       </section>
       <section>
-        <h2 id="Windows_Create_PuTTY_Private_Key">[Windows] Create PuTTY
-          Private Key</h2>
+        <h2 id="Windows_Create_PuTTY_Private_Key">[Windows] Create PuTTY Private
+          Key</h2>
         <div style="border: solid windowtext 1.0pt; padding: 1.0pt 0in
           1.0pt 4.0pt;  ">
-          <p style="text-align: center; border: none; padding: 0in"
-            align="center">This section is for Windows only</p>
-          <p style="text-align: center; border: none; padding: 0in"
-            align="center"> (only servers <span class="File_Name">
-              git-viscenter </span>and <span class="File_Name">Bitbucket)</span>
-          </p>
+          <p style="text-align: center; border: none; padding: 0in" align="center">This
+            section is for Windows only</p>
+          <p style="text-align: center; border: none; padding: 0in" align="center">
+            (only servers <span class="File_Name"> git-viscenter </span>and <span
+
+              class="File_Name">Bitbucket)</span> </p>
         </div>
         <p>&nbsp;After:</p>
         <ul type="disc">
-          <li>installing PuTTY (Section <a
-              href="#Download_and_Install_OpenSSH">#Download_and_Install_OpenSSH</a>,
+          <li>installing PuTTY (Section <a href="#Download_and_Install_OpenSSH">#Download_and_Install_OpenSSH</a>,
             Step #1)</li>
-          <li> and after following the general key generation
-            instructions in <a
+          <li> and after following the general key generation instructions in <a
+
               href="#Create_an_SSH_private_and_public_key">#Create_an_SSH_private_and_public_key</a>.<br>
           </li>
         </ul>
-        <p> then the following is required to generate PuTTY compatible
-          version of your private key.<br>
+        <p> then the following is required to generate PuTTY compatible version
+          of your private key.<br>
         </p>
         <ol class="Instruction">
-          <li> Run PuTTYgen:&nbsp;&nbsp;&nbsp; <span class="File_Name">
-              Start Menu</span>→<span class="File_Name">Putty</span>→<span
-              class="File_Name">PuTTYgen</span> </li>
-          <li> From the PuTTYgen menu bar select <span
-              class="File_Name">Conversions</span> and then <span
-              class="File_Name">Import Key</span> on the drop-down menu.<br>
-            This pop’s up dialog: <span class="File_Name"> Load Private
-              Key. </span> </li>
-          <li> In <span class="File_Name">Load Private Key</span> find
-            the private key file you created in <a
-              href="#Create_an_SSH_private_and_public_key">#Create_an_SSH_private_and_public_key</a>
-            and open it.&nbsp;&nbsp; You will be prompted for your
-            passphrase. </li>
+          <li> Run PuTTYgen:&nbsp;&nbsp;&nbsp; <span class="File_Name"> Start
+              Menu</span>→<span class="File_Name">Putty</span>→<span class="File_Name">PuTTYgen</span>
+          </li>
+          <li> From the PuTTYgen menu bar select <span class="File_Name">Conversions</span>
+            and then <span class="File_Name">Import Key</span> on the drop-down
+            menu.<br>
+            This pop’s up dialog: <span class="File_Name"> Load Private Key. </span>
+          </li>
+          <li> In <span class="File_Name">Load Private Key</span> find the
+            private key file you created in <a href="#Create_an_SSH_private_and_public_key">#Create_an_SSH_private_and_public_key</a>
+            and open it.&nbsp;&nbsp; You will be prompted for your passphrase. </li>
           <li> In the <span class="File_Name">PuTTY Key Generator </span>window
 
 
             select <span class="File_Name">Save Private Key</span>.
             <ol>
               <li> Save the key to a file named <span class="File_Name">id_rsa.ppk</span>
-                in the same directory as where you stored your standard
-                private key file.<br>
+                in the same directory as where you stored your standard private
+                key file.<br>
                 <br>
-                You should keep the PuTTY private key and the standard
-                private key safe as described in <a
-                  href="#Create_an_SSH_private_and_public_key">#Create_an_SSH_private_and_public_key</a>.
+                You should keep the PuTTY private key and the standard private
+                key safe as described in <a href="#Create_an_SSH_private_and_public_key">#Create_an_SSH_private_and_public_key</a>.
               </li>
             </ol>
           </li>
@@ -797,61 +859,53 @@ href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/
     </section>
     <section>
       <h1 id="Full_Git_Tutorial">Full Git Tutorial</h1>
-      <p> If Unix style shells are new for you, you should read through
-        [<b>1</b>] after you install a suitable command-line shell and
-        before you proceed through this section. </p>
+      <p> If Unix style shells are new for you, you should read through [<b>1</b>]
+        after you install a suitable command-line shell and before you proceed
+        through this section. </p>
       <ul>
-        <li> Read the following chapters from the ProGit book by Scott
-          Chacon available on-line [<b>2</b>]. </li>
+        <li> Read the following chapters from the ProGit book by Scott Chacon
+          available on-line [<b>2</b>]. </li>
         <li> Do the exercises in the outline below. <br>
           <br>
-          You can perform 99% of the exercises even without access to
-          the Git server, but to submit your exercises (via <span
-            class="Program_Name">git push</span>) you will need server
-          access.<br>
+          You can perform 99% of the exercises even without access to the Git
+          server, but to submit your exercises (via <span class="Program_Name">git
+            push</span>) you will need server access.<br>
           <br>
-          <b>Note</b>: The instructions below are based on ProGit Book,
-          2<sup>nd</sup> Edition at <a
-            href="http://git-scm.com/book/en/v2/">
+          <b>Note</b>: The instructions below are based on ProGit Book, 2<sup>nd</sup>
+          Edition at <a href="http://git-scm.com/book/en/v2/">
             http://git-scm.com/book/en/<span style="background:yellow">v2</span>/
-          </a>.&nbsp; The instructions may conflict with other editions.
-        </li>
+          </a>.&nbsp; The instructions may conflict with other editions. </li>
       </ul>
       <p> <u>Exercise</u>:&nbsp; Anywhere below that is labeled “<u>Exercise</u>:
-        <i>Section_Name”</i> you must actually read and do what the
-        section in the book instructs and save your work.&nbsp; You will
-        submit the entire set of exercises with a final <span
-          class="Program_Name">git push</span>.&nbsp;&nbsp; For some
-        exercises additional instructions or clarifications are given in
-        sub-paragraph's labeled <i>Notes</i><i>:</i></p>
+        <i>Section_Name”</i> you must actually read and do what the section in
+        the book instructs and save your work.&nbsp; You will submit the entire
+        set of exercises with a final <span class="Program_Name">git push</span>.&nbsp;&nbsp;
+        For some exercises additional instructions or clarifications are given
+        in sub-paragraph's labeled <i>Notes</i><i>:</i></p>
       <ol class="Instruction">
         <li> <strong>Create git-tutorial directory</strong>
           <ol>
-            <li>Open a shell prompt (as installed in <a
-                href="#Installation_and_Setup_of_Command-Line">#Installation_and_Setup_of_Command-Line</a>).
-            </li>
-            <li>Create a directory called ‘git-tutorial’ for performing
-              and saving the exercises.</li>
+            <li>Open a shell prompt (as installed in <a href="#Installation_and_Setup_of_Command-Line">#Installation_and_Setup_of_Command-Line</a>).
+              </li>
+            <li>Create a directory called ‘git-tutorial’ for performing and
+              saving the exercises.</li>
           </ol>
         </li>
         <li> ProGit - Chapter 1:
           <ol>
             <li>Read ProGit 1.1 – 1.4 </li>
-            <li>Skip ProGit 1.5 (this was covered in this tutorial’s <a
-                href="#Installing_Git">#Installing_Git</a>). </li>
-            <li> Read ProGit 1.6 and do all the exercises with
-              command-line git, but with the noted substitutions
+            <li>Skip ProGit 1.5 (this was covered in this tutorial’s <a href="#Installing_Git">#Installing_Git</a>).
+              </li>
+            <li> Read ProGit 1.6 and do all the exercises with command-line git,
+              but with the noted substitutions
               <ol>
-                <li> <u>Exercise</u><b>: </b>“<a
-href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity">
+                <li> <u>Exercise</u><b>: </b>“<a href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity">
                     Your Identity </a>” </li>
-                <li> <u>Exercise</u><strong>: </strong>“<a
-href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Editor">Your
+                <li> <u>Exercise</u><strong>: </strong>“<a href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Editor">Your
                     Editor</a>”<br>
                   <em>Note</em>: use whatever simple editor you prefer
                   (notepad.exe perhaps) </li>
-                <li><u>Exercise</u>: “<a
-href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Checking-Your-Settings">Checking
+                <li><u>Exercise</u>: “<a href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Checking-Your-Settings">Checking
                     Your Settings</a>”</li>
               </ol>
             </li>
@@ -861,103 +915,90 @@ href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Checkin
           <ol>
             <li> Read ProGit 2.1:
               <ol>
-                <li> From the class website download <span
-                    class="File_Name">HelloWorld.tar.gz</span> to
-                  git-tutorial and uncompress it.<br>
+                <li> From the class website download <span class="File_Name">HelloWorld.tar.gz</span>
+                  to git-tutorial and uncompress it.<br>
                   <table class="Code_Example" id="Code_Example_0_3ai" border="1">
                     <tbody style="height: 150px;">
                       <tr>
-                        <td><button
-                            onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽</button></td>
+                        <td><button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽</button></td>
                         <td>
-                          <div style="height: 150px;"> <code
-                              class="Shell_Code_Input"> $ tar -xf
-                              HelloWorld.tar.gz </code> <br>
-                            <code class="Shell_Code_Input"> $ $ ls -R </code>
-                            <br>
+                          <div style="height: 150px;"> <code class="Shell_Code_Input">
+                              $ tar -xf HelloWorld.tar.gz </code> <br>
+                            <code class="Shell_Code_Input"> $ $ ls -R </code> <br>
                             <code class="Shell_Code_Output"> .: <br>
                               HelloWorld HelloWorld.tar.gz <br>
                               <br>
                               ./HelloWorld:<br>
                               HelloWorld.sln HelloWorld.vcxproj
-                              HelloWorld.vcxproj.filters
-                              HelloWorld.vcxproj.user <br>
+                              HelloWorld.vcxproj.filters HelloWorld.vcxproj.user
+                              <br>
                             </code> <br>
                             <code class="Shell_Code_Input">$ rm
-                              HelloWorld.tar.gz </code> <span
-                              class="Shell_Code_Comment"> [don’t need
-                              this anymore] </span> <br>
-                            <code class="Shell_Code_Input"> $ cd
-                              HelloWorld </code> </div>
+                              HelloWorld.tar.gz </code> <span class="Shell_Code_Comment">
+                              [don’t need this anymore] </span> <br>
+                            <code class="Shell_Code_Input"> $ cd HelloWorld </code>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                   <br>
                 </li>
-                <li> <u>Exercise</u>: “<a
-href="http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Initializing-a-Repository-in-an-Existing-Directory">Initializing
+                <li> <u>Exercise</u>: “<a href="http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Initializing-a-Repository-in-an-Existing-Directory">Initializing
                     a Repository in an Existing Directory</a>”<br>
-                  Perform the instructions inside the directory <span
-                    class="File_Name">HelloWorld</span>.&nbsp; This will
-                  add the provided files to a new local repo. Go ahead
+                  Perform the instructions inside the directory <span class="File_Name">HelloWorld</span>.&nbsp;
+                  This will add the provided files to a new local repo. Go ahead
                   and git add all the provided files to this repo. </li>
-                <li> <u>Exercise</u>: “<a
-href="http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository">Cloning
+                <li> <u>Exercise</u>: “<a href="http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository">Cloning
                     an Existing Repository</a>”<br>
                   Return to your <span class="File_Name">git-tutorial</span><strong>
                   </strong>directory: <br>
                   <br>
-                  Perform the book’s exercises.&nbsp; This will create
-                  various clones of the remote repo mentioned in the
-                  book under your <span class="File_Name">git-tutorial</span>
-                  directory. </li>
+                  Perform the book’s exercises.&nbsp; This will create various
+                  clones of the remote repo mentioned in the book under your <span
+
+                    class="File_Name">git-tutorial</span> directory. </li>
               </ol>
             </li>
             <li> Read ProGit 2.2:
               <ol>
-                <li> From the class website, download <span
-                    class="File_Name">tar.gz</span> to your git-tutorial
-                  directory and uncompress it. &nbsp;&nbsp;Then delete
-                  the .gz file.<br>
+                <li> From the class website, download <span class="File_Name">tar.gz</span>
+                  to your git-tutorial directory and uncompress it.
+                  &nbsp;&nbsp;Then delete the .gz file.<br>
                   Perform the exercises in Chapter 2.2 from this in that
                   directory:<br>
                   <table class="Code_Example" id="Code_Example_0_3bi" border="1">
                     <tbody style="height: 110px;">
                       <tr>
-                        <td><button
-                            onclick="Code_Example_Toggle('Code_Example_0_3bi');">▽</button></td>
+                        <td><button onclick="Code_Example_Toggle('Code_Example_0_3bi');">▽</button></td>
                         <td>
                           <div style="height: 110px;">
-                            <div align="center"><span
-                                class="Shell_Code_Comment"> [return to
-                                your git-tutorial directory ] </span></div>
-                            <code class="Shell_Code_Input"> $ pwd </code>
-                            <br>
+                            <div align="center"><span class="Shell_Code_Comment">
+                                [return to your git-tutorial directory ] </span></div>
+                            <code class="Shell_Code_Input"> $ pwd </code> <br>
                             <code class="Shell_Code_Input"> $ tar -xf
                               ProGit_Chapter_2_2.tar.gz </code> <br>
                             <code class="Shell_Code_Input"> $ rm
-                              ProGit_Chapter_2_2.tar.gz &nbsp;&nbsp; </code>
-                            <span class="Shell_Code_Comment"> [you can
-                              delete this now] </span> <br>
-                            <code class="Shell_Code_Input"> $ cd
-                              Chapter_2_2 </code> </div>
+                              ProGit_Chapter_2_2.tar.gz &nbsp;&nbsp; </code> <span
+
+                              class="Shell_Code_Comment"> [you can delete this
+                              now] </span> <br>
+                            <code class="Shell_Code_Input"> $ cd Chapter_2_2 </code>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </li>
-                <li> <u>Exercise</u>: “<a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Checking-the-Status-of-Your-Files">Checking
+                <li> <u>Exercise</u>: “<a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Checking-the-Status-of-Your-Files">Checking
                     the Status of Your Files</a>”<br>
                   <br>
-                  <em>Note</em>: Use whatever text file editor you are
-                  familiar with instead of vim for the “$vim README“ and
-                  similar examples in the ProGit chapter.<br>
+                  <em>Note</em>: Use whatever text file editor you are familiar
+                  with instead of vim for the “$vim README“ and similar examples
+                  in the ProGit chapter.<br>
                   <br>
                 </li>
-                <li> <u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Tracking-New-Files">Tracking
+                <li> <u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Tracking-New-Files">Tracking
                     New Files</a><br>
                   <br>
                 </li>
@@ -966,69 +1007,57 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Reposito
                     <li> [<em>YourOS</em>=<strong>Windows</strong>]<br>
                       <br>
                       <u>Exercise</u>:&nbsp; <br>
-                      Using TortoiseGit, open an Explorer window and
-                      goto the <span class="File_Name"> Chapter_2_2</span>
-                      directory. Right-click to see the TortoiseGit
-                      shell extension commands. Test and explore the
-                      following TortoiseGit operations from the menu:
-                      Show Log, Check for Modifications, Repo-Browser
-                      and Diff, Diff with previous and Help. <br>
+                      Using TortoiseGit, open an Explorer window and goto the <span
+
+                        class="File_Name"> Chapter_2_2</span> directory.
+                      Right-click to see the TortoiseGit shell extension
+                      commands. Test and explore the following TortoiseGit
+                      operations from the menu: Show Log, Check for
+                      Modifications, Repo-Browser and Diff, Diff with previous
+                      and Help. <br>
                       <br>
-                      TortoiseGit Help “Chapter&nbsp;3.&nbsp;Daily Use
-                      Guide” discusses TortoiseGit (the earlier
-                      TortoiseGit Help chapters are largely redundant
-                      with the ProGit book) <br>
+                      TortoiseGit Help “Chapter&nbsp;3.&nbsp;Daily Use Guide”
+                      discusses TortoiseGit (the earlier TortoiseGit Help
+                      chapters are largely redundant with the ProGit book) <br>
                       <br>
                     </li>
                     <li> [<em>YourOS</em>=<strong>Linux/Mac</strong>]<br>
-                      This tutorial document does not proscribe any
-                      particular GUI Git tool.&nbsp; Feel free to
-                      experiment with whatever one you
-                      prefer.&nbsp;&nbsp; This step (iv. GUI Git Tool)
-                      has no deliverables, so you can skip this step if
-                      you want. </li>
+                      This tutorial document does not proscribe any particular
+                      GUI Git tool.&nbsp; Feel free to experiment with whatever
+                      one you prefer.&nbsp;&nbsp; This step (iv. GUI Git Tool)
+                      has no deliverables, so you can skip this step if you
+                      want. </li>
                   </ol>
                 </li>
-                <li> <u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Staging-Modified-Files">Staging
+                <li> <u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Staging-Modified-Files">Staging
                     Modified Files</a><br>
                   <br>
-                  <em>Note:</em>&nbsp; When the book discusses making
-                  changes to various files, just make any small change
-                  to each file.<br>
+                  <em>Note:</em>&nbsp; When the book discusses making changes to
+                  various files, just make any small change to each file.<br>
                 </li>
-                <li><u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Short-Status">Short
+                <li><u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Short-Status">Short
                     Status</a></li>
-                <li><u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files">Ignoring
+                <li><u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files">Ignoring
                     Files</a></li>
-                <li> <u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Viewing-Your-Staged-and-Unstaged-Changes">Viewing
+                <li> <u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Viewing-Your-Staged-and-Unstaged-Changes">Viewing
                     Your Staged and Unstaged Changes</a><br>
                   <em> <br>
-                    Note: </em>&nbsp; When the book discusses making
-                  changes to various files, just make any small change
-                  to each file.<br>
+                    Note: </em>&nbsp; When the book discusses making changes to
+                  various files, just make any small change to each file.<br>
                 </li>
-                <li><u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Committing-Your-Changes">Committing
+                <li><u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Committing-Your-Changes">Committing
                     Your Changes</a></li>
-                <li><u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Skipping-the-Staging-Area">Skipping
+                <li><u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Skipping-the-Staging-Area">Skipping
                     the Staging Area</a></li>
-                <li><u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Removing-Files">Removing
+                <li><u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Removing-Files">Removing
                     Files</a></li>
-                <li><u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Moving-Files">Moving
+                <li><u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Moving-Files">Moving
                     Files</a></li>
               </ol>
             </li>
             <li> Read 2.3
               <ol>
-                <li> <u>Exercise</u>: <a
-href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewing
+                <li> <u>Exercise</u>: <a href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewing
                     the Commit History </a>&nbsp;<br>
                   <br>
                   Do the first two exercises, cloning
@@ -1039,35 +1068,32 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewi
                   <ol class="Instruction_Option">
                     <li> [<em>YourServer</em>=<strong>cci-git</strong>]<br>
                       <ol>
-                        <li> Read (but do <u>not</u> perform the steps
-                          in) ProGit <a
-                            href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">Git
-                            Tools - Credential Storage</a>.&nbsp; Stop
-                          at section "Under the Hood". <br>
+                        <li> Read (but do <u>not</u> perform the steps in)
+                          ProGit <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">Git
+                            Tools - Credential Storage</a>.&nbsp; Stop at
+                          section "Under the Hood". <br>
                         </li>
-                        <li> Based on your operating system pick the
-                          appropriate credential system as described in
-                          the above ProGit chapter.<br>
+                        <li> Based on your operating system pick the appropriate
+                          credential system as described in the above ProGit
+                          chapter.<br>
                           <br>
-                          <strong><u>Warning</u></strong>: Do <strong>NOT
-                          </strong>use "store mode" because this will
-                          save your UNCC password unencrypted on disk!<br>
+                          <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
+                          "store mode" because this will save your UNCC password
+                          unencrypted on disk!<br>
                           <br>
                           <ol class="Instruction_Option">
-                            <li> [<em>OS</em>=<strong>Windows</strong>]
-                              Assuming you are using the recommended
-                              Git-Bash<br>
-                              <table class="Code_Example" id="Code_Example_0_3cii" border="1">
+                            <li> [<em>OS</em>=<strong>Windows</strong>] Assuming
+                              you are using the recommended Git-Bash<br>
+                              <table class="Code_Example" id="Code_Example_0_3cii"
+
+                                border="1">
                                 <tbody style="height: 25px;">
                                   <tr>
-                                    <td><button
-                                        onclick="Code_Example_Toggle('Code_Example_0_3cii');">▽</button></td>
+                                    <td><button onclick="Code_Example_Toggle('Code_Example_0_3cii');">▽</button></td>
                                     <td>
-                                      <div style="height: 25px;"> <code
-                                          class="Shell_Code_Input"> $
-                                          git config --global
-                                          credential.helper wincred </code>
-                                        <br>
+                                      <div style="height: 25px;"> <code class="Shell_Code_Input">
+                                          $ git config --global
+                                          credential.helper wincred </code> <br>
                                       </div>
                                     </td>
                                   </tr>
@@ -1075,18 +1101,16 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewi
                               </table>
                               <br>
                             </li>
-                            <li>[<em>OS</em>=<em>any other systems</em>]
-                              <strong>&nbsp;</strong>Follow links
-                              discussed in <a
-                                href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">Git
+                            <li>[<em>OS</em>=<em>any other systems</em>] <strong>&nbsp;</strong>Follow
+                              links discussed in <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">Git
                                 Tools - Credential Storage</a>.</li>
                           </ol>
                         </li>
                       </ol>
                     </li>
                     <li> [<em>YourServer=any other server</em>]<br>
-                      For any other servers, skip this step. (They use
-                      SSH and do not use the credential storage). </li>
+                      For any other servers, skip this step. (They use SSH and
+                      do not use the credential storage). </li>
                   </ol>
                 </li>
               </ol>
@@ -1097,99 +1121,86 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewi
           <br>
           <ol>
             <li> Read this tutorial’s <a href="#Git_Server_Access">#Git_Server_Access</a>,
-              in particular read the sections corresponding to your
-              designated Git Server (one of 7.1 through 7.3 and then
-              either 7.4 or 7.5).&nbsp; Then use the shell you opened
-              based on that section’s instructions to perform the
-              following.<br>
+              in particular read the sections corresponding to your designated
+              Git Server (one of 7.1 through 7.3 and then either 7.4 or
+              7.5).&nbsp; Then use the shell you opened based on that section’s
+              instructions to perform the following.<br>
               <br>
             </li>
             <li> Compress <span class="File_Name">git-tutorial</span><br>
               <table class="Code_Example" id="Code_Example_0_4b" border="1">
                 <tbody style="height: 125px;">
                   <tr>
-                    <td><button
-                        onclick="Code_Example_Toggle('Code_Example_0_4b');">▽</button></td>
+                    <td><button onclick="Code_Example_Toggle('Code_Example_0_4b');">▽</button></td>
                     <td>
-                      <div style="height: 125px;"> <code
-                          class="Shell_Code_Input"> $ cd <span
-                            class="User_Input_Generic">
-                            parent_directory_of_git-tutorial </span></code>
-                        <br>
+                      <div style="height: 125px;"> <code class="Shell_Code_Input">
+                          $ cd <span class="User_Input_Generic">
+                            parent_directory_of_git-tutorial </span></code> <br>
                         <code class="Shell_Code_Input"> $ pwd </code> <br>
                         <code class="Shell_Code_Input"> $ tar -zcf
                           git-tutorial.tar.gz git-tutorial </code> <br>
-                        <span class="Shell_Code_Comment"> [This
-                          compresses the directory to a .tar.gz file] </span><br>
+                        <span class="Shell_Code_Comment"> [This compresses the
+                          directory to a .tar.gz file] </span><br>
                         <code class="Shell_Code_Input"> $ tar -tf
                           git-tutorial.tar.gz </code> <br>
-                        <span class="Shell_Code_Comment"> [This will
-                          just list the .tar.gz file contents to verify
-                          them] </span> </div>
+                        <span class="Shell_Code_Comment"> [This will just list
+                          the .tar.gz file contents to verify them] </span> </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
               <u><br>
                 Note</u>: In real world Git usage you would <strong><u>never</u></strong>
-              create a .tar.gz file. But to simplify the TA’s grading of
-              your tutorial, we have you put all the tutorial
-              directories that you created (which each include multiple
-              <u>local</u> Git repo’s) into one .gz file and then you
-              submit the single .gz file to a single <u>remote</u> repo
-              on the Git server. (In normal usage and in all future
-              class projects, each local repo would be pushed to a <u>separate</u>
-              remote repo) <br>
+              create a .tar.gz file. But to simplify the TA’s grading of your
+              tutorial, we have you put all the tutorial directories that you
+              created (which each include multiple <u>local</u> Git repo’s)
+              into one .gz file and then you submit the single .gz file to a
+              single <u>remote</u> repo on the Git server. (In normal usage and
+              in all future class projects, each local repo would be pushed to a
+              <u>separate</u> remote repo) <br>
               <br>
             </li>
             <li> Create a new remote repo for submission:
               <ol class="Instruction_Option">
                 <li> [<em>YourServer</em>=<strong>cci-git</strong>]<br>
-                  Create new remote repo on cci-git called <span
-                    class="File_Name">git-full-tutorial</span>.&nbsp;
-                  This is best done using the Web Browser interface to
-                  the server.&nbsp; Read this tutorial’s Section <a
-                    href="#cci-gitunccedu_URL_List">#cci-gitunccedu_URL_List</a>
-                  and <a
-                    href="#Accessing_Git_Server_Using_HTTPS_and_Git">#Accessing_Git_Server_Using_HTTPS_and_Git</a>
-                  regarding the URL.&nbsp; Then read this tutorial’s
-                  Section 8.1 instruction Item #2.a).
-                <ol>
-                  <li>Remember to make sure to <strong><u>share</u></strong>
-                    your repo with the TA and Dr. Wartell’s UNCC
-                    accounts [Item #2.a)viii)].<br>
-                  </li>
-                </ol>
+                  Create new remote repo on cci-git called <span class="File_Name">git-full-tutorial</span>.&nbsp;
+                  This is best done using the Web Browser interface to the
+                  server.&nbsp; Read this tutorial’s Section <a href="#cci-gitunccedu_URL_List">#cci-gitunccedu_URL_List</a>
+                  and <a href="#Accessing_Git_Server_Using_HTTPS_and_Git">#Accessing_Git_Server_Using_HTTPS_and_Git</a>
+                  regarding the URL.&nbsp; Then read this tutorial’s Section 8.1
+                  instruction Item #2.a).
+                  <ol>
+                    <li>Remember to make sure to <strong><u>share</u></strong>
+                      your repo with the TA and Dr. Wartell’s UNCC accounts
+                      [Item #2.a)viii)].<br>
+                    </li>
+                  </ol>
                 </li>
                 <li> [<em>YourServer</em>=<strong>git-viscenter</strong>]<br>
                   <table class="Code_Example" id="Code_Example_0_4bi" border="1">
                     <tbody style="height: 125px;">
                       <tr>
-                        <td><button
-                            onclick="Code_Example_Toggle('Code_Example_0_4bi');">▽</button></td>
+                        <td><button onclick="Code_Example_Toggle('Code_Example_0_4bi');">▽</button></td>
                         <td>
-                          <div style="height: 125px;"> <code
-                              class="Shell_Code_Input"> $ git clone
-                              git-viscenter@cci-subv.uncc.edu:wartell/<span
-                                class="User_Input">ITCS_XXXX/students/John_Doe</span>/git-full-tutorial
-                            </code> <br>
-                            <code class="Shell_Code_Output"> Cloning
-                              into 'git-full-tutorial'...<br>
+                          <div style="height: 125px;"> <code class="Shell_Code_Input">
+                              $ git clone
+                              git-viscenter@cci-subv.uncc.edu:wartell/<span class="User_Input">ITCS_XXXX/students/John_Doe</span>/git-full-tutorial
+                              </code> <br> <code class="Shell_Code_Output">
+                              Cloning into 'git-full-tutorial'...<br>
                               Initialized empty Git repository in
 /home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro-tutorial.git/<br>
-                              warning: You appear to have cloned an
-                              empty repository<br>
-                            </code> <span class="Shell_Code_Comment">
-                              [..your output will differ slightly..] </span><br>
+                              warning: You appear to have cloned an empty
+                              repository<br>
+                            </code> <span class="Shell_Code_Comment"> [..your
+                              output will differ slightly..] </span><br>
                             <code class="Shell_Code_Input"> $ tar -zcf
-                              git-tutorial.tar.gz git-tutorial </code>
-                            <br>
+                              git-tutorial.tar.gz git-tutorial </code> <br>
                             <code class="Shell_Code_Input"> $ rm -rf
                               git-full-tutorial</code> <br>
-                            <span class="Shell_Code_Comment"> [yes, this
-                              is a bit silly, but to simplify common
-                              instructions with Bitbucket, you should
-                              delete the local repo now] </span> </div>
+                            <span class="Shell_Code_Comment"> [yes, this is a
+                              bit silly, but to simplify common instructions
+                              with Bitbucket, you should delete the local repo
+                              now] </span> </div>
                         </td>
                       </tr>
                     </tbody>
@@ -1197,17 +1208,14 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewi
                   <br>
                 </li>
                 <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]<br>
-                  Create new remote repo on cci-git called,<span
-                    class="File_Name"> git-full-tutorial</span>.&nbsp;
-                  Read this tutorial’s Section <a
-                    href="#Bitbucket_URL_List">#Bitbucket_URL_List</a>
-                  and Section <a
-                    href="#Accessing_Git_Server_Using_SSH_Keys">#Accessing_Git_Server_Using_SSH_Keys</a>
+                  Create new remote repo on cci-git called,<span class="File_Name">
+                    git-full-tutorial</span>.&nbsp; Read this tutorial’s Section
+                  <a href="#Bitbucket_URL_List">#Bitbucket_URL_List</a> and
+                  Section <a href="#Accessing_Git_Server_Using_SSH_Keys">#Accessing_Git_Server_Using_SSH_Keys</a>
                   regarding the URL.&nbsp; <br>
-                  Read this tutorial’s Section 8.1 instruction Item
-                  #2.c).&nbsp; Make sure to <strong><u>share</u></strong>
-                  your repo with the TA and Dr. Wartell’s UNCC accounts.
-                  <br>
+                  Read this tutorial’s Section 8.1 instruction Item #2.c).&nbsp;
+                  Make sure to <strong><u>share</u></strong> your repo with the
+                  TA and Dr. Wartell’s UNCC accounts. <br>
                   <br>
                 </li>
               </ol>
@@ -1223,99 +1231,90 @@ href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Viewi
                 <li> [<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   https://cci-git.uncc.edu/<span class="User_Input">your_user_id</span></li>
                 <li> <strong>[</strong><em>YourServer</em>=<strong>git-viscenter]</strong>
-                  git-viscenter@cci-subv.uncc.edu:wartell<span
-                    class="User_Input">/ITCS_XXXX<em>/</em>students/FirstName_LastName</span></li>
+                  git-viscenter@cci-subv.uncc.edu:wartell<span class="User_Input">/ITCS_XXXX<em>/</em>students/FirstName_LastName</span></li>
               </ol>
               <br>
               <table class="Code_Example" id="Code_Example_0_5" border="1">
                 <tbody style="height: 105px;">
                   <tr>
-                    <td><button
-                        onclick="Code_Example_Toggle('Code_Example_0_5');">▽</button></td>
+                    <td><button onclick="Code_Example_Toggle('Code_Example_0_5');">▽</button></td>
                     <td>
-                      <div style="height: 105px;"> <code
-                          class="Shell_Code_Input"> $ mkdir
-                          git-micro-tutorial<br>
+                      <div style="height: 105px;"> <code class="Shell_Code_Input">
+                          $ mkdir git-micro-tutorial<br>
                         </code> <code class="Shell_Code_Input">$ cd
                           git-micro-tutorial</code> <br>
-                        <code class="Shell_Code_Input">$ git init</code>
-                        <code class="Shell_Code_Output"> <br>
+                        <code class="Shell_Code_Input">$ git init</code> <code
+
+                          class="Shell_Code_Output"> <br>
                           Initialized empty Git repository in
                           git-micro-tutorial/.git/ </code> <br>
-                        <code class="Shell_Code_Input"> $ git remote add
-                          origin <span class="User_Input">remote_repo_path</span>/git-micro-tutorial.git
-                        </code> </div>
-                    </td>
+                        <code class="Shell_Code_Input"> $ git remote add origin
+                          <span class="User_Input">remote_repo_path</span>/git-micro-tutorial.git
+                          </code> </div> </td>
                   </tr>
                 </tbody>
               </table>
               <br>
             </li>
-            <li>Move <span class="File_Name">git-tutorial.tar.gz</span>
-              to the new local repo directory.<br>
+            <li>Move <span class="File_Name">git-tutorial.tar.gz</span> to the
+              new local repo directory.<br>
               <br>
             </li>
             <li>Add, commit and push to the Git server’s remote repo.<br>
               <br>
             </li>
-            <li> Verify the Git server’s remote repository. &nbsp;(See
-              this tutorial’s Section 9.3 Verify Your Remote Repository
-              ).<br>
+            <li> Verify the Git server’s remote repository. &nbsp;(See this
+              tutorial’s Section 9.3 Verify Your Remote Repository ).<br>
               <br>
             </li>
           </ol>
         </li>
-        <li><u>Future Work</u>:&nbsp;&nbsp; As you progress in learning
-          and using Git, the next most important concept to learn is
+        <li><u>Future Work</u>:&nbsp;&nbsp; As you progress in learning and
+          using Git, the next most important concept to learn is
           branching.&nbsp; This tutorial does not include any branching
-          exercises. For future reference, at some point you should
-          finish reading ProGit Chapter 2 and then read the ProGit
-          Chapter 3 <a
-href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
+          exercises. For future reference, at some point you should finish
+          reading ProGit Chapter 2 and then read the ProGit Chapter 3 <a href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
             Branching</a>.</li>
       </ol>
     </section>
     <section>
       <h1 id="Micro_Git_Tutorial">Micro Git Tutorial</h1>
-      <p> The micro tutorial just verifies that you have full read/write
-        access to your remote repository on the Git server. Students
-        must ask the professor via email for permission to perform this
-        micro tutorial and skip the full git tutorial. </p>
+      <p> The micro tutorial just verifies that you have full read/write access
+        to your remote repository on the Git server. Students must ask the
+        professor via email for permission to perform this micro tutorial and
+        skip the full git tutorial. </p>
       <ol>
         <li>Read this tutorial’s Section <a href="#Git_Server_Access">#Git_Server_Access</a>,
-          in particular read the sections corresponding to your
-          designated Git Server (one of 7.1 through 7.3 and then 7.4 or
-          7.5 as appropriate). Then use the shell you opened based on
-          that section’s instructions to perform the following.</li>
+          in particular read the sections corresponding to your designated Git
+          Server (one of 7.1 through 7.3 and then 7.4 or 7.5 as appropriate).
+          Then use the shell you opened based on that section’s instructions to
+          perform the following.</li>
         <li> Create a new <u>remote</u> repo:
           <ol class="Instruction_Option">
             <li> [<em>YourServer</em>=<strong>cci-git</strong>]<br>
               <br>
-              Create new remote repo on cci-git called,<span
-                class="File_Name"> git-micro-tutorial</span>.&nbsp;&nbsp;
-              This is best done using the Web Browser interface to the
-              server. To to so, read this tutorial’s Section <a
-                href="#cci-gitunccedu_URL_List">#cci-gitunccedu_URL_List</a>
-              and Section <a
-                href="#Accessing_Git_Server_Using_HTTPS_and_Git_Credentials">#Accessing_Git_Server_Using_HTTPS_and_Git_Credentials</a>.<br>
-              Then read this tutorial’s Section 8.1 repo creation
-              instructions Item #2.a).&nbsp; <br>
-              Make sure to <strong><u>share</u></strong> your repo with
-              the TA and Dr. Wartell’s UNCC accounts </li>
+              Create new remote repo on cci-git called,<span class="File_Name">
+                git-micro-tutorial</span>.&nbsp;&nbsp; This is best done using
+              the Web Browser interface to the server. To to so, read this
+              tutorial’s Section <a href="#cci-gitunccedu_URL_List">#cci-gitunccedu_URL_List</a>
+              and Section <a href="#Accessing_Git_Server_Using_HTTPS_and_Git_Credentials">#Accessing_Git_Server_Using_HTTPS_and_Git_Credentials</a>.<br>
+              Then read this tutorial’s Section 8.1 repo creation instructions
+              Item #2.a).&nbsp; <br>
+              Make sure to <strong><u>share</u></strong> your repo with the TA
+              and Dr. Wartell’s UNCC accounts </li>
             <li>[<em>YourServer</em>=<strong>git-viscenter</strong>]</li>
             <li> [<em>YourServer</em>=<strong>Bitbucket</strong>] <br>
-              Create new remote repo on cci-git called,<span
-                class="File_Name"> git-micro-tutorial</span> . This is
-              best done using the Web Browser interface to the server.
-              Review&nbsp;7.3 Bitbucket Server URL and see Section 8.1
-              repo creation instructions Item #2.c.&nbsp; Make sure to <strong><u>share</u></strong>
-              it with the TA and Dr. Wartell’s Bitbucket accounts. <br>
+              Create new remote repo on cci-git called,<span class="File_Name">
+                git-micro-tutorial</span> . This is best done using the Web
+              Browser interface to the server. Review&nbsp;7.3 Bitbucket Server
+              URL and see Section 8.1 repo creation instructions Item
+              #2.c.&nbsp; Make sure to <strong><u>share</u></strong> it with
+              the TA and Dr. Wartell’s Bitbucket accounts. <br>
               <br>
             </li>
           </ol>
         </li>
-        <li> Create <u>local</u> repo and link to the new <u>remote</u>
-          repo:<br>
+        <li> Create <u>local</u> repo and link to the new <u>remote</u> repo:<br>
           <br>
           Below, for input text <span class="User_Input">remote_repo_path</span>,
           substitute one the following:
@@ -1330,22 +1329,20 @@ href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
           <table class="Code_Example" id="Code_Example_6_3" border="1">
             <tbody style="height: 105px;">
               <tr>
-                <td><button
-                    onclick="Code_Example_Toggle('Code_Example_6_3');">▽</button></td>
+                <td><button onclick="Code_Example_Toggle('Code_Example_6_3');">▽</button></td>
                 <td>
-                  <div style="height: 105px;"> <code
-                      class="Shell_Code_Input"> $ mkdir
-                      git-micro-tutorial<br>
+                  <div style="height: 105px;"> <code class="Shell_Code_Input">
+                      $ mkdir git-micro-tutorial<br>
                     </code> <code class="Shell_Code_Input">$ cd
                       git-micro-tutorial</code> <br>
-                    <code class="Shell_Code_Input">$ git init</code> <code
-                      class="Shell_Code_Output"> <br>
+                    <code class="Shell_Code_Input">$ git init</code> <code class="Shell_Code_Output">
+                      <br>
                       Initialized empty Git repository in
                       git-micro-tutorial/.git/ </code> <br>
-                    <code class="Shell_Code_Input"> $ git remote add
-                      origin <span class="User_Input">remote_repo_path</span>/git-micro-tutorial.git
-                    </code> </div>
-                </td>
+                    <code class="Shell_Code_Input"> $ git remote add origin <span
+
+                        class="User_Input">remote_repo_path</span>/git-micro-tutorial.git
+                      </code> </div> </td>
               </tr>
             </tbody>
           </table>
@@ -1354,12 +1351,10 @@ href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
           <table class="Code_Example" id="Code_Example_6_4" border="1">
             <tbody style="height: 25px;">
               <tr>
-                <td><button
-                    onclick="Code_Example_Toggle('Code_Example_6_4');">▽</button></td>
+                <td><button onclick="Code_Example_Toggle('Code_Example_6_4');">▽</button></td>
                 <td>
-                  <div style="height: 25px;"> <code
-                      class="Shell_Code_Input"> $ echo Hello &gt;
-                      Test.txt <br>
+                  <div style="height: 25px;"> <code class="Shell_Code_Input"> $
+                      echo Hello &gt; Test.txt <br>
                     </code> </div>
                 </td>
               </tr>
@@ -1370,106 +1365,100 @@ href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
           <table class="Code_Example" id="Code_Example_6_5" border="1">
             <tbody>
               <tr>
-                <td><button
-                    onclick="Code_Example_Toggle('Code_Example_6_5');">▽</button></td>
+                <td><button onclick="Code_Example_Toggle('Code_Example_6_5');">▽</button></td>
                 <td><code class="Shell_Code_Input"> $ git add . </code><br>
-                  <div align="center"> <span
-                        class="Shell_Code_Comment"> [..misc output...]</span></div>
-                  <code class="Shell_Code_Input"> $ git commit -a -m
-                      "-submitted git-micro-tutorial assignment" </code> <br>
-                      <div align="center"> <span
-                        class="Shell_Code_Comment"> [..misc output...]</span></div>
-                      <code class="Shell_Code_Input"> $ git push -u origin
-                      master </code> <br>
-                <div align="center"> <span
-                        class="Shell_Code_Comment"> [..misc output...]</span></div></td>
+                  <div align="center"> <span class="Shell_Code_Comment">
+                      [..misc output...]</span></div>
+                  <code class="Shell_Code_Input"> $ git commit -a -m "-submitted
+                    git-micro-tutorial assignment" </code> <br>
+                  <div align="center"> <span class="Shell_Code_Comment">
+                      [..misc output...]</span></div>
+                  <code class="Shell_Code_Input"> $ git push -u origin master </code>
+                  <br>
+                  <div align="center"> <span class="Shell_Code_Comment">
+                      [..misc output...]</span></div>
+                </td>
               </tr>
             </tbody>
           </table>
         </li>
-        <li>Verify your Git server’s remote repository.&nbsp; (See
-          below, Section 9.3 Verify Your Remote Repository ).</li>
+        <li>Verify your Git server’s remote repository.&nbsp; (See below,
+          Section 9.3 Verify Your Remote Repository ).</li>
       </ol>
     </section>
-<section>
+    <section>
       <h1 id="Git_Server_Access">Git Server Access</h1>
-      This section’s subsections describe access method specifics for
-      various Git servers. Your instructor will tell you which server
-      you should use.
+      This section’s subsections describe access method specifics for various
+      Git servers. Your instructor will tell you which server you should use.
       <section>
         <h2 id="cci-gitunccedu_URL_List">cci-git.uncc.edu URL List</h2>
-        <p> Access <span class="Server_Name"> cci-git.uncc.edu </span>use
-          the HTTPS protocol. Below is a list of the URL’s you will
-          typically use. See Section <a
-            href="#Accessing_Git_Server_Using_HTTPS_and_Git_Credentials">#Accessing_Git_Server_Using_HTTPS_and_Git_Credentials</a>
+        <p> Access <span class="Server_Name"> cci-git.uncc.edu </span>use the
+          HTTPS protocol. Below is a list of the URL’s you will typically use.
+          See Section <a href="#Accessing_Git_Server_Using_HTTPS_and_Git_Credentials">#Accessing_Git_Server_Using_HTTPS_and_Git_Credentials</a>
           for instructions on accessing these git URLs.<br>
           <br>
-          Your user name and password for all access to cci-git is your
-          UNCC username and password. </p>
+          Your user name and password for all access to cci-git is your UNCC
+          username and password. </p>
         <ol>
           <li><u>Student Repository</u>:&nbsp;&nbsp; The Git URL is:<br>
-            <span class="Server_Name"> https://cci-git.uncc.edu/<span
-                class="User_Input">your_uncc_user_id</span><b>/</b><span
+            <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
+
                 class="User_Input">name_of_repo_you_created</span>.git <br>
             </span><br>
           </li>
-          <li> <u>Course Repository</u>: The course repo’s and material
-            will be found at URL’s such as:<br>
+          <li> <u>Course Repository</u>: The course repo’s and material will be
+            found at URL’s such as:<br>
             <br>
-            <span class="Server_Name"> https://cci-git.uncc.edu/<span
-                class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
+            <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
+
                 class="User_Input">the_repo_name</span>.git </span> <br>
             <br>
-            The <span class="User_Input">ITCS_Class_URL_Name</span>
-            will be given you with your assignments or tutorial
-            instructions. <br>
+            The <span class="User_Input">ITCS_Class_URL_Name</span> will be
+            given you with your assignments or tutorial instructions. <br>
             <br>
           </li>
-          <li> <u>Web Server</u>:&nbsp;&nbsp; <a
-              href="https://cci-git.uncc.edu">https://cci-git.uncc.edu</a><br>
+          <li> <u>Web Server</u>:&nbsp;&nbsp; <a href="https://cci-git.uncc.edu">https://cci-git.uncc.edu</a><br>
             <br>
-            You only need to access the website via web browser when
-            creating new repositories and for GitLab specific
-            operations.&nbsp;&nbsp; Most, git operations will be
-            performed using the Git command-line or your preferred GUI
-            for Git. </li>
+            You only need to access the website via web browser when creating
+            new repositories and for GitLab specific operations.&nbsp;&nbsp;
+            Most, git operations will be performed using the Git command-line or
+            your preferred GUI for Git. </li>
         </ol>
       </section>
       <section>
         <h2 id="git-viscentercci-svnunccedu_URL_List">git-viscenter@cci-svn.uncc.edu
           URL List</h2>
         <p> Accessing <span class="Server_Name">git-viscenter@cci-svn.uncc.edu
-          </span>uses the SSH protocol. Below is a list of the URL’s you
-          will typically use. See Section&nbsp;<a
-            href="#Accessing_Git_Server_Using_SSH_Keys">#Accessing_Git_Server_Using_SSH_Keys</a>
+          </span>uses the SSH protocol. Below is a list of the URL’s you will
+          typically use. See Section&nbsp;<a href="#Accessing_Git_Server_Using_SSH_Keys">#Accessing_Git_Server_Using_SSH_Keys</a>
           for instructions on accessing these git URLs.</p>
-        <p>Each student (and/or team) in class has already had a
-          repository directory created for them. The URL of a student’s
-          Git repository directory is as follows.</p>
+        <p>Each student (and/or team) in class has already had a repository
+          directory created for them. The URL of a student’s Git repository
+          directory is as follows.</p>
         <p> Assume your UNCC email address is:<br>
           <br>
           <a href="mailto:johndoe@uncc.edu">johndoe@uncc.edu</a> <br>
           <br>
-          and your first and last name as it appears in the UNCC BANNER
-          system is: </p>
+          and your first and last name as it appears in the UNCC BANNER system
+          is: </p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           John Doe</p>
         <p> Then your Git username is <span class="Program_Name">johndoe</span>
           and your course Git repository URL is:<br>
           <br>
           <span class="File_Name">git-viscenter@cci-subv.uncc.edu:wartell/<span
+
               class="User_Input">ITCS_XXXX</span><em>/</em>students/John_Doe</span>
         </p>
         <p>Throughout this document, the text <span class="User_Input">ITCS_XXXX</span>
-          would be replaced by appropriate string for the class you are
-          taking. This will be announced in class.</p>
-        <p>Note, if your UNCC BANNER name contains an initial, the
-          initial is removed when creating the directory name of your
-          course Git &nbsp;repository URL. If your UNCC BANNER first or
-          last name contains multiple words, the spaces are removed from
-          between the multiple words in your first or last name when
-          creating the directory name. For example, if your UNCC BANNER
-          name is:</p>
+          would be replaced by appropriate string for the class you are taking.
+          This will be announced in class.</p>
+        <p>Note, if your UNCC BANNER name contains an initial, the initial is
+          removed when creating the directory name of your course Git
+          &nbsp;repository URL. If your UNCC BANNER first or last name contains
+          multiple words, the spaces are removed from between the multiple words
+          in your first or last name when creating the directory name. For
+          example, if your UNCC BANNER name is:</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           Smith, Jim B.</p>
         <p>Then your repository URL suffix is:</p>
@@ -1479,57 +1468,53 @@ href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
           Van Winkle, Jim Bob</p>
         <p>Then your Git repository URL suffix is:</p>
         <div align="center"><span class="File_Name">students/JimBob_VanWinkle</span></div>
-        <p>For team projects, all members of the team will be given
-          access to a team directory with a name like:</p>
+        <p>For team projects, all members of the team will be given access to a
+          team directory with a name like:</p>
         <div align="center"> <span class="File_Name">git-viscenter@cci-subv.uncc.edu:wartell/<span
-              class="User_Input">ITCS_XXXX</span><em>/</em>students/<span
-              class="User_Input">TeamName</span></span> </div>
-        <p>Only the Professor and TA can change access permissions for
-          repo’s in <span class="Server_Name">git-viscenter</span>.</p>
+
+              class="User_Input">ITCS_XXXX</span><em>/</em>students/<span class="User_Input">TeamName</span></span>
+        </div>
+        <p>Only the Professor and TA can change access permissions for repo’s in
+          <span class="Server_Name">git-viscenter</span>.</p>
       </section>
       <section>
         <h2 id="Bitbucket_URL_List">Bitbucket URL List</h2>
-        <p> Accessing <span class="Server_Name">Bitbucket </span>uses
-          the SSH protocol. Below is a list of the URL’s you will
-          typically use as well as instructions for creating a Bitbucket
-          account. </p>
+        <p> Accessing <span class="Server_Name">Bitbucket </span>uses the SSH
+          protocol. Below is a list of the URL’s you will typically use as well
+          as instructions for creating a Bitbucket account. </p>
         <ol class="Instruction">
-          <li>Each team member:&nbsp; Create an <u>academic account</u>
-            for yourself on <a href="https://bitbucket.org/">https://bitbucket.org/</a>&nbsp;
+          <li>Each team member:&nbsp; Create an <u>academic account</u> for
+            yourself on <a href="https://bitbucket.org/">https://bitbucket.org/</a>&nbsp;
             (If you do not already have one, of course).
             <ol>
               <li><a href="https://bitbucket.org/account/signup/">https://bitbucket.org/account/signup/</a></li>
-              <li> Details on their Academic Account Policy are at this
-                <a
-href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines+for+academic+licenses">Link</a>.&nbsp;&nbsp;
+              <li> Details on their Academic Account Policy are at this <a href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines+for+academic+licenses">Link</a>.&nbsp;&nbsp;
                 &nbsp;It is much better than the non-academic account!<br>
               </li>
             </ol>
           </li>
-          <li><u>One</u> team member should create a Private Repository
-            for your Project then <u>share</u> that repo with:
+          <li><u>One</u> team member should create a Private Repository for your
+            Project then <u>share</u> that repo with:
             <ol>
               <li>all other team members </li>
-              <li> Dr. Wartell (Bitbucket UserID: zwartell)&nbsp; and
-                TA’s Bitbucket UserID.<br>
+              <li> Dr. Wartell (Bitbucket UserID: zwartell)&nbsp; and TA’s
+                Bitbucket UserID.<br>
               </li>
             </ol>
           </li>
-          <li> Instructions for setting access permission (“sharing”)
-            your Bitbucket repo are found the Bitbucket Website <br>
+          <li> Instructions for setting access permission (“sharing”) your
+            Bitbucket repo are found the Bitbucket Website <br>
           </li>
         </ol>
-        Note, you will access Bitbucket using the ssh
-        protocol.&nbsp;&nbsp; This means the Bitbucket URL you should
-        use will be something like,<span class="File_Name">
+        Note, you will access Bitbucket using the ssh protocol.&nbsp;&nbsp; This
+        means the Bitbucket URL you should use will be something like,<span class="File_Name">
           git@bitbucket.org:<span class="User_Input">your_userid/your_reponame</span>.git
-        </span> <br>
-        The course repo’s and material will be found at URL’s such as:<span
-          class="File_Name"> git@bitbucket.org:zwartell/<span
-            class="User_Input">reponame</span>.git&nbsp; </span> </section>
+          </span> <br> The course repo’s and material will be found at URL’s
+        such as:<span class="File_Name"> git@bitbucket.org:zwartell/<span class="User_Input">reponame</span>.git&nbsp;
+          </span> </section>
       <section>
-        <h2 id="Accessing_Git_Server_Using_SSH_Keys">Accessing Git
-          Server Using SSH Keys </h2>
+        <h2 id="Accessing_Git_Server_Using_SSH_Keys">Accessing Git Server Using
+          SSH Keys </h2>
         <p>For servers using the SSH access method, this section covers:</p>
         <ol start="1" type="1">
           <li> Starting and logging into an <span class="Program_Name">ssh-agent</span>
@@ -1538,24 +1523,21 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
           <li>Example Git operations using the Git server.</li>
         </ol>
         <section>
-          <h3 id="LinuxMac_Starting_the_ssh-agent_daemon"><a
-              name="LinuxMac_Starting_the_ssh-agent"></a>[Linux/Mac]
+          <h3 id="LinuxMac_Starting_the_ssh-agent_daemon"><a name="LinuxMac_Starting_the_ssh-agent"></a>[Linux/Mac]
             Starting the ssh-agent daemon</h3>
-          <p>These steps much be done each time you login into a
-            computer if you want to access the Git server. They start
-            the ssh-agent daemon process which manages Git’s
-            authentication to the Git server. </p>
-          <p>These steps will only work after you submit you public key
-            to the TA and he has confirmed that it has been added to the
-            Git server. </p>
+          <p>These steps much be done each time you login into a computer if you
+            want to access the Git server. They start the ssh-agent daemon
+            process which manages Git’s authentication to the Git server. </p>
+          <p>These steps will only work after you submit you public key to the
+            TA and he has confirmed that it has been added to the Git server. </p>
           <ol>
             <li>Start your command-line shell </li>
-            <li> Start the <span class="Program_Name">ssh-agent</span>
-              daemon process<br>
-              This starts a <span class="Program_Name">ssh-agent</span>
-              daemon and a new bash shell that is setup to communicate
-              with the <span class="Program_Name">ssh-agent</span>
-              daemon.<br>
+            <li> Start the <span class="Program_Name">ssh-agent</span> daemon
+              process<br>
+              This starts a <span class="Program_Name">ssh-agent</span> daemon
+              and a new bash shell that is setup to communicate with the <span
+
+                class="Program_Name">ssh-agent</span> daemon.<br>
               <br>
             </li>
             <li>Load your private key into the ssh-agent daemon. </li>
@@ -1564,55 +1546,50 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
                 <li> <strong>[</strong><em>YourServer=</em><strong>git-viscenter]</strong><br>
                   This lists the repositories you have access to.<br>
                   <br>
-                  <em><u>Possible Errors</u></em>: If you are prompted
-                  for a password here, your public key has not been
-                  registered yet. </li>
+                  <em><u>Possible Errors</u></em>: If you are prompted for a
+                  password here, your public key has not been registered yet. </li>
                 <li> [<em>YourServer=</em><strong>bitbucket</strong>]<br>
                   The above<strong> </strong>verifies<strong> </strong>your<strong>
-                  </strong>ssh-agent is successfully passing your key
-                  through ssh to Bitbucket. </li>
+                  </strong>ssh-agent is successfully passing your key through
+                  ssh to Bitbucket. </li>
                 <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
                   <table class="Code_Example" id="Code_Example_741_4c" border="1">
                     <tbody style="height: 105px;">
                       <tr>
-                        <td><button
-                            onclick="Code_Example_Toggle('Code_Example_741_4c');">▽</button></td>
+                        <td><button onclick="Code_Example_Toggle('Code_Example_741_4c');">▽</button></td>
                         <td>
-                          <div style="height: 105px;"> <code
-                              class="Shell_Code_Input"> $ ssh
-                              git@cci-git.uncc.edu<br>
+                          <div style="height: 105px;"> <code class="Shell_Code_Input">
+                              $ ssh git@cci-git.uncc.edu<br>
                             </code> <code class="Shell_Code_Output"> <br>
                               The server's host key is not cached in the
                               registry. You <br>
-                              have no guarantee that the server is the
-                              computer you <br>
+                              have no guarantee that the server is the computer
+                              you <br>
                               think it is. <br>
                               The server's rsa2 key fingerprint is: <br>
                               ssh-rsa 2048
-                              aa:32:4a:f4:4e:96:bc:cb:46:3d:b9:de:64:bc:19:ef
-                              ) <br>
-                              <span class="Shell_Code_Comment"> [^ exact
-                                number may differ ^] </span> <br>
-                              If you trust this host, enter "y" to add
-                              the key to <br>
-                              PuTTY's cache and carry on connecting. <br>
-                              If you want to carry on connecting just
-                              once, without <br>
-                              adding the key to the cache, enter "n". <br>
-                              If you do not trust this host, press
-                              Return to abandon the <br>
-                              connection. <br>
-                              Store key in cache? (y/n) <span
-                                class="Shell_Code_Comment"> [TYPE yes] </span>
+                              aa:32:4a:f4:4e:96:bc:cb:46:3d:b9:de:64:bc:19:ef )
                               <br>
+                              <span class="Shell_Code_Comment"> [^ exact number
+                                may differ ^] </span> <br>
+                              If you trust this host, enter "y" to add the key
+                              to <br>
+                              PuTTY's cache and carry on connecting. <br>
+                              If you want to carry on connecting just once,
+                              without <br>
+                              adding the key to the cache, enter "n". <br>
+                              If you do not trust this host, press Return to
+                              abandon the <br>
+                              connection. <br>
+                              Store key in cache? (y/n) <span class="Shell_Code_Comment">
+                                [TYPE yes] </span> <br>
                               Warning: Permanently added
-                              ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA)
-                              to the list of known hosts. <br>
+                              ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA) to the
+                              list of known hosts. <br>
                               Using username "git". <br>
                               Server refused to allocate pty <br>
-                              Welcome to GitLab, zwartell. <span
-                                class="Shell_Code_Comment"> [zwartell
-                                will be your username] </span> </code>
+                              Welcome to GitLab, zwartell. <span class="Shell_Code_Comment">
+                                [zwartell will be your username] </span> </code>
                           </div>
                         </td>
                       </tr>
@@ -1621,8 +1598,7 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
                 </li>
               </ol>
             </li>
-            <li> To verify read-access to the welcome repo do as
-              follows:<br>
+            <li> To verify read-access to the welcome repo do as follows:<br>
               <br>
               For input text <span class="User_Input">welcome_repo_path</span>
               below, substitute the following based on your server::
@@ -1636,36 +1612,31 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
                   <table class="Code_Example" id="Code_Example_741_5" border="1">
                     <tbody style="height: 105px;">
                       <tr>
-                        <td><button
-                            onclick="Code_Example_Toggle('Code_Example_741_5');">▽</button></td>
+                        <td><button onclick="Code_Example_Toggle('Code_Example_741_5');">▽</button></td>
                         <td>
-                          <div style="height: 105px;"> <code
-                              class="Shell_Code_Input"> $ $ git clone <span
-                                class="User_Input">welcome_repo_path</span>
+                          <div style="height: 105px;"> <code class="Shell_Code_Input">
+                              $ $ git clone <span class="User_Input">welcome_repo_path</span>
                               <br>
                             </code> <code class="Shell_Code_Output"> <br>
-                              The authenticity of host
-                              ‘cci-subv.uncc.edu’ (10.18.203.162)’ can’t
-                              be established.<br>
+                              The authenticity of host ‘cci-subv.uncc.edu’
+                              (10.18.203.162)’ can’t be established.<br>
                               RSA key fingerprint is
                               e2:6f:ac:ff:a3:30:a2:0e:c2:d6:98:f4:78:55:c5:7f.<br>
-                              Are you sure you want to continue
-                              connecting (yes/no)? <span
-                                class="Shell_Code_Comment">[type yes] </span><br>
+                              Are you sure you want to continue connecting
+                              (yes/no)? <span class="Shell_Code_Comment">[type
+                                yes] </span><br>
                               Warning: Permanently added
-                              ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA)
-                              to the list of known hosts.<br>
-                              <span class="Shell_Code_Comment"> […the
-                                above will only appear the first time
-                                you connect to the git-viscenter …]</span><br>
+                              ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA) to the
+                              list of known hosts.<br>
+                              <span class="Shell_Code_Comment"> […the above will
+                                only appear the first time you connect to the
+                                git-viscenter …]</span><br>
                               Cloning into 'welcome'...<br>
                               remote: Counting objects: 6, done.<br>
-                              remote: Compressing objects: 100% (4/4),
-                              done.<br>
-                              remote: Total 6 (delta 0), reused 0 (delta
-                              0)<br>
-                              Receiving objects: 100% (6/6), 5.50 KiB |
-                              0 bytes/s, done.<br>
+                              remote: Compressing objects: 100% (4/4), done.<br>
+                              remote: Total 6 (delta 0), reused 0 (delta 0)<br>
+                              Receiving objects: 100% (6/6), 5.50 KiB | 0
+                              bytes/s, done.<br>
                             </code> </div>
                         </td>
                       </tr>
@@ -1674,25 +1645,24 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
                 </li>
               </ol>
               <em> <u> <br>
-                  Possible Errors </u> </em>: If you are prompted for
-              a password here, either the ssh-agent daemon is not setup
-              right or your public key has not been registered yet. </li>
+                  Possible Errors </u> </em>: If you are prompted for a
+              password here, either the ssh-agent daemon is not setup right or
+              your public key has not been registered yet. </li>
           </ol>
         </section>
         <section>
-          <h3 id="Windows_Starting_the_ssh-agent_daemon">[Windows]
-            Starting the ssh-agent daemon</h3>
-          <p> When you login into a computer from which want to connect
-            to your Git server, you must perform these steps once. The
-            steps start the ssh-agent daemon which manages Git’s
-            authentication to the Git server. <br>
+          <h3 id="Windows_Starting_the_ssh-agent_daemon">[Windows] Starting the
+            ssh-agent daemon</h3>
+          <p> When you login into a computer from which want to connect to your
+            Git server, you must perform these steps once. The steps start the
+            ssh-agent daemon which manages Git’s authentication to the Git
+            server. <br>
             <br>
-            These steps will only work after you submit your public key
-            to the Git server. <br>
+            These steps will only work after you submit your public key to the
+            Git server. <br>
             <br>
-            These instructions allow both TortoiseGit and command-line
-            Git to use the same <span class="Program_Name">ssh-agent</span>
-            daemon. </p>
+            These instructions allow both TortoiseGit and command-line Git to
+            use the same <span class="Program_Name">ssh-agent</span> daemon. </p>
           <p><u>Start Pageant</u></p>
           <ol>
             <li> Run Pageant: <br>
@@ -1700,33 +1670,30 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
                 Menu→Putty→Pagent</span>&nbsp; <br>
               This will create a Pageant system tray icon.<br>
             </li>
-            <li>On the Pageant system tray icon, right-click and select
-              <span class="Program_Name">Add Keys</span> from the menu.
-              This will open a dialog box.&nbsp; </li>
+            <li>On the Pageant system tray icon, right-click and select <span class="Program_Name">Add
+                Keys</span> from the menu. This will open a dialog box.&nbsp; </li>
             <li> Using the dialog, open your <span class="File_Name">id_rsa.ppk</span>
               file.&nbsp; You will be prompted for your passphrase. <br>
               <br>
-              This starts PuTTY’s version of the ssh-agent daemon. The
-              ssh-agent will continue to run until you log off your
-              computer.
-              <p><u>Start and Use the
-                  Command-Line Shell</u></p>
+              This starts PuTTY’s version of the ssh-agent daemon. The ssh-agent
+              will continue to run until you log off your computer.
+              <p><u>Start and Use the Command-Line Shell</u></p>
             </li>
             <li>Start the Git-Bash shell: Start Menu→Git→Git-Bash</li>
-            <li> To tell git to use the ssh client compatible with
-              TortoiseGit type the following: <br>
+            <li> To tell git to use the ssh client compatible with TortoiseGit
+              type the following: <br>
               <br>
               General:<br>
               <br>
               Optionally to avoid the requirement of setting the GIT_SSH
-              variable each time you run Git-Bash, add the above line to
-              the <span class="File_Name">.bash_profile</span> file
-              (see Appendix 11.2). <br>
+              variable each time you run Git-Bash, add the above line to the <span
+
+                class="File_Name">.bash_profile</span> file (see Appendix 11.2).
+              <br>
             </li>
             <li> To verify the Pagent ssh-agent daemon is working:
               <ol class="Instruction_Option">
-                <li>[<em>YourServer</em>=<strong>git-viscenter</strong>]
-                </li>
+                <li>[<em>YourServer</em>=<strong>git-viscenter</strong>] </li>
                 <li>[<em>YourServer</em>=<strong>bitbucket</strong>]</li>
                 <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
                 </li>
@@ -1748,49 +1715,42 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
                 </li>
               </ol>
               <em><u>Possible Errors</u></em>: If you are prompted for a
-              password here, either the ssh-agent daemon is not setup
-              right or your public key has not been registered yet. </li>
+              password here, either the ssh-agent daemon is not setup right or
+              your public key has not been registered yet. </li>
           </ol>
         </section>
       </section>
       <section>
-        <h2 id="Accessing_Git_Server_Using_HTTPS_and_Git_Credentials"><a
-            name="Accessing_Git_Server_Using_HTTPS_and_Git"></a>Accessing
+        <h2 id="Accessing_Git_Server_Using_HTTPS_and_Git_Credentials"><a name="Accessing_Git_Server_Using_HTTPS_and_Git"></a>Accessing
           Git Server Using HTTPS and Git Credentials</h2>
         [<em>YourServer</em>=<strong>cci-git</strong>]
-        <p> As of September 2016, there is a problem with the server’s
-          SSL certificate.&nbsp;&nbsp; You must disable Git’s automatic
-          checking for a SSL certificate as follows:</p>
+        <p> As of September 2016, there is a problem with the server’s SSL
+          certificate.&nbsp;&nbsp; You must disable Git’s automatic checking for
+          a SSL certificate as follows:</p>
         <table class="Code_Example" id="Code_Example_751_1" border="1">
           <tbody>
             <tr>
-              <td><button
-                    onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button></td>
-              <td><code class="Shell_Code_Input">$ git config
-                --global http.sslVerify false<br>
-              </code></td>
+              <td><button onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button></td>
+              <td><code class="Shell_Code_Input">$ git config --global
+                  http.sslVerify false<br>
+                </code></td>
             </tr>
           </tbody>
         </table>
-        <p>(The above Git setting is saved on your computer, so you
-          only need to set it once).<br>
+        <p>(The above Git setting is saved on your computer, so you only need to
+          set it once).<br>
         </p>
-
-        To test and verify read-access to the server, clone the welcome
-        repo:
+        To test and verify read-access to the server, clone the welcome repo:
         <table class="Code_Example" id="Code_Example_75_1" border="1">
           <tbody style="height: 105px;">
             <tr>
-              <td><button
-                  onclick="Code_Example_Toggle('Code_Example_75_1');">▽</button></td>
+              <td><button onclick="Code_Example_Toggle('Code_Example_75_1');">▽</button></td>
               <td>
-                <div style="height: 105px;"> <code
-                    class="Shell_Code_Input">$ git clone
-                    https://cci-git.uncc.edu/zwartell/welcome.git</code><br>
-                  <span class="Shell_Code_Comment">[…you will prompted
-                    for you UNCC user id and password] </span><br>
-                  <code class="Shell_Code_Output"> Cloning into
-                    'welcome'...<br>
+                <div style="height: 105px;"> <code class="Shell_Code_Input">$
+                    git clone https://cci-git.uncc.edu/zwartell/welcome.git</code><br>
+                  <span class="Shell_Code_Comment">[…you will prompted for you
+                    UNCC user id and password] </span><br>
+                  <code class="Shell_Code_Output"> Cloning into 'welcome'...<br>
                     remote: Counting objects: 6, done.<br>
                     remote: Compressing objects: 100% (4/4), done.<br>
                     remote: Total 6 (delta 0), reused 0 (delta 0)<br>
@@ -1803,281 +1763,370 @@ href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines
         </table>
         <section>
           <h3 id="Using_Git_Credentials">Using Git Credentials</h3>
-          <p> By default, the HTTPS protocol will require you to enter
-            your UNCC username and password <u>everytime</u> you
-            perform a <u>remote</u> Git operation (clone, push,
-            etc.).&nbsp;&nbsp;&nbsp; To save typing, you may use the Git
-            Credential Storage mechanism to avoid typing in a password
-            over and over again.<br>
+          <p> By default, the HTTPS protocol will require you to enter your UNCC
+            username and password <u>everytime</u> you perform a <u>remote</u>
+            Git operation (clone, push, etc.).&nbsp;&nbsp;&nbsp; To save typing,
+            you may use the Git Credential Storage mechanism to avoid typing in
+            a password over and over again.<br>
             <br>
-            Note, the instructions below are a repetition of those found
-            in this document Section <a href="#Full_Git_Tutorial">#Full_Git_Tutorial</a>.
+            Note, the instructions below are a repetition of those found in this
+            document Section <a href="#Full_Git_Tutorial">#Full_Git_Tutorial</a>.
           </p>
           <ol>
-            <li> Read ProGit <a
-                href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">Git
-                Tools - Credential Storage</a>.&nbsp; Stop at section
-              Under the Hood. <br>
+            <li> Read ProGit <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">Git
+                Tools - Credential Storage</a>.&nbsp; Stop at section Under the
+              Hood. <br>
             </li>
-            <li> Based on your operating system pick the appropriate
-              credential system as described in the above ProGit
-              chapter.<br>
+            <li> Based on your operating system pick the appropriate credential
+              system as described in the above ProGit chapter.<br>
               <br>
               <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
-              "store mode" because this will save your UNCC password
-              unencrypted on disk!
+              "store mode" because this will save your UNCC password unencrypted
+              on disk!
               <ol class="Instruction_Option">
-                <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you
-                  are using Git-Bash
+                <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you are
+                  using Git-Bash
                   <table class="Code_Example" id="Code_Example_751_1" border="1">
                     <tbody>
                       <tr>
-                        <td><button
-                            onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button></td>
-                        <td><code class="Shell_Code_Input">$
-                              &nbsp;git config --global
-                              credential.helper wincred<br>
-                        </code></td>
+                        <td><button onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button></td>
+                        <td><code class="Shell_Code_Input">$ &nbsp;git config
+                            --global credential.helper wincred<br>
+                          </code></td>
                       </tr>
                     </tbody>
                   </table>
                 </li>
                 <li>[<em>OS</em><strong>=<em>everything else</em></strong>]
-                  Follow links discussed in <a
-                    href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">Git
+                  Follow links discussed in <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">Git
                     Tools - Credential Storage</a>. </li>
               </ol>
             </li>
           </ol>
         </section>
       </section>
-  </section>
-  <section>
-    <h1>Common Git Operations</h1>
-    <p>
-    This section describes several operations referenced by other tutorial sections of this document. Hence, this section assumes you already have a command-line shell setup as described for your designated Git server.</p>
-    <section>
-    <h2>Basic Git Operations</h2>
-    <ol class="Instruction">
-      <li><b>How to Clone Existing Repository</b><br>
-        <br>
-        Below, for the input text <span class="User_Input">git_server_url</span> substitute the appropriate Server URL
-        from Section 7 Git Server Access:</li>
-      <li><strong>How to Create New Remote Repository</strong>:<br>
-      <em> Instructions below vary based on your server.</em>
-      <ol class="Instruction_Option">
-      <li><a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
-        <ol>
-      <li>Login to the cci-git Web Server (See 7.1 cci-git Server URL)</li>
-      <li>To go the GitLab Dashboard, select<span class="Program_Name"> New Project</span></li>
-      <li>Add project name as directed by your assignment’s instructions:</li>
-      <li>Select <span class="Program_Name">Private</span> (pictured above).</li>
-      <li>Select <span class="Program_Name">Create Project</span> (pictured above). This should display the image in the next step.</li>
-      <li>Select <span class="Program_Name">Settings</span>.</li>
-      <li>Select <span class="Program_Name">Add Members</span>.</li>
-      <li>Add the TA and Professor (get their UNCC user name from their email address) under People. Give both of them Reporter access in the <span class="Program_Name">Project Access</span> menu. Select <span class="Program_Name">Add Users to Project</span>.</li>
-      </ol>
-      </li>
-      <li><a name="_Ref431823815">[<em>YourServer</em><b>=git-viscenter</b>]</a><br>
-        <br>
-        The above works as long as you were give “Create” permissions under the indicated  Note, git-viscenter uses the gitolite server which has a special feature that creates a remote repo if it does not already exist when you attempt to clone it. git-viscenter access permissions are managed by the TA and generally already set-up for the course</li>
-      <li>[<em>YourServer</em><b>=git-viscenter</b>]
-        <ol>
-          <li>Select create</li>
-          <li>Here are some recommended settings (assume you name the repo MyRepoName)</li>
-          <li>Set up repo access permission (“sharing”): </li>
-          <li>If the project is a team project, add your team members.</li>
-          <li>Add the course TA and Professor get their email from class website 
-           <div align="center">
-                <table style="border-collapse:collapse;border:none" border="1" cellpadding="0" cellspacing="0">
-                  <tbody>
-                    <tr>
-                      <td style="width:2.0in;border:solid windowtext 1.0pt;
-          padding:0in 5.4pt 0in 5.4pt" valign="top" width="192">
-                        <p style="margin-left:.5in">Dr. Wartell</p>
-                      </td>
-                      <td style="width:184.1pt;border:solid windowtext 1.0pt;
-          border-left:none;padding:0in 5.4pt 0in 5.4pt" valign="top" width="245">
-                        <p style="margin-left:.5in">Zwartell</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="width:2.0in;border:solid windowtext 1.0pt;
-          border-top:none;padding:0in 5.4pt 0in 5.4pt" valign="top" width="192">
-                        <p style="margin-left:.5in">TA</p>
-                      </td>
-                      <td style="width:184.1pt;border-top:none;border-left:
-          none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"
-        
-                        valign="top" width="245">
-                        <p> <i>get their email from class website</i></p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-          </li>
-          <li><strong>Example:</strong> Example steps to populate the remote repo is by creating a local repo and performing a git push as follows:</li>
-        </ol>
-      </li>
-      </ol>
-      </li>
-      <li><strong>How to Push to New Remote Repository:</strong><br>
-        To push files to a new <u>empty</u>, <u>remote</u> repository, such as one created in following Item #2 (above) do as follows. Assume the remote is called <u><span class="User_Input">Project_Example.git</span></u>:        <br>
-        <ol class="Instruction_Option">
-        <li>[<em>YourServer</em>=<strong>cci-git</strong>] </li>
-        <ol>
-        <li><strong>Option I</strong>: <strong>git clone</strong>:  <br>
-          If you have <u>not</u> already created files in a local directory that you want to import, performing the following:<br>
-          &lt;INSERT CODE&gt;<br>
-        </li>
-        <li><strong>Option II</strong>:  <strong>git init:</strong><br>
-          If you <u>already</u> created files in a local directory (call it <u>Project_Example</u>) and that local directory is <u>not</u> already a local Git repo, perform the following: (1) initialize that directory as a local Git repo and (2) push it the remote Git repo:<br>
-          &lt;INSERT CODE&gt;
-          <br>
-        </li>
-          </ol>
-        <li>[<em>YourServer</em>=<strong>git-viscenter,Bitbucket</strong>] <br>
-          <br>
-          Perform the same instructions as above, Option II, for [<strong>cci-git</strong>] but replace:<br>
-               <span class="Server_Name">https://cci-git.uncc.edu/<u><span class="User_Input">your_user_id</span></u>/</span><br>
-          with<br>
-           [<strong>bitbucket</strong>]   <span class="Server_Name"> git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u> </span><br>
-           [<strong>git-viscenter]</strong> <span class="Server_Name">git-viscenter@cci-subv.uncc.edu:wartell/<u><span class="User_Input">ITCS_XXXX</span></u><em>/</em>students/<u><span class="User_Input">FirstName_LastName</span></u>        </span></li>
-        <li>[<em>YourServer</em>=<strong>Bitbucket</strong>] </li>
-        
-        </ol>
-      </li>
-      <li>To delete a remote repo:
-      <ol class="Instruction_Option">
-      <li>
-      [<em>YourServer</em>=<strong>git-viscenter</strong>] <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        (For Windows using Git-Bash substitute ssh above with plink)</li>
-      <li>[<em>YourServer</em>=<strong>Bitbucket</strong>] <em>See Bitbucket Website.</em></li>
-      <li>[<em>YourServer=</em><strong>cci-git</strong>]<em> See cci-git Website.</em><br>
-      </li>
-      </ol>
-      </li>
-      <li><br>
-      </li>
-    </ol>
-
-
     </section>
-  </section>
-  <h1>Course Git Policies</h1>
-  <section>
-  <h2>Submitting Class Assignments</h2>
-  <p>Submit all your assignments by using Git add, commit and push to upload your code to your Git repository subdirectory.</p>
-  <div>
-    <p>Your projects will be graded based on the version of your code that is git-push&rsquo;ed to the Git server at the time of the due date for the project.</p>
-  </div>
-  </section>
-  <section>
-  <h2>Keep the repository clean!!!</h2>
-  <p>    It is standard practice when using version control software to not commit intermediate or output files generated by the compiler into the repository.  Intermediate or output compilation files are all regenerated when someone else checkout&rsquo;s the source code and recompiles it. Like all compilers MSVS 20xx C++ compiler generates lots of these (*.ncb, *.ilk, *.exe, *.obj, etc.).  <br>
-    <br>
-  </p>
-  <p align="center"><strong>Rule</strong>: Do not commit such intermediate files to your Git repository!</p>
-  <p> Fortunately, you can automate this process using the .gitignore mechanism (see [2]).</p>
-  <p><em>Reasoning:</em></p>
-  <p>Adding intermediate auto-generated files to the repository is wasteful, messy and can create subtle problems.  Many intermediate files will create compilation problems if they are copied between different computers. Putting them in the repository is equivalent to such copying. </p>
-  <p>By convention, the following files should be put in the repository depending on your programming language and development tools.</p>
-  <setion>
-  <h3>C++ Code Rules</h3>
-  The following files should be put in the repository: 
-  <ul type="disc">
-    <li>source code files (.cpp, .h, etc.)</li>
-    <li>compilation scripts or project files</li>
-    <ul type="circle">
-      <li>Under MSVS 2010 for C++:  <br>
-        .vcxproj, .sln, .vcxproj.user</li>
-    </ul>
-  </ul>
-  <p>Under earlier MSVS versions:  <br>
-    .vcproj, .sln, .vcproj.&lt;username&gt;.&lt;machinename&gt;.user</p>
-  <ul type="disc">
-    <li>a .txt file or .doc file describing what parts of the project you completed or left incomplete, etc.</li>
-    <li>any input files such as image files or other data files required by your program</li>
-    <li>any subdirectories containing the above files<br>
-    </li>
-  </ul>
-  <p>When adding subdirectories, be careful not to blindly submit their entire contents because often they contain additional automatically generated files.    If you make a mistake just delete the intermediate files from the repo.</p>
-  </section>
-<section>
-  <h3>JavaScript and WebGL</h3>
-  <p> The following files should be put in the repository:<br>
-  </p>
-  <ul type="disc">
-    <li>source code files:</li>
-    <ul type="circle">
-      <li>.js, .html</li>
-    </ul>
-    <li>compilation scripts or project files</li>
-    <ul type="circle">
-      <li>at the moment our projects are too trivial to use any</li>
-    </ul>
-    <li>a .txt file or .doc file describing what parts of the project you completed or left incomplete, etc.</li>
-    <li>any input files such as image files or other data files required by your program</li>
-    <li>of course, any subdirectories containing the above files<br>
-    </li>
-  </ul>
-  <p>When adding subdirectories, be careful not to blindly submit their entire contents because often they contain additional automatically generated files.    If you make a mistake just delete the intermediate files from the repo. </p>
-  </section>
-<section>
-  <h2>Verify Your Remote Repository</h2>
-  <p>The TA only sees your remote Git server repo&rsquo;s.</p>
-  <p align="center"> <strong>Rule</strong>:  Always make sure your assignment appears as you expect in the remote repo (on the Git server).</p>
-  <p><em>The Ultimate Verification</em>:</p>
-  <p>The ultimate way to verify the remote repo contains the files you think it does is to clone it into to another directory and check that second cloned copy for completeness.   You should do this when you are completely done with your assignment.</p>
-  <p> <em>Some Safety Checks:</em><br>
-  </p>
-  <p>Performing<em> The Ultimate Verification</em> while you are developing code is tedious. During software development the following are good practices to keep track of your commit&rsquo;s and push&rsquo;s.<br>
-  </p>
-  <ul type="disc">
-    <li><strong>git-status</strong><br>
-      <br>
-      <em>Good Result</em>:<br>
-      <strong>&lt;INSERT CODE&gt;</strong><br>
-      The above indicates everything is good.   You have no file changes that have not been committed to the local repo and no local repo commits that have not been pushed to the remote repo.<br>
-      <br>
-      <em>Maybe Bad:</em><br>
-      If you get messages like:<br>
-      <strong>&lt;INSERT CODE&gt;</strong><br>
-      then you have untracked files (but you have push&rsquo;ed all your commits).  This maybe ok as along as these files aren&rsquo;t files that belong in a repo (such as temporary files).  You might consider adding to the .gitignore file (see [2]).<br>
-      <br>
-      <em>Bad:</em><br>
-      If you get a message like:<br>
-      <strong>&lt;INSERT CODE&gt;</strong><br>
-      then <br>
-      then you have not pushed all your latest changes to the remote repo. Do a git-push before the final assignment deadline. <br>
-      <br>
-    </li>
-    <li><strong>[Optional] TortoiseGit</strong> – Optionally, another good way to check with the TortoiseGit shell extension is using Check for Modifications. This will show you whether you have any changes not commited to the local repo (but make sure to check the box, Show Unversioned Files).   Below we see one file is untracked.<br>
-      <strong>&lt;INSERT CODE&gt;</strong><br>
-      However, Check for Modifications will not tell you whether you have pushed all your commits to the remote repo.  <br>
-      <br>
-      For that use the TortoiseGit shell extension and select Git Sync. The following Git Sync dialog box would indicate your local repo has committed changes that you have not pushed to the git-viscenter remote:<strong><br>
-      &lt;INSERT CODE&gt;</strong><br>
-    </li>
-  </ul>
-  <p>However, Git Sync does not show you if you have changes to local files that you have not commited to the local repo!</p>
-</section>
-  <section>
-  <h1>Citations</h1>
-  <ol class="Citation_List">
-    <li>    Unix Primer - Basic Commands In the Unix Shell, <a href="http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html">http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html</a></li>
-    <li>Scott Chacon, Pro Git, Apress, <a href="http://git-scm.com/book">http://git-scm.com/book</a>. </li>
-    <li>&quot;To add or change the values of environment variables&quot;, Windows XP Professional Product Documentation, Performance and maintenance.   <a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true">http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true</a></li>
-    <li>Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html">http://www.gnu.org/software/bash/manual/html_node/index.html</a></li>
-    <li>&quot;Environment Variable : Details&quot;, Wikipedia.  <a href="https://en.wikipedia.org/wiki/Environment_variable#Details">https://en.wikipedia.org/wiki/Environment_variable#Details</a></li>
-    <li>&quot;PATH (variable)&quot;, Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
-    <li>“Environment Variables”,  Mac Developer Library. <a href="https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html ">https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html </a></li>
-  </ol>
-</section>
-</body>
+    <section>
+      <h1>Common Git Operations</h1>
+      <p> This section describes several operations referenced by other tutorial
+        sections of this document. Hence, this section assumes you already have
+        a command-line shell setup as described for your designated Git server.</p>
+      <section>
+        <h2>Basic Git Operations</h2>
+        <ol class="Instruction">
+          <li><b>How to Clone Existing Repository</b><br>
+            <br>
+            Below, for the input text <span class="User_Input">git_server_url</span>
+            substitute the appropriate Server URL from Section 7 Git Server
+            Access:</li>
+          <li><strong>How to Create New Remote Repository</strong>:<br>
+            <em> Instructions below vary based on your server.</em>
+            <ol class="Instruction_Option">
+              <li><a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
+                <ol>
+                  <li>Login to the cci-git Web Server (See 7.1 cci-git Server
+                    URL)</li>
+                  <li>To go the GitLab Dashboard, select<span class="Program_Name">
+                      New Project</span></li>
+                  <li>Add project name as directed by your assignment’s
+                    instructions:</li>
+                  <li>Select <span class="Program_Name">Private</span>
+                    (pictured above).</li>
+                  <li>Select <span class="Program_Name">Create Project</span>
+                    (pictured above). This should display the image in the next
+                    step.</li>
+                  <li>Select <span class="Program_Name">Settings</span>.</li>
+                  <li>Select <span class="Program_Name">Add Members</span>.</li>
+                  <li>Add the TA and Professor (get their UNCC user name from
+                    their email address) under People. Give both of them
+                    Reporter access in the <span class="Program_Name">Project
+                      Access</span> menu.&nbsp;Select <span class="Program_Name">Add
+                      Users to Project</span>.</li>
+                </ol>
+              </li>
+              <li><a name="_Ref431823815">[<em>YourServer</em><b>=git-viscenter</b>]</a><br>
+                <br>
+                The above works as long as you were give “Create” permissions
+                under the indicated Note, git-viscenter uses the gitolite server
+                which has a special feature that creates a remote repo if it
+                does not already exist when you attempt to clone
+                it.&nbsp;git-viscenter access permissions are managed by the TA
+                and generally already set-up for the course</li>
+              <li>[<em>YourServer</em><b>=git-viscenter</b>]
+                <ol>
+                  <li>Select create</li>
+                  <li>Here are some recommended settings (assume you name the
+                    repo MyRepoName)</li>
+                  <li>Set up repo access permission (“sharing”): </li>
+                  <li>If the project is a team project, add your team members.</li>
+                  <li>Add the course TA and Professor get their email from class
+                    website
+                    <div align="center">
+                      <table style="border-collapse:collapse;border:none" border="1"
+
+                        cellpadding="0" cellspacing="0">
+                        <tbody>
+                          <tr>
+                            <td style="width:2.0in;border:solid windowtext 1.0pt;
+          padding:0in 5.4pt 0in 5.4pt" valign="top" width="192">
+                              <p style="margin-left:.5in">Dr. Wartell</p>
+                            </td>
+                            <td style="width:184.1pt;border:solid windowtext 1.0pt;
+          border-left:none;padding:0in 5.4pt 0in 5.4pt" valign="top" width="245">
+                              <p style="margin-left:.5in">Zwartell</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="width:2.0in;border:solid windowtext 1.0pt;
+          border-top:none;padding:0in 5.4pt 0in 5.4pt" valign="top" width="192">
+                              <p style="margin-left:.5in">TA</p>
+                            </td>
+                            <td style="width:184.1pt;border-top:none;border-left:
+          none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"
+
+                              valign="top" width="245">
+                              <p> <i>get their email from class website</i></p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </li>
+                  <li><strong>Example:</strong>&nbsp;Example steps to populate
+                    the remote repo is by creating a local repo and performing a
+                    git push as follows:</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li><strong>How to Push to New Remote Repository:</strong><br>
+            To push files to a new&nbsp;<u>empty</u>,&nbsp;<u>remote</u>&nbsp;repository,
+            such as one created in following Item #2 (above) do as follows.
+            Assume the remote is called&nbsp;<u><span class="User_Input">Project_Example.git</span></u>:
+            <br>
+            <ol class="Instruction_Option">
+                <li>[<em>YourServer</em>=<strong>cci-git</strong>]
+                    <ol>
+                        <li><strong>Option I</strong>:&nbsp;<strong>git clone</strong>:
+                            &nbsp;<br>
+                            If you have&nbsp;<u>not</u>&nbsp;already created files in a
+                            local directory that you want to import, performing the
+                            following:<br>
+                            &lt;INSERT CODE&gt;<br>
+                        </li>
+                        <li><strong>Option II</strong>:&nbsp;&nbsp;<strong>git init:</strong><br>
+                            If you&nbsp;<u>already</u>&nbsp;created files in a local
+                            directory (call it&nbsp;<u>Project_Example</u>) and that local
+                            directory is&nbsp;<u>not</u>&nbsp;already a local Git repo,
+                            perform the following: (1) initialize that directory as a
+                            local Git repo and (2) push it the remote Git repo:<br>
+                            &lt;INSERT CODE&gt; <br>
+                        </li>
+                    </ol>
+                </li>
+              <li>[<em>YourServer</em>=<strong>git-viscenter,Bitbucket</strong>]
+                <br>
+                <br>
+                Perform the same instructions as above, Option II, for [<strong>cci-git</strong>]
+                but replace:<br>
+                &nbsp;&nbsp; &nbsp;&nbsp;<span class="Server_Name">https://cci-git.uncc.edu/<u><span
+
+                      class="User_Input">your_user_id</span></u>/</span><br>
+                with<br>
+                &nbsp;[<strong>bitbucket</strong>]&nbsp;&nbsp;&nbsp;<span class="Server_Name">
+                  git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u>&nbsp;</span><br>
+                &nbsp;[<strong>git-viscenter]</strong>&nbsp;<span class="Server_Name">git-viscenter@cci-subv.uncc.edu:wartell/<u><span
+
+                      class="User_Input">ITCS_XXXX</span></u><em>/</em>students/<u><span
+
+                      class="User_Input">FirstName_LastName</span></u> </span></li>
+              <li>[<em>YourServer</em>=<strong>Bitbucket</strong>] </li>
+            </ol>
+          </li>
+          <li>To delete a remote repo:
+            <ol class="Instruction_Option">
+              <li> [<em>YourServer</em>=<strong>git-viscenter</strong>]&nbsp;<br>
+                <br>
+                <br>
+                <br>
+                <br>
+                (For Windows using Git-Bash substitute&nbsp;ssh&nbsp;above
+                with&nbsp;plink)</li>
+              <li>[<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;<em>See
+                  Bitbucket Website.</em></li>
+              <li>[<em>YourServer=</em><strong>cci-git</strong>]<em>&nbsp;See
+                  cci-git Website.</em><br>
+              </li>
+            </ol>
+          </li>
+          <li><br>
+          </li>
+        </ol>
+      </section>
+    </section>
+    <section>
+    <h1>Course Git Policies</h1>
+    <section>
+      <h2>Submitting Class Assignments</h2>
+      <p>Submit all your assignments by using Git add, commit and push to upload
+        your code to your Git repository subdirectory.</p>
+      <div>
+        <p>Your projects will be graded based on the version of your code
+          that&nbsp;is&nbsp;git-push’ed to the Git server&nbsp;at the time of
+          the due date&nbsp;for the project.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Keep the repository clean!!!</h2>
+      <p> It is standard practice when using version control software to not
+        commit intermediate or output files generated by the compiler into the
+        repository.&nbsp; Intermediate or output compilation files are all
+        regenerated when someone else checkout’s the source code and recompiles
+        it. Like all compilers MSVS 20xx&nbsp;C++ compiler generates lots of
+        these (*.ncb, *.ilk, *.exe, *.obj, etc.). &nbsp;<br>
+        <br>
+      </p>
+      <p align="center"><strong>Rule</strong>:&nbsp;Do not commit such
+        intermediate files to your Git repository!</p>
+      <p>&nbsp;Fortunately, you can automate this process using
+        the&nbsp;.gitignore&nbsp;mechanism (see [2]).</p>
+      <p><em>Reasoning:</em></p>
+      <p>Adding intermediate auto-generated files to the repository is wasteful,
+        messy and can create subtle problems.&nbsp; Many intermediate files will
+        create compilation problems if they are copied between different
+        computers. Putting them in the repository is equivalent to such
+        copying.&nbsp;</p>
+      <p>By convention, the following files should be put in the repository
+        depending on your programming language and development tools.</p>
+      <section>
+          <h3>C++ Code Rules</h3>
+          The following files should be put in the repository:
+          <ul type="disc">
+              <li>source code files (.cpp, .h, etc.)</li>
+              <li>compilation scripts or project files</li>
+              <ul type="circle">
+                  <li>Under MSVS 2010 for C++:&nbsp;&nbsp;<br>
+                      .vcxproj, .sln, .vcxproj.user</li>
+              </ul>
+          </ul>
+          <p>Under earlier MSVS versions:&nbsp;&nbsp;<br>
+              .vcproj, .sln, .vcproj.&lt;username&gt;.&lt;machinename&gt;.user</p>
+          <ul type="disc">
+              <li>a .txt file or .doc file describing what parts of the project you
+                  completed or left incomplete, etc.</li>
+              <li>any input files such as image files or other data files required
+                  by your program</li>
+              <li>any subdirectories containing the above files<br>
+              </li>
+          </ul>
+          <p>When adding subdirectories, be careful not to blindly submit their
+              entire contents because often they contain additional automatically
+              generated files. &nbsp;&nbsp;&nbsp;If you make a mistake just delete
+              the intermediate files from the repo.</p>
+      </section>
+    <section>
+      <h3>JavaScript and WebGL</h3>
+      <p>&nbsp;The following files should be put in the repository:<br>
+      </p>
+      <ul type="disc">
+        <li>source code files:</li>
+        <ul type="circle">
+          <li>.js,&nbsp;.html</li>
+        </ul>
+        <li>compilation scripts or project files</li>
+        <ul type="circle">
+          <li>at the moment our projects are too trivial to use any</li>
+        </ul>
+        <li>a .txt file or .doc file describing what parts of the project you
+          completed or left incomplete, etc.</li>
+        <li>any input files such as image files or other data files required by
+          your program</li>
+        <li>of course, any subdirectories containing the above files<br>
+        </li>
+      </ul>
+      <p>When adding subdirectories, be careful not to blindly submit their
+        entire contents because often they contain additional automatically
+        generated files.&nbsp;&nbsp;&nbsp; If you make a mistake just delete the
+        intermediate files from the repo.&nbsp;</p>
+    </section>
+    </section>
+    <section>
+      <h2>Verify Your Remote Repository</h2>
+      <p>The TA only sees your remote Git server repo’s.</p>
+      <p align="center"> <strong>Rule</strong>:&nbsp; Always make sure your
+        assignment appears as you expect in the remote repo (on the Git server).</p>
+      <p><em>The Ultimate Verification</em>:</p>
+      <p>The ultimate way to verify the remote repo contains the files you think
+        it does is to clone it into to another directory and check that second
+        cloned copy for completeness.&nbsp;&nbsp; You should do this when you
+        are completely done with your assignment.</p>
+      <p>&nbsp;<em>Some Safety Checks:</em><br>
+      </p>
+      <p>Performing<em>&nbsp;The Ultimate Verification</em>&nbsp;while you are
+        developing code is tedious. During software development the following
+        are good practices to keep track of your commit’s and push’s.<br>
+      </p>
+      <ul type="disc">
+        <li><strong>git-status</strong><br>
+          <br>
+          <em>Good Result</em>:<br>
+          <strong>&lt;INSERT CODE&gt;</strong><br>
+          The above indicates everything is good.&nbsp;&nbsp; You have no file
+          changes that have not been committed to the local repo and no local
+          repo commits that have not been pushed to the remote repo.<br>
+          <br>
+          <em>Maybe Bad:</em><br>
+          If you get messages like:<br>
+          <strong>&lt;INSERT CODE&gt;</strong><br>
+          then you have untracked files (but you have push’ed all your
+          commits).&nbsp; This maybe ok as along as these files aren’t files
+          that belong in a repo (such as temporary files).&nbsp; You might
+          consider adding to the .gitignore file (see [2]).<br>
+          <br>
+          <em>Bad:</em><br>
+          If you get a message like:<br>
+          <strong>&lt;INSERT CODE&gt;</strong><br>
+          then&nbsp;<br>
+          then you have&nbsp;not&nbsp;pushed all your latest changes to the
+          remote repo. Do a&nbsp;git-push&nbsp;before the final assignment
+          deadline.&nbsp;<br>
+          <br>
+        </li>
+        <li><strong>[Optional] TortoiseGit</strong>&nbsp;– Optionally, another
+          good way to check with the TortoiseGit shell extension is
+          using&nbsp;Check for Modifications. This will show you whether you
+          have any changes not commited to the local repo (but make sure to
+          check the box,&nbsp;Show Unversioned Files). &nbsp;&nbsp;Below we see
+          one file is untracked.<br>
+          <strong>&lt;INSERT CODE&gt;</strong><br>
+          However,&nbsp;Check for Modifications&nbsp;will not tell you whether
+          you have pushed all your commits to the remote repo.&nbsp;&nbsp;<br>
+          <br>
+          For that use the TortoiseGit shell extension and select&nbsp;Git Sync.
+          The following&nbsp;Git Sync&nbsp;dialog box would indicate your local
+          repo has committed changes that you have not pushed to
+          the&nbsp;git-viscenter&nbsp;remote:<strong><br>
+            &lt;INSERT CODE&gt;</strong><br>
+        </li>
+      </ul>
+      <p>However,&nbsp;Git Sync&nbsp;does not show you if you have changes to
+        local files that you have not commited to the local repo!</p>
+    </section>
+    </section>
+    <section>
+      <h1>Citations</h1>
+      <ol class="Citation_List">
+        <li> Unix Primer - Basic Commands In the Unix Shell, <a href="http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html">http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html</a></li>
+        <li>Scott Chacon, Pro Git, Apress, <a href="http://git-scm.com/book">http://git-scm.com/book</a>.
+        </li>
+        <li>"To add or change the values of environment variables", Windows XP
+          Professional Product Documentation, Performance and maintenance. <a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true">http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true</a></li>
+        <li>Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html">http://www.gnu.org/software/bash/manual/html_node/index.html</a></li>
+        <li>"Environment Variable : Details", Wikipedia. <a href="https://en.wikipedia.org/wiki/Environment_variable#Details">https://en.wikipedia.org/wiki/Environment_variable#Details</a></li>
+        <li>"PATH (variable)", Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
+        <li>“Environment Variables”, Mac Developer Library. <a href="https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html%20">https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html
+            </a></li>
+      </ol>
+    </section>    
+  </body>
 </html>
