@@ -5,17 +5,68 @@
 <html>
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-    <title>Git Tutorial</title>
-    <!-- <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script> -->
+    <title>Git Tutorial</title>    
     <!-- <script src="libs/jquery-3.1.0.js"></script> -->
     <script>
         /*
-         *   Toggle a Code_Example table between scrolled presentation and expanded presentation
+         *   \brief Toggle a Code_Example table between scrolled presentation and expanded presentation
          *   @param {String} - ID HTML Element ID of table
          */
         function Code_Example_Toggle(ID) {
             document.getElementById(ID).classList.toggle('Code_Example_Expand');
         }
+        
+        /*  \author Zachary Wartell
+         *  \brief Div_Toggle toggle the "hidden" attribute of all div elements of class "Class"
+         *  @param {String} - name of class
+         */
+        function Div_Enable(Class) {        
+            var list=document.querySelectorAll("div."+Class);
+            if(list.length && list[0].hasAttribute("hidden"))                        
+            {
+                Div_Toggle(Class);
+            }            
+        }
+        function Div_Disable(Class) {        
+            var list=document.querySelectorAll("div."+Class);
+            if(list.length && !list[0].hasAttribute("hidden"))            
+            {
+                Div_Toggle(Class);
+            }               
+        }        
+        function Div_Toggle(Class) {
+            var list=document.querySelectorAll("div."+Class);
+            for(i=0;i<list.length;i++)
+            {
+                if(list[i].hasAttribute("hidden"))
+                {/* unhide div and show unhide button */
+                    list[i].removeAttribute("hidden");
+                    list[i].previousElementSibling.setAttribute("hidden","true");
+                }
+                else
+                {/* hide div */
+                    /* enable the unhide button */
+                    if(list[i].previousElementSibling && 
+                       list[i].previousElementSibling.tagName == "BUTTON" &&
+                       list[i].previousElementSibling.className == "Div_Toggle_Button" 
+                       )
+                    {
+                        list[i].previousElementSibling.removeAttribute("hidden");
+                    }
+                    else
+                    {/* unhide button wasn't created yet, so insert it */                        
+                        var unhideButton=document.createElement("BUTTON");
+                        unhideButton.className = "Unhide_Button";
+                        unhideButton.setAttribute("style","text-align:center;");
+                        unhideButton.setAttribute("onclick","Div_Toggle ("+'"'+Class+'"'+")");
+                        unhideButton.textContent = "Unhide ... ";
+                        list[i].parentElement.insertBefore(unhideButton,list[i]);
+                    }
+                    /* hide this div */
+                    list[i].setAttribute("hidden","true");
+                }
+            }                
+        }        
     </script>
     <style type="text/css">        
         
@@ -32,7 +83,41 @@
             border-color: black;
             border-style: solid;
             border-width: 1;
+        }     
+        
+        /*
+        Unhide_Button class (used with Div_Toggle())
+        */
+        button.Unhide_Button
+        {         
+           position : relative;
         }        
+        button.Unhide_Button::before {
+            content: "Your current 'Configuration' hides this section. Press to Unhide or change your Configuration";   
+
+            font-size: 10px;
+            position:absolute;
+            z-index: 999;
+            white-space:nowrap;
+            bottom:9999px;
+            left: 50%;
+            background:#000;
+            color:#e0e0e0;
+            padding:0px 7px;
+            line-height: 24px;
+            height: 24px;
+
+            opacity: 0;  
+            -webkit-transition:opacity 0.4s ease-out;  
+            -moz-transition:opacity 0.4s ease-out;  
+            -o-transition:opacity 0.4s ease-out;              
+            transition:opacity 0.4s ease-out; 
+        }
+
+        button.Unhide_Button:hover::before {
+            opacity: 1;
+            bottom:-35px;
+        }
         
         h1.Title, h2.Title, h3.Title {text-align: center;}
         
@@ -259,7 +344,11 @@
       Author: Dr. Zachary Wartell, UNC Charlotte<br>
       Contributors: ....<br>
       <br>
-      Revision: 9-23-2016 </div>
+      Revision: 9-23-2016 <br>
+      <br>
+      Copyright: Zachary Wartell. All Rights Reserved.<br>
+      <br>
+    </div>
     <section>
       <p style="text-align: left;" class="Title">Compatibility</p>
       <p> This document has been tested on Firefox v41 and Chrome v46.&nbsp; A
@@ -278,8 +367,7 @@
           at the level discussed in [1]. Section <a href="#Installing_Git">#Installing_Git</a>
           discusses installing a suitable command-line shell for OS’s that do
           not automatically come with one. All remaining sections assume
-          knowledge at the level of [1]. <br>
-        </li>
+          knowledge at the level of [1]. </li>
         <li> Knowledge of environment variables, what they are and how to set
           them. <br>
           <br>
@@ -291,12 +379,14 @@
     <section>
       <h1 id="Guide_to_Reading_these_Instructions"> Guide to Reading these
         Instructions</h1>
-      <p> Various section, sub-sections and specific numbered instructions are
-        either “generic” or operating system specific or Git server specific.
-        Generic instructions apply to all operating systems and all Git servers
-        while specific sections apply only specific Git servers or operating
-        systems. </p>
       <ul>
+        <li><strong>Generic vs Specific Instructions</strong>: Various sections,
+          sub-sections and specific numbered instructions are either “generic”
+          or "specific" to a particular operating system or Git server. When
+          there is a list of instructions that vary for each specific system,
+          these instructions are numbered using Greek letters: α,β, γ, etc. --
+          this indicates the reader should perform only <u>one</u> of the
+          listed instructions.</li>
         <li><b>Server:&nbsp; </b>Your instructor will tell you which Git server
           you will use for your course work. It will be one of the following:
           <ul>
@@ -334,10 +424,10 @@
             only one designated operating system. This information will be given
             to you in class.</p>
         </li>
-        <li><b>Screen Shot Figures</b>: Screen captures in this document can be
-          zoomed by clicking on the image.&nbsp;&nbsp; Click anywhere else to
-          return the image to it's original size. For example, click on the
-          image below:<br>
+        <li><b>Screen Shot Figures</b>: Most screen captures in this document
+          can be zoomed to full size by clicking on the image.&nbsp;&nbsp; Click
+          anywhere outside the zoomed image to return the image to its original
+          size. For example, click on the image below:<br>
           <figure class="Screen_Capture" tabindex="1"> <img src="images/Screen_Capture.png"
 
               alt="Screen_Capture"> </figure>
@@ -406,6 +496,81 @@
         </li>
       </ul>
     </section>
+      <section>
+          <h1>Configuration</h1>
+          <!-- <button class="Text_Button" onclick="Div_Toggle('Server_Supports_SSH');"> SSH </button> -->
+          <p> You can hide system specific instructions that not relevant to you by selecting the particular Operating System and Git server you are using.
+          </p>
+          <!--
+          <button class="Text_Button" onclick="Div_Toggle('OS_Windows');"> Windows </button> 
+           -->
+          <!--
+          <button class="Text_Button" onclick="Div_Toggle('Server_git_viscenter');Div_Toggle('Server_Supports_SSH');"> git-viscenter </button> 
+          <button class="Text_Button" onclick="Div_Toggle('Server_Bitbucket');Div_Toggle('Server_Supports_SSH');"> Bitbucket </button> 
+          <button class="Text_Button" onclick="Div_Toggle('Server_cci_git');"> cci-git </button> 
+          -->
+          <form>
+              <fieldset>
+                  <legend>System Configuration</legend>
+                  <p>
+                      <label>Git Server: </label>            
+                      <input type = "radio"
+                             name = "Git_Server"
+                             id = "cci_git"
+                             value = "cci_git" 
+                             checked 
+                             onchange = "Div_Toggle('Server_cci_git');"
+                             onclick  = "Div_Disable('Server_Supports_SSH');"
+                             />
+                      <label for = "cci_git">cci-git</label>            
+                      
+                      <input type = "radio"
+                             name = "Git_Server"
+                             id = "git_viscenter"
+                             value = "git_viscenter"                             
+                             onchange = "Div_Toggle('Server_git_viscenter');"
+                             onclick  = "Div_Enable('Server_Supports_SSH');"
+                             />
+                      <label for = "git_viscenter">git-viscenter</label>
+                      
+                      <input type = "radio"
+                             name = "Git_Server"
+                             id = "bitbucket"
+                             value = "bitbucket"
+                             onchange = "Div_Toggle('Server_bitbucket');"
+                             onclick  = "Div_Enable('Server_Supports_SSH');"
+                             />
+                      <label for = "bitbucketMac">Bitbucket</label>                                            
+                  </p>                       
+                  <p>
+                      <label>Operating System: </label>            
+                      <input type = "checkbox"
+                             name = "Operating_System"
+                             id = "Windows"
+                             value = "Windows"
+                             checked 
+                             onchange = "Div_Toggle('OS_Windows');"/>
+                      <label for = "Windows">Windows</label>
+                      <input type = "checkbox"
+                             name = "Operating_System"
+                             id = "Unix"
+                             value = "Unix" 
+                             checked 
+                             onchange = "Div_Toggle('OS_Unix');"
+                             />
+                      <label for = "Unix">Unix</label>
+                      <input type = "checkbox"
+                             name = "Operating_System"
+                             id = "Mac"
+                             value = "Mac"
+                             checked 
+                             onchange = "Div_Toggle('OS_Mac');"
+                             />
+                      <label for = "Mac">Mac</label>                                            
+                  </p>       
+              </fieldset>     
+          </form>          
+      </section>
     <section>
       <h1 id="Installing_Git"> Installing Git </h1>
       <p> Git is a command-line program. Git servers uses various access
@@ -444,6 +609,7 @@
         <p> <em>Instructions below vary with your operating system.</em> </p>
         <ol class="Instruction_Option">
           <li> [<em>YourOS</em>=<strong>Windows</strong>]
+            <div class="OS_Windows">
             <ol class="Instruction">
               <li> Download and Install Git for Windows,
                 https://git-for-windows.github.io/. <br>
@@ -456,6 +622,7 @@
                 <img alt="" src="images/Git-Bash-C.png"><img alt="" src="images/Git-Bash-D.png"><br>
                 <img alt="" src="images/Git-Bash-E.png"> </li>
             </ol>
+              </div>
           </li>
           <li> [<em>YourOS</em>=<strong>Linux</strong>] Download and install Git
             from <a href="http://git-scm.com/">http://git-scm.com/</a>. </li>
@@ -486,16 +653,17 @@
     <section>
       <h1 id="Installation_and_Setup_of_OpenSSH">Installation and Setup of
         OpenSSH</h1>
-      <table border="1">
+      <table align="center" border="1">
         <tbody>
           <tr>
-            <td> All of Section 4 is only for servers:&nbsp;&nbsp;&nbsp; <span
+            <td> All of Section 5 is only for servers:&nbsp;&nbsp;&nbsp; <span
 
                 class="File_Name">git-viscenter</span> and <span class="File_Name">Bitbucket</span>
             </td>
           </tr>
         </tbody>
       </table>
+     <div class="Server_Supports_SSH">
       <p> This section is for Git servers that use the SSH protocol and the SSH
         public-key mechanism is for security and authorization. Your computer
         needs to have OpenSSH installed. </p>
@@ -507,7 +675,9 @@
           <br>
           Instructions below vary with your operating system. </p>
         <ol class="Instruction_Option">
+          
           <li> [<em>YourOS</em>=<strong>Windows</strong>]
+          <div class="OS_Windows">           
             <ol class="Instruction">
               <li> Download and install PuTTY as follows:
                 <ol class="Instruction">
@@ -555,7 +725,8 @@
                 </ol>
               </li>
             </ol>
-          </li>
+          </div>              
+          </li>          
           <li> [<em>YourOS</em>=<strong>Linux</strong>] Generally this OS
             already has OpenSSH installed; if not see <a href="http://www.openssh.org/">http://www.openssh.org/</a>.
           </li>
@@ -710,8 +881,10 @@
             public key into another application (web browser, etc.) you can do
             that from within the text editor. </li>
           <li> <a id="_Ref429762632"><b>Submit Your Public Key:</b></a>
-            <ol class="Instruction_Option">
-              <li> [<i>YourServer</i>=<b>git-viscenter</b>]The file you submit <i><u>must</u></i>
+            <ol class="Instruction_Option">              
+              <li> [<i>YourServer</i>=<b>git-viscenter</b>]
+                <div class="Server_git_viscenter">
+                The file you submit <i><u>must</u></i>
                 be renamed from <span class="File_Name">id_rsa.pub</span> to <span
 
                   class="User_Input"><u>your_uncc_id</u></span><span class="File_Name">.pub</span>
@@ -722,8 +895,11 @@
                 </span>You submit your <span class="User_Input"><u>your_uncc_id</u></span><span
 
                   class="File_Name">.pub</span> file via a Moodle assignment
-                indicated by your instructor. </li>
+                indicated by your instructor. 
+              </div>
+              </li>
               <li> [<i>YourServer</i>=<b>Bitbucket</b>]
+              <div class="Server_Bitbucket">
                 <ol class="Instruction">
                   <li> Create a Bitbucket account as described in <a href="#Bitbucket_URL_List">#Bitbucket_URL_List</a>.
                   </li>
@@ -746,8 +922,11 @@
                     user id to the TA and instructor via the Moodle assignment
                     indicated by your instructor. </li>
                 </ol>
+              </div>
               </li>
-              <li> [<i>YourServer</i>=<b>cci-git</b>]<br>
+              <li> [<i>YourServer</i>=<b>cci-git</b>]
+                <div class="Server_cci_git">
+                <br>
                 <br>
                 <span style="color: red; background: yellow">Warning: </span><span
 
@@ -795,7 +974,8 @@
                     <br>
                   </li>
                 </ol>
-              </li>
+              </div>
+              </li>              
             </ol>
           </li>
           <li> [<i>YourOS</i>=Windows] Window users also need to perform the
@@ -856,7 +1036,8 @@
           </li>
         </ol>
       </section>
-    </section>
+    </div>      
+    </section>    
     <section>
       <h1 id="Full_Git_Tutorial">Full Git Tutorial</h1>
       <p> If Unix style shells are new for you, you should read through [<b>1</b>]
@@ -1004,7 +1185,9 @@
                 </li>
                 <li> GUI Git Tool:
                   <ol class="Instruction_Option">
-                    <li> [<em>YourOS</em>=<strong>Windows</strong>]<br>
+                    <li> [<em>YourOS</em>=<strong>Windows</strong>]
+                    <div class="OS_Windows">
+                      <br>
                       <br>
                       <u>Exercise</u>:&nbsp; <br>
                       Using TortoiseGit, open an Explorer window and goto the <span
@@ -1020,6 +1203,7 @@
                       discusses TortoiseGit (the earlier TortoiseGit Help
                       chapters are largely redundant with the ProGit book) <br>
                       <br>
+                    </div>
                     </li>
                     <li> [<em>YourOS</em>=<strong>Linux/Mac</strong>]<br>
                       This tutorial document does not proscribe any particular
@@ -1067,6 +1251,7 @@
                 <li> <u>Exercise</u>:
                   <ol class="Instruction_Option">
                     <li> [<em>YourServer</em>=<strong>cci-git</strong>]<br>
+                      <div class="Server_cci_git">
                       <ol>
                         <li> Read (but do <u>not</u> perform the steps in)
                           ProGit <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">Git
@@ -1107,7 +1292,8 @@
                           </ol>
                         </li>
                       </ol>
-                    </li>
+                    </div>
+                    </li>                   
                     <li> [<em>YourServer=any other server</em>]<br>
                       For any other servers, skip this step. (They use SSH and
                       do not use the credential storage). </li>
@@ -1161,8 +1347,10 @@
               <br>
             </li>
             <li> Create a new remote repo for submission:
-              <ol class="Instruction_Option">
-                <li> [<em>YourServer</em>=<strong>cci-git</strong>]<br>
+              <ol class="Instruction_Option">                
+                <li> [<em>YourServer</em>=<strong>cci-git</strong>]
+                <div class="Server_cci_git">
+                  <br>
                   Create new remote repo on cci-git called <span class="File_Name">git-full-tutorial</span>.&nbsp;
                   This is best done using the Web Browser interface to the
                   server.&nbsp; Read this tutorial’s Section <a href="#cci-gitunccedu_URL_List">#cci-gitunccedu_URL_List</a>
@@ -1175,8 +1363,11 @@
                       [Item #2.a)viii)].<br>
                     </li>
                   </ol>
+                </div>
                 </li>
-                <li> [<em>YourServer</em>=<strong>git-viscenter</strong>]<br>
+                <li> [<em>YourServer</em>=<strong>git-viscenter</strong>]
+                <div class="Server_git_viscenter">
+                  <br>
                   <table class="Code_Example" id="Code_Example_0_4bi" border="1">
                     <tbody style="height: 125px;">
                       <tr>
@@ -1206,6 +1397,7 @@
                     </tbody>
                   </table>
                   <br>
+                </div>
                 </li>
                 <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]<br>
                   Create new remote repo on cci-git called,<span class="File_Name">
@@ -1291,7 +1483,9 @@
           perform the following.</li>
         <li> Create a new <u>remote</u> repo:
           <ol class="Instruction_Option">
-            <li> [<em>YourServer</em>=<strong>cci-git</strong>]<br>
+            <li> [<em>YourServer</em>=<strong>cci-git</strong>]
+              <div class="Server_cci_git">
+              <br>
               <br>
               Create new remote repo on cci-git called,<span class="File_Name">
                 git-micro-tutorial</span>.&nbsp;&nbsp; This is best done using
@@ -1301,7 +1495,9 @@
               Then read this tutorial’s Section 8.1 repo creation instructions
               Item #2.a).&nbsp; <br>
               Make sure to <strong><u>share</u></strong> your repo with the TA
-              and Dr. Wartell’s UNCC accounts </li>
+              and Dr. Wartell’s UNCC accounts
+              </div>
+            </li>
             <li>[<em>YourServer</em>=<strong>git-viscenter</strong>]</li>
             <li> [<em>YourServer</em>=<strong>Bitbucket</strong>] <br>
               Create new remote repo on cci-git called,<span class="File_Name">
@@ -1530,7 +1726,7 @@
             process which manages Git’s authentication to the Git server. </p>
           <p>These steps will only work after you submit you public key to the
             TA and he has confirmed that it has been added to the Git server. </p>
-          <ol>
+          <ol class="Instruction">
             <li>Start your command-line shell </li>
             <li> Start the <span class="Program_Name">ssh-agent</span> daemon
               process<br>
@@ -1599,55 +1795,56 @@
               </ol>
             </li>
             <li> To verify read-access to the welcome repo do as follows:<br>
-              <br>
-              For input text <span class="User_Input">welcome_repo_path</span>
-              below, substitute the following based on your server::
-              <ol class="Instruction_Option">
-                <li>[<strong>bitbucket</strong>]
-                  &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git</li>
-                <li>[<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  git@cci-git.uncc.edu:zwartell/welcome.git </li>
-                <li> [<strong>git-viscenter]</strong>
-                  git-viscenter@cci-subv.uncc.edu:wartell/welcome.git<br>
-                  <table class="Code_Example" id="Code_Example_741_5" border="1">
+                <br>
+                For input text <span class="User_Input">welcome_repo_path</span>
+                below, substitute the following based on your server::
+                <ol class="Instruction_Option">
+                    <li>[<strong>bitbucket</strong>]
+                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git</li>
+                    <li>[<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        git@cci-git.uncc.edu:zwartell/welcome.git </li>
+                    <li> [<strong>git-viscenter]</strong>
+                        git-viscenter@cci-subv.uncc.edu:wartell/welcome.git<br>
+                    </li>
+                </ol>
+                <table class="Code_Example" id="Code_Example_741_5" border="1">
                     <tbody style="height: 105px;">
-                      <tr>
-                        <td><button onclick="Code_Example_Toggle('Code_Example_741_5');">▽</button></td>
-                        <td>
-                          <div style="height: 105px;"> <code class="Shell_Code_Input">
-                              $ $ git clone <span class="User_Input">welcome_repo_path</span>
-                              <br>
-                            </code> <code class="Shell_Code_Output"> <br>
-                              The authenticity of host ‘cci-subv.uncc.edu’
-                              (10.18.203.162)’ can’t be established.<br>
-                              RSA key fingerprint is
-                              e2:6f:ac:ff:a3:30:a2:0e:c2:d6:98:f4:78:55:c5:7f.<br>
-                              Are you sure you want to continue connecting
-                              (yes/no)? <span class="Shell_Code_Comment">[type
-                                yes] </span><br>
-                              Warning: Permanently added
-                              ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA) to the
-                              list of known hosts.<br>
-                              <span class="Shell_Code_Comment"> […the above will
-                                only appear the first time you connect to the
-                                git-viscenter …]</span><br>
-                              Cloning into 'welcome'...<br>
-                              remote: Counting objects: 6, done.<br>
-                              remote: Compressing objects: 100% (4/4), done.<br>
-                              remote: Total 6 (delta 0), reused 0 (delta 0)<br>
-                              Receiving objects: 100% (6/6), 5.50 KiB | 0
-                              bytes/s, done.<br>
-                            </code> </div>
-                        </td>
-                      </tr>
+                        <tr>
+                            <td><button onclick="Code_Example_Toggle('Code_Example_741_5');">▽</button></td>
+                            <td>
+                                <div style="height: 105px;"> <code class="Shell_Code_Input">
+                                        $ $ git clone <span class="User_Input">welcome_repo_path</span>
+                                        <br>
+                                    </code> <code class="Shell_Code_Output"> <br>
+                                        The authenticity of host ‘cci-subv.uncc.edu’
+                                        (10.18.203.162)’ can’t be established.<br>
+                                        RSA key fingerprint is
+                                        e2:6f:ac:ff:a3:30:a2:0e:c2:d6:98:f4:78:55:c5:7f.<br>
+                                        Are you sure you want to continue connecting
+                                        (yes/no)? <span class="Shell_Code_Comment">[type
+                                            yes] </span><br>
+                                        Warning: Permanently added
+                                        ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA) to the
+                                        list of known hosts.<br>
+                                        <span class="Shell_Code_Comment"> […the above will
+                                            only appear the first time you connect to the
+                                            git-viscenter …]</span><br>
+                                        Cloning into 'welcome'...<br>
+                                        remote: Counting objects: 6, done.<br>
+                                        remote: Compressing objects: 100% (4/4), done.<br>
+                                        remote: Total 6 (delta 0), reused 0 (delta 0)<br>
+                                        Receiving objects: 100% (6/6), 5.50 KiB | 0
+                                        bytes/s, done.<br>
+                                    </code> </div>
+                            </td>
+                        </tr>
                     </tbody>
-                  </table>
-                </li>
-              </ol>
-              <em> <u> <br>
-                  Possible Errors </u> </em>: If you are prompted for a
-              password here, either the ssh-agent daemon is not setup right or
-              your public key has not been registered yet. </li>
+                </table>
+
+            <em> <u> <br> Possible Errors </u> </em>: If you are prompted for a
+            password here, either the ssh-agent daemon is not setup right or
+            your public key has not been registered yet. 
+            </li>                            
           </ol>
         </section>
         <section>
@@ -1964,7 +2161,6 @@
         </ol>
       </section>
     </section>
-    <section>
     <h1>Course Git Policies</h1>
     <section>
       <h2>Submitting Class Assignments</h2>
@@ -1999,44 +2195,48 @@
       <p>By convention, the following files should be put in the repository
         depending on your programming language and development tools.</p>
       <section>
-          <h3>C++ Code Rules</h3>
-          The following files should be put in the repository:
-          <ul type="disc">
-              <li>source code files (.cpp, .h, etc.)</li>
-              <li>compilation scripts or project files</li>
+        <h3>C++ Code Rules</h3>
+        The following files should be put in the repository:
+        <ul type="disc">
+          <li>source code files (.cpp, .h, etc.)</li>
+          <li>compilation scripts or project files
               <ul type="circle">
                   <li>Under MSVS 2010 for C++:&nbsp;&nbsp;<br>
                       .vcxproj, .sln, .vcxproj.user</li>
               </ul>
-          </ul>
-          <p>Under earlier MSVS versions:&nbsp;&nbsp;<br>
-              .vcproj, .sln, .vcproj.&lt;username&gt;.&lt;machinename&gt;.user</p>
-          <ul type="disc">
-              <li>a .txt file or .doc file describing what parts of the project you
-                  completed or left incomplete, etc.</li>
-              <li>any input files such as image files or other data files required
-                  by your program</li>
-              <li>any subdirectories containing the above files<br>
-              </li>
-          </ul>
-          <p>When adding subdirectories, be careful not to blindly submit their
-              entire contents because often they contain additional automatically
-              generated files. &nbsp;&nbsp;&nbsp;If you make a mistake just delete
-              the intermediate files from the repo.</p>
+          </li>
+        </ul>
+        <p>Under earlier MSVS versions:&nbsp;&nbsp;<br>
+          .vcproj, .sln, .vcproj.&lt;username&gt;.&lt;machinename&gt;.user</p>
+        <ul type="disc">
+          <li>a .txt file or .doc file describing what parts of the project you
+            completed or left incomplete, etc.</li>
+          <li>any input files such as image files or other data files required
+            by your program</li>
+          <li>any subdirectories containing the above files<br>
+          </li>
+        </ul>
+        <p>When adding subdirectories, be careful not to blindly submit their
+          entire contents because often they contain additional automatically
+          generated files. &nbsp;&nbsp;&nbsp;If you make a mistake just delete
+          the intermediate files from the repo.</p>
       </section>
+    </section>
     <section>
       <h3>JavaScript and WebGL</h3>
       <p>&nbsp;The following files should be put in the repository:<br>
       </p>
       <ul type="disc">
-        <li>source code files:</li>
-        <ul type="circle">
-          <li>.js,&nbsp;.html</li>
-        </ul>
-        <li>compilation scripts or project files</li>
-        <ul type="circle">
-          <li>at the moment our projects are too trivial to use any</li>
-        </ul>
+          <li>source code files:
+              <ul type="circle">
+                  <li>.js,&nbsp;.html</li>
+              </ul>
+          </li>
+          <li>compilation scripts or project files
+              <ul type="circle">
+                  <li>at the moment our projects are too trivial to use any</li>
+              </ul>
+          </li>
         <li>a .txt file or .doc file describing what parts of the project you
           completed or left incomplete, etc.</li>
         <li>any input files such as image files or other data files required by
@@ -2048,7 +2248,6 @@
         entire contents because often they contain additional automatically
         generated files.&nbsp;&nbsp;&nbsp; If you make a mistake just delete the
         intermediate files from the repo.&nbsp;</p>
-    </section>
     </section>
     <section>
       <h2>Verify Your Remote Repository</h2>
@@ -2112,7 +2311,6 @@
       <p>However,&nbsp;Git Sync&nbsp;does not show you if you have changes to
         local files that you have not commited to the local repo!</p>
     </section>
-    </section>
     <section>
       <h1>Citations</h1>
       <ol class="Citation_List">
@@ -2127,6 +2325,6 @@
         <li>“Environment Variables”, Mac Developer Library. <a href="https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html%20">https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html
             </a></li>
       </ol>
-    </section>    
+    </section>
   </body>
 </html>
