@@ -102,8 +102,8 @@
                 for (i = 0; i < list.length; i++)
                 {
                     if (list[i].previousElementSibling === null ||
-                            list[i].previousElementSibling.tagName !== "BUTTON" ||
-                            list[i].previousElementSibling.className !== "Div_Toggle_Button"
+                            list[i].previousElementSibling.tagName != "BUTTON" ||
+                            list[i].previousElementSibling.className != "Div_Toggle_Button"
                             )
                     {/* Hide button wasn't created yet, so insert it */
                         var unhideButton = document.createElement("BUTTON");
@@ -1020,17 +1020,16 @@
                             alt="BitBucket"> </figure>
                       </li>
                       <li> Select <span class="File_Name"> SSH keys: </span><br>
-                        <figure class="Screen_Capture" tabindex="1"> 
-                            <img src="images/BitBucket-SSHkeys.png" alt="SSH  Keys" width="500">
-                        </figure>
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-SSHkeys.png"
+
+                            alt="SSH  Keys" width="500"> </figure>
                       </li>
                       <li> Follow the <span class="File_Name">Bitbucket’s</span>
                         instructions to <span class="File_Name">Add key</span>
                       </li>
                       <li> Submit your <span class="File_Name">Bitbucket</span>
                         user id to the TA and instructor via the Canvas
-                        assignment indicated by your instructor. 
-                      </li>
+                        assignment indicated by your instructor. </li>
                     </ol>
                   </div>
                 </li>
@@ -2124,10 +2123,10 @@
                 <ol class="Instruction_Option">
                   <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you are
                     using Git-Bash
-                    <table class="Code_Example" id="Code_Example_751_2" border="1">
+                    <table class="Code_Example" id="Code_Example_751_1" border="1">
                       <tbody>
                         <tr>
-                          <td><button onclick="Code_Example_Toggle('Code_Example_751_2');">▽</button></td>
+                          <td><button onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button></td>
                           <td><code class="Shell_Code_Input">$ &nbsp;git config
                               --global credential.helper wincred<br>
                             </code></td>
@@ -2486,8 +2485,12 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
                       </tr>
                     </tbody>
                   </table>
-                  (For Windows using Git-Bash substitute&nbsp;ssh&nbsp;above with&nbsp;plink) 
-                </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  (For Windows using Git-Bash substitute&nbsp;ssh&nbsp;above
+                  with&nbsp;plink) </div>
               </li>
               <li>[<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;<em>See
                   Bitbucket Website.</em></li>
