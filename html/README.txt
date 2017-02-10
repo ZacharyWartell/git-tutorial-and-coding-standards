@@ -1,2 +1,1 @@
-I'm considering revamping the Tutorial as with HTML5 so that the user can select the target OS and Server in the initial part of the document and then the document will automatically elide the sections not relevant to their user choice.
-This should cut down on the number of errors students are making.
+I'm revamping the Tutorial and creating in HTML5.
