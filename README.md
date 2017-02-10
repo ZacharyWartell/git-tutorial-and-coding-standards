@@ -1,1 +1,1 @@
-See https://cci-git.uncc.edu/zwartell/Repository_Usage/blob/master/Git%20Tutorial.pdf
+Gradable Git Tutorial and instructions for Git 'best-practices' expected in course work and research projects.
