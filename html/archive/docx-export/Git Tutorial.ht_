@@ -1,0 +1,2589 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>addr: terrain scene gr paged ob navigati nav</title>
+
+<style id="dynCom" type="text/css"><!-- --></style>
+<script language="JavaScript"><!--
+function msoCommentShow(anchor_id, com_id)
+{
+	if(msoBrowserCheck()) 
+		{
+		c = document.all(com_id);
+		a = document.all(anchor_id);
+		if (null != c && null == c.length && null != a && null == a.length)
+			{
+			var cw = c.offsetWidth;
+			var ch = c.offsetHeight;
+			var aw = a.offsetWidth;
+			var ah = a.offsetHeight;
+			var x  = a.offsetLeft;
+			var y  = a.offsetTop;
+			var el = a;
+			while (el.tagName != "BODY") 
+				{
+				el = el.offsetParent;
+				x = x + el.offsetLeft;
+				y = y + el.offsetTop;
+				}
+			var bw = document.body.clientWidth;
+			var bh = document.body.clientHeight;
+			var bsl = document.body.scrollLeft;
+			var bst = document.body.scrollTop;
+			if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl ) 
+				{ c.style.left = x + aw - ah / 2 - cw; }
+			else 
+				{ c.style.left = x + ah / 2; }
+			if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst ) 
+				{ c.style.top = y + ah / 2 - ch; }
+			else 
+				{ c.style.top = y + ah / 2; }
+			c.style.visibility = "visible";
+}	}	}
+function msoCommentHide(com_id) 
+{
+	if(msoBrowserCheck())
+		{
+		c = document.all(com_id);
+		if (null != c && null == c.length)
+		{
+		c.style.visibility = "hidden";
+		c.style.left = -1000;
+		c.style.top = -1000;
+		} } 
+}
+function msoBrowserCheck()
+{
+	ms = navigator.appVersion.indexOf("MSIE");
+	vers = navigator.appVersion.substring(ms + 5, ms + 6);
+	ie4 = (ms > 0) && (parseInt(vers) >= 4);
+	return ie4;
+}
+if (msoBrowserCheck())
+{
+	document.styleSheets.dynCom.addRule(".msocomanchor","background: infobackground");
+	document.styleSheets.dynCom.addRule(".msocomoff","display: none");
+	document.styleSheets.dynCom.addRule(".msocomtxt","visibility: hidden");
+	document.styleSheets.dynCom.addRule(".msocomtxt","position: absolute");
+	document.styleSheets.dynCom.addRule(".msocomtxt","top: -1000");
+	document.styleSheets.dynCom.addRule(".msocomtxt","left: -1000");
+	document.styleSheets.dynCom.addRule(".msocomtxt","width: 33%");
+	document.styleSheets.dynCom.addRule(".msocomtxt","background: infobackground");
+	document.styleSheets.dynCom.addRule(".msocomtxt","color: infotext");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-top: 1pt solid threedlightshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-right: 2pt solid threedshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-bottom: 2pt solid threedshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","border-left: 1pt solid threedlightshadow");
+	document.styleSheets.dynCom.addRule(".msocomtxt","padding: 3pt 3pt 3pt 3pt");
+	document.styleSheets.dynCom.addRule(".msocomtxt","z-index: 100");
+}
+// --></script>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"Tms Rmn";
+	panose-1:2 2 6 3 4 5 5 2 3 4;}
+@font-face
+	{font-family:Helv;
+	panose-1:2 11 6 4 2 2 2 3 2 4;}
+@font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;}
+@font-face
+	{font-family:System;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Dotum;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimHei;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:MingLiU;
+	panose-1:2 1 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:Mincho;
+	panose-1:2 2 6 9 4 3 5 8 3 5;}
+@font-face
+	{font-family:Gulim;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Angsana New";
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Cordia New";
+	panose-1:2 11 3 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Mangal;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Latha;
+	panose-1:2 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sylfaen;
+	panose-1:1 10 5 2 5 3 6 3 3 3;}
+@font-face
+	{font-family:Vrinda;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Raavi;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Shruti;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sendnya;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Gautami;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tunga;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Estrangelo Edessa";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Yu Gothic";
+	panose-1:2 11 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:inherit;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:Marlett;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Arial Black";
+	panose-1:2 11 10 4 2 1 2 2 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Candara;
+	panose-1:2 14 5 2 3 3 3 2 2 4;}
+@font-face
+	{font-family:"Comic Sans MS";
+	panose-1:3 15 7 2 3 3 2 2 2 4;}
+@font-face
+	{font-family:Constantia;
+	panose-1:2 3 6 2 5 3 6 3 3 3;}
+@font-face
+	{font-family:Corbel;
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:Ebrima;
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Franklin Gothic Medium";
+	panose-1:2 11 6 3 2 1 2 2 2 4;}
+@font-face
+	{font-family:Gabriola;
+	panose-1:4 4 6 5 5 16 2 2 13 2;}
+@font-face
+	{font-family:Gadugi;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Impact;
+	panose-1:2 11 8 6 3 9 2 5 2 4;}
+@font-face
+	{font-family:"Javanese Text";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Leelawadee UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Leelawadee UI Semilight";
+	panose-1:2 11 4 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Sans Unicode";
+	panose-1:2 11 6 2 3 5 4 2 2 4;}
+@font-face
+	{font-family:"Malgun Gothic";
+	panose-1:2 11 5 3 2 0 0 2 0 4;}
+@font-face
+	{font-family:"\@Malgun Gothic";}
+@font-face
+	{font-family:"Malgun Gothic Semilight";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@Malgun Gothic Semilight";}
+@font-face
+	{font-family:"Microsoft Himalaya";
+	panose-1:1 1 1 0 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei";}
+@font-face
+	{font-family:"Microsoft JhengHei UI";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei UI";}
+@font-face
+	{font-family:"Microsoft JhengHei Light";
+	panose-1:2 11 3 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei Light";}
+@font-face
+	{font-family:"Microsoft JhengHei UI Light";
+	panose-1:2 11 3 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei UI Light";}
+@font-face
+	{font-family:"Microsoft New Tai Lue";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Microsoft PhagsPa";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Microsoft Sans Serif";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Microsoft Tai Le";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Microsoft YaHei";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@Microsoft YaHei";}
+@font-face
+	{font-family:"Microsoft YaHei UI";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@Microsoft YaHei UI";}
+@font-face
+	{font-family:"Microsoft YaHei Light";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@Microsoft YaHei Light";}
+@font-face
+	{font-family:"Microsoft YaHei UI Light";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@Microsoft YaHei UI Light";}
+@font-face
+	{font-family:"Microsoft Yi Baiti";
+	panose-1:3 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:MingLiU-ExtB;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@MingLiU-ExtB";}
+@font-face
+	{font-family:PMingLiU-ExtB;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@PMingLiU-ExtB";}
+@font-face
+	{font-family:MingLiU_HKSCS-ExtB;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@MingLiU_HKSCS-ExtB";}
+@font-face
+	{font-family:"Mongolian Baiti";
+	panose-1:3 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS UI Gothic";}
+@font-face
+	{font-family:"MS PGothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS PGothic";}
+@font-face
+	{font-family:"MV Boli";
+	panose-1:2 0 5 0 3 2 0 9 0 0;}
+@font-face
+	{font-family:"Myanmar Text";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Nirmala UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Nirmala UI Semilight";
+	panose-1:2 11 4 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:"Segoe MDL2 Assets";
+	panose-1:5 10 1 2 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Segoe Print";
+	panose-1:2 0 6 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Segoe Script";
+	panose-1:3 11 5 4 2 0 0 0 0 3;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Black";
+	panose-1:2 11 10 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Historic";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Light";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Semibold";
+	panose-1:2 11 7 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Semilight";
+	panose-1:2 11 4 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:NSimSun;
+	panose-1:2 1 6 9 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@NSimSun";}
+@font-face
+	{font-family:SimSun-ExtB;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"\@SimSun-ExtB";}
+@font-face
+	{font-family:"Sitka Small";
+	panose-1:2 0 5 5 0 0 0 2 0 4;}
+@font-face
+	{font-family:"Sitka Text";
+	panose-1:2 0 5 5 0 0 0 2 0 4;}
+@font-face
+	{font-family:"Sitka Subheading";
+	panose-1:2 0 5 5 0 0 0 2 0 4;}
+@font-face
+	{font-family:"Sitka Heading";
+	panose-1:2 0 5 5 0 0 0 2 0 4;}
+@font-face
+	{font-family:"Sitka Display";
+	panose-1:2 0 5 5 0 0 0 2 0 4;}
+@font-face
+	{font-family:"Sitka Banner";
+	panose-1:2 0 5 5 0 0 0 2 0 4;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Webdings;
+	panose-1:5 3 1 2 1 5 9 6 7 3;}
+@font-face
+	{font-family:"\@Yu Gothic";
+	panose-1:2 11 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Yu Gothic UI";
+	panose-1:2 11 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Yu Gothic UI";}
+@font-face
+	{font-family:"Yu Gothic UI Semibold";
+	panose-1:2 11 7 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Yu Gothic UI Semibold";}
+@font-face
+	{font-family:"Yu Gothic Light";
+	panose-1:2 11 3 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Yu Gothic Light";}
+@font-face
+	{font-family:"Yu Gothic UI Light";
+	panose-1:2 11 3 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Yu Gothic UI Light";}
+@font-face
+	{font-family:"Yu Gothic Medium";
+	panose-1:2 11 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Yu Gothic Medium";}
+@font-face
+	{font-family:"Yu Gothic UI Semilight";
+	panose-1:2 11 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Yu Gothic UI Semilight";}
+@font-face
+	{font-family:"Agency FB";
+	panose-1:2 11 5 3 2 2 2 2 2 4;}
+@font-face
+	{font-family:Algerian;
+	panose-1:4 2 7 5 4 10 2 6 7 2;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;}
+@font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 6 6 2 2 2 3 2 4;}
+@font-face
+	{font-family:"Arial Rounded MT Bold";
+	panose-1:2 15 7 4 3 5 4 3 2 4;}
+@font-face
+	{font-family:"Baskerville Old Face";
+	panose-1:2 2 6 2 8 5 5 2 3 3;}
+@font-face
+	{font-family:"Bauhaus 93";
+	panose-1:4 3 9 5 2 11 2 2 12 2;}
+@font-face
+	{font-family:"Bell MT";
+	panose-1:2 2 5 3 6 3 5 2 3 3;}
+@font-face
+	{font-family:"Bernard MT Condensed";
+	panose-1:2 5 8 6 6 9 5 2 4 4;}
+@font-face
+	{font-family:"Bodoni MT";
+	panose-1:2 7 6 3 8 6 6 2 2 3;}
+@font-face
+	{font-family:"Bodoni MT Black";
+	panose-1:2 7 10 3 8 6 6 2 2 3;}
+@font-face
+	{font-family:"Bodoni MT Condensed";
+	panose-1:2 7 6 6 8 6 6 2 2 3;}
+@font-face
+	{font-family:"Bodoni MT Poster Compressed";
+	panose-1:2 7 7 6 8 6 1 5 2 4;}
+@font-face
+	{font-family:"Bookman Old Style";
+	panose-1:2 5 6 4 5 5 5 2 2 4;}
+@font-face
+	{font-family:"Bradley Hand ITC";
+	panose-1:3 7 4 2 5 3 2 3 2 3;}
+@font-face
+	{font-family:"Britannic Bold";
+	panose-1:2 11 9 3 6 7 3 2 2 4;}
+@font-face
+	{font-family:"Berlin Sans FB";
+	panose-1:2 14 6 2 2 5 2 2 3 6;}
+@font-face
+	{font-family:"Berlin Sans FB Demi";
+	panose-1:2 14 8 2 2 5 2 2 3 6;}
+@font-face
+	{font-family:Broadway;
+	panose-1:4 4 9 5 8 11 2 2 5 2;}
+@font-face
+	{font-family:"Brush Script MT";
+	panose-1:3 6 8 2 4 4 6 7 3 4;}
+@font-face
+	{font-family:"Bookshelf Symbol 7";
+	panose-1:5 1 1 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Californian FB";
+	panose-1:2 7 4 3 6 8 11 3 2 4;}
+@font-face
+	{font-family:"Calisto MT";
+	panose-1:2 4 6 3 5 5 5 3 3 4;}
+@font-face
+	{font-family:Castellar;
+	panose-1:2 10 4 2 6 4 6 1 3 1;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:Centaur;
+	panose-1:2 3 5 4 5 2 5 2 3 4;}
+@font-face
+	{font-family:Chiller;
+	panose-1:4 2 4 4 3 16 7 2 6 2;}
+@font-face
+	{font-family:"Colonna MT";
+	panose-1:4 2 8 5 6 2 2 3 2 3;}
+@font-face
+	{font-family:"Cooper Black";
+	panose-1:2 8 9 4 4 3 11 2 4 4;}
+@font-face
+	{font-family:"Copperplate Gothic Bold";
+	panose-1:2 14 7 5 2 2 6 2 4 4;}
+@font-face
+	{font-family:"Copperplate Gothic Light";
+	panose-1:2 14 5 7 2 2 6 2 4 4;}
+@font-face
+	{font-family:"Curlz MT";
+	panose-1:4 4 4 4 5 7 2 2 2 2;}
+@font-face
+	{font-family:Elephant;
+	panose-1:2 2 9 4 9 5 5 2 3 3;}
+@font-face
+	{font-family:"Engravers MT";
+	panose-1:2 9 7 7 8 5 5 2 3 4;}
+@font-face
+	{font-family:"Eras Bold ITC";
+	panose-1:2 11 9 7 3 5 4 2 2 4;}
+@font-face
+	{font-family:"Eras Demi ITC";
+	panose-1:2 11 8 5 3 5 4 2 8 4;}
+@font-face
+	{font-family:"Eras Light ITC";
+	panose-1:2 11 4 2 3 5 4 2 8 4;}
+@font-face
+	{font-family:"Eras Medium ITC";
+	panose-1:2 11 6 2 3 5 4 2 8 4;}
+@font-face
+	{font-family:"Felix Titling";
+	panose-1:4 6 5 5 6 2 2 2 10 4;}
+@font-face
+	{font-family:Forte;
+	panose-1:3 6 9 2 4 5 2 7 2 3;}
+@font-face
+	{font-family:"Franklin Gothic Book";
+	panose-1:2 11 5 3 2 1 2 2 2 4;}
+@font-face
+	{font-family:"Franklin Gothic Demi";
+	panose-1:2 11 7 3 2 1 2 2 2 4;}
+@font-face
+	{font-family:"Franklin Gothic Demi Cond";
+	panose-1:2 11 7 6 3 4 2 2 2 4;}
+@font-face
+	{font-family:"Franklin Gothic Heavy";
+	panose-1:2 11 9 3 2 1 2 2 2 4;}
+@font-face
+	{font-family:"Franklin Gothic Medium Cond";
+	panose-1:2 11 6 6 3 4 2 2 2 4;}
+@font-face
+	{font-family:"Freestyle Script";
+	panose-1:3 8 4 2 3 2 5 11 4 4;}
+@font-face
+	{font-family:"French Script MT";
+	panose-1:3 2 4 2 4 6 7 4 6 5;}
+@font-face
+	{font-family:"Footlight MT Light";
+	panose-1:2 4 6 2 6 3 10 2 3 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:Gigi;
+	panose-1:4 4 5 4 6 16 7 2 13 2;}
+@font-face
+	{font-family:"Gill Sans MT";
+	panose-1:2 11 5 2 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Gill Sans MT Condensed";
+	panose-1:2 11 5 6 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Gill Sans Ultra Bold Condensed";
+	panose-1:2 11 10 6 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Gill Sans Ultra Bold";
+	panose-1:2 11 10 2 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Gloucester MT Extra Condensed";
+	panose-1:2 3 8 8 2 6 1 1 1 1;}
+@font-face
+	{font-family:"Gill Sans MT Ext Condensed Bold";
+	panose-1:2 11 9 2 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Century Gothic";
+	panose-1:2 11 5 2 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Goudy Old Style";
+	panose-1:2 2 5 2 5 3 5 2 3 3;}
+@font-face
+	{font-family:"Goudy Stout";
+	panose-1:2 2 9 4 7 3 11 2 4 1;}
+@font-face
+	{font-family:"Harlow Solid Italic";
+	panose-1:4 3 6 4 2 15 2 2 13 2;}
+@font-face
+	{font-family:Harrington;
+	panose-1:4 4 5 5 5 10 2 2 7 2;}
+@font-face
+	{font-family:Haettenschweiler;
+	panose-1:2 11 7 6 4 9 2 6 2 4;}
+@font-face
+	{font-family:"High Tower Text";
+	panose-1:2 4 5 2 5 5 6 3 3 3;}
+@font-face
+	{font-family:"Imprint MT Shadow";
+	panose-1:4 2 6 5 6 3 3 3 2 2;}
+@font-face
+	{font-family:"Informal Roman";
+	panose-1:3 6 4 2 3 4 6 11 2 4;}
+@font-face
+	{font-family:"Blackadder ITC";
+	panose-1:4 2 5 5 5 16 7 2 13 2;}
+@font-face
+	{font-family:"Edwardian Script ITC";
+	panose-1:3 3 3 2 4 7 7 13 8 4;}
+@font-face
+	{font-family:"Kristen ITC";
+	panose-1:3 5 5 2 4 2 2 3 2 2;}
+@font-face
+	{font-family:Jokerman;
+	panose-1:4 9 6 5 6 13 6 2 7 2;}
+@font-face
+	{font-family:"Juice ITC";
+	panose-1:4 4 4 3 4 10 2 2 2 2;}
+@font-face
+	{font-family:"Kunstler Script";
+	panose-1:3 3 4 2 2 6 7 13 13 6;}
+@font-face
+	{font-family:"Wide Latin";
+	panose-1:2 10 10 7 5 5 5 2 4 4;}
+@font-face
+	{font-family:"Lucida Bright";
+	panose-1:2 4 6 2 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Lucida Calligraphy";
+	panose-1:3 1 1 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Lucida Fax";
+	panose-1:2 6 6 2 5 5 5 2 2 4;}
+@font-face
+	{font-family:"Lucida Handwriting";
+	panose-1:3 1 1 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Lucida Sans";
+	panose-1:2 11 6 2 3 5 4 2 2 4;}
+@font-face
+	{font-family:"Lucida Sans Typewriter";
+	panose-1:2 11 5 9 3 5 4 3 2 4;}
+@font-face
+	{font-family:Magneto;
+	panose-1:4 3 8 5 5 8 2 2 13 2;}
+@font-face
+	{font-family:"Maiandra GD";
+	panose-1:2 14 5 2 3 3 8 2 2 4;}
+@font-face
+	{font-family:"Matura MT Script Capitals";
+	panose-1:3 2 8 2 6 6 2 7 2 2;}
+@font-face
+	{font-family:Mistral;
+	panose-1:3 9 7 2 3 4 7 2 4 3;}
+@font-face
+	{font-family:"Modern No\. 20";
+	panose-1:2 7 7 4 7 5 5 2 3 3;}
+@font-face
+	{font-family:"Monotype Corsiva";
+	panose-1:3 1 1 1 1 2 1 1 1 1;}
+@font-face
+	{font-family:"Niagara Engraved";
+	panose-1:4 2 5 2 7 7 3 3 2 2;}
+@font-face
+	{font-family:"Niagara Solid";
+	panose-1:4 2 5 2 7 7 2 2 2 2;}
+@font-face
+	{font-family:"OCR A Extended";
+	panose-1:2 1 5 9 2 1 2 1 3 3;}
+@font-face
+	{font-family:"Old English Text MT";
+	panose-1:3 4 9 2 4 5 8 3 8 6;}
+@font-face
+	{font-family:Onyx;
+	panose-1:4 5 6 2 8 7 2 2 2 3;}
+@font-face
+	{font-family:"MS Outlook";
+	panose-1:5 1 1 0 1 0 0 0 0 0;}
+@font-face
+	{font-family:"Palace Script MT";
+	panose-1:3 3 3 2 2 6 7 12 11 5;}
+@font-face
+	{font-family:Papyrus;
+	panose-1:3 7 5 2 6 5 2 3 2 5;}
+@font-face
+	{font-family:Parchment;
+	panose-1:3 4 6 2 4 7 8 4 8 4;}
+@font-face
+	{font-family:Perpetua;
+	panose-1:2 2 5 2 6 4 1 2 3 3;}
+@font-face
+	{font-family:"Perpetua Titling MT";
+	panose-1:2 2 5 2 6 5 5 2 8 4;}
+@font-face
+	{font-family:Playbill;
+	panose-1:4 5 6 3 10 6 2 2 2 2;}
+@font-face
+	{font-family:"Poor Richard";
+	panose-1:2 8 5 2 5 5 5 2 7 2;}
+@font-face
+	{font-family:Pristina;
+	panose-1:3 6 4 2 4 4 6 8 2 4;}
+@font-face
+	{font-family:"Rage Italic";
+	panose-1:3 7 5 2 4 5 7 7 3 4;}
+@font-face
+	{font-family:Ravie;
+	panose-1:4 4 8 5 5 8 9 2 6 2;}
+@font-face
+	{font-family:"MS Reference Sans Serif";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"MS Reference Specialty";
+	panose-1:5 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Rockwell Condensed";
+	panose-1:2 6 6 3 5 4 5 2 1 4;}
+@font-face
+	{font-family:Rockwell;
+	panose-1:2 6 6 3 2 2 5 2 4 3;}
+@font-face
+	{font-family:"Rockwell Extra Bold";
+	panose-1:2 6 9 3 4 5 5 2 4 3;}
+@font-face
+	{font-family:"Script MT Bold";
+	panose-1:3 4 6 2 4 6 7 8 9 4;}
+@font-face
+	{font-family:"Showcard Gothic";
+	panose-1:4 2 9 4 2 1 2 2 6 4;}
+@font-face
+	{font-family:"Snap ITC";
+	panose-1:4 4 10 7 6 10 2 2 2 2;}
+@font-face
+	{font-family:Stencil;
+	panose-1:4 4 9 5 13 8 2 2 4 4;}
+@font-face
+	{font-family:"Tw Cen MT";
+	panose-1:2 11 6 2 2 1 4 2 6 3;}
+@font-face
+	{font-family:"Tw Cen MT Condensed";
+	panose-1:2 11 6 6 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Tw Cen MT Condensed Extra Bold";
+	panose-1:2 11 8 3 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Tempus Sans ITC";
+	panose-1:4 2 4 4 3 13 7 2 2 2;}
+@font-face
+	{font-family:"Viner Hand ITC";
+	panose-1:3 7 5 2 3 5 2 2 2 3;}
+@font-face
+	{font-family:Vivaldi;
+	panose-1:3 2 6 2 5 5 6 9 8 4;}
+@font-face
+	{font-family:"Vladimir Script";
+	panose-1:3 5 4 2 4 4 7 7 3 5;}
+@font-face
+	{font-family:"Wingdings 2";
+	panose-1:5 2 1 2 1 5 7 7 7 7;}
+@font-face
+	{font-family:"Wingdings 3";
+	panose-1:5 4 1 2 1 8 7 7 7 7;}
+@font-face
+	{font-family:Lato;
+	panose-1:2 15 5 2 2 2 4 3 2 3;}
+@font-face
+	{font-family:"Lato Light";
+	panose-1:2 15 5 2 2 2 4 3 2 3;}
+@font-face
+	{font-family:"Lato Semibold";
+	panose-1:2 15 5 2 2 2 4 3 2 3;}
+@font-face
+	{font-family:"MT Extra";
+	panose-1:5 5 1 2 1 2 5 2 2 2;}
+@font-face
+	{font-family:Euclid;
+	panose-1:2 2 5 3 6 5 5 2 3 3;}
+@font-face
+	{font-family:"Euclid Symbol";
+	panose-1:5 5 1 2 1 7 6 2 5 7;}
+@font-face
+	{font-family:"Euclid Extra";
+	panose-1:2 5 5 2 0 5 5 2 3 3;}
+@font-face
+	{font-family:"Euclid Fraktur";
+	panose-1:3 1 6 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Euclid Math One";
+	panose-1:5 5 6 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Euclid Math Two";
+	panose-1:2 5 6 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:Fences;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tiger;
+	panose-1:2 7 3 0 2 2 5 2 4 4;}
+@font-face
+	{font-family:"MT Extra Tiger";
+	panose-1:5 5 1 2 1 7 6 2 5 7;}
+@font-face
+	{font-family:"Symbol Tiger";
+	panose-1:5 5 1 2 1 7 6 2 5 7;}
+@font-face
+	{font-family:"Tiger Expert";
+	panose-1:2 7 3 0 2 2 5 2 4 4;}
+@font-face
+	{font-family:"Symbol Tiger Expert";
+	panose-1:5 5 1 2 1 7 6 2 5 7;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h4
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;
+	font-style:italic;
+	text-decoration:underline;}
+h6
+	{mso-style-link:"Heading 6 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-link:"Footnote Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Comment Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0in;
+	margin-bottom:.0001pt;
+	background:navy;
+	font-size:12.0pt;
+	font-family:"Tahoma",sans-serif;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Comment Subject Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.MsoIntenseEmphasis
+	{color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+p.Citation, li.Citation, div.Citation
+	{mso-style-name:Citation;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.PathName, li.PathName, div.PathName
+	{mso-style-name:PathName;
+	mso-style-link:"PathName Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Courier New";}
+p.OutlightTightL1, li.OutlightTightL1, div.OutlightTightL1
+	{mso-style-name:"Outlight Tight L1";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.OutlineTightL2, li.OutlineTightL2, div.OutlineTightL2
+	{mso-style-name:"Outline Tight L2";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.OutlineTightL3, li.OutlineTightL3, div.OutlineTightL3
+	{mso-style-name:"Outline Tight L3";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.75in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.OutlineTightL4, li.OutlineTightL4, div.OutlineTightL4
+	{mso-style-name:"Outline Tight L4";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.OutlineTightL5, li.OutlineTightL5, div.OutlineTightL5
+	{mso-style-name:"Outline Tight L5";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.OutlineTightL6, li.OutlineTightL6, div.OutlineTightL6
+	{mso-style-name:"Outline Tight L6";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.OutlightTightL7, li.OutlightTightL7, div.OutlightTightL7
+	{mso-style-name:"Outlight Tight L7";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.75in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.OutlineTightL8, li.OutlineTightL8, div.OutlineTightL8
+	{mso-style-name:"Outline Tight L8";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:2.0in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.PathNameChar
+	{mso-style-name:"PathName Char";
+	mso-style-link:PathName;
+	font-family:"Courier New";}
+span.ShellCode-Input
+	{mso-style-name:"Shell Code - Input";
+	font-family:"Lucida Console";
+	color:white;}
+span.GUIcomponent
+	{mso-style-name:GUIcomponent;
+	font-family:"Arial",sans-serif;
+	font-style:italic;}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-link:"Comment Text";}
+span.CommentSubjectChar
+	{mso-style-name:"Comment Subject Char";
+	mso-style-link:"Comment Subject";
+	font-weight:bold;}
+span.FootnoteTextChar
+	{mso-style-name:"Footnote Text Char";
+	mso-style-link:"Footnote Text";}
+p.ShellCodeComment, li.ShellCodeComment, div.ShellCodeComment
+	{mso-style-name:"Shell Code Comment";
+	mso-style-link:"Shell Code Comment Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:red;
+	font-style:italic;}
+p.UserInput, li.UserInput, div.UserInput
+	{mso-style-name:"User Input";
+	mso-style-link:"User Input Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-indent:.5in;
+	background:#7F7F7F;
+	font-size:9.0pt;
+	font-family:"Courier New";
+	color:#F2F2F2;
+	font-style:italic;
+	text-decoration:underline;}
+span.ShellCodeCommentChar
+	{mso-style-name:"Shell Code Comment Char";
+	mso-style-link:"Shell Code Comment";
+	color:red;
+	font-style:italic;}
+span.UserInputChar
+	{mso-style-name:"User Input Char";
+	mso-style-link:"User Input";
+	font-family:"Courier New";
+	color:#F2F2F2;
+	background:#7F7F7F;
+	font-style:italic;
+	text-decoration:underline;}
+p.ShellCode-Output, li.ShellCode-Output, div.ShellCode-Output
+	{mso-style-name:"Shell Code - Output";
+	mso-style-link:"Shell Code - Output Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Consolas;
+	color:#92D050;}
+span.ProgramName
+	{mso-style-name:ProgramName;
+	font-family:Consolas;}
+span.ShellCode-OutputChar
+	{mso-style-name:"Shell Code - Output Char";
+	mso-style-link:"Shell Code - Output";
+	font-family:Consolas;
+	color:#92D050;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+p.Default, li.Default, div.Default
+	{mso-style-name:Default;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-link:"Heading 6";
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	color:teal;}
+span.msoDel
+	{mso-style-name:"";
+	text-decoration:line-through;
+	color:red;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:16.0pt'>Git Tutorial</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><br>
+Author:  Dr. Zachary Wartell, </p>
+
+<p class=MsoNormal align=center style='text-align:center'>UNCC, Department of
+Computer Science<br>
+<br>
+</p>
+
+<p class=MsoNormal align=center style='text-align:center'>Contributors: ???</p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:16.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>Revision: </span><span
+style='font-size:10.0pt'>9/14/2016 9:34:27 PM</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt'>Copyright 2013, Zachary Wartell @ University of North
+Carolina at Charlotte<br>
+All Rights Reserved.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;font-family:"Arial",sans-serif'>Table of Contents</span></p>
+
+<p class=MsoToc1><a
+href="#_Toc460323687">1.<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>       </span>Prerequisites<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323688">2.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Guide
+to Reading these Instructions<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323689">3.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Installing
+Git<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323690">3.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Installation
+and Setup of Command-Line Git<span style='color:windowtext;display:none;
+text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323691">3.2.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Installation
+and Setup of Git GUI’s<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323692">4.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Installation
+and Setup of OpenSSH<span style='color:windowtext;display:none;text-decoration:
+none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323693">4.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Download
+and Install OpenSSH<span style='color:windowtext;display:none;text-decoration:
+none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323694">4.2.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Create
+an SSH private and public key<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323695">4.3.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>[Windows]
+Create PuTTY Private Key<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323696">5.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Full
+Git Tutorial<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323697">6.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Micro
+Git Tutorial<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>16</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323698">7.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Git
+Server Access<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323699">7.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span><span
+style='font-family:Consolas'>cci-git </span>Server URL<span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323700">7.2.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span><span
+style='font-family:Consolas'>git-viscenter</span> Server URL<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>18</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323701">7.3.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span><span
+style='font-family:Consolas'>Bitbucket </span>Server URL<span style='color:
+windowtext;display:none;text-decoration:none'>.. </span><span style='color:windowtext;display:none;text-decoration:none'>19</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323702">7.4.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Accessing
+Git Server Using SSH Keys<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>19</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc460323703">7.4.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>[Linux/Mac]
+Starting the <span style='font-family:Consolas'>ssh-agent</span> daemon<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>20</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc460323704">7.4.2.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>[Windows]
+Starting the <span style='font-family:Consolas'>ssh-agent</span> daemon<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>22</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323705">7.5.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Accessing
+Git Server Using HTTPS and Git Credentials<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc460323706">7.5.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Using
+Git Credentials<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323707">8.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Common
+Git Operations<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>27</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323708">8.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Basic
+Git Operations<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>27</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323709">8.2.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Other
+Git Operations<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>32</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323710">9.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>Course
+Git Policies<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>33</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323711">9.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Submitting
+Class Assignments<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>33</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323712">9.2.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Keep
+the repository clean!!!<span style='color:windowtext;display:none;text-decoration:
+none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>33</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc460323713">9.2.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>C++
+Code Rules<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>33</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc460323714">9.2.2.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>       </span>JavaScript
+and WebGL<span style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>34</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323715">9.3.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Verify
+Your Remote Repository<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>34</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323716">9.4.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Tips<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>36</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323717">9.5.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Common
+Error Messages<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323718">9.6.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>      </span>Common
+Errors<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323719">10.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Citations<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323720">11.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Appendix
+I<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323721">11.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>TortoiseGit
+- MsysGit Incompatibility<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323722">11.2.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>.bash_profile,
+GIT_SSH<span style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc460323723">12.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Appendix
+II<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>39</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc460323724">12.1.<span style='font-size:11.0pt;
+font-family:"Calibri",sans-serif;color:windowtext;text-decoration:none'>        </span>Document
+Maintenance<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>39</span></a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Toc237334708"></a><a
+name="_Toc460323687"></a><a name="_Ref364326258"></a><a name="_Toc305767820"></a><a
+name="_Toc209240387"></a><a name="_Toc209240388"></a>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Prerequisites</h1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This document assumes the reader has the following
+prerequisite knowledge:<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'>P1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span>  <a name="_Ref429756898">Basic
+knowledge of Unix style command-line shell</a>.</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><u>Note</u>: You should understand Unix style shells at the level
+discussed in [1].  Section 3 discusses installing a suitable command-line shell
+for OS’s that do not automatically come with one.  All remaining sections Section
+4 assumes knowledge at the level of [1].<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'>P2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span> <a name="_Ref429751482">Knowledge
+of environment variables, what they are and how to set them.</a> </p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><u><span lang=EN>Note</span></u><span lang=EN>:  You should
+understand environment variables at the level discussed in </span>[<b>5</b><span lang=EN>] and specifically PATH </span>[6<span
+lang=EN>].  See also </span>[3<span
+lang=EN>] for Windows and </span>[7<span
+lang=EN>] for Mac specifics.</span></p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Ref364325955"></a><a
+name="_Ref364325937"></a><a name="_Toc237334709"></a><a name="_Ref143984779"></a><a
+name="_Toc460323688"></a><a name="_Toc364255820"></a><a name="_Toc364256837"></a><a
+name="_Toc364256908"></a><a name="_Toc364257127"></a><a name="_Toc364257187"></a><a
+name="_Toc364257319"></a><a name="_Toc364465527"></a><a name="_Toc364465987"></a><a
+name="_Toc364466047"></a><a name="_Toc364466107"></a><a name="_Toc364256840"></a><a
+name="_Toc364256911"></a><a name="_Toc364257130"></a><a name="_Toc364257190"></a><a
+name="_Toc364257322"></a><a name="_Toc364256841"></a><a name="_Toc364256912"></a><a
+name="_Toc364257131"></a><a name="_Toc364257191"></a><a name="_Toc364257323"></a>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Guide to Reading these
+Instructions</h1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Various section, sub-sections and specific numbered
+instructions are either “generic” or operating system specific or Git server
+specific.   Generic instructions apply to all operating systems and all Git
+servers while specific sections apply only specific Git servers or operating systems.<br>
+<br>
+Your instructor will tell you which Git server you must use for your course
+work.   It will be one of the following:<br>
+<br>
+</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><span class=ProgramName>cci-git.uncc.edu </span></li>
+ <li class=MsoNormal><span class=ProgramName>git-viscenter@cci-subv.uncc.edu</span></li>
+ <li class=MsoNormal><span class=ProgramName>bitbucket.org  </span></li>
+</ol>
+
+<p class=MsoNormal><br>
+Instructions that are specific to one of the above Git servers will have the
+following headings:<br>
+<br>
+</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span class=ProgramName><span style='font-family:"Times New Roman",serif'>[<i>YourServer</i>=</span>cci-git]</span></li>
+ <li class=MsoNormal><span class=ProgramName><span style='font-family:"Times New Roman",serif'>[<i>YourServer</i>=</span>git-viscenter]</span></li>
+ <li class=MsoNormal><span class=ProgramName><span style='font-family:"Times New Roman",serif'>[<i>YourServer</i>=</span>Bitbucket]</span></li>
+</ul>
+
+<p class=MsoNormal><span class=ProgramName>&nbsp;</span></p>
+
+<p class=MsoNormal>Your instructor will have told you which operating systems
+you must use for your course work.   <br>
+Instructions that are specific to a specific operating system will have the
+following headings:<br>
+<br>
+</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><u>[<i>YourOS</i>=<b>Windows</b>]</u></li>
+ <li class=MsoNormal><u>[<i>YourOS</i>=<b>Linux</b>]</u></li>
+ <li class=MsoNormal><u>[<i>YourOS</i>=<b>Mac</b>]</u></li>
+</ul>
+
+<p class=MsoNormal><u><span style='text-decoration:none'>&nbsp;</span></u></p>
+
+<p class=MsoNormal>Depending on the course you are taking you may be required
+to use only one designated operating system.  This information will be given to
+you in class.<br>
+<br>
+Screen shots in this document are optimized for electronic viewing only where
+you can zoom in on the image to see full detail.  Printing this document is not
+recommended.<br>
+<br>
+Fonts:<br>
+<br>
+</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span class=UserInputChar><u><span style='font-size:9.0pt'>your_user_id</span></u></span>
+     – this indicates you should input a specific text string.  The specifics
+     will be indicated in the instructions.</li>
+ <li class=MsoNormal><span class=ShellCode-Input><span style='font-size:10.0pt;
+     background:darkcyan'>path_to_a_directory_where_you_can_save_your_work</span></span><span
+     class=ShellCode-Input><span style='font-size:10.0pt'> </span></span>– this
+     indicates you should input a specific text string.  It is assumed the
+     reader can interpret what to type based on the context and their general computer
+     science knowledge.</li>
+ <li class=MsoNormal><span class=ShellCodeCommentChar><span style='background:
+     lightgrey'>[…additional output will appear…]</span></span> – this a
+     comment describing output from a command-line command.</li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=UserInputChar><span
+style='font-family:"Times New Roman",serif;color:windowtext;font-style:normal;
+text-decoration:none'>&nbsp;</span></span></p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Toc460323689"></a><a
+name="_Ref429680559"></a><a name="_Ref429680554">3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Installing </a>Git</h1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Git is a command-line program. Git servers uses various access
+protocol for security and authorization. Depending what access protocol your
+designated Git server uses you may need to have or install additional software
+beyond command-line Git.  You will be told which access protocol your
+designated Git server uses by your instructor.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>First you may need to install the Git command-line tools.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.5in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.5in'><i><u>Woodward Labs</u></i>: 
+Windows computers in Woodward labs should have both the command-line Git,
+OpenSSH and TortoiseGit installed.  If you are using UNCC computers with a
+different operating system please email the TA.<br>
+<br>
+If your designated Git server is either <span class=ProgramName>Bitbucket</span>
+or <span class=ProgramName>git-viscenter</span>, you go to Section 4.2.  For <span class=ProgramName>cci-git</span> skip to Section 5.</p>
+
+<p class=MsoNormal> </p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.5in'><i><u>Computers
+Elsewhere</u></i>:  If you are working on computers elsewhere, you need to
+install Git and TortoiseGit.  Installation instructions are below in 3.1 and 3.2.  After performing these installations, if your designated Git server is <span
+class=ProgramName>cci-git </span>you can proceed to Section 5.
+If your server is either <span class=ProgramName>Bitbucket</span> or <span
+class=ProgramName>git-viscenter</span>, you also need to also perform Section 4 before proceeding to Section 5.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2 style='margin-left:0in;text-indent:0in'><a name="_Toc460323690"></a><a
+name="_Ref458721738">3.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Installation and Setup of Command-Line Git</a></h2>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:0in'>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+padding:0in'>This section applies to <b><u>all</u></b> operating systems</p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>If you are working from a UNCC computer that already has Git
+installed you can skip this section.</p>
+
+<p class=MsoNormal><b><br>
+</b><i>Instructions below vary with your operating system.<br>
+<br>
+</i></p>
+
+<p class=MsoNormal>[YourOS=<b>Windows</b>] <b><br>
+<br>
+</b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
+margin-left:.25in;text-indent:-.25in;text-autospace:none'><span lang=EN
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Download
+and Install Git for Windows, <a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a>.
+<br>
+<br>
+This installs a minimal Unix style shell (called ‘git-bash’), the basic OpenSSH
+tools as well as git.  During install select the following (for any other
+options given choose the defaults):<br>
+<img border=0 width=262 height=203 id="Picture 81"
+src="Git%20Tutorial_files/image001.jpg"><img border=0 width=265 height=205
+id="Picture 82" src="Git%20Tutorial_files/image002.jpg"></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
+margin-left:.25in;text-autospace:none'><img border=0 width=265 height=205
+id="Picture 83" src="Git%20Tutorial_files/image003.jpg"><img border=0
+width=265 height=205 id="Picture 84" src="Git%20Tutorial_files/image004.jpg"></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt;
+margin-left:.25in;text-autospace:none'><img border=0 width=263 height=204
+id="Picture 85" src="Git%20Tutorial_files/image005.jpg"><span lang=EN
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'><br>
+<br>
+</span>(<i>Note</i>: If you are an <b><u>expert</u></b> with Cygwin tools, you
+can alternatively install OpenSSH via cygwin setup, but see caveat<a
+href="#_ftn1" name="_ftnref1" title=""><span class=MsoFootnoteReference><span
+class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[1]</span></span></span></a>).  
+</p>
+
+<p style='margin:0in;margin-bottom:.0001pt;vertical-align:baseline'><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>[</b><i>YourOS</i><b>=Linux</b>] Download and install Git
+from <a href="http://git-scm.com/">http://git-scm.com/</a>.<br>
+<b>[</b><i>YourOS</i><b>=Mac</b>]   Download and Install Git from <a
+href="http://git-scm.com/">http://git-scm.com/</a> </p>
+
+<h2 style='margin-left:0in;text-indent:0in'><a name="_Ref430251336"></a><a
+name="_Toc460323691"></a><a name="_Ref364256404">3.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Installation and Setup of Git GUI’s</a><br>
+<br>
+</h2>
+
+<p class=MsoNormal>Generally, the Git instructions in this document and any Git
+instructions given in this course will be given on using Git command-line
+examples for generality.  But many GUI Git tools are available as well.  Use of
+GUI Git tools is optional.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>[</b><i>YourOS</i><b>=Windows]</b></p>
+
+<p class=MsoNormal style='text-indent:.5in'>Download and install TortoiseGit
+from <a href="https://code.google.com/p/tortoisegit/">https://code.google.com/p/tortoisegit/</a>.</p>
+
+<p class=MsoNormal><b>[</b><i>YourOS</i><b>=<i>Mac/Linux</i>]</b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>Various Git GUIs are found here <a
+href="http://git-scm.com/downloads/guis">http://git-scm.com/downloads/guis</a>. 
+</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Toc460323692"></a><a
+name="_Ref431590111">4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Installation
+and Setup of OpenSSH</a></h1>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:0in'>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+padding:0in'>All of Section 4 is <u>only</u> for servers:    <span
+class=ProgramName>git-viscenter </span>and <span class=ProgramName>Bitbucket</span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This section is for Git servers that use the SSH protocol.  
+The SSH public-key mechanism is for security and authorization. Hence you need
+to install OpenSSH.</p>
+
+<h2 style='margin-left:0in;text-indent:0in'><a name="_Toc460323693"></a><a
+name="_Ref364256375">4.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Download and Install OpenSSH</a><br>
+<br>
+</h2>
+
+<p class=MsoNormal>If you are working from a UNCC lab computer that already has
+Git for Windows and Putty installed, skip this section and go to the next
+section.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i>Instructions below vary with your operating system.<br>
+<br>
+</i></p>
+
+<p class=MsoNormal>[YourOS=<b>Windows</b>]</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><a
+name="_Ref364433884"><span lang=EN>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN>Download and install PuTTY. Specifically:</span></a></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span lang=EN>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN>Download the Windows </span>installer, putty-<i>x</i>.<i>xx</i>-installer.exe,
+from <a href="http://www.putty.org/">http://www.putty.org/</a>.   Install it.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span
+class=ProgramName><span lang=EN style='font-family:"Times New Roman",serif'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Modify
+the PATH environment variable <span class=ProgramName><span style='font-size:
+11.0pt'>(</span></span><span lang=EN>Read Prerequisite P</span><span
+lang=EN>2</span><span lang=EN>).  <br>
+<u><br>
+Add</u> to the end of PATH the directory to where PuTTY is installed. Typically
+PuTTY is at </span><span lang=EN style='font-size:11.0pt'>&quot;</span><span
+class=ProgramName><span style='font-size:11.0pt'>C:\Program Files
+(x86)\PuTTY&quot;.  <br>
+<br>
+</span></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span lang=EN>c.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>To
+verify the PATH setting:</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+lang=EN><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Open a <span class=ProgramName>git-bash</span> shell via <span
+class=ProgramName>Start Menu&#8594;Git&#8594;Git Bash</span></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+lang=EN><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN>In the shell run plink:</span></p>
+
+<p class=MsoNormal><span style='position:relative;z-index:251633664'><span
+style='position:absolute;left:88px;top:-997px;width:463px;height:129px'><img
+width=463 height=129 src="Git%20Tutorial_files/image006.png"
+alt="$ plink&#13;&#10;PuTTY Link: command-line connection utility&#13;&#10;Release 0.63&#13;&#10;Usage: plink [options] [user@]host [command]&#13;&#10;       (&quot;host&quot; can also be a PuTTY saved session name)&#13;&#10;[…misc additional output will appear…]&#13;&#10;"></span></span><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+
+<h4><span style='font-style:normal'>[</span>YourOS=<b><span style='font-style:
+normal'>Linux</span></b><span style='font-style:normal'>]</span></h4>
+
+<p class=MsoNormal>Generally this OS already has OpenSSH installed; if not see <a
+href="http://www.openssh.org/">http://www.openssh.org/</a>.<br>
+<br>
+</p>
+
+<h4><span style='font-style:normal'>[</span>YourOS=<b><span style='font-style:
+normal'>Mac</span></b><span style='font-style:normal'>]</span></h4>
+
+<p class=MsoNormal>Download and Install OpenSSH from <a
+href="http://www.openssh.org/">http://www.openssh.org/</a> </p>
+
+<h2 style='margin-left:0in;text-indent:0in'><a name="_Toc460323694"></a><a
+name="_Ref364256383">4.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Create an SSH private and public key</a><br>
+<br>
+</h2>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+margin-left:.5in;margin-right:0in'>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+padding:0in'>This section applies to <b><u>all</u></b> operating systems<br>
+(only servers <span class=ProgramName>git-viscenter </span>and <span
+class=ProgramName>Bitbucket)</span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>If you are already familiar with SSH private and public keys
+and you already have a public SSH key that you use regularly, then skip to step
+4, but still do Section 4.3 if you are using Windows.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Key creation has to be done only once. Afterwards, you can
+re-use your private key file for authorized access to the Git server from
+multiple computers.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The instructions below are fairly generic to any Unix like
+shell and assume basic knowledge as per Prerequisite P2.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><a
+name="_Ref364326058">1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Open a shell prompt:<br>
+</b><br>
+[<i>YourOS=</i><b>Windows</b>]:  Run:  Start =&gt; All Programs =&gt; Git =&gt;
+Git Bash<br>
+[<i>YourOS=</i><b>Linux/Mac]: </b>  Open a terminal window</a>.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Check
+for SSH Keys</p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='position:relative;
+z-index:251626496'><span style='left:0px;position:absolute;left:13px;
+top:-1146px;width:562px;height:79px'><img width=562 height=79
+src="Git%20Tutorial_files/image007.png"
+alt="$ cd ~/.ssh&#13;&#10;$ ls&#13;&#10;[This is list files in your .ssh directory]&#13;&#10;"></span></span><br>
+<br>
+<br>
+<br>
+<br>
+Check the directory listing for a file named <span class=ProgramName>id_rsa.pub</span>. 
+This file should <i>not</i> exist, unless you must have previously created a
+public/private key pair. If you already created one, goto step 4. Otherwise
+proceed with step 3.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><a
+name="_Ref363940970"><b>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><b>Generate a new SSH Key</b></a></p>
+
+<p class=MsoNormal><b><img border=0 width=562 height=82
+src="Git%20Tutorial_files/image008.png"
+alt="$ ssh-keygen -t rsa -C &quot;your_email@uncc.edu&quot;  [You must use you UNCC email]&#13;&#10;Generating public/private rsa key pair.&#13;&#10;Enter file in which to save the key (/home/Zachary/.ssh/id_rsa): [Press Enter]&#13;&#10;"></b></p>
+
+<p class=MsoNormal>Now you need to enter a passphrase.   Enter one and write it
+down in a safe place. When using Git, you will have to enter this each time you
+login to your computer.</p>
+
+<p class=MsoNormal><b><img border=0 width=562 height=60
+src="Git%20Tutorial_files/image009.png"
+alt="Enter passphrase (empty for no passphrase): [Type a passphrase]&#13;&#10;Enter same passphrase again: [Type the passphrase again]&#13;&#10;"></b></p>
+
+<p class=MsoNormal>You will see output similar to this:</p>
+
+<p class=MsoNormal><b><img border=0 width=562 height=119
+src="Git%20Tutorial_files/image010.png"
+alt="Your identification has been saved in id_rsa.&#13;&#10;Your public key has been saved in id_rsa.pub.&#13;&#10;The key fingerprint is:&#13;&#10;60:4d:47:66:9e:98:d7:26:1d:de:b0:9a:d3:30:3d:00 your_email@uncc.edu&#13;&#10; […additional output maybe displayed…]&#13;&#10;"></b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal>This creates two files a private key file <span
+class=ProgramName>id_rsa</span><span class=ShellCode-Input><span
+style='font-size:10.0pt'> </span></span>and a public key file <span
+class=ProgramName>id_rsa.pub</span>.  The private key file must be kept in a
+secure directory and must be available on any computer from which you plan to
+access the Git server. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b><i>Securing Your Private Key:</i></b><br>
+Best practices for private key management are that you never store the private
+key on a public computer or in shared home directories (H: drive, etc.). Rather
+you store them on your personal computer(s) and on a USB device used solely as
+a SSH key backup device. A reasonable way to transfer the private key to
+another personal computer is using a USB device. <br>
+<br>
+If you intend to use Git on multiple, different public or shared computers on
+campus, keeping the private key on a USB stick or drive that you regularly
+carry is a reasonable compromise. (If you are <i>certain</i> you will never use
+this key again outside of one particular course, it’s acceptable to store it on
+your H: drive since the course TA will disable your Git account at the end of
+the semester.)</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><a
+name="_Ref364350458"></a><a name="_Ref363944720"><b>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><b>Examine Your Public Key:<br>
+</b>The public key is the file named </a><span class=ProgramName>id_rsa.pub</span>.  
+Type the following:<br>
+<br>
+<b><img border=0 width=562 height=164 src="Git%20Tutorial_files/image011.png"
+alt="$ cat id_rsa.pub&#13;&#10;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCurna4/V+HziLaUCULlA8x9X3Y7814EoUE+Je3joeIBrKGWHy/LkB3jCm5GY2QaSGHyYKsFEeW+kvGhYzsgxkiUiLxD0XLYXDrHlfjkVeX+BJ10E1TlLxVDgY2lRjVq8kvEAG+/0nrU6Lj9O8Sbu/nWtQo8J8w+afHAWBQDpVMRONaSqvjB/NF4IryKaG0AXshOQkaRThIutjhmPfMmYFyMKH7MvRF2ER7IFTFMhcoNSDoXYLIQZanYSLHdm63ML1DT1eODbPa6fuaMP5z4NPCSO4Se0FbwmLuw3mVnzVuoCqk0SVIwF7yT+H4VO34sK5nLdeYJR2WS5tC0We8Vjrn student4120_wartell&#13;&#10;                         [your output should look similar]&#13;&#10;&#13;&#10;&#13;&#10;"><br>
+<br>
+</b><span class=ProgramName>id_rsa.pub </span>is a plain text file.   (Some
+operating systems may incorrectly identify the file as some other type of
+file).   Open <span class=ProgramName>id_rsa.pub</span> using your preferred
+text editor (such as notepad.exe, etc.).    If you ever need to copy and paste
+the public key into another application (web browser, etc.) you can do that
+from within the text editor.<b><br>
+<br>
+</b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><a
+name="_Ref429762632"><b>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><b>Submit Your Public Key:             <br>
+                               </b><span class=ProgramName><i><span
+style='font-family:"Times New Roman",serif'>Instructions below vary based on
+your server.</span></i></span></a><span class=ProgramName><i><span
+style='font-family:"Times New Roman",serif'><br>
+<br>
+</span></i></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><b>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+class=ProgramName><span style='font-family:"Times New Roman",serif'>[<i>YourServer</i>=</span>git-viscenter]</span><b><br>
+<br>
+</b>The file you submit <i><u>must</u></i> be renamed from <span
+class=ProgramName>id_rsa.pub</span> to <span class=UserInputChar><u><span
+style='font-size:9.0pt'>your_uncc_id</span></u></span><span class=ProgramName>.pub</span>
+where your standard UNCC email is <span class=UserInputChar><u><span
+style='font-size:9.0pt'>your_uncc_id</span></u></span><span class=ProgramName>@uncc.edu.<br>
+<br>
+</span>You submit your <span class=UserInputChar><u><span style='font-size:
+9.0pt'>your_uncc_id</span></u></span><span class=ProgramName>.pub</span> file
+via a Moodle assignment indicated by your instructor.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span
+class=ProgramName>b.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+class=ProgramName><span style='font-family:"Times New Roman",serif'>[<i>YourServer</i>=</span>Bitbucket]</span></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Create a Bitbucket account as described in Section 7.3
+<span class=ProgramName>Bitbucket </span>Server URL.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font-family:Consolas'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='position:relative;z-index:251638784'><span style='left:0px;position:
+absolute;left:555px;top:-1412px;width:69px;height:19px'><img width=69
+height=19 src="Git%20Tutorial_files/image012.png"></span></span>Login to <span
+class=ProgramName>Bitbucket</span> and goto <span class=ProgramName>Manage
+Account:</span><br>
+<img border=0 width=516 height=92 src="Git%20Tutorial_files/image013.jpg"></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+class=ProgramName><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='position:relative;z-index:251639808'><span style='left:0px;position:
+absolute;left:121px;top:-1234px;width:69px;height:19px'><img width=69
+height=19 src="Git%20Tutorial_files/image012.png"></span></span>Select <span
+class=ProgramName>SSH keys:<br>
+</span><img border=0 width=357 height=255
+src="Git%20Tutorial_files/image014.jpg"></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+class=ProgramName><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iv.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Follow
+the <span class=ProgramName>Bitbucket’s</span> instructions to <span
+class=ProgramName>Add key</span></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font-family:Consolas'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>v.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Submit
+your <span class=ProgramName>Bitbucket</span> user id to the TA and instructor
+via the Moodle assignment indicated by your instructor.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span
+class=ProgramName>c.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+class=ProgramName><span style='font-family:"Times New Roman",serif'>[<i>YourServer</i>=</span>cci-git]<br>
+</span><br>
+<span style='color:red;background:yellow'>Warning: </span><span
+class=ProgramName><span style='color:red;background:yellow'>cci-git </span></span><span
+style='color:red;background:yellow'>SSH protocol is no longer recommended, see
+instead this document’s <b>Section </b></span><span
+class=ProgramName><b><i><span style='color:red;background:yellow'>cci-git </span></i></b></span><b><span
+style='color:red;background:yellow'>Server URL</span></b><span
+style='color:red;background:yellow'> and <b>Section </b></span><b><span style='color:red;background:yellow'>7.5</span></b><b><span style='color:red;
+background:yellow'> </span></b><b><span
+style='color:red;background:yellow'>Accessing Git Server Using HTTPS and Git
+Credentials</span></b><span style='color:red;background:yellow'>.  </span><br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font-family:Consolas'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Login
+to <span class=ProgramName>https://cci-git.uncc.edu/</span> using your standard
+UNCC username and password</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font-family:Consolas'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='position:relative;z-index:251648000'><span style='left:0px;position:
+absolute;left:555px;top:-1564px;width:13px;height:19px'><img width=13
+height=19 src="Git%20Tutorial_files/image015.png"></span></span>Select &quot;<span
+class=ProgramName>Profile Settings&quot;</span>:<br>
+<img border=0 width=478 height=112 src="Git%20Tutorial_files/image016.jpg"></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font-family:Consolas'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='position:relative;z-index:251649024'><span style='left:0px;position:
+absolute;left:123px;top:-1563px;width:30px;height:11px'><img width=30
+height=11 src="Git%20Tutorial_files/image017.png"></span></span>Select &quot;<span
+class=ProgramName>SSH Keys&quot;</span><br>
+<img border=0 width=474 height=75 src="Git%20Tutorial_files/image018.jpg"></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font-family:Consolas'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iv.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='position:relative;z-index:251650048'><span style='left:0px;position:
+absolute;left:542px;top:-1620px;width:36px;height:19px'><img width=36
+height=19 src="Git%20Tutorial_files/image019.png"></span></span>Select <span
+class=ProgramName>&quot;Add SSH Key&quot;<br>
+</span><img border=0 width=474 height=61 src="Git%20Tutorial_files/image020.jpg"></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+class=ProgramName><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>v.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Cut
+and paste the text from <u>your</u> public key file into the dialog box and
+give the key a title.<br>
+<img border=0 width=474 height=96 src="Git%20Tutorial_files/image021.jpg"><br>
+<span class=ProgramName><br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+class=ProgramName>6.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>[<i>YourOS</i>=Windows]
+<br>
+Window users also need to perform the next section, 4.3 [Windows] Create PuTTY
+Private Key.<br>
+<br>
+</p>
+
+<h2 style='margin-left:0in;text-indent:0in'><a name="_Toc460323695"></a><a
+name="_Ref364465518"></a><a name="_Ref364457563">4.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>[Windows] Create PuTTY Private Key</a><br>
+<br>
+</h2>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 0in 1.0pt 4.0pt;
+margin-left:.5in;margin-right:0in'>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+padding:0in'>This section is for Windows only</p>
+
+<p class=MsoNormal align=center style='text-align:center;border:none;
+padding:0in'>(only servers <span class=ProgramName>git-viscenter </span>and <span
+class=ProgramName>Bitbucket)</span></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>After:</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>installing PuTTY (Section 4.1, Step #1)
+     </li>
+ <li class=MsoNormal>and after following the general key generation
+     instructions in 4.2 Create an SSH private and public key<br>
+     <br>
+ </li>
+</ul>
+
+<p class=MsoNormal>then the following is required to generate PuTTY compatible
+version of your private key.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Run
+PuTTYgen:  <br>
+         General:    <span class=ProgramName>Start Menu</span>&#8594;<span
+class=ProgramName>Putty</span>&#8594;<span class=ProgramName>PuTTYgen<br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+class=ProgramName><span style='font-family:"Times New Roman",serif'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Select
+<span class=ProgramName>MenuBar</span>&#8594;<span class=ProgramName>Conversions</span>
+and then <span class=ProgramName>Import Key</span> on the drop-down menu.<br>
+This pop’s up dialog: <span class=ProgramName>Load Private Key.<br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In <span
+class=ProgramName>Load Private Key</span> find the private key file you created
+in Section 4.2 and open it.   You will be prompted for your passphrase.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In
+the <span class=ProgramName>PuTTY Key Generator </span>window select <span
+class=ProgramName>Save Private Key</span>.</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Save
+the key to a file named <span class=ProgramName>id_rsa.ppk</span> in the same
+directory as where you stored your standard private key file.<br>
+<br>
+You should keep the PuTTY private key and the standard private key safe as
+described in Section 4.2.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:0in;text-indent:0in'><a name="_Toc460323696"></a><a
+name="_Ref458721610"></a><a name="_Ref430108003"></a><a name="_Ref430107997"></a><a
+name="_Ref396901382"></a><a name="_Ref364465402"></a><a name="_Toc237334710">5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Full Git Tutorial</a></h1>
+
+<p class=MsoNormal><a name="_Toc177996123"></a><a name="_Toc177996155"></a><a
+name="_Toc177997282"></a><a name="_Toc177997362"></a><a name="_Toc177997882"></a>&nbsp;</p>
+
+<p class=MsoNormal>If Unix style shells are new for you, you should read
+through [<b>1</b>] after you install a suitable command-line shell and before
+you proceed through this section.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Read the following chapters from the ProGit book by Scott Chacon
+available on-line [<b>2</b>]. </p>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Do the exercises in the outline below. <br>
+<br>
+You can perform 99% of the exercises even without access to the Git server, but
+to submit your exercises (via <span class=ProgramName>git push</span>) you will
+need server access.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.5in'><b>Note</b>: The instructions below
+are based on ProGit Book, 2<sup>nd</sup> Edition at <a
+href="http://git-scm.com/book/en/v2/">http://git-scm.com/book/en/<span
+style='background:yellow'>v2</span>/</a>.  The instructions may conflict with other
+editions.<br>
+<br>
+</p>
+
+<p class=MsoNormal><u>Exercise</u>:  Anywhere below that is labeled “<u>Exercise</u>:
+<i>Section_Name”</i> you must actually read and do what the section in the book
+instructs and save your work.  You will submit the entire set of exercises with
+a final <span class=ProgramName>git push</span>.   For some exercises
+additional instructions or clarifications are given in this document.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><b>Create
+</b><span class=ProgramName><b>git-tutorial</b></span><b> directory</b></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Open
+a shell prompt (as installed in Section 3).</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='position:relative;z-index:251627520'><span style='left:0px;position:
+absolute;left:62px;top:-1923px;width:508px;height:78px'><img width=508
+height=78 src="Git%20Tutorial_files/image022.png"
+alt="$ cd path_to_a_directory_where_you_can_save_your_work&#13;&#10;$ mkdir git-tutorial&#13;&#10;$ cd git-tutorial&#13;&#10;"></span></span>Create
+a directory called ‘git-tutorial’ for performing and saving the exercises.<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><b>ProGit
+- Chapter 1:</b></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Read
+ProGit 1.1 – 1.4</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Skip
+ProGit 1.5 (this was covered in this tutorial’s Section 3).</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>c.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Read
+ProGit 1.6 and do all the exercises with command-line git, but with the noted 
+substitutions.</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><b><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><u>Exercise</u><b>: “</b><a
+href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity"><span
+style='font-family:"inherit",serif;color:#0388A6'>Your Identity</span></a><span
+style='font-family:"Georgia",serif;color:#4E443C'>”<br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><b><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b><u>Exercise</u><b>: “</b><a
+href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Editor"><span
+style='font-family:"inherit",serif;color:#0388A6'>Your Editor</span></a><span
+style='font-family:"Georgia",serif;color:#4E443C'>”<br>
+</span><i>Note:</i> use whatever simple editor you prefer (notepad.exe perhaps)</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: “<a
+href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Checking-Your-Settings"><span
+style='font-family:"inherit",serif;color:#0388A6'>Checking Your Settings</span></a><span
+style='font-family:"Georgia",serif;color:#4E443C'>”<br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>d.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Read
+ProGit 1.7, 1.8<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><b>ProGit
+- Chapter 2:</b></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Read
+ProGit 2.1:</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='position:relative;z-index:251628544'><span
+style='left:0px;position:absolute;left:111px;top:-1989px;width:459px;
+height:192px'><img width=459 height=192 src="Git%20Tutorial_files/image023.png"
+alt="$ tar -xf HelloWorld.tar.gz&#13;&#10;$ ls -R&#13;&#10;.:&#13;&#10;HelloWorld  HelloWorld.tar.gz&#13;&#10;&#13;&#10;./HelloWorld:&#13;&#10;HelloWorld.sln  HelloWorld.vcxproj  HelloWorld.vcxproj.filters  HelloWorld.vcxproj.user  main.c  README&#13;&#10;$ rm HelloWorld.tar.gz [don’t need this anymore]&#13;&#10;$ cd HelloWorld&#13;&#10; &#13;&#10;"></span></span>From
+the class website download <span style='font-size:9.0pt;font-family:"Lucida Console"'>HelloWorld.tar.gz</span>
+to git-tutorial and uncompress it.<span style='font-size:9.0pt;font-family:
+"Lucida Console"'><br>
+<br>
+<br>
+<br>
+</span><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: “<a
+href="http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Initializing-a-Repository-in-an-Existing-Directory"><span
+style='font-family:"inherit",serif;color:#0388A6'>Initializing a Repository in
+an Existing Directory</span></a><span style='font-family:"Georgia",serif;
+color:#4E443C'>”<br>
+</span>Perform the instructions inside the directory <span class=ProgramName>HelloWorld</span>. 
+This will add the provided files to a new local repo. Go ahead and git add all
+the provided files to this repo.</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='position:relative;z-index:251629568'><span
+style='left:0px;position:absolute;left:118px;top:-2053px;width:459px;
+height:62px'><img width=459 height=62 src="Git%20Tutorial_files/image024.png"
+alt="$ cd ..&#13;&#10;$ pwd&#13;&#10;/home/zwartell/git-tutorial&#13;&#10; &#13;&#10;"></span></span><u>Exercise</u>:
+“<a
+href="http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository"><span
+style='font-family:"inherit",serif;color:#0388A6'>Cloning an Existing
+Repository</span></a><span style='font-family:"Georgia",serif;color:#4E443C'>”<br>
+</span>Return to your <span class=ProgramName>git-tutorial</span><b> </b>directory:
+<br>
+<br>
+<br>
+<br>
+<br>
+Perform the book’s exercises.  This will create various clones of the remote
+repo mentioned in the book under your <span class=ProgramName>git-tutorial </span>directory.</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Read
+ProGit 2.2:</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='position:relative;z-index:251630592'><span
+style='left:0px;position:absolute;left:110px;top:-2073px;width:459px;
+height:103px'><img width=459 height=103 src="Git%20Tutorial_files/image025.png"
+alt="                        [return to your git-tutorial directory]&#13;&#10;$ pwd &#13;&#10;/home/zwartell/git-tutorial&#13;&#10;$ tar -xf ProGit_Chapter_2_2.tar.gz&#13;&#10;$ rm ProGit_Chapter_2_2.tar.gz [you can delete this now]&#13;&#10;$ cd Chapter_2_2&#13;&#10;&#13;&#10; &#13;&#10;"></span></span>From
+the class website, download <span style='font-size:9.0pt;font-family:"Lucida Console"'>ProGit_Chapter_2_2.tar.gz</span>
+to your <span class=ProgramName>git-tutorial</span> directory and uncompress
+it.   Then delete the .gz file.<br>
+Perform the exercises in Chapter 2.2 from this in that directory:<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: “<a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Checking-the-Status-of-Your-Files"><span
+style='font-family:"inherit",serif;color:#04B1D8'>Checking the Status of Your
+Files</span></a><span style='font-family:"Georgia",serif;color:#4E443C'>”<br>
+<br>
+</span><i>Notes</i>: Use whatever text file editor you are familiar with
+instead of vim for the “<span style='font-size:10.5pt;font-family:Courier;
+color:#F14E32;background:white'>$vim README</span>“ and similar examples in the
+ProGit chapter.<br>
+ </p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: <a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Tracking-New-Files"><span
+style='font-family:"inherit",serif;color:#0388A6'>Tracking New Files</span></a></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>iv.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>GUI Git Tool<br>
+<br>
+[<i>YourOS</i>=<b>Windows</b>]<br>
+<br>
+<u>Exercise</u>:  <br>
+Using TortoiseGit, open an Explorer window and goto the <span style='font-size:
+9.0pt;font-family:"Lucida Console"'>Chapter_2_2 </span>directory. Right-click
+to see the TortoiseGit shell extension commands. Test and explore the following
+TortoiseGit operations from the menu: Show Log, Check for Modifications,
+Repo-Browser and Diff, Diff with previous and Help. <br>
+<br>
+TortoiseGit Help “Chapter&nbsp;3.&nbsp;Daily Use Guide” discusses TortoiseGit
+(the earlier TortoiseGit Help chapters are largely redundant with the ProGit
+book)<br>
+<br>
+[<i>YourOS</i>=<b>Linux/Mac</b>]<br>
+The instructor does not proscribe any particular GUI Git tool.  Feel free to
+experiment with whatever one you prefer.   This step (iv. GUI Git Tool) has no
+deliverables, so you can skip this step if you want.</p>
+
+<p class=MsoNormal style='margin-left:1.75in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>v.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: <a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Staging-Modified-Files"><span
+style='font-family:"inherit",serif;color:#0388A6'>Staging Modified Files</span></a><span
+style='font-family:"Georgia",serif;color:#4E443C'><br>
+<br>
+</span><i>Note:</i>  When the book discusses making changes to various files,
+just make any small change to each file.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>vi.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: <a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Short-Status"><span
+style='font-family:"inherit",serif;color:#0388A6'>Short Status</span></a></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>vii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: <a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files"><span
+style='font-family:"inherit",serif;color:#0388A6'>Ignoring Files</span></a></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>viii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>:<span style='font-family:"Georgia",serif;color:#4E443C'>
+</span><a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Viewing-Your-Staged-and-Unstaged-Changes"><span
+style='font-family:"inherit",serif;color:#0388A6'>Viewing Your Staged and
+Unstaged Changes</span></a><span style='font-family:"Georgia",serif;color:#4E443C'><br>
+</span><i><br>
+Note:</i>  When the book discusses making changes to various files, just make any
+small change to each file.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ix.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: <a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Committing-Your-Changes"><span
+style='font-family:"inherit",serif;color:#0388A6'>Committing Your Changes</span></a></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>x.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: <a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Skipping-the-Staging-Area"><span
+style='font-family:"inherit",serif;color:#04B1D8'>Skipping the Staging Area</span></a></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>xi.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: <a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Removing-Files"><span
+style='font-family:"inherit",serif;color:#04B1D8'>Removing Files</span></a></p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>xii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>:<span style='font-family:"Georgia",serif;color:#4E443C'>
+</span><a
+href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Moving-Files"><span
+style='font-family:"inherit",serif;color:#0388A6'>Moving Files</span></a></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>c.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Read
+2.3</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: <a
+href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History"><span
+style='font-family:"inherit",serif;color:#0388A6'>Viewing the Commit History </span></a> <br>
+<br>
+Do the first two exercises cloning <span class=ProgramName>simplegit-progit</span> 
+into: <br>
+<br>
+<span class=ProgramName>           git-tutorial\simplegit-progit</span><br>
+<br>
+Stop at the example code “<span style='font-size:10.5pt;font-family:Courier;
+color:green;background:lightgrey'>$</span><span style='font-size:10.5pt;
+font-family:Courier;color:#F14E32;background:lightgrey'> </span><span
+style='font-size:10.5pt;font-family:Courier;color:black;background:lightgrey'>git
+log -p -2</span>“.<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>Exercise</u>: <br>
+[<i>YourServer</i>=<b>cci-git</b>] Only if your Git server is <span
+class=ProgramName>cci-git </span>do the following:<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:1.75in;text-indent:-.25in'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Read
+(but do <u>not</u> perform the steps in) ProGit <a
+href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage"><span
+style='font-family:"inherit",serif;color:#0388A6'>Git Tools - Credential
+Storage</span></a>.  Stop at section <span class=MsoHyperlink><span
+style='font-family:"inherit",serif;color:#0388A6'>Under the Hood.</span></span>
+<span class=MsoHyperlink><span style='font-family:"inherit",serif;color:#0388A6'><br>
+<br>
+</span></span></p>
+
+<p class=MsoNormal style='margin-left:1.75in;text-indent:-.25in'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Based
+on your operating system pick the appropriate credential system as described in
+the above ProGit chapter.<br>
+<br>
+<b><u>Warning</u></b>: Do <b>NOT </b>use <span class=ProgramName>store</span> mode
+because this will save your UNCC password unencrypted on disk!<br>
+<br>
+</p>
+
+<p class=MsoNormal style='margin-left:2.25in;text-indent:-.25in'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
