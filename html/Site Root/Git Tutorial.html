@@ -546,35 +546,31 @@
         <br>
         Author: Dr. Zachary Wartell, 2012 at UNC Charlotte.<br>
         <em></em><br>
-        Revision: 2-15-2017<br>
+        Revised: 2-16-2017<br>
         <br>
         <br>
         <br>
         <hr><br>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
-
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
             alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>
         <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Git
-          Tutorial and Usage Standards</span> by <a xmlns:cc="http://creativecommons.org/ns#"
-
+          Tutorial and Coding Standards</span> by <a xmlns:cc="http://creativecommons.org/ns#"
           href="http://cs.uncc.edu/%7Ezwartell/" property="cc:attributionName" rel="cc:attributionURL">Zachary
           Justin Wartell</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
           Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br>
-        Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards"
-
+        Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards"
           rel="dct:source">https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards</a>.
         <br>
         <hr><br>
       </div>
       <section>
         <p style="text-align: left;" class="Title">Compatibility</p>
-        <p> This document has been tested on Firefox v41 and Chrome v46. <a target="_blank"
-
+        <p> This document has been tested on Firefox v41 and Chrome v46. <a target="_blank"
             href="Git%20Tutorial.pdf"><br>
           </a> </p>
       </section>
       <section>
-        <h1 id="Document_Configuration">Document Configuration</h1>
+        <h1 id="Document_Configuration" class="nocount">Document Configuration</h1>
         <!-- <button class="Text_Button" onclick="Div_Toggle('Server_Supports_SSH');"> SSH </button> -->
         <p> Parts of this document are specific to particular operating systems,
           Git servers, etc. You can customize what parts are displayed or hidden
@@ -583,30 +579,19 @@
 <button class="Text_Button" onclick="Div_Toggle('Server_Git_Viscenter');Div_Toggle('Server_Supports_SSH');"> git-viscenter </button>           <button class="Text_Button" onclick="Div_Toggle('Server_Bitbucket');Div_Toggle('Server_Supports_SSH');"> Bitbucket </button>                 <button class="Text_Button" onclick="Div_Toggle('Server_Cci_Git');"> cci-git </button>           -->
         <form name="System_Configuration">
           <fieldset> <legend>Display Instructions For:&nbsp;</legend>
-            <p> <label>Git Server: </label> <input name="Git_Server" id="cci_git"
-
-                value="cci_git" checked="checked" onchange="onchange_Git_Server()"
-
-                type="radio"> <label for="cci_git">cci-git</label> <input name="Git_Server"
-
-                id="git_viscenter" value="git_viscenter" onchange="onchange_Git_Server()"
-
+            <p> <label>Git Server: </label> <input name="Git_Server" id="cci_git"
+                value="cci_git" checked="checked" onchange="onchange_Git_Server()"
+                type="radio"> <label for="cci_git">cci-git</label> <input name="Git_Server"
+                id="git_viscenter" value="git_viscenter" onchange="onchange_Git_Server()"
                 type="radio"> <label for="git_viscenter">git-viscenter</label>
-              <input name="Git_Server" id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"
-
+              <input name="Git_Server" id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"
                 type="radio"> <label for="bitbucket">Bitbucket</label> </p>
-            <p> <label>Operating System: </label> <input name="Operating_System"
-
-                id="Windows" value="Windows" checked="checked" onchange="Div_Toggle('OS_Windows');"
-
-                type="checkbox"> <label for="Windows">Windows</label> <input name="Operating_System"
-
-                id="Unix" value="Unix" checked="checked" onchange="Div_Toggle('OS_Unix');"
-
-                type="checkbox"> <label for="Unix">Unix</label> <input name="Operating_System"
-
-                id="Mac" value="Mac" checked="checked" onchange="Div_Toggle('OS_Mac');"
-
+            <p> <label>Operating System: </label> <input name="Operating_System"
+                id="Windows" value="Windows" checked="checked" onchange="Div_Toggle('OS_Windows');"
+                type="checkbox"> <label for="Windows">Windows</label> <input name="Operating_System"
+                id="Unix" value="Unix" checked="checked" onchange="Div_Toggle('OS_Unix');"
+                type="checkbox"> <label for="Unix">Unix</label> <input name="Operating_System"
+                id="Mac" value="Mac" checked="checked" onchange="Div_Toggle('OS_Mac');"
                 type="checkbox"> <label for="Mac">Mac</label> </p>
           </fieldset>
         </form>
@@ -682,15 +667,14 @@
               <li>[<i>OS</i>=<b>Mac</b>]</li>
             </ul>
             <p>Depending on the course you are taking you may be required to use
-              only one designated operating system. This information
-              will be given to you in class.</p>
+              only one designated operating system. This information will be
+              given to you in class.</p>
           </li>
           <li><b>Screen Shot Figures</b>: Most screen captures in this document
             can be zoomed to full size by clicking on the image.&nbsp;&nbsp;
             Click anywhere outside the zoomed image to return the image to its
             original size. For example, click on the image below:<br>
-            <figure class="Screen_Capture" tabindex="1"> <img src="images/Screen_Capture.png"
-
+            <figure class="Screen_Capture" tabindex="1"> <img src="images/Screen_Capture.png"
                 alt="Screen_Capture"> </figure>
           </li>
           <li><b>Fonts:</b>
@@ -724,29 +708,23 @@
                       </code> <code class="Shell_Code_Input"> $ ls -la <br>
                       </code> <code class="Shell_Code_Output"> total 20<br>
                         drwxr-xr-x 1 lucretius 197609 0 Sep 23 21:57 ./<br>
-                        drwxr-xr-x 1 </code><code class="Shell_Code_Output"><code
-
+                        drwxr-xr-x 1 </code><code class="Shell_Code_Output"><code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:37 ../<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:55 'The Hitchhickers Guide to the Galaxy.azw'<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:36 'On the nature of things - Lucretius.pdf'<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:56 'Ethica - Spinzoa.pdf'<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:57 'Moses the Egyptian: The Memory of Egypt in
                         Western Monotheism.azw'<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"><code
                           class="Shell_Code_Output">lucretius </code>197609 0
                         Sep 23 21:37 Notes.docx<br>
                         <span class="Shell_Code_Comment"> […misc additional
@@ -1005,8 +983,7 @@
                       <td><button onclick="Code_Example_Toggle('Code_Example0_3b');">▽</button></td>
                       <td>
                         <div style="height: 50px;"> <code class="Shell_Code_Output">Enter
-                            passphrase (empty for no passphrase):</code> <span
-
+                            passphrase (empty for no passphrase):</code> <span
                             class="Shell_Code_Comment">[Type a passphrase]</span><br>
                           <code class="Shell_Code_Output">Enter same passphrase
                             again: </code> <span class="Shell_Code_Comment">[reenter
@@ -1077,8 +1054,7 @@
                   <li> [<i>YourServer</i>=<b>git-viscenter</b>]
                     <div class="Server_Git_Viscenter"> The file you submit <i><u>must</u></i>
                       be renamed from <span class="File_Name">id_rsa.pub</span>
-                      to <span class="User_Input"><u>your_uncc_id</u></span> <span
-
+                      to <span class="User_Input"><u>your_uncc_id</u></span> <span
                         class="File_Name">.pub</span> where your standard UNCC
                       email is <span class="User_Input"><u>your_uncc_id</u></span>
                       <span class="File_Name">@uncc.edu. </span> <br>
@@ -1094,13 +1070,11 @@
                         </li>
                         <li> Login to <span class="File_Name">Bitbucket</span>
                           and goto <span class="File_Name">Manage Account:</span><br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Manage.png"
-
+                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Manage.png"
                               alt="BitBucket"> </figure>
                         </li>
                         <li> Select <span class="File_Name"> SSH keys: </span><br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-SSHkeys.png"
-
+                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-SSHkeys.png"
                               alt="SSH  Keys" width="500"> </figure>
                         </li>
                         <li> Follow the <span class="File_Name">Bitbucket’s</span>
@@ -1115,34 +1089,27 @@
                   <li> [<i>YourServer</i>=<b>cci-git</b>]
                     <div class="Server_Cci_Git"> <br>
                       <br>
-                      <span style="color: red; background: yellow">Warning: </span><span
-
+                      <span style="color: red; background: yellow">Warning: </span><span
                         class="File_Name"> <span style="color: red;
                                                                  background: yellow">cci-git</span>
                       </span><span style="color: red; background: yellow"> SSH
                         protocol is no longer recommended, see instead this
                         document’s <b>Section: </b> </span><span class="File_Name">
                         <b> <i> <a href="#cci-gitunccedu_URL_List"><span style="color: red; background: yellow">cci-git</span>
-                            </a></i><a href="#cci-gitunccedu_URL_List"> </a></b><a
-
+                            </a></i><a href="#cci-gitunccedu_URL_List"> </a></b><a
                           href="#cci-gitunccedu_URL_List"> </a></span><a href="#cci-gitunccedu_URL_List"><b>
                           <span style="color: red;
                                                                    background: yellow">Server
-                            URL</span> </b></a><span style="color: red; background: yellow"><a
-
+                            URL</span> </b></a><span style="color: red; background: yellow"><a
                           href="#cci-gitunccedu_URL_List"> </a>and<a href="#Accessing_Git_Server_Using_HTTPS_and_Git">
-                          <b> Section: </b></a></span><a href="#Accessing_Git_Server_Using_HTTPS_and_Git"><b><span
-
+                          <b> Section: </b></a></span><a href="#Accessing_Git_Server_Using_HTTPS_and_Git"><b><span
                             style="color: red;
                                                                               background: yellow"></span>
                         </b><b> </b></a><b><a href="#Accessing_Git_Server_Using_HTTPS_and_Git">
                         </a><span style="color: red; background: yellow"><a href="#Accessing_Git_Server_Using_HTTPS_and_Git">
-                            Accessing Git Server Using HTTPS and Git</a></span></b><b><span
-
-                          style="color: red; background: yellow"><a href="#Accessing_Git_Server_Using_HTTPS_and_Git"><b><span
-
-                                style="color: red; background: yellow"></span></b></a><b><a
-
+                            Accessing Git Server Using HTTPS and Git</a></span></b><b><span
+                          style="color: red; background: yellow"><a href="#Accessing_Git_Server_Using_HTTPS_and_Git"><b><span
+                                style="color: red; background: yellow"></span></b></a><b><a
                               href="file:///E:/Users/zwart/Dropbox%20%28UNC%20Charlotte%29/classes/Git_Tutorial_and_Coding_Standards/html/Site%20Root/Git%20Tutorial.html#Accessing_Git_Server_Using_HTTPS_and_Git"></a></b></span>
                       </b><span style="color: red; background:
                                                   yellow"> .&nbsp; <br>
@@ -1150,30 +1117,25 @@
                       <ol>
                         <li> Login to <span class="File_Name">https://cci-git.uncc.edu/</span>
                           using your standard UNCC username and password. You
-                          should then see your "Dashboard" (below). Select <span
-
+                          should then see your "Dashboard" (below). Select <span
                             class="File_Name">Profile Settings</span> <br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Profile-Settings.png"
-
+                          <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Profile-Settings.png"
                               alt="" height="311" width="500"> </figure>
                           <br>
                         </li>
                         <li> Select <span class="File_Name">"SSH Keys"</span> <br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-SSH-Keys.png"
-
+                          <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-SSH-Keys.png"
                               alt="" height="297" width="500"> <br>
                           </figure>
                         </li>
                         <li> Select <span class="File_Name">"Add SSH Key"</span><br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Add-SSH-Key.png"
-
+                          <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Add-SSH-Key.png"
                               alt="cci-git-Add-SSH-Key.png" width="500"> </figure>
                         </li>
                         <li> Cut and paste the text from <u>your</u> <strong>public</strong>
                           key file into the dialog box, give the key a title,
                           and press <span class="File_Name">Add Key</span>: <br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Paste-Key.png"
-
+                          <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Paste-Key.png"
                               alt="" height="311" width="500"> </figure>
                           <br>
                           <br>
@@ -1215,8 +1177,7 @@
                 </p>
                 <ol class="Instruction">
                   <li> Run PuTTYgen:&nbsp;&nbsp;&nbsp; <span class="File_Name">
-                      Start Menu</span>→<span class="File_Name">Putty</span>→<span
-
+                      Start Menu</span>→<span class="File_Name">Putty</span>→<span
                       class="File_Name">PuTTYgen</span> </li>
                   <li> From the PuTTYgen menu bar select <span class="File_Name">Conversions</span>
                     and then <span class="File_Name">Import Key</span> on the
@@ -1303,8 +1264,7 @@
             <ol>
               <li> Read ProGit 2.1:
                 <ol>
-                  <li> From the class website <a href="./tutorial_example_files/HelloWorld.tar.gz"><span
-
+                  <li> From the class website <a href="./tutorial_example_files/HelloWorld.tar.gz"><span
                         class="File_Name">HelloWorld.tar.gz</span></a> to
                     git-tutorial and uncompress it.<br>
                     <table class="Code_Example" id="Code_Example_0_3ai" border="1">
@@ -1346,15 +1306,13 @@
                     </strong>directory: <br>
                     <br>
                     Perform the book’s exercises.&nbsp; This will create various
-                    clones of the remote repo mentioned in the book under your <span
-
+                    clones of the remote repo mentioned in the book under your <span
                       class="File_Name">git-tutorial</span> directory. </li>
                 </ol>
               </li>
               <li> Read ProGit 2.2:
                 <ol>
-                  <li> From the class website, download <a href="./tutorial_example_files/ProGit_Chapter_2_2.tar.gz"><span
-
+                  <li> From the class website, download <a href="./tutorial_example_files/ProGit_Chapter_2_2.tar.gz"><span
                         class="File_Name">ProGit_Chapter_2_2.tar.gz</span></a>
                     to your git-tutorial directory and uncompress it.
                     &nbsp;&nbsp;Then delete the .gz file.<br>
@@ -1480,8 +1438,7 @@
                                 <li> [<em>OS</em>=<strong>Windows</strong>]
                                   Assuming you are using the recommended
                                   Git-Bash<br>
-                                  <table class="Code_Example" id="Code_Example_0_3cii"
-
+                                  <table class="Code_Example" id="Code_Example_0_3cii"
                                     border="1">
                                     <tbody style="height: 25px;">
                                       <tr>
@@ -1586,8 +1543,7 @@
                             <td>
                               <div style="height: 125px;"> <code class="Shell_Code_Input">
                                   $ git clone
-                                  git-viscenter@cci-subv.uncc.edu:wartell/<span
-
+                                  git-viscenter@cci-subv.uncc.edu:wartell/<span
                                     class="User_Input">ITCS_XXXX/students/John_Doe</span>/git-full-tutorial
                                   </code> <br> <code class="Shell_Code_Output">
                                   Cloning into 'git-full-tutorial'...<br>
@@ -1651,8 +1607,7 @@
                             $ mkdir git-micro-tutorial<br>
                           </code> <code class="Shell_Code_Input">$ cd
                             git-micro-tutorial</code> <br>
-                          <code class="Shell_Code_Input">$ git init</code> <code
-
+                          <code class="Shell_Code_Input">$ git init</code> <code
                             class="Shell_Code_Output"> <br>
                             Initialized empty Git repository in
                             git-micro-tutorial/.git/ </code> <br>
@@ -1758,8 +1713,7 @@
                         <br>
                         Initialized empty Git repository in
                         git-micro-tutorial/.git/ </code> <br>
-                      <code class="Shell_Code_Input"> $ git remote add origin <span
-
+                      <code class="Shell_Code_Input"> $ git remote add origin <span
                           class="User_Input">remote_repo_path</span>/git-micro-tutorial.git
                         </code> </div> </td>
                 </tr>
@@ -1825,16 +1779,14 @@
               username and password. </p>
             <ol>
               <li><u>Student Repository</u>:&nbsp;&nbsp; The Git URL is:<br>
-                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
-
+                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
                     class="User_Input">name_of_repo_you_created</span>.git <br>
                 </span><br>
               </li>
               <li> <u>Course Repository</u>: The course repo’s and material
                 will be found at URL’s such as:<br>
                 <br>
-                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
-
+                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
                     class="User_Input">the_repo_name</span>.git </span> <br>
                 <br>
                 The <span class="User_Input">ITCS_Class_URL_Name</span> will be
@@ -1873,8 +1825,7 @@
             <p> Then your Git username is <span class="Program_Name">johndoe</span>
               and your course Git repository URL is:<br>
               <br>
-              <span class="File_Name">git-viscenter@cci-subv.uncc.edu:wartell/<span
-
+              <span class="File_Name">git-viscenter@cci-subv.uncc.edu:wartell/<span
                   class="User_Input">ITCS_XXXX</span><em>/</em>students/John_Doe</span>
             </p>
             <p>Throughout this document, the text <span class="User_Input">ITCS_XXXX</span>
@@ -1897,8 +1848,7 @@
             <div align="center"><span class="File_Name">students/JimBob_VanWinkle</span></div>
             <p>For team projects, all members of the team will be given access
               to a team directory with a name like:</p>
-            <div align="center"> <span class="File_Name">git-viscenter@cci-subv.uncc.edu:wartell/<span
-
+            <div align="center"> <span class="File_Name">git-viscenter@cci-subv.uncc.edu:wartell/<span
                   class="User_Input">ITCS_XXXX</span><em>/</em>students/<span class="User_Input">TeamName</span></span>
             </div>
             <p>Only the Professor and TA can change access permissions for
@@ -1918,8 +1868,7 @@
                 (If you do not already have one, of course).
                 <ol>
                   <li><a href="https://bitbucket.org/account/signup/">https://bitbucket.org/account/signup/</a></li>
-                  <li> Details on their Academic Account Policy are at this <a
-
+                  <li> Details on their Academic Account Policy are at this <a
                       href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines+for+academic+licenses">Link</a>.&nbsp;&nbsp;
                     &nbsp;It is much better than the non-academic account!<br>
                   </li>
@@ -1939,12 +1888,10 @@
               </li>
             </ol>
             Note, you will access Bitbucket using the ssh protocol.&nbsp;&nbsp;
-            This means the Bitbucket URL you should use will be something like,<span
-
+            This means the Bitbucket URL you should use will be something like,<span
               class="File_Name"> git@bitbucket.org:<span class="User_Input">your_userid/your_reponame</span>.git
               </span> <br> The course repo’s and material will be found at
-            URL’s such as:<span class="File_Name"> git@bitbucket.org:zwartell/<span
-
+            URL’s such as:<span class="File_Name"> git@bitbucket.org:zwartell/<span
                 class="User_Input">reponame</span>.git&nbsp; </span> </div>
         </section>
         <section>
@@ -2114,8 +2061,7 @@
                       Menu→Putty→Pagent</span>&nbsp; <br>
                     This will create a Pageant system tray icon.<br>
                   </li>
-                  <li>On the Pageant system tray icon, right-click and select <span
-
+                  <li>On the Pageant system tray icon, right-click and select <span
                       class="Program_Name">Add Keys</span> from the menu. This
                     will open a dialog box.&nbsp; </li>
                   <li> Using the dialog, open your <span class="File_Name">id_rsa.ppk</span>
@@ -2286,14 +2232,12 @@
                         Server URL)</li>
                       <li>To go the GitLab Dashboard, select<span class="Program_Name">
                           New Project </span>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-New_Project.png"
-
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-New_Project.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
                       <li>Add project name as directed by your assignment’s
                         instructions: <br>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Project_Path.png"
-
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Project_Path.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
                       <li>Select <span class="Program_Name">Private</span>
@@ -2302,18 +2246,15 @@
                         (pictured above). This should display the image in the
                         next step.</li>
                       <li>Select <span class="Program_Name">Settings</span>.<br>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Project_Settings2.png"
-
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Project_Settings2.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
                       <li>Select <span class="Program_Name">Members</span>.<br>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Members.png"
-
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Members.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
                       <li>Select <span class="Program_Name">Add Members</span>.<br>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Add-Members.png"
-
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Add-Members.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
                       <li>Add the TA and Professor (get their UNCC user name
@@ -2321,8 +2262,7 @@
                         them Reporter access in the <span class="Program_Name">Project
                           Access</span> menu.&nbsp;Select <span class="Program_Name">Add
                           Users to Project</span>.<br>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Add-Users.png"
-
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Add-Users.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
                     </ol>
@@ -2336,8 +2276,7 @@
                           <td><button onclick="Code_Example_Toggle('Code_Example_9_1_1');">▽</button></td>
                           <td>
                             <div> <code class="Shell_Code_Input">$ git clone
-                                git-viscenter@cci-subv.uncc.edu:wartell/<span class="User_Input">ITCS_XXXX</span>/students/<span
-
+                                git-viscenter@cci-subv.uncc.edu:wartell/<span class="User_Input">ITCS_XXXX</span>/students/<span
                                   class="User_Input">John_Doe</span>/<span class="User_Input">NewRepoName</span></code><br>
                               <code class="Shell_Code_Output"><!--[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>  <o:RelyOnVML/>  <o:AllowPNG/>  <o:PixelsPerInch>120</o:PixelsPerInch> </o:OfficeDocumentSettings></xml><![endif]-->
@@ -2367,19 +2306,16 @@
                   <div class="Server_Bitbucket">
                     <ol>
                       <li>Select create:<br>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Create.png"
-
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Create.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
                       <li>Here are some recommended settings (assume you name
                         the repo MyRepoName)<br>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Settings.png"
-
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Settings.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
                       <li>Set up repo access permission (“sharing”): <br>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Share.png"
-
+                        <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Share.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
                       <li>If the project is a team project, add your team
@@ -2387,34 +2323,29 @@
                       <li>Add the course TA and Professor get their email from
                         class website
                         <div align="center">
-                          <table style="border-collapse:collapse;border:none" border="1"
-
+                          <table style="border-collapse:collapse;border:none" border="1"
                             cellpadding="0" cellspacing="0">
                             <tbody>
                               <tr>
                                 <td style="width:2.0in;border:solid windowtext 1.0pt;
-                                                                padding:0in 5.4pt 0in 5.4pt"
-
+                                                                padding:0in 5.4pt 0in 5.4pt"
                                   valign="top" width="192">
                                   <p style="margin-left:.5in">Dr. Wartell</p>
                                 </td>
                                 <td style="width:184.1pt;border:solid windowtext 1.0pt;
-                                                                border-left:none;padding:0in 5.4pt 0in 5.4pt"
-
+                                                                border-left:none;padding:0in 5.4pt 0in 5.4pt"
                                   valign="top" width="245">
                                   <p style="margin-left:.5in">Zwartell</p>
                                 </td>
                               </tr>
                               <tr>
                                 <td style="width:2.0in;border:solid windowtext 1.0pt;
-                                                                border-top:none;padding:0in 5.4pt 0in 5.4pt"
-
+                                                                border-top:none;padding:0in 5.4pt 0in 5.4pt"
                                   valign="top" width="192">
                                   <p style="margin-left:.5in">TA</p>
                                 </td>
                                 <td style="width:184.1pt;border-top:none;border-left:
-                                                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"
-
+                                                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"
                                   valign="top" width="245">
                                   <p> <i>get their email from class website</i></p>
                                 </td>
@@ -2497,8 +2428,7 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
                                   <code class="Shell_Code_Input">$ cd
                                     Project_Example</code><br>
                                   <code class="Shell_Code_Input">&nbsp; &nbsp;
-                                    &nbsp; &nbsp; <span class="Shell_Code_Comment">[</span></code><code
-
+                                    &nbsp; &nbsp; <span class="Shell_Code_Comment">[</span></code><code
                                     class="Shell_Code_Input"><span class="Shell_Code_Comment">…
                                       create, add and commit files… below is
                                       just an example] <br>
@@ -2510,8 +2440,7 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
                                     &nbsp;1 file changed, 0 insertions(+), 0
                                     deletions(-)<br>
                                     &nbsp;create mode 100644 README.md</code>&nbsp;
-                                  &nbsp;&nbsp; $ git push -u origin master<code
-
+                                  &nbsp;&nbsp; $ git push -u origin master<code
                                     class="Shell_Code_Input"><br>
                                     $ git push -u origin master</code><br>
                                   <code class="Shell_Code_Output">Counting
@@ -2574,16 +2503,13 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
                     <br>
                     Perform the same instructions as above, Option II, for [<strong>cci-git</strong>]
                     but replace:<br>
-                    &nbsp;&nbsp; &nbsp;&nbsp;<span class="Server_Name">https://cci-git.uncc.edu/<u><span
-
+                    &nbsp;&nbsp; &nbsp;&nbsp;<span class="Server_Name">https://cci-git.uncc.edu/<u><span
                           class="User_Input">your_user_id</span></u>/</span><br>
                     with<br>
                     &nbsp;[<strong>bitbucket</strong>]&nbsp;&nbsp;&nbsp;<span class="Server_Name">
                       git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u>&nbsp;</span><br>
-                    &nbsp;[<strong>git-viscenter]</strong>&nbsp;<span class="Server_Name">git-viscenter@cci-subv.uncc.edu:wartell/<u><span
-
-                          class="User_Input">ITCS_XXXX</span></u><em>/</em>students/<u><span
-
+                    &nbsp;[<strong>git-viscenter]</strong>&nbsp;<span class="Server_Name">git-viscenter@cci-subv.uncc.edu:wartell/<u><span
+                          class="User_Input">ITCS_XXXX</span></u><em>/</em>students/<u><span
                           class="User_Input">FirstName_LastName</span></u> </span>
                   </div>
                 </li>
@@ -2748,8 +2674,7 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
                         </code> <code class="Shell_Code_Input"> $ git status<br>
                         </code><code class="Shell_Code_Output"># On branch
                           master<br>
-                          nothing to commit, working directory clean</code><code
-
+                          nothing to commit, working directory clean</code><code
                           class="Shell_Code_Output"><br>
                         </code> </div>
                     </td>
@@ -2823,8 +2748,7 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
               have any changes not commited to the local repo (but make sure to
               check the box,&nbsp;Show Unversioned Files). &nbsp;&nbsp;Below we
               see one file is untracked.<br>
-              <figure class="Screen_Capture" tabindex="1"> <img src="images/TortoiseGit-Untracked.png"
-
+              <figure class="Screen_Capture" tabindex="1"> <img src="images/TortoiseGit-Untracked.png"
                   alt="TortoiseGit-untracked.png" width="500"> </figure>
               <br>
               However,&nbsp;Check for Modifications&nbsp;will not tell you
@@ -2835,8 +2759,7 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
               Sync. The following&nbsp;Git Sync&nbsp;dialog box would indicate
               your local repo has committed changes that you have not pushed to
               the server remote repo:
-              <figure class="Screen_Capture" tabindex="1"> <img src="images/TortoiseGit-Nonversioned.png"
-
+              <figure class="Screen_Capture" tabindex="1"> <img src="images/TortoiseGit-Nonversioned.png"
                   alt="images/TortoiseGit-Nonversioned.png" width="500"> </figure>
               <br>
             </li>
