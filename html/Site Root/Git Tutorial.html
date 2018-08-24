@@ -4,7 +4,7 @@
   References  - [R1] https://css-tricks.com/expanding-images-html5/                - [R2] http://philarcher.org/diary/2013/headingnumbers/-->
 <html>
   <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Git Tutorial</title>
     <!-- ZJW: experimenting with the toc.min.js, but it has problems -- I think because of my pages hide/unhide scheme -->
     <!-- IF_TOC -->
@@ -546,7 +546,7 @@
         <br>
         Author: Dr. Zachary Wartell, 2012 at UNC Charlotte.<br>
         <em></em><br>
-        Revised: 2-17-2017<br>
+        Revised: 8-23-2018<br>
         <br>
         <br>
         <br>
@@ -819,15 +819,16 @@
       <section>
         <h1 id="Installation_and_Setup_of_OpenSSH">Installation and Setup of
           OpenSSH</h1>
-        <table style="width: 466px; height: 72px;" align="center" border="1">
+        <table style="width: 466px; height: 72px;" border="1" align="center">
           <tbody>
             <tr>
-              <td> All of Section 5 is <strong>only</strong> for
+              <td> All of Section 4 is <strong>only</strong> for
                 :&nbsp;&nbsp;&nbsp; <span class="File_Name">git-viscenter</span>
                 and <span class="File_Name">Bitbucket <br>
+                  <br>
                 </span>
-                <div style="text-align: center;">(ssh to <span class="File_Name">cci-git</span>
-                  is <u>not</u> reliable, use HTTPS instead) <span class="File_Name"></span></div>
+                <div style="text-align: center;">(for <span class="File_Name">cci-git</span>
+                  use HTTPS instead -- ssh has not been reliable) <span class="File_Name"></span></div>
               </td>
             </tr>
           </tbody>
@@ -1212,12 +1213,13 @@
       </section>
       <section>
         <h1 id="Full_Git_Tutorial">Full Git Tutorial</h1>
-        <p> If Unix style shells are new for you, you should read through [<b>1</b>]
-          after you install a suitable command-line shell and before you proceed
-          through this section. </p>
+        <p> If Unix style shells are new for you, you should read through <a class="Citation"
+            href="#UIUC2016">[UIUC2016]</a> after you install a suitable
+          command-line shell and before you proceed through this section. </p>
         <ul>
           <li> Read the following chapters from the ProGit book by Scott Chacon
-            available on-line [<b>2</b>]. </li>
+            available on-line <a class="Citation" href="#Chacon2016">[Chacon2016]</a>.
+          </li>
           <li> Do the exercises in the outline below. <br>
             <br>
             You can perform 99% of the exercises even without access to the Git
@@ -1593,13 +1595,12 @@
                 Below, for input text <span class="User_Input">remote_repo_path</span>,
                 substitute the appropriate item from the following:
                 <ol class="Instruction_Option">
-                  <li>[<em>YourServer</em>=<strong>bitbucket</strong>]&nbsp;&nbsp;
-                    git@bitbucket.org:<span class="User_Input">your_user_id</span>
-                  </li>
                   <li> [<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     https://cci-git.uncc.edu/<span class="User_Input">your_user_id</span></li>
-                  <li> <strong>[</strong><em>YourServer</em>=<strong>git-viscenter]</strong>
+                  <li><span class="User_Input"></span> <strong>[</strong><em>YourServer</em>=<strong>git-viscenter]</strong>
                     git-viscenter@cci-subv.uncc.edu:wartell<span class="User_Input">/ITCS_XXXX<em>/</em>students/FirstName_LastName</span></li>
+                  <li>[<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    https://cci-git.uncc.edu/<span class="User_Input">your_user_id</span></li>
                 </ol>
                 <br>
                 <table class="Code_Example" id="Code_Example_0_5" border="1">
@@ -1608,15 +1609,16 @@
                       <td><button onclick="Code_Example_Toggle('Code_Example_0_5');">▽</button></td>
                       <td>
                         <div style="height: 105px;"> <code class="Shell_Code_Input">
-                            $ mkdir git-micro-tutorial<br>
-                          </code> <code class="Shell_Code_Input">$ cd
-                            git-micro-tutorial</code> <br>
+                            $ mkdir git-full-tutorial<br>
+                          </code> <code class="Shell_Code_Input">$ cd git-</code><code
+                            class="Shell_Code_Input"><code class="Shell_Code_Input">full</code>-tutorial</code>
+                          <br>
                           <code class="Shell_Code_Input">$ git init</code> <code
                             class="Shell_Code_Output"> <br>
                             Initialized empty Git repository in
-                            git-micro-tutorial/.git/ </code> <br>
+                            git-full-tutorial/.git/ </code> <br>
                           <code class="Shell_Code_Input"> $ git remote add
-                            origin <span class="User_Input">remote_repo_path</span>/git-micro-tutorial.git
+                            origin <span class="User_Input">remote_repo_path</span>/git-full-tutorial.git
                             </code> </div> </td>
                     </tr>
                   </tbody>
@@ -2327,30 +2329,30 @@
                       <li>Add the course TA and Professor get their email from
                         class website
                         <div align="center">
-                          <table style="border-collapse:collapse;border:none" border="1"
-                            cellpadding="0" cellspacing="0">
+                          <table style="border-collapse:collapse;border:none" cellspacing="0"
+                            cellpadding="0" border="1">
                             <tbody>
                               <tr>
                                 <td style="width:2.0in;border:solid windowtext 1.0pt;
                                                                 padding:0in 5.4pt 0in 5.4pt"
-                                  valign="top" width="192">
+                                  width="192" valign="top">
                                   <p style="margin-left:.5in">Dr. Wartell</p>
                                 </td>
                                 <td style="width:184.1pt;border:solid windowtext 1.0pt;
                                                                 border-left:none;padding:0in 5.4pt 0in 5.4pt"
-                                  valign="top" width="245">
+                                  width="245" valign="top">
                                   <p style="margin-left:.5in">Zwartell</p>
                                 </td>
                               </tr>
                               <tr>
                                 <td style="width:2.0in;border:solid windowtext 1.0pt;
                                                                 border-top:none;padding:0in 5.4pt 0in 5.4pt"
-                                  valign="top" width="192">
+                                  width="192" valign="top">
                                   <p style="margin-left:.5in">TA</p>
                                 </td>
                                 <td style="width:184.1pt;border-top:none;border-left:
                                                                 none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"
-                                  valign="top" width="245">
+                                  width="245" valign="top">
                                   <p> <i>get their email from class website</i></p>
                                 </td>
                               </tr>
@@ -2779,8 +2781,9 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
         <ol class="Citation_List">
           <li id="UIUC2016"> [UIUC2016] Unix Primer - Basic Commands In the Unix
             Shell, <a href="http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html">http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html</a></li>
-          <li id="Chacon2016"> [Chacon2016] Scott Chacon, Pro Git, Apress, <a href="http://git-scm.com/book">http://git-scm.com/book</a>.
-          </li>
+          <li id="Chacon2016"> [Chacon2016] Scott Chacon, Pro Git, Apress,&nbsp;<strong>
+              2<sup>nd</sup> Edition</strong> at <a href="http://git-scm.com/book/en/v2/">
+              http://git-scm.com/book/en/<span style="background:yellow">v2</span>/.</a></li>
           <li id="Microsoft2016"> [Microsoft2016] "To add or change the values
             of environment variables", Windows XP Professional Product
             Documentation, Performance and maintenance. <a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true">http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true</a></li>
