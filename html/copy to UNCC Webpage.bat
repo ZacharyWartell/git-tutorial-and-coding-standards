@@ -12,6 +12,7 @@ if not defined DROPBOX_UNC_CHARLOTTE (
 echo Copying to Dropbox...
 robocopy "%CD%\Site Root" "%DROPBOX_UNC_CHARLOTTE%\UNCC webpage\public_html\Teaching\Git Tutorial" /mir /xf "*.bak"
 
+SET /P ENTER="Hit Enter to complete"
 exit 0
 
 REM below not working yet.
