@@ -779,7 +779,7 @@
             <li> [<em>YourOS</em>=<strong>Windows</strong>]
               <div class="OS_Windows">
                 <ol class="Instruction">
-                  <li> Download and Install Git for Windows, <a href="%20https://git-for-windows.github.io/">https://git-for-windows.github.io/</a>.
+                  <li> Download and Install Git for Windows, <a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a>.
                     <br>
                     <br>
                     This installs a minimal Unix style shell (called
@@ -1922,6 +1922,19 @@
         <section>
           <h2 id="Accessing_Git_Server_Using_SSH_Keys">Accessing Git Server
             Using SSH Keys </h2>
+          <br>
+          <table style="width: 466px; height: 72px;" border="1" align="center">
+            <tbody>
+              <tr>
+                <td> Skip this section if using server <strong>cci-git.uncc.edu</strong>.
+                  You will be using the alternate "HTTPS access method"
+                  described later. <br>
+                  <br>
+                  (Since 2016, OpenSSH has been unreliable with the <strong>cci-git</strong>
+                  server). </td>
+              </tr>
+            </tbody>
+          </table>
           [<em>YourServer</em>=<strong>git-viscenter</strong>,<strong>Bitbucket</strong>]
           <div class="Server_Supports_SSH">
             <p>For servers using the SSH access method, this section covers:</p>
@@ -2161,8 +2174,8 @@
               need to set it once).<br>
             </p>
             To test and verify read-access to the server, clone the welcome
-            repo.&nbsp;&nbsp; (Note, you may need to log into cci-git at least
-            once via a web browser to activate your account).<br>
+            repo.&nbsp;&nbsp; Note, you <u>need</u> to log into cci-git at
+            least once via a web browser to activate your account.<br>
             <br>
             <table class="Code_Example" id="Code_Example_75_1" border="1">
               <tbody style="height: 105px;">
@@ -2284,7 +2297,7 @@
                       </li>
                       <li>Add the TA and Professor (get their UNCC user name
                         from their email address) under People. Give both of
-                        them Reporter access in the <span class="Program_Name">Project
+                        them <b>Reporter</b> access in the <span class="Program_Name">Project
                           Access</span> menu.&nbsp;Select <span class="Program_Name">Add
                           Users to Project</span>.<br>
                         <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Add-Users.png"
