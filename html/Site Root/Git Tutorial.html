@@ -546,7 +546,10 @@
         <br>
         Author: Dr. Zachary Wartell, 2012 at UNC Charlotte.<br>
         <em></em><br>
-        Revised: 8-23-2018<br>
+        Revised: 8-30-2018 <sup>(<a href="https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards/commits/master">git
+            logs</a>)</sup><br>
+        <br>
+        <br>
         <br>
         <br>
         <br>
@@ -573,12 +576,16 @@
           Charlotte and targets courses taught by the author, Prof. Zachary
           Wartell.</p>
       </section>
-      <section>
+      <section> <a name="Document-Configuration" id="Document-Configuration"></a>
         <h1 id="Document_Configuration" class="nocount">Document Configuration</h1>
         <!-- <button class="Text_Button" onclick="Div_Toggle('Server_Supports_SSH');"> SSH </button> -->
         <p> Parts of this document are specific to particular operating systems,
-          Git servers, etc. You can customize what parts are displayed or hidden
-          by selecting the following options:</p>
+          and particular Git servers.&nbsp;&nbsp; Your instructor will tell you
+          what git server to use for your class and will tell you what operating
+          systems are allowable in your class.</p>
+        <p>Using this information, select the Git server and the operating
+          system you are using below.&nbsp;&nbsp; Making this selection will
+          display only relevant sections of this document (and hide the others).</p>
         <!--
 <button class="Text_Button" onclick="Div_Toggle('Server_Git_Viscenter');Div_Toggle('Server_Supports_SSH');"> git-viscenter </button>           <button class="Text_Button" onclick="Div_Toggle('Server_Bitbucket');Div_Toggle('Server_Supports_SSH');"> Bitbucket </button>                 <button class="Text_Button" onclick="Div_Toggle('Server_Cci_Git');"> cci-git </button>           -->
         <form name="System_Configuration">
@@ -635,7 +642,9 @@
             server. When there is a list of instructions that vary for each
             specific system, these instructions are numbered using Greek
             letters: α,β, γ, etc. -- this indicates the reader should perform
-            only <u>one</u> of the listed instructions.</li>
+            only <u>one</u> of the listed instructions.<br>
+            <br>
+          </li>
           <li><b>Server:&nbsp; </b>Your instructor will tell you which Git
             server you will use for your course work. It will be one of the
             following:
@@ -658,8 +667,15 @@
               </li>
             </ul>
             <ul>
-              <li> [<i>YourServer</i>=<span class="File_Name">Bitbucket</span>]</li>
+              <li> [<i>YourServer</i>=<span class="File_Name">Bitbucket</span>]<br>
+              </li>
             </ul>
+            <br>
+            As long as you configure the settings in the <a href="#Document-Configuration">Document
+              Configuration</a> section (above), then the detailed instructions
+            will only be displayed for the Git server you selected (while the
+            details for the other servers will remain hidden). <br>
+            <br>
           </li>
           <li><b>Operating System:</b> Your instructor will tell you which
             operating systems you must use for your course work. Instructions in
@@ -672,7 +688,13 @@
             </ul>
             <p>Depending on the course you are taking you may be required to use
               only one designated operating system. This information will be
-              given to you in class.</p>
+              given to you in class.<br>
+              <br>
+              As long as you configure the settings in the <a href="#Document-Configuration">Document
+                Configuration</a> section (above), then the detailed
+              instructions will only be displayed for the operating system you
+              selected (while the details for the other os's will remain
+              hidden).</p>
           </li>
           <li><b>Screen Shot Figures</b>: Most screen captures in this document
             can be zoomed to full size by clicking on the image.&nbsp;&nbsp;
@@ -796,7 +818,7 @@
                     information for any command by typing a command name with
                     just the parameter <em>--help</em>.&nbsp;&nbsp;&nbsp; To
                     find the complete man pages for a given Unix command, we
-                    suggest using <a href="https://www.gnu.org/manual/manual.en.htmlhttps://www.gnu.org/manual/manual.en.html">https://www.gnu.org/manual/manual.en.htmlcomman</a>.&nbsp;&nbsp;&nbsp;
+                    suggest using <a href="https://www.gnu.org/manual/manual.en.html">https://www.gnu.org/manual/manual.en.html</a>.&nbsp;&nbsp;&nbsp;
                     (There are ways to install the Unix man command and man
                     pages into git-bash, but it is generally <u>not</u> worth
                     the effort). <br>
@@ -820,19 +842,19 @@
           </ol>
         </section>
         <section>
-          <h2 id="Installation_and_Setup_of_Git_GUIs">Installation and Setup of
-            Git GUI’s</h2>
+          <h2 id="Installation_and_Setup_of_Git_GUIs">[Optional] Installation
+            and Setup of Git GUI’s</h2>
           <p> Generally, the Git instructions in this document and any Git
             instructions given in this course will be given using Git
             command-line examples for generality.&nbsp; But many GUI Git tools
             are available as well. Use of GUI Git tools is <u>optional</u>. </p>
           <ol class="Instruction_Option">
             <li> [<em>YourOS</em>=<strong>Window</strong>] <br>
-              Download and install TortoiseGit from <a href="Download%20and%20install%20TortoiseGit%20from%20https://code.google.com/p/tortoisegit/.">https://code.google.com/p/tortoisegit/</a>.
-            </li>
+              Download and install TortoiseGit from <a href="https://tortoisegit.org/"
+                target="_blank">https://tortoisegit.org/</a></li>
             <li> [<em>YourOS</em>=<strong>Mac/Linux</strong>] <br>
-              Various Git GUIs are found here <a href="http://git-scm.com/downloads/guis.%20%20">http://git-scm.com/downloads/guis</a>.&nbsp;
-              </li>
+              Various Git GUIs are found here <a href="http://git-scm.com/downloads/guis.%20%20"
+                target="_blank">http://git-scm.com/downloads/guis</a>.&nbsp; </li>
           </ol>
         </section>
       </section>
@@ -919,10 +941,10 @@
                 </div>
               </li>
               <li> [<em>YourOS</em>=<strong>Linux</strong>] Generally this OS
-                already has OpenSSH installed; if not see <a href="http://www.openssh.org/">http://www.openssh.org/</a>.
-              </li>
+                already has OpenSSH installed; if not see <a href="http://www.openssh.org/"
+                  target="_blank">http://www.openssh.org/</a>. </li>
               <li> [<em>YourOS</em>=<strong>Mac</strong>] Download and Install
-                OpenSSH from <a href="%20http://www.openssh.org/">
+                OpenSSH from <a href="http://www.openssh.org/" target="_blank">
                   http://www.openssh.org/ </a> </li>
             </ol>
           </section>
@@ -1665,6 +1687,9 @@
             reading ProGit Chapter 2 and then read the ProGit Chapter 3 <a href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Git
               Branching</a>.</li>
         </ol>
+        <p>You have now completed the Full Git Tutorial.</p>
+        <ol class="Instruction">
+        </ol>
       </section>
       <section>
         <h1 id="Micro_Git_Tutorial">Micro Git Tutorial</h1>
@@ -1786,11 +1811,19 @@
             Section 9.3 <a href="#Verify_Your_Remote_Repository">Verify Your
               Remote Repository</a> ).</li>
         </ol>
+        <p>You have now completed the Micro Git Tutorial.</p>
+        <ol>
+        </ol>
       </section>
       <section>
         <h1 id="Git_Server_Access">Git Server Access</h1>
-        This section’s subsections describe access method specifics for various
-        Git servers. Your instructor will tell you which server you should use.
+        This section’s subsections describe access methods specifics for various
+        Git servers.&nbsp; Your instructor will tell you which server you should
+        use (review Section <a href="#Guide_to_Reading_these_Instructions">Guide
+          to Reading these Instructions).</a><br>
+        <br>
+        The section is a reference section, the tutorial itself (Sections 1-6)
+        links to various subsections in this Section.
         <section>
           <h2 id="cci-gitunccedu_URL_List">cci-git.uncc.edu URL List</h2>
           [<em>YourServer</em>=<strong>cci-git</strong>]
@@ -1894,8 +1927,9 @@
                 <ol>
                   <li><a href="https://bitbucket.org/account/signup/">https://bitbucket.org/account/signup/</a></li>
                   <li> Details on their Academic Account Policy are at this <a
-                      href="https://confluence.atlassian.com/display/BITBUCKET/What+are+the+guidelines+for+academic+licenses">Link</a>.&nbsp;&nbsp;
-                    &nbsp;It is much better than the non-academic account!<br>
+                      href="https://confluence.atlassian.com/bitbucket/what-are-the-guidelines-for-academic-licenses-296094528.html"
+                      target="_blank">Link</a>.&nbsp;&nbsp; &nbsp;It is much
+                    better than the non-academic account!<br>
                   </li>
                 </ol>
               </li>
@@ -2247,10 +2281,10 @@
       </section>
       <section>
         <h1>Common Git Operations</h1>
-        <p> This section describes several operations referenced by other
-          tutorial sections of this document. Hence, this section assumes you
-          already have a command-line shell setup as described for your
-          designated Git server.</p>
+        <p>The section is a reference section, the tutorial itself (Sections
+          1-6) links to various subsections in this Section. </p>
+        <p> This section describes several common operations referenced by the
+          tutorial sections of this document.</p>
         <section>
           <h2><a id="Basic_Git_Operations" name="Basic_Git_Operations"></a>Basic
             Git Operations</h2>
@@ -2587,6 +2621,8 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
       </section>
       <section>
         <h1>Course Git Policies</h1>
+        <p>The section is a reference section, the tutorial itself (Sections
+          1-6) links to various subsections in this Section. </p>
         <section>
           <h2>Submitting Class Assignments</h2>
           <p>Submit all your assignments by using Git add, commit and push to
@@ -2812,19 +2848,25 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
         <!-- <ul class="Citation_List"> -->
         <ol class="Citation_List">
           <li id="UIUC2016"> [UIUC2016] Unix Primer - Basic Commands In the Unix
-            Shell, <a href="http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html">http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html</a></li>
+            Shell, <a href="http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html"
+              target="_blank">http://www.ks.uiuc.edu/Training/Tutorials/Reference/unixprimer.html</a></li>
           <li id="Chacon2016"> [Chacon2016] Scott Chacon, Pro Git, Apress,&nbsp;<strong>
-              2<sup>nd</sup> Edition</strong> at <a href="http://git-scm.com/book/en/v2/">
-              http://git-scm.com/book/en/<span style="background:yellow">v2</span>/.</a></li>
+              2<sup>nd</sup> Edition</strong> at <a href="http://git-scm.com/book/en/v2/"
+              target="_blank"> http://git-scm.com/book/en/<span style="background:yellow">v2</span>/.</a></li>
           <li id="Microsoft2016"> [Microsoft2016] "To add or change the values
             of environment variables", Windows XP Professional Product
-            Documentation, Performance and maintenance. <a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true">http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true</a></li>
-          <li id="GNU2016"> [GNU2016] Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html">http://www.gnu.org/software/bash/manual/html_node/index.html</a></li>
+            Documentation, Performance and maintenance. <a href="https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp"
+              target="_blank">https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp</a></li>
+          <li id="GNU2016"> [GNU2016] Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html"
+              target="_blank">http://www.gnu.org/software/bash/manual/html_node/index.html</a></li>
           <li id="WP2016a"> [WP2016a] "Environment Variable : Details",
-            Wikipedia. <a href="https://en.wikipedia.org/wiki/Environment_variable#Details">https://en.wikipedia.org/wiki/Environment_variable#Details</a></li>
-          <li id="WP2016b"> [WP2016b] "PATH (variable)", Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
+            Wikipedia. <a href="https://en.wikipedia.org/wiki/Environment_variable#Details"
+              target="_blank">https://en.wikipedia.org/wiki/Environment_variable#Details</a></li>
+          <li id="WP2016b"> [WP2016b] "PATH (variable)", Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29"
+              target="_blank">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
           <li id="Apple2016"> [Apple2016] “Environment Variables”, Mac Developer
-            Library. <a href="https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html%20">https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html</a></li>
+            Library. <a href="https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html%20"
+              target="_blank">https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPRuntimeConfig/Articles/EnvironmentVars.html</a></li>
         </ol>
         <ol class="Citation_List">
         </ol>
@@ -2841,6 +2883,7 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
       </section>
     </div>
     <!--
-        </div>      </div>    </div>     -->
+        </div>      </div>    </div>     --> <a name="Guide-to-Reading-these-Instructions"
+      id="Guide-to-Reading-these-Instructions"></a>
   </body>
 </html>
