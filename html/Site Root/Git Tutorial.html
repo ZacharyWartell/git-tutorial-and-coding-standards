@@ -546,7 +546,7 @@
         <br>
         Author: Dr. Zachary Wartell, 2012 at UNC Charlotte.<br>
         <em></em><br>
-        Revised: 8-30-2018 <sup>(<a href="https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards/commits/master"
+        Revised: 8-30-2018 11:20 am <sup>(<a href="https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards/commits/master"
             target="_blank">git logs</a>)</sup><br>
         <br>
         <br>
@@ -1571,8 +1571,8 @@
                       server.&nbsp; Read this tutorial’s Section <a href="#cci-gitunccedu_URL_List">cci-git.uncc.edu_URL_List</a>
                       and <a href="#Accessing_Git_Server_Using_HTTPS_and_Git">Accessing_Git_Server_Using_HTTPS_and_Git</a>
                       regarding the server URL.&nbsp; Then read this tutorial’s
-                      Section&nbsp;<a href="file:///C:/Users/zwartell/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/html/Site%20Root/Basic%20Git%20Operations">Basic
-                        Git Operations</a> on repo creation.
+                      Section&nbsp;<a href="#Basic_Git_Operations">Basic Git
+                        Operations</a> on repo creation.
                       <ol>
                         <li>Remember to make sure to <strong><u>share</u></strong>
                           your repo with the TA and Dr. Wartell’s UNCC accounts
@@ -1623,7 +1623,7 @@
                       tutorial’s Section <a href="#Bitbucket_URL_List">Bitbucket_URL_List</a>
                       and Section <a href="#Accessing_Git_Server_Using_SSH_Keys">Accessing_Git_Server_Using_SSH_Keys</a>
                       regarding the URL.&nbsp; Then read this tutorial’s
-                      Section&nbsp;<a href="#Basic_Git_Operations">Basic Git
+                      Section&nbsp;<a href="#Bitbucket_URL_List">Basic Git
                         Operations</a> on repo creation).&nbsp; Make sure to <strong><u>share</u></strong>
                       your repo with the TA and Dr. Wartell’s UNCC accounts. <br>
                       <br>
@@ -1640,8 +1640,11 @@
                     https://cci-git.uncc.edu/<span class="User_Input">your_user_id</span></li>
                   <li><span class="User_Input"></span> <strong>[</strong><em>YourServer</em>=<strong>git-viscenter]</strong>
                     git-viscenter@cci-subv.uncc.edu:wartell<span class="User_Input">/ITCS_XXXX<em>/</em>students/FirstName_LastName</span></li>
-                  <li>[<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    https://cci-git.uncc.edu/<span class="User_Input">your_user_id</span></li>
+                  <li>[<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: rgb(0, 0, 0); font-family: Courier, monospace; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">git@bitbucket.org:</span><span
+                      class="User_Input" style="background-color: grey; font-style: italic; color: white; text-decoration: underline; font-family: Courier, monospace; font-size: medium; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">your_userid/your_reponame</span><span
+                      style="color: rgb(0, 0, 0); font-family: Courier, monospace; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">.git</span>
+                    <span class="User_Input"></span></li>
                 </ol>
                 <br>
                 <table class="Code_Example" id="Code_Example_0_5" border="1">
@@ -2002,16 +2005,6 @@
                   <li>Load your private key into the ssh-agent daemon. </li>
                   <li> To verify ssh-agent access:&nbsp;
                     <ol>
-                      <li> <strong>[</strong><em>YourServer=</em><strong>git-viscenter]</strong><br>
-                        This lists the repositories you have access to.<br>
-                        <br>
-                        <em><u>Possible Errors</u></em>: If you are prompted for
-                        a password here, your public key has not been registered
-                        yet. </li>
-                      <li> [<em>YourServer=</em><strong>bitbucket</strong>]<br>
-                        The above<strong> </strong>verifies<strong> </strong>your<strong>
-                        </strong>ssh-agent is successfully passing your key
-                        through ssh to Bitbucket. </li>
                       <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
                         <table class="Code_Example" id="Code_Example_741_4c" border="1">
                           <tbody style="height: 105px;">
@@ -2056,6 +2049,16 @@
                           </tbody>
                         </table>
                       </li>
+                      <li> <strong>[</strong><em>YourServer=</em><strong>git-viscenter]</strong><br>
+                        This lists the repositories you have access to.<br>
+                        <br>
+                        <em><u>Possible Errors</u></em>: If you are prompted for
+                        a password here, your public key has not been registered
+                        yet. </li>
+                      <li> [<em>YourServer=</em><strong>bitbucket</strong>]<br>
+                        The above<strong> </strong>verifies<strong> </strong>your<strong>
+                        </strong>ssh-agent is successfully passing your key
+                        through ssh to Bitbucket. </li>
                     </ol>
                   </li>
                   <li> To verify read-access to the welcome repo do as follows:<br>
@@ -2063,10 +2066,10 @@
                     For input text <span class="User_Input">welcome_repo_path</span>
                     below, substitute the following based on your server::
                     <ol class="Instruction_Option">
-                      <li>[<strong>bitbucket</strong>]
-                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git</li>
                       <li>[<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         git@cci-git.uncc.edu:zwartell/welcome.git </li>
+                      <li>[<strong>bitbucket</strong>]
+                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git</li>
                       <li> [<strong>git-viscenter]</strong>
                         git-viscenter@cci-subv.uncc.edu:wartell/welcome.git<br>
                       </li>
@@ -2285,9 +2288,8 @@
           1-6) links to various subsections in this Section. </p>
         <p> This section describes several common operations referenced by the
           tutorial sections of this document.</p>
-        <section>
-          <h2><a id="Basic_Git_Operations" name="Basic_Git_Operations"></a>Basic
-            Git Operations</h2>
+        <section> <a id="Basic_Git_Operations" name="Basic_Git_Operations"></a>
+          <h2>Basic Git Operations</h2>
           <ol class="Instruction">
             <li><b>How to Clone Existing Repository</b><br>
               <br>
