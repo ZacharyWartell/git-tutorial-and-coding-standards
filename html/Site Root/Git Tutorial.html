@@ -593,9 +593,7 @@
             <p> <label>Git Server: </label> <input name="Git_Server" id="cci_git"
                 value="cci_git" checked="checked" onchange="onchange_Git_Server()"
                 type="radio"> <label for="cci_git">cci-git</label> <input name="Git_Server"
-                id="git_viscenter" value="git_viscenter" onchange="onchange_Git_Server()"
-                type="radio"> <label for="git_viscenter">git-viscenter</label>
-              <input name="Git_Server" id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"
+                id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"
                 type="radio"> <label for="bitbucket">Bitbucket</label> </p>
             <p> <label>Operating System: </label> <input name="Operating_System"
                 id="Windows" value="Windows" checked="checked" onchange="Div_Toggle('OS_Windows');"
@@ -652,19 +650,12 @@
               <li><span class="File_Name">cci-git.uncc.edu </span></li>
             </ul>
             <ul>
-              <li><span class="File_Name"> git-viscenter@cci-subv.uncc.edu</span></li>
-            </ul>
-            <ul>
               <li><span class="File_Name">bitbucket.org</span></li>
             </ul>
             <p> Instructions in this document that are specific to one of the
               above Git servers will have the following headings:</p>
             <ul>
               <li>[<i>YourServer</i>=<span class="File_Name">cci-git</span>] </li>
-            </ul>
-            <ul>
-              <li> [<i>YourServer</i>=<span class="File_Name">git-viscenter</span>]
-              </li>
             </ul>
             <ul>
               <li> [<i>YourServer</i>=<span class="File_Name">Bitbucket</span>]<br>
@@ -776,8 +767,8 @@
           labs should have both the command-line Git, OpenSSH and TortoiseGit
           installed.&nbsp; <br>
           If you are using UNCC computers with a different operating system
-          please email the TA. If your designated Git server is either <span class="File_Name">Bitbucket</span>
-          or <span class="File_Name">git-viscenter</span>, go to&nbsp;<a href="#Download_and_Install_OpenSSH">Download_and_Install_OpenSSH</a>.&nbsp;
+          please email the TA. If your designated Git server is either <span class="File_Name">Bitbucket</span>,
+          go to&nbsp;<a href="#Download_and_Install_OpenSSH">Download_and_Install_OpenSSH</a>.&nbsp;
           For <span class="File_Name">cci-git</span> skip to <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.
         </p>
         <p> <u><i>Computers Elsewhere</i></u>:&nbsp; If you are working on
@@ -786,9 +777,8 @@
           and <a href="#Installation_and_Setup_of_Git_GUIs">Installation_and_Setup_of_Git_GUIs</a>.&nbsp;
           After performing these installations, if your designated Git server is
           <span class="Server_Name"> cci-git </span>you can proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.
-          If your server is either&nbsp; <span class="File_Name">Bitbucket</span>
-          or <span class="File_Name">git-viscenter</span>, you also need to
-          also perform <a href="#Installation_and_Setup_of_OpenSSH">Installation_and_Setup_of_OpenSSH</a>
+          If your server is either&nbsp; <span class="File_Name">Bitbucket</span><span
+            class="File_Name"></span>, you also need to also perform <a href="#Installation_and_Setup_of_OpenSSH">Installation_and_Setup_of_OpenSSH</a>
           and then proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.
         </p>
         <section>
@@ -865,7 +855,7 @@
         use OpenSSH with <strong>cci-git. &nbsp; </strong>Skip all of Section
         4. You will use the HTTPS access method instead described later. <br>
         <br>
-        [<em>YourServer</em>=<strong>git-viscenter</strong>, <strong>Bitbucket</strong>]
+        [<em>YourServer</em>=<strong>Bitbucket</strong>]
         <div class="Server_Supports_SSH">
           <p> This section is for Git servers that use the SSH protocol and the
             SSH public-key mechanism is for security and authorization. Your
@@ -1089,18 +1079,6 @@
                 text editor. </li>
               <li> <a id="_Ref429762632"><b>Submit Your Public Key:</b></a>
                 <ol class="Instruction_Option">
-                  <li> [<i>YourServer</i>=<b>git-viscenter</b>]
-                    <div class="Server_Git_Viscenter"> The file you submit <i><u>must</u></i>
-                      be renamed from <span class="File_Name">id_rsa.pub</span>
-                      to <span class="User_Input"><u>your_uncc_id</u></span> <span
-                        class="File_Name">.pub</span> where your standard UNCC
-                      email is <span class="User_Input"><u>your_uncc_id</u></span>
-                      <span class="File_Name">@uncc.edu. </span> <br>
-                      <br>
-                      You submit your <span class="User_Input"><u>your_uncc_id</u></span>
-                      <span class="File_Name">.pub</span> file via a Moodle
-                      assignment indicated by your instructor. </div>
-                  </li>
                   <li> [<i>YourServer</i>=<b>Bitbucket</b>]
                     <div class="Server_Bitbucket">
                       <ol class="Instruction">
@@ -1196,8 +1174,7 @@
               <p style="text-align: center; border: none; padding: 0in" align="center">This
                 section is for Windows only</p>
               <p style="text-align: center; border: none; padding: 0in" align="center">
-                (only servers <span class="File_Name"> git-viscenter </span>and
-                <span class="File_Name">Bitbucket)</span> </p>
+                (only servers <span class="File_Name">Bitbucket)</span> </p>
             </div>
             [<i>YourOS</i>=Windows]
             <div class="OS_Windows">
@@ -1592,40 +1569,6 @@
                       </ol>
                     </div>
                   </li>
-                  <li> [<em>YourServer</em>=<strong>git-viscenter</strong>]
-                    <div class="Server_Git_Viscenter">
-                      <table class="Code_Example" id="Code_Example_0_4bi" border="1">
-                        <tbody style="height: 125px;">
-                          <tr>
-                            <td><button onclick="Code_Example_Toggle('Code_Example_0_4bi');">▽</button></td>
-                            <td>
-                              <div style="height: 125px;"> <code class="Shell_Code_Input">
-                                  $ git clone
-                                  git-viscenter@cci-subv.uncc.edu:wartell/<span
-                                    class="User_Input">ITCS_XXXX/students/John_Doe</span>/git-full-tutorial
-                                  </code> <br> <code class="Shell_Code_Output">
-                                  Cloning into 'git-full-tutorial'...<br>
-                                  Initialized empty Git repository in
-/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro-tutorial.git/<br>
-                                  warning: You appear to have cloned an empty
-                                  repository<br>
-                                </code> <span class="Shell_Code_Comment">
-                                  [..your output will differ slightly..] </span><br>
-                                <code class="Shell_Code_Input"> $ tar -zcf
-                                  git-tutorial.tar.gz git-tutorial </code> <br>
-                                <code class="Shell_Code_Input"> $ rm -rf
-                                  git-full-tutorial</code> <br>
-                                <span class="Shell_Code_Comment"> [yes, this is
-                                  a bit silly, but to simplify common
-                                  instructions with Bitbucket, you should delete
-                                  the local repo now] </span> </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <br>
-                    </div>
-                  </li>
                   <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]
                     <div class="Server_Bitbucket"> Create new remote repo on
                       Bitbucket called,<span class="File_Name">
@@ -1651,8 +1594,6 @@
                 <ol class="Instruction_Option">
                   <li> [<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     https://cci-git.uncc.edu/<span class="User_Input">your_user_id</span></li>
-                  <li><span class="User_Input"></span> <strong>[</strong><em>YourServer</em>=<strong>git-viscenter]</strong>
-                    git-viscenter@cci-subv.uncc.edu:wartell<span class="User_Input">/ITCS_XXXX<em>/</em>students/FirstName_LastName</span></li>
                   <li>[<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;&nbsp;&nbsp;&nbsp;
                     <span style="color: rgb(0, 0, 0); font-family: Courier, monospace; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">git@bitbucket.org:</span><span
                       class="User_Input" style="background-color: grey; font-style: italic; color: white; text-decoration: underline; font-family: Courier, monospace; font-size: medium; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">your_userid/your_reponame</span><span
@@ -1735,12 +1676,6 @@
                   Make sure to <strong><u>share</u></strong> your repo with the
                   TA and Dr. Wartell’s UNCC accounts </div>
               </li>
-              <li>[<em>YourServer</em>=<strong>git-viscenter</strong>]
-                <div class="Server_Git_Viscenter">
-                  <p> This sub-section is incomplete as <strong>git-viscenter </strong>is
-                    largely deprecated.</p>
-                  <!-- \todo --> </div>
-              </li>
               <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]
                 <div class="Server_Bitbucket"> <br>
                   Create new remote repo on Bitbucket called,<span class="File_Name">
@@ -1764,8 +1699,6 @@
                 https://cci-git.uncc.edu/<span class="User_Input">your_user_id</span></li>
               <li>[<em>YourServer</em>=<strong>bitbucket</strong>]&nbsp;&nbsp;
                 git@bitbucket.org:<span class="User_Input">your_user_id</span></li>
-              <li> <strong>[</strong><em>YourServer</em>=<strong>git-viscenter]</strong>
-                git-viscenter@cci-subv.uncc.edu:wartell</li>
             </ol>
             <table class="Code_Example" id="Code_Example_6_3" border="1">
               <tbody style="height: 105px;">
@@ -1877,58 +1810,7 @@
             </ol>
           </div>
         </section>
-        <section>
-          <h2 id="git-viscentercci-svnunccedu_URL_List">git-viscenter@cci-svn.uncc.edu
-            URL List</h2>
-          [<em>YourServer</em>=<strong>git-viscenter</strong>]
-          <div class="Server_Git_Viscenter">
-            <p> Accessing <span class="Server_Name">git-viscenter@cci-svn.uncc.edu
-                </span>uses the SSH protocol. Below is a list of the URL’s you
-              will typically use. See Section&nbsp;<a href="#Accessing_Git_Server_Using_SSH_Keys">Accessing_Git_Server_Using_SSH_Keys</a>
-              for instructions on accessing these git URLs.</p>
-            <p>Each student (and/or team) in class has already had a repository
-              directory created for them. The URL of a student’s Git repository
-              directory is as follows.</p>
-            <p> Assume your UNCC email address is:<br>
-              <br>
-              <a href="mailto:johndoe@uncc.edu">johndoe@uncc.edu</a> <br>
-              <br>
-              and your first and last name as it appears in the UNCC BANNER
-              system is: </p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              John Doe</p>
-            <p> Then your Git username is <span class="Program_Name">johndoe</span>
-              and your course Git repository URL is:<br>
-              <br>
-              <span class="File_Name">git-viscenter@cci-subv.uncc.edu:wartell/<span
-                  class="User_Input">ITCS_XXXX</span><em>/</em>students/John_Doe</span>
-            </p>
-            <p>Throughout this document, the text <span class="User_Input">ITCS_XXXX</span>
-              would be replaced by appropriate string for the class you are
-              taking. This will be announced in class.</p>
-            <p>Note, if your UNCC BANNER name contains an initial, the initial
-              is removed when creating the directory name of your course Git
-              &nbsp;repository URL. If your UNCC BANNER first or last name
-              contains multiple words, the spaces are removed from between the
-              multiple words in your first or last name when creating the
-              directory name. For example, if your UNCC BANNER name is:</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Smith, Jim B.</p>
-            <p>Then your repository URL suffix is:</p>
-            <div align="center"><span class="File_Name">students/Jim_Smith</span></div>
-            <p>If your UNCC BANNER name is:</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Van Winkle, Jim Bob</p>
-            <p>Then your Git repository URL suffix is:</p>
-            <div align="center"><span class="File_Name">students/JimBob_VanWinkle</span></div>
-            <p>For team projects, all members of the team will be given access
-              to a team directory with a name like:</p>
-            <div align="center"> <span class="File_Name">git-viscenter@cci-subv.uncc.edu:wartell/<span
-                  class="User_Input">ITCS_XXXX</span><em>/</em>students/<span class="User_Input">TeamName</span></span>
-            </div>
-            <p>Only the Professor and TA can change access permissions for
-              repo’s in <span class="Server_Name">git-viscenter</span>.</p>
-          </div>
+        <section><br>
         </section>
         <section>
           <h2 id="Bitbucket_URL_List">Bitbucket URL List</h2>
@@ -1977,7 +1859,7 @@
           use OpenSSH with <strong>cci-git. &nbsp; </strong>Use the HTTPS
           access method instead. <br>
           <br>
-          [<em>YourServer</em>=<strong>git-viscenter</strong>,<strong>Bitbucket</strong>]
+          [<em>YourServer</em>=<strong>Bitbucket</strong>]
           <div class="Server_Supports_SSH">
             <p>For servers using the SSH access method, this section covers:</p>
             <ol start="1" type="1">
@@ -2054,12 +1936,6 @@
                           </tbody>
                         </table>
                       </li>
-                      <li> <strong>[</strong><em>YourServer=</em><strong>git-viscenter]</strong><br>
-                        This lists the repositories you have access to.<br>
-                        <br>
-                        <em><u>Possible Errors</u></em>: If you are prompted for
-                        a password here, your public key has not been registered
-                        yet. </li>
                       <li> [<em>YourServer=</em><strong>bitbucket</strong>]<br>
                         The above<strong> </strong>verifies<strong> </strong>your<strong>
                         </strong>ssh-agent is successfully passing your key
@@ -2075,9 +1951,6 @@
                         git@cci-git.uncc.edu:zwartell/welcome.git </li>
                       <li>[<strong>bitbucket</strong>]
                         &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git</li>
-                      <li> [<strong>git-viscenter]</strong>
-                        git-viscenter@cci-subv.uncc.edu:wartell/welcome.git<br>
-                      </li>
                     </ol>
                     <table class="Code_Example" id="Code_Example_741_5" border="1">
                       <tbody style="height: 105px;">
@@ -2165,7 +2038,6 @@
                   </li>
                   <li> To verify the Pagent ssh-agent daemon is working:
                     <ol class="Instruction_Option">
-                      <li>[<em>YourServer</em>=<strong>git-viscenter</strong>] </li>
                       <li>[<em>YourServer</em>=<strong>bitbucket</strong>]</li>
                       <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
                       </li>
@@ -2180,9 +2052,7 @@
                       <li>[<strong>bitbucket</strong>]
                         &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git</li>
                       <li>[<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        git@cci-git.uncc.edu:zwartell/welcome.git </li>
-                      <li> [<strong>git-viscenter]</strong>
-                        git-viscenter@cci-subv.uncc.edu:wartell/welcome.git<br>
+                        git@cci-git.uncc.edu:zwartell/welcome.git<br>
                         <br>
                       </li>
                     </ol>
@@ -2346,40 +2216,6 @@
                       </li>
                     </ol>
                   </div>
-                </li>
-                <li><a name="_Ref431823815">[<em>YourServer</em><b>=git-viscenter</b>]</a>
-                  <div class="Server_Git_Viscenter"> <br>
-                    <table class="Code_Example" id="Code_Example_9_1_1" border="1">
-                      <tbody style="height: 249.5px;">
-                        <tr>
-                          <td><button onclick="Code_Example_Toggle('Code_Example_9_1_1');">▽</button></td>
-                          <td>
-                            <div> <code class="Shell_Code_Input">$ git clone
-                                git-viscenter@cci-subv.uncc.edu:wartell/<span class="User_Input">ITCS_XXXX</span>/students/<span
-                                  class="User_Input">John_Doe</span>/<span class="User_Input">NewRepoName</span></code><br>
-                              <code class="Shell_Code_Output"><!--[if gte mso 9]><xml>
- <o:OfficeDocumentSettings>  <o:RelyOnVML/>  <o:AllowPNG/>  <o:PixelsPerInch>120</o:PixelsPerInch> </o:OfficeDocumentSettings></xml><![endif]-->
-                                Cloning into 'NewRepoName'...<br>
-                                Initialized empty Git repository in
-                                /home/git-viscenter/repositories/wartell/
-                                ITCS_XXXX/students/John_Doe/NewRepoName.git <br>
-                                warning: You appear to have cloned an empty
-                                repository </code><br>
-                              <span class="Shell_Code_Comment">… your output
-                                will differ slightly..] </span><br>
-                              <br>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <br>
-                    The above works as long as you were give “Create”
-                    permissions under the indicated Note, git-viscenter uses the
-                    gitolite server which has a special feature that creates a
-                    remote repo if it does not already exist when you attempt to
-                    clone it.&nbsp;git-viscenter access permissions are managed
-                    by the TA and generally already set-up for the course </div>
                 </li>
                 <li>[<em>YourServer</em><b>=Bitbucket</b>]
                   <div class="Server_Bitbucket">
@@ -2577,7 +2413,7 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
                     </ol>
                   </div>
                 </li>
-                <li>[<em>YourServer</em>=<strong>git-viscenter,Bitbucket</strong>]
+                <li>[<em>YourServer</em>=<strong>Bitbucket</strong>]
                   <div class="Server_Git_Viscenter Server_Bitbucket"> <br>
                     <br>
                     Perform the same instructions as above, Option II, for [<strong>cci-git</strong>]
@@ -2587,37 +2423,15 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
                     with<br>
                     &nbsp;[<strong>bitbucket</strong>]&nbsp;&nbsp;&nbsp;<span class="Server_Name">
                       git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u>&nbsp;</span><br>
-                    &nbsp;[<strong>git-viscenter]</strong>&nbsp;<span class="Server_Name">git-viscenter@cci-subv.uncc.edu:wartell/<u><span
-                          class="User_Input">ITCS_XXXX</span></u><em>/</em>students/<u><span
-                          class="User_Input">FirstName_LastName</span></u> </span>
-                  </div>
+                    &nbsp; <span class="Server_Name"><u><span class="User_Input"></span></u>
+                    </span> </div>
                 </li>
-                <li>[<em>YourServer</em>=<strong>Bitbucket</strong>] </li>
               </ol>
             </li>
             <li><strong> Deleting a remote repo: </strong>
               <ol class="Instruction_Option">
                 <li>[<em>YourServer=</em><strong>cci-git</strong>] See <a href="https://cci-git.uncc.edu/help"
                     target="_blank">https://cci-git.uncc.edu/help</a><br>
-                </li>
-                <li> [<em>YourServer</em>=<strong>git-viscenter</strong>]
-                  <div class="Server_Git_Viscenter"> &nbsp;<br>
-                    <table class="Code_Example" id="Code_Example_9_1_9" border="1">
-                      <tbody>
-                        <tr>
-                          <td><button onclick="Code_Example_Toggle('Code_Example_9_1_9');">▽</button></td>
-                          <td>
-                            <div> <code class="Shell_Code_Input">$ssh
-                                git-viscenter@cci-subv.uncc.edu D<br>
-                                <span class="Shell_Code_Comment">[ … help
-                                  documentation will be displayed..]</span> </code>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    (For Windows using Git-Bash substitute&nbsp;ssh&nbsp;above
-                    with&nbsp;plink) </div>
                 </li>
                 <li>[<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;<em>See
                     Bitbucket Website.</em></li>
