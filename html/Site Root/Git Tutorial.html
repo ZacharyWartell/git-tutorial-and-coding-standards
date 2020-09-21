@@ -1781,7 +1781,7 @@
           <h2 id="cci-gitunccedu_URL_List">cci-git.uncc.edu URL List</h2>
           [<em>YourServer</em>=<strong>cci-git</strong>]
           <div class="Server_Cci_Git">
-            <p> Access <span class="Server_Name"> cci-git.uncc.edu </span>use
+            <p> Access <span class="Server_Name"> cci-git.uncc.edu </span>using
               the HTTPS protocol. Below is a list of the URL’s you will
               typically use. See Section <a href="#Accessing_Git_Server_Using_HTTPS_and_Credentials">Accessing_Git_Server_Using_HTTPS_and_Credentials</a>
               for instructions on accessing these git URLs.<br>
@@ -2213,23 +2213,32 @@
                         <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Project_Settings2.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
-                      <li>Next, you add access permission for the group of staff
-                        for your class.&nbsp;&nbsp; Depending on what course you
-                        are in, the group name will be something like
-                        ITCS-3120-Staff, ITCS-6120-Staff, etc.<br>
+                      <li>This opens the<span class="Program_Name"> Project
+                          members</span> tab (shown below).&nbsp; Now, you will
+                        add access permission for each staff member in your
+                        course.&nbsp;&nbsp; Staff members include:<br>
+                        <ul>
+                          <li>the professor</li>
+                          <li>each TA</li>
+                        </ul>
                         <br>
-                        Select <span class="Program_Name">Invite Group</span>.&nbsp;
-                        Select the appropriate group name.&nbsp;&nbsp; Give that
-                        group <b>Reporter</b> access in the <span class="Program_Name">Project
-                          Access</span> menu.&nbsp; Then select&nbsp; <span class="Program_Name">"Invite"</span>.
+                        (1) Select <span class="Program_Name">Invite Member</span>.&nbsp;
+                        (2) Select GitLab member using the staff members email
+                        address or name (available in Canvas).&nbsp;&nbsp; (3)
+                        In the <span class="Program_Name">Choose a role
+                          Permission</span> menu, give the member <b>Reporter</b>
+                        permission.&nbsp;&nbsp; (4) Then select&nbsp; <span class="Program_Name">"Invite"</span>.
+                        <br>
+                        <br>
+                        Repeat (2) through (4) for each staff member.<br>
+                        <br>
+                        After that the added staff members should appear in the
+                        <span class="Program_Name"></span><span class="Program_Name">Existing
+                          members and Groups</span> list.<br>
                         <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Add-Members.png"
                             alt="TortoiseGit-untracked.png" width="500"> </figure>
                       </li>
-                      <li>The result will be similar to below.<br>
-                        <figure class="Screen_Capture" tabindex="1"> <img src="images/cci-git-Existing-Members.png"
-                            alt="TortoiseGit-untracked.png" width="500"> </figure>
-                      </li>
-                      <li> Finally, you should disable the Auto DevOps feature
+                      <li>Finally, you should disable the Auto DevOps feature
                         for your project -- otherwise the Auto DevOps feature
                         will run "CI/CD" functionality that you do not need when
                         you make commits and you will likely get error messages
