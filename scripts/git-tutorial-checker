@@ -1,0 +1,126 @@
+#!/bin/sh
+# \author Zachary Wartell, ... 
+
+# [WORK IN PROGRESS]
+
+# \brief Helper script to process and grade Git Tutorial
+
+# Usage: 
+#    git-tutorial-check student_userid
+
+# \todo make these command line options for situations where we have to re-run script due to 
+# weird/non-conformant student submissions, etc.
+clone=0
+#clone=0
+dotar=1
+#dotar=0
+
+mkdir $1 2> /dev/null
+
+pushd $1 > /dev/null
+
+# output results to log.txt and trace the file 
+rm -f log.txt
+tail -f log.txt &
+exec > log.txt 2>&1
+
+
+echo
+echo ---- CLONE 
+echo
+if [ $clone -eq 1 ]
+then
+	git clone https://cci-git.uncc.edu/$1/git-full-tutorial.git git-full-tutorial
+else
+	echo skipping clone
+fi
+
+pushd git-full-tutorial > /dev/null
+
+echo
+echo ---- TAR
+echo
+
+# allow for some student use of wrong name
+FILE=`ls git-tutorial*.tar.gz`
+
+if [ $dotar -eq 1 ]
+then
+	echo "tar --total --checkpoint=100 --checkpoint-action=dot -axf $FILE"
+	tar --total --checkpoint=100 --checkpoint-action=dot -axf $FILE 
+else
+	echo skipping tar 
+fi
+
+DIR=${FILE%.tar.gz}
+pushd $DIR > /dev/null
+
+echo
+echo ---- FILE LIST 
+echo
+# list important "top level" files and directories
+find . -maxdepth 2 ! \( -path "*.git*" \)
+
+echo
+echo ---- DELETING non-detailed grading stuff
+echo
+# after generating the file list (above), delete stuff we don't need to grade in detail 
+# in order to save us disk space
+# note, these run as background processes to allow rest of script run; the deletes can take while..
+# but if script crashes you need to decide whether to leave them running or to kill their pid
+rm -rf libgit2/* & 
+rm -rf mylibgit/* &
+ps -el | grep rm
+#rm -rf libgit2/* & 
+#rm -rf mylibgit/* &
+#pgrep -a rm
+
+echo
+echo ---- GIT LOGS
+echo
+
+#\todo ZJW: Have I forgotten any repo's below ?
+
+echo
+echo ----
+if [ -d "./simplegit-progit" ] 
+then
+	pushd simplegit-progit > /dev/null
+	git log
+	popd > /dev/null
+fi
+
+echo
+echo ----
+if [ -d "./HelloWorld" ] 
+then
+	pushd HelloWorld > /dev/null
+	git log
+	popd > /dev/null
+fi
+
+echo
+echo ----
+if [ -d "./Chapter_2_2" ] 
+then
+	pushd Chapter_2_2 > /dev/null
+	git log
+	popd > /dev/null
+fi
+
+
+popd > /dev/null
+
+
+popd > /dev/null
+
+echo 
+echo ---- DONE
+
+# stop redirect to log.txt
+# exec >&1 2>&1
+# remove tar checkpoints from log
+# sed -i "/tar: Read checkpoint [0-9]*/d" log.txt 
+
+popd > /dev/null
+
