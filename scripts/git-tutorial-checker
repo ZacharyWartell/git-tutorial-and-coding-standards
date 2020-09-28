@@ -10,7 +10,7 @@
 
 # \todo make these command line options for situations where we have to re-run script due to 
 # weird/non-conformant student submissions, etc.
-clone=0
+clone=1
 #clone=0
 dotar=1
 #dotar=0
