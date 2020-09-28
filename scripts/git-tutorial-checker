@@ -89,6 +89,7 @@ echo ----
 if [ -d "./simplegit-progit" ] 
 then
 	pushd simplegit-progit > /dev/null
+	pwd
 	git log
 	popd > /dev/null
 fi
@@ -98,6 +99,7 @@ echo ----
 if [ -d "./HelloWorld" ] 
 then
 	pushd HelloWorld > /dev/null
+	pwd
 	git log
 	popd > /dev/null
 fi
@@ -107,6 +109,7 @@ echo ----
 if [ -d "./Chapter_2_2" ] 
 then
 	pushd Chapter_2_2 > /dev/null
+	pwd
 	git log
 	popd > /dev/null
 fi
