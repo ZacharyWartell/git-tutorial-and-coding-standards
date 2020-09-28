@@ -55,6 +55,9 @@ fi
 DIR=${FILE%.tar.gz}
 pushd $DIR > /dev/null
 
+echo ---- DIRECTORY
+pwd
+
 echo
 echo ---- FILE LIST 
 echo
