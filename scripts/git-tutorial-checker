@@ -3,13 +3,31 @@
 
 # [WORK IN PROGRESS]
 
-# \brief Helper script to process and grade Git Tutorial
+# \brief Helper script to process and grade this Git Tutorial
 
 # Usage: 
+#
 #    git-tutorial-check student_userid
+#
+# Output:
+#
+# For student with userid student_userid
+#    - create directory call 'student_userid'
+#    - clone repo
+#    - create more subdirectories
+#    - tar unzip file
+#    - list first 2 levels of all files and directories in unzip .tar file directory
+#    - run git log in subdirectories 
+#    - all the above output appears on the command line and is also written to a file, log.txt, in the created subdirectory
+#
+# \todo add more semi-automatic grading/checking
+# \todo make script more robust to student submissions that don't conform to expectations
+# \todo make a variant for the git-micro-tutorial
 
-# \todo make these command line options for situations where we have to re-run script due to 
-# weird/non-conformant student submissions, etc.
+#
+# \todo make these into command line options for situations where we have to re-run script due to 
+# weird/non-conformant student submissions, etc., but don't want to redo the clone, tar, etc. for that student.
+#
 clone=1
 #clone=0
 dotar=1
