@@ -28,6 +28,11 @@
 # \todo make these into command line options for situations where we have to re-run script due to 
 # weird/non-conformant student submissions, etc., but don't want to redo the clone, tar, etc. for that student.
 #
+#
+# IDEAS
+#    git log | grep commit | wc -l
+# 
+
 clone=1
 #clone=0
 dotar=1
@@ -37,7 +42,7 @@ mkdir $1 2> /dev/null
 
 pushd $1 > /dev/null
 
-# output results to log.txt and trace the file 
+# redirect all command stdout and stderr output to log.txt and but also trace the file to display it on the console
 rm -f log.txt
 tail -f log.txt &
 exec > log.txt 2>&1
@@ -70,7 +75,7 @@ else
 	echo skipping tar 
 fi
 
-DIR=${FILE%.tar.gz}
+DIR=${FILE%.tar.gz}  # extract directory name removing the .tar.gz
 pushd $DIR > /dev/null
 
 echo ---- DIRECTORY
@@ -82,16 +87,23 @@ echo
 # list important "top level" files and directories
 find . -maxdepth 2 ! \( -path "*.git*" \)
 
+#\todo auto grading ideas: 
+#    - check the expected files in the above list
+#    - maybe use diff of a file containing the expect file list with the found file list and allow for a certain
+#      range of differences.
+
 echo
 echo ---- DELETING non-detailed grading stuff
 echo
-# after generating the file list (above), delete stuff we don't need to grade in detail 
-# in order to save us disk space
-# note, these run as background processes to allow rest of script run; the deletes can take while..
-# but if script crashes you need to decide whether to leave them running or to kill their pid
-rm -rf libgit2/* & 
+# ProGit book has students clone some huge repo's from github, we don't need to grade the contents in details
+# So after generating the file list (above), delete this big repo's in order to save us disk space.
+rm -rf libgit2/* &     
 rm -rf mylibgit/* &
+# Note, the above run as background processes to allow rest of script run because the deletes can take while..
+# If this script crashes, you need to decide whether to leave them running or to kill their pid, so
+# also print their pid's.
 ps -el | grep rm
+
 #rm -rf libgit2/* & 
 #rm -rf mylibgit/* &
 #pgrep -a rm
@@ -101,6 +113,10 @@ echo ---- GIT LOGS
 echo
 
 #\todo ZJW: Have I forgotten any repo's below ?
+
+#\todo auto grading ideas
+#   -[EASY]   just to line count on the commits and check for a expect number of lines
+#   -[MEDIUM] use a regex to test whether commit message roughly match the instructions images
 
 echo
 echo ----
@@ -147,4 +163,3 @@ echo ---- DONE
 # sed -i "/tar: Read checkpoint [0-9]*/d" log.txt 
 
 popd > /dev/null
-
