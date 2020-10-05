@@ -6,7 +6,7 @@ pages:
     - mkdir .public
     - mkdir .public/scripts
     - cp -r html/Site\ Root/* .public
-    - cp -r scripts/git-tutorial-troubleshooter .public/scripts
+    - cp scripts/git-tutorial-troubleshooter .public/scripts/git-tutorial-troubleshooter.sh
     - mv .public public
   artifacts:
     paths:
