@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="" />
+    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/html/Site Root/Git Tutorial.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="3111" column="84" lean-forward="true" selection-start-line="3111" selection-start-column="84" selection-end-line="3111" selection-end-column="84" />
+              <caret line="3111" column="77" selection-start-line="3111" selection-start-column="77" selection-end-line="3111" selection-end-column="77" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -202,12 +204,12 @@
       <updated>1601153309586</updated>
       <workItem from="1601153311493" duration="2347000" />
       <workItem from="1601779811678" duration="589000" />
-      <workItem from="1601872461418" duration="1567000" />
+      <workItem from="1601872461418" duration="1814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4503000" />
+    <option name="totallyTimeSpent" value="4750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -239,7 +241,7 @@
     <entry file="file://$PROJECT_DIR$/html/Site Root/Git Tutorial.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="3111" column="84" lean-forward="true" selection-start-line="3111" selection-start-column="84" selection-end-line="3111" selection-end-column="84" />
+          <caret line="3111" column="77" selection-start-line="3111" selection-start-column="77" selection-end-line="3111" selection-end-column="77" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
