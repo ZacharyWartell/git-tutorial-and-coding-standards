@@ -4,7 +4,9 @@ pages:
   stage: deploy
   script:
     - mkdir .public
+    - mkdir .public/scripts
     - cp -r html/Site\ Root/* .public
+    - cp -r scripts/git-tutorial-troubleshooter .public/scripts
     - mv .public public
   artifacts:
     paths:
