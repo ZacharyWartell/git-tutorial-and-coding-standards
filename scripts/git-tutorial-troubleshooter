@@ -1,0 +1,181 @@
+#!/bin/bash
+# \author Zachary Wartell, ...
+# \copyright Zachary Wartell.  All rights reserved. 2020.
+# \brief See $USAGE
+#
+# https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols
+
+SERVER=cci-git.uncc.edu
+WELCOME_REPO=https://$SERVER/zwartell/welcome.git
+
+USAGE="
+git-tutorial-troubleshooter [UNCC_USER_ID]
+
+- UNCC_USER_ID : your UNCC user id (without the @uncc.edu) that is also used in URL of your repo on $SERVER
+
+This script creates a directory 'git-tutorial-troubleshooter-XXX' and attempts to git clone the repo,
+$WELCOME_REPO, from the server, $SERVER.
+It attempts to use all common methods of remote access protocols to clone the repo. 
+If a particular method fails, it reruns it a second time with verbose error tracing.
+The output is also saved to a file log.txt in the newly created directory with prefix git-tutorial-troubleshooter.
+The additional debugging info may be helpful to you, but it is primarily meant to be shared with the class TAs. 
+"
+
+
+if [[ $# -eq 0 ]]
+then 
+	echo -e "$USAGE"
+	exit 1
+fi
+
+USER_ID=$1
+
+DIR=`pwd`
+TEST_DIR=$(mktemp -d "$DIR"/git-tutorial-troubleshooter-XXX)
+#rm -rf $TEST_DIR 
+#mkdir $TEST_DIR 
+
+pushd "$TEST_DIR" > /dev/null
+
+# log outout to file and also display output on commandline
+rm -f log.txt
+tail -f log.txt &
+exec > log.txt 2>&1
+
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
+echo -e \
+"${green} --- Testing remotely git clone '$WELCOME_REPO'
+ ${reset}"
+
+#
+# Attempt HTTP clone bypassing Credential Manager
+#
+echo -e \
+"${green}- Attempting Git clone with HTTPS while bypassing any installed Credential Manager
+-    Note: By default this will prompt you for your UNCC SSO userid and password
+-          However, if you installed a Personal Access Token on $SERVER, git will expect your UNCC SSO userid and your PAT
+${reset}"
+
+rm -rf welcome-https
+git clone --config credential.helper= $WELCOME_REPO welcome-https
+GIT_CRED_MANG=$?
+if [[ $GIT_CRED_MANG -ne 0 ]]
+then
+	echo -e \
+"
+${red}
+- FAILED!
+${green}
+-   retrying while recording verbose debugging output
+-${reset}"
+	git clone --config credential.helper= --verbose $WELCOME_REPO welcome-https
+else
+	echo -e \
+"${green}
+- SUCCESS!
+${reset}"
+fi
+
+echo 
+echo 
+
+#
+# Attempt HTTP clone using Credential Manager (if installed)
+#
+echo -e \
+"${green}- Attempting Git clone with HTTPS while using Credential Manager (if installed)
+-    Note: By default this will prompt you for your UNCC SSO userid and password
+-          However, if you installed a Personal Access Token on $SERVER, git will expect your UNCC SSO userid and your PAT
+${reset}"
+
+rm -rf welcome-https-cm
+git clone $WELCOME_REPO welcome-https-cm
+GIT_CRED_MANG=$?
+if [[ $GIT_CRED_MANG -ne 0 ]]
+then
+	echo -e \
+"
+${red}
+- FAILED!
+${green}
+-   retrying while recording verbose debugging output
+-${reset}"
+	git clone --verbose $WELCOME_REPO welcome-https-cm
+else
+	echo -e \
+"${green}
+- SUCCESS!
+${reset}"
+fi
+
+echo 
+echo 
+#
+# Attempt ssh 
+#
+echo -e \
+"${green}--- Attempting Git clone with SSH
+-       Note: This will only be successful if you have properly setup your SSH git protocol.
+${reset}"
+
+rm -rf welcome-ssh
+git clone git@cci-git.uncc.edu:zwartell/welcome.git welcome-ssh
+GIT_SSH=$?
+if [[ $GIT_SSH -ne 0 ]]
+then
+	echo -e \
+"
+${red}
+- FAILED!
+${green}
+-   retrying while recording verbose debugging output
+-${reset}"
+	#echo 'ssh -vvv "$*"' > ssh && chmod +x ssh
+	ssh -vvvT git clone --verbose git@cci-git.uncc.edu:zwartell/welcome.git welcome-ssh
+	rm -f ssh
+else
+	echo -e \
+"${green}
+- SUCCESS!
+${reset}"
+fi
+
+echo 
+echo 
+
+#
+# Attempt Personal Access Token bypassing credential manager
+#
+rm -rf welcome-pat
+echo -e \
+"${green}--- Attempting Git clone with Personal Access Token without Credential Manager
+-       Note: This will only be successful if you have properly setup your PAT' 
+-${reset}"
+read -p '-  Enter your Personal Access Token: ' PAT ;
+git clone https://$USER_ID:$PAT@cci-git.uncc.edu/zwartell/welcome.git welcome-pat
+GIT_PAT=$?
+if [[ $GIT_PAT -ne 0 ]]
+then
+	echo -e \
+"
+${red}
+- FAILED!
+${green}
+-   retrying while recording verbose debugging output
+-${reset}"
+	git clone --verbose https://$USER_ID:$PAT@cci-git.uncc.edu/zwartell/welcome.git welcome-https
+else
+	echo -e \
+"${green}
+- SUCCESS!
+${reset}"
+fi
+
+echo 
+echo 
+#find . -maxdepth 2
+
+popd > /dev/null
