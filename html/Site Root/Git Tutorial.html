@@ -91,7 +91,8 @@
                 {
                     Div_Enable('Server_Cci_Git');
                     Div_Disable('Server_Supports_SSH');
-                    Div_Enable('Server_Supports_HTTPS');
+                    Div_Disable('Server_Supports_HTTPS');
+                    Div_Enable('Server_Supports_HTTPS_PAT');
                 } else if (document.System_Configuration.git_viscenter.checked == true)
                 {
                     Div_Enable('Server_Git_Viscenter');
@@ -163,8 +164,7 @@
                  * right now this must be manually kept in sync with the initial start of the Instruction Configuration Form
                  * 
                  * */        
-                Div_Enable('Server_Cci_Git');
-                Div_Enable('Server_Supports_HTTPS');
+                Div_Enable('Server_Cci_Git');               
                 Div_Enable('OS_Mac');
                 Div_Enable('OS_Unix');
                 Div_Enable('OS_Windows');
@@ -1589,29 +1589,28 @@
               <li> Create a new remote repo for your submission as follows:
                 <ol class="Instruction_Option">
                   <li> [<em>YourServer</em>=<strong>cci-git</strong>]
-                    <div class="Server_Cci_Git"> Create new remote repo on
-                      cci-git called,<span class="File_Name"> </span><span class="File_Name">git-full-tutorial</span>.&nbsp;&nbsp;
-                      This is best done using the Web Browser interface to the
-                      server.&nbsp; Appendix section <a href="#Accessing_Git_Server_Using_HTTPS_and_Credentials">Accessing_Git_Server_Using_HTTPS_and_Credentials</a>
-                      discusses how to activate you UNCC account and verify
-                      access. &nbsp; Next, Appendix section <a href="#Basic_Git_Operations">Basic
-                        Git Operations </a>discusses remote repo
-                      creation.&nbsp; Finally. whenever you create, or access a
-                      repo, in this course on cci-git, there are several remote
-                      repo URLs that you typically use.&nbsp;&nbsp; Appendix
-                      section <a href="#cci-gitunccedu_URL_List">cci-git.uncc.edu_URL_List</a>
-                      discuss both the read-only repo's available to all
-                      students <strong>and</strong> the naming convention you
-                      should follow to create your own private cci-git remote
-                      repo's used for your assignments (such as this tutorial).<br>
+                    <div class="Server_Cci_Git"> You will create new remote repo
+                      on cci-git called <span class="File_Name"></span><span class="File_Name">git-full-tutorial</span>.&nbsp;&nbsp;
                       <br>
-                      Use the above procedures to create new remote repo on
-                      cci-git called,<span class="File_Name"> </span><span class="File_Name">git-full-tutorial</span>.&nbsp;&nbsp;
-                      <br> <br>
-                      Do not forget to to <strong><u>share</u></strong> your
-                      repo with the TA and Dr. Wartell’s UNCC accounts (this was
-                      discussed in the Appendix section <a href="#Basic_Git_Operations">Basic
-                        Git Operations).</a> <br>
+                      <br>
+                      To do so you will use the Web Browser interface to the
+                      server.&nbsp; First activate your cci-git account and
+                      verify access as discussed in Appendix section <a href="#Accessing_Git_Server_Using_HTTPS_and_Credentials">Git
+                        Server HTTPS Protocol with UNCC SSO and Credential
+                        Manager</a>.&nbsp;&nbsp;&nbsp; Next review section <a href="#cci-gitunccedu_URL_List">cci-git.uncc.edu_URL_List</a>
+                      regarding the URL naming convention you
+                      must use for your cci-git repo's.&nbsp; Finally to create
+                      the remote <span class="File_Name"></span><span class="File_Name">git-full-tutorial</span>repo,
+                      see the details in Appendix <a href="#Basic_Git_Operations">Basic
+                        Git Operations.</a><br>
+                      <br>
+                      After creating the <span class="File_Name"></span><span class="File_Name">git-full-tutorial
+                        </span>repo on cci-git,&nbsp; <strong><u>share</u></strong>
+                      your repo with the TA and Dr. Wartell’s UNCC
+                      accounts.&nbsp;&nbsp; This is discussed in the Appendix
+                      section <a href="#Basic_Git_Operations">Basic Git
+                        Operations.<br>
+                      </a> <br>
                     </div>
                   </li>
                   <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]
@@ -2142,130 +2141,131 @@
         <section>
           <h2 class="Appendix" id="Accessing_Git_Server_Using_HTTPS_and_Credentials">
             Git Server HTTPS Protocol<a name="Accessing_Git_Server_Using_HTTPS_and_Git"></a>
-            (with Credential Manager)</h2>
-          [<em>YourServer</em>=<strong>cci-git</strong>]
-          <div class="Server_Supports_HTTPS"><br>
-          </div>
-          <strong>Warning</strong>: This access method is broken circa Fall
-          2020.&nbsp;&nbsp; Use the <a href="#Git_Server_Access_Token_Protocol">Git
-            Server Access Token Protocol</a> instead.
+            with UNCC SSO and Credential Manager</h2>
+          [<em>YourServer</em>=<strong>cci-git</strong>] <strong>Warning</strong>:
+          This access method is broken circa Fall 2020.&nbsp;&nbsp; Use the <a
+            href="#Git_Server_Access_Token_Protocol">Git Server Personal Access
+            Token Protocol</a> instead.
           <ul>
-            <li><em>Staff Note</em>: This methods worked throughout the exitence
+            <li><em>Staff Note</em>: This method worked throughout the exitence
               of cci-git.uncc.edu through Spring 2020.&nbsp;&nbsp; Starting Fall
               2020, something in the GitLab configuration or the UNCC SSO
-              configuraiton has changed which has broken the use of this
+              configuration has changed which has broken the use of this
               mechanism. &nbsp; In Dr. Wartell's experience such sudden
               University level changes are unlikely to get fixed fast enough to
               accommodate in course usage.</li>
           </ul>
-          <section>
-            <h3 id="cci-git-activate-UNCC-account"> Activate and Verify UNCC
-              Account </h3>
-            <p> If you have never used cci-git.uncc.edu before, your UNCC
-              account will need to be activated.&nbsp;&nbsp; To activate your
-              UNCC account you need to log into <a href="https://cci-git.uncc.edu/"
-                target="_blank">cci-git.uncc.edu</a> via a web browser. During
-              this first login, cci-git.uncc.edu creates an account for you that
-              will henceforth your UNCC's Single-Sign-On (SSO) username and
-              password. </p>
-            <p><u>Verify Activation of Account<em>:</em></u></p>
-            <p> To verify activation you will clone a repo from <span class="Server_Name">cci-git</span>
-              using the command-line.<br>
-            </p>
-            <p> First, as of September 2016, there is a problem with the <span
-                class="Server_Name">cci-git </span> server's SSL
-              certificate.&nbsp;&nbsp; You should disable Git’s automatic
-              checkings for a SSL certificate as follows: </p>
-            <table class="Code_Example" id="Code_Example_751_1" border="1">
-              <tbody>
-                <tr>
-                  <td><button onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button></td>
-                  <td> <code class="Shell_Code_Input"> $ git config --global
-                      http.sslVerify false<br>
-                    </code> </td>
-                </tr>
-              </tbody>
-            </table>
-            (The above Git setting is saved on your computer, so you only need
-            to set it once).<br>
-            <p></p>
-            <p> Now, to test and verify read-access to the server, clone the
-              welcome repo:&nbsp; </p>
-            <table class="Code_Example" id="Code_Example_75_1" border="1">
-              <tbody style="height: 105px;">
-                <tr>
-                  <td><button onclick="Code_Example_Toggle('Code_Example_75_1');"></button></td>
-                  <td>
-                    <div style="height: 105px;"> <code class="Shell_Code_Input">
-                        $ git clone
-                        https://cci-git.uncc.edu/zwartell/welcome.git </code><br>
-                      <span class="Shell_Code_Comment"> […you will prompted for
-                        you UNCC user id and password] </span><br>
-                      <code class="Shell_Code_Output"> Cloning into 'welcome'...<br>
-                        remote: Counting objects: 6, done.<br>
-                        remote: Compressing objects: 100% (4/4), done.<br>
-                        remote: Total 6 (delta 0), reused 0 (delta 0)<br>
-                        Unpacking objects: 100% (6/6), done.<br>
-                        Checking connectivity... done. </code><br>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <p></p>
-            <p> The next section discusses how to avoid repeatedly entering your
-              username and password when using the shell. </p>
-          </section>
-          <section>
-            <h3 class="Appendix" id="Using_Git_Credentials"> Using Git HTTPS
-              Protocol with Git Credential Manager</h3>
-            <p> By default, the HTTPS protocol will require you to enter your
-              UNCC username and password <u>everytime</u> you perform a <u>remote</u>
-              Git operation (clone, push, etc.).&nbsp;&nbsp;&nbsp; To save
-              typing, you may use the Git Credential Storage mechanism to avoid
-              typing in a password over and over again.<br>
-              <br>
-              Note, the instructions below are a repetition of those found in
-              this document Section <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.
-            </p>
-            <ol>
-              <li> Read ProGit <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
-                  Git Tools - Credential Storage </a>.&nbsp; Stop at section
-                Under the Hood. <br>
-              </li>
-              <li> Based on your operating system pick the appropriate
-                credential system as described in the above ProGit chapter.<br>
+          <div class="Server_Supports_HTTPS">
+            <section>
+              <h3 id="cci-git-activate-UNCC-account"> Activate and Verify UNCC
+                Account </h3>
+              <p> If you have never used cci-git.uncc.edu before, your UNCC
+                account will need to be activated.&nbsp;&nbsp; To activate your
+                UNCC account you need to log into <a href="https://cci-git.uncc.edu/"
+                  target="_blank">cci-git.uncc.edu</a> via a web browser. During
+                this first login, cci-git.uncc.edu creates an account for you
+                that will henceforth your UNCC's Single-Sign-On (SSO) username
+                and password. </p>
+              <p><u>Verify Activation of Account<em>:</em></u></p>
+              <p> To verify activation you will clone a repo from <span class="Server_Name">cci-git</span>
+                using the command-line.<br>
+              </p>
+              <p> First, as of September 2016, there is a problem with the <span
+                  class="Server_Name">cci-git </span> server's SSL
+                certificate.&nbsp;&nbsp; You should disable Git’s automatic
+                checkings for a SSL certificate as follows: </p>
+              <table class="Code_Example" id="Code_Example_751_1" border="1">
+                <tbody>
+                  <tr>
+                    <td><button onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button></td>
+                    <td> <code class="Shell_Code_Input"> $ git config --global
+                        http.sslVerify false<br>
+                      </code> </td>
+                  </tr>
+                </tbody>
+              </table>
+              (The above Git setting is saved on your computer, so you only need
+              to set it once).<br>
+              <p></p>
+              <p> Now, to test and verify read-access to the server, clone the
+                welcome repo:&nbsp; </p>
+              <table class="Code_Example" id="Code_Example_75_1" border="1">
+                <tbody style="height: 105px;">
+                  <tr>
+                    <td><button onclick="Code_Example_Toggle('Code_Example_75_1');"></button></td>
+                    <td>
+                      <div style="height: 105px;"> <code class="Shell_Code_Input">
+                          $ git clone
+                          https://cci-git.uncc.edu/zwartell/welcome.git </code><br>
+                        <span class="Shell_Code_Comment"> […you will prompted
+                          for you UNCC user id and password] </span><br>
+                        <code class="Shell_Code_Output"> Cloning into
+                          'welcome'...<br>
+                          remote: Counting objects: 6, done.<br>
+                          remote: Compressing objects: 100% (4/4), done.<br>
+                          remote: Total 6 (delta 0), reused 0 (delta 0)<br>
+                          Unpacking objects: 100% (6/6), done.<br>
+                          Checking connectivity... done. </code><br>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p></p>
+              <p> The next section discusses how to avoid repeatedly entering
+                your username and password when using the shell. </p>
+            </section>
+            <section>
+              <h3 class="Appendix" id="Using_Git_Credentials"> Using Git HTTPS
+                Protocol with Git Credential Manager</h3>
+              <p> By default, the HTTPS protocol will require you to enter your
+                UNCC username and password <u>everytime</u> you perform a <u>remote</u>
+                Git operation (clone, push, etc.).&nbsp;&nbsp;&nbsp; To save
+                typing, you may use the Git Credential Storage mechanism to
+                avoid typing in a password over and over again.<br>
                 <br>
-                <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
-                "store mode" because this will save your UNCC password
-                unencrypted on disk!
-                <ol class="Instruction_Option">
-                  <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you are
-                    using Git-Bash
-                    <table class="Code_Example" id="Code_Example_751_2" border="1">
-                      <tbody>
-                        <tr>
-                          <td><button onclick="Code_Example_Toggle('Code_Example_751_2');">▽</button></td>
-                          <td> <code class="Shell_Code_Input"> $ &nbsp;git
-                              config --global credential.helper manager<br>
-                            </code> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </li>
-                  <li> [<em>OS</em><strong>=<em>everything else</em></strong>]
-                    Follow links discussed in <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
-                      Git Tools - Credential Storage </a>. </li>
-                </ol>
-              </li>
-            </ol>
-          </section>
+                Note, the instructions below are a repetition of those found in
+                this document Section <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.
+              </p>
+              <ol>
+                <li> Read ProGit <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
+                    Git Tools - Credential Storage </a>.&nbsp; Stop at section
+                  Under the Hood. <br>
+                </li>
+                <li> Based on your operating system pick the appropriate
+                  credential system as described in the above ProGit chapter.<br>
+                  <br>
+                  <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
+                  "store mode" because this will save your UNCC password
+                  unencrypted on disk!
+                  <ol class="Instruction_Option">
+                    <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you are
+                      using Git-Bash
+                      <table class="Code_Example" id="Code_Example_751_2" border="1">
+                        <tbody>
+                          <tr>
+                            <td><button onclick="Code_Example_Toggle('Code_Example_751_2');">▽</button></td>
+                            <td> <code class="Shell_Code_Input"> $ &nbsp;git
+                                config --global credential.helper manager<br>
+                              </code> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                    <li> [<em>OS</em><strong>=<em>everything else</em></strong>]
+                      Follow links discussed in <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
+                        Git Tools - Credential Storage </a>. </li>
+                  </ol>
+                </li>
+              </ol>
+            </section>
+          </div>
         </section>
         <section>
           <h2 class="Appendix" id="Git_Server_Access_Token_Protocol"> Git Server
-            Access Token Protocol</h2>
+            Personal Access Token Protocol</h2>
           [<em>YourServer</em>=<strong>cci-git</strong>]
-          <div class="Server_Supports_AccessTokens"> <br>
+          <div class="Server_Supports_HTTPS_PAT"> <br>
             cci-git is a GitLab server.&nbsp; GitLab servers provides yet
             another server access protocol.&nbsp; It is called a Personal Access
             Token (PAT).
@@ -2298,7 +2298,7 @@
               </ol>
             </section>
             <section>
-              <h3 class="Appendix">Verifying the Access Token </h3>
+              <h3 class="Appendix">[BASIC] Verifying the Access Token </h3>
               <ol>
                 <li> Now, to test and verify read-access to the server, clone
                   the welcome repo:<br>
@@ -2356,7 +2356,7 @@
               </ol>
             </section>
             <section>
-              <h3 class="Appendix">Later Usage of the Access Token </h3>
+              <h3 class="Appendix">[BASIC] Later Usage of the Access Token </h3>
               In the future, whenever you use git bash to git clone a repo from
               cci-git.uncc.edu, you first get the standard repo URL such as:<br>
               <br>
@@ -2369,7 +2369,111 @@
               <div style="margin-left: 40px;">https://<code class="Shell_Code_Output"></code><span
                   class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
                   class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git</div>
-            </section>
+              <br>
+              <h3 class="Appendix" id="Using_Git_Credentials">[ADVANCED] Using
+                PAT plus a Git Credential Manager</h3>
+              <p> By default, the HTTPS with PAT protocol will require you to
+                enter your UNCC username and PAT password as describe in the
+                previous section I-6.3 and I-6.4.&nbsp;&nbsp; It also has the
+                detrimental effect of leaving your PAT password visible through
+                git remote -v.</p>
+              <p>It is possible to use the Git Credential Storage mechanism to
+                avoid this.&nbsp; However this may require installing additional
+                software depending on your operation system.</p>
+              <ol>
+                <li> Read ProGit <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
+                    Git Tools - Credential Storage </a>.&nbsp; Stop at section
+                  Under the Hood. <br>
+                </li>
+                <li> Based on your operating system pick the appropriate
+                  credential system as described in the above ProGit chapter.<br>
+                  <br>
+                  <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
+                  "store mode" because this will save your UNCC password
+                  unencrypted on disk!
+                  <ol class="Instruction_Option">
+                    <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you are
+                      using Git-Bash
+                      <table class="Code_Example" id="Code_Example_751_2" border="1">
+                        <tbody>
+                          <tr>
+                            <td><button>▽</button></td>
+                            <td> <code class="Shell_Code_Input"> $ &nbsp;git
+                                config --global credential.helper manager<br>
+                              </code> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                    <li> [<em>OS</em><strong>=<em>everything else</em></strong>]
+                      Follow links discussed in <a href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
+                        Git Tools - Credential Storage </a>. </li>
+                  </ol>
+                </li>
+              </ol>
+              With a Credential Manager installed as above you can use the PAT
+              Protocol as follows:<br>
+              <ol class="Instructions">
+                <li> To test and verify read-access to the server, clone the
+                  welcome repo:<br>
+                  <table class="Code_Example" id="Code_Example_75_1" border="1">
+                    <tbody style="height: 105px;">
+                      <tr>
+                        <td><br>
+                        </td>
+                        <td>
+                          <div style="height: 105px;"><code class="Shell_Code_Input">$
+                              git clone
+                              https://cci-git.uncc.edu/zwartell/welcome.git
+                              welcome </code><br>
+                            <code class="Shell_Code_Output">Cloning into
+                              'welcome'...<br>
+                              remote: Counting objects: 6, done.<br>
+                              remote: Compressing objects: 100% (4/4), done.<br>
+                              remote: Total 6 (delta 0), reused 0 (delta 0)<br>
+                              Unpacking objects: 100% (6/6), done.<br>
+                              Checking connectivity... done. </code><br>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ol>
+                    <li> When prmopted for you userid ID and password, you must
+                      enter you UNCC SSO userid and yout PAT password. </li>
+                  </ol>
+                </li>
+                <li> Note, the PAT recorded by the Credential Manager and not
+                  visible via git remote -v.<br>
+                  <table class="Code_Example" id="Code_Example_75_1" border="1">
+                    <tbody style="height: 60px;">
+                      <tr>
+                        <td><br>
+                        </td>
+                        <td>
+                          <div style="height: 60px;"><code class="Shell_Code_Input">$
+                              git remote -v</code><br>
+                            <code class="Shell_Code_Output">origin&nbsp;
+                              https://</code><code class="Shell_Code_Output">cci-git.uncc.edu/zwartell/welcome.git
+                              (fetch)<br>
+                              origin&nbsp; https://</code><code class="Shell_Code_Output">@cci-git.uncc.edu/zwartell/welcome.git
+                              (push) </code><br>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ol>
+              In the future, whenever you use git bash to git clone a repo from
+              cci-git.uncc.edu, you only need to get the standard repo URL such
+              as:<br>
+              <div style="margin-left: 80px;">https://cci-git.uncc.edu/<span class="User_Input">user_or_group_name</span>/<span
+                  class="User_Input">repo_name</span>.git</div>
+              <div style="margin-left: 80px;"><br>
+              </div>
+              With the Credential Manager installed you do <u>not</u> need to
+              augment the URL any further when using git bash.</section>
           </div>
         </section>
         <section>
