@@ -5,9 +5,9 @@ pages:
   script:
     - mkdir .public
     - mkdir .public/scripts
+    - cp -r html/Site\ Root/* .public
     - git show --no-patch --no-notes --pretty='%cd' $CI_COMMIT_SHA > REVISION.txt
     - . ./html/scripts/revision.sed
-    - cp -r html/Site\ Root/* .public
     - cp html/scripts/git-tutorial-troubleshooter .public/scripts/git-tutorial-troubleshooter.sh
     - mv .public public
   artifacts:
