@@ -7,6 +7,6 @@
 *.init  text eol=crlf
 
 # bash
-*  	text eol=crlf
+*  	text eol=lf
 *.sh	text eol=lf
 *.sed	text eol=lf
