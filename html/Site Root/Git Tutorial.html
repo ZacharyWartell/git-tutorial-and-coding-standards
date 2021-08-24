@@ -544,6 +544,45 @@
           box-shadow: inset -5px 0px 10px -5px #000;              
       }        
 
+      /*
+      Reference:
+          - https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+          - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
+      */
+      del:hover ~ span.Updated_Text_Popup_Note:before
+      {
+          content: "\2196  DELETE: ";
+          font-weight: bold;
+      }
+
+      ins:hover ~ span.Updated_Text_Popup_Note:before
+      {
+          content: "\2196  INSERT: ";
+          font-weight: bold;
+      }
+
+      del {
+          text-decoration:line-through;
+          color: red;
+          background-color: white;
+      }
+
+      del:hover ~ span.Updated_Text_Popup_Note
+      {
+          display: block;
+      }
+
+      span.Updated_Text_Popup_Note
+      {
+          position: absolute;
+          /* top: -2em; */
+          /* left: 50em; */
+          display: none;
+          background-color: lightblue;
+          border: black solid 1px;
+          padding: 5px;
+      }
+
     </style>
     <style media="print" type="text/css">        
             /*
@@ -1323,10 +1362,12 @@
             <ol>
               <li> Read ProGit 2.1:
                 <ol>
-                  <li> Chapter 2 refers to a set of files.&nbsp;&nbsp; Retrieve
-                    these files from this tutorial's website from this
-                    link&nbsp; <a href="./tutorial_example_files/HelloWorld.tar.gz">
-                      <span class="File_Name">HelloWorld.tar.gz</span> </a>.&nbsp;&nbsp;
+                  <li> Chapter 2 refers to a set of files.&nbsp;<del datatime="2021-08-23">Retrieve
+                      these files from this tutorial's website from this</del> <ins
+                      datatime="2021-08-23">Download in your browser</ins> these
+                    files from this tutorial's website from this link&nbsp; <a
+                      href="./tutorial_example_files/HelloWorld.tar.gz"> <span
+                        class="File_Name">HelloWorld.tar.gz</span> </a>.&nbsp;&nbsp;
                     After retrieval, uncompress the tar.gz file as follows:<br>
                     <table class="Code_Example" id="Code_Example_0_3ai" border="1">
                       <tbody style="height: 150px;">
