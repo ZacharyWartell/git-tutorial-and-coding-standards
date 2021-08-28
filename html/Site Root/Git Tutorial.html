@@ -555,6 +555,11 @@
           font-weight: bold;
       }
 
+      ins
+      {
+        background-color: greenyellow;
+        text-decoration-line: underline;
+      }
       ins:hover ~ span.Updated_Text_Popup_Note:before
       {
           content: "\2196  INSERT: ";
@@ -650,16 +655,23 @@
         <p> Using this information, select the Git server and the operating
           system you are using below.&nbsp;&nbsp; Making this selection will
           display only relevant sections of this document (and hide the others).
-        </p>
+          <br>
+          <br>
+          <span style="color: red; background: yellow">Note: Circa Fall
+            2021,only one Git server is being used by any courses using this
+            tutorial. Therefore instructions related to other git servers have
+            been (mostly) disabled and/or removed from this tutorial. <br>
+          </span> </p>
         <!--
         <button class="Text_Button" onclick="Div_Toggle('Server_Git_Viscenter');Div_Toggle('Server_Supports_SSH');"> git-viscenter </button>           <button class="Text_Button" onclick="Div_Toggle('Server_Bitbucket');Div_Toggle('Server_Supports_SSH');"> Bitbucket </button>                 <button class="Text_Button" onclick="Div_Toggle('Server_Cci_Git');"> cci-git </button>           -->
         <form name="System_Configuration">
           <fieldset> <legend>Display Instructions For:&nbsp;</legend>
             <p> <label>Git Server: </label> <input name="Git_Server" id="cci_git"
                 value="cci_git" checked="checked" onchange="onchange_Git_Server()"
-                type="radio"> <label for="cci_git">cci-git</label> <input name="Git_Server"
-                id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"
-                type="radio"> <label for="bitbucket">Bitbucket</label> </p>
+                type="radio"> <label for="cci_git">cci-git</label>
+              <!--
+                <input name="Git_Server"  id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"  type="radio">                <label for="bitbucket">Bitbucket</label>              -->
+            </p>
             <p> <label>Operating System: </label> <input name="Operating_System"
                 id="Windows" value="Windows" checked="checked" onchange="Div_Toggle('OS_Windows');"
                 type="checkbox"> <label for="Windows">Windows</label> <input name="Operating_System"
@@ -710,13 +722,17 @@
           </li>
           <li> <b>Server:&nbsp; </b>Your instructor will tell you which Git
             server you will use for your course work. It will be one of the
-            following:
+            following: <br>
+            <span style="color: red; background: yellow">Note: Circa Fall 2021,
+              the only Git server being used by any courses using this tutorial
+              is the one below. Therefore instructions related to other git
+              servers have been (mostly) disabled and/or removed from this
+              tutorial. </span>
             <ul>
               <li><span class="File_Name">cci-git.uncc.edu </span></li>
             </ul>
-            <ul>
-              <li><span class="File_Name">bitbucket.org</span></li>
-            </ul>
+            <!--
+            <ul>              <li><span class="File_Name">bitbucket.org</span></li>            </ul>             -->
             <p> Instructions in this document that are specific to one of the
               above Git servers will have the following headings: </p>
             <ul>
@@ -904,6 +920,30 @@
               Install Git from <a href="http://git-scm.com">http://git-scm.com/</a>.
             </li>
           </ol>
+          <section>
+            <h3 class="Section"><ins datetime="2021-08-27"> Native OS directory
+                structures and command-line shell paths </ins> </h3>
+            <p> Windows version <i>XYZ</i>, MacOS v<i>PDQ</i>, Unix flavor <i>ABC</i>,
+              Linux sub-variant <i>LXO</i>, etc. generally all provide a
+              graphical user interface shell with a visual interface for
+              searching and navigation through local and remote file systems
+              their directory structures. They are all intellectual derivatives
+              of <a href="https://www.youtube.com/watch?v=Cn4vC80Pv6Q"> Xerox
+                Star </a> which was based on decades of creative work at
+              academic, government and a few industrial research labs who gave
+              "it all away for free" (see for example the citation list in <a href="https://dl.acm.org/doi/10.1145/274430.274436">Meyers1998</a>).
+              </p>
+            <p> Depending on your OS and command-line shell, the mapping of the
+              OS's graphical shell's visual presentation of the file system's
+              directory structure and the path names used by a command-line
+              shell, such as bash, will vary.&nbsp;&nbsp;&nbsp; As an example
+              with Windows 10, a selected few of the most common Window's users
+              folders appear as follows in git-bash on Dr. Wartell's home
+              computer:</p>
+            <img src="images/windows-directory-structure.png" alt="" width="600px">
+            <p><br>
+            </p>
+          </section>
         </section>
         <section>
           <h2 class="Section" id="Installation_and_Setup_of_Git_GUIs">
@@ -1154,29 +1194,9 @@
                 text editor. </li>
               <li> <a id="_Ref429762632"><b>Submit Your Public Key:</b></a>
                 <ol class="Instruction_Option">
-                  <li> [<i>YourServer</i>=<b>Bitbucket</b>]
-                    <div class="Server_Bitbucket">
-                      <ol class="Instruction">
-                        <li> Create a Bitbucket account as described in <a href="#Bitbucket_URL_List">Bitbucket_URL_List</a>.
-                        </li>
-                        <li> Login to <span class="File_Name">Bitbucket</span>
-                          and goto <span class="File_Name">Manage Account:</span><br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Manage.png"
-                              alt="BitBucket"> </figure>
-                        </li>
-                        <li> Select <span class="File_Name"> SSH keys: </span><br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-SSHkeys.png"
-                              alt="SSH  Keys" width="500"> </figure>
-                        </li>
-                        <li> Follow the <span class="File_Name">Bitbucket’s</span>
-                          instructions to <span class="File_Name">Add key</span>
-                        </li>
-                        <li> Submit your <span class="File_Name">Bitbucket</span>
-                          user id to the TA and instructor via the Canvas
-                          assignment indicated by your instructor. </li>
-                      </ol>
-                    </div>
-                  </li>
+                  <!--
+                  <li> [<i>YourServer</i>=<b>Bitbucket</b>]                    <div class="Server_Bitbucket">                      <ol class="Instruction">                        <li> Create a Bitbucket account as described in <a href="#Bitbucket_URL_List">Bitbucket_URL_List</a>.                        </li>                        <li> Login to <span class="File_Name">Bitbucket</span>                          and goto <span class="File_Name">Manage Account:</span><br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Manage.png"                              alt="BitBucket"> </figure>                        </li>                        <li> Select <span class="File_Name"> SSH keys: </span><br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-SSHkeys.png"                              alt="SSH  Keys" width="500"> </figure>                        </li>
+                        <li> Follow the <span class="File_Name">Bitbucket’s</span>                          instructions to <span class="File_Name">Add key</span>                        </li>                        <li> Submit your <span class="File_Name">Bitbucket</span>                          user id to the TA and instructor via the Canvas                          assignment indicated by your instructor. </li>                      </ol>                    </div>                  </li>                  -->
                   <li> [<i>YourServer</i>=<b>cci-git</b>]
                     <div class="Server_Cci_Git"> <br>
                       <br>
@@ -1334,7 +1354,9 @@
               <li> Open a shell prompt (as installed in <a href="#Installation_and_Setup_of_Command-Line">Installation_and_Setup_of_Command-Line</a>).
                 </li>
               <li> Create a directory called ‘git-tutorial’ for performing and
-                saving the exercises. </li>
+                saving the exercises <ins datatime="2021-08-27"> (commands
+                  mkdir, etc. again see <a class="Citation" href="#UIUC2016">[UIUC2016]</a>.)
+                  </ins> </li>
             </ol>
           </li>
           <li> <strong> ProGit - Chapter 1</strong>:
@@ -1657,20 +1679,8 @@
                       </a> <br>
                     </div>
                   </li>
-                  <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]
-                    <div class="Server_Bitbucket"> Create new remote repo on
-                      Bitbucket called,<span class="File_Name">
-                        git-full-tutorial </span>.&nbsp; This is best done
-                      using the Web Browser interface to the server.&nbsp; Read
-                      this tutorial’s Section <a href="#Bitbucket_URL_List">Bitbucket_URL_List</a>
-                      and Section <a href="#Accessing_Git_Server_Using_SSH_Keys">Accessing_Git_Server_Using_SSH_Keys</a>
-                      regarding the URL.&nbsp; Then read this tutorial’s
-                      Section&nbsp;<a href="#Bitbucket_URL_List"> Basic Git
-                        Operations </a> on repo creation).&nbsp; Make sure to <strong><u>share</u></strong>
-                      your repo with the TA and Dr. Wartell’s UNCC accounts. <br>
-                      <br>
-                    </div>
-                  </li>
+                  <!--
+                  <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                    <div class="Server_Bitbucket"> Create new remote repo on                      Bitbucket called,<span class="File_Name">                        git-full-tutorial </span>.&nbsp; This is best done                      using the Web Browser interface to the server.&nbsp; Read                      this tutorial’s Section <a href="#Bitbucket_URL_List">Bitbucket_URL_List</a>                      and Section <a href="#Accessing_Git_Server_Using_SSH_Keys">Accessing_Git_Server_Using_SSH_Keys</a>                      regarding the URL.&nbsp; Then read this tutorial’s                      Section&nbsp;<a href="#Bitbucket_URL_List"> Basic Git                        Operations </a> on repo creation).&nbsp; Make sure to <strong><u>share</u></strong>                      your repo with the TA and Dr. Wartell’s UNCC accounts. <br>                      <br>                    </div>                  </li>                  -->
                 </ol>
               </li>
               <li> Create a local repo and link it to the remote repo you
@@ -1683,11 +1693,8 @@
                   <li> [<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     https://cci-git.uncc.edu/<span class="User_Input">your_user_id</span>
                   </li>
-                  <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span style="color: rgb(0, 0, 0); font-family: Courier, monospace; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">git@bitbucket.org:</span><span
-                      class="User_Input" style="background-color: grey; font-style: italic; color: white; text-decoration: underline; font-family: Courier, monospace; font-size: medium; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">your_userid/your_reponame</span><span
-                      style="color: rgb(0, 0, 0); font-family: Courier, monospace; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">.git</span>
-                    <span class="User_Input"></span> </li>
+                  <!--
+                  <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;&nbsp;&nbsp;&nbsp;                    <span style="color: rgb(0, 0, 0); font-family: Courier, monospace; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">git@bitbucket.org:</span><span                      class="User_Input" style="background-color: grey; font-style: italic; color: white; text-decoration: underline; font-family: Courier, monospace; font-size: medium; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">your_userid/your_reponame</span><span                      style="color: rgb(0, 0, 0); font-family: Courier, monospace; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">.git</span>                    <span class="User_Input"></span>                    </li>                  -->
                 </ol>
                 <br>
                 <table class="Code_Example" id="Code_Example_0_5" border="1">
@@ -1777,18 +1784,8 @@
                   discussed in the Appendix section <a href="#Basic_Git_Operations">Basic
                     Git Operations).</a></div>
               </li>
-              <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]
-                <div class="Server_Bitbucket"> <br>
-                  Create new remote repo on Bitbucket called,<span class="File_Name">
-                    git-micro-tutorial </span> . This is best done using the
-                  Web Browser interface to the server. Review&nbsp; <a href="#Bitbucket_URL_List">
-                    Bitbucket Server URL </a> and Section&nbsp;<a href="#Basic_Git_Operations">
-                    Basic Git Operations </a> on repo creation.&nbsp; Make sure
-                  to <strong><u>share</u></strong> it with the TA and Dr.
-                  Wartell’s Bitbucket accounts. <br>
-                  <br>
-                </div>
-              </li>
+              <!--
+              <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                <div class="Server_Bitbucket"> <br>                  Create new remote repo on Bitbucket called,<span class="File_Name">                    git-micro-tutorial </span> . This is best done using the                  Web Browser interface to the server. Review&nbsp; <a href="#Bitbucket_URL_List">                    Bitbucket Server URL </a> and Section&nbsp;<a href="#Basic_Git_Operations">                    Basic Git Operations </a> on repo creation.&nbsp; Make sure                  to <strong><u>share</u></strong> it with the TA and Dr.                  Wartell’s Bitbucket accounts. <br>                  <br>                </div>              </li>              -->
             </ol>
           </li>
           <li> Create <u>local</u> repo and link to the new <u>remote</u>
@@ -1800,8 +1797,8 @@
               <li> [<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span>
               </li>
-              <li> [<em>YourServer</em>=<strong>bitbucket</strong>]&nbsp;&nbsp;
-                git@bitbucket.org:<span class="User_Input">your_user_id</span> </li>
+              <!--
+              <li> [<em>YourServer</em>=<strong>bitbucket</strong>]&nbsp;&nbsp;                git@bitbucket.org:<span class="User_Input">your_user_id</span>              </li>              -->
             </ol>
             <table class="Code_Example" id="Code_Example_6_3" border="1">
               <tbody style="height: 105px;">
@@ -1917,46 +1914,10 @@
         </section>
         <section> <br>
         </section>
-        <section>
-          <h2 class="Appendix" id="Bitbucket_URL_List">Bitbucket URL List</h2>
-          [<em>YourServer</em>=<strong>Bitbucket</strong>]
-          <div class="Server_Bitbucket">
-            <p> Accessing <span class="Server_Name">Bitbucket </span>uses the
-              SSH protocol. Below is a list of the URL’s you will typically use
-              as well as instructions for creating a Bitbucket account. </p>
-            <ol class="Instruction">
-              <li> Each team member:&nbsp; Create an <u>academic account</u>
-                for yourself on <a href="https://bitbucket.org/">https://bitbucket.org/</a>&nbsp;
-                (If you do not already have one, of course).
-                <ol>
-                  <li><a href="https://bitbucket.org/account/signup/">https://bitbucket.org/account/signup/</a></li>
-                  <li> Details on their Academic Account Policy are at this <a
-                      href="https://confluence.atlassian.com/bitbucket/what-are-the-guidelines-for-academic-licenses-296094528.html"
-                      target="_blank">Link</a>.&nbsp;&nbsp; &nbsp;It is much
-                    better than the non-academic account!<br>
-                  </li>
-                </ol>
-              </li>
-              <li> <u>One</u> team member should create a Private Repository
-                for your Project then <u>share</u> that repo with:
-                <ol>
-                  <li>all other team members </li>
-                  <li> Dr. Wartell (Bitbucket UserID: zwartell)&nbsp; and TA’s
-                    Bitbucket UserID.<br>
-                  </li>
-                </ol>
-              </li>
-              <li> Instructions for setting access permission (“sharing”) your
-                Bitbucket repo are found the Bitbucket Website <br>
-              </li>
-            </ol>
-            Note, you will access Bitbucket using the ssh protocol.&nbsp;&nbsp;
-            This means the Bitbucket URL you should use will be something like,<span
-              class="File_Name"> git@bitbucket.org:<span class="User_Input">your_userid/your_reponame</span>.git
-              </span> <br> The course repo’s and material will be found at
-            URL’s such as:<span class="File_Name"> git@bitbucket.org:zwartell/<span
-                class="User_Input">reponame</span>.git&nbsp; </span> </div>
-        </section>
+        <!--
+        <section>          <h2 class="Appendix" id="Bitbucket_URL_List">Bitbucket URL List</h2>          [<em>YourServer</em>=<strong>Bitbucket</strong>]          <div class="Server_Bitbucket">            <p> Accessing <span class="Server_Name">Bitbucket </span>uses the              SSH protocol. Below is a list of the URL’s you will typically use              as well as instructions for creating a Bitbucket account. </p>            <ol class="Instruction">              <li> Each team member:&nbsp; Create an <u>academic account</u>                for yourself on <a href="https://bitbucket.org/">https://bitbucket.org/</a>&nbsp;                (If you do not already have one, of course).                <ol>                  <li><a href="https://bitbucket.org/account/signup/">https://bitbucket.org/account/signup/</a></li>                  <li> Details on their Academic Account Policy are at this <a                      href="https://confluence.atlassian.com/bitbucket/what-are-the-guidelines-for-academic-licenses-296094528.html"
+                      target="_blank">Link</a>.&nbsp;&nbsp; &nbsp;It is much                    better than the non-academic account!<br>                  </li>                </ol>              </li>              <li> <u>One</u> team member should create a Private Repository                for your Project then <u>share</u> that repo with:                <ol>                  <li>all other team members </li>                  <li> Dr. Wartell (Bitbucket UserID: zwartell)&nbsp; and TA’s                    Bitbucket UserID.<br>                  </li>                </ol>              </li>              <li> Instructions for setting access permission (“sharing”) your
+                Bitbucket repo are found the Bitbucket Website <br>              </li>            </ol>            Note, you will access Bitbucket using the ssh protocol.&nbsp;&nbsp;            This means the Bitbucket URL you should use will be something like,<span              class="File_Name"> git@bitbucket.org:<span class="User_Input">your_userid/your_reponame</span>.git              </span> <br> The course repo’s and material will be found at            URL’s such as:<span class="File_Name"> git@bitbucket.org:zwartell/<span                class="User_Input">reponame</span>.git&nbsp; </span> </div>        </section>        -->
         <section>
           <h2 class="Appendix" id="Accessing_Git_Server_Using_SSH_Keys">Git
             Server SSH Protocol </h2>
@@ -2065,9 +2026,8 @@
                     <ol class="Instruction_Option">
                       <li> [<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         git@cci-git.uncc.edu:zwartell/welcome.git </li>
-                      <li> [<strong>bitbucket</strong>]
-                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git
-                      </li>
+                      <!--
+                      <li> [<strong>bitbucket</strong>]                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git                      </li>                      -->
                     </ol>
                     <table class="Code_Example" id="Code_Example_741_5" border="1">
                       <tbody style="height: 105px;">
@@ -2597,101 +2557,14 @@
                       </ol>
                     </div>
                   </li>
-                  <li> [<em>YourServer</em><b>=Bitbucket</b>]
-                    <div class="Server_Bitbucket">
-                      <ol>
-                        <li> Select create:<br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Create.png"
-                              alt="TortoiseGit-untracked.png" width="500"> </figure>
-                        </li>
-                        <li> Here are some recommended settings (assume you name
-                          the repo MyRepoName)<br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Settings.png"
-                              alt="TortoiseGit-untracked.png" width="500"> </figure>
-                        </li>
-                        <li> Set up repo access permission (“sharing”): <br>
-                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Share.png"
-                              alt="TortoiseGit-untracked.png" width="500"> </figure>
-                        </li>
-                        <li> If the project is a team project, add your team
-                          members. </li>
-                        <li> Add the course TA and Professor get their email
-                          from class website
-                          <div align="center">
-                            <table style="border-collapse:collapse;border:none"
-                              cellspacing="0" cellpadding="0" border="1">
-                              <tbody>
-                                <tr>
-                                  <td style="width:2.0in;border:solid windowtext 1.0pt;
-                                                                padding:0in 5.4pt 0in 5.4pt"
-                                    width="192" valign="top">
-                                    <p style="margin-left:.5in">Dr. Wartell</p>
-                                  </td>
-                                  <td style="width:184.1pt;border:solid windowtext 1.0pt;
-                                                                border-left:none;padding:0in 5.4pt 0in 5.4pt"
-                                    width="245" valign="top">
-                                    <p style="margin-left:.5in">Zwartell</p>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td style="width:2.0in;border:solid windowtext 1.0pt;
-                                                                border-top:none;padding:0in 5.4pt 0in 5.4pt"
-                                    width="192" valign="top">
-                                    <p style="margin-left:.5in">TA</p>
-                                  </td>
-                                  <td style="width:184.1pt;border-top:none;border-left:
-                                                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"
-                                    width="245" valign="top">
-                                    <p> <i>get their email from class website</i></p>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </li>
-                        <li> <strong>Example:</strong>&nbsp;Example steps to
-                          populate the remote repo is by creating a local repo
-                          and performing a git push as follows:<br>
-                          <table class="Code_Example" id="Code_Example_9_1_6" border="1">
-                            <tbody>
-                              <tr>
-                                <td><button onclick="Code_Example_Toggle('Code_Example_9_1_6');">▽</button></td>
-                                <td>
-                                  <div style="height: 150px;"> <code class="Shell_Code_Input">
-                                      &nbsp;cd MyRepoName<br>
-                                      $ git init<br>
-                                    </code><code class="Shell_Code_Output">
-                                      Initialized empty Git repository in
-                                      git-micro-tutorial/.git/ </code><br>
-                                    <code class="Shell_Code_Input"> $ git remote
-                                      add origin git@bitbucket.org:<span class="User_Input">your_user_id</span>/MyRepoName.git
-                                      </code><br> <code class="Shell_Code_Output">
-                                      Cloning into 'git-micro-tutorial'...<br>
-                                      Initialized empty Git repository
-in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro-tutorial.git/<br>
-                                      warning: You appear to have cloned an
-                                      empty repository<br>
-                                    </code> &nbsp; &nbsp; &nbsp; &nbsp; <span class="Shell_Code_Comment">
-                                      [... your output will differ slightly..] <br>
-                                    </span><code class="Shell_Code_Input"> $ git
-                                      add . <br>
-                                      $ git commit<br>
-                                      $ echo "John Doe" &gt;&gt;
-                                      contributors.txt<br>
-                                      $ git add contributors.txt<br>
-                                      $ git commit -m 'Initial commit with
-                                      contributors'<br>
-                                      $ git push -u origin master </code><br>
-                                    <br>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </li>
-                      </ol>
-                    </div>
-                  </li>
+                  <!--
+                  <li> [<em>YourServer</em><b>=Bitbucket</b>]                    <div class="Server_Bitbucket">                      <ol>                        <li> Select create:<br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Create.png"                              alt="TortoiseGit-untracked.png" width="500"> </figure>                        </li>                        <li> Here are some recommended settings (assume you name                          the repo MyRepoName)<br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Settings.png"                              alt="TortoiseGit-untracked.png" width="500"> </figure>                        </li>                        <li> Set up repo access permission (“sharing”): <br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Share.png"
+                              alt="TortoiseGit-untracked.png" width="500"> </figure>                        </li>                        <li> If the project is a team project, add your team                          members. </li>                        <li> Add the course TA and Professor get their email                          from class website                          <div align="center">                            <table style="border-collapse:collapse;border:none"                              cellspacing="0" cellpadding="0" border="1">                              <tbody>                                <tr>                                  <td style="width:2.0in;border:solid windowtext 1.0pt;                                                                padding:0in 5.4pt 0in 5.4pt"
+                                    width="192" valign="top">                                    <p style="margin-left:.5in">Dr. Wartell</p>                                  </td>                                  <td style="width:184.1pt;border:solid windowtext 1.0pt;                                                                border-left:none;padding:0in 5.4pt 0in 5.4pt"                                    width="245" valign="top">                                    <p style="margin-left:.5in">Zwartell</p>                                  </td>                                </tr>                                <tr>                                  <td style="width:2.0in;border:solid windowtext 1.0pt;                                                                border-top:none;padding:0in 5.4pt 0in 5.4pt"                                    width="192" valign="top">                                    <p style="margin-left:.5in">TA</p>
+                                  </td>                                  <td style="width:184.1pt;border-top:none;border-left:                                                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"                                    width="245" valign="top">                                    <p> <i>get their email from class website</i></p>                                  </td>                                </tr>                              </tbody>                            </table>                          </div>                        </li>                        <li> <strong>Example:</strong>&nbsp;Example steps to                          populate the remote repo is by creating a local repo                          and performing a git push as follows:<br>                          <table class="Code_Example" id="Code_Example_9_1_6" border="1">
+                            <tbody>                              <tr>                                <td><button onclick="Code_Example_Toggle('Code_Example_9_1_6');">▽</button></td>                                <td>                                  <div style="height: 150px;"> <code class="Shell_Code_Input">                                      &nbsp;cd MyRepoName<br>                                      $ git init<br>                                    </code><code class="Shell_Code_Output">                                      Initialized empty Git repository in                                      git-micro-tutorial/.git/ </code><br>                                    <code class="Shell_Code_Input"> $ git remote                                      add origin git@bitbucket.org:<span class="User_Input">your_user_id</span>/MyRepoName.git                                      </code><br> <code class="Shell_Code_Output">                                      Cloning into 'git-micro-tutorial'...<br>                                      Initialized empty Git repositoryin/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro-tutorial.git/<br>
+                                      warning: You appear to have cloned an                                      empty repository<br>                                    </code> &nbsp; &nbsp; &nbsp; &nbsp; <span class="Shell_Code_Comment">                                      [... your output will differ slightly..] <br>                                    </span><code class="Shell_Code_Input"> $ git                                      add . <br>                                      $ git commit<br>                                      $ echo "John Doe" &gt;&gt;                                      contributors.txt<br>                                      $ git add contributors.txt<br>                                      $ git commit -m 'Initial commit with                                      contributors'<br>                                      $ git push -u origin master </code><br>                                    <br>                                  </div>                                </td>
+                              </tr>                            </tbody>                          </table>                        </li>                      </ol>                    </div>                  </li>                  -->
                 </ol>
               </li>
               <li> <strong>How to Push to New Remote Repository:</strong><br>
@@ -2797,20 +2670,9 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
                       </ol>
                     </div>
                   </li>
-                  <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]
-                    <div class="Server_Git_Viscenter Server_Bitbucket"> <br>
-                      <br>
-                      Perform the same instructions as above, Option II, for [<strong>cci-git</strong>]
-                      but replace:<br>
-                      &nbsp;&nbsp; &nbsp;&nbsp;<span class="Server_Name">
-                        https://cci-git.uncc.edu/<u> <span class="User_Input">your_uncc_user_id</span>
-                        </u>/ </span><br>
-                      with<br>
-                      &nbsp;[<strong>bitbucket</strong>]&nbsp;&nbsp;&nbsp;<span
-                        class="Server_Name"> git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u>&nbsp;
-                        </span><br> &nbsp; <span class="Server_Name"> <u><span
-                            class="User_Input"></span></u> </span> </div>
-                  </li>
+                  <!--
+                  <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                    <div class="Server_Git_Viscenter Server_Bitbucket"> <br>                      <br>                      Perform the same instructions as above, Option II, for [<strong>cci-git</strong>]                      but replace:<br>                      &nbsp;&nbsp; &nbsp;&nbsp;<span class="Server_Name">                        https://cci-git.uncc.edu/<u> <span class="User_Input">your_uncc_user_id</span>                        </u>/ </span><br>                      with<br>                      &nbsp;[<strong>bitbucket</strong>]&nbsp;&nbsp;&nbsp;<span                        class="Server_Name"> git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u>&nbsp;                        </span><br> &nbsp; <span class="Server_Name"> <u><span                            class="User_Input"></span></u> </span> </div>                  </li>
+                  -->
                 </ol>
               </li>
               <li> <strong> Deleting a remote repo: </strong>
@@ -2818,8 +2680,8 @@ in/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro
                   <li> [<em>YourServer=</em><strong>cci-git</strong>] See <a href="https://cci-git.uncc.edu/help"
                       target="_blank">https://cci-git.uncc.edu/help</a><br>
                   </li>
-                  <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;<em>
-                      See Bitbucket Website. </em> </li>
+                  <!--
+                  <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;<em>                      See Bitbucket Website. </em>                  </li>                  -->
                 </ol>
               </li>
             </ol>
