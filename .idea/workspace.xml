@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-updated text to reflect that GitLab (and other git WWW services) are changing the default branch name from 'master' to 'main'&#10;-fixed misc html errors/warnings">
+    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Git_Tutorial_and_Coding_Standards.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Git_Tutorial_and_Coding_Standards.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" afterDir="false" />
     </list>
@@ -124,30 +125,8 @@
       <workItem from="1604369295126" duration="1530000" />
       <workItem from="1619033309088" duration="919000" />
       <workItem from="1619153149346" duration="1500000" />
-      <workItem from="1630107215511" duration="9421000" />
+      <workItem from="1630107215511" duration="7208000" />
     </task>
-    <task id="LOCAL-00001" summary="-removed all mentioning of  Git WWW server Bitbucket because these days none of my courses nor projects use Bitbucket.&#10;-added section 3.1.1. &quot;Native OS directory structures and command-line shell paths&quot;">
-      <created>1630120355976</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1630120355976</updated>
-    </task>
-    <task id="LOCAL-00002" summary="-removed all mentioning of  Git WWW server Bitbucket because these days none of my courses nor projects use Bitbucket.&#10;-added section 3.1.1. &quot;Native OS directory structures and command-line shell paths&quot;">
-      <created>1630120421697</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1630120421697</updated>
-    </task>
-    <task id="LOCAL-00003" summary="-minor updates">
-      <created>1630120816255</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1630120816255</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -178,24 +157,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="-removed all mentioning of  Git WWW server Bitbucket because these days none of my courses nor projects use Bitbucket.&#10;-added section 3.1.1. &quot;Native OS directory structures and command-line shell paths&quot;" />
-    <MESSAGE value="-minor updates" />
-    <MESSAGE value="-updated text to reflect that GitLab (and other git WWW services) are changing the old default branch name from 'master' to 'main'" />
-    <MESSAGE value="-updated text to reflect that GitLab (and other git WWW services) are changing the default branch name from 'master' to 'main'&#10;-fixed misc html errors/warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="-updated text to reflect that GitLab (and other git WWW services) are changing the default branch name from 'master' to 'main'&#10;-fixed misc html errors/warnings" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/html/Site Root/Git Tutorial.html">
