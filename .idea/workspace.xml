@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-changed reference on Unix Primer to my variant of UIUC's Primer">
+    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-word smithing&#10;-re-org:  new subsection &quot;Git Authentication Protocols&quot;&#10;-re-org:  moved PAT protocol to first listed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +131,8 @@
       <workItem from="1630513407774" duration="3557000" />
       <workItem from="1630676270721" duration="1507000" />
       <workItem from="1631033417043" duration="2057000" />
-      <workItem from="1632142820890" duration="2288000" />
+      <workItem from="1632142820890" duration="2984000" />
+      <workItem from="1632426014100" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="-GitLab - changed location of Members dialog">
       <created>1630527623345</created>
@@ -148,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630676512613</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="-word smithing&#10;-re-org:  new subsection &quot;Git Authentication Protocols&quot;&#10;-re-org:  moved PAT protocol to first listed">
+      <created>1632147507219</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1632147507219</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -196,7 +203,8 @@
     <MESSAGE value="-minor typo's" />
     <MESSAGE value="-GitLab - changed location of Members dialog" />
     <MESSAGE value="-changed reference on Unix Primer to my variant of UIUC's Primer" />
-    <option name="LAST_COMMIT_MESSAGE" value="-changed reference on Unix Primer to my variant of UIUC's Primer" />
+    <MESSAGE value="-word smithing&#10;-re-org:  new subsection &quot;Git Authentication Protocols&quot;&#10;-re-org:  moved PAT protocol to first listed" />
+    <option name="LAST_COMMIT_MESSAGE" value="-word smithing&#10;-re-org:  new subsection &quot;Git Authentication Protocols&quot;&#10;-re-org:  moved PAT protocol to first listed" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/html/Site Root/Git Tutorial.html">
