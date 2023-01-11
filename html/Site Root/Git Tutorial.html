@@ -6,6 +6,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Git Tutorial</title>
+    <link rel="icon" href="favicon.ico">
     <!-- Experiment with Hypothesis annotation tool. Unless UNCC integrates it with Canvas, it seems to require students to create yet-another userid/password
          on the  Hypothes.is server.   Experience, indicates, students won't bother      -->
     <!-- DISABLED -->
@@ -706,7 +707,7 @@
         <p> This is a gradable tutorial built around the excellent book, Pro Git
           by Scott Chacon (<a href="http://git-scm.com/book">http://git-scm.com/book</a>).
           The tutorial is customized for the computing environment in CCI at UNC
-          Charlotte and targets courses taught by the author, Prof. Zachary
+          Charlotte and targzets courses taught by the author, Prof. Zachary
           Wartell. </p>
       </section>
       <section><a name="Document-Configuration" id="Document-Configuration"></a>
@@ -748,30 +749,22 @@
         <hr> </section>
       <section>
         <h1 class="Section" id="Prerequisites">Prerequisites</h1>
-        <p> This document assumes the reader has the following prerequisite
-          knowledge: </p>
+        <p> This assignment assumes the reader has prerequisite knowledge of
+          several topics.&nbsp; Elaboration on these topics and additional
+          resource materials are placed in sub-sections of this assignment at
+          the points when the knowledge is first needed.&nbsp; Such sub-section
+          have headings that are prefixed with the phrase
+          "[Pre-Req,]".&nbsp;&nbsp; For convenience, the complete list of
+          prerequisite topics are also listed below.</p>
         <ol class="Instruction">
-          <li> Basic knowledge of Unix style command-line shell. <br>
-            <br>
-            <em>Note</em>: The reader should understand Unix command-line shells
-            at the level discussed in <del datetime="2021-09-03"><a class="Citation"
-                href="#UIUC2016">[UIUC2016]</a></del> <ins datetime="2021-09-03"><a
-                class="Citation" href="#WART2021">[WART2021]</a></ins> . Section
-            <a class="Citation" href="#Installing_Git">Installing_Git</a>
-            discusses installing a suitable command-line shell for OS’s that do
-            not automatically come with one. All remaining sections assume
-            knowledge at the level of <del datetime="2021-09-03"><a class="Citation"
-                href="#UIUC2016">[UIUC2016]</a></del> <ins datetime="2021-09-03"><a
-                class="Citation" href="#WART2021">[WART2021]</a></ins> . </li>
-          <li> Knowledge of environment variables, what they are and how to set
-            them. <br>
-            <br>
-            <em>Note</em>: The reader should understand environment variables at
-            the level discussed in <a class="Citation" href="#WP2016a">[WP2016a]</a>
-            and specifically the variable PATH <a class="Citation" href="#WP2016b">[WP2016b]</a>.
-            See also <a class="Citation" href="#Microsoft2016">[Microsoft2016]</a>
-            for Windows and <a class="Citation" href="#Apple2016">[Apple2016]</a>
-            for Mac specifics. </li>
+          <li><em>Bash Command-Line Shell -&nbsp; </em><strong></strong><em><br>
+            </em></li>
+          <li><em>Environment Variables</em><br>
+          </li>
+        </ol>
+        <p><br>
+        </p>
+        <ol class="Instruction">
         </ol>
       </section>
       <section>
@@ -787,47 +780,34 @@
             only <u>one</u> of the listed instructions.<br>
             <br>
           </li>
-          <li><b>Server:&nbsp; </b>Your instructor will tell you which Git
-            server you will use for your course work. It will be one of the
-            following: <br>
-            <span style="color: red; background: yellow">Note: Circa Fall 2021,
-              the only Git server being used by any courses using this tutorial
-              is the one below. Therefore instructions related to other git
-              servers have been (mostly) disabled and/or removed from this
-              tutorial. </span>
+          <li><b>Server:&nbsp;</b>
+            <!-- 
+            Your instructor will tell you            which Git server you will use for your course work. It            will be one of the following: <br>            <span style="color: red; background: yellow">Note: Circa Fall 2021,              the only Git server being used by any courses using this tutorial              is the one below. Therefore instructions related to other git              servers have been (mostly) disabled and/or removed from this              tutorial. </span>						 -->
+            For ITCS 3120 Spring 2023, students must use the CCI Git Server:
             <ul>
               <li><span class="File_Name">cci-git.uncc.edu </span></li>
             </ul>
             <!--
             <ul>              <li><span class="File_Name">bitbucket.org</span></li>            </ul>             -->
-            <p> Instructions in this document that are specific to one of the
-              above Git servers will have the following headings: </p>
-            <ul>
-              <li>[<i>YourServer</i>=<span class="File_Name">cci-git</span>]</li>
-            </ul>
-            <ul>
-              <li> [<i>YourServer</i>=<span class="File_Name">Bitbucket</span>]<br>
-              </li>
-            </ul>
-            <br>
-            As long as you configure the settings in the <a href="#Document-Configuration">
-              Document Configuration </a> section (above), then the detailed
-            instructions will only be displayed for the Git server you selected
-            (while the details for the other servers will remain hidden). <br>
-            <br>
+            <!--
+            <p> Instructions in this document that are specific to              one of the above Git servers will have the following headings: </p>            <ul>              <li>[<i>YourServer</i>=<span class="File_Name">cci-git</span>]</li>            </ul>            <ul>              <li> [<i>YourServer</i>=<span class="File_Name">Bitbucket</span>]<br>              </li>            </ul>            <br>            As long as you configure the settings in the <a href="#Document-Configuration">              Document Configuration </a> section (above), then the detailed            instructions will only be displayed for the Git server you selected            (while the details for the other servers will remain hidden). <br>            <br>            -->
           </li>
-          <li><b>Operating System:</b> Your instructor will tell you which
-            operating systems you must use for your course work. Instructions in
-            this document that are specific to a particular operating system
-            will have the following headings:
+          <li><b>Operating System:</b>
+            <!-- 
+              Your instructor will tell you which              operating systems you must use for your course work.  -->
+            For ITCS 3120 Spring 2023, you will be developing using
+            cross-platform Web tools. <br>
+            The process for setting up these tools differences across operating
+            systems. Therefore, instructions in this document that are specific
+            to a particular operating system will have the following headings:
             <ul>
               <li>[<i>OS</i>=<b>Windows</b>]</li>
               <li>[<i>OS</i>=<b>Linux</b>]</li>
               <li>[<i>OS</i>=<b>Mac</b>]</li>
             </ul>
-            <p> Depending on the course you are taking you may be required to
-              use only one designated operating system. This information will be
-              given to you in class.<br>
+            <p>
+              <!--
+                Depending on the course you are taking you may be required to                use only one designated operating system. This information will                be given to you in class.<br>                -->
               <br>
               As long as you configure the settings in the <a href="#Document-Configuration">
                 Document Configuration </a> section (above), then the detailed
@@ -907,38 +887,38 @@
       </section>
       <section>
         <h1 class="Section" id="Installing_Git"> Installing Git </h1>
-        <p> Git is a command-line program. Git servers uses various access
+        <p> Git is a command-line client program that runs on your computer
+          communicating to a Git server. Git servers uses various access
           protocols for security and authorization. Depending what access
           protocol your designated Git server uses you may need to have or
-          install additional software beyond command-line Git.&nbsp; You will be
-          told which access protocol your designated Git server uses by your
-          instructor. Generally, it will be either SSH or HTTPS.<br>
+          install additional software beyond command-line Git.&nbsp;
+          <!--
+          You will be told which access protocol your designated Git server uses          by your instructor. Generally, it will be either SSH or HTTPS.<br>          -->
         </p>
-        <p>First you may need to install the Git command-line tools.</p>
+        <p>Depending on what computer you are working on, you may need to
+          install the Git client tools.</p>
         <p><u><i>Woodward Labs</i></u>:&nbsp; Windows computers in Woodward labs
-          should have both the command-line Git, OpenSSH and TortoiseGit
-          installed.&nbsp; <br>
+          should have both the command-line Git, Bash, OpenSSH and TortoiseGit
+          installed. Most Linux installations install these tools by default.
+          &nbsp; <br>
           If you are using UNCC computers with a different operating system
-          please email the TA. If your designated Git server is either <span class="File_Name">Bitbucket</span>,
-          go to&nbsp;<a href="#Download_and_Install_OpenSSH">Download_and_Install_OpenSSH</a>.&nbsp;
-          For <span class="File_Name">cci-git</span> skip to <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.
+          please email the TA.
+          <!--
+          If your designated Git server is either <span class="File_Name">Bitbucket</span>,          go to&nbsp;<a href="#Download_and_Install_OpenSSH">Download_and_Install_OpenSSH</a>.&nbsp;          For <span class="File_Name">cci-git</span> skip to <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.          -->
         </p>
-        <p><u><i>Computers Elsewhere</i></u>:&nbsp; If you are working on
-          computers elsewhere, you need to install Git and TortoiseGit.&nbsp;
+        <p><u><i>Home Computer</i></u>:&nbsp; If you are working on a personal
+          home computer, you need to install the Git client tools.&nbsp;
           Installation instructions are below in <a href="#Installation_and_Setup_of_Command-Line">Installation_and_Setup_of_Command-Line</a>
           and <a href="#Installation_and_Setup_of_Git_GUIs">Installation_and_Setup_of_Git_GUIs</a>.&nbsp;
-          After performing these installations, if your designated Git server is
-          <span class="Server_Name"> cci-git </span>you can proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.
-          If your server is either&nbsp; <span class="File_Name">Bitbucket</span><span
-            class="File_Name"></span>, you also need to also perform <a href="#Installation_and_Setup_of_OpenSSH">Installation_and_Setup_of_OpenSSH</a>
-          and then proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.
+          <!--
+          After performing these installations, if your designated Git server is          <span class="Server_Name"> cci-git </span>you can proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.          If your server is either&nbsp; <span class="File_Name">Bitbucket</span><span            class="File_Name"></span>, you also need to also perform <a href="#Installation_and_Setup_of_OpenSSH">Installation_and_Setup_of_OpenSSH</a>          and then proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.          -->
         </p>
         <section>
           <h2 class="Section" id="Installation_and_Setup_of_Command-Line_Git"><a
-              name="Installation_and_Setup_of_Command-Line"></a>Installation and
-            Setup of Command-Line Git </h2>
-          <p> If you are working from a UNCC computer that already has Git
-            installed you can skip this section. </p>
+              name="Installation_and_Setup_of_Command-Line"></a>Installation of
+            Command-Line Git </h2>
+          <p>This section walks you through installing Git client tools on your
+            computer, if your computer does not already have them installed.</p>
           <p><em>Instructions below vary with your operating system.</em></p>
           <ol class="Instruction_Option">
             <li> [<em>YourOS</em>=<strong>Windows</strong>]
@@ -980,46 +960,51 @@
                 </ol>
               </div>
             </li>
-            <li> [<em>YourOS</em>=<strong>Linux</strong>] Download and install
-              Git from <a href="http://git-scm.com/">http://git-scm.com/</a>. </li>
+            <li> [<em>YourOS</em>=<strong>Linux</strong>] Typically, default
+              Linux/Unix installations include Git.&nbsp; If Git is not
+              installed, then download and install Git from <a href="http://git-scm.com">http://git-scm.com/</a>.
+            </li>
             <li> [<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp; Download and
-              Install Git from <a href="http://git-scm.com">http://git-scm.com/</a>.
+              install Git from <a href="http://git-scm.com">http://git-scm.com/</a>.
             </li>
           </ol>
           <p> If Unix style command-line shells are new for you, read the
-            introduction at <del datetime="2021-09-03"><a class="Citation" href="#UIUC2016">[UIUC2016]</a></del>
-            <ins datetime="2021-09-03"><a class="Citation" href="#WART2021">[WART2021]</a></ins>
+            introduction at <a class="Citation" href="#WART2021">[WART2021]</a>
             .&nbsp; Linux and MacOS have a Unix style shell (bash or otherwise)
             built-in. </p>
           <section>
-            <h3 class="Section"> <ins datetime="2021-08-27">Native OS directory
-                structures and command-line shell paths </ins> </h3>
-            <p> Windows version <i>XYZ</i>, MacOS v<i>PDQ</i>, Unix flavor <i>ABC</i>,
-              Linux sub-variant <i>LXO</i>, etc. generally all provide a
-              graphical user interface shell with a visual interface for
-              searching and navigation through local and remote file systems
-              their directory structures. They are all intellectual derivatives
-              of <a href="https://www.youtube.com/watch?v=Cn4vC80Pv6Q"> Xerox
-                Star </a> which was based on decades of creative work at
-              academic, government and a few industrial research labs who gave
-              "it all away for free" (see for example the citation list in <a href="https://dl.acm.org/doi/10.1145/274430.274436">Meyers1998</a>).
-              </p>
-            <p> Depending on your OS and command-line shell, the mapping of the
-              OS's graphical shell's visual presentation of the file system's
-              directory structure and the path names used by a command-line
-              shell, such as bash, will vary.&nbsp;&nbsp;&nbsp; As an example
-              with Windows 10, a selected few of the most common Window's users
-              folders appear as follows in git-bash on Dr. Wartell's home
-              computer:</p>
-            <img src="images/windows-directory-structure.png" alt="" width="600px"></section>
+            <h3 class="Section">[Pre-Req.] Command-Line Interface Shell</h3>
+            <p>The remainder of this assignment assumes knowledge of the
+              material listed below.&nbsp; Each listed topic contains
+              recommended reading if you do not already know the topic.</p>
+            <ol>
+              <li><em>Bash Command-Line Shell</em>:&nbsp; The git instructions
+                in this assignment and the <em>Pro Git</em> book use Bash, a
+                particular command-line shell&nbsp;<a href="#WP2023">[WP2023]</a>.
+                You need to have basic mastery of the Bash shell.&nbsp; A short
+                introduction is <a class="Citation" href="#WART2021">[WART2021]</a>.</li>
+              <li><em>Environment Variables</em>:&nbsp;&nbsp; Regarding
+                environment variables, the reader should understand environment
+                variables:&nbsp; what they are and how to modify them.&nbsp; In
+                particular knowledge of the PATH environment variable is
+                required.&nbsp;&nbsp; A general discussion is found at <a class="Citation"
+                  href="#WP2016a">[WP2016a]</a> and with specifics on PATH at <a
+                  class="Citation" href="#WP2016b">[WP2016b]</a>.&nbsp;&nbsp;&nbsp;
+The
+                method to modify environment variables differs across operating
+                system.&nbsp; See <a class="Citation" href="#Microsoft2016">[Microsoft2016]</a>
+                for Windows or <a class="Citation" href="#Apple2016">[Apple2016]</a>
+                for MacOS.</li>
+            </ol>
+          </section>
         </section>
         <section>
           <h2 class="Section" id="Installation_and_Setup_of_Git_GUIs">
             [Optional] Installation and Setup of Git GUI’s </h2>
           <p> Generally, the Git instructions in this document and any Git
             instructions given in this course will be given using Git
-            command-line examples for generality.&nbsp; But many GUI Git tools
-            are available as well. Use of GUI Git tools is <u>optional</u>. </p>
+            command-line example code.&nbsp; But many GUI Git tools are
+            available as well. Use of GUI Git tools is <u>optional</u>. </p>
           <ol class="Instruction_Option">
             <li> [<em>YourOS</em>=<strong>Window</strong>] <br>
               Download and install TortoiseGit from <a href="https://tortoisegit.org/"
@@ -1033,9 +1018,9 @@
       <section>
         <h1 class="Section" id="Installation_and_Setup_of_OpenSSH">Installation
           and Setup of OpenSSH </h1>
-        [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] Do <strong><u>not</u></strong>
-        use OpenSSH with <strong>cci-git. &nbsp; </strong>Skip all of Section
-        4. You will use the HTTPS access method instead described later. <br>
+        [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] If your class is
+        using git server, cci-git.uncc.edu, you should skip this section
+        (Section 4).<br>
         <br>
         [<em>YourServer</em>=<strong>Bitbucket</strong>]
         <div class="Server_Supports_SSH">
@@ -1390,17 +1375,29 @@
         </div>
       </section>
       <section>
-        <h1 class="Section" id="Full_Git_Tutorial">Full Git Tutorial</h1>
+        <h1 class="Section" id="Full_Git_Tutorial">Full vs Micro Tutorial</h1>
+        <p>You should do only <em>either</em> the Full Tutorial or the Micro
+          Tutorial.&nbsp;&nbsp; To do only the Micro Tutorial, you need to get
+          approval from the course instructor as described below.</p>
+        <p>The Full Git Tutorial requires reading chapters in the ProGit book
+          and completing a number of exercises.</p>
+        <p>The Micro Git Tutorial is for students already familiar with Git and
+          using the Git command-line interface using a operating system shell
+          such as Bash. </p>
+        <p>To get approval to do the Micro Tutorial, you must:</p>
+        <ol>
+          <li>Submit a short statement through the Canvas Micro Tutorial
+            assignment </li>
+          <li>Receive approval feedback from the professor through that Canvas
+            assignment</li>
+          <li>Complete the instruction in Section 7 which simply requires you
+            configured your Git client, your account on the Git server and Git
+            push a few files to the server.</li>
+        </ol>
+        <h1 class="Section">Full Git Tutorial</h1>
         <ul>
-          <li><u> Preliminaries</u>:&nbsp; If Unix style shells are new for you,
-            read the introduction at <del datetime="2021-09-03"><a class="Citation"
-                href="#UIUC2016">[UIUC2016]</a></del> <ins datetime="2021-09-03"><a
-                class="Citation" href="#WART2021">[WART2021]</a></ins> .&nbsp;
-            Linux and MacOS have a Unix style shell built-in.&nbsp; For
-            Microsoft Windows, this tutorial's prior sections already guide you
-            through installing a command-line shell. </li>
-          <li> Read the chapters in the outline below in the ProGit book by
-            Scott Chacon available on-line <a class="Citation" href="#Chacon2016">[Chacon2016]</a>.
+          <li>Read the chapters in the outline below in the ProGit book by Scott
+            Chacon available on-line <a class="Citation" href="#Chacon2016">[Chacon2016]</a>.
           </li>
           <li> Do the exercises in the outline below. <br>
             <br>
@@ -1427,11 +1424,8 @@
               <li> Open a shell prompt (as installed in <a href="#Installation_and_Setup_of_Command-Line">Installation_and_Setup_of_Command-Line</a>).
                 </li>
               <li> Create a directory called ‘git-tutorial’ for performing and
-                saving the exercises <ins datatime="2021-08-27"> (commands
-                  mkdir, etc. again see <del datetime="2021-09-03"><a class="Citation"
-                      href="#UIUC2016">[UIUC2016]</a></del> <ins datetime="2021-09-03"><a
-                      class="Citation" href="#WART2021">[WART2021]</a></ins> .)
-                </ins> </li>
+                saving the exercises (commands mkdir, etc. again see <a class="Citation"
+                  href="#WART2021">[WART2021]</a> .) </li>
             </ol>
           </li>
           <li><strong> ProGit - Chapter 1</strong>:
@@ -1459,11 +1453,9 @@
             <ol>
               <li> Read ProGit 2.1:
                 <ol>
-                  <li> Chapter 2 refers to a set of files.&nbsp;<del datatime="2021-08-23">Retrieve
-                      these files from this tutorial's website from this </del>
-                    <ins datatime="2021-08-23">Download in your browser </ins>
-                    these files from this tutorial's website from this
-                    link&nbsp; <a href="./tutorial_example_files/HelloWorld.tar.gz">
+                  <li> Chapter 2 refers to a set of files.&nbsp; Download in
+                    your browser these files from this tutorial's website from
+                    this link&nbsp; <a href="./tutorial_example_files/HelloWorld.tar.gz">
                       <span class="File_Name">HelloWorld.tar.gz</span> </a>.&nbsp;&nbsp;
                     After retrieval, uncompress the tar.gz file as follows:<br>
                     <table class="Code_Example" id="Code_Example_0_3ai" border="1">
@@ -1769,13 +1761,11 @@
                 git server:
                 <ol class="Instruction_Option">
                   <li> [<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br> <del datetime="2021-08-30"> https://cci-git.uncc.edu/<span
-                        class="User_Input">your_user_id<br>
-                      </span></del> <br>
-                    <ins datetime="2021-08-30"> https://<code class="Shell_Code_Output"></code>
-                      <span class="User_Input">your_user_id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
-                        class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git<br>
-                    </ins> </li>
+                    <br> <br>
+                    https://<code class="Shell_Code_Output"></code> <span class="User_Input">your_user_id&gt;</span>:<span
+                      class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
+                      class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git<br>
+                  </li>
                   <!--
                   <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;&nbsp;&nbsp;&nbsp;                    <span style="color: rgb(0, 0, 0); font-family: Courier, monospace; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">git@bitbucket.org:</span><span                      class="User_Input" style="background-color: grey; font-style: italic; color: white; text-decoration: underline; font-family: Courier, monospace; font-size: medium; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">your_userid/your_reponame</span><span                      style="color: rgb(0, 0, 0); font-family: Courier, monospace; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">.git</span>                    <span class="User_Input"></span>                    </li>                  -->
                 </ol>
@@ -1879,13 +1869,11 @@
             substitute one the following:
             <ol class="Instruction_Option">
               <li> [<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <br> <del datetime="2021-08-30"> https://cci-git.uncc.edu/<span
-                    class="User_Input">your_user_id<br>
-                  </span></del> <br>
-                <ins datetime="2021-08-30">https://<code class="Shell_Code_Output"></code>
-                  <span class="User_Input">your_user_id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
-                    class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git<br>
-                </ins> </li>
+                <br> <br>
+                https://<code class="Shell_Code_Output"></code> <span class="User_Input">your_user_id&gt;</span>:<span
+                  class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
+                  class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git<br>
+              </li>
               <!--
               <li> [<em>YourServer</em>=<strong>bitbucket</strong>]&nbsp;&nbsp;                git@bitbucket.org:<span class="User_Input">your_user_id</span>              </li>              -->
             </ol>
@@ -3094,11 +3082,10 @@
                 target="_blank">https://en.wikipedia.org/wiki/Environment_variable#Details</a>
             </li>
             <li id="WP2016b"> [WP2016b] "PATH (variable)", Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29"
-                target="_blank">https://en.wikipedia.org/wiki/PATH_%28variable%29</a>
-            </li>
-            <li id="Apple2016"> [Apple2016] “Environment Variables”, Mac
-              Developer Library. <a href="https://developer.apple.com/" target="_blank">https://developer.apple.com/</a>
-            </li>
+                target="_blank">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
+            <li id="WP2023">[WP2023] "Shell Computing", Wikipedia, <a href="https://en.wikipedia.org/wiki/Shell_%28computing%29"
+                target="_blank">https://en.wikipedia.org/wiki/Shell_(computing)</a>.
+              Accessed Jan. 2023. </li>
           </ol>
           <ol class="Citation_List">
           </ol>
@@ -3108,5 +3095,6 @@
           id="Guide-to-Reading-these-Instructions"></a> <em> <em> </em> </em>
       </section>
     </div>
+    <b> </b>
   </body>
 </html>
