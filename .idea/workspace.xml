@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-word smithing&#10;-re-org:  new subsection &quot;Git Authentication Protocols&quot;&#10;-re-org:  moved PAT protocol to first listed">
+    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-word smithing&#10;-added note to 'unchecked box' for README.md if it is check on cci-git">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +46,9 @@
     <node-interpreter value="project" />
     <bower-package value="" />
     <bower.json value="" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -85,15 +92,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ITCS_3120_Fall_2021/Canvas Edits" />
-    <property name="nodejs_interpreter_path" value="node" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="$PROJECT_DIR$/../../../../../../Program Files/nodejs" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -132,7 +131,14 @@
       <workItem from="1630676270721" duration="1507000" />
       <workItem from="1631033417043" duration="2057000" />
       <workItem from="1632142820890" duration="2984000" />
-      <workItem from="1632426014100" duration="612000" />
+      <workItem from="1632426014100" duration="684000" />
+      <workItem from="1632755882599" duration="1412000" />
+      <workItem from="1643050381908" duration="597000" />
+      <workItem from="1643378975049" duration="34000" />
+      <workItem from="1645037172900" duration="813000" />
+      <workItem from="1673366986040" duration="727000" />
+      <workItem from="1673445797844" duration="2420000" />
+      <workItem from="1673476083675" duration="908000" />
     </task>
     <task id="LOCAL-00001" summary="-GitLab - changed location of Members dialog">
       <created>1630527623345</created>
@@ -155,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632147507219</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="-word smithing&#10;-added note to 'unchecked box' for README.md if it is check on cci-git">
+      <created>1632427014750</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1632427014750</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -204,7 +217,8 @@
     <MESSAGE value="-GitLab - changed location of Members dialog" />
     <MESSAGE value="-changed reference on Unix Primer to my variant of UIUC's Primer" />
     <MESSAGE value="-word smithing&#10;-re-org:  new subsection &quot;Git Authentication Protocols&quot;&#10;-re-org:  moved PAT protocol to first listed" />
-    <option name="LAST_COMMIT_MESSAGE" value="-word smithing&#10;-re-org:  new subsection &quot;Git Authentication Protocols&quot;&#10;-re-org:  moved PAT protocol to first listed" />
+    <MESSAGE value="-word smithing&#10;-added note to 'unchecked box' for README.md if it is check on cci-git" />
+    <option name="LAST_COMMIT_MESSAGE" value="-word smithing&#10;-added note to 'unchecked box' for README.md if it is check on cci-git" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/html/Site Root/Git Tutorial.html">
