@@ -91,10 +91,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="Git Tutorial.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Git_Tutorial_and_Coding_Standards/html/Site Root/Git Tutorial.html?_ij_reload" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -139,6 +140,8 @@
       <workItem from="1673366986040" duration="727000" />
       <workItem from="1673445797844" duration="2420000" />
       <workItem from="1673476083675" duration="908000" />
+      <workItem from="1673535810403" duration="686000" />
+      <workItem from="1673573574113" duration="652000" />
     </task>
     <task id="LOCAL-00001" summary="-GitLab - changed location of Members dialog">
       <created>1630527623345</created>
@@ -210,7 +213,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-minor typo's" />
