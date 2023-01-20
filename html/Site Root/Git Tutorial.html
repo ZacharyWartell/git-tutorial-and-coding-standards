@@ -84,7 +84,7 @@
         function onchange_Git_Server() {
             /* alert("onchange_Git_Server"); */
             Div_Disable('Server_Bitbucket');
-            Div_Disable('Server_Cci_Git');
+            Div_Disable('Server_Cci_Git');6
             Div_Disable('Server_Git_Viscenter');
             if (document.System_Configuration.cci_git.checked == true) {
                 Div_Enable('Server_Cci_Git');
@@ -724,14 +724,15 @@
           systems are allowable in your class. </p>
         <p> Using this information, select the Git server and the operating
           system you are using below.&nbsp;&nbsp; Making this selection will
-          display only relevant sections of this document (and hide the others).
-          <br>
-          <br>
+          display the relevant sections of this document and hide the others.
+            <!--
           <span style="color: red; background: yellow">Note: Circa Fall
             2021,only one Git server is being used by any courses using this
             tutorial. Therefore instructions related to other git servers have
             been (mostly) disabled and/or removed from this tutorial. <br>
-          </span></p>
+          </span>
+          -->
+          </p>
         <!--
         <button class="Text_Button" onclick="Div_Toggle('Server_Git_Viscenter');Div_Toggle('Server_Supports_SSH');"> git-viscenter </button>           <button class="Text_Button" onclick="Div_Toggle('Server_Bitbucket');Div_Toggle('Server_Supports_SSH');"> Bitbucket </button>                 <button class="Text_Button" onclick="Div_Toggle('Server_Cci_Git');"> cci-git </button>           -->
         <form name="System_Configuration">
@@ -741,8 +742,8 @@
                 value="cci_git" checked="checked" onchange="onchange_Git_Server()"
 
                 type="radio"> <label for="cci_git">cci-git</label>
-              <!--
-                      <input name="Git_Server"  id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"  type="radio">                <label for="bitbucket">Bitbucket</label>              -->
+
+                <input name="Git_Server"  id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"  disabled type="radio"> <label for="bitbucket">Bitbucket</label>
             </p>
             <p><label>Operating System: </label> <input name="Operating_System"
 
@@ -995,7 +996,7 @@
             built-in. </p>
           <section>
             <h3 class="Section">[Pre-Req.] Command-Line Interface Shell</h3>
-            <p>The remainder of this assignment assumes you hvae knowledge of
+            <p>The remainder of this assignment assumes you have knowledge of
               the material listed below.&nbsp; Each listed topic contains
               recommended reading if you do not already know the topic.</p>
             <ol>
@@ -1043,8 +1044,7 @@
       <section>
         <h1 class="Section" id="Installation_and_Setup_of_OpenSSH">Installation
           and Setup of OpenSSH </h1>
-        [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] Those using git
-        server, cci-git.uncc.edu, should skip Section 4. OpenSSH is not
+        [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] For any course using cci-git.uncc.edu, skip Section 4. OpenSSH is not
         supported on cci-git.<br>
         <br>
         [<em>YourServer</em>=<strong>Bitbucket</strong>]
