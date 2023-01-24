@@ -666,7 +666,7 @@
 
     </style>
   </head>
-  <body onload="onload_Body()" style="    margin-left: -85px; ">
+  <body onload="onload_Body()" style="       margin-left: -85px; ">
     <p>&nbsp; <br>
     </p>
     <p> "File"<!-- w3.css stuff I experimented with
@@ -725,14 +725,9 @@
         <p> Using this information, select the Git server and the operating
           system you are using below.&nbsp;&nbsp; Making this selection will
           display the relevant sections of this document and hide the others.
-            <!--
-          <span style="color: red; background: yellow">Note: Circa Fall
-            2021,only one Git server is being used by any courses using this
-            tutorial. Therefore instructions related to other git servers have
-            been (mostly) disabled and/or removed from this tutorial. <br>
-          </span>
-          -->
-          </p>
+          <!--
+          <span style="color: red; background: yellow">Note: Circa Fall            2021,only one Git server is being used by any courses using this            tutorial. Therefore instructions related to other git servers have            been (mostly) disabled and/or removed from this tutorial. <br>          </span>          -->
+        </p>
         <!--
         <button class="Text_Button" onclick="Div_Toggle('Server_Git_Viscenter');Div_Toggle('Server_Supports_SSH');"> git-viscenter </button>           <button class="Text_Button" onclick="Div_Toggle('Server_Bitbucket');Div_Toggle('Server_Supports_SSH');"> Bitbucket </button>                 <button class="Text_Button" onclick="Div_Toggle('Server_Cci_Git');"> cci-git </button>           -->
         <form name="System_Configuration">
@@ -741,9 +736,11 @@
 
                 value="cci_git" checked="checked" onchange="onchange_Git_Server()"
 
-                type="radio"> <label for="cci_git">cci-git</label>
+                type="radio"> <label for="cci_git">cci-git</label> <input name="Git_Server"
 
-                <input name="Git_Server"  id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"  disabled type="radio"> <label for="bitbucket">Bitbucket</label>
+                id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"
+
+                disabled="disabled" type="radio"> <label for="bitbucket">Bitbucket</label>
             </p>
             <p><label>Operating System: </label> <input name="Operating_System"
 
@@ -1044,8 +1041,9 @@
       <section>
         <h1 class="Section" id="Installation_and_Setup_of_OpenSSH">Installation
           and Setup of OpenSSH </h1>
-        [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] For any course using cci-git.uncc.edu, skip Section 4. OpenSSH is not
-        supported on cci-git.<br>
+        [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] For any course
+        using cci-git.uncc.edu, skip Section 4. OpenSSH is not supported on
+        cci-git.<br>
         <br>
         [<em>YourServer</em>=<strong>Bitbucket</strong>]
         <div class="Server_Supports_SSH">
@@ -1644,69 +1642,20 @@
                           <td> <button onclick="Code_Example_Toggle('Code_Example_0_3bi');">▽</button>
                           </td>
                           <td>
+                            <span class="tag">1645</span>
                             <div style="height: 110px;">
-                                <code class="Shell_Code_Input">
-                                <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/my-project</code> cd ..
-                                    <code class="Shell_Code_Input">
-                                        <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/git-tutorial</code>
-                                            <code class="Shell_Code_Input">
-                                                <code class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
-                                                    ~/ITCS_312
-                                                </code>
-                                            </code>
-                                        </code>
-                                    <code class="Shell_Code_Input"><code class="Shell_Code_Input">
-                                        <code class="Shell_Code_Prompt">
-                                            <code class="Shell_Code_Input"><code class="Shell_Code_Input">
-                                                <code class="Shell_Code_Prompt">0/git-tutorial</code>
-                                            </code>
-                                        </code>
-                                        <code class="Shell_Code_Input"></code>
-                                    </code>
-                                </code>
-                                    tar -xf .tar.gz </code> <br>
-                                <code class="Shell_Code_Input">
-                                    <code class="Shell_Code_Input"></code>
-                                        <code class="Shell_Code_Input">
-                                            <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_312</code>
-                                        </code>
-                                </code>
-                                        <code class="Shell_Code_Input">
-                                            <code class="Shell_Code_Input">
-                                                <code class="Shell_Code_Prompt">
-                                                    <code class="Shell_Code_Input">
-                                                        <code class="Shell_Code_Input">
-                                                            <code class="Shell_Code_Prompt">0/git-tutorial
-                                                            </code>
-                                                        </code>
-                                                    </code>
-                                                <code class="Shell_Code_Input"></code>
-                                                </code>
-                                            </code> rm ProGit_Chapter_2_2.tar.gz &nbsp;&nbsp; </code>
+                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/git-tutorial/my-project</code>
+                                <code class="Shell_Code_Input"> cd .. <code class="Shell_Code_Input"> <br>
+                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/git-tutorial</code><br>
+                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/git-tutorial</code><br>
+                                   <code class="Shell_Code_Input">tar -xf ProGit_Chapter_2_2.tar.gz </code>
+                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120 </code>
+                                <<code class="Shell_Code_Input"></code> rm ProGit_Chapter_2_2.tar.gz </code>
                                 <span class="Shell_Code_Comment"> [you can delete this now] </span> <br>
-                                <code class="Shell_Code_Input">
-                                    <code class="Shell_Code_Input"></code>
-                                        <code class="Shell_Code_Input">
-                                            <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_312</code>
-                                        </code>
-                                </code>
-                                <code class="Shell_Code_Input">
-                                    <code class="Shell_Code_Input">
-                                        <code class="Shell_Code_Prompt">
-                                            <code class="Shell_Code_Input">
-                                                <code class="Shell_Code_Input">
-                                                    <code class="Shell_Code_Prompt">0/git-tutorial</code>
-                                                </code>
-                                            </code>
-                                            <code class="Shell_Code_Input"></code>
-                                        </code>
-                                    </code>
-                                    cd
-                                </code>
-                                </code>
-                                <code class="Shell_Code_Input">
-                                    <code class="Shell_Code_Input">ProGit_Chapter_2_2</code>
-                                </code>
+                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120 </code>
+                                <code class="Shell_Code_Prompt">0/git-tutorial</code>
+                                  <code class="Shell_Code_Input"> cd </code>
+                                <code class="Shell_Code_Input"> <code class="Shell_Code_Input">ProGit_Chapter_2_2</code>
                             </div>
                           </td>
                         </tr>
@@ -1769,8 +1718,8 @@
                       </li>
                     </ol>
                   </li>
-                    <li> <u>Exercise [Optional]:</u> GUI Git Tool; These exercises are optional.
-                    optional.<br>
+                  <li> <u>Exercise [Optional]:</u> GUI Git Tool; These
+                    exercises are optional. optional.<br>
                     <ol class="Instruction_Option">
                       <li> [<em>YourOS</em>=<strong>Windows</strong>]
                         <div class="OS_Windows"><u>Exercise</u>:&nbsp; <br>
@@ -1821,29 +1770,29 @@
                   <li><u>Exercise</u>: PG:<a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Removing-Files">
                       Removing Files </a> - perform all steps </li>
                   <li><u>Exercise</u>: PG:<a href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Moving-Files">
-                      Moving Files </a> - perform all steps
-                  </li>
-                    <li><u>Exercise</u>:&nbsp; <i> Push updates to remote  remote repo.</i>
-                        <table class="Code_Example" id="Code_Example_0_3ai" border="1">
-                            <tbody style="height: 50px;">
-                            <tr>
-                                <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
-                                </button> </td>
-                                <td>
-                                    <div style="height: 50px;"> <code class="Shell_Code_Input">
-                                        <code class="Shell_Code_Prompt">ada@turing42
-                                        ~/ITCS_3120</code></code><code class="Shell_Code_Input"><code
+                      Moving Files </a> - perform all steps </li>
+                  <li><u>Exercise</u>:&nbsp; <i> Push updates to remote remote
+                      repo.</i>
+                    <table class="Code_Example" id="Code_Example_0_3ai" border="1">
+                      <tbody style="height: 50px;">
+                        <tr>
+                          <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
+                            </button> </td>
+                          <td>
+                            <div style="height: 50px;"> <code class="Shell_Code_Input">
+                                <code class="Shell_Code_Prompt">ada@turing42
+                                  ~/ITCS_3120</code></code><code class="Shell_Code_Input"><code
 
-                                            class="Shell_Code_Input"><code class="Shell_Code_Prompt">/ProGit_Chapter_2_2
+                                  class="Shell_Code_Input"><code class="Shell_Code_Prompt">/ProGit_Chapter_2_2
                                     </code></code></code><code class="Shell_Code_Input">git
-                                        push origin master <span style="color: black;">
-                                      <span style="font-family: serif;">t </span></span>
-                                    </code>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
+                                push origin master <span style="color: black;">
+                                  <span style="font-family: serif;">t </span></span>
+                              </code> </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
                 </ol>
               </li>
               <li> Read ProGit 2.3
@@ -1851,67 +1800,73 @@
                   <li><u>Exercise</u>: PG: <a href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">
                       Viewing the Commit History </a><br>
                     <br>
-                    Do the first two exercises, cloning
-                    simplegit-progit into: <br>
+                    Do the first two exercises, cloning simplegit-progit into: <br>
                     <div align="center"><span class="File_Name">git-tutorial\simplegit-progit</span></div>
                     <u>Stop</u> at the chapter's instruction “$ git log -p -2“.
                   </li>
-                    <li>
-                    <u>Exercise:</u> Forking simplegit-progit<br>
-                        <i>Forking</i> is a more advanced concept used to borrow and contribute to a code module developed by someone else.  Forking is used when they have made the module available on a remote repo from which you may clone, but to which you do <u>not</u> have permission to push (because they are the creator/maintainer of the module).
-                        In many fork workflows, your forked copy would reside on the same git server hosting the developer's remote repo.  However, in this exercise you
-                        will use an alternate fork workflow where your forked copy resides on cci-git while the developer's repo resides on GitHub.
-                        To fork simplegit-progit do as follows:
-                        <ol>
-                            <li>Create a remote repository on the git server called <span
-                                    class="File_Name">simplegit-progit</span>. Follow the instructions in Appendix II <a href="How_to_Create_New_Remote_Repository">"How
-                                    to Create New Remote Repository"&nbsp;</a>
-                            </li>
-                            <li>Next do as follows:
-                                <table class="Code_Example" id="Code_Example_0_3ai" border="1">
-                                    <tbody style="height: 150px;">
-                                    <tr>
-                                        <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
-                                        </button> </td>
-                                        <td>
-                                            <div>
-                                                <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/simplegit-progit</code>
-                                                <code class="Shell_Code_Input">git remote rename origin upstream </code>
-                                                <span class="Shell_Code_Comment">
-                                                    [This renames the source repo to 'upstream', a common convention]
-                                                </span>
-                                                <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/simplegit-progit</code>
-                                                    <code class="Shell_Code_Input">git remote add origin <span class="User_Input">URL of your repo created above </span> </code><br>
-                                                <span class="Shell_Code_Comment">
-                                                    [This associates the origin ref with your remote repo]
-                                                </span><br>
-                                                <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/simplegit-progit</code>
-                                                    <code class="Shell_Code_Input">git push origin --all </code><br>
-                                                <span class="Shell_Code_Comment">
-                                                    [This pushes all tags to your remote repo]
-                                                </span>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </li>
-                        </ol>
+                  <li> <u>Exercise:</u> Forking simplegit-progit<br>
+                    <i>Forking</i> is a more advanced concept used to borrow and
+                    contribute to a code module developed by someone else.
+                    Forking is used when they have made the module available on
+                    a remote repo from which you may clone, but to which you do
+                    <u>not</u> have permission to push (because they are the
+                    creator/maintainer of the module). In many fork workflows,
+                    your forked copy would reside on the same git server hosting
+                    the developer's remote repo. However, in this exercise you
+                    will use an alternate fork workflow where your forked copy
+                    resides on cci-git while the developer's repo resides on
+                    GitHub. To fork simplegit-progit do as follows:
+                    <ol>
+                      <li>Create a remote repository on the git server called <span
 
-                    </li>
+                          class="File_Name">simplegit-progit</span>. Follow the
+                        instructions in Appendix II <a href="How_to_Create_New_Remote_Repository">"How
+                          to Create New Remote Repository"&nbsp;</a> </li>
+                      <li>Next do as follows:
+                        <table class="Code_Example" id="Code_Example_0_3ai" border="1">
+                          <tbody style="height: 150px;">
+                            <tr>
+                              <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
+                                </button> </td>
+                              <td>
+                                <div> <code class="Shell_Code_Prompt">ada@turing42
+                                    ~/ITCS_3120/simplegit-progit</code> <code class="Shell_Code_Input">git
+                                    remote rename origin upstream </code> <span
+
+                                    class="Shell_Code_Comment"> [This renames
+                                    the source repo to 'upstream', a common
+                                    convention] </span> <code class="Shell_Code_Prompt">ada@turing42
+                                    ~/ITCS_3120/simplegit-progit</code> <code class="Shell_Code_Input">git
+                                    remote add origin <span class="User_Input">URL
+                                      of your repo created above </span> </code><br>
+                                  <span class="Shell_Code_Comment"> [This
+                                    associates the origin ref with your remote
+                                    repo] </span><br>
+                                  <code class="Shell_Code_Prompt">ada@turing42
+                                    ~/ITCS_3120/simplegit-progit</code> <code class="Shell_Code_Input">git
+                                    push origin --all </code><br>
+                                  <span class="Shell_Code_Comment"> [This pushes
+                                    all tags to your remote repo] </span> </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                    </ol>
+                  </li>
                 </ol>
               </li>
             </ol>
-            <li> <u> Exercise:</u> Verify all your pushed remote repositories on your Git server following the instructions in Section
-                <a href="#Verify_Your_Remote_Repository"> Verify Your Remote
-                    Repository </a> ).
-            </li>
+          </li>
+          <li> <u> Exercise:</u> Verify all your pushed remote repositories on
+            your Git server following the instructions in Section <a href="#Verify_Your_Remote_Repository">
+              Verify Your Remote Repository </a> ). </li>
           <li><u>Further Reading [Optional]</u>:&nbsp;&nbsp; As you progress in
             learning and using Git, the next most important concept to learn is
-            branching. This tutorial does not include any branching
-            exercises. For future reference, at some point you should finish
-            reading ProGit Chapter 2 and then read the ProGit Chapter 3 <a href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">
-              Git Branching </a>.
-          </li>
+            branching. This tutorial does not include any branching exercises.
+            For future reference, at some point you should finish reading ProGit
+            Chapter 2 and then read the ProGit Chapter 3 <a href="http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">
+              Git Branching </a>. </li>
         </ol>
         <p><strong>This completes the Full Git Tutorial.</strong></p>
         <ol class="Instruction">
@@ -1927,35 +1882,24 @@
           discretion, in certain advanced courses, all students will be directly
           instructed to just perform the Micro Git Tutorial). </p>
         <ol>
-          <li> Read this tutorial’s Section <a href="#Git_Server_Access">Git_Server_Access</a>,
-            in particular read the sections corresponding to your designated Git
-            Server. Then use the shell you opened based on that section’s
-            instructions to perform the following. </li>
+          <li><u>Exercise</u><strong>:&nbsp; </strong>Create and Setup Git
+            Server Access.<br>
+            Create and setup your account on the Git server used in your class
+            and setup the recommended git client access method as described in
+            the Appendix I-3 <a href="#Git_Server_Access">Git_Server_Access</a>,&nbsp;&nbsp;
+            Then use the shell you opened when following that section’s
+            instructions to perform the next steps.</li>
           <li> Create a new <u>remote</u> repo:
             <ol class="Instruction_Option">
               <li> [<em>YourServer</em>=<strong>cci-git</strong>]
                 <div class="Server_Cci_Git"> Create new remote repo on cci-git
-                  called,<span class="File_Name"> git-micro-tutorial</span>.&nbsp;&nbsp;
-                  This is best done using the Web Browser interface to the
-                  server.&nbsp; Appendix section <a href="#Accessing_Git_Server_Using_HTTPS_and_Credentials">Accessing_Git_Server_Using_HTTPS_and_Credentials</a>
-                  discusses how to activate you UNCC account and verify access.
-                  &nbsp; Next, Appendix section <a href="#Basic_Git_Operations">Basic
-                    Git Operations </a>discusses remote repo creation.&nbsp;
-                  Finally. whenever you create, or access a repo, in this course
-                  on cci-git, there are several remote repo URLs that you
-                  typically use.&nbsp;&nbsp; Appendix section <a href="#cci-gitunccedu_URL_List">cci-git.uncc.edu_URL_List</a>
-                  discuss both the read-only repo's available to all students <strong>and</strong>
-                  the naming convention you should follow to create your own
-                  private cci-git remote repo's used for your assignments (such
-                  as this tutorial).<br>
-                  <br>
-                  Use the above procedures to create new remote repo on cci-git
-                  called,<span class="File_Name"> git-micro-tutorial</span>.&nbsp;&nbsp;
-                  <br> <br>
+                  called,<span class="File_Name"> git-micro-tutorial</span>.
+                  using the procedures of Appendix I-3 <a href="#Git_Server_Access">Git_Server_Access</a>.<br>
+                  &nbsp; <br>
                   Do not forget to to <strong><u>share</u></strong> your repo
-                  with the TA and Dr. Wartell’s UNCC accounts (this was
-                  discussed in the Appendix section <a href="#Basic_Git_Operations">Basic
-                    Git Operations).</a></div>
+                  with the TA and Professor (as discussed in the Appendix
+                  section <a href="#Basic_Git_Operations">Basic Git
+                    Operations).</a></div>
               </li>
               <!--
                     <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                <div class="Server_Bitbucket"> <br>                  Create new remote repo on Bitbucket called,<span class="File_Name">                    git-micro-tutorial </span> . This is best done using the                  Web Browser interface to the server. Review&nbsp; <a href="#Bitbucket_URL_List">                    Bitbucket Server URL </a> and Section&nbsp;<a href="#Basic_Git_Operations">                    Basic Git Operations </a> on repo creation.&nbsp; Make sure                  to <strong><u>share</u></strong> it with the TA and Dr.                  Wartell’s Bitbucket accounts. <br>                  <br>                </div>              </li>              -->
@@ -1964,17 +1908,21 @@
           <li> Create <u>local</u> repo and link to the new <u>remote</u>
             repo:<br>
             <br>
-            In the instructions below, for input text <span class="User_Input">remote_repo_path</span>,
-            substitute one the following:
+            <del datetime="2023-01-20"> In the instructions below, for input
+              text <span class="User_Input">remote_repo_path</span>, substitute
+              one the following:</del> In the instructions below, for input <span
+
+              class="User_Input">URL of remote repo</span> use the URL as listed
+            on the server (see Appendix section <a href="#Basic_Git_Operations">Basic
+              Git Operations).</a> for details).
             <ol class="Instruction_Option">
               <li> [<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <br> <br>
-                https://<code class="Shell_Code_Output"></code> <span class="User_Input">your_user_id&gt;</span>:<span
+                <del datetime="2023-01-20"> https://<code class="Shell_Code_Output"></code>
+                  <span class="User_Input">your_user_id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
 
-                  class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
-
-                  class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git<br>
-              </li>
+                    class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git<br>
+                  <del> </del></del></li>
               <!--
                     <li> [<em>YourServer</em>=<strong>bitbucket</strong>]&nbsp;&nbsp;                git@bitbucket.org:<span class="User_Input">your_user_id</span>              </li>              -->
             </ol>
@@ -1992,10 +1940,13 @@
                         <br>
                         Initialized empty Git repository in
                         git-micro-tutorial/.git/ </code> <br>
-                      <code class="Shell_Code_Input"> $ git remote add origin <span
+                      <code class="Shell_Code_Input"> $ git remote add origin <ins><span
 
-                          class="User_Input">remote_repo_path</span>/git-micro-tutorial.git
-                        </code></div> </td>
+                            class="User_Input">URL of remote repo</span></ins> <del
+
+                          datetime="2023-01-20"><span class="User_Input">remote_repo_path</span>/git-micro-tutorial.git</del>
+                      </code></div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -2713,13 +2664,13 @@
                               alt="TortoiseGit-untracked.png" width="500"></figure>
                         </li>
                         <li>&nbsp;Next, you will add permission for the
-                          professor and TAs to access your project.&nbsp;
+                          professor <!-- and TAs --> to access your project.&nbsp;
                           Perform the actions indicated in the following screen
                           captures.<br>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Invite-Group.png"
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Invite-Members.png"
 
                               alt="TortoiseGit-untracked.png" width="500"></figure>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-Group.png"
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-Members.png"
 
                               alt="TortoiseGit-untracked.png" width="500"></figure>
                         </li>
@@ -2916,334 +2867,324 @@
                 </ol>
               </li>
             </ol>
-            <b <="" li=""> <b <="" li=""> </b></b></section>
-          <b <="" li=""> <b <="" li=""> </b></b></section>
-        <b <="" li=""> <b <="" li="">
-            <section><a id="CourseGitPolicies"></a>
-              <h1 class="Appendix">Course Git Policies</h1>
-              <p>This appendix is a reference section, the tutorial itself
-                (Sections 1-6) links to various subsections in this appendix. </p>
-              <p>This appendix is designed as a reference. The tutorial sequence
-                (found in Sections 1-6) and future class assignments refer to
-                various subsections in this Appendix. </p>
-              <section>
-                <h2 class="Appendix">Submitting Class Assignments</h2>
-                <p> Submit all your assignments by using Git add, commit and
-                  push to upload your code to your Git repository subdirectory.
-                </p>
-                <div>
-                  <p> Your projects will be graded based on the version of your
-                    code that&nbsp;is&nbsp;git-push’ed to the Git server&nbsp;at
-                    the time of the due date&nbsp;for the project. </p>
-                </div>
-              </section>
-              <section>
-                <h2 class="Appendix">Keep the repository clean!!!</h2>
-                <p> It is standard practice when using version control software
-                  to not commit intermediate or output files generated by the
-                  compiler into the repository.&nbsp; Intermediate or output
-                  compilation files are all regenerated when someone else
-                  checkout’s the source code and recompiles it. Like all
-                  compilers MSVS 20xx&nbsp;C++ compiler generates lots of these
-                  (*.ncb, *.ilk, *.exe, *.obj, etc.). &nbsp;<br>
-                  <br>
-                </p>
-                <p align="center"><strong>Rule</strong>:&nbsp;Do not commit such
-                  intermediate files to your Git repository! </p>
-                <p> &nbsp;Fortunately, you can automate this process using
-                  the&nbsp;.gitignore&nbsp;mechanism (see <a class="Citation" href="#Chacon2016">[Chacon2016]</a>).
-                  </p>
-                <p><em>Reasoning:</em></p>
-                <p> Adding intermediate auto-generated files to the repository
-                  is wasteful, messy and can create subtle problems.&nbsp; Many
-                  intermediate files will create compilation problems if they
-                  are copied between different computers. Putting them in the
-                  repository is equivalent to such copying.&nbsp; </p>
-                <p> By convention, the following files should be put in the
-                  repository depending on your programming language and
-                  development tools. </p>
-                <section>
-                  <h3 class="Appendix">C++ Code Rules</h3>
-                  The following files should be put in the repository:
-                  <ul type="disc">
-                    <li>source code files (.cpp, .h, etc.)</li>
-                    <li> compilation scripts or project files
-                      <ul type="circle">
-                        <li> Under MSVS 2010 for C++:&nbsp;&nbsp;<br>
-                          .vcxproj, .sln, .vcxproj.user </li>
-                        <ul>
-                          <li> Under earlier MSVS versions:&nbsp; <br>
-                            .vcproj, .sln,
-                            .vcproj.&lt;username&gt;.&lt;machinename&gt;.user </li>
-                        </ul>
-                        <li>CMake files</li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <ul type="disc">
-                    <li> a .txt file or .doc file describing what parts of the
-                      project you completed or left incomplete, etc. </li>
-                    <li> any input files such as image files or other data files
-                      required by your program </li>
-                    <li> any subdirectories containing the above files<br>
-                    </li>
-                  </ul>
-                  <p> When adding subdirectories, be careful not to blindly
-                    submit their entire contents because often they contain
-                    additional automatically generated files.
-                    &nbsp;&nbsp;&nbsp;If you make a mistake just delete the
-                    intermediate files from the repo. </p>
-                </section>
-                <section>
-                  <h3 class="Appendix">JavaScript and WebGL Code Rules</h3>
-                  <p> &nbsp;The following files should be put in the repository:<br>
-                  </p>
-                  <ul type="disc">
-                    <li> source code files:
-                      <ul type="circle">
-                        <li>.js,&nbsp;.html</li>
-                      </ul>
-                    </li>
-                    <li> compilation scripts or project files
-                      <ul type="circle">
-                        <li> these will depend on your IDE.&nbsp;&nbsp; Google
-                          search will usually turn up a forum discussion on
-                          which project files from a particular IDE should be
-                          commit'ed to a repo. </li>
-                      </ul>
-                    </li>
-                    <li> a .txt file or .doc file describing what parts of the
-                      project you completed or left incomplete, etc. </li>
-                    <li> any input files such as image files or other data files
-                      required by your program </li>
-                    <li> any subdirectories containing the above files<br>
-                    </li>
-                  </ul>
-                  <p> When adding subdirectories, be careful not to blindly
-                    submit their entire contents because often they contain
-                    additional automatically generated inetermediate
-                    files.&nbsp;&nbsp;&nbsp; If you make a mistake just git
-                    delete the intermediate files from the repo.&nbsp; </p>
-                </section>
-              </section>
-              <section>
-                <h2 class="Appendix"><a id="Verify_Your_Remote_Repository" name="Verify_Your_Remote_Repository"></a>Verify
-                  Your Remote Repository </h2>
-                <p>The TA only sees your remote Git server repo’s.</p>
-                <p align="center"><strong>Rule</strong>:&nbsp; Always make sure
-                  your assignment appears as you expect in the remote repo (on
-                  the Git server). </p>
-                <p><em>The Ultimate Verification</em>:</p>
-                <p> The ultimate way to verify the remote repo contains the
-                  files you think it does is to clone it into to another
-                  directory and check that second cloned copy for
-                  completeness.&nbsp;&nbsp; You should do this when you are
-                  completely done with your assignment. </p>
-                <p> &nbsp;<em>Some Safety Checks:</em><br>
-                </p>
-                <p> Performing<em>&nbsp;The Ultimate Verification</em>&nbsp;while
-                  you are developing code is tedious. During software
-                  development the following are good practices to keep track of
-                  your commit’s and push’s.<br>
-                </p>
-                <ul type="disc">
-                  <li><strong>git-status</strong><br>
-                    <br>
-                    <em>Good Result</em>:<br>
-                    <table class="Code_Example" id="Code_Example_10_3_1" border="1">
-                      <tbody>
-                        <tr>
-                          <td> <button onclick="Code_Example_Toggle('Code_Example_10_3_1');">
-                              ▽ </button> </td>
-                          <td>
-                            <div><code class="Shell_Code_Prompt">
-                                lucretius@CCIWD-435B-1 ~/ITCS_4120/Project_42<br>
-                              </code> <code class="Shell_Code_Input"> $ git
-                                status<br>
-                              </code><code class="Shell_Code_Output"> # On
-                                branch master <br>
-                                nothing to commit, working directory clean </code><code
-
-                                class="Shell_Code_Output"> <br>
-                              </code></div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <br>
-                    The above indicates everything is good.&nbsp;&nbsp; You have
-                    no file changes that have not been committed to the local
-                    repo and no local repo commits that have not been pushed to
-                    the remote repo.<br>
-                    <br>
-                    <em>Maybe Bad:</em><br>
-                    If you get messages like:
-                    <table class="Code_Example" id="Code_Example_10_3_2" border="1">
-                      <tbody>
-                        <tr>
-                          <td> <button onclick="Code_Example_Toggle('Code_Example_10_3_2');">
-                              ▽ </button> </td>
-                          <td>
-                            <div><code class="Shell_Code_Prompt">
-                                lucretius@CCIWD-435B-1 ~/ITCS_4120/Project_42<br>
-                              </code> <code class="Shell_Code_Input"> $ git
-                                status<br>
-                              </code><code class="Shell_Code_Output"> # On
-                                branch master&nbsp; <br>
-                                # Untracked files:<br>
-                                #&nbsp;&nbsp; (use "git add &lt;file&gt;..." to
-                                include in what will be committed)<br>
-                                #<br>
-                                #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:red;">junk_or_important.txt</span>
-                              </code></div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <br>
-                    then you have untracked files (but you have push’ed all your
-                    commits).&nbsp; This maybe ok as along as these files aren’t
-                    files that belong in a repo (such as temporary files).&nbsp;
-                    You might consider adding to the .gitignore file (see <a class="Citation"
-
-                      href="#Chacon2016">[Chacon2016]</a>).<br>
-                    <br>
-                    <em>Bad:</em><br>
-                    If you get a message like:<br>
-                    <table class="Code_Example" id="Code_Example_10_3_2" border="1">
-                      <tbody>
-                        <tr>
-                          <td> <button onclick="Code_Example_Toggle('Code_Example_10_3_2');">
-                              ▽ </button> </td>
-                          <td>
-                            <div><code class="Shell_Code_Prompt">
-                                lucretius@CCIWD-435B-1 ~/ITCS_4120/Project_42<br>
-                              </code> <code class="Shell_Code_Input"> $ git
-                                status<br>
-                              </code><code class="Shell_Code_Output"> # On
-                                branch master <br>
-                                # Your branch is ahead of 'origin/master ' by 1
-                                commit.<br>
-                                #&nbsp;&nbsp; (use "git push" to publish your
-                                local commits)<br>
-                                #<br>
-                                nothing to commit, working directory clean </code>then&nbsp;
-                              </div> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    then you have&nbsp;not&nbsp;pushed all your latest changes
-                    to the remote repo. Do a&nbsp;git-push&nbsp;before the final
-                    assignment deadline.&nbsp;<br>
-                    <br>
-                  </li>
-                  <li><strong>[Optional] TortoiseGit</strong>&nbsp;– Optionally,
-                    another good way to check with the TortoiseGit shell
-                    extension is using&nbsp;Check for Modifications. This will
-                    show you whether you have any changes not commited to the
-                    local repo (but make sure to check the box,&nbsp;Show
-                    Unversioned Files). &nbsp;&nbsp;Below we see one file is
-                    untracked.<br>
-                    <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Untracked.png"
-
-                        alt="TortoiseGit-untracked.png" width="500"> </figure>
-                    <br>
-                    However,&nbsp;Check for Modifications&nbsp;will not tell you
-                    whether you have pushed all your commits to the remote
-                    repo.&nbsp;&nbsp;<br>
-                    <br>
-                    For that use the TortoiseGit shell extension and
-                    select&nbsp;Git Sync. The following&nbsp;Git
-                    Sync&nbsp;dialog box would indicate your local repo has
-                    committed changes that you have not pushed to the server
-                    remote repo:
-                    <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Nonversioned.png"
-
-                        alt="images/TortoiseGit-Nonversioned.png" width="500"></figure>
-                    <br>
-                  </li>
-                </ul>
-                <p> However, <span class="Program_Name">Git Sync</span> does
-                  not show you if you have changes to local files that you have
-                  not commited to the local repo! </p>
-              </section>
-            </section>
+          </section>
+        </section>
+        <section><a id="CourseGitPolicies"></a>
+          <h1 class="Appendix">Course Git Policies</h1>
+          <p>This appendix is a reference section, the tutorial itself (Sections
+            1-6) links to various subsections in this appendix. </p>
+          <p>This appendix is designed as a reference. The tutorial sequence
+            (found in Sections 1-6) and future class assignments refer to
+            various subsections in this Appendix. </p>
+          <section>
+            <h2 class="Appendix">Submitting Class Assignments</h2>
+            <p> Submit all your assignments by using Git add, commit and push to
+              upload your code to your Git repository subdirectory. </p>
+            <div>
+              <p> Your projects will be graded based on the version of your code
+                that&nbsp;is&nbsp;git-push’ed to the Git server&nbsp;at the time
+                of the due date&nbsp;for the project. </p>
+            </div>
+          </section>
+          <section>
+            <h2 class="Appendix">Keep the repository clean!!!</h2>
+            <p> It is standard practice when using version control software to
+              not commit intermediate or output files generated by the compiler
+              into the repository.&nbsp; Intermediate or output compilation
+              files are all regenerated when someone else checkout’s the source
+              code and recompiles it. Like all compilers MSVS 20xx&nbsp;C++
+              compiler generates lots of these (*.ncb, *.ilk, *.exe, *.obj,
+              etc.). &nbsp;<br>
+              <br>
+            </p>
+            <p align="center"><strong>Rule</strong>:&nbsp;Do not commit such
+              intermediate files to your Git repository! </p>
+            <p> &nbsp;Fortunately, you can automate this process using
+              the&nbsp;.gitignore&nbsp;mechanism (see <a class="Citation" href="#Chacon2016">[Chacon2016]</a>).
+              </p>
+            <p><em>Reasoning:</em></p>
+            <p> Adding intermediate auto-generated files to the repository is
+              wasteful, messy and can create subtle problems.&nbsp; Many
+              intermediate files will create compilation problems if they are
+              copied between different computers. Putting them in the repository
+              is equivalent to such copying.&nbsp; </p>
+            <p> By convention, the following files should be put in the
+              repository depending on your programming language and development
+              tools. </p>
             <section>
-              <h1 class="Appendix"> Troubleshooting </h1>
-              <section>
-                <h2 class="Appendix" id="Scripts"> Scripts</h2>
-                <ul>
-                  <li><span class="Program_Name">git-tutorial-troubleshooter</span>
-                    - <a href="./scripts/git-tutorial-troubleshooter.sh" download="">Download</a></li>
-                  <ul>
-                    <li>Download and copy to a directory you can access from
-                      bash. </li>
-                    <li>Run the script from the bash command-line with no
-                      arguments to list further instructions, e.g. <br>
-                      <br>
-                      <span class="Program_Name">$ ./git-tutorial-troubleshooter</span><br>
-                    </li>
+              <h3 class="Appendix">C++ Code Rules</h3>
+              The following files should be put in the repository:
+              <ul type="disc">
+                <li>source code files (.cpp, .h, etc.)</li>
+                <li> compilation scripts or project files
+                  <ul type="circle">
+                    <li> Under MSVS 2010 for C++:&nbsp;&nbsp;<br>
+                      .vcxproj, .sln, .vcxproj.user </li>
+                    <ul>
+                      <li> Under earlier MSVS versions:&nbsp; <br>
+                        .vcproj, .sln,
+                        .vcproj.&lt;username&gt;.&lt;machinename&gt;.user </li>
+                    </ul>
+                    <li>CMake files</li>
                   </ul>
-                </ul>
-              </section>
-            </section>
-            <section>
-              <h1 class="Appendix"><a id="Appendix_I" name="Appendix_I"></a>&nbsp;
-                Open Source Modules </h1>
-              <p>This HTML5 document uses the following open source modules:</p>
-              <ul>
-                <li> https://jquery.org/, Copyright jQuery Foundation and other
-                  contributors, MIT license </li>
-                <li> http://projects.jga.me/toc/, Copyright Greg Allen
-                  2014,&nbsp; MIT License </li>
+                </li>
               </ul>
+              <ul type="disc">
+                <li> a .txt file or .doc file describing what parts of the
+                  project you completed or left incomplete, etc. </li>
+                <li> any input files such as image files or other data files
+                  required by your program </li>
+                <li> any subdirectories containing the above files<br>
+                </li>
+              </ul>
+              <p> When adding subdirectories, be careful not to blindly submit
+                their entire contents because often they contain additional
+                automatically generated files. &nbsp;&nbsp;&nbsp;If you make a
+                mistake just delete the intermediate files from the repo. </p>
             </section>
             <section>
-              <h1 class="nocount">Citations</h1>
-              <!-- <ul class="Citation_List"> -->
-              <ol class="Citation_List">
-                <li id="WART2021"> [WART2021] Unix Primer - Basic Commands In
-                  the Unix Shell, <a href="https://zwartell.gitlab.io/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html"
-
-                    target="_blank">https://zwartell.gitlab.io/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html</a>
+              <h3 class="Appendix">JavaScript and WebGL Code Rules</h3>
+              <p> &nbsp;The following files should be put in the repository:<br>
+              </p>
+              <ul type="disc">
+                <li> source code files:
+                  <ul type="circle">
+                    <li>.js,&nbsp;.html</li>
+                  </ul>
                 </li>
-                <li id="Chacon2016"> [Chacon2016] Scott Chacon, Pro Git,
-                  Apress,&nbsp;<strong> 2<sup>nd</sup> Edition </strong> at <a
-
-                    href="http://git-scm.com/book/en/v2/" target="_blank">
-                    http://git-scm.com/book/en/<span style="background:yellow">v2</span>/.</a>
+                <li> compilation scripts or project files
+                  <ul type="circle">
+                    <li> these will depend on your IDE.&nbsp;&nbsp; Google
+                      search will usually turn up a forum discussion on which
+                      project files from a particular IDE should be commit'ed to
+                      a repo. </li>
+                  </ul>
                 </li>
-                <li id="Microsoft2016"> [Microsoft2016] "To add or change the
-                  values of environment variables", Windows XP Professional
-                  Product Documentation, Performance and maintenance. <a href="https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp"
-
-                    target="_blank">https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp</a>
+                <li> a .txt file or .doc file describing what parts of the
+                  project you completed or left incomplete, etc. </li>
+                <li> any input files such as image files or other data files
+                  required by your program </li>
+                <li> any subdirectories containing the above files<br>
                 </li>
-                <li id="GNU2016"> [GNU2016] Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html"
-
-                    target="_blank">http://www.gnu.org/software/bash/manual/html_node/index.html</a>
-                </li>
-                <li id="WP2016a"> [WP2016a] "Environment Variable : Details",
-                  Wikipedia. <a href="https://en.wikipedia.org/wiki/Environment_variable#Details"
-
-                    target="_blank">https://en.wikipedia.org/wiki/Environment_variable#Details</a>
-                </li>
-                <li id="WP2016b"> [WP2016b] "PATH (variable)", Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29"
-
-                    target="_blank">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
-                <li id="WP2023">[WP2023] "Shell Computing", Wikipedia, <a href="https://en.wikipedia.org/wiki/Shell_%28computing%29"
-
-                    target="_blank">https://en.wikipedia.org/wiki/Shell_(computing)</a>.
-                  Accessed Jan. 2023. </li>
-              </ol>
-              <ol class="Citation_List">
-              </ol>
+              </ul>
+              <p> When adding subdirectories, be careful not to blindly submit
+                their entire contents because often they contain additional
+                automatically generated inetermediate files.&nbsp;&nbsp;&nbsp;
+                If you make a mistake just git delete the intermediate files
+                from the repo.&nbsp; </p>
             </section>
-            <!--
+          </section>
+          <section>
+            <h2 class="Appendix"><a id="Verify_Your_Remote_Repository" name="Verify_Your_Remote_Repository"></a>Verify
+              Your Remote Repository </h2>
+            <p>The TA only sees your remote Git server repo’s.</p>
+            <p align="center"><strong>Rule</strong>:&nbsp; Always make sure your
+              assignment appears as you expect in the remote repo (on the Git
+              server). </p>
+            <p><em>The Ultimate Verification</em>:</p>
+            <p> The ultimate way to verify the remote repo contains the files
+              you think it does is to clone it into to another
+              directory and check that second cloned copy for
+              completeness.&nbsp;&nbsp; You should do this when you are
+              completely done with your assignment. </p>
+            <p> &nbsp;<em>Some Safety Checks:</em><br>
+            </p>
+            <p> Performing<em>&nbsp;The Ultimate Verification</em>&nbsp;while
+              you are developing code is tedious. During software development
+              the following are good practices to keep track of your commit’s
+              and push’s.<br>
+            </p>
+            <ul type="disc">
+              <li><strong>git-status</strong><br>
+                <br>
+                <em>Good Result</em>:<br>
+                <table class="Code_Example" id="Code_Example_10_3_1" border="1">
+                  <tbody>
+                    <tr>
+                      <td> <button onclick="Code_Example_Toggle('Code_Example_10_3_1');">
+                          ▽ </button> </td>
+                      <td>
+                        <div><code class="Shell_Code_Prompt">
+                            lucretius@CCIWD-435B-1 ~/ITCS_4120/Project_42<br>
+                          </code> <code class="Shell_Code_Input"> $ git status<br>
+                          </code><code class="Shell_Code_Output"> # On branch
+                            master <br>
+                            nothing to commit, working directory clean </code><code
+
+                            class="Shell_Code_Output"> <br>
+                          </code></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                The above indicates everything is good.&nbsp;&nbsp; You have no
+                file changes that have not been committed to the local repo and
+                no local repo commits that have not been pushed to the remote
+                repo.<br>
+                <br>
+                <em>Maybe Bad:</em><br>
+                If you get messages like:
+                <table class="Code_Example" id="Code_Example_10_3_2" border="1">
+                  <tbody>
+                    <tr>
+                      <td> <button onclick="Code_Example_Toggle('Code_Example_10_3_2');">
+                          ▽ </button> </td>
+                      <td>
+                        <div><code class="Shell_Code_Prompt">
+                            lucretius@CCIWD-435B-1 ~/ITCS_4120/Project_42<br>
+                          </code> <code class="Shell_Code_Input"> $ git status<br>
+                          </code><code class="Shell_Code_Output"> # On branch
+                            master&nbsp; <br>
+                            # Untracked files:<br>
+                            #&nbsp;&nbsp; (use "git add &lt;file&gt;..." to
+                            include in what will be committed)<br>
+                            #<br>
+                            #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:red;">junk_or_important.txt</span>
+                          </code></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                then you have untracked files (but you have push’ed all your
+                commits).&nbsp; This maybe ok as along as these files aren’t
+                files that belong in a repo (such as temporary files).&nbsp; You
+                might consider adding to the .gitignore file (see <a class="Citation"
+
+                  href="#Chacon2016">[Chacon2016]</a>).<br>
+                <br>
+                <em>Bad:</em><br>
+                If you get a message like:<br>
+                <table class="Code_Example" id="Code_Example_10_3_2" border="1">
+                  <tbody>
+                    <tr>
+                      <td> <button onclick="Code_Example_Toggle('Code_Example_10_3_2');">
+                          ▽ </button> </td>
+                      <td>
+                        <div><code class="Shell_Code_Prompt">
+                            lucretius@CCIWD-435B-1 ~/ITCS_4120/Project_42<br>
+                          </code> <code class="Shell_Code_Input"> $ git status<br>
+                          </code><code class="Shell_Code_Output"> # On branch
+                            master <br>
+                            # Your branch is ahead of 'origin/master ' by 1
+                            commit.<br>
+                            #&nbsp;&nbsp; (use "git push" to publish your local
+                            commits)<br>
+                            #<br>
+                            nothing to commit, working directory clean </code>then&nbsp;
+                          </div> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                then you have&nbsp;not&nbsp;pushed all your latest changes to
+                the remote repo. Do a&nbsp;git-push&nbsp;before the final
+                assignment deadline.&nbsp;<br>
+                <br>
+              </li>
+              <li><strong>[Optional] TortoiseGit</strong>&nbsp;– Optionally,
+                another good way to check with the TortoiseGit shell extension
+                is using&nbsp;Check for Modifications. This will show you
+                whether you have any changes not commited to the local repo (but
+                make sure to check the box,&nbsp;Show Unversioned Files).
+                &nbsp;&nbsp;Below we see one file is untracked.<br>
+                <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Untracked.png"
+
+                    alt="TortoiseGit-untracked.png" width="500"> </figure>
+                <br>
+                However,&nbsp;Check for Modifications&nbsp;will not tell you
+                whether you have pushed all your commits to the remote
+                repo.&nbsp;&nbsp;<br>
+                <br>
+                For that use the TortoiseGit shell extension and select&nbsp;Git
+                Sync. The following&nbsp;Git Sync&nbsp;dialog box would indicate
+                your local repo has committed changes that you have not pushed
+                to the server remote repo:
+                <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Nonversioned.png"
+
+                    alt="images/TortoiseGit-Nonversioned.png" width="500"></figure>
+                <br>
+              </li>
+            </ul>
+            <p> However, <span class="Program_Name">Git Sync</span> does not
+              show you if you have changes to local files that you have not
+              commited to the local repo! </p>
+          </section>
+        </section>
+        <section>
+          <h1 class="Appendix"> Troubleshooting </h1>
+          <section>
+            <h2 class="Appendix" id="Scripts"> Scripts</h2>
+            <ul>
+              <li><span class="Program_Name">git-tutorial-troubleshooter</span>
+                - <a href="./scripts/git-tutorial-troubleshooter.sh" download="">Download</a></li>
+              <ul>
+                <li>Download and copy to a directory you can access from bash. </li>
+                <li>Run the script from the bash command-line with no arguments
+                  to list further instructions, e.g. <br>
+                  <br>
+                  <span class="Program_Name">$ ./git-tutorial-troubleshooter</span><br>
+                </li>
+              </ul>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h1 class="Appendix"><a id="Appendix_I" name="Appendix_I"></a>&nbsp;
+            Open Source Modules </h1>
+          <p>This HTML5 document uses the following open source modules:</p>
+          <ul>
+            <li> https://jquery.org/, Copyright jQuery Foundation and other
+              contributors, MIT license </li>
+            <li> http://projects.jga.me/toc/, Copyright Greg Allen 2014,&nbsp;
+              MIT License </li>
+          </ul>
+        </section>
+        <section>
+          <h1 class="nocount">Citations</h1>
+          <!-- <ul class="Citation_List"> -->
+          <ol class="Citation_List">
+            <li id="WART2021"> [WART2021] Unix Primer - Basic Commands In the
+              Unix Shell, <a href="https://zwartell.gitlab.io/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html"
+
+                target="_blank">https://zwartell.gitlab.io/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html</a>
+            </li>
+            <li id="Chacon2016"> [Chacon2016] Scott Chacon, Pro Git,
+              Apress,&nbsp;<strong> 2<sup>nd</sup> Edition </strong> at <a href="http://git-scm.com/book/en/v2/"
+
+                target="_blank"> http://git-scm.com/book/en/<span style="background:yellow">v2</span>/.</a>
+            </li>
+            <li id="Microsoft2016"> [Microsoft2016] "To add or change the values
+              of environment variables", Windows XP Professional Product
+              Documentation, Performance and maintenance. <a href="https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp"
+
+                target="_blank">https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp</a>
+            </li>
+            <li id="GNU2016"> [GNU2016] Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html"
+
+                target="_blank">http://www.gnu.org/software/bash/manual/html_node/index.html</a>
+            </li>
+            <li id="WP2016a"> [WP2016a] "Environment Variable : Details",
+              Wikipedia. <a href="https://en.wikipedia.org/wiki/Environment_variable#Details"
+
+                target="_blank">https://en.wikipedia.org/wiki/Environment_variable#Details</a>
+            </li>
+            <li id="WP2016b"> [WP2016b] "PATH (variable)", Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29"
+
+                target="_blank">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
+            <li id="WP2023">[WP2023] "Shell Computing", Wikipedia, <a href="https://en.wikipedia.org/wiki/Shell_%28computing%29"
+
+                target="_blank">https://en.wikipedia.org/wiki/Shell_(computing)</a>.
+              Accessed Jan. 2023. </li>
+          </ol>
+          <ol class="Citation_List">
+          </ol>
+        </section>
+        <!--
   </div>      </div>    </div>     --> <a name="Guide-to-Reading-these-Instructions"
 
-              id="Guide-to-Reading-these-Instructions"></a> <em> <em> </em> </em>
-          </b></b></section>
+          id="Guide-to-Reading-these-Instructions"></a> <em> <em> </em> </em>
+      </section>
       <b <="" li=""> <b <="" li=""> </b></b></div>
     <b <="" li=""> <b <="" li=""> <b> </b> </b> </b>
   </body>
