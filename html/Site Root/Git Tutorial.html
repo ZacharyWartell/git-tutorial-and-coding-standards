@@ -10,14 +10,16 @@
     <!-- Experiment with Hypothesis annotation tool. Unless UNCC integrates it with Canvas, it seems to require students to create yet-another userid/password
          on the  Hypothes.is server.   Experience, indicates, students won't bother      -->
     <!-- DISABLED -->
-    <!--      -->
+    <!--
     <script type="application/json" class="js-hypothesis-config">      {
         "openSidebar": false
     }    </script>
     <script src="https://hypothes.is/embed.js" async=""></script>
+    -->
     <!-- -->
     <!-- ZJW: experimenting with the toc.min.js, but it has problems -- I think because of my pages hide/unhide scheme -->
     <!-- IF_TOC -->
+    <!-- -->
     <script src="libs/jquery-3.1.0.js"></script>
     <script src="libs/toc.min.js"></script>
     <!-- -->
@@ -139,6 +141,21 @@
              *   
              */
         function onload_Body() {
+
+
+
+            console.log("@$@#");
+            console.log("navigator.userAgent: ",navigator.userAgent);
+          /* gave up on this, browsers are notorious for masquerading as multiple browsers from other companies...
+          // https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent
+          console.warn("navigator.userAgent: ",navigator.userAgent);
+          if (!(/Chrome/.test(navigator.userAgent) || /Chromium/.test(navigator.userAgent)))
+              window.alert("This webpage has only been tested with the Chrome and Chromimum browser.\n"+
+                       "It is strongly recommended to view this page in the Chrome browser\n\n"+
+                       "The detected userAgent is:\n"+
+                       `   ${navigator.userAgent}`);
+          */
+
             Div_Init('Server_Cci_Git');
             Div_Init('Server_Bitbucket');
             Div_Init('Server_Git_Viscenter');
