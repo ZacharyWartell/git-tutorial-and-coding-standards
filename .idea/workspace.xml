@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-word smithing&#10;-added note to 'unchecked box' for README.md if it is check on cci-git">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +154,7 @@
       <workItem from="1674232540546" duration="666000" />
       <workItem from="1674571098933" duration="14936000" />
       <workItem from="1674667446334" duration="8809000" />
-      <workItem from="1674753040413" duration="3953000" />
+      <workItem from="1674753040413" duration="4418000" />
     </task>
     <task id="LOCAL-00001" summary="-GitLab - changed location of Members dialog">
       <created>1630527623345</created>
