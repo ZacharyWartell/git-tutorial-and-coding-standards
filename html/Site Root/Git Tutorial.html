@@ -11,10 +11,8 @@
          on the  Hypothes.is server.   Experience, indicates, students won't bother      -->
     <!-- DISABLED -->
     <!--
-    <script type="application/json" class="js-hypothesis-config">      {
-        "openSidebar": false
-    }    </script>
-    <script src="https://hypothes.is/embed.js" async=""></script>
+    <script type="application/json" class="js-hypothesis-config">      {        "openSidebar": false
+    }    </script>    <script src="https://hypothes.is/embed.js" async=""></script>
     -->
     <!-- -->
     <!-- ZJW: experimenting with the toc.min.js, but it has problems -- I think because of my pages hide/unhide scheme -->
@@ -698,8 +696,7 @@
         <br>
         Author: Dr. Zachary Wartell, 2012 at UNC Charlotte.<br>
         <em></em><br>
-        Revised: $REVISION$ <sup> (<a href="https://gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards/commits/master"
-
+        Revised: $REVISION$ <sup> (<a href="https://gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards/commits/master"
             target="_blank">git logs</a>) </sup><br>
         <br>
         <br>
@@ -711,14 +708,12 @@
           <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
         </a><br>
         <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> Git
-          Tutorial and Coding Standards </span> by <a xmlns:cc="http://creativecommons.org/ns#"
-
+          Tutorial and Coding Standards </span> by <a xmlns:cc="http://creativecommons.org/ns#"
           href="http://cs.uncc.edu/%7Ezwartell/" property="cc:attributionName" rel="cc:attributionURL">
           Zachary Justin Wartell </a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
           Creative Commons Attribution-NonCommercial-ShareAlike 4.0
           International License </a>.<br>
-        Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards"
-
+        Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards"
           rel="dct:source">https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards</a>.
         <br>
         <hr> This page uses a variety of open source code modules (<a href="#Appendix_I">
@@ -737,21 +732,21 @@
         <h1 id="Document_Configuration" class="nocount">Document Configuration</h1>
         <!-- <button class="Text_Button" onclick="Div_Toggle('Server_Supports_SSH');"> SSH </button> -->
         <p> Parts of this document are specific to particular operating systems,
-          and particular Git servers.&nbsp;&nbsp; In general, your instructor will tell you
-          what git server to use for your class and will tell you what operating
-          systems are allowable in your class. </p>
-        <p>
-          Information for some specific courses is also given below:
-          <ul>
-            <li>
-              [<i>Course</i>=ITCS 3120 - Spring 2023]  In this course all student submissions are to <span class="File_Name">cci-git.charlotte.edu</span>. Regarding operating systems, any OS is acceptable as long as it  supports
-              command-line git and the Chrome browser.
-            </li>
-          </ul>
-        </p>
-
-        <p> Using the course specific information, select the Git server and operating
-          system you are using in the dialog below.&nbsp;&nbsp; Doing this will display the relevant sections of this document and hide the non-relevant ones.
+          and particular Git servers.&nbsp;&nbsp; In general, your instructor
+          will tell you what git server to use for your class and will tell you
+          what operating systems are allowable in your class. </p>
+        <p> Information for some specific courses is also given below: </p>
+        <ul>
+          <li> [<i>Course</i>=ITCS 3120 - Spring 2023] In this course all
+            student submissions are to <span class="File_Name">cci-git.charlotte.edu</span>.
+            Regarding operating systems, any OS is acceptable as long as it
+            supports command-line git and the Chrome browser. </li>
+        </ul>
+        <p></p>
+        <p> Using the course specific information, select the Git server and
+          operating system you are using in the dialog below.&nbsp;&nbsp; Doing
+          this will display the relevant sections of this document and hide the
+          non-relevant ones.
           <!--
           <span style="color: red; background: yellow">Note: Circa Fall            2021,only one Git server is being used by any courses using this            tutorial. Therefore instructions related to other git servers have            been (mostly) disabled and/or removed from this tutorial. <br>          </span>          -->
         </p>
@@ -759,28 +754,18 @@
         <button class="Text_Button" onclick="Div_Toggle('Server_Git_Viscenter');Div_Toggle('Server_Supports_SSH');"> git-viscenter </button>           <button class="Text_Button" onclick="Div_Toggle('Server_Bitbucket');Div_Toggle('Server_Supports_SSH');"> Bitbucket </button>                 <button class="Text_Button" onclick="Div_Toggle('Server_Cci_Git');"> cci-git </button>           -->
         <form name="System_Configuration">
           <fieldset> <legend>Display Instructions For:&nbsp;</legend>
-            <p><label>Git Server: </label> <input name="Git_Server" id="cci_git"
-
-                value="cci_git" checked="checked" onchange="onchange_Git_Server()"
-
-                type="radio"> <label for="cci_git">cci-git</label> <input name="Git_Server"
-
-                id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"
-
+            <p><label>Git Server: </label> <input name="Git_Server" id="cci_git"
+                value="cci_git" checked="checked" onchange="onchange_Git_Server()"
+                type="radio"> <label for="cci_git">cci-git</label> <input name="Git_Server"
+                id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()"
                 disabled="disabled" type="radio"> <label for="bitbucket">Bitbucket</label>
             </p>
-            <p><label>Operating System: </label> <input name="Operating_System"
-
-                id="Windows" value="Windows" checked="checked" onchange="Div_Toggle('OS_Windows');"
-
-                type="checkbox"> <label for="Windows">Windows</label> <input name="Operating_System"
-
-                id="Unix" value="Unix" checked="checked" onchange="Div_Toggle('OS_Unix');"
-
-                type="checkbox"> <label for="Unix">Unix</label> <input name="Operating_System"
-
-                id="Mac" value="Mac" checked="checked" onchange="Div_Toggle('OS_Mac');"
-
+            <p><label>Operating System: </label> <input name="Operating_System"
+                id="Windows" value="Windows" checked="checked" onchange="Div_Toggle('OS_Windows');"
+                type="checkbox"> <label for="Windows">Windows</label> <input name="Operating_System"
+                id="Unix" value="Unix" checked="checked" onchange="Div_Toggle('OS_Unix');"
+                type="checkbox"> <label for="Unix">Unix</label> <input name="Operating_System"
+                id="Mac" value="Mac" checked="checked" onchange="Div_Toggle('OS_Mac');"
                 type="checkbox"> <label for="Mac">Mac</label></p>
           </fieldset>
         </form>
@@ -857,8 +842,7 @@
             can be zoomed to full size by clicking on the image.&nbsp;&nbsp;
             Click anywhere outside the zoomed image to return the image to its
             original size. For example, click on the image below:<br>
-            <figure class="Screen_Capture" tabindex="1"><img src="images/Screen_Capture.png"
-
+            <figure class="Screen_Capture" tabindex="1"><img src="images/Screen_Capture.png"
                 alt="Screen_Capture"></figure>
           </li>
           <li><b>Fonts:</b>
@@ -896,29 +880,23 @@
                       </code> <code class="Shell_Code_Input"> $ ls -la <br>
                       </code> <code class="Shell_Code_Output"> total 20<br>
                         drwxr-xr-x 1 lucretius 197609 0 Sep 23 21:57 ./<br>
-                        drwxr-xr-x 1 </code><code class="Shell_Code_Output"> <code
-
+                        drwxr-xr-x 1 </code><code class="Shell_Code_Output"> <code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:37 ../<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:55 'The Hitchhickers Guide to the Galaxy.azw'<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:36 'On the nature of things - Lucretius.pdf'<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:56 'Ethica - Spinzoa.pdf'<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:57 'Moses the Egyptian: The Memory of Egypt in
                         Western Monotheism.azw'<br>
-                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
-
+                        -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
                           class="Shell_Code_Output">lucretius </code>197609 0
                         Sep 23 21:37 Notes.docx<br>
                         <span class="Shell_Code_Comment"> […misc additional
@@ -959,8 +937,7 @@
             After performing these installations, if your designated Git server is          <span class="Server_Name"> cci-git </span>you can proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.          If your server is either&nbsp; <span class="File_Name">Bitbucket</span><span            class="File_Name"></span>, you also need to also perform <a href="#Installation_and_Setup_of_OpenSSH">Installation_and_Setup_of_OpenSSH</a>          and then proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.          -->
         </p>
         <section>
-          <h2 class="Section" id="Installation_and_Setup_of_Command-Line_Git"><a
-
+          <h2 class="Section" id="Installation_and_Setup_of_Command-Line_Git"><a
               name="Installation_and_Setup_of_Command-Line"></a>Installation of
             Command-Line Git </h2>
           <p>This section walks you through installing Git client tools on your
@@ -976,14 +953,10 @@
                     This installs a minimal Unix style shell (called
                     ‘git-bash’), the basic OpenSSH tools and git.&nbsp; During
                     install select the options indicated in the sequence below:<br>
-                    <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/247202/sp/24720200/embedIframeJs/uiconf_id/28089382/partner_id/247202?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_91pwepnf&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_v56pw0kc"
-
-                      allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
-
-                      allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
-
-                      title="Git Tutorial Install 1" height="285" frameborder="0"
-
+                    <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/247202/sp/24720200/embedIframeJs/uiconf_id/28089382/partner_id/247202?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_91pwepnf&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_v56pw0kc"
+                      allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
+                      allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
+                      title="Git Tutorial Install 1" height="285" frameborder="0"
                       width="400"></iframe> </li>
                   <li> Note, git-bash does not install the standard Unix 'man'
                     command which allows you to read the standard "Manual" pages
@@ -1008,8 +981,8 @@
             </li>
             <li> [<em>YourOS</em>=<strong>Linux</strong>] Typically, default
               Linux/Unix installations include Git.&nbsp; If Git is not
-              installed, then download and install Git from <a target="_blank" href="http://git-scm.com">http://git-scm.com/</a>.
-            </li>
+              installed, then download and install Git from <a target="_blank"
+                href="http://git-scm.com">http://git-scm.com/</a>. </li>
             <li> [<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp; Download and
               install Git from <a target="_blank" href="http://git-scm.com">http://git-scm.com/</a>.
             </li>
@@ -1027,17 +1000,15 @@
               <li><em>Bash Command-Line Shell</em>:&nbsp; The git instructions
                 in this assignment and the <em>Pro Git</em> book use Bash, a
                 particular command-line shell&nbsp;<a href="#WP2023">[WP2023]</a>.
-                You need to have basic mastery of the Bash shell.&nbsp; A short
+                You need to have basic mainy of the Bash shell.&nbsp; A short
                 introduction is <a class="Citation" href="#WART2021">[WART2021]</a>.
               </li>
               <li><em>Environment Variables</em>:&nbsp;&nbsp; Regarding
                 environment variables, the reader should understand environment
                 variables:&nbsp; what they are and how to modify them.&nbsp; In
                 particular knowledge of the PATH environment variable is
-                required.&nbsp;&nbsp; A general discussion is found at <a class="Citation"
-
-                  href="#WP2016a">[WP2016a]</a> and with specifics on PATH at <a
-
+                required.&nbsp;&nbsp; A general discussion is found at <a class="Citation"
+                  href="#WP2016a">[WP2016a]</a> and with specifics on PATH at <a
                   class="Citation" href="#WP2016b">[WP2016b]</a>.&nbsp;&nbsp;&nbsp;
                 The method to modify environment variables differs across
                 operating system.&nbsp; See <a class="Citation" href="#Microsoft2016">[Microsoft2016]</a>
@@ -1055,13 +1026,11 @@
             available as well. Use of GUI Git tools is <u>optional</u>. </p>
           <ol class="Instruction_Option">
             <li> [<em>YourOS</em>=<strong>Window</strong>] <br>
-              Download and install TortoiseGit from <a href="https://tortoisegit.org/"
-
+              Download and install TortoiseGit from <a href="https://tortoisegit.org/"
                 target="_blank">https://tortoisegit.org/</a></li>
             <li> [<em>YourOS</em>=<strong>Mac/Linux</strong>] <br>
-              Various Git GUIs are found here <a target="_blank" href="http://git-scm.com/downloads/guis.%20%20"
-
-                target="_blank">http://git-scm.com/downloads/guis</a>.&nbsp; </li>
+              Various Git GUIs are found here <a target="_blank" href="http://git-scm.com/downloads/guis.%20%20">http://git-scm.com/downloads/guis</a>.&nbsp;
+              </li>
           </ol>
         </section>
       </section>
@@ -1141,8 +1110,7 @@
                 </div>
               </li>
               <li> [<em>YourOS</em>=<strong>Linux</strong>] Generally this OS
-                already has OpenSSH installed; if not see <a href="http://www.openssh.org/"
-
+                already has OpenSSH installed; if not see <a href="http://www.openssh.org/"
                   target="_blank">http://www.openssh.org/</a>. </li>
               <li> [<em>YourOS</em>=<strong>Mac</strong>] Download and Install
                 OpenSSH from <a href="http://www.openssh.org/" target="_blank">
@@ -1307,8 +1275,7 @@
                   <li> [<i>YourServer</i>=<b>cci-git</b>]
                     <div class="Server_Cci_Git"><br>
                       <br>
-                      <span style="color: red; background: yellow">Warning: </span><span
-
+                      <span style="color: red; background: yellow">Warning: </span><span
                         class="File_Name"> <span style="color: red;
                                                                  background: yellow">cci-git</span>
                       </span><span style="color: red; background: yellow"> SSH
@@ -1316,8 +1283,7 @@
                         document’s <b>Section: </b> </span><span class="File_Name">
                         <b> <i> <a href="#cci-gitunccedu_URL_List"> <span style="color: red; background: yellow">cci-git</span>
                             </a> </i><a href="#cci-gitunccedu_URL_List"> </a>
-                        </b><a href="#cci-gitunccedu_URL_List"> </a> </span><a
-
+                        </b><a href="#cci-gitunccedu_URL_List"> </a> </span><a
                         href="#cci-gitunccedu_URL_List"> <b> <span style="color: red;
                                                                    background: yellow">
                             Server URL </span> </b> </a><span style="color: red; background: yellow">
@@ -1328,8 +1294,7 @@
                         </b><b> </b> </a><b> <a href="#Accessing_Git_Server_Using_HTTPS_and_Git">
                         </a><span style="color: red; background: yellow"> <a href="#Accessing_Git_Server_Using_HTTPS_and_Git">
                             Accessing Git Server Using HTTPS and Git </a> </span>
-                      </b><b> <span style="color: red; background: yellow"> <a
-
+                      </b><b> <span style="color: red; background: yellow"> <a
                             href="#Accessing_Git_Server_Using_HTTPS_and_Git"> <b>
                               <span style="color: red; background: yellow"></span>
                             </b> </a><b> <a href="file:///E:/Users/zwart/Dropbox%20%28UNC%20Charlotte%29/classes/Git_Tutorial_and_Coding_Standards/html/Site%20Root/Git%20Tutorial.html#Accessing_Git_Server_Using_HTTPS_and_Git"></a>
@@ -1339,30 +1304,25 @@
                       <ol>
                         <li> Login to <span class="File_Name">https://cci-git.uncc.edu/</span>
                           using your standard UNCC username and password. You
-                          should then see your "Dashboard" (below). Select <span
-
+                          should then see your "Dashboard" (below). Select <span
                             class="File_Name">Profile Settings</span> <br>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Profile-Settings.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Profile-Settings.png"
                               alt="" height="311" width="500"></figure>
                           <br>
                         </li>
                         <li> Select <span class="File_Name">"SSH Keys"</span> <br>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-SSH-Keys.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-SSH-Keys.png"
                               alt="" height="297" width="500"> <br>
                           </figure>
                         </li>
                         <li> Select <span class="File_Name">"Add SSH Key"</span><br>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-SSH-Key.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-SSH-Key.png"
                               alt="cci-git-Add-SSH-Key.png" width="500"></figure>
                         </li>
                         <li> Cut and paste the text from <u>your</u> <strong>public</strong>
                           key file into the dialog box, give the key a title,
                           and press <span class="File_Name">Add Key</span>: <br>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Paste-Key.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Paste-Key.png"
                               alt="" height="311" width="500"></figure>
                           <br>
                           <br>
@@ -1404,8 +1364,7 @@
                 </p>
                 <ol class="Instruction">
                   <li> Run PuTTYgen:&nbsp;&nbsp;&nbsp; <span class="File_Name">
-                      Start Menu </span>→<span class="File_Name">Putty</span>→<span
-
+                      Start Menu </span>→<span class="File_Name">Putty</span>→<span
                       class="File_Name">PuTTYgen</span></li>
                   <li> From the PuTTYgen menu bar select <span class="File_Name">Conversions</span>
                     and then <span class="File_Name">Import Key</span> on the
@@ -1475,8 +1434,7 @@
             <ol>
               <li> Open a operating system shell prompt.</li>
               <li> Create a directory called ‘git-tutorial’ for performing and
-                saving the exercises (commands mkdir, etc. again see <a class="Citation"
-
+                saving the exercises (commands mkdir, etc. again see <a class="Citation"
                   href="#WART2021">[WART2021]</a> .) </li>
             </ol>
           </li>
@@ -1500,8 +1458,7 @@
                 <ol>
                   <li><u>Exercise</u><b>:&nbsp; </b>PG:“<a target="_blank" href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity">Your
                       Identity </a>” - perform all steps </li>
-                  <li><u>Exercise</u><strong>:&nbsp; </strong>PG:<strong></strong>“<a
-
+                  <li><u>Exercise</u><strong>:&nbsp; </strong>PG:<strong></strong>“<a
                       href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Editor">Your
                       Editor </a>” - perform all steps<br>
                     <em>Note</em>: use whatever simple editor you prefer
@@ -1524,8 +1481,7 @@
                       Existing Directory" </strong>assumes you have created a
                     set of files in a directory called 'my_project'.&nbsp;&nbsp;
                     To create and get these files, in your browser click the
-                    following link to download these files:&nbsp;&nbsp;&nbsp;<a
-
+                    following link to download these files:&nbsp;&nbsp;&nbsp;<a
                       href="./tutorial_example_files/my_project.tar.gz"><span class="File_Name">my_project.tar.gz</span>
                     </a>.&nbsp;&nbsp; After downloading copy the file to your
                     git-tutorial directory.&nbsp; Then uncompress the tar.gz
@@ -1536,13 +1492,11 @@
                           <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽</button>
                           </td>
                           <td>
-                            <div style="height: 150px;"><code class="Shell_Code_Input"></code><code
-
+                            <div style="height: 150px;"><code class="Shell_Code_Input"></code><code
                                 class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
                                   ~/ITCS_3120</code> tar -xf my_project.tar.gz </code>
                               <br>
-                              <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
-
+                              <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
                                   class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
                                     ~/ITCS_3120</code></code> ls -R </code> <br>
                               <code class="Shell_Code_Output"> .: <br>
@@ -1551,14 +1505,12 @@
                                 ./my_project:<br>
                                 main.c LICENSE <br>
                               </code> <br>
-                              <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
-
+                              <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
                                   class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
                                     ~/ITCS_3120</code></code> rm
                                 my_project.tar.gz </code> <span class="Shell_Code_Comment">
                                 [don’t need this anymore] </span> <br>
-                              <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
-
+                              <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
                                   class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
                                     ~/ITCS_3120</code></code> cd my_project </code>
                             </div>
@@ -1568,8 +1520,7 @@
                     </table>
                     <br>
                   </li>
-                  <li><u>Exercise</u>: PG: <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#_initializing_a_repository_in_an_existing_directory"
-
+                  <li><u>Exercise</u>: PG: <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#_initializing_a_repository_in_an_existing_directory"
                       target="_blank">Initializing a Repository in an Existing
                       Directory</a> <br>
                     <br>
@@ -1583,26 +1534,21 @@
                     </strong>directory: <br>
                     <br>
                     Perform the book’s exercises.&nbsp; This will create various
-                    clones of a remote repo mentioned in the book in your <span
-
+                    clones of a remote repo mentioned in the book in your <span
                       class="File_Name">git-tutorial</span> directory. </li>
                   <li><u>Exercise</u>:&nbsp; <i> Push the pre-existing local
                       repo to a remote repo.</i>
                     <ol>
-                      <li>Create a remote repository on the git server called <span
-
+                      <li>Create a remote repository on the git server called <span
                           class="File_Name">my-project</span>.&nbsp;&nbsp;
                         (Note, there is a strong convention to name the URL
                         remote repo's with lower case and only dash's (-), no
                         spaces are underscores (_)).&nbsp;&nbsp; <br>
-                        Follow the instructions in Appendix II
-                        <a href="#How_to_Create_New_Remote_Repository">"How to Create New Remote Repository"&nbsp;</a>
-                      </li>
+                        Follow the instructions in Appendix II <a href="#How_to_Create_New_Remote_Repository">"How
+                          to Create New Remote Repository"&nbsp;</a> </li>
                       <li>To connect your local repo to the remote repo do as
-                        shown below, where <code class="Shell_Code_Input"></code><code
-
-                          class="Shell_Code_Input"><span class="Server_Name"><span
-
+                        shown below, where <code class="Shell_Code_Input"></code><code
+                          class="Shell_Code_Input"><span class="Server_Name"><span
                               class="User_Input">URL of my-project</span></span></code>
                         is the full URL of the remote repo.<br>
                         <table class="Code_Example" id="Code_Example_0_3ai" border="1">
@@ -1614,17 +1560,14 @@
                                 <div style="height: 150px;"> <code class="Shell_Code_Input">
                                     <code class="Shell_Code_Prompt">ada@turing42
                                       ~/ITCS_3120/my-project</code> git remote
-                                    add origin <span class="Server_Name"><span
-
+                                    add origin <span class="Server_Name"><span
                                         class="User_Input">URL of my-project</span></span><br>
-                                  </code> <code class="Shell_Code_Input"><code
-
+                                  </code> <code class="Shell_Code_Input"><code
                                       class="Shell_Code_Prompt">ada@turing42
-                                      ~/ITCS_3120</code></code><code class="Shell_Code_Input"><code
-
+                                      ~/ITCS_3120</code></code><code class="Shell_Code_Input"><code
                                       class="Shell_Code_Input"><code class="Shell_Code_Prompt">/my-project
                                         </code></code></code><code class="Shell_Code_Input">git
-                                    push origin master <span style="color: black;">
+                                    push origin main <span style="color: black;">
                                       <span style="font-family: serif;">t </span></span>
                                   </code> <br>
                                   <code class="Shell_Code_Input"> <span class="Shell_Code_Comment">[
@@ -1641,8 +1584,8 @@
                                       To
                                       https://cci-git.charlotte.edu/zwartell/my-project.git<br>
                                       &nbsp;* [new
-                                      branch]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                      master -&gt; master<br>
+                                      branch]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; main
+                                      -&gt; main<br>
                                     </span></code><code class="Shell_Code_Output"><br>
                                   </code> <br>
                                   <code class="Shell_Code_Input"><code> </code></code></div>
@@ -1660,8 +1603,7 @@
                   <li>Download the required practice files,
                     'ProGit_Chapter_2_2.tar.gz'.&nbsp; <br>
                     In your browser click the following link to download these
-                    files:&nbsp;&nbsp; <a href="./tutorial_example_files/ProGit_Chapter_2_2.tar.gz"><span
-
+                    files:&nbsp;&nbsp; <a href="./tutorial_example_files/ProGit_Chapter_2_2.tar.gz"><span
                         class="File_Name">ProGit_Chapter_2_2.tar.gz</span></a>.&nbsp;&nbsp;
                     Then uncompress the tar.gz file as follows:<br>
                     <table class="Code_Example" id="Code_Example_0_3bi" border="1">
@@ -1669,23 +1611,27 @@
                         <tr>
                           <td> <button onclick="Code_Example_Toggle('Code_Example_0_3bi');">▽</button>
                           </td>
-                          <td>
-                            <span class="tag">1645</span>
-                            <div style="height: 110px;">
-                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/git-tutorial/my-project</code>
-                                <code class="Shell_Code_Input"> cd .. <code class="Shell_Code_Input"> <br>
-                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/git-tutorial</code><br>
-                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120/git-tutorial</code><br>
-                                   <code class="Shell_Code_Input">tar -xf ProGit_Chapter_2_2.tar.gz </code>
-                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120 </code>
-                                <<code class="Shell_Code_Input"></code> rm ProGit_Chapter_2_2.tar.gz </code>
-                                <span class="Shell_Code_Comment"> [you can delete this now] </span> <br>
-                              <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_3120 </code>
-                                <code class="Shell_Code_Prompt">0/git-tutorial</code>
-                                  <code class="Shell_Code_Input"> cd </code>
-                                <code class="Shell_Code_Input"> <code class="Shell_Code_Input">ProGit_Chapter_2_2</code>
-                            </div>
-                          </td>
+                          <td> <span class="tag">1645</span>
+                            <div style="height: 110px;"> <code class="Shell_Code_Prompt">ada@turing42
+                                ~/ITCS_3120/git-tutorial/my-project</code> <code
+                                class="Shell_Code_Input"> cd .. <code class="Shell_Code_Input">
+                                  <br>
+                                  <code class="Shell_Code_Prompt">ada@turing42
+                                    ~/ITCS_3120/git-tutorial</code><br>
+                                  <code class="Shell_Code_Prompt">ada@turing42
+                                    ~/ITCS_3120/git-tutorial</code><br>
+                                  <code class="Shell_Code_Input">tar -xf
+                                    ProGit_Chapter_2_2.tar.gz </code> <code class="Shell_Code_Prompt">ada@turing42
+                                    ~/ITCS_3120 </code> &lt;<code class="Shell_Code_Input"></code>
+                                  rm ProGit_Chapter_2_2.tar.gz </code> <span class="Shell_Code_Comment">
+                                  [you can delete this now] </span> <br>
+                                <code class="Shell_Code_Prompt">ada@turing42
+                                  ~/ITCS_3120 </code> <code class="Shell_Code_Prompt">0/git-tutorial</code>
+                                <code class="Shell_Code_Input"> cd </code> <code
+                                  class="Shell_Code_Input"> <code class="Shell_Code_Input">ProGit_Chapter_2_2</code>
+                                </code></code></div>
+                            <code class="Shell_Code_Input"><code class="Shell_Code_Input">
+                              </code></code></td>
                         </tr>
                       </tbody>
                     </table>
@@ -1706,11 +1652,10 @@
                   <li><u>Exercise</u>:&nbsp; <i> Push the pre-existing local
                       repo to a remote repo.</i>
                     <ol>
-                      <li>Create a remote repository on the git server called
-                        <span class="File_Name">progit-chapter-2-2</span>.&nbsp;&nbsp;
-                        Follow the instructions in Appendix II
-                        <a href="#How_to_Create_New_Remote_Repository">"How to Create New Remote Repository"&nbsp;</a>
-                      </li>
+                      <li>Create a remote repository on the git server called <span
+                          class="File_Name">progit-chapter-2-2</span>.&nbsp;&nbsp;
+                        Follow the instructions in Appendix II <a href="#How_to_Create_New_Remote_Repository">"How
+                          to Create New Remote Repository"&nbsp;</a> </li>
                       <li>To connect your local repo to the remote repo do as
                         shown below, where <code class="Shell_Code_Input"></code>
                         <code class="Shell_Code_Input"></code> is the full URL
@@ -1723,16 +1668,14 @@
                                 <div style="height: 150px;"> <code class="Shell_Code_Input"></code>
                                   <code class="Shell_Code_Input"> <code class="Shell_Code_Prompt">ada@turing42
                                       ~/ITCS_3120/git-tutorial/ProGit_Chapter_2_2</code>
-                                    git remote add origin </code> <code class="Shell_Code_Input"><span
-
+                                    git remote add origin </code> <code class="Shell_Code_Input"><span
                                       class="Server_Name"> <span class="User_Input">URL
                                         of my-project</span></span><br>
-                                  </code> <code class="Shell_Code_Input"> <code
-
+                                  </code> <code class="Shell_Code_Input"> <code
                                       class="Shell_Code_Input"> <code class="Shell_Code_Prompt">ada@turing42
                                         ~/ITCS_3120/git-tutorial/ProGit_Chapter_2_2
                                         </code> </code></code> <code class="Shell_Code_Input">git
-                                    push origin master <span style="color: black;">
+                                    push origin main <span style="color: black;">
                                       <span style="font-family: serif;">t </span></span>
                                   </code> <br>
                                   <code class="Shell_Code_Input"> <span class="Shell_Code_Comment">[
@@ -1809,12 +1752,11 @@
                           <td>
                             <div style="height: 50px;"> <code class="Shell_Code_Input">
                                 <code class="Shell_Code_Prompt">ada@turing42
-                                  ~/ITCS_3120</code></code><code class="Shell_Code_Input"><code
-
+                                  ~/ITCS_3120</code></code><code class="Shell_Code_Input"><code
                                   class="Shell_Code_Input"><code class="Shell_Code_Prompt">/ProGit_Chapter_2_2
                                     </code></code></code><code class="Shell_Code_Input">git
-                                push origin master <span style="color: black;">
-                                  <span style="font-family: serif;">t </span></span>
+                                push origin main <span style="color: black;"> <span
+                                    style="font-family: serif;">t </span></span>
                               </code> </div>
                           </td>
                         </tr>
@@ -1845,11 +1787,10 @@
                     resides on cci-git while the developer's repo resides on
                     GitHub. To fork simplegit-progit do as follows:
                     <ol>
-                      <li>Create a remote repository on the git server called <span
-
+                      <li>Create a remote repository on the git server called <span
                           class="File_Name">simplegit-progit</span>. Follow the
-                        instructions in Appendix II <a href="#How_to_Create_New_Remote_Repository">"How to Create New Remote Repository"&nbsp;</a>
-                      </li>
+                        instructions in Appendix II <a href="#How_to_Create_New_Remote_Repository">"How
+                          to Create New Remote Repository"&nbsp;</a> </li>
                       <li>Next do as follows:
                         <table class="Code_Example" id="Code_Example_0_3ai" border="1">
                           <tbody style="height: 150px;">
@@ -1859,8 +1800,7 @@
                               <td>
                                 <div> <code class="Shell_Code_Prompt">ada@turing42
                                     ~/ITCS_3120/simplegit-progit</code> <code class="Shell_Code_Input">git
-                                    remote rename origin upstream </code> <span
-
+                                    remote rename origin upstream </code> <span
                                     class="Shell_Code_Comment"> [This renames
                                     the source repo to 'upstream', a common
                                     convention] </span> <code class="Shell_Code_Prompt">ada@turing42
@@ -1938,8 +1878,7 @@
             <br>
             <del datetime="2023-01-20"> In the instructions below, for input
               text <span class="User_Input">remote_repo_path</span>, substitute
-              one the following:</del> In the instructions below, for input <span
-
+              one the following:</del> In the instructions below, for input <span
               class="User_Input">URL of remote repo</span> use the URL as listed
             on the server (see Appendix section <a href="#Basic_Git_Operations">Basic
               Git Operations).</a> for details).
@@ -1947,8 +1886,7 @@
               <li> [<em>YourServer</em>=<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <br> <br>
                 <del datetime="2023-01-20"> https://<code class="Shell_Code_Output"></code>
-                  <span class="User_Input">your_user_id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
-
+                  <span class="User_Input">your_user_id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
                     class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git<br>
                   <del> </del></del></li>
               <!--
@@ -1968,10 +1906,8 @@
                         <br>
                         Initialized empty Git repository in
                         git-micro-tutorial/.git/ </code> <br>
-                      <code class="Shell_Code_Input"> $ git remote add origin <ins><span
-
-                            class="User_Input">URL of remote repo</span></ins> <del
-
+                      <code class="Shell_Code_Input"> $ git remote add origin <ins><span
+                            class="User_Input">URL of remote repo</span></ins> <del
                           datetime="2023-01-20"><span class="User_Input">remote_repo_path</span>/git-micro-tutorial.git</del>
                       </code></div>
                   </td>
@@ -2008,8 +1944,7 @@
                         "-submitted git-micro-tutorial assignment" </code> <br>
                       <div align="center"> <span class="Shell_Code_Comment">
                           [..misc output...] </span></div>
-                      <code class="Shell_Code_Input"> $ git push -u origin
-                        master</code><br>
+                      <code class="Shell_Code_Input"> $ git push -u origin main</code><br>
                       <div align="center"> <span class="Shell_Code_Comment">
                           [..misc output...] </span></div>
                     </div>
@@ -2050,16 +1985,14 @@
               username and password. </p>
             <ol>
               <li><u>Student Repository</u>:&nbsp;&nbsp; The Git URL is:<br>
-                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
-
+                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
                     class="User_Input">name_of_repo_you_created</span>.git <br>
                 </span><br>
               </li>
               <li><u>Course Repository</u>: The course repo’s and material will
                 be found at URL’s such as:<br>
                 <br>
-                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
-
+                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
                     class="User_Input">the_repo_name</span>.git </span> <br>
                 <br>
                 The <span class="User_Input">ITCS_Class_URL_Name</span> will be
@@ -2099,8 +2032,7 @@
                   <li>In your browser sign in to <a href="https://cci-git.uncc.edu">cci-git.uncc.edu</a>.&nbsp;
                     You will be prompted for by the UNCC SSO for your standard
                     UNCC user id and password. </li>
-                  <li>In the upper-right corner, click your avatar and select <span
-
+                  <li>In the upper-right corner, click your avatar and select <span
                       class="Program_Name">Settings</span>. </li>
                   <li>On the <span class="Program_Name">User Settings</span>
                     menu (left side), select <span class="Program_Name"> Access
@@ -2109,8 +2041,7 @@
                   <ol>
                     <li>The suggested name is "git-bash"</li>
                   </ol>
-                  <li>For the <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#limiting-scopes-of-a-personal-access-token"
-
+                  <li>For the <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#limiting-scopes-of-a-personal-access-token"
                       style="box-sizing: border-box; color: rgb(27, 105, 182); text-decoration: none; background-color: transparent;">desired
                       scopes</a>, choose <span class="Program_Name">write_repository</span></li>
                   <li>Click the <span class="Program_Name">Create personal
@@ -2163,13 +2094,11 @@
                             <div style="height: 60px;"><code class="Shell_Code_Input">$
                                 git remote -v</code><br>
                               <code class="Shell_Code_Output">origin&nbsp;
-                                https://</code><code class="Shell_Code_Output"><code
-
+                                https://</code><code class="Shell_Code_Output"><code
                                   class="Shell_Code_Input"><span class="User_Input">Your
                                     UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
                                 (fetch)<br>
-                                origin&nbsp; https://</code><code class="Shell_Code_Output"><code
-
+                                origin&nbsp; https://</code><code class="Shell_Code_Output"><code
                                   class="Shell_Code_Input"><span class="User_Input">Your
                                     UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
                                 (push) </code><br>
@@ -2187,17 +2116,14 @@
                 from cci-git.uncc.edu, you first determine the standard repo URL
                 such as:<br>
                 <br>
-                <div style="margin-left: 40px;"> https://cci-git.uncc.edu/<span
-
+                <div style="margin-left: 40px;"> https://cci-git.uncc.edu/<span
                     class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
                   </div> <br>
                 When performing a git clone, you use the extended PAT syntax URL
                 shown below:<br>
                 <br>
-                <div style="margin-left: 40px;">https://<code class="Shell_Code_Output"></code><span
-
-                    class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
-
+                <div style="margin-left: 40px;">https://<code class="Shell_Code_Output"></code><span
+                    class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
                     class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
                   </div> <br>
                 However, this extra typing can be avoided if you install a Git
@@ -2538,8 +2464,7 @@
                   Activate and Verify UNCC Account </h4>
                 <p> If you have never used cci-git.uncc.edu before, your UNCC
                   account will need to be activated.&nbsp;&nbsp; To activate
-                  your UNCC account you need to log into <a href="https://cci-git.uncc.edu/"
-
+                  your UNCC account you need to log into <a href="https://cci-git.uncc.edu/"
                     target="_blank">cci-git.uncc.edu</a> via a web browser.
                   During this first login, cci-git.uncc.edu creates an account
                   for you that will henceforth your UNCC's Single-Sign-On (SSO)
@@ -2548,8 +2473,7 @@
                 <p> To verify activation you will clone a repo from <span class="Server_Name">cci-git</span>
                   using the command-line.<br>
                 </p>
-                <p> First, as of September 2016, there is a problem with the <span
-
+                <p> First, as of September 2016, there is a problem with the <span
                     class="Server_Name">cci-git </span> server's SSL
                   certificate.&nbsp;&nbsp; You should disable Git’s automatic
                   checkings for a SSL certificate as follows: </p>
@@ -2657,7 +2581,8 @@
             <ol class="Instruction">
               <!-- hiding this for now...
                       <li><b>How to Clone Existing Repository</b><br>              <br>              Below, for the input text <span class="User_Input">git_server_url</span>              substitute the appropriate Server URL from Section 7 Git Server              Access:</li>            -->
-              <li id="How_to_Create_New_Remote_Repository"><strong>How to Create New Remote Repository</strong>:<br>
+              <li id="How_to_Create_New_Remote_Repository"><strong>How to Create
+                  New Remote Repository</strong>:<br>
                 <em> Instructions below vary based on your server.</em>
                 <ol class="Instruction_Option">
                   <li><a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
@@ -2670,36 +2595,31 @@
                           below whenever you must select multiple buttons, each
                           button press is labeled with a number indicating the
                           sequence in which you should make the selections.<br>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project.png"
                               alt="TortoiseGit-untracked.png" width="500"></figure>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project2.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project2.png"
                               alt="TortoiseGit-untracked.png" width="500"></figure>
                         </li>
                         <li>Set up your new project selecting the settings shown
                           below.&nbsp;&nbsp; For action #2 select your user
                           name.<br>
                           <br>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Blank_Project.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Blank_Project.png"
                               alt="TortoiseGit-untracked.png" width="500"></figure>
                         </li>
                         <li>Open the Members dialog by making the menu
                           selections below.<br>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Project-Infomration.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Project-Infomration.png"
                               alt="TortoiseGit-untracked.png" width="500"></figure>
                         </li>
                         <li>&nbsp;Next, you will add permission for the
-                          professor <!-- and TAs --> to access your project.&nbsp;
-                          Perform the actions indicated in the following screen
+                          professor
+                          <!-- and TAs --> to access your project.&nbsp; Perform
+                          the actions indicated in the following screen
                           captures.<br>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Invite-Members.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Invite-Members.png"
                               alt="TortoiseGit-untracked.png" width="500"></figure>
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-Members.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-Members.png"
                               alt="TortoiseGit-untracked.png" width="500"></figure>
                         </li>
                         <li> Finally, you should disable the Auto DevOps feature
@@ -2710,23 +2630,18 @@
                           <ol>
                             <li>Open the&nbsp; <span class="File_Name">Settings</span>
                               and <span class="File_Name"></span><span class="File_Name">CI/CD</span>.
-                              <figure class="Screen_Capture"><img src="images/cci-git-CI-CD.png"
-
+                              <figure class="Screen_Capture"><img src="images/cci-git-CI-CD.png"
                                   alt="TortoiseGit-untracked.png" width="500"></figure>
                             </li>
-                            <li>. Under Auto DevOps click Open the <span class="File_Name">Expand.</span><span
-
+                            <li>. Under Auto DevOps click Open the <span class="File_Name">Expand.</span><span
                                 class="File_Name"></span>
-                              <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Expand.png"
-
+                              <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Expand.png"
                                   alt="TortoiseGit-untracked.png" width="500"></figure>
                             </li>
                             <li><u>Un</u>check the checkbox, <span class="File_Name">Default
-                                to AutoDevOps Pipeline</span>, and click <span
-
+                                to AutoDevOps Pipeline</span>, and click <span
                                 class="File_Name">Save Changes.</span>
-                              <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Default.png"
-
+                              <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Default.png"
                                   alt="TortoiseGit-untracked.png" width="500"></figure>
                             </li>
                           </ol>
@@ -2736,8 +2651,7 @@
                         <li>Finally, you should verify that you can clone your
                           created repository.&nbsp;&nbsp; To determine the URL
                           make the selection below:
-                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Get-URL.png"
-
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Get-URL.png"
                               alt="TortoiseGit-untracked.png" width="500"></figure>
                           Then clone the repo:
                           <table class="Code_Example" id="Code_Example_9_1_7" border="1">
@@ -2749,13 +2663,12 @@
                                   <div style="height: 150px; background-color: black;">
                                     <code class="Shell_Code_Input"> <code class="Shell_Code_Input">
                                         <code class="Shell_Code_Prompt">
-                                          ~/myclass </code> mkdir verify; cd
+                                          ~/ITCS_3120/ </code> mkdir verify; cd
                                         verify <br>
                                         <code class="Shell_Code_Prompt">
-                                          ~/myclass/verify </code> git clone <code
-
-                                          class="User_Input">URL of of the Repo</code>
-                                        <br>
+                                          ~/ITCS_3120/verify </code> git clone
+                                        <code class="User_Input">URL of of the
+                                          Repo</code> <br>
                                       </code> <code class="Shell_Code_Output">
                                         Cloning into 'my-first-repo'...<br>
                                         warning: You appear to have cloned an
@@ -2797,8 +2710,7 @@
                                   </button> </td>
                                 <td>
                                   <div style="height: 150px;"> <code class="Shell_Code_Input">
-                                      $ git clone https://cci-git.uncc.edu/ <code
-
+                                      $ git clone https://cci-git.uncc.edu/ <code
                                         class="User_Input">your_uncc_user_id</code>/Project_Example.git<br>
                                     </code> <code class="Shell_Code_Output">
                                       Cloning into 'Project_Example'...<br>
@@ -2812,15 +2724,14 @@
                                       example] </span> $ touch README.md<br>
                                     $ git add README.md<br>
                                     $ git commit -m "add README"<br>
-                                    <code class="Shell_Code_Output"> [ master
+                                    <code class="Shell_Code_Output"> [ main
                                       (root-commit) dd8e1a0] add README<br>
                                       &nbsp;1 file changed, 0 insertions(+), 0
                                       deletions(-)<br>
                                       &nbsp;create mode 100644 README.md </code>&nbsp;
-                                    &nbsp;&nbsp; $ git push -u origin master <code
-
+                                    &nbsp;&nbsp; $ git push -u origin main <code
                                       class="Shell_Code_Input"><br>
-                                      $ git push -u origin master <ins datetime="2021-08-28">
+                                      $ git push -u origin main <ins datetime="2021-08-28">
                                       </ins> </code><br>
                                     <code class="Shell_Code_Output"> Counting
                                       objects: 3, done.<br>
@@ -2863,9 +2774,8 @@
                                       https://cci-git.uncc.edu/your_user_id/Project_Example.git<br>
                                       $ git add -A<br>
                                       $ git commit –m "-initial import" <br>
-                                      $ git push -u origin master </code><code
-
-                                      class="Shell_Code_Input"> <br>
+                                      $ git push -u origin main </code><code class="Shell_Code_Input">
+                                      <br>
                                     </code><code class="Shell_Code_Output">
                                       Counting objects: 3, done.<br>
                                       Writing objects: 100% (3/3), 219 bytes | 0
@@ -2886,8 +2796,7 @@
               </li>
               <li><strong> Deleting a remote repo: </strong>
                 <ol class="Instruction_Option">
-                  <li> [<em>YourServer=</em><strong>cci-git</strong>] See <a href="https://cci-git.uncc.edu/help"
-
+                  <li> [<em>YourServer=</em><strong>cci-git</strong>] See <a href="https://cci-git.uncc.edu/help"
                       target="_blank">https://cci-git.uncc.edu/help</a><br>
                   </li>
                   <!--
@@ -3011,10 +2920,10 @@
               server). </p>
             <p><em>The Ultimate Verification</em>:</p>
             <p> The ultimate way to verify the remote repo contains the files
-              you think it does is to clone it into to another
-              directory and check that second cloned copy for
-              completeness.&nbsp;&nbsp; You should do this when you are
-              completely done with your assignment. </p>
+              you think it does is to clone it into to another directory and
+              check that second cloned copy for completeness.&nbsp;&nbsp; You
+              should do this when you are completely done with your assignment.
+            </p>
             <p> &nbsp;<em>Some Safety Checks:</em><br>
             </p>
             <p> Performing<em>&nbsp;The Ultimate Verification</em>&nbsp;while
@@ -3036,9 +2945,8 @@
                             lucretius@CCIWD-435B-1 ~/ITCS_4120/Project_42<br>
                           </code> <code class="Shell_Code_Input"> $ git status<br>
                           </code><code class="Shell_Code_Output"> # On branch
-                            master <br>
-                            nothing to commit, working directory clean </code><code
-
+                            main <br>
+                            nothing to commit, working directory clean </code><code
                             class="Shell_Code_Output"> <br>
                           </code></div>
                       </td>
@@ -3063,7 +2971,7 @@
                             lucretius@CCIWD-435B-1 ~/ITCS_4120/Project_42<br>
                           </code> <code class="Shell_Code_Input"> $ git status<br>
                           </code><code class="Shell_Code_Output"> # On branch
-                            master&nbsp; <br>
+                            main&nbsp; <br>
                             # Untracked files:<br>
                             #&nbsp;&nbsp; (use "git add &lt;file&gt;..." to
                             include in what will be committed)<br>
@@ -3078,8 +2986,7 @@
                 then you have untracked files (but you have push’ed all your
                 commits).&nbsp; This maybe ok as along as these files aren’t
                 files that belong in a repo (such as temporary files).&nbsp; You
-                might consider adding to the .gitignore file (see <a class="Citation"
-
+                might consider adding to the .gitignore file (see <a class="Citation"
                   href="#Chacon2016">[Chacon2016]</a>).<br>
                 <br>
                 <em>Bad:</em><br>
@@ -3094,8 +3001,8 @@
                             lucretius@CCIWD-435B-1 ~/ITCS_4120/Project_42<br>
                           </code> <code class="Shell_Code_Input"> $ git status<br>
                           </code><code class="Shell_Code_Output"> # On branch
-                            master <br>
-                            # Your branch is ahead of 'origin/master ' by 1
+                            main <br>
+                            # Your branch is ahead of 'origin/main ' by 1
                             commit.<br>
                             #&nbsp;&nbsp; (use "git push" to publish your local
                             commits)<br>
@@ -3116,8 +3023,7 @@
                 whether you have any changes not commited to the local repo (but
                 make sure to check the box,&nbsp;Show Unversioned Files).
                 &nbsp;&nbsp;Below we see one file is untracked.<br>
-                <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Untracked.png"
-
+                <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Untracked.png"
                     alt="TortoiseGit-untracked.png" width="500"> </figure>
                 <br>
                 However,&nbsp;Check for Modifications&nbsp;will not tell you
@@ -3128,8 +3034,7 @@
                 Sync. The following&nbsp;Git Sync&nbsp;dialog box would indicate
                 your local repo has committed changes that you have not pushed
                 to the server remote repo:
-                <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Nonversioned.png"
-
+                <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Nonversioned.png"
                     alt="images/TortoiseGit-Nonversioned.png" width="500"></figure>
                 <br>
               </li>
@@ -3173,35 +3078,29 @@
           <!-- <ul class="Citation_List"> -->
           <ol class="Citation_List">
             <li id="WART2021"> [WART2021] Unix Primer - Basic Commands In the
-              Unix Shell, <a href="https://zwartell.gitlab.io/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html"
-
+              Unix Shell, <a href="https://zwartell.gitlab.io/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html"
                 target="_blank">https://zwartell.gitlab.io/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html</a>
             </li>
             <li id="Chacon2016"> [Chacon2016] Scott Chacon, Pro Git,
-              Apress,&nbsp;<strong> 2<sup>nd</sup> Edition </strong> at <a target="_blank" href="http://git-scm.com/book/en/v2/"
-
-                target="_blank"> http://git-scm.com/book/en/<span style="background:yellow">v2</span>/.</a>
+              Apress,&nbsp;<strong> 2<sup>nd</sup> Edition </strong> at <a target="_blank"
+                href="http://git-scm.com/book/en/v2/">
+                http://git-scm.com/book/en/<span style="background:yellow">v2</span>/.</a>
             </li>
             <li id="Microsoft2016"> [Microsoft2016] "To add or change the values
               of environment variables", Windows XP Professional Product
-              Documentation, Performance and maintenance. <a href="https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp"
-
+              Documentation, Performance and maintenance. <a href="https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp"
                 target="_blank">https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp</a>
             </li>
-            <li id="GNU2016"> [GNU2016] Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html"
-
+            <li id="GNU2016"> [GNU2016] Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html"
                 target="_blank">http://www.gnu.org/software/bash/manual/html_node/index.html</a>
             </li>
             <li id="WP2016a"> [WP2016a] "Environment Variable : Details",
-              Wikipedia. <a href="https://en.wikipedia.org/wiki/Environment_variable#Details"
-
+              Wikipedia. <a href="https://en.wikipedia.org/wiki/Environment_variable#Details"
                 target="_blank">https://en.wikipedia.org/wiki/Environment_variable#Details</a>
             </li>
-            <li id="WP2016b"> [WP2016b] "PATH (variable)", Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29"
-
+            <li id="WP2016b"> [WP2016b] "PATH (variable)", Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29"
                 target="_blank">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
-            <li id="WP2023">[WP2023] "Shell Computing", Wikipedia, <a href="https://en.wikipedia.org/wiki/Shell_%28computing%29"
-
+            <li id="WP2023">[WP2023] "Shell Computing", Wikipedia, <a href="https://en.wikipedia.org/wiki/Shell_%28computing%29"
                 target="_blank">https://en.wikipedia.org/wiki/Shell_(computing)</a>.
               Accessed Jan. 2023. </li>
           </ol>
@@ -3209,8 +3108,7 @@
           </ol>
         </section>
         <!--
-  </div>      </div>    </div>     --> <a name="Guide-to-Reading-these-Instructions"
-
+  </div>      </div>    </div>     --> <a name="Guide-to-Reading-these-Instructions"
           id="Guide-to-Reading-these-Instructions"></a> <em> <em> </em> </em>
       </section>
       <b <="" li=""> <b <="" li=""> </b></b></div>
