@@ -5,6 +5,8 @@ pages:
   script:
     - mkdir .public
     - mkdir .public/scripts
+    - git submodule init
+    - git submodule update
     - cp -r html/Site\ Root/* .public
     - git show --no-patch --no-notes --pretty='%cd' $CI_COMMIT_SHA > REVISION.txt
     - . ./html/scripts/revision.sed
