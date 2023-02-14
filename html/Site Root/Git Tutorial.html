@@ -176,6 +176,254 @@
             $('#toc').toc({'smoothScrolling': false});
         }
     </script>
+    <!--
+    <style type="text/css">
+        /*            Misc. character formats
+            */        /* for names of computer programs */
+        span.Program_Name {            font-family: "Courier", monospace;
+        }
+        /* for names of computer servers */        span.Server_Name {
+            font-family: "Courier", monospace;        }
+        /* for names of computer files */
+        span.File_Name {            font-family: Courier, monospace;
+        }
+        /* for names of programming language functions */        span.Function_Name {
+            font-family: Courier, monospace;        }
+        /* for rubric description of assignment item points */
+        span.Grade_Points {            font-weight: bold;
+        }
+        /*            style of presentation when displaying a menu button inline with other text
+            */        span.Text_Button {
+            font-family: Courier, monospace;            background-color: lightgrey;
+            border-color: black;            border-style: solid;
+            border-width: 1px;        }
+        /*
+            Div_Toggle_Button class (see also Div_Toggle())            */
+        button.Div_Toggle_Button {            position: relative;
+        }
+        button.Div_Toggle_Button::before {            content: "Press to Unhide/Hide (see Section 'Document Configuration')";
+            font-size: 10px;
+            position: absolute;            z-index: 999;
+            white-space: nowrap;            bottom: 9999px;
+            left: 50%;            background: #000;
+            color: #e0e0e0;            padding: 0px 7px;
+            line-height: 24px;            height: 24px;
+            opacity: 0;
+            -webkit-transition: opacity 0.4s ease-out;            -moz-transition: opacity 0.4s ease-out;
+            -o-transition: opacity 0.4s ease-out;            transition: opacity 0.4s ease-out;
+        }
+        button.Div_Toggle_Button:hover::before {            opacity: 1;
+            bottom: -35px;        }
+
+        h1.Title, h2.Title, h3.Title {            text-align: center;
+        }
+        p.Title {            font-weight: bold;
+            text-align: center;            font-size: x-large;
+        }
+        /*            Styles for display code examples, more specifically of command-line Shell script examples.
+            */        table.Code_Example {
+            width: 100%;            background-color: black;
+        }
+        /*  Code Example Expand style when displaying at full height, instead of with scroll bar            */
+        table.Code_Example_Expand > tbody > tr > td > div {            width: 100%;
+            height: 100% !important;        }
+        /*  Code Example Table Cell that contains expand button
+            */        table.Code_Example > tbody > tr > td:first-child {
+            vertical-align: text-top;            text-align: left;
+            width: 25px;            background-color: transparent;
+            padding: 0;        }
+        /* Code Example Expand style when displaying code in compact, scrollable mode.
+            */        table.Code_Example > tbody > tr > td > div {
+            width: 100%;            overflow-y: auto;
+        }
+        code.Shell_Code_Input {            font-family: "Courier", monospace;
+            color: white;        }
+        code.Shell_Code_Output {
+            font-family: "Courier", monospace;            color: lightgreen;
+        }
+        code.Shell_Code_Prompt {            font-family: "Courier", monospace;
+            color: cyan;        }
+        /*
+            User Input            */
+        /* when used outside Code_Example */        .User_Input {
+            background-color: grey;            font-style: italic;
+            color: white;            text-decoration: underline;
+            text-decoration-style: dotted;        }
+        /* when inside Code_Example */
+        table.Code_Example .User_Input {            background-color: darkgrey;
+            font-style: italic;            color: white;
+            text-decoration: underline;            text-decoration-style: dotted;
+        }
+        /*            User Input Generic
+            */        span.User_Input_Generic {
+            background-color: blue;            color: white;
+        }
+        /*            Comments in Shell Code
+            */        span.Shell_Code_Comment {
+            font-family: Courier, monospace;            text-align: center;
+            color: pink;            background-color: grey;
+            font-style: italic;            font-weight: bold;
+        }
+        /*            Hierarchical List of Option Instructions
+            */        ol.Instruction_Option {
+            font-size: large;            list-style-type: lower-greek !important;
+        }
+        ol.Instruction_Option > li {            font-size: large;
+            list-style-type: lower-greek;        }
+        /*
+            Hierarchical List of Sequential Instructions            */
+        ol.Instruction {            font-size: large;
+            list-style-type: decimal;        }
+        ol.Instruction > li > ol {
+            font-size: large;            list-style-type: lower-alpha;
+        }
+        ol.Instruction > li > ol > li > ol {            font-size: large;
+            list-style-type: lower-roman;        }
+        /*
+            These are used as labels for Instruction Configuration div toggling.            \todo [REFACTOR] Investigate better HTML5 mechanism than using class attribute this way....
+            */        div.OS_Windows, div.OS_Mac, div.OS_Unix,
+        div.Server_Bitbucket, div.Server_Cci_Git, div.Server_Git_Viscenter,        div.Server_Supports_HTTPS, div.Server_Supports_SSH {
+        }
+        /*            Displays figures that are Screen_Capture's and which are zoomable when clicked.
+            (Resourse [R1])            */
+        figure.Screen_Capture {            width: 500px;
+            background: white;            border: 10px solid white;
+            -webkit-box-shadow: 0 3px 10px #ccc;            -moz-box-shadow: 0 3px 10px #ccc;
+            -o-box-shadow: 0 3px 10px #ccc;            box-shadow: 0 3px 10px #ccc;
+            -webkit-transition: all 1s ease;            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;            transition: all 1s ease;
+            position: relative;        }
+        figure.Screen_Capture img {
+            width: 100%;        }
+        figure.Screen_Capture:hover {
+            -webkit-box-shadow: 0 3px 10px #F1EA35;            -moz-box-shadow: 0 3px 10px #F1EA35;
+            cursor: pointer;        }
+        figure.Screen_Capture:focus {
+            outline: none;            -webkit-transform: translate(500px, 350px) scale(3.0);
+            -moz-transform: translate(500px, 350px) scale(3.0);            -webkit-box-shadow: 0 3px 10px #666;
+            -moz-box-shadow: 0 3px 10px #666;            z-index: 9999;
+        }
+        /*            Citation_List
+            */        ol.Citation_List {
+            counter-reset: item;            list-style-type: none;
+            margin-left: 0;            padding-left: 0;
+        }
+        ol.Citation_List > li {            margin-left: 2em;
+        }
+        ol.Citation_List > li:before {            /* content: "[" counter(item) "] "; */
+            content: "";            counter-increment: item;
+            margin-left: -2em;        }
+        /*
+            */
+        a.Citation {            /* empty for now */
+        }
+        /*            ul.Citation_List
+            {                counter-reset: item;
+                list-style-type: none;                margin-left: 0;
+                padding-left: 0;            }
+            ul.Citation_List > li            {
+                margin-left: 2em;            }
+            ul.Citation_List > li:before            {
+                margin-left: -2em;            }
+            */
+        /*            Heading Numbering (Resource [R2])
+            */        body {
+            counter-reset: h1-Section h1-Appendix        }
+        h1.Section {
+            counter-reset: h2-Section        }
+        h2.Section {
+            counter-reset: h3-Section        }
+        h3.Section {
+            counter-reset: h4-Section        }
+        h4.Section {
+            counter-reset: h5-Section        }
+        h5.Section {
+            counter-reset: h6-Section        }
+        h1.Section:before {
+            counter-increment: h1-Section;            content: counter(h1-Section) ". "
+        }
+        h2.Section:before {            counter-increment: h2-Section;
+            content: counter(h1-Section) "." counter(h2-Section) ". "        }
+        h3.Section:before {
+            counter-increment: h3-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) ". "
+        }
+        h4.Section:before {            counter-increment: h4-Section;
+            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) ". "        }
+        h5.Section:before {
+            counter-increment: h5-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) "." counter(h5-Section) ". "
+        }
+        h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {            content: "";
+            counter-increment: none        }
+        /*
+            Heading Numbering (Resource [R2])            */
+        h1.Appendix {            counter-reset: h2-Appendix 1
+        }
+        h2.Appendix {            counter-reset: h3-Appendix 1
+        }
+        h3.Appendix {            counter-reset: h4-Appendix 1
+        }
+        h4.Appendix {            counter-reset: h5-Appendix 1
+        }
+        h5.Appendix {            counter-reset: h6-Appendix 1
+        }
+        h1.Appendix:before {            counter-increment: h1-Appendix;
+            content: "Appendix " counter(h1-Appendix, upper-roman) ". "        }
+        h2.Appendix:before {
+            counter-increment: h2-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) ". "
+        }
+        h3.Appendix:before {            counter-increment: h3-Appendix;
+            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) ". "        }
+        h4.Appendix:before {
+            counter-increment: h4-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) ". "
+        }
+        h5.Appendix:before {            counter-increment: h5-Appendix;
+            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) "." counter(h5-Appendix) ". "        }
+        /* h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {content: ""; counter-increment: none} */
+
+        /* Example from http://projects.jga.me/toc/#toc3 for lib/toc.js */        #toc {
+            top: 0px;            left: 0px;
+            height: 100%;            position: fixed;
+            background: #333;            box-shadow: inset -5px 0 5px 0px #000;
+            width: 250px;            padding-top: 20px;
+            color: #fff;            /* float:right; */
+        }
+        #toc ul {            margin: 0;
+            padding: 0;            list-style: none;
+        }
+        #toc li {            padding: 5px 10px;
+        }
+        #toc a {            color: #fff;
+            text-decoration: none;            display: block;
+        }
+        #toc .toc-h2 {            padding-left: 20px;
+        }
+        #toc .toc-h3 {            padding-left: 40px;
+        }
+        #toc .toc-active {            background: #336699;
+            box-shadow: inset -5px 0px 10px -5px #000;        }
+        /*
+      Reference:          - https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+          - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del      */
+        del:hover ~ span.Updated_Text_Popup_Note:before {            content: "\2196  DELETE: ";
+            font-weight: bold;        }
+        ins {
+            background-color: greenyellow;            text-decoration-line: underline;
+        }
+        ins:hover ~ span.Updated_Text_Popup_Note:before {            content: "\2196  INSERT: ";
+            font-weight: bold;        }
+        del {
+            text-decoration: line-through;            color: red;
+            background-color: white;        }
+        del:hover ~ span.Updated_Text_Popup_Note {
+            display: block;        }
+        span.Updated_Text_Popup_Note {
+            position: absolute;            /* top: -2em; */
+            /* left: 50em; */            display: none;
+            background-color: lightblue;            border: black solid 1px;
+            padding: 5px;        }
+    </style>
+    <link href="libs/zjw-generic-instructions/Site%20Root/ClassAssignmentWartell.css" rel="stylesheet">
+    -->
     <style type="text/css">
 
         /*
@@ -645,6 +893,10 @@
             font-weight: bold;
         }
 
+        ins:hover ~ span.Updated_Text_Popup_Note {
+          display: block;
+        }
+
         del {
             text-decoration: line-through;
             color: red;
@@ -666,6 +918,9 @@
         }
 
     </style>
+    <!--
+    Not working yet...    <link href="libs/zjw-generic-instructions/Site%20Root/ClassAssignmentWartell.css" rel="stylesheet">
+     -->
     <style media="print" type="text/css">
         /*
             If printing, don't use scroll bars, just expand code examples to full height.
@@ -681,7 +936,6 @@
     </style>
   </head>
   <body onload="onload_Body()" style="                             margin-left: -85px; ">
-    
     <p>ion&gt;&nbsp; <br>
     </p>
     <p> "File"<!-- w3.css stuff I experimented with
@@ -695,7 +949,8 @@
         <br>
         Author: Dr. Zachary Wartell, 2012 at UNC Charlotte.<br>
         <em></em><br>
-        Revised: $REVISION$ <sup> (<a href="https://gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards/commits/master"
+
+        Revised: <span class="Revision">Tue Feb 14 10:01:44 2023 -0500</span><sup> (<a href="https://gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards/commits/master"
 
             target="_blank">git logs</a>) </sup><br>
         <br>
@@ -2689,6 +2944,7 @@
             </div>
           </section>
         </section>
+      </section>
         <section>
           <h1 class="Appendix">Common Git Operations</h1>
           <p> This appendix is a reference section, the tutorial itself
@@ -2742,12 +2998,19 @@
                           the actions indicated in the following screen
                           captures.<br>
                           <ol>
-                            <li><ins><u>Select Invite Group</u></ins>:
+                            <li><ins><u>Select Invite Group</u>:</ins> <span class="Updated_Text_Popup_Note">
+                                2/13/2023: Updated course workflow to use
+                                private student groups. This simplifies student
+                                repo management and grading. </span>
                               <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Invite-Group.png"
 
                                   alt="TortoiseGit-untracked.png" width="500"></figure>
                             </li>
-                            <li><ins><u>Add Your Private Student Group<em>:</em></u></ins><br>
+                            <li><ins><u>Add Your Private Student Group:</u></ins>
+                              <span class="Updated_Text_Popup_Note"> 2/13/2023:
+                                Updated course workflow to use private student
+                                groups. This simplifies student repo management
+                                and grading. </span> <br>
                               Each student in this course has a private group
                               accessible only to the student (yourself) and the
                               course grading staff (professor, TA's, graders,
@@ -2757,7 +3020,7 @@
                               <em>LastName </em>are your name as recorded in
                               your GitLab profile.&nbsp;&nbsp; (If a your GitLab
                               profile does not record a name, then your private
-                              group will name be "itcs-3120-wartell/students/<em>uncc_user_id</em>").<br>
+                              group name will be "itcs-3120-wartell/students/<em>uncc_user_id</em>").<br>
                               <br>
                               Invite your private group to your repo, using the
                               dialog below and give that group "Reporter"
@@ -3203,75 +3466,6 @@
               commited to the local repo! </p>
           </section>
         </section>
-        <section class="">
-          <h1 class="Appendix">&nbsp;Staff</h1>
-          <p><br>
-          </p>
-          <section>
-            <h2 class="Appendix" id="Scripts"> Scripts</h2>
-            <ul>
-              <li><span class="Program_Name">git-tutorial-troubleshooter</span>
-                - <a href="./scripts/git-tutorial-troubleshooter.sh" download="">Download</a></li>
-              <ul>
-                <li>Download and copy to a directory you can access from bash. </li>
-                <li>Run the script from the bash command-line with no arguments
-                  to list further instructions, e.g. <br>
-                  <br>
-                  <span class="Program_Name">$ ./git-tutorial-troubleshooter</span></li>
-              </ul>
-            </ul>
-            <p><br>
-            </p>
-            <ul>
-              <ul>
-              </ul>
-            </ul>
-          </section>
-          <section>
-            <h2 class="Appendix">cci-git </h2>
-            <section>
-              <h3>Setup</h3>
-              <p>GitLab Group structure on cci-git:</p>
-              <p>It is not possible to Group Invite a GitLab Group to a repo, if
-                you are not a member of the group.&nbsp; The process below is
-                used to minimize student effort in making each of their course
-                project repo's accessible (Reporter level) to all course staff
-                with one Group Invite operation.&nbsp; (Experience shows that
-                requiring students to perform multiple Member Invite operations,
-                one per staff member, for each project repo was too error
-                prone).</p>
-              <p>itcs-3120-wartell &gt; students &gt; <em>FirstName LastName</em></p>
-              <ul>
-                <li><em>itcs-3120-wartell</em><br>
-                  professor is GitLab Owner of this group<br>
-                  Professor Invite Member's each TA and graders into this group.<em></em></li>
-                <li><em>students</em><br>
-                  sub-group of&nbsp; <em>itcs-3120-wartell</em><em></em></li>
-                <li><em>FirstName LastName</em></li>
-                <ul>
-                  <li>There is one 'student share' group per
-                    student.&nbsp;&nbsp; It allows each student to share repo
-                    access with all course staff.</li>
-                  <li>Each group's name is copy and pasted from the student's
-                    name as it appears in GitLab</li>
-                  <li>Staff performs a Member Invite of each student share group
-                    to only the correpsonding student.</li>
-                  <li>During semester, student's Group Invite their student
-                    share group to each of their repo's.&nbsp; This gives all
-                    course staff&nbsp; "Reporter" access to their project repo's
-                    with a single Group Invite rather than the student's having
-                    to do a separate Invite Member operation for all course
-                    staff </li>
-                  <li>?&nbsp; How can we write a script that does the above
-                    operation for all students ?</li>
-                  <ul>
-                    <li>perhaps bash or NodeJS</li>
-                  </ul>
-                </ul>
-              </ul>
-            </section>
-          </section>
-        </section>
         <section>
           <h1 class="Appendix"><a id="Appendix_I" name="Appendix_I"></a>&nbsp;
             Open Source Modules </h1>
@@ -3322,7 +3516,76 @@
               Accessed Jan. 2023. </li>
           </ol>
         </section>
-      </section>
+      <!--
+        <section hidden="hidden">
+          <h1 class="Appendix">&nbsp;Staff</h1>
+          <p><br>
+          </p>
+          <section>
+            <h2 class="Appendix" id="Scripts"> Scripts</h2>
+            <ul>
+              <li><span class="Program_Name">git-tutorial-troubleshooter</span>
+                - <a href="./scripts/git-tutorial-troubleshooter.sh" download="">Download</a>
+                <ul>
+                  <li>Download and copy to a directory you can access from bash. </li>
+                  <li>Run the script from the bash command-line with no arguments
+                    to list further instructions, e.g. <br>
+                    <br>
+                    <span class="Program_Name">$ ./git-tutorial-troubleshooter</span></li>
+                </ul>
+              </li>
+            </ul>
+            <p><br>
+            </p>
+          </section>
+          <section>
+            <h2 class="Appendix">cci-git </h2>
+            <section>
+              <h3>Setup</h3>
+              <p>GitLab Group structure on cci-git:</p>
+              <p>It is not possible to Group Invite a GitLab Group to a repo, if
+                you are not a member of the group.&nbsp; The process below is
+                used to minimize student effort in making each of their course
+                project repo's accessible (Reporter level) to all course staff
+                with one Group Invite operation.&nbsp; (Experience shows that
+                requiring students to perform multiple Member Invite operations,
+                one per staff member, for each project repo was too error
+                prone).</p>
+              <p>itcs-3120-wartell &gt; students &gt; <em>FirstName LastName</em></p>
+              <ul>
+                <li><em>itcs-3120-wartell</em><br>
+                  professor is GitLab Owner of this group<br>
+                  Professor Invite Member's each TA and graders into this group.<em></em></li>
+                <li><em>students</em><br>
+                  sub-group of&nbsp; <em>itcs-3120-wartell</em><em></em></li>
+                <li><em>FirstName LastName</em>
+                  <ul>
+                    <li>There is one 'student share' group per
+                      student.&nbsp;&nbsp; It allows each student to share repo
+                      access with all course staff.</li>
+                    <li>Each group's name is copy and pasted from the student's
+                      name as it appears in GitLab</li>
+                    <li>Staff performs a Member Invite of each student share group
+                      to only the correpsonding student.</li>
+                    <li>During semester, student's Group Invite their student
+                      share group to each of their repo's.&nbsp; This gives all
+                      course staff&nbsp; "Reporter" access to their project repo's
+                      with a single Group Invite rather than the student's having
+                      to do a separate Invite Member operation for all course
+                      staff </li>
+                    <li>?&nbsp; How can we write a script that does the above
+                      operation for all students ?
+                      <ul>
+                        <li>perhaps bash or NodeJS</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+          </section>
+        </section>
+       -->
     </div>
   </body>
 </html>

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-[clarification] inital refspec">
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/zjw-generic-instructions" afterDir="false" />
+    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-[refactor][wip] working toward using common module&#10;-[instruction update] change process for inviting prof. &amp; TA to repo.  New process uses private student group">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Site Root/images/cci-git-Add-Group.png" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/images/cci-git-Add-Group.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/scripts/publishWWW" beforeDir="false" afterPath="$PROJECT_DIR$/html/scripts/publishWWW" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,18 +94,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/zwartell/Dropbox (UNC Charlotte)/classes/wartell tutorials/html-css-event-tutorial",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zwartell/Dropbox (UNC Charlotte)/classes/wartell tutorials/html-css-event-tutorial&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Git Tutorial.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Git_Tutorial_and_Coding_Standards/html/Site Root/Git Tutorial.html?_ij_reload" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -161,7 +162,8 @@
       <workItem from="1674842363013" duration="2616000" />
       <workItem from="1675088509382" duration="606000" />
       <workItem from="1675701200217" duration="5475000" />
-      <workItem from="1676295196721" duration="2290000" />
+      <workItem from="1676295196721" duration="6645000" />
+      <workItem from="1676382411345" duration="5419000" />
     </task>
     <task id="LOCAL-00001" summary="-GitLab - changed location of Members dialog">
       <created>1630527623345</created>
@@ -248,7 +250,8 @@
     <MESSAGE value="-word smithing&#10;-re-org:  new subsection &quot;Git Authentication Protocols&quot;&#10;-re-org:  moved PAT protocol to first listed" />
     <MESSAGE value="-word smithing&#10;-added note to 'unchecked box' for README.md if it is check on cci-git" />
     <MESSAGE value="-[clarification] inital refspec" />
-    <option name="LAST_COMMIT_MESSAGE" value="-[clarification] inital refspec" />
+    <MESSAGE value="-[refactor][wip] working toward using common module&#10;-[instruction update] change process for inviting prof. &amp; TA to repo.  New process uses private student group" />
+    <option name="LAST_COMMIT_MESSAGE" value="-[refactor][wip] working toward using common module&#10;-[instruction update] change process for inviting prof. &amp; TA to repo.  New process uses private student group" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />
