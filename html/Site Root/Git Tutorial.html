@@ -177,131 +177,11 @@
         }
     </script>
     <!--
-    <style type="text/css">        /*            Misc. character formats
-            */        /* for names of computer programs */        span.Program_Name {            font-family: "Courier", monospace;
-        }        /* for names of computer servers */        span.Server_Name {
-            font-family: "Courier", monospace;        }        /* for names of computer files */
-        span.File_Name {            font-family: Courier, monospace;        }
-        /* for names of programming language functions */        span.Function_Name {            font-family: Courier, monospace;        }
-        /* for rubric description of assignment item points */        span.Grade_Points {            font-weight: bold;
-        }        /*            style of presentation when displaying a menu button inline with other text
-            */        span.Text_Button {            font-family: Courier, monospace;            background-color: lightgrey;
-            border-color: black;            border-style: solid;            border-width: 1px;        }
-        /*            Div_Toggle_Button class (see also Div_Toggle())            */
-        button.Div_Toggle_Button {            position: relative;        }
-        button.Div_Toggle_Button::before {            content: "Press to Unhide/Hide (see Section 'Document Configuration')";            font-size: 10px;
-            position: absolute;            z-index: 999;            white-space: nowrap;            bottom: 9999px;
-            left: 50%;            background: #000;            color: #e0e0e0;            padding: 0px 7px;
-            line-height: 24px;            height: 24px;            opacity: 0;
-            -webkit-transition: opacity 0.4s ease-out;            -moz-transition: opacity 0.4s ease-out;            -o-transition: opacity 0.4s ease-out;            transition: opacity 0.4s ease-out;
-        }        button.Div_Toggle_Button:hover::before {            opacity: 1;
-            bottom: -35px;        }
-        h1.Title, h2.Title, h3.Title {            text-align: center;        }
-        p.Title {            font-weight: bold;            text-align: center;            font-size: x-large;
-        }        /*            Styles for display code examples, more specifically of command-line Shell script examples.
-            */        table.Code_Example {            width: 100%;            background-color: black;
-        }        /*  Code Example Expand style when displaying at full height, instead of with scroll bar            */
-        table.Code_Example_Expand > tbody > tr > td > div {            width: 100%;            height: 100% !important;        }
-        /*  Code Example Table Cell that contains expand button            */        table.Code_Example > tbody > tr > td:first-child {
-            vertical-align: text-top;            text-align: left;            width: 25px;            background-color: transparent;
-            padding: 0;        }        /* Code Example Expand style when displaying code in compact, scrollable mode.
-            */        table.Code_Example > tbody > tr > td > div {            width: 100%;            overflow-y: auto;
-        }        code.Shell_Code_Input {            font-family: "Courier", monospace;
-            color: white;        }        code.Shell_Code_Output {
-            font-family: "Courier", monospace;            color: lightgreen;        }
-        code.Shell_Code_Prompt {            font-family: "Courier", monospace;            color: cyan;        }
-        /*            User Input            */
-        /* when used outside Code_Example */        .User_Input {            background-color: grey;            font-style: italic;
-            color: white;            text-decoration: underline;            text-decoration-style: dotted;        }
-        /* when inside Code_Example */        table.Code_Example .User_Input {            background-color: darkgrey;
-            font-style: italic;            color: white;            text-decoration: underline;            text-decoration-style: dotted;
-        }        /*            User Input Generic
-            */        span.User_Input_Generic {            background-color: blue;            color: white;
-        }        /*            Comments in Shell Code
-            */        span.Shell_Code_Comment {            font-family: Courier, monospace;            text-align: center;
-            color: pink;            background-color: grey;            font-style: italic;            font-weight: bold;
-        }        /*            Hierarchical List of Option Instructions
-            */        ol.Instruction_Option {            font-size: large;            list-style-type: lower-greek !important;
-        }        ol.Instruction_Option > li {            font-size: large;
-            list-style-type: lower-greek;        }        /*
-            Hierarchical List of Sequential Instructions            */        ol.Instruction {            font-size: large;
-            list-style-type: decimal;        }        ol.Instruction > li > ol {
-            font-size: large;            list-style-type: lower-alpha;        }
-        ol.Instruction > li > ol > li > ol {            font-size: large;            list-style-type: lower-roman;        }
-        /*            These are used as labels for Instruction Configuration div toggling.            \todo [REFACTOR] Investigate better HTML5 mechanism than using class attribute this way....
-            */        div.OS_Windows, div.OS_Mac, div.OS_Unix,        div.Server_Bitbucket, div.Server_Cci_Git, div.Server_Git_Viscenter,        div.Server_Supports_HTTPS, div.Server_Supports_SSH {
-        }        /*            Displays figures that are Screen_Capture's and which are zoomable when clicked.
-            (Resourse [R1])            */        figure.Screen_Capture {            width: 500px;
-            background: white;            border: 10px solid white;            -webkit-box-shadow: 0 3px 10px #ccc;            -moz-box-shadow: 0 3px 10px #ccc;
-            -o-box-shadow: 0 3px 10px #ccc;            box-shadow: 0 3px 10px #ccc;            -webkit-transition: all 1s ease;            -moz-transition: all 1s ease;
-            -o-transition: all 1s ease;            transition: all 1s ease;            position: relative;        }
-        figure.Screen_Capture img {            width: 100%;        }
-        figure.Screen_Capture:hover {            -webkit-box-shadow: 0 3px 10px #F1EA35;            -moz-box-shadow: 0 3px 10px #F1EA35;
-            cursor: pointer;        }        figure.Screen_Capture:focus {
-            outline: none;            -webkit-transform: translate(500px, 350px) scale(3.0);            -moz-transform: translate(500px, 350px) scale(3.0);            -webkit-box-shadow: 0 3px 10px #666;
-            -moz-box-shadow: 0 3px 10px #666;            z-index: 9999;        }
-        /*            Citation_List            */        ol.Citation_List {
-            counter-reset: item;            list-style-type: none;            margin-left: 0;            padding-left: 0;
-        }        ol.Citation_List > li {            margin-left: 2em;
-        }        ol.Citation_List > li:before {            /* content: "[" counter(item) "] "; */
-            content: "";            counter-increment: item;            margin-left: -2em;        }
-        /*            */
-        a.Citation {            /* empty for now */        }
-        /*            ul.Citation_List            {                counter-reset: item;
-                list-style-type: none;                margin-left: 0;                padding-left: 0;            }
-            ul.Citation_List > li            {                margin-left: 2em;            }
-            ul.Citation_List > li:before            {                margin-left: -2em;            }
-            */        /*            Heading Numbering (Resource [R2])
-            */        body {            counter-reset: h1-Section h1-Appendix        }
-        h1.Section {            counter-reset: h2-Section        }
-        h2.Section {            counter-reset: h3-Section        }
-        h3.Section {            counter-reset: h4-Section        }
-        h4.Section {            counter-reset: h5-Section        }
-        h5.Section {            counter-reset: h6-Section        }
-        h1.Section:before {            counter-increment: h1-Section;            content: counter(h1-Section) ". "
-        }        h2.Section:before {            counter-increment: h2-Section;
-            content: counter(h1-Section) "." counter(h2-Section) ". "        }        h3.Section:before {
-            counter-increment: h3-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) ". "        }
-        h4.Section:before {            counter-increment: h4-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) ". "        }
-        h5.Section:before {            counter-increment: h5-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) "." counter(h5-Section) ". "
-        }        h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {            content: "";
-            counter-increment: none        }        /*
-            Heading Numbering (Resource [R2])            */        h1.Appendix {            counter-reset: h2-Appendix 1
-        }        h2.Appendix {            counter-reset: h3-Appendix 1
-        }        h3.Appendix {            counter-reset: h4-Appendix 1
-        }        h4.Appendix {            counter-reset: h5-Appendix 1
-        }        h5.Appendix {            counter-reset: h6-Appendix 1
-        }        h1.Appendix:before {            counter-increment: h1-Appendix;
-            content: "Appendix " counter(h1-Appendix, upper-roman) ". "        }        h2.Appendix:before {
-            counter-increment: h2-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) ". "        }
-        h3.Appendix:before {            counter-increment: h3-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) ". "        }
-        h4.Appendix:before {            counter-increment: h4-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) ". "
-        }        h5.Appendix:before {            counter-increment: h5-Appendix;
-            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) "." counter(h5-Appendix) ". "        }        /* h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {content: ""; counter-increment: none} */
-        /* Example from http://projects.jga.me/toc/#toc3 for lib/toc.js */        #toc {
-            top: 0px;            left: 0px;            height: 100%;            position: fixed;
-            background: #333;            box-shadow: inset -5px 0 5px 0px #000;            width: 250px;            padding-top: 20px;
-            color: #fff;            /* float:right; */        }
-        #toc ul {            margin: 0;            padding: 0;            list-style: none;
-        }        #toc li {            padding: 5px 10px;
-        }        #toc a {            color: #fff;
-            text-decoration: none;            display: block;        }
-        #toc .toc-h2 {            padding-left: 20px;        }
-        #toc .toc-h3 {            padding-left: 40px;        }
-        #toc .toc-active {            background: #336699;            box-shadow: inset -5px 0px 10px -5px #000;        }
-        /*      Reference:          - https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
-          - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del      */        del:hover ~ span.Updated_Text_Popup_Note:before {            content: "\2196  DELETE: ";
-            font-weight: bold;        }        ins {
-            background-color: greenyellow;            text-decoration-line: underline;        }
-        ins:hover ~ span.Updated_Text_Popup_Note:before {            content: "\2196  INSERT: ";            font-weight: bold;        }
-        del {            text-decoration: line-through;            color: red;
-            background-color: white;        }        del:hover ~ span.Updated_Text_Popup_Note {
-            display: block;        }        span.Updated_Text_Popup_Note {
-            position: absolute;            /* top: -2em; */            /* left: 50em; */            display: none;
-            background-color: lightblue;            border: black solid 1px;            padding: 5px;        }
-    </style>    <link href="libs/zjw-generic-instructions/Site%20Root/ClassAssignmentWartell.css" rel="stylesheet">
-    -->
-    <style type="text/css">
+    <style type="text/css">        /*            Misc. character formats            */        /* for names of computer programs */        span.Program_Name {            font-family: "Courier", monospace;        }        /* for names of computer servers */        span.Server_Name {            font-family: "Courier", monospace;        }        /* for names of computer files */        span.File_Name {            font-family: Courier, monospace;        }        /* for names of programming language functions */        span.Function_Name {            font-family: Courier, monospace;        }        /* for rubric description of assignment item points */        span.Grade_Points {            font-weight: bold;        }        /*            style of presentation when displaying a menu button inline with other text            */        span.Text_Button {            font-family: Courier, monospace;            background-color: lightgrey;            border-color: black;            border-style: solid;            border-width: 1px;        }        /*            Div_Toggle_Button class (see also Div_Toggle())            */        button.Div_Toggle_Button {            position: relative;        }        button.Div_Toggle_Button::before {            content: "Press to Unhide/Hide (see Section 'Document Configuration')";            font-size: 10px;            position: absolute;            z-index: 999;            white-space: nowrap;            bottom: 9999px;            left: 50%;            background: #000;            color: #e0e0e0;            padding: 0px 7px;            line-height: 24px;            height: 24px;            opacity: 0;            -webkit-transition: opacity 0.4s ease-out;            -moz-transition: opacity 0.4s ease-out;            -o-transition: opacity 0.4s ease-out;            transition: opacity 0.4s ease-out;        }        button.Div_Toggle_Button:hover::before {            opacity: 1;            bottom: -35px;        }        h1.Title, h2.Title, h3.Title {            text-align: center;        }        p.Title {            font-weight: bold;            text-align: center;            font-size: x-large;        }        /*            Styles for display code examples, more specifically of command-line Shell script examples.            */        table.Code_Example {            width: 100%;            background-color: black;        }        /*  Code Example Expand style when displaying at full height, instead of with scroll bar            */        table.Code_Example_Expand > tbody > tr > td > div {            width: 100%;            height: 100% !important;        }        /*  Code Example Table Cell that contains expand button            */        table.Code_Example > tbody > tr > td:first-child {            vertical-align: text-top;            text-align: left;            width: 25px;            background-color: transparent;            padding: 0;        }        /* Code Example Expand style when displaying code in compact, scrollable mode.            */        table.Code_Example > tbody > tr > td > div {            width: 100%;            overflow-y: auto;        }        code.Shell_Code_Input {            font-family: "Courier", monospace;            color: white;        }        code.Shell_Code_Output {            font-family: "Courier", monospace;            color: lightgreen;        }
+        code.Shell_Code_Prompt {            font-family: "Courier", monospace;            color: cyan;        }        /*            User Input            */        /* when used outside Code_Example */        .User_Input {            background-color: grey;            font-style: italic;            color: white;            text-decoration: underline;            text-decoration-style: dotted;        }        /* when inside Code_Example */        table.Code_Example .User_Input {            background-color: darkgrey;            font-style: italic;            color: white;            text-decoration: underline;            text-decoration-style: dotted;        }        /*            User Input Generic            */        span.User_Input_Generic {            background-color: blue;            color: white;        }        /*            Comments in Shell Code            */        span.Shell_Code_Comment {            font-family: Courier, monospace;            text-align: center;            color: pink;            background-color: grey;            font-style: italic;            font-weight: bold;        }        /*            Hierarchical List of Option Instructions            */        ol.Instruction_Option {            font-size: large;            list-style-type: lower-greek !important;        }        ol.Instruction_Option > li {            font-size: large;            list-style-type: lower-greek;        }        /*            Hierarchical List of Sequential Instructions            */        ol.Instruction {            font-size: large;            list-style-type: decimal;        }        ol.Instruction > li > ol {            font-size: large;            list-style-type: lower-alpha;        }        ol.Instruction > li > ol > li > ol {            font-size: large;            list-style-type: lower-roman;        }        /*            These are used as labels for Instruction Configuration div toggling.            \todo [REFACTOR] Investigate better HTML5 mechanism than using class attribute this way....            */        div.OS_Windows, div.OS_Mac, div.OS_Unix,        div.Server_Bitbucket, div.Server_Cci_Git, div.Server_Git_Viscenter,        div.Server_Supports_HTTPS, div.Server_Supports_SSH {        }        /*            Displays figures that are Screen_Capture's and which are zoomable when clicked.            (Resourse [R1])            */        figure.Screen_Capture {            width: 500px;            background: white;            border: 10px solid white;            -webkit-box-shadow: 0 3px 10px #ccc;            -moz-box-shadow: 0 3px 10px #ccc;            -o-box-shadow: 0 3px 10px #ccc;            box-shadow: 0 3px 10px #ccc;            -webkit-transition: all 1s ease;            -moz-transition: all 1s ease;            -o-transition: all 1s ease;            transition: all 1s ease;            position: relative;        }        figure.Screen_Capture img {            width: 100%;        }        figure.Screen_Capture:hover {            -webkit-box-shadow: 0 3px 10px #F1EA35;            -moz-box-shadow: 0 3px 10px #F1EA35;            cursor: pointer;        }        figure.Screen_Capture:focus {            outline: none;            -webkit-transform: translate(500px, 350px) scale(3.0);            -moz-transform: translate(500px, 350px) scale(3.0);            -webkit-box-shadow: 0 3px 10px #666;            -moz-box-shadow: 0 3px 10px #666;            z-index: 9999;        }        /*            Citation_List            */        ol.Citation_List {
+            counter-reset: item;            list-style-type: none;            margin-left: 0;            padding-left: 0;        }        ol.Citation_List > li {            margin-left: 2em;        }        ol.Citation_List > li:before {            /* content: "[" counter(item) "] "; */            content: "";            counter-increment: item;            margin-left: -2em;        }        /*            */        a.Citation {            /* empty for now */        }        /*            ul.Citation_List            {                counter-reset: item;                list-style-type: none;                margin-left: 0;                padding-left: 0;            }            ul.Citation_List > li            {                margin-left: 2em;            }            ul.Citation_List > li:before            {                margin-left: -2em;            }            */        /*            Heading Numbering (Resource [R2])            */        body {            counter-reset: h1-Section h1-Appendix        }        h1.Section {            counter-reset: h2-Section        }        h2.Section {            counter-reset: h3-Section        }        h3.Section {            counter-reset: h4-Section        }        h4.Section {            counter-reset: h5-Section        }        h5.Section {            counter-reset: h6-Section        }        h1.Section:before {            counter-increment: h1-Section;            content: counter(h1-Section) ". "        }        h2.Section:before {            counter-increment: h2-Section;            content: counter(h1-Section) "." counter(h2-Section) ". "        }        h3.Section:before {            counter-increment: h3-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) ". "        }        h4.Section:before {            counter-increment: h4-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) ". "        }        h5.Section:before {            counter-increment: h5-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) "." counter(h5-Section) ". "        }        h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {            content: "";            counter-increment: none        }        /*            Heading Numbering (Resource [R2])            */        h1.Appendix {            counter-reset: h2-Appendix 1        }        h2.Appendix {            counter-reset: h3-Appendix 1        }        h3.Appendix {            counter-reset: h4-Appendix 1        }        h4.Appendix {            counter-reset: h5-Appendix 1        }        h5.Appendix {            counter-reset: h6-Appendix 1        }        h1.Appendix:before {            counter-increment: h1-Appendix;            content: "Appendix " counter(h1-Appendix, upper-roman) ". "        }        h2.Appendix:before {
+            counter-increment: h2-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) ". "        }        h3.Appendix:before {            counter-increment: h3-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) ". "        }        h4.Appendix:before {            counter-increment: h4-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) ". "        }        h5.Appendix:before {            counter-increment: h5-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) "." counter(h5-Appendix) ". "        }        /* h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {content: ""; counter-increment: none} */        /* Example from http://projects.jga.me/toc/#toc3 for lib/toc.js */        #toc {            top: 0px;            left: 0px;            height: 100%;            position: fixed;            background: #333;            box-shadow: inset -5px 0 5px 0px #000;            width: 250px;            padding-top: 20px;            color: #fff;            /* float:right; */        }        #toc ul {            margin: 0;            padding: 0;            list-style: none;        }        #toc li {            padding: 5px 10px;        }        #toc a {            color: #fff;            text-decoration: none;            display: block;        }        #toc .toc-h2 {            padding-left: 20px;        }        #toc .toc-h3 {            padding-left: 40px;        }        #toc .toc-active {            background: #336699;            box-shadow: inset -5px 0px 10px -5px #000;        }        /*      Reference:          - https://developer.mozilla.org/en-US/docs/Web/CSS/:hover          - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del      */        del:hover ~ span.Updated_Text_Popup_Note:before {            content: "\2196  DELETE: ";            font-weight: bold;        }        ins {            background-color: greenyellow;            text-decoration-line: underline;        }        ins:hover ~ span.Updated_Text_Popup_Note:before {            content: "\2196  INSERT: ";            font-weight: bold;        }        del {            text-decoration: line-through;            color: red;            background-color: white;        }        del:hover ~ span.Updated_Text_Popup_Note {            display: block;        }        span.Updated_Text_Popup_Note {            position: absolute;            /* top: -2em; */            /* left: 50em; */            display: none;            background-color: lightblue;            border: black solid 1px;            padding: 5px;        }    </style>    <link href="libs/zjw-generic-instructions/Site%20Root/ClassAssignmentWartell.css" rel="stylesheet">    -->
+    <style>
 
         /*
             Misc. character formats
@@ -532,16 +412,19 @@
             -o-transition: all 1s ease;
             transition: all 1s ease;
             position: relative;
+            z-index: 9;
         }
 
         figure.Screen_Capture img {
             width: 100%;
+            z-index: 9;
         }
 
         figure.Screen_Capture:hover {
             -webkit-box-shadow: 0 3px 10px #F1EA35;
             -moz-box-shadow: 0 3px 10px #F1EA35;
             cursor: pointer;
+            z-index: 9;
         }
 
         figure.Screen_Capture:focus {
@@ -550,7 +433,7 @@
             -moz-transform: translate(500px, 350px) scale(3.0);
             -webkit-box-shadow: 0 3px 10px #666;
             -moz-box-shadow: 0 3px 10px #666;
-            z-index: 9999;
+            z-index: 9;
         }
 
         /*
@@ -758,6 +641,7 @@
         del:hover ~ span.Updated_Text_Popup_Note:before {
             content: "\2196  DELETE: ";
             font-weight: bold;
+            z-index: 10;
         }
 
         ins {
@@ -772,6 +656,7 @@
 
         ins:hover ~ span.Updated_Text_Popup_Note {
           display: block;
+          z-index: 10;
         }
 
         del {
@@ -811,8 +696,8 @@
 
     </style>
   </head>
-  <body onload="onload_Body()" style="                             margin-left: -85px; ">
-    <p>ion&gt;&nbsp; <br>
+  <body onload="onload_Body()" style="                                margin-left: -85px; ">
+    <p>Seion&gt;&nbsp; <br>
     </p>
     <p> "File"<!-- w3.css stuff I experimented with
     <div  style="top: 112px;"  class="w3-sidenav w3-collapse w3-slim"  id="sidenav">      <div  style="padding-top: 112px;"  id="leftmenuinner">        <div  class="w3-light-grey"  id="leftmenuinnerinner"> <a  href="javascript:void(0)"  onclick="close_menu()"  class="w3-closebtn w3-hide-large w3-large"             style="padding:3px 12px;">×</a> </div>      </div>    </div>    <div  class="w3-main w3-light-grey"  id="belowtopnav"  style="margin-left: 220px; padding-top: 0px;">      <div  class="w3-row w3-white">        <div  class="w3-col l10 m12"  id="main">          -->
@@ -825,7 +710,7 @@
         <br>
         Author: Dr. Zachary Wartell, 2012 at UNC Charlotte.<br>
         <em></em><br>
-        Revised: <span class="Revision">Tue Feb 14 10:20:55 2023 -0500</span><sup>
+        Revised: <span class="Revision">Mon Mar 13 19:48:06 2023 -0400</span><sup>
           (<a href="https://gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards/commits/master"
 
             target="_blank">git logs</a>) </sup><br>
@@ -1013,7 +898,7 @@
             button,&nbsp;<span class="Text_Button">&nbsp;▽&nbsp;</span> ,
             clicking the button will expand the box to display it's entire
             contests without scrolling. An example is below:<br>
-            <table class="Code_Example" id="Code_Example_Example" border="1">
+            <table class="Code_Example" id="Code_Example_Example" >
               <tbody style="height: 150px;">
                 <tr>
                   <td> <button onclick="Code_Example_Toggle('Code_Example_Example');">
@@ -1235,7 +1120,7 @@
                             <li> Open a git-bash shell via Start Menu→Git→Git
                               Bash </li>
                             <li> In the shell run plink:&nbsp; <br>
-                              <table class="Code_Example" id="Code_Example0_0" border="1">
+                              <table class="Code_Example" id="Code_Example0_0" >
                                 <tbody style="height: 150px;">
                                   <tr>
                                     <td> <button onclick="Code_Example_Toggle('Code_Example0_0');">
@@ -1303,7 +1188,7 @@
               </li>
               <li> Check for SSH Keys <br>
                 &nbsp;<br>
-                <table class="Code_Example" id="Code_Example0_2" border="1">
+                <table class="Code_Example" id="Code_Example0_2" >
                   <tbody style="height: 150px;">
                     <tr>
                       <td> <button onclick="Code_Example_Toggle('Code_Example0_2');">▽</button>
@@ -1326,7 +1211,7 @@
                 created one, goto step 4. Otherwise proceed with step 3. </li>
               <li><a id="_Ref363940970"> <b> Generate a new SSH Key<br>
                   </b> </a>
-                <table class="Code_Example" id="Code_Example0_3a" border="1">
+                <table class="Code_Example" id="Code_Example0_3a" >
                   <tbody style="height: 150px;">
                     <tr>
                       <td> <button onclick="Code_Example_Toggle('Code_Example0_3a');">▽</button>
@@ -1354,7 +1239,7 @@
                 <p> Now you need to enter a passphrase.&nbsp;&nbsp; Enter one
                   and write it down in a safe place. When using Git, you will
                   have to enter this each time you login to your computer. </p>
-                <table class="Code_Example" id="Code_Example0_3b" border="1">
+                <table class="Code_Example" id="Code_Example0_3b" >
                   <tbody style="height: 50px;">
                     <tr>
                       <td> <button onclick="Code_Example_Toggle('Code_Example0_3b');">▽</button>
@@ -1396,7 +1281,7 @@
               <li><a id="_Ref363944720"> <b> Examine Your Public Key:<br>
                   </b>The public key is the file named </a><span class="File_Name">id_rsa.pub</span>.&nbsp;&nbsp;
                 Type the following:<br>
-                <table class="Code_Example" id="Code_Example_42_4" border="1">
+                <table class="Code_Example" id="Code_Example_42_4" >
                   <tbody style="height: 150px;">
                     <tr>
                       <td> <button onclick="Code_Example_Toggle('Code_Example_42_4');">▽</button>
@@ -1672,7 +1557,7 @@
                       class="File_Name">my_project.tar.gz</span> </a>.&nbsp;&nbsp;
                   After downloading copy the file to your git-tutorial
                   directory.&nbsp; Then uncompress the tar.gz file as follows:<br>
-                  <table class="Code_Example" id="Code_Example_0_3ai" border="1">
+                  <table class="Code_Example"  >
                     <tbody style="height: 150px;">
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽</button>
@@ -1745,7 +1630,7 @@
 
                             class="User_Input">URL of my-project</span></span></code>
                       is the full URL of the remote repo.<br>
-                      <table class="Code_Example" id="Code_Example_0_3ai" border="1">
+                      <table class="Code_Example"  >
                         <tbody style="height: 150px;">
                           <tr>
                             <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
@@ -1802,7 +1687,7 @@
 
                       class="File_Name">ProGit_Chapter_2_2.tar.gz</span></a>.&nbsp;&nbsp;
                   Then uncompress the tar.gz file as follows:<br>
-                  <table class="Code_Example" id="Code_Example_0_3bi" border="1">
+                  <table class="Code_Example" id="Code_Example_0_3bi" >
                     <tbody style="height: 110px;">
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example_0_3bi');">▽</button>
@@ -1859,7 +1744,7 @@
                       shown below, where <code class="Shell_Code_Input"></code>
                       <code class="Shell_Code_Input"></code> is the full URL of
                       the remote repo.<br>
-                      <table class="Code_Example" id="Code_Example_0_3ai" border="1">
+                      <table class="Code_Example"  >
                         <tbody style="height: 150px;">
                           <tr>
                             <td> <button>▽</button> </td>
@@ -1944,7 +1829,7 @@
                     Moving Files </a> - perform all steps </li>
                 <li><u>Exercise</u>:&nbsp; <i> Push updates to remote remote
                     repo.</i>
-                  <table class="Code_Example" id="Code_Example_0_3ai" border="1">
+                  <table class="Code_Example"  >
                     <tbody style="height: 50px;">
                       <tr>
                         <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
@@ -1994,7 +1879,7 @@
                       instructions in Appendix II <a href="#How_to_Create_New_Remote_Repository">"How
                         to Create New Remote Repository"&nbsp;</a> </li>
                     <li>Next do as follows:
-                      <table class="Code_Example" id="Code_Example_0_3ai" border="1">
+                      <table class="Code_Example"  >
                         <tbody style="height: 150px;">
                           <tr>
                             <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
@@ -2124,7 +2009,7 @@
               <!--
                     <li> [<em>YourServer</em>=<strong>bitbucket</strong>]&nbsp;&nbsp;                git@bitbucket.org:<span class="User_Input">your_user_id</span>              </li>              -->
             </ol>
-            <table class="Code_Example" id="Code_Example_6_3" border="1">
+            <table class="Code_Example" id="Code_Example_6_3" >
               <tbody style="height: 105px;">
                 <tr>
                   <td> <button onclick="Code_Example_Toggle('Code_Example_6_3');">▽</button>
@@ -2150,7 +2035,7 @@
             </table>
           </li>
           <li> Create a new file:<br>
-            <table class="Code_Example" id="Code_Example_6_4" border="1">
+            <table class="Code_Example" id="Code_Example_6_4" >
               <tbody style="height: 25px;">
                 <tr>
                   <td> <button onclick="Code_Example_Toggle('Code_Example_6_4');">▽</button>
@@ -2165,7 +2050,7 @@
             </table>
           </li>
           <li> Add, commit and push to the Git server remote repo.
-            <table class="Code_Example" id="Code_Example_6_5" border="1">
+            <table class="Code_Example" id="Code_Example_6_5" >
               <tbody>
                 <tr>
                   <td> <button onclick="Code_Example_Toggle('Code_Example_6_5');">▽</button>
@@ -2301,7 +2186,7 @@
                 <ol>
                   <li> Now, to test and verify read-access to the server, clone
                     the welcome repo:<br>
-                    <table class="Code_Example" id="Code_Example_75_1" border="1">
+                    <table class="Code_Example"  >
                       <tbody style="height: 105px;">
                         <tr>
                           <td><br>
@@ -2329,7 +2214,7 @@
                     implies you do <u>not</u> want to use the Access Token
                     Protocol to clone into a directory that is not secure and
                     only accessible by yourself.<br>
-                    <table class="Code_Example" id="Code_Example_75_1" border="1">
+                    <table class="Code_Example"  >
                       <tbody style="height: 60px;">
                         <tr>
                           <td><br>
@@ -2402,7 +2287,7 @@
                     <ol class="Instruction_Option">
                       <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you
                         are using Git-Bash
-                        <table class="Code_Example" id="Code_Example_751_2" border="1">
+                        <table class="Code_Example">
                           <tbody>
                             <tr>
                               <td> <button>▽</button> </td>
@@ -2423,7 +2308,7 @@
                 <ol class="Instructions">
                   <li> To test read-access to the server by cloning the welcome
                     repo:<br>
-                    <table class="Code_Example" id="Code_Example_75_1" border="1">
+                    <table class="Code_Example"  >
                       <tbody style="height: 105px;">
                         <tr>
                           <td><br>
@@ -2451,7 +2336,7 @@
                     </ol>
                   </li>
                   <!--
-                            <li> Note, the PAT is recorded by the Credential                    Manager and not visible via git remote -v.<br>                    <table class="Code_Example" id="Code_Example_75_1" border="1">                      <tbody style="height: 60px;">                        <tr>                          <td><br>                          </td>                          <td>                            <div style="height: 60px;"><code class="Shell_Code_Input">$                                git remote -v</code><br>                              <code class="Shell_Code_Output">origin&nbsp;                                https://</code><code class="Shell_Code_Output">cci-git.uncc.edu/zwartell/welcome.git                                (fetch)<br>                                origin&nbsp; https://</code><code class="Shell_Code_Output">@cci-git.uncc.edu/zwartell/welcome.git                                (push) </code><br>                            </div>                          </td>                        </tr>                      </tbody>                    </table>                  </li>									-->
+                            <li> Note, the PAT is recorded by the Credential                    Manager and not visible via git remote -v.<br>                    <table class="Code_Example"  >                      <tbody style="height: 60px;">                        <tr>                          <td><br>                          </td>                          <td>                            <div style="height: 60px;"><code class="Shell_Code_Input">$                                git remote -v</code><br>                              <code class="Shell_Code_Output">origin&nbsp;                                https://</code><code class="Shell_Code_Output">cci-git.uncc.edu/zwartell/welcome.git                                (fetch)<br>                                origin&nbsp; https://</code><code class="Shell_Code_Output">@cci-git.uncc.edu/zwartell/welcome.git                                (push) </code><br>                            </div>                          </td>                        </tr>                      </tbody>                    </table>                  </li>									-->
                 </ol>
                 Henceforth when you perform git command-line operations, you can
                 now use the standard repo URL, rather than the extended PAT
@@ -2518,7 +2403,7 @@
                     <li> To verify ssh-agent access:&nbsp;
                       <ol>
                         <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
-                          <table class="Code_Example" id="Code_Example_741_4c" border="1">
+                          <table class="Code_Example" id="Code_Example_741_4c" >
                             <tbody style="height: 105px;">
                               <tr>
                                 <td> <button onclick="Code_Example_Toggle('Code_Example_741_4c');">
@@ -2579,7 +2464,7 @@
                         <!--
                                       <li> [<strong>bitbucket</strong>]                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git                      </li>                      -->
                       </ol>
-                      <table class="Code_Example" id="Code_Example_741_5" border="1">
+                      <table class="Code_Example" id="Code_Example_741_5" >
                         <tbody style="height: 105px;">
                           <tr>
                             <td> <button onclick="Code_Example_Toggle('Code_Example_741_5');">▽</button>
@@ -2728,7 +2613,7 @@
                     class="Server_Name">cci-git </span> server's SSL
                   certificate.&nbsp;&nbsp; You should disable Git’s automatic
                   checkings for a SSL certificate as follows: </p>
-                <table class="Code_Example" id="Code_Example_751_1" border="1">
+                <table class="Code_Example" id="Code_Example_751_1" >
                   <tbody>
                     <tr>
                       <td> <button onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button>
@@ -2744,7 +2629,7 @@
                 <p></p>
                 <p> Now, to test and verify read-access to the server, clone the
                   welcome repo:&nbsp; </p>
-                <table class="Code_Example" id="Code_Example_75_1" border="1">
+                <table class="Code_Example"  >
                   <tbody style="height: 105px;">
                     <tr>
                       <td> <button onclick="Code_Example_Toggle('Code_Example_75_1');"></button>
@@ -2798,7 +2683,7 @@
                     <ol class="Instruction_Option">
                       <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you
                         are using Git-Bash
-                        <table class="Code_Example" id="Code_Example_751_2" border="1">
+                        <table class="Code_Example">
                           <tbody>
                             <tr>
                               <td> <button onclick="Code_Example_Toggle('Code_Example_751_2');">▽
@@ -2841,38 +2726,46 @@
                   <div class="Server_Cci_Git">
                     <ol>
                       <li> Login to the cci-git Web Server (See 7.1 cci-git
-                        Server URL) </li>
-                      <li>Create a new project by making the selections shown in
-                        the screen capture below. &nbsp; In screen captures
-                        below whenever you must select multiple buttons, each
-                        button press is labeled with a number indicating the
-                        sequence in which you should make the selections.<br>
+                        Server URL)&nbsp;&nbsp;&nbsp; </li>
+                      <li><ins>First, make sure you are viewing your "dashboard"
+                          on cci-git by pressing the dashboard button (selection
+                          #1).&nbsp;</ins>&nbsp;&nbsp; Then create a new project
+                        by making the selection #2 in the screen capture below.
+                        &nbsp; In screen captures below whenever you must select
+                        multiple buttons, each button press is labeled with a
+                        red box.&nbsp; If multiple selections are needed each
+                        box is labeled with number indicating the sequence in
+                        which you should make the selections.<br>
                         <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project.png"
 
                             alt="TortoiseGit-untracked.png" width="500"></figure>
+                      </li>
+                      <li> <ins>Create a blank project</ins><span class="Updated_Text_Popup_Note">3/14/2023:
+                          Separated step for clarifity </span><br>
                         <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project2.png"
 
                             alt="TortoiseGit-untracked.png" width="500"></figure>
                       </li>
                       <li>Set up a new project and repo:<br>
                         &nbsp;&nbsp; <br>
-                        <ins>
-                        Note, in GitLab each repo has an <em>Owner</em>.&nbsp;&nbsp;&nbsp;
-                        The Owner can invite other GitLab users as <em>Members</em>
-                        to that repo.&nbsp;&nbsp; The Owner controls what access
-                        permissions each Member has.&nbsp; For this class, you
-                        must be the Owner of all your repo's.&nbsp;&nbsp; You
-                        will additionally invite the TAs and professor as
-                        Members of each repo so they can access your repos.<br>
-                        </ins><span class="Updated_Text_Popup_Note" id="ins_03132023"> 3/13/2023:
-                              Elaborated details on "Owner" vs "Member"</span>
+                        <ins> Note, in GitLab each repo has an <em>Owner</em>.&nbsp;&nbsp;&nbsp;
+                          The Owner can invite other GitLab users as <em>Members</em>
+                          to that repo.&nbsp;&nbsp; The Owner controls what
+                          access permissions each Member has.&nbsp; For this
+                          class, you must be the Owner of all your
+                          repo's.&nbsp;&nbsp; You will additionally invite the
+                          TAs and professor as Members of each repo so they can
+                          access your repos.<br>
+                        </ins><span class="Updated_Text_Popup_Note" id="ins_03132023">
+                          3/13/2023: Elaborated details on "Owner" vs "Member"</span>
                         <br>
-                        Create your new project selecting the settings shown
-                        below.&nbsp;&nbsp;&nbsp; For action #2 select your user
-                        name to make you the Owner of the project.&nbsp;&nbsp;
-                        (Do <u>not</u> select the group
+                        Create your new project by making the selection shown
+                        below.&nbsp;&nbsp;&nbsp; For selection #1, enter the
+                        appropriate name for the repo you are
+                        creating.&nbsp;&nbsp; For selection #2 select your user
+                        name.&nbsp; (Do <u>not</u> select the group
                         "itcs-3120-wartell/students/<em>FirstName</em> <em>LastName"</em>
-                        for action #2).<br>
+                        for selection #2).<br>
                         <br>
                         <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Blank_Project.png"
 
@@ -2957,7 +2850,7 @@
 
                             alt="TortoiseGit-untracked.png" width="500"></figure>
                         Then clone the repo:
-                        <table class="Code_Example" id="Code_Example_9_1_7" border="1">
+                        <table class="Code_Example">
                           <tbody>
                             <tr>
                               <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_7');">▽
@@ -2990,7 +2883,7 @@
                   </div>
                 </li>
                 <!--
-                            <li> [<em>YourServer</em><b>=Bitbucket</b>]                    <div class="Server_Bitbucket">                      <ol>                        <li> Select create:<br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Create.png"                              alt="TortoiseGit-untracked.png" width="500"> </figure>                        </li>                        <li> Here are some recommended settings (assume you name                          the repo MyRepoName)<br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Settings.png"                              alt="TortoiseGit-untracked.png" width="500"> </figure>                        </li>                        <li> Set up repo access permission (“sharing”): <br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Share.png"                              alt="TortoiseGit-untracked.png" width="500"> </figure>                        </li>                        <li> If the project is a team project, add your team                          members. </li>                        <li> Add the course TA and Professor get their email                          from class website                          <div align="center">                            <table style="border-collapse:collapse;border:none"                              cellspacing="0" cellpadding="0" border="1">                              <tbody>                                <tr>                                  <td style="width:2.0in;border:solid windowtext 1.0pt;                                                                padding:0in 5.4pt 0in 5.4pt"                                    width="192" valign="top">                                    <p style="margin-left:.5in">Dr. Wartell</p>                                  </td>                                  <td style="width:184.1pt;border:solid windowtext 1.0pt;                                                                border-left:none;padding:0in 5.4pt 0in 5.4pt"                                    width="245" valign="top">                                    <p style="margin-left:.5in">Zwartell</p>                                  </td>                                </tr>                                <tr>                                  <td style="width:2.0in;border:solid windowtext 1.0pt;                                                                border-top:none;padding:0in 5.4pt 0in 5.4pt"                                    width="192" valign="top">                                    <p style="margin-left:.5in">TA</p>                                  </td>                                  <td style="width:184.1pt;border-top:none;border-left:                                                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"                                    width="245" valign="top">                                    <p> <i>get their email from class website</i></p>                                  </td>                                </tr>                              </tbody>                            </table>                          </div>                        </li>                        <li> <strong>Example:</strong>&nbsp;Example steps to                          populate the remote repo is by creating a local repo                          and performing a git push as follows:<br>                          <table class="Code_Example" id="Code_Example_9_1_6" border="1">                            <tbody>                              <tr>                                <td><button onclick="Code_Example_Toggle('Code_Example_9_1_6');">▽</button></td>                                <td>                                  <div style="height: 150px;"> <code class="Shell_Code_Input">                                      &nbsp;cd MyRepoName<br>                                      $ git init<br>                                    </code><code class="Shell_Code_Output">                                      Initialized empty Git repository in                                      git-micro-tutorial/.git/ </code><br>                                    <code class="Shell_Code_Input"> $ git remote                                      add origin git@bitbucket.org:<span class="User_Input">your_user_id</span>/MyRepoName.git                                      </code><br> <code class="Shell_Code_Output">                                      Cloning into 'git-micro-tutorial'...<br>                                      Initialized empty Git repositoryin/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro-tutorial.git/<br>                                      warning: You appear to have cloned an                                      empty repository<br>                                    </code> &nbsp; &nbsp; &nbsp; &nbsp; <span class="Shell_Code_Comment">                                      [... your output will differ slightly..] <br>                                    </span><code class="Shell_Code_Input"> $ git                                      add . <br>                                      $ git commit<br>                                      $ echo "John Doe" &gt;&gt;                                      contributors.txt<br>                                      $ git add contributors.txt<br>                                      $ git commit -m 'Initial commit with                                      contributors'<br>                                      $ git push -u origin <del datetime="2021-08-28">master</del><ins datetime="2021-08-28">main</ins> </code><br>                                    <br>                                  </div>                                </td>                              </tr>                            </tbody>                          </table>                        </li>                      </ol>                    </div>                  </li>                  -->
+                            <li> [<em>YourServer</em><b>=Bitbucket</b>]                    <div class="Server_Bitbucket">                      <ol>                        <li> Select create:<br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Create.png"                              alt="TortoiseGit-untracked.png" width="500"> </figure>                        </li>                        <li> Here are some recommended settings (assume you name                          the repo MyRepoName)<br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Settings.png"                              alt="TortoiseGit-untracked.png" width="500"> </figure>                        </li>                        <li> Set up repo access permission (“sharing”): <br>                          <figure class="Screen_Capture" tabindex="1"> <img src="images/BitBucket-Share.png"                              alt="TortoiseGit-untracked.png" width="500"> </figure>                        </li>                        <li> If the project is a team project, add your team                          members. </li>                        <li> Add the course TA and Professor get their email                          from class website                          <div align="center">                            <table style="border-collapse:collapse;border:none"                              cellspacing="0" cellpadding="0" >                              <tbody>                                <tr>                                  <td style="width:2.0in;border:solid windowtext 1.0pt;                                                                padding:0in 5.4pt 0in 5.4pt"                                    width="192" valign="top">                                    <p style="margin-left:.5in">Dr. Wartell</p>                                  </td>                                  <td style="width:184.1pt;border:solid windowtext 1.0pt;                                                                border-left:none;padding:0in 5.4pt 0in 5.4pt"                                    width="245" valign="top">                                    <p style="margin-left:.5in">Zwartell</p>                                  </td>                                </tr>                                <tr>                                  <td style="width:2.0in;border:solid windowtext 1.0pt;                                                                border-top:none;padding:0in 5.4pt 0in 5.4pt"                                    width="192" valign="top">                                    <p style="margin-left:.5in">TA</p>                                  </td>                                  <td style="width:184.1pt;border-top:none;border-left:                                                                none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0in 5.4pt 0in 5.4pt"                                    width="245" valign="top">                                    <p> <i>get their email from class website</i></p>                                  </td>                                </tr>                              </tbody>                            </table>                          </div>                        </li>                        <li> <strong>Example:</strong>&nbsp;Example steps to                          populate the remote repo is by creating a local repo                          and performing a git push as follows:<br>                          <table class="Code_Example" id="Code_Example_9_1_6" >                            <tbody>                              <tr>                                <td><button onclick="Code_Example_Toggle('Code_Example_9_1_6');">▽</button></td>                                <td>                                  <div style="height: 150px;"> <code class="Shell_Code_Input">                                      &nbsp;cd MyRepoName<br>                                      $ git init<br>                                    </code><code class="Shell_Code_Output">                                      Initialized empty Git repository in                                      git-micro-tutorial/.git/ </code><br>                                    <code class="Shell_Code_Input"> $ git remote                                      add origin git@bitbucket.org:<span class="User_Input">your_user_id</span>/MyRepoName.git                                      </code><br> <code class="Shell_Code_Output">                                      Cloning into 'git-micro-tutorial'...<br>                                      Initialized empty Git repositoryin/home/git-viscenter/repositories/wartell/ITCS_4120/students/John_Doe/git-micro-tutorial.git/<br>                                      warning: You appear to have cloned an                                      empty repository<br>                                    </code> &nbsp; &nbsp; &nbsp; &nbsp; <span class="Shell_Code_Comment">                                      [... your output will differ slightly..] <br>                                    </span><code class="Shell_Code_Input"> $ git                                      add . <br>                                      $ git commit<br>                                      $ echo "John Doe" &gt;&gt;                                      contributors.txt<br>                                      $ git add contributors.txt<br>                                      $ git commit -m 'Initial commit with                                      contributors'<br>                                      $ git push -u origin <del datetime="2021-08-28">master</del><ins datetime="2021-08-28">main</ins> </code><br>                                    <br>                                  </div>                                </td>                              </tr>                            </tbody>                          </table>                        </li>                      </ol>                    </div>                  </li>                  -->
               </ol>
             </li>
             <li><strong>How to Push to New Remote Repository:</strong><br>
@@ -3007,7 +2900,7 @@
                         If you have&nbsp;<u>not</u>&nbsp;already created files
                         in a local directory that you want to import, performing
                         the following:<br>
-                        <table class="Code_Example" id="Code_Example_9_1_7" border="1">
+                        <table class="Code_Example">
                           <tbody>
                             <tr>
                               <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_7');">▽
@@ -3063,7 +2956,7 @@
                         a local Git repo, perform the following: (1) initialize
                         that directory as a local Git repo and (2) push it the
                         remote Git repo:<br>
-                        <table class="Code_Example" id="Code_Example_9_1_8" border="1">
+                        <table class="Code_Example" id="Code_Example_9_1_8" >
                           <tbody>
                             <tr>
                               <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_8');">▽
@@ -3161,12 +3054,13 @@
               <li> compilation scripts or project files
                 <ul type="circle">
                   <li> Under MSVS 2010 for C++:&nbsp;&nbsp;<br>
-                    .vcxproj, .sln, .vcxproj.user </li>
-                  <ul>
-                    <li> Under earlier MSVS versions:&nbsp; <br>
-                      .vcproj, .sln,
-                      .vcproj.&lt;username&gt;.&lt;machinename&gt;.user </li>
-                  </ul>
+                    .vcxproj, .sln, .vcxproj.user
+                    <ul>
+                      <li> Under earlier MSVS versions:&nbsp; <br>
+                        .vcproj, .sln,
+                        .vcproj.&lt;username&gt;.&lt;machinename&gt;.user </li>
+                    </ul>
+                  </li>
                   <li>CMake files</li>
                 </ul>
               </li>
@@ -3238,7 +3132,7 @@
             <li><strong>git-status</strong><br>
               <br>
               <em>Good Result</em>:<br>
-              <table class="Code_Example" id="Code_Example_10_3_1" border="1">
+              <table class="Code_Example" id="Code_Example_10_3_1" >
                 <tbody>
                   <tr>
                     <td> <button onclick="Code_Example_Toggle('Code_Example_10_3_1');">
@@ -3264,7 +3158,7 @@
               <br>
               <em>Maybe Bad:</em><br>
               If you get messages like:
-              <table class="Code_Example" id="Code_Example_10_3_2" border="1">
+              <table class="Code_Example"  >
                 <tbody>
                   <tr>
                     <td> <button onclick="Code_Example_Toggle('Code_Example_10_3_2');">
@@ -3293,7 +3187,7 @@
               <br>
               <em>Bad:</em><br>
               If you get a message like:<br>
-              <table class="Code_Example" id="Code_Example_10_3_2" border="1">
+              <table class="Code_Example"  >
                 <tbody>
                   <tr>
                     <td> <button onclick="Code_Example_Toggle('Code_Example_10_3_2');">
@@ -3348,7 +3242,7 @@
         </section>
       </section>
       <section>
-        <h1 class="Appendix"><a id="Appendix_I" name="Appendix_I"></a>&nbsp;
+        <h1 class="Appendix">&nbsp;
           Open Source Modules </h1>
         <p>This HTML5 document uses the following open source modules:</p>
         <ul>
@@ -3358,7 +3252,23 @@
             License </li>
         </ul>
       </section>
+      <section id="Errata">
+        <h1>
+          Errata 
+        </h1>
+        <!-- <sup>[<a href="https://www.merriam-webster.com/dictionary/errata">^</a>]</sup> -->
       <section>
+        <h1 class="Appendix">&nbsp;
+          Open Source Modules </h1>
+        <p>This HTML5 document uses the following open source modules:</p>
+        <ul>
+          <li> https://jquery.org/, Copyright jQuery Foundation and other
+            contributors, MIT license </li>
+          <li> http://projects.jga.me/toc/, Copyright Greg Allen 2014,&nbsp; MIT
+            License </li>
+        </ul>
+      </section>
+        
         <h1 class="nocount">Citations</h1>
         <!-- <ul class="Citation_List"> -->
         <ol class="Citation_List">
@@ -3396,40 +3306,8 @@
         </ol>
       </section>
       <!--
-        <section hidden="hidden">          <h1 class="Appendix">&nbsp;Staff</h1>
-          <p><br>          </p>
-          <section>            <h2 class="Appendix" id="Scripts"> Scripts</h2>
-            <ul>              <li><span class="Program_Name">git-tutorial-troubleshooter</span>
-                - <a href="./scripts/git-tutorial-troubleshooter.sh" download="">Download</a>                <ul>
-                  <li>Download and copy to a directory you can access from bash. </li>                  <li>Run the script from the bash command-line with no arguments
-                    to list further instructions, e.g. <br>                    <br>
-                    <span class="Program_Name">$ ./git-tutorial-troubleshooter</span></li>                </ul>
-              </li>            </ul>
-            <p><br>            </p>
-          </section>          <section>
-            <h2 class="Appendix">cci-git </h2>            <section>
-              <h3>Setup</h3>              <p>GitLab Group structure on cci-git:</p>
-              <p>It is not possible to Group Invite a GitLab Group to a repo, if                you are not a member of the group.&nbsp; The process below is
-                used to minimize student effort in making each of their course                project repo's accessible (Reporter level) to all course staff
-                with one Group Invite operation.&nbsp; (Experience shows that                requiring students to perform multiple Member Invite operations,
-                one per staff member, for each project repo was too error                prone).</p>
-              <p>itcs-3120-wartell &gt; students &gt; <em>FirstName LastName</em></p>              <ul>
-                <li><em>itcs-3120-wartell</em><br>                  professor is GitLab Owner of this group<br>
-                  Professor Invite Member's each TA and graders into this group.<em></em></li>                <li><em>students</em><br>
-                  sub-group of&nbsp; <em>itcs-3120-wartell</em><em></em></li>                <li><em>FirstName LastName</em>
-                  <ul>                    <li>There is one 'student share' group per
-                      student.&nbsp;&nbsp; It allows each student to share repo                      access with all course staff.</li>
-                    <li>Each group's name is copy and pasted from the student's                      name as it appears in GitLab</li>
-                    <li>Staff performs a Member Invite of each student share group                      to only the correpsonding student.</li>
-                    <li>During semester, student's Group Invite their student                      share group to each of their repo's.&nbsp; This gives all
-                      course staff&nbsp; "Reporter" access to their project repo's                      with a single Group Invite rather than the student's having
-                      to do a separate Invite Member operation for all course                      staff </li>
-                    <li>?&nbsp; How can we write a script that does the above                      operation for all students ?
-                      <ul>                        <li>perhaps bash or NodeJS</li>
-                      </ul>                    </li>
-                  </ul>                </li>
-              </ul>            </section>
-          </section>        </section>
-       --> </div>
+        <section hidden="hidden">          <h1 class="Appendix">&nbsp;Staff</h1>          <p><br>          </p>          <section>            <h2 class="Appendix" id="Scripts"> Scripts</h2>            <ul>              <li><span class="Program_Name">git-tutorial-troubleshooter</span>                - <a href="./scripts/git-tutorial-troubleshooter.sh" download="">Download</a>                <ul>                  <li>Download and copy to a directory you can access from bash. </li>                  <li>Run the script from the bash command-line with no arguments                    to list further instructions, e.g. <br>                    <br>                    <span class="Program_Name">$ ./git-tutorial-troubleshooter</span></li>                </ul>              </li>            </ul>            <p><br>            </p>          </section>          <section>            <h2 class="Appendix">cci-git </h2>            <section>              <h3>Setup</h3>              <p>GitLab Group structure on cci-git:</p>              <p>It is not possible to Group Invite a GitLab Group to a repo, if                you are not a member of the group.&nbsp; The process below is                used to minimize student effort in making each of their course                project repo's accessible (Reporter level) to all course staff                with one Group Invite operation.&nbsp; (Experience shows that                requiring students to perform multiple Member Invite operations,                one per staff member, for each project repo was too error                prone).</p>              <p>itcs-3120-wartell &gt; students &gt; <em>FirstName LastName</em></p>              <ul>                <li><em>itcs-3120-wartell</em><br>                  professor is GitLab Owner of this group<br>                  Professor Invite Member's each TA and graders into this group.<em></em></li>                <li><em>students</em><br>                  sub-group of&nbsp; <em>itcs-3120-wartell</em><em></em></li>                <li><em>FirstName LastName</em>                  <ul>                    <li>There is one 'student share' group per                      student.&nbsp;&nbsp; It allows each student to share repo                      access with all course staff.</li>                    <li>Each group's name is copy and pasted from the student's                      name as it appears in GitLab</li>                    <li>Staff performs a Member Invite of each student share group                      to only the correpsonding student.</li>                    <li>During semester, student's Group Invite their student                      share group to each of their repo's.&nbsp; This gives all                      course staff&nbsp; "Reporter" access to their project repo's                      with a single Group Invite rather than the student's having                      to do a separate Invite Member operation for all course                      staff </li>                    <li>?&nbsp; How can we write a script that does the above                      operation for all students ?                      <ul>                        <li>perhaps bash or NodeJS</li>                      </ul>                    </li>                  </ul>                </li>
+              </ul>            </section>          </section>        </section>       -->
+    </div>
   </body>
 </html>
