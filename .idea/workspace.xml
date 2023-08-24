@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-[clarifications]">
+    <list default="true" id="1e8c53cc-4b3f-461f-b2db-8fa81d048536" name="Default Changelist" comment="-[wip] switching to uncc www for hosting pages; revising scripts">
       <change afterPath="$PROJECT_DIR$/html/scripts/git-tutorial-grader/git-tutorial-grader.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/html/scripts/git-tutorial-grader/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/Git Tutorial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Site Root/images/cci-git-New_Project.png" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/images/cci-git-New_Project.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Site Root/libs/zjw-generic-instructions/Site Root/ClassAssignmentWartell.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/libs/zjw-generic-instructions/Site Root/ClassAssignmentWartell.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Site Root/libs/zjw-generic-instructions" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/libs/zjw-generic-instructions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Site Root/tutorial_example_files/my_project.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/html/Site Root/tutorial_example_files/my-project.tar.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/scripts/git-tutorial-checker" beforeDir="false" afterPath="$PROJECT_DIR$/html/scripts/git-tutorial-checker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/scripts/revision.sed" beforeDir="false" afterPath="$PROJECT_DIR$/html/scripts/revision.sed" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,19 +105,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/zwart/Dropbox (UNC Charlotte)/classes/ITCS_x120/scripts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/zwart/Dropbox (UNC Charlotte)/classes/wartell tutorials/Git_Tutorial_and_Coding_Standards",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Git Tutorial.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Git_Tutorial_and_Coding_Standards/html/Site Root/Git Tutorial.html?_ij_reload" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -184,7 +185,9 @@
       <workItem from="1678641865144" duration="8475000" />
       <workItem from="1678740897894" duration="1627000" />
       <workItem from="1678751186805" duration="2154000" />
-      <workItem from="1678800390979" duration="5256000" />
+      <workItem from="1678800390979" duration="5996000" />
+      <workItem from="1678928278611" duration="601000" />
+      <workItem from="1692840773158" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="-GitLab - changed location of Members dialog">
       <created>1630527623345</created>
@@ -235,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678751286713</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="-[clarifications]">
+      <created>1678815632766</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678815632766</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">

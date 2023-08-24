@@ -48,6 +48,7 @@ tail -f log.txt &
 exec > log.txt 2>&1
 
 
+# this is out of date now it is three clones
 echo
 echo ---- CLONE 
 echo
@@ -60,6 +61,7 @@ fi
 
 pushd git-full-tutorial > /dev/null
 
+# this is out of date now it is three clones
 echo
 echo ---- TAR
 echo
