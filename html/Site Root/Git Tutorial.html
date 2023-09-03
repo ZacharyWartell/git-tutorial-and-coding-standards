@@ -176,509 +176,10 @@
             $('#toc').toc({'smoothScrolling': false});
         }
     </script>
+    <link rel="stylesheet" href="libs/zjw-generic-instructions/Site%20Root/ClassAssignmentWartell.css">
+    <link rel="stylesheet" href="libs/zjw-generic-instructions/Site%20Root/generic_instructions.css">
     <!--
     <style type="text/css">        /*            Misc. character formats            */        /* for names of computer programs */        span.Program_Name {            font-family: "Courier", monospace;        }        /* for names of computer servers */        span.Server_Name {            font-family: "Courier", monospace;        }        /* for names of computer files */        span.File_Name {            font-family: Courier, monospace;        }        /* for names of programming language functions */        span.Function_Name {            font-family: Courier, monospace;        }        /* for rubric description of assignment item points */        span.Grade_Points {            font-weight: bold;        }        /*            style of presentation when displaying a menu button inline with other text            */        span.Text_Button {            font-family: Courier, monospace;            background-color: lightgrey;            border-color: black;            border-style: solid;            border-width: 1px;        }        /*            Div_Toggle_Button class (see also Div_Toggle())            */        button.Div_Toggle_Button {            position: relative;        }        button.Div_Toggle_Button::before {            content: "Press to Unhide/Hide (see Section 'Document Configuration')";            font-size: 10px;            position: absolute;            z-index: 999;            white-space: nowrap;            bottom: 9999px;            left: 50%;            background: #000;            color: #e0e0e0;            padding: 0px 7px;            line-height: 24px;            height: 24px;            opacity: 0;            -webkit-transition: opacity 0.4s ease-out;            -moz-transition: opacity 0.4s ease-out;            -o-transition: opacity 0.4s ease-out;            transition: opacity 0.4s ease-out;        }        button.Div_Toggle_Button:hover::before {            opacity: 1;            bottom: -35px;        }        h1.Title, h2.Title, h3.Title {            text-align: center;        }        p.Title {            font-weight: bold;            text-align: center;            font-size: x-large;        }        /*            Styles for display code examples, more specifically of command-line Shell script examples.            */        table.Code_Example {            width: 100%;            background-color: black;        }        /*  Code Example Expand style when displaying at full height, instead of with scroll bar            */        table.Code_Example_Expand > tbody > tr > td > div {            width: 100%;            height: 100% !important;        }        /*  Code Example Table Cell that contains expand button            */        table.Code_Example > tbody > tr > td:first-child {            vertical-align: text-top;            text-align: left;            width: 25px;            background-color: transparent;            padding: 0;        }        /* Code Example Expand style when displaying code in compact, scrollable mode.            */        table.Code_Example > tbody > tr > td > div {            width: 100%;            overflow-y: auto;        }        code.Shell_Code_Input {            font-family: "Courier", monospace;            color: white;        }        code.Shell_Code_Output {            font-family: "Courier", monospace;            color: lightgreen;        }        code.Shell_Code_Prompt {            font-family: "Courier", monospace;            color: cyan;        }        /*            User Input            */        /* when used outside Code_Example */        .User_Input {            background-color: grey;            font-style: italic;            color: white;            text-decoration: underline;            text-decoration-style: dotted;        }        /* when inside Code_Example */        table.Code_Example .User_Input {            background-color: darkgrey;            font-style: italic;            color: white;            text-decoration: underline;            text-decoration-style: dotted;        }        /*            User Input Generic            */        span.User_Input_Generic {            background-color: blue;            color: white;        }        /*            Comments in Shell Code            */        span.Shell_Code_Comment {            font-family: Courier, monospace;            text-align: center;            color: pink;            background-color: grey;            font-style: italic;            font-weight: bold;        }        /*            Hierarchical List of Option Instructions            */        ol.Instruction_Option {            font-size: large;            list-style-type: lower-greek !important;        }        ol.Instruction_Option > li {            font-size: large;            list-style-type: lower-greek;        }        /*            Hierarchical List of Sequential Instructions            */        ol.Instruction {            font-size: large;            list-style-type: decimal;        }        ol.Instruction > li > ol {            font-size: large;            list-style-type: lower-alpha;        }        ol.Instruction > li > ol > li > ol {            font-size: large;            list-style-type: lower-roman;        }        /*            These are used as labels for Instruction Configuration div toggling.            \todo [REFACTOR] Investigate better HTML5 mechanism than using class attribute this way....            */        div.OS_Windows, div.OS_Mac, div.OS_Unix,        div.Server_Bitbucket, div.Server_Cci_Git, div.Server_Git_Viscenter,        div.Server_Supports_HTTPS, div.Server_Supports_SSH {        }        /*            Displays figures that are Screen_Capture's and which are zoomable when clicked.            (Resourse [R1])            */        figure.Screen_Capture {            width: 500px;            background: white;            border: 10px solid white;            -webkit-box-shadow: 0 3px 10px #ccc;            -moz-box-shadow: 0 3px 10px #ccc;            -o-box-shadow: 0 3px 10px #ccc;            box-shadow: 0 3px 10px #ccc;            -webkit-transition: all 1s ease;            -moz-transition: all 1s ease;            -o-transition: all 1s ease;            transition: all 1s ease;            position: relative;        }        figure.Screen_Capture img {            width: 100%;        }        figure.Screen_Capture:hover {            -webkit-box-shadow: 0 3px 10px #F1EA35;            -moz-box-shadow: 0 3px 10px #F1EA35;            cursor: pointer;        }        figure.Screen_Capture:focus {            outline: none;            -webkit-transform: translate(500px, 350px) scale(3.0);            -moz-transform: translate(500px, 350px) scale(3.0);            -webkit-box-shadow: 0 3px 10px #666;            -moz-box-shadow: 0 3px 10px #666;            z-index: 9999;        }        /*            Citation_List            */        ol.Citation_List {            counter-reset: item;            list-style-type: none;            margin-left: 0;            padding-left: 0;        }        ol.Citation_List > li {            margin-left: 2em;        }        ol.Citation_List > li:before {            /* content: "[" counter(item) "] "; */            content: "";            counter-increment: item;            margin-left: -2em;        }        /*            */        a.Citation {            /* empty for now */        }        /*            ul.Citation_List            {                counter-reset: item;                list-style-type: none;                margin-left: 0;                padding-left: 0;            }            ul.Citation_List > li            {                margin-left: 2em;            }            ul.Citation_List > li:before            {                margin-left: -2em;            }            */        /*            Heading Numbering (Resource [R2])            */        body {            counter-reset: h1-Section h1-Appendix        }        h1.Section {            counter-reset: h2-Section        }        h2.Section {            counter-reset: h3-Section        }        h3.Section {            counter-reset: h4-Section        }        h4.Section {            counter-reset: h5-Section        }        h5.Section {            counter-reset: h6-Section        }        h1.Section:before {            counter-increment: h1-Section;            content: counter(h1-Section) ". "        }        h2.Section:before {            counter-increment: h2-Section;            content: counter(h1-Section) "." counter(h2-Section) ". "        }        h3.Section:before {            counter-increment: h3-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) ". "        }        h4.Section:before {            counter-increment: h4-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) ". "        }        h5.Section:before {            counter-increment: h5-Section;            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) "." counter(h5-Section) ". "        }        h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {            content: "";            counter-increment: none        }        /*            Heading Numbering (Resource [R2])            */        h1.Appendix {            counter-reset: h2-Appendix 1        }        h2.Appendix {            counter-reset: h3-Appendix 1        }        h3.Appendix {            counter-reset: h4-Appendix 1        }        h4.Appendix {            counter-reset: h5-Appendix 1        }        h5.Appendix {            counter-reset: h6-Appendix 1        }        h1.Appendix:before {            counter-increment: h1-Appendix;            content: "Appendix " counter(h1-Appendix, upper-roman) ". "        }        h2.Appendix:before {            counter-increment: h2-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) ". "        }        h3.Appendix:before {            counter-increment: h3-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) ". "        }        h4.Appendix:before {            counter-increment: h4-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) ". "        }        h5.Appendix:before {            counter-increment: h5-Appendix;            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) "." counter(h5-Appendix) ". "        }        /* h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {content: ""; counter-increment: none} */        /* Example from http://projects.jga.me/toc/#toc3 for lib/toc.js */        #toc {            top: 0px;            left: 0px;            height: 100%;            position: fixed;            background: #333;            box-shadow: inset -5px 0 5px 0px #000;            width: 250px;            padding-top: 20px;            color: #fff;            /* float:right; */        }        #toc ul {            margin: 0;            padding: 0;            list-style: none;        }        #toc li {            padding: 5px 10px;        }        #toc a {            color: #fff;            text-decoration: none;            display: block;        }        #toc .toc-h2 {            padding-left: 20px;        }        #toc .toc-h3 {            padding-left: 40px;        }        #toc .toc-active {            background: #336699;            box-shadow: inset -5px 0px 10px -5px #000;        }        /*      Reference:          - https://developer.mozilla.org/en-US/docs/Web/CSS/:hover          - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del      */        del:hover ~ span.Updated_Text_Popup_Note:before {            content: "\2196  DELETE: ";            font-weight: bold;        }        ins {            background-color: greenyellow;            text-decoration-line: underline;        }        ins:hover ~ span.Updated_Text_Popup_Note:before {            content: "\2196  INSERT: ";            font-weight: bold;        }        del {            text-decoration: line-through;            color: red;            background-color: white;        }        del:hover ~ span.Updated_Text_Popup_Note {            display: block;        }        span.Updated_Text_Popup_Note {            position: absolute;            /* top: -2em; */            /* left: 50em; */            display: none;            background-color: lightblue;            border: black solid 1px;            padding: 5px;        }    </style>    <link href="libs/zjw-generic-instructions/Site%20Root/ClassAssignmentWartell.css" rel="stylesheet">    -->
-    <style>
-
-        /*
-            Misc. character formats
-            */
-        /* for names of computer programs */
-        span.Program_Name {
-            font-family: "Courier", monospace;
-        }
-
-        /* for names of computer servers */
-        span.Server_Name {
-            font-family: "Courier", monospace;
-        }
-
-        /* for names of computer files */
-        span.File_Name {
-            font-family: Courier, monospace;
-        }
-
-        /* for names of programming language functions */
-        span.Function_Name {
-            font-family: Courier, monospace;
-        }
-
-        /* for rubric description of assignment item points */
-        span.Grade_Points {
-            font-weight: bold;
-        }
-
-        /*
-            style of presentation when displaying a menu button inline with other text
-            */
-        span.Text_Button {
-            font-family: Courier, monospace;
-            background-color: lightgrey;
-            border-color: black;
-            border-style: solid;
-            border-width: 1px;
-        }
-
-        /*
-            Div_Toggle_Button class (see also Div_Toggle())
-            */
-        button.Div_Toggle_Button {
-            position: relative;
-        }
-
-        button.Div_Toggle_Button::before {
-            content: "Press to Unhide/Hide (see Section 'Document Configuration')";
-
-            font-size: 10px;
-            position: absolute;
-            z-index: 999;
-            white-space: nowrap;
-            bottom: 9999px;
-            left: 50%;
-            background: #000;
-            color: #e0e0e0;
-            padding: 0px 7px;
-            line-height: 24px;
-            height: 24px;
-
-            opacity: 0;
-            -webkit-transition: opacity 0.4s ease-out;
-            -moz-transition: opacity 0.4s ease-out;
-            -o-transition: opacity 0.4s ease-out;
-            transition: opacity 0.4s ease-out;
-        }
-
-        button.Div_Toggle_Button:hover::before {
-            opacity: 1;
-            bottom: -35px;
-        }
-
-
-        h1.Title, h2.Title, h3.Title {
-            text-align: center;
-        }
-
-        p.Title {
-            font-weight: bold;
-            text-align: center;
-            font-size: x-large;
-        }
-
-        /*
-            Styles for display code examples, more specifically of command-line Shell script examples.
-            */
-        table.Code_Example {
-            width: 100%;
-            background-color: black;
-        }
-
-        /*  Code Example Expand style when displaying at full height, instead of with scroll bar
-            */
-        table.Code_Example_Expand > tbody > tr > td > div {
-            width: 100%;
-            height: 100% !important;
-        }
-
-        /*  Code Example Table Cell that contains expand button
-            */
-        table.Code_Example > tbody > tr > td:first-child {
-            vertical-align: text-top;
-            text-align: left;
-            width: 25px;
-            background-color: transparent;
-            padding: 0;
-        }
-
-        /* Code Example Expand style when displaying code in compact, scrollable mode.
-            */
-        table.Code_Example > tbody > tr > td > div {
-            width: 100%;
-            overflow-y: auto;
-        }
-
-        code.Shell_Code_Input {
-            font-family: "Courier", monospace;
-            color: white;
-        }
-
-        code.Shell_Code_Output {
-            font-family: "Courier", monospace;
-            color: lightgreen;
-        }
-
-        code.Shell_Code_Prompt {
-            font-family: "Courier", monospace;
-            color: cyan;
-        }
-
-        /*  
-            User Input
-            */
-        /* when used outside Code_Example */
-        .User_Input {
-            background-color: grey;
-            font-style: italic;
-            color: white;
-            text-decoration: underline;
-            text-decoration-style: dotted;
-        }
-
-        /* when inside Code_Example */
-        table.Code_Example .User_Input {
-            background-color: darkgrey;
-            font-style: italic;
-            color: white;
-            text-decoration: underline;
-            text-decoration-style: dotted;
-        }
-
-        /*  
-            User Input Generic
-            */
-        span.User_Input_Generic {
-            background-color: blue;
-            color: white;
-        }
-
-        /*   
-            Comments in Shell Code
-            */
-        span.Shell_Code_Comment {
-            font-family: Courier, monospace;
-            text-align: center;
-            color: pink;
-            background-color: grey;
-            font-style: italic;
-            font-weight: bold;
-        }
-
-        /*   
-            Hierarchical List of Option Instructions
-            */
-        ol.Instruction_Option {
-            font-size: large;
-            list-style-type: lower-greek !important;
-        }
-
-        ol.Instruction_Option > li {
-            font-size: large;
-            list-style-type: lower-greek;
-        }
-
-        /*   
-            Hierarchical List of Sequential Instructions
-            */
-        ol.Instruction {
-            font-size: large;
-            list-style-type: decimal;
-        }
-
-        ol.Instruction > li > ol {
-            font-size: large;
-            list-style-type: lower-alpha;
-        }
-
-        ol.Instruction > li > ol > li > ol {
-            font-size: large;
-            list-style-type: lower-roman;
-        }
-
-        /*
-            These are used as labels for Instruction Configuration div toggling.
-            \todo [REFACTOR] Investigate better HTML5 mechanism than using class attribute this way....
-            */
-        div.OS_Windows, div.OS_Mac, div.OS_Unix,
-        div.Server_Bitbucket, div.Server_Cci_Git, div.Server_Git_Viscenter,
-        div.Server_Supports_HTTPS, div.Server_Supports_SSH {
-        }
-
-        /*
-            Displays figures that are Screen_Capture's and which are zoomable when clicked.
-            (Resourse [R1])
-            */
-        figure.Screen_Capture {
-            width: 500px;
-            background: white;
-            border: 10px solid white;
-            -webkit-box-shadow: 0 3px 10px #ccc;
-            -moz-box-shadow: 0 3px 10px #ccc;
-            -o-box-shadow: 0 3px 10px #ccc;
-            box-shadow: 0 3px 10px #ccc;
-            -webkit-transition: all 1s ease;
-            -moz-transition: all 1s ease;
-            -o-transition: all 1s ease;
-            transition: all 1s ease;
-            position: relative;
-            z-index: 9;
-        }
-
-        figure.Screen_Capture img {
-            width: 100%;
-            z-index: 9;
-        }
-
-        figure.Screen_Capture:hover {
-            -webkit-box-shadow: 0 3px 10px #F1EA35;
-            -moz-box-shadow: 0 3px 10px #F1EA35;
-            cursor: pointer;
-            z-index: 9;
-        }
-
-        figure.Screen_Capture:focus {
-            outline: none;
-            -webkit-transform: translate(500px, 350px) scale(3.0);
-            -moz-transform: translate(500px, 350px) scale(3.0);
-            -webkit-box-shadow: 0 3px 10px #666;
-            -moz-box-shadow: 0 3px 10px #666;
-            z-index: 9;
-        }
-
-        /*
-            Citation_List
-            */
-        ol.Citation_List {
-            counter-reset: item;
-            list-style-type: none;
-            margin-left: 0;
-            padding-left: 0;
-        }
-
-        ol.Citation_List > li {
-            margin-left: 2em;
-        }
-
-        ol.Citation_List > li:before {
-            /* content: "[" counter(item) "] "; */
-            content: "";
-            counter-increment: item;
-            margin-left: -2em;
-        }
-
-        /*
-            
-            */
-        a.Citation {
-            /* empty for now */
-        }
-
-        /*
-            ul.Citation_List
-            {
-                counter-reset: item;
-                list-style-type: none;
-                margin-left: 0;
-                padding-left: 0;
-            }
-            ul.Citation_List > li
-            {
-                margin-left: 2em;
-            }		
-            ul.Citation_List > li:before 
-            {			             
-                margin-left: -2em;
-            } 
-            */
-
-        /* 
-            Heading Numbering (Resource [R2])
-            */
-        body {
-            counter-reset: h1-Section h1-Appendix
-        }
-
-        h1.Section {
-            counter-reset: h2-Section
-        }
-
-        h2.Section {
-            counter-reset: h3-Section
-        }
-
-        h3.Section {
-            counter-reset: h4-Section
-        }
-
-        h4.Section {
-            counter-reset: h5-Section
-        }
-
-        h5.Section {
-            counter-reset: h6-Section
-        }
-
-        h1.Section:before {
-            counter-increment: h1-Section;
-            content: counter(h1-Section) ". "
-        }
-
-        h2.Section:before {
-            counter-increment: h2-Section;
-            content: counter(h1-Section) "." counter(h2-Section) ". "
-        }
-
-        h3.Section:before {
-            counter-increment: h3-Section;
-            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) ". "
-        }
-
-        h4.Section:before {
-            counter-increment: h4-Section;
-            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) ". "
-        }
-
-        h5.Section:before {
-            counter-increment: h5-Section;
-            content: counter(h1-Section) "." counter(h2-Section) "." counter(h3-Section) "." counter(h4-Section) "." counter(h5-Section) ". "
-        }
-
-        h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {
-            content: "";
-            counter-increment: none
-        }
-
-        /* 
-            Heading Numbering (Resource [R2])
-            */
-        h1.Appendix {
-            counter-reset: h2-Appendix 1
-        }
-
-        h2.Appendix {
-            counter-reset: h3-Appendix 1
-        }
-
-        h3.Appendix {
-            counter-reset: h4-Appendix 1
-        }
-
-        h4.Appendix {
-            counter-reset: h5-Appendix 1
-        }
-
-        h5.Appendix {
-            counter-reset: h6-Appendix 1
-        }
-
-        h1.Appendix:before {
-            counter-increment: h1-Appendix;
-            content: "Appendix " counter(h1-Appendix, upper-roman) ". "
-        }
-
-        h2.Appendix:before {
-            counter-increment: h2-Appendix;
-            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) ". "
-        }
-
-        h3.Appendix:before {
-            counter-increment: h3-Appendix;
-            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) ". "
-        }
-
-        h4.Appendix:before {
-            counter-increment: h4-Appendix;
-            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) ". "
-        }
-
-        h5.Appendix:before {
-            counter-increment: h5-Appendix;
-            content: counter(h1-Appendix, upper-roman) "-" counter(h2-Appendix) "." counter(h3-Appendix) "." counter(h4-Appendix) "." counter(h5-Appendix) ". "
-        }
-
-        /* h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {content: ""; counter-increment: none} */
-
-
-        /* Example from http://projects.jga.me/toc/#toc3 for lib/toc.js */
-        #toc {
-            top: 0px;
-            left: 0px;
-            height: 100%;
-            position: fixed;
-            background: #333;
-            box-shadow: inset -5px 0 5px 0px #000;
-            width: 250px;
-            padding-top: 20px;
-            color: #fff;
-            /* float:right; */
-        }
-
-        #toc ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        #toc li {
-            padding: 5px 10px;
-        }
-
-        #toc a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-        }
-
-        #toc .toc-h2 {
-            padding-left: 20px;
-        }
-
-        #toc .toc-h3 {
-            padding-left: 40px;
-        }
-
-        #toc .toc-active {
-            background: #336699;
-            box-shadow: inset -5px 0px 10px -5px #000;
-        }
-
-        /*
-      Reference:
-          - https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
-          - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
-      */
-        del:hover ~ span.Updated_Text_Popup_Note:before {
-            content: "\2196  DELETE: ";
-            font-weight: bold;
-            z-index: 10;
-        }
-
-        ins {
-            background-color: greenyellow;
-            text-decoration-line: underline;
-        }
-
-        ins:hover ~ span.Updated_Text_Popup_Note:before {
-            content: "\2196  INSERT: ";
-            font-weight: bold;
-        }
-
-        ins:hover ~ span.Updated_Text_Popup_Note {
-          display: block;
-          z-index: 10;
-        }
-
-        del {
-            text-decoration: line-through;
-            color: red;
-            background-color: white;
-        }
-
-        del:hover ~ span.Updated_Text_Popup_Note {
-            display: block;
-        }
-
-        span.Updated_Text_Popup_Note {
-            position: absolute;
-            /* top: -2em; */
-            /* left: 50em; */
-            display: none;
-            background-color: lightblue;
-            border: black solid 1px;
-            padding: 5px;
-        }
-
-    </style>
-    <!--
-    Not working yet...    <link href="libs/zjw-generic-instructions/Site%20Root/ClassAssignmentWartell.css" rel="stylesheet">     -->
     <style media="print" type="text/css">
         /*
             If printing, don't use scroll bars, just expand code examples to full height.
@@ -693,7 +194,7 @@
 
     </style>
   </head>
-  <body onload="onload_Body()" style="                                                                              margin-left: -85px; ">
+  <body onload="onload_Body()" style="                                                                                margin-left: -85px; ">
     git<!-- w3.css stuff I experimented with
     <div  style="top: 112px;"  class="w3-sidenav w3-collapse w3-slim"  id="sidenav">      <div  style="padding-top: 112px;"  id="leftmenuinner">        <div  class="w3-light-grey"  id="leftmenuinnerinner"> <a  href="javascript:void(0)"  onclick="close_menu()"  class="w3-closebtn w3-hide-large w3-large"             style="padding:3px 12px;">×</a> </div>      </div>    </div>    <div  class="w3-main w3-light-grey"  id="belowtopnav"  style="margin-left: 220px; padding-top: 0px;">      <div  class="w3-row w3-white">        <div  class="w3-col l10 m12"  id="main">          			 -->
     <!-- IF_TOC -->
@@ -705,8 +206,9 @@
         <br>
         Author: Dr. Zachary Wartell, 2012 at UNC Charlotte.<br>
         <em></em><br>
-        Revised: <span class="Revision">Mon Aug 28 10:48:58 2023 -0400</span><sup>
+        Revised: <span class="Revision">Thu Aug 31 20:34:47 2023 -0400</span><sup>
           (<a href="https://gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards/commits/master"
+
             target="_blank">git logs</a>) </sup><br>
         <br>
         <br>
@@ -719,11 +221,13 @@
         </a><br>
         <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> Git
           Tutorial and Coding Standards </span> by <a xmlns:cc="http://creativecommons.org/ns#"
+
           href="http://cs.uncc.edu/%7Ezwartell/" property="cc:attributionName" rel="cc:attributionURL">
           Zachary Justin Wartell </a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
           Creative Commons Attribution-NonCommercial-ShareAlike 4.0
           International License </a>.<br>
         Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards"
+
           rel="dct:source">https://cci-git.uncc.edu/zwartell/Git_Tutorial_and_Coding_Standards</a>.
         <br>
         <hr> This page uses a variety of open source code modules (<a href="#Appendix_I">
@@ -771,11 +275,17 @@
             <!-- 
             <p><label>Git Server: </label> <input name="Git_Server" id="cci_git" value="cci_git" checked="checked" onchange="onchange_Git_Server()" type="radio">              <label for="cci_git">cci-git</label> <input name="Git_Server" id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()" disabled="disabled"                type="radio"> <label for="bitbucket">Bitbucket</label> </p>						-->
             <p><label>Operating System: </label> <input name="Operating_System"
+
                 id="Windows" value="Windows" checked="checked" onchange="Div_Toggle('OS_Windows');"
+
                 type="checkbox"> <label for="Windows">Windows</label> <input name="Operating_System"
+
                 id="Unix" value="Unix" checked="checked" onchange="Div_Toggle('OS_Unix');"
+
                 type="checkbox"> <label for="Unix">Unix</label> <input name="Operating_System"
+
                 id="Mac" value="Mac" checked="checked" onchange="Div_Toggle('OS_Mac');"
+
                 type="checkbox"> <label for="Mac">Mac</label></p>
           </fieldset>
         </form>
@@ -853,6 +363,7 @@
             Click anywhere outside the zoomed image to return the image to its
             original size. For example, click on the image below:<br>
             <figure class="Screen_Capture" tabindex="1"><img src="images/Screen_Capture.png"
+
                 alt="Screen_Capture"></figure>
           </li>
           <li><b>Fonts:</b>
@@ -891,22 +402,28 @@
                       </code> <code class="Shell_Code_Output"> total 20<br>
                         drwxr-xr-x 1 lucretius 197609 0 Sep 23 21:57 ./<br>
                         drwxr-xr-x 1 </code><code class="Shell_Code_Output"> <code
+
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:37 ../<br>
                         -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
+
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:55 'The Hitchhickers Guide to the Galaxy.azw'<br>
                         -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
+
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:36 'On the nature of things - Lucretius.pdf'<br>
                         -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
+
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:56 'Ethica - Spinzoa.pdf'<br>
                         -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
+
                           class="Shell_Code_Output">lucretius</code> 197609 0
                         Sep 23 21:57 'Moses the Egyptian: The Memory of Egypt in
                         Western Monotheism.azw'<br>
                         -rw-r--r-- 1 </code><code class="Shell_Code_Output"> <code
+
                           class="Shell_Code_Output">lucretius </code>197609 0
                         Sep 23 21:37 Notes.docx<br>
                         <span class="Shell_Code_Comment"> […misc additional
@@ -948,6 +465,7 @@
         </p>
         <section>
           <h2 class="Section" id="Installation_and_Setup_of_Command-Line_Git"><a
+
               name="Installation_and_Setup_of_Command-Line"></a>Installation of
             Command-Line Git </h2>
           <p>This section walks you through installing Git client tools on your
@@ -964,9 +482,13 @@
                     ‘git-bash’), the basic OpenSSH tools and git.&nbsp; During
                     install select the options indicated in the sequence below:<br>
                     <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/247202/sp/24720200/embedIframeJs/uiconf_id/28089382/partner_id/247202?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_91pwepnf&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_v56pw0kc"
+
                       allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
+
                       allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
+
                       title="Git Tutorial Install 1" height="285" frameborder="0"
+
                       width="400"></iframe> </li>
                   <li> Note, git-bash does not install the standard Unix 'man'
                     command which allows you to read the standard "Manual" pages
@@ -994,6 +516,7 @@
             <li> [<em>YourOS</em>=<strong>Linux</strong>] Typically, default
               Linux/Unix installations include Git.&nbsp; If Git is not
               installed, then download and install Git from <a target="_blank"
+
                 href="http://git-scm.com">http://git-scm.com/</a>. </li>
             <li> [<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp; Download and
               install Git from <a target="_blank" href="http://git-scm.com">http://git-scm.com/</a>.
@@ -1036,6 +559,7 @@
           <ol class="Instruction_Option">
             <li> [<em>YourOS</em>=<strong>Window</strong>] <br>
               Download and install TortoiseGit from <a href="https://tortoisegit.org/"
+
                 target="_blank">https://tortoisegit.org/</a></li>
             <li> [<em>YourOS</em>=<strong>Mac/Linux</strong>] <br>
               Various Git GUIs are found here <a target="_blank" href="http://git-scm.com/downloads/guis.%20%20">http://git-scm.com/downloads/guis</a>.&nbsp;
@@ -1105,14 +629,19 @@
                 </td>
                 <td>
                   <div style="height: 75px;"> <code class="Shell_Code_Input"></code><code
+
                       class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/<span
+
                           style="color: white;"> </span></code>mkdir ITCS_<em>XYZ</em>
                     </code> <br>
                     <code class="Shell_Code_Input"></code><code class="Shell_Code_Input"><code
+
                         class="Shell_Code_Prompt">ada@turing42~/<span style="color: white;">
                         </span></code>cd ITCS_<em>XYZ</em> </code> <br>
                     <code class="Shell_Code_Input"></code><code class="Shell_Code_Input"><code
+
                         class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em><span
+
                           style="color: white;"> </span></code></code> <br>
                   </div>
                 </td>
@@ -1130,13 +659,18 @@
                 </td>
                 <td>
                   <div style="height: 75px;"> <code class="Shell_Code_Input"><code
+
                         class="Shell_Code_Prompt">ada@turing42~/ITCS_XYZ<span style="color: white;">
                         </span></code>mkdir git-tutorial<em></em> </code> <br>
                     <code class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/<span
+
                           style="color: white;"></span></code></code><code class="Shell_Code_Input"><code
+
                         class="Shell_Code_Prompt"><span style="color: white;"><code
+
                             class="Shell_Code_Input"><code class="Shell_Code_Prompt">ITCS_XYZ</code></code>
                         </span></code>cd </code><code class="Shell_Code_Input"><code
+
                         class="Shell_Code_Input">git-tutorial</code><em></em> </code>
                     <br>
                     <code class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-tutorial</code></code>
@@ -1151,8 +685,7 @@
           Access.<br>
           <ol>
             <li>Create and setup your account on the Git server as described the
-              Appendix I-3 <a href="#Git_Server_Access">Git_Server_Access</a>,
-            </li>
+              Appendix I <a href="#Git_Server_Access">Git_Server_Access</a>, </li>
           </ol>
         </li>
         <li><strong> ProGit - Chapter 1</strong>:
@@ -1167,7 +700,9 @@
                 <li><u>Exercise</u><b>:&nbsp; </b>PG:“<a target="_blank" href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity">Your
                     Identity </a>” - perform all described steps </li>
                 <li><u>Exercise</u><strong>:&nbsp; </strong>PG:<strong></strong>“<a
+
                     href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_editor"
+
                     target="_blank">Your Editor </a>” - perform all described
                   steps<br>
                   <em>Note</em>: use whatever simple editor you prefer
@@ -1190,6 +725,7 @@
                   'my-project'.&nbsp;&nbsp; To create and get these files, in
                   your browser click the following link to download these
                   files:&nbsp;&nbsp;&nbsp;<a href="./tutorial_example_files/my-project.tar.gz"><span
+
                       class="File_Name">my-project.tar.gz</span> </a>.&nbsp;&nbsp;
                   After downloading, copy the file to your git-tutorial
                   directory.&nbsp; Then uncompress the tar.gz file as follows:<br>
@@ -1200,10 +736,12 @@
                         </td>
                         <td>
                           <div style="height: 250px;"><code class="Shell_Code_Input"></code><code
+
                               class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
                                 ~/ITCS_XYZ/git-tutorial</code> tar -xf
                               my-project.tar.gz </code> <br>
                             <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
+
                                 class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
                                   ~/ITCS_XYZ/git-tutorial</code></code> ls -R </code>
                             <br>
@@ -1214,6 +752,7 @@
                               main.c LICENSE <br>
                             </code> <br>
                             <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
+
                                 class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
                                   ~/ITCS_XYZ/git-tutorial</code></code> cd
                               my-project </code> </div>
@@ -1224,6 +763,7 @@
                   <br>
                 </li>
                 <li><u>Exercise</u>: PG: <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#_initializing_a_repository_in_an_existing_directory"
+
                     target="_blank">Initializing a Repository in an Existing
                     Directory</a> <br>
                   <br>
@@ -1236,12 +776,15 @@
                     to a remote repo.</i>
                   <ol>
                     <li>Create a remote repository on the git server called <span
+
                         class="File_Name">my-project</span>.&nbsp;&nbsp; <br>
                       Follow the instructions in Appendix II <a href="#How_to_Create_New_Remote_Repository">"How
                         to Create New Remote Repository"&nbsp;</a> </li>
                     <li>To connect your local repo to the remote repo do as
                       shown below, where <code class="Shell_Code_Input"></code><code
+
                         class="Shell_Code_Input"><span class="Server_Name"><span
+
                             class="User_Input">URL of my-project</span></span></code>
                       is the full URL of the remote repo.<br>
                       <table class="Code_Example">
@@ -1254,9 +797,11 @@
                                   <code class="Shell_Code_Prompt">ada@turing42
                                     ~/ITCS_XYZ/git-tutorial/my-project</code>
                                   git remote add origin <span class="Server_Name"><span
+
                                       class="User_Input">URL of my-project</span></span><br>
                                 </code> <code class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
                                     ~/ITCS_XYZ/git-tutorial</code></code><code class="Shell_Code_Input"><code
+
                                     class="Shell_Code_Input"><code class="Shell_Code_Prompt">/my-project
                                       </code></code></code><code class="Shell_Code_Input">git
                                   push origin main <span style="color: black;">
@@ -1265,6 +810,7 @@
                                 <code class="Shell_Code_Input"> <span class="Shell_Code_Comment">[
                                     the credential manager that you install will
                                     now prompt you for your user id and PAT]</span></code><code
+
                                   class="Shell_Code_Input"><br>
                                   <span style="color: lightgreen;">Enumerating
                                     objects: 3, done.<br>
@@ -1303,6 +849,7 @@
                 <li>Download the required practice files,
                   'ProGit_Chapter_2_2.tar.gz'.&nbsp; <br>
                   In your browser click the following link:&nbsp;&nbsp; <a href="./tutorial_example_files/ProGit_Chapter_2_2.tar.gz"><span
+
                       class="File_Name">ProGit_Chapter_2_2.tar.gz</span></a>.&nbsp;&nbsp;
                   After downloading, copy the file to your git-tutorial
                   directory.&nbsp; Then uncompress the tar.gz file as follows:<br>
@@ -1313,20 +860,28 @@
                         </td>
                         <td> <span class="tag">1645</span>
                           <div style="height: 110px;"> <code class="Shell_Code_Input"><code
+
                                 class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
                                   ~/ITCS_XYZ/git-tutorial</code><br>
                                 <code class="Shell_Code_Prompt">ada@turing42
                                   ~/ITCS_</code></code></code><code class="Shell_Code_Input"><code
+
                                 class="Shell_Code_Input"><code class="Shell_Code_Prompt"><code
+
                                     class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                         class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial</code><br>
                                 <code class="Shell_Code_Input">tar -xf
                                   ProGit_Chapter_2_2.tar.gz </code> </code><br>
                               <code class="Shell_Code_Prompt">ada@turing42
                                 ~/ITCS_</code></code><code class="Shell_Code_Input"><code
+
                                 class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
+
                                     class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code></code><code
+
                                 class="Shell_Code_Prompt">/git-tutorial</code> <code
+
                                 class="Shell_Code_Input"> cd </code> <code class="Shell_Code_Input">
                                 <code class="Shell_Code_Input">ProGit_Chapter_2_2</code>
                               </code></code> </div>
@@ -1352,6 +907,7 @@
                   remote repo:
                   <ol>
                     <li>Create a remote repository on the git server called <span
+
                         class="File_Name">progit-chapter-2-2</span>.&nbsp;&nbsp;
                       Follow the instructions in Appendix II <a href="#How_to_Create_New_Remote_Repository">"How
                         to Create New Remote Repository"&nbsp;</a> </li>
@@ -1367,16 +923,23 @@
                               <div style="height: 150px;"> <code class="Shell_Code_Input"></code>
                                 <code class="Shell_Code_Input"> <code class="Shell_Code_Prompt">ada@turing42
                                     ~/ITCS_</code></code><code class="Shell_Code_Input"><code
+
                                     class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
+
                                         class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/ProGit_Chapter_2_2</code>
                                   git remote add origin </code> <code class="Shell_Code_Input"><span
+
                                     class="Server_Name"> <span class="User_Input">URL
                                       of my-project</span></span><br>
                                 </code> <code class="Shell_Code_Input"> <code
+
                                     class="Shell_Code_Input"> <code class="Shell_Code_Prompt">ada@turing42
                                       ~/ITCS_</code></code></code><code class="Shell_Code_Input"><code
+
                                     class="Shell_Code_Input"><code class="Shell_Code_Prompt"><code
+
                                         class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                             class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/ProGit_Chapter_2_2
                                       </code> </code></code> <code class="Shell_Code_Input">git
                                   push origin main <span style="color: black;">
@@ -1429,15 +992,23 @@
                         <td>
                           <div style="height: 50px;"> <code class="Shell_Code_Input">
                               <code class="Shell_Code_Prompt">ada@turing42 ~/</code></code><code
+
                               class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                   class="Shell_Code_Prompt">ITCS_</code></code></code><code
+
                               class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                   class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
+
                                       class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial</code></code></code><code
+
                               class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                   class="Shell_Code_Prompt">/ProGit_Chapter_2_2
                                 </code></code></code><code class="Shell_Code_Input">git
                               push origin main <span style="color: black;"> <span
+
                                   style="font-family: serif;">t </span></span>
                             </code> </div>
                         </td>
@@ -1481,21 +1052,32 @@
                             <td>
                               <div> <code class="Shell_Code_Prompt">ada@turing42
                                   ~/</code><code class="Shell_Code_Prompt"><code
+
                                     class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                         class="Shell_Code_Prompt">ITCS_</code></code></code><code
+
                                     class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                         class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
+
                                             class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/</code></code></code>simplegit-progit</code>
                                 <code class="Shell_Code_Input">git remote rename
                                   origin upstream </code> <span class="Shell_Code_Comment">
                                   [This renames the source repo to 'upstream', a
                                   common convention] </span> <code class="Shell_Code_Prompt">ada@turing42
                                   ~</code><code class="Shell_Code_Prompt">/</code><code
+
                                   class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
+
                                       class="Shell_Code_Input"><code class="Shell_Code_Prompt">ITCS_</code></code></code><code
+
                                     class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                         class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
+
                                             class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/</code></code></code></code><code
+
                                   class="Shell_Code_Prompt">simplegit-progit</code>
                                 <code class="Shell_Code_Input">git remote add
                                   origin <span class="User_Input">URL of your
@@ -1504,12 +1086,19 @@
                                   associates the origin ref with your remote
                                   repo] </span><br>
                                 <code class="Shell_Code_Prompt">ada@turing42 ~</code><code
+
                                   class="Shell_Code_Prompt">/</code><code class="Shell_Code_Prompt"><code
+
                                     class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                         class="Shell_Code_Prompt">ITCS_</code></code></code><code
+
                                     class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
                                         class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
+
                                             class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/</code></code></code></code><code
+
                                   class="Shell_Code_Prompt">simplegit-progit</code>
                                 <code class="Shell_Code_Input">git push origin
                                   --all </code><br>
@@ -1544,6 +1133,7 @@
           perform the Micro Git Tutorial). </p>
         <ol class="Instruction">
           <li><ins datetime="2023-08-28"><u>Exercise</u><strong>:&nbsp; </strong></ins><span
+
               class="Updated_Text_Popup_Note">Added step for consistency with
               full git tutorial</span>This tutorial and all later projects in
             the course, assume you have created a 'course' directory that will
@@ -1561,14 +1151,19 @@
                   </td>
                   <td>
                     <div style="height: 75px;"> <code class="Shell_Code_Input"></code><code
+
                         class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/<span
+
                             style="color: white;"> </span></code>mkdir ITCS_<em>XYZ</em>
                       </code> <br>
                       <code class="Shell_Code_Input"></code><code class="Shell_Code_Input"><code
+
                           class="Shell_Code_Prompt">ada@turing42~/<span style="color: white;">
                           </span></code>cd ITCS_<em>XYZ</em> </code> <br>
                       <code class="Shell_Code_Input"></code><code class="Shell_Code_Input"><code
+
                           class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em><span
+
                             style="color: white;"> </span></code></code> <br>
                     </div>
                   </td>
@@ -1577,6 +1172,7 @@
             </table>
           </li>
           <li><ins datetime="2023-08-28"><u>Exercise</u><strong>:&nbsp; </strong></ins><span
+
               class="Updated_Text_Popup_Note">Added step for consistency with
               full git tutorial</span>Create a sub-directory for this tutorial
             called 'git-micro-tutorial' and cd into that directory.&nbsp; Do all
@@ -1588,14 +1184,20 @@
                   </td>
                   <td>
                     <div style="height: 75px;"> <code class="Shell_Code_Input"><code
+
                           class="Shell_Code_Prompt">ada@turing42~/ITCS_XYZ<span
+
                             style="color: white;"> </span></code>mkdir
                         git-micro-tutorial<em></em> </code> <br>
                       <code class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/<span
+
                             style="color: white;"></span></code></code><code class="Shell_Code_Input"><code
+
                           class="Shell_Code_Prompt"><span style="color: white;"><code
+
                               class="Shell_Code_Input"><code class="Shell_Code_Prompt">ITCS_XYZ</code></code>
                           </span></code>cd </code><code class="Shell_Code_Input"><code
+
                           class="Shell_Code_Input">git-micro-tutorial</code><em></em>
                       </code> <br>
                       <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code>
@@ -1622,6 +1224,7 @@
                   <li><u>Exercise</u><b>:&nbsp; </b>PG:“<a target="_blank" href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity">Your
                       Identity </a>” - perform all steps</li>
                   <li><u>Exercise</u><strong>:&nbsp; </strong>PG:<strong></strong>“<a
+
                       href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_editor">Your
                       Editor </a>” - perform all steps<em><br>
                       Note</em>: use whatever simple editor you prefer
@@ -1637,7 +1240,7 @@
             Server Access.<br>
             Create and setup your account on the Git server used in your class
             and setup the recommended git client access method as described in
-            the Appendix I-3 <a href="#Git_Server_Access">Git_Server_Access</a>,&nbsp;&nbsp;
+            the Appendix I <a href="#Git_Server_Access">Git_Server_Access</a>,&nbsp;&nbsp;
             Then use the shell you opened when following that section’s
             instructions to perform the next steps.</li>
           <li> Create a new <u>remote</u> repo:
@@ -1677,12 +1280,15 @@
                   </td>
                   <td>
                     <div style="height: 105px;"> <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code>&nbsp;<code
+
                         class="Shell_Code_Input"> git init</code> <code class="Shell_Code_Output">
                         <br>
                         Initialized empty Git repository in
                         git-micro-tutorial/.git/ </code> <br>
                       <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code><code
+
                         class="Shell_Code_Input">&nbsp; git remote add origin <span
+
                           class="User_Input">URL of remote repo</span> </code></div>
                   </td>
                 </tr>
@@ -1697,6 +1303,7 @@
                   </td>
                   <td>
                     <div style="height: 25px;"> <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code>&nbsp;<code
+
                         class="Shell_Code_Input"> echo Hello &gt; Test.txt <br>
                       </code></div>
                   </td>
@@ -1748,50 +1355,12 @@
         This appendix is designed as a reference. The tutorial sequence (found
         in Sections 1-6) and future class assignments refer to various
         subsections in this Appendix.
-        <section>
-          <h2 class="Appendix" id="cci-gitunccedu_URL_List"> cci-git.uncc.edu
-            URL List </h2>
-          [<em>YourServer</em>=<strong>cci-git</strong>]
-          <div class="Server_Cci_Git">
-            <p> Access <span class="Server_Name"> cci-git.uncc.edu </span>using
-              the HTTPS protocol. Below is a list of the URL’s you will
-              typically use. See Section <a href="#Accessing_Git_Server_Using_HTTPS_and_Credentials">Accessing_Git_Server_Using_HTTPS_and_Credentials</a>
-              for instructions on accessing these git URLs.<br>
-              <br>
-              Your user name and password for all access to cci-git is your UNCC
-              username and password. </p>
-            <ol>
-              <li><u>Student Repository</u>:&nbsp;&nbsp; The Git URL is:<br>
-                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
-                    class="User_Input">name_of_repo_you_created</span>.git <br>
-                </span><br>
-              </li>
-              <li><u>Course Repository</u>: The course repo’s and material will
-                be found at URL’s such as:<br>
-                <br>
-                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
-                    class="User_Input">the_repo_name</span>.git </span> <br>
-                <br>
-                The <span class="User_Input">ITCS_Class_URL_Name</span> will be
-                given you with your assignments or tutorial instructions. <br>
-                <br>
-              </li>
-              <li><u>Web Server</u>:&nbsp;&nbsp; <a href="https://cci-git.uncc.edu">https://cci-git.uncc.edu</a><br>
-                <br>
-                You only need to access the website via web browser when
-                creating new repositories and for GitLab specific
-                operations.&nbsp;&nbsp; Most, git operations will be performed
-                using the Git command-line. </li>
-            </ol>
-          </div>
-        </section>
         <!--
-        <section>          <h2 class="Appendix" id="Bitbucket_URL_List">Bitbucket URL List</h2>          [<em>YourServer</em>=<strong>Bitbucket</strong>]          <div class="Server_Bitbucket">            <p> Accessing <span class="Server_Name">Bitbucket </span>uses the              SSH protocol. Below is a list of the URL’s you will typically use              as well as instructions for creating a Bitbucket account. </p>            <ol class="Instruction">              <li> Each team member:&nbsp; Create an <u>academic account</u>                for yourself on <a href="https://bitbucket.org/">https://bitbucket.org/</a>&nbsp;                (If you do not already have one, of course).                <ol>                  <li><a href="https://bitbucket.org/account/signup/">https://bitbucket.org/account/signup/</a></li>                  <li> Details on their Academic Account Policy are at this <a                      href="https://confluence.atlassian.com/bitbucket/what-are-the-guidelines-for-academic-licenses-296094528.html"                      target="_blank">Link</a>.&nbsp;&nbsp; &nbsp;It is much                    better than the non-academic account!<br>                  </li>                </ol>              </li>              <li> <u>One</u> team member should create a Private Repository                for your Project then <u>share</u> that repo with:                <ol>                  <li>all other team members </li>                  <li> Dr. Wartell (Bitbucket UserID: zwartell)&nbsp; and TA’s                    Bitbucket UserID.<br>                  </li>                </ol>              </li>              <li> Instructions for setting access permission (“sharing”) your                Bitbucket repo are found the Bitbucket Website <br>              </li>            </ol>            Note, you will access Bitbucket using the ssh protocol.&nbsp;&nbsp;            This means the Bitbucket URL you should use will be something like,<span              class="File_Name"> git@bitbucket.org:<span class="User_Input">your_userid/your_reponame</span>.git              </span> <br> The course repo’s and material will be found at            URL’s such as:<span class="File_Name"> git@bitbucket.org:zwartell/<span                class="User_Input">reponame</span>.git&nbsp; </span> </div>        </section>        				-->
+        <section display="none">          <h2 class="Appendix" id="Bitbucket_URL_List">Bitbucket URL List</h2>          [<em>YourServer</em>=<strong>Bitbucket</strong>]          <div class="Server_Bitbucket">            <p> Accessing <span class="Server_Name">Bitbucket </span>uses the              SSH protocol. Below is a list of the URL’s you will typically use              as well as instructions for creating a Bitbucket account. </p>            <ol class="Instruction">              <li> Each team member:&nbsp; Create an <u>academic account</u>                for yourself on <a href="https://bitbucket.org/">https://bitbucket.org/</a>&nbsp;                (If you do not already have one, of course).                <ol>                  <li><a href="https://bitbucket.org/account/signup/">https://bitbucket.org/account/signup/</a></li>                  <li> Details on their Academic Account Policy are at this <a                      href="https://confluence.atlassian.com/bitbucket/what-are-the-guidelines-for-academic-licenses-296094528.html"                      target="_blank">Link</a>.&nbsp;&nbsp; &nbsp;It is much                    better than the non-academic account!<br>                  </li>                </ol>              </li>              <li> <u>One</u> team member should create a Private Repository                for your Project then <u>share</u> that repo with:                <ol>                  <li>all other team members </li>                  <li> Dr. Wartell (Bitbucket UserID: zwartell)&nbsp; and TA’s                    Bitbucket UserID.<br>                  </li>                </ol>              </li>              <li> Instructions for setting access permission (“sharing”) your                Bitbucket repo are found the Bitbucket Website <br>              </li>            </ol>            Note, you will access Bitbucket using the ssh protocol.&nbsp;&nbsp;            This means the Bitbucket URL you should use will be something like,<span              class="File_Name"> git@bitbucket.org:<span class="User_Input">your_userid/your_reponame</span>.git              </span> <br> The course repo’s and material will be found at            URL’s such as:<span class="File_Name"> git@bitbucket.org:zwartell/<span                class="User_Input">reponame</span>.git&nbsp; </span> </div>        </section>        				-->
         <section>
-          <h2 class="Appendix" id="Git_Authenication_Protocols">Git
-            Authentication Protocols </h2>
-          Git servers support numerous authentication protocols. Use the
-          protocol in the sub-section below that is listed as being recommended
+          <h2 class="Appendix" id="Git_Authenication_Protocols">Git Authentication Protocols </h2>
+
+          Git servers support numerous authentication protocols. Use the protocol in the sub-section below that is listed as being recommended
           for the Git server used in your class.<br>
           <section>
             <h3 class="Appendix" id="Git_Server_Access_Token_Protocol"> Git
@@ -1810,11 +1379,13 @@
                     You will be prompted for by the UNCC SSO for your standard
                     UNCC user id and password. </li>
                   <li>In the upper-right corner, click your avatar and select <span
+
                       class="Program_Name">Preferences</span>. </li>
                   <li>On the <span class="Program_Name">Preferences</span> menu
                     (left side), select <span class="Program_Name"> Access
                       Tokens</span>. </li>
                   <li>In the new dialog "Personal Access Tokens", select <span
+
                       class="Program_Name">Add New Token</span></li>
                   <li>In the new dialog "Add a personal access token", choose a
                     name and optional expiry date for the token.
@@ -1823,6 +1394,7 @@
                     </ol>
                   </li>
                   <li>For the <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#limiting-scopes-of-a-personal-access-token"
+
                       style="box-sizing: border-box; color: rgb(27, 105, 182); text-decoration: none; background-color: transparent;">desired
                       scopes</a>, choose <span class="Program_Name">write_repository</span></li>
                   <li>Click the <span class="Program_Name">Create personal
@@ -1835,6 +1407,7 @@
                     page without saving the PAT (or loss the saved PAT), you
                     will have to create a new one).
                     <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-PAT.png"
+
                         alt="TortoiseGit-untracked.png" width="500"></figure>
                   </li>
                 </ol>
@@ -1882,10 +1455,12 @@
                                 git remote -v</code><br>
                               <code class="Shell_Code_Output">origin&nbsp;
                                 https://</code><code class="Shell_Code_Output"><code
+
                                   class="Shell_Code_Input"><span class="User_Input">Your
                                     UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
                                 (fetch)<br>
                                 origin&nbsp; https://</code><code class="Shell_Code_Output"><code
+
                                   class="Shell_Code_Input"><span class="User_Input">Your
                                     UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
                                 (push) </code><br>
@@ -1904,13 +1479,16 @@
                 such as:<br>
                 <br>
                 <div style="margin-left: 40px;"> https://cci-git.uncc.edu/<span
+
                     class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
                   </div> <br>
                 When performing a git clone, you use the extended PAT syntax URL
                 shown below:<br>
                 <br>
                 <div style="margin-left: 40px;">https://<code class="Shell_Code_Output"></code><span
+
                     class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
+
                     class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
                   </div> <br>
                 However, this extra typing can be avoided by installing a Git
@@ -2248,6 +1826,7 @@
                 <p> If you have never used cci-git.uncc.edu before, your UNCC
                   account will need to be activated.&nbsp;&nbsp; To activate
                   your UNCC account you need to log into <a href="https://cci-git.uncc.edu/"
+
                     target="_blank">cci-git.uncc.edu</a> via a web browser.
                   During this first login, cci-git.uncc.edu creates an account
                   for you that will henceforth your UNCC's Single-Sign-On (SSO)
@@ -2257,6 +1836,7 @@
                   using the command-line.<br>
                 </p>
                 <p> First, as of September 2016, there is a problem with the <span
+
                     class="Server_Name">cci-git </span> server's SSL
                   certificate.&nbsp;&nbsp; You should disable Git’s automatic
                   checkings for a SSL certificate as follows: </p>
@@ -2352,8 +1932,46 @@
             </div>
           </section>
         </section>
+        <section>
+          <h2 class="Appendix" id="cci-gitunccedu_URL_List">Course Git URL Lists</h2>
+          <p>This section is for reference only.&nbsp; There are no tutorial
+            instructional steps to be followed in this section.</p>
+          [<em>YourServer</em>=<strong>cci-git</strong>]
+          <div class="Server_Cci_Git">
+            <p>Below is a list of the git URL’s you will typically use. <br>
+              <br>
+              Your user name and password for all access to the cci-git website
+              is your UNCC username and password. </p>
+            <ol>
+              <li><u>Student Repository</u>:&nbsp;&nbsp; The Git URL is:<br>
+                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
+
+                    class="User_Input">name_of_repo_you_created</span>.git <br>
+                </span><br>
+              </li>
+              <li><u>Course Repository</u>: The course repo’s and material will
+                be found at URL’s such as:<br>
+                <br>
+                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
+
+                    class="User_Input">the_repo_name</span>.git </span> <br>
+                <br>
+                The <span class="User_Input">ITCS_Class_URL_Name</span> will be
+                given you with your assignments or tutorial instructions. <br>
+                <br>
+              </li>
+              <li><u>Web Server</u>:&nbsp;&nbsp; <a href="https://cci-git.uncc.edu">https://cci-git.uncc.edu</a><br>
+                <br>
+                You only need to access the website via web browser when
+                creating new repositories and for GitLab specific
+                operations.&nbsp;&nbsp; Most, git operations will be performed
+                using the Git command-line. </li>
+            </ol>
+          </div>
+        </section> 
       </section>
       <section>
+       
         <h1 class="Appendix">Common Git Operations</h1>
         <p> This appendix is a reference section, the tutorial itself (Sections
           1-6) links to various subsections in this appendix.</p>
@@ -2384,11 +2002,13 @@
                         box is labeled with number indicating the sequence in
                         which you should make the selections.<br>
                         <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project.png"
+
                             alt="TortoiseGit-untracked.png" width="500"></figure>
                       </li>
                       <li> Create a blank project<span class="Updated_Text_Popup_Note">3/14/2023:
                           Separated step for clarifity </span><br>
                         <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project2.png"
+
                             alt="TortoiseGit-untracked.png" width="500"></figure>
                       </li>
                       <li>Set up a new project and repo:<br>
@@ -2412,11 +2032,13 @@
                         do <b><u>not</u></b> select it for selection #2).<br>
                         <br>
                         <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Blank_Project.png"
+
                             alt="TortoiseGit-untracked.png" width="500"></figure>
                       </li>
                       <li>Open the Members dialog by making the menu selections
                         below.<br>
                         <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Project-Infomration.png"
+
                             alt="TortoiseGit-untracked.png" width="500"></figure>
                       </li>
                       <li>&nbsp;Next, you will add permission for the professor
@@ -2428,6 +2050,7 @@
                               student groups. This simplifies student repo
                               management and grading. </span>
                             <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Invite-Group.png"
+
                                 alt="TortoiseGit-untracked.png" width="500"></figure>
                           </li>
                           <li><u>Add Your Private Student Group:</u> <span class="Updated_Text_Popup_Note">
@@ -2448,6 +2071,7 @@
                             Invite your private group to your repo, using the
                             dialog below and give that group "Reporter" access.<br>
                             <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-Group.png"
+
                                 alt="TortoiseGit-untracked.png" width="500"></figure>
                           </li>
                         </ol>
@@ -2461,17 +2085,21 @@
                           <li>Open the&nbsp; <span class="File_Name">Settings</span>
                             and <span class="File_Name"></span><span class="File_Name">CI/CD</span>.
                             <figure class="Screen_Capture"><img src="images/cci-git-CI-CD.png"
+
                                 alt="TortoiseGit-untracked.png" width="500"></figure>
                           </li>
                           <li>. Under Auto DevOps click Open the <span class="File_Name">Expand.</span><span
+
                               class="File_Name"></span>
                             <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Expand.png"
+
                                 alt="TortoiseGit-untracked.png" width="500"></figure>
                           </li>
                           <li><u>Un</u>check the checkbox, <span class="File_Name">Default
                               to AutoDevOps Pipeline</span>, and click <span class="File_Name">Save
                               Changes.</span>
                             <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Default.png"
+
                                 alt="TortoiseGit-untracked.png" width="500"></figure>
                           </li>
                         </ol>
@@ -2482,6 +2110,7 @@
                         just created new repository.&nbsp;&nbsp; To determine
                         the URL make the selection below:
                         <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Get-URL.png"
+
                             alt="TortoiseGit-untracked.png" width="500"></figure>
                         Then clone the repo:
                         <table class="Code_Example">
@@ -2492,13 +2121,17 @@
                               <td>
                                 <div style="height: 150px; background-color: black;">
                                   <code class="Shell_Code_Input"> <code class="Shell_Code_Input">
-                                      <code class="Shell_Code_Prompt">
-                                        ~/ITCS_3120/ </code> mkdir verify; cd
-                                      verify <br>
-                                      <code class="Shell_Code_Prompt">
-                                        ~/ITCS_3120/verify </code> git clone <code
-                                        class="User_Input">URL of of the Repo</code>
-                                      <br>
+                                      <code class="Shell_Code_Prompt"> ~/ITCS_<em>XYZ</em>/
+                                      </code> mkdir verify; cd verify <br>
+                                      <code class="Shell_Code_Prompt"> ~/ITCS_</code></code></code><code
+
+                                    class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
+                                        class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
+
+                                            class="Shell_Code_Input"><code class="Shell_Code_Prompt"><em>XYZ</em></code></code></code>/verify
+                                        </code> git clone <code class="User_Input">URL
+                                        of of the Repo</code> <br>
                                     </code> <code class="Shell_Code_Output">
                                       Cloning into 'my-first-repo'...<br>
                                       warning: You appear to have cloned an
@@ -2541,6 +2174,7 @@
                               <td>
                                 <div style="height: 150px;"> <code class="Shell_Code_Input">
                                     $ git clone https://cci-git.uncc.edu/ <code
+
                                       class="User_Input">your_uncc_user_id</code>/Project_Example.git<br>
                                   </code> <code class="Shell_Code_Output">
                                     Cloning into 'Project_Example'...<br>
@@ -2560,6 +2194,7 @@
                                     deletions(-)<br>
                                     &nbsp;create mode 100644 README.md </code>&nbsp;
                                   &nbsp;&nbsp; $ git push -u origin main <code
+
                                     class="Shell_Code_Input"><br>
                                     $ git push -u origin main <ins datetime="2021-08-28">
                                     </ins> </code><br>
@@ -2627,6 +2262,7 @@
             <li><strong> Deleting a remote repo: </strong>
               <ol class="Instruction_Option">
                 <li> [<em>YourServer=</em><strong>cci-git</strong>] See <a href="https://cci-git.uncc.edu/help"
+
                     target="_blank">https://cci-git.uncc.edu/help</a><br>
                 </li>
                 <!--
@@ -2774,6 +2410,7 @@
                         </code><code class="Shell_Code_Output"> # On branch main
                           <br>
                           nothing to commit, working directory clean </code><code
+
                           class="Shell_Code_Output"> <br>
                         </code></div>
                     </td>
@@ -2848,6 +2485,7 @@
               check the box,&nbsp;Show Unversioned Files). &nbsp;&nbsp;Below we
               see one file is untracked.<br>
               <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Untracked.png"
+
                   alt="TortoiseGit-untracked.png" width="500"> </figure>
               <br>
               However,&nbsp;Check for Modifications&nbsp;will not tell you
@@ -2859,6 +2497,7 @@
               your local repo has committed changes that you have not pushed to
               the server remote repo:
               <figure class="Screen_Capture" tabindex="1"><img src="images/TortoiseGit-Nonversioned.png"
+
                   alt="images/TortoiseGit-Nonversioned.png" width="500"></figure>
               <br>
             </li>
@@ -2895,7 +2534,8 @@
         <!-- <ul class="Citation_List"> -->
         <ol class="Citation_List">
           <li id="WART2021"> [WART2021] Unix Primer - Basic Commands In the Unix
-            Shell, <a href="https://webpages.charlotte.edu/~zwartell/Teaching/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html"
+            Shell, <a href="https://webpages.charlotte.edu/%7Ezwartell/Teaching/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html"
+
               target="_blank">https://webpages.charlotte.edu/~zwartell/Teaching/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html</a>
           </li>
           <li id="Chacon2016"> [Chacon2016] Scott Chacon, Pro Git, Apress,&nbsp;<strong>
@@ -2905,18 +2545,23 @@
           <li id="Microsoft2016"> [Microsoft2016] "To add or change the values
             of environment variables", Windows XP Professional Product
             Documentation, Performance and maintenance. <a href="https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp"
+
               target="_blank">https://support.microsoft.com/en-us/help/310519/how-to-manage-environment-variables-in-windows-xp</a>
           </li>
           <li id="GNU2016"> [GNU2016] Bash Reference Manual,<a href="http://www.gnu.org/software/bash/manual/html_node/index.html"
+
               target="_blank">http://www.gnu.org/software/bash/manual/html_node/index.html</a>
           </li>
           <li id="WP2016a"> [WP2016a] "Environment Variable : Details",
             Wikipedia. <a href="https://en.wikipedia.org/wiki/Environment_variable#Details"
+
               target="_blank">https://en.wikipedia.org/wiki/Environment_variable#Details</a>
           </li>
           <li id="WP2016b"> [WP2016b] "PATH (variable)", Wikipedia. <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29"
+
               target="_blank">https://en.wikipedia.org/wiki/PATH_%28variable%29</a></li>
           <li id="WP2023">[WP2023] "Shell Computing", Wikipedia, <a href="https://en.wikipedia.org/wiki/Shell_%28computing%29"
+
               target="_blank">https://en.wikipedia.org/wiki/Shell_(computing)</a>.
             Accessed Jan. 2023. </li>
         </ol>
@@ -3002,6 +2647,7 @@
               </li>
               <li> [<em>YourOS</em>=<strong>Linux</strong>] Generally this OS
                 already has OpenSSH installed; if not see <a href="http://www.openssh.org/"
+
                   target="_blank">http://www.openssh.org/</a>. </li>
               <li> [<em>YourOS</em>=<strong>Mac</strong>] Download and Install
                 OpenSSH from <a href="http://www.openssh.org/" target="_blank">
@@ -3167,6 +2813,7 @@
                     <div class="Server_Cci_Git"><br>
                       <br>
                       <span style="color: red; background: yellow">Warning: </span><span
+
                         class="File_Name"> <span style="color: red;
                                                                  background: yellow">cci-git</span>
                       </span><span style="color: red; background: yellow"> SSH
@@ -3175,6 +2822,7 @@
                         <b> <i> <a href="#cci-gitunccedu_URL_List"> <span style="color: red; background: yellow">cci-git</span>
                             </a> </i><a href="#cci-gitunccedu_URL_List"> </a>
                         </b><a href="#cci-gitunccedu_URL_List"> </a> </span><a
+
                         href="#cci-gitunccedu_URL_List"> <b> <span style="color: red;
                                                                    background: yellow">
                             Server URL </span> </b> </a><span style="color: red; background: yellow">
@@ -3186,6 +2834,7 @@
                         </a><span style="color: red; background: yellow"> <a href="#Accessing_Git_Server_Using_HTTPS_and_Git">
                             Accessing Git Server Using HTTPS and Git </a> </span>
                       </b><b> <span style="color: red; background: yellow"> <a
+
                             href="#Accessing_Git_Server_Using_HTTPS_and_Git"> <b>
                               <span style="color: red; background: yellow"></span>
                             </b> </a><b> <a href="file:///E:/Users/zwart/Dropbox%20%28UNC%20Charlotte%29/classes/Git_Tutorial_and_Coding_Standards/html/Site%20Root/Git%20Tutorial.html#Accessing_Git_Server_Using_HTTPS_and_Git"></a>
@@ -3196,24 +2845,29 @@
                         <li> Login to <span class="File_Name">https://cci-git.uncc.edu/</span>
                           using your standard UNCC username and password. You
                           should then see your "Dashboard" (below). Select <span
+
                             class="File_Name">Profile Settings</span> <br>
                           <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Profile-Settings.png"
+
                               alt="" height="311" width="500"></figure>
                           <br>
                         </li>
                         <li> Select <span class="File_Name">"SSH Keys"</span> <br>
                           <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-SSH-Keys.png"
+
                               alt="" height="297" width="500"> <br>
                           </figure>
                         </li>
                         <li> Select <span class="File_Name">"Add SSH Key"</span><br>
                           <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-SSH-Key.png"
+
                               alt="cci-git-Add-SSH-Key.png" width="500"></figure>
                         </li>
                         <li> Cut and paste the text from <u>your</u> <strong>public</strong>
                           key file into the dialog box, give the key a title,
                           and press <span class="File_Name">Add Key</span>: <br>
                           <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Paste-Key.png"
+
                               alt="" height="311" width="500"></figure>
                           <br>
                           <br>
@@ -3256,6 +2910,7 @@
                 <ol class="Instruction">
                   <li> Run PuTTYgen:&nbsp;&nbsp;&nbsp; <span class="File_Name">
                       Start Menu </span>→<span class="File_Name">Putty</span>→<span
+
                       class="File_Name">PuTTYgen</span></li>
                   <li> From the PuTTYgen menu bar select <span class="File_Name">Conversions</span>
                     and then <span class="File_Name">Import Key</span> on the
