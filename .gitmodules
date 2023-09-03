@@ -1,5 +1,5 @@
 [submodule "html/scripts/gitlab-manage-students"]
-	path = html/scripts/gitlab-manage-students
+	path = scripts/gitlab-manage-students
 	url = https://cci-git.charlotte.edu/zwartell/gitlab-manage-students.git
 [submodule "html/Site Root/libs/zjw-generic-instructions"]
 	path = website-root/libs/zjw-generic-instructions
