@@ -27,6 +27,29 @@
       function onload_Body() { console.log("function onload_Body()");}
       window.onload_Body = onload_Body;
       
+      window.addEventListener("hashchange", (event) => 
+      {
+        /*
+          alert(            
+      `"hashchange" 
+      location: ${document.location}, event: ${JSON.stringify(event)}`,); 
+      */
+        console.log(event);        
+        let split = event.newURL.split("#");
+        let e = document.getElementById(split[1]);        
+        console.log("split:",split,split[1]);
+        if (e !== null) 
+        {
+          console.log("e:",e);
+          e.scrollIntoView();           
+        }
+        // if (event.target instanceof HTMLElement)
+        // {
+        //   document.getElementById(event.newURL.split("#")[1]).scrollIntoView();           
+        //   console.log("2:",event.newURL.split("#")[1]);
+        // }
+            
+      });      
       const c = document.getElementById("cursor");
       if (c !== null) c.scrollIntoView();           
    </script>
@@ -1230,8 +1253,6 @@
           <ul>
             <li> https://jquery.org/, Copyright jQuery Foundation and other
               contributors, MIT license </li>
-            <li> http://projects.jga.me/toc/, Copyright Greg Allen 2014,&nbsp; MIT
-              License </li>
           </ul>
         </section>        
         <section><h1 class="Appendix" id="Git_Server_Access">Git Server Access</h1>
