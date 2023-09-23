@@ -1,7 +1,8 @@
 [submodule "html/scripts/gitlab-manage-students"]
 	path = scripts/gitlab-manage-students
 	url = https://cci-git.charlotte.edu/zwartell/gitlab-manage-students.git
-[submodule "html/Site Root/libs/zjw-generic-instructions"]
-	path = www-site/libs/zjw-generic-instructions
+	branch = version2
+[submodule "www-site/git_modules/zjwgi"]
+	path = www-site/git_modules/zjwgi
 	url = https://gitlab.com/zwartell/zjw-generic-instructions.git
 	branch = version2
