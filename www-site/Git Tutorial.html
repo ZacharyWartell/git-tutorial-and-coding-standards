@@ -11,6 +11,7 @@
     <link href="css/zjwgi/ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
     <link media="print" href="css/zjwgi/generic_instructions-print.css" rel="stylesheet" type="text/css">
      
+    <script src="scripts/zjwgi/generic_instructions.js"></script>
     <script type="module" lang="javascript">
       import * as Rubric from "./scripts/zjwgi/Rubric.js";
       import * as CAW from "./scripts/zjwgi/ClassAssignmentWartell.js";
@@ -224,10 +225,11 @@
             <p> This assignment assumes the reader has prerequisite knowledge of
               several topics.&nbsp; Elaboration on these topics and additional
               resource materials are placed in sub-sections of this assignment at
-              the points when the knowledge is first needed.&nbsp; Such sub-section
+              the points when the knowledge is first needed.&nbsp; Such sub-sections
               have headings that are prefixed with the phrase
               "[Pre-Req,]".&nbsp;&nbsp; For convenience, the complete list of
-              prerequisite topics are also listed below.</p>
+              prerequisite topics are also listed below.
+            </p>
             <ol class="Instruction_NonRubric">
               <li><em>Bash Command-Line Shell &nbsp; </em><strong></strong><em><br>
                 </em></li>
@@ -277,7 +279,7 @@
                 <li class="Instruction_NonRubric"> [<em>YourOS</em>=<strong>Windows</strong>]
                   <div class="OS_Windows">
                     <ol class="Instruction">
-                      <li> Download and Install Git for Windows, <a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a>.
+                      <li> Download and Install Git for Windows, <a href="https://git-for-windows.github.io/" target="_blank">https://git-for-windows.github.io/</a>.
                         <br>
                         <br>
                         This installs a minimal Unix style shell (called
@@ -298,15 +300,15 @@
                         information for any command by typing a command name with
                         just the parameter <em>--help</em>.&nbsp;&nbsp;&nbsp; To
                         find the complete man pages for a given Unix command, we
-                        suggest using <a href="https://www.gnu.org/manual/manual.en.html">https://www.gnu.org/manual/manual.en.html</a>.&nbsp;&nbsp;&nbsp;
+                        suggest using <a class="WindowOpenLeft" onclick="windowOpenLeft('https://www.gnu.org/manual/manual.en.html','GNU');">https://www.gnu.org/manual/manual.en.html</a>.&nbsp;&nbsp;&nbsp;
                         (There are ways to install the Unix man command and man
                         pages into git-bash, but it is generally <u>not</u> worth
                         the effort). <br>
                         <br>
                         Students who are advanced Windows users can alternatively
-                        install the much more complex "Unix emulators" <a href="https://www.cygwin.com/">
+                        install the much more complex "Unix emulators" <a href="https://www.cygwin.com/" target="_blank">
                           https://www.cygwin.com<span style="color: black;"></span>
-                        </a> or the comprehensive <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux</a>.&nbsp;&nbsp;
+                        </a> or the comprehensive <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux" target="_blank">https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux</a>.&nbsp;&nbsp;
                         However, the TA and professor cannot provide support for
                         these other options, but if you have <u>already</u>
                         installed them and are <u>already</u> familiar with them,
@@ -314,11 +316,10 @@
                       <br>
                     </ol>
                   </div>
-                </li>
-                <span id="cursor"></span>
+                </li>                
                 <li class="Instruction_NonRubric"> [<em>YourOS</em>=<strong>Linux</strong>] Typically, default  Linux/Unix installations include Git.&nbsp; If Git is not installed, then download and install Git from <a target="_blank" href="http://git-scm.com">http://git-scm.com/</a>.
                 </li>
-                <li class="Instruction_NonRubric"> [<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp; Download and install Git from <a target="_blank" href="http://git-scm.com">http://git-scm.com/</a>.
+                <li class="Instruction_NonRubric"> [<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp; Download and install Git from <a href="http://git-scm.com" target="_blank">http://git-scm.com/</a>.
                   </li>
               </ol>
               
@@ -333,8 +334,8 @@
                 working.&nbsp; (In 'real-world' git managed projects, it is common to have multiple named versions called "branches").                   
               </p>
               <p>
-                The original convention was that a repo was initialized to default name "master" (as in a <a href="https://en.wikipedia.org/wiki/Mastering_%28audio%29">master
-                recording</a> or a <a href="https://www.etymonline.com/word/master">master
+                The original convention was that a repo was initialized to default name "master" (as in a <a href="https://en.wikipedia.org/wiki/Mastering_%28audio%29" target="_blank">master
+                recording</a> or a <a href="https://www.etymonline.com/word/master" target="_blank">master
                 key</a>). Circa the 2020's, it is more common to instead use the default name
                 "main".&nbsp;&nbsp; Various documentation on git use one convention or
                 the other.&nbsp; WWW git servers typically allow you to set the
@@ -407,42 +408,46 @@
                 of GUI Git tools is <u>optional</u>. </p>
               <ol class="Instruction_Option">
                 <li> [<em>YourOS</em>=<strong>Window</strong>] <br>
-                  Download and install TortoiseGit from <a href="https://tortoisegit.org/"
-        
-                    target="_blank">https://tortoisegit.org/</a></li>
+                  Download and install TortoiseGit from
+                   <a href="https://tortoisegit.org/" target="_blank">https://tortoisegit.org/</a>
+                </li>
                 <li> [<em>YourOS</em>=<strong>Mac/Linux</strong>] <br>
                   Various Git GUIs are found here <a target="_blank" href="http://git-scm.com/downloads/guis.%20%20">http://git-scm.com/downloads/guis</a>.&nbsp;
-                  </li>
+                </li>
               </ol>
             </section>
           </section>
-          <section><h1 class="Section" id="Full_vs_Micro_Tutorial">Full vs Micro Tutorial</h1>
-            <p>Each student must do <u>one</u> of <em>either</em> the Full
-              Tutorial or the Micro Tutorial. &nbsp; </p>
-            <ul>
-              <li>The Full Git Tutorial requires reading chapters in the ProGit book
-                and completing a number of exercises.<br>
-                <p> or </p>
-              </li>
-              <li>The Micro Git Tutorial is only for students already familiar with
-                Git and the Git command-line interface.
-                <p>To get approval to do the Micro Tutorial, you must:</p>
-                <ol>
-                  <li>Submit a short statement through the Micro Tutorial Canvas
-                    assignment </li>
-                  <li>Receive approval feedback from the professor through that
-                    Canvas assignment </li>
-                  <li>Complete the Micro Tutorial instructions in Section 7
-                    (skipping Section 6, of course). </li>
+          <section><h1 class="Section" id="Full_vs_Micro_Tutorial" id="Tutorial_Structure">Tutorial Structure (Full vs Micro Tutorial)</h1>
+            
+            <p>This tutorial has one Part. Students must complete exactly <u>one</u> of two options within this single part.  The options are very different in size and complexity and contain alternative options for students with prior knowledge of some of the Learning Objectives.<br>
+            </p>
+            <ol>                              
+              <li>Part 1: Either Option I or Option II is required.<br>
+                <ol>                    
+                  <li>Option I - <a href="#Part1_OptionI">Full Git Tutorial Tutorial</a>:&nbsp;&nbsp;  This option
+                    requires reading chapters in the ProGit book and completing a number of exercises.
+                  </li>
+                  <li id="cursor">Option II - <u><a href="#Part1_OptionII">The Micro Git Tutorial:</a></u>  This option is only for students already familiar with
+                      Git and the Git command-line interface using the Bash, a particular command-line shell&nbsp;<a href="#WP2023">[WP2023]</a>.&nbsp;                                            
+                      <p>
+                      Students in this course are either graduate students or junior or senior undergraduates.   Therefore, students are expected to be capable of
+                      determining whether they have sufficient prior experience with a particular programming tool or tool set.   
+                      </p>
+                      <p>
+                      Skim over Chapter 1 and 2 of <a href="http://git-scm.com/book/en/v2/" target="_blank">http://git-scm.com/book/en/v2/</a>.
+                      Also skim over "Unix Primer - Basic Commands In the Unix" <a href="WART2021">[WART2021]</a>.
+                      If you already know material covered in these readings, you should simply complete and submit the short <a href="#Part1_OptionII">The Micro Git Tutorial</a>.
+                      </p>
+                  </li>
                 </ol>
-              </li>
-            </ul>
-
+            </ol>         
+            The with the above options, the possible combinations of options and the maximum points for this tutorial are shown in 
+            table <a href="#RubricAwardedPoints">Rubric Awarded Points</a>            
           </section>
-          <section class="Instruction_Section" data-point-fraction="83.33333333333333" id="Full_Git_Tutorial"> <h1 class="Section">Full Git Tutorial</h1>
+          <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="83.33333333333333"><span id="Part1_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Full Git Tutorial</h1>
          
           The instructions below guide you through reading chapters in the ProGit
-          Book, 2<sup>nd</sup> Edition at <a target="_blank" href="http://git-scm.com/book/en/v2/">
+          Book, 2<sup>nd</sup> Edition at <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/','ProGit');">
             http://git-scm.com/book/en/<span style="background:yellow">v2</span>/. <br>
           </a>
           <p>For the instructions steps that are labeled as “<u>Exercise</u>: PG: <i>Section_Name”</i>,
@@ -533,17 +538,14 @@
                   below, perform the steps described in that name subsection using
                   git.<br>
                   <ol>
-                    <li class="Instruction_Todo"><u>Exercise</u><b>:&nbsp; </b>PG:“<a target="_blank" href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity">Your
+                    <li class="Instruction_Todo"><u>Exercise</u><b>:&nbsp; </b>PG:“<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity','ProGit');">Your
                         Identity </a>” - perform all described steps </li>
-                    <li class="Instruction_Todo"><u>Exercise</u><strong>:&nbsp; </strong>PG:<strong></strong>“<a
-        
-                        href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_editor"
-        
-                        target="_blank">Your Editor </a>” - perform all described
+                    <li class="Instruction_Todo"><u>Exercise</u><strong>:&nbsp; </strong>PG:<strong></strong>“
+                      <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_editor','ProGit');" target="_blank">Your Editor </a>” - perform all described
                       steps<br>
                       <em>Note</em>: use whatever simple editor you prefer
                       (notepad.exe perhaps) </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; PG:“<a target="_blank" href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_checking_your_settings">Checking
+                    <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; PG:“<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_checking_your_settings','ProGit');">Checking
                         Your Settings </a>” - perform all described steps </li>
                   </ol>
                 </li>
@@ -670,7 +672,7 @@
                         </li>
                       </ol>
                     </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG: “<a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository">Cloning
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG: “<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository','ProGit');">Cloning
                         an Existing Repository </a>”<br>
                       Return to your <span class="File_Name">git-tutorial</span><strong>
                       </strong>directory: <br>
@@ -730,7 +732,7 @@
                       <br>
                       Perform the exercises below in the above directory. <br>
                     </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG: “<a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_checking_status">Checking
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG: “<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_checking_status','ProGit');">Checking
                         the Status of Your Files </a>” - perform all steps<br>
                       <br>
                       <em>Note</em>: Use whatever text file editor you are familiar
@@ -738,7 +740,7 @@
                       in this ProGit chapter.<br>
                       <br>
                     </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_tracking_files">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_tracking_files','ProGit');">
                         Tracking New Files </a>&nbsp; - perform all steps </li>
                     <li><u>Exercise</u>:&nbsp; Push the pre-existing local repo to a
                       remote repo:
@@ -793,31 +795,31 @@
                         </li>
                       </ol>
                     </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Tracking-New-Files">
-                      </a> <a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_staging_modified_files">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Tracking-New-Files','ProGit');">
+                      </a> <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_staging_modified_files','ProGit');">
                         Staging Modified Files </a> - perform all steps<br>
                       <br>
                       <em>Note:</em>&nbsp; When the book discusses making changes to
                       various files, just make any small change to each file.<br>
                     </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG: <a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_short_status">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG: <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_short_status','ProGit');">
                         Short Status </a> - perform all steps </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG: <a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG: <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring','ProGit');">
                         Ignoring Files </a> - perform all steps </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG: <a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_git_diff_staged">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG: <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_git_diff_staged','ProGit');">
                         Viewing Your Staged and Unstaged Changes </a>&nbsp; -
                       perform all steps<br>
                       <em> <br>
                         Note: </em>&nbsp; When the book discusses making changes to
                       various files, just make any small change to each file.<br>
                     </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_committing_changes">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_committing_changes','ProGit');">
                         Committing Your Change </a> - perform all steps </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_skipping_the_staging_area">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_skipping_the_staging_area','ProGit');">
                         Skipping the Staging Area </a> - perform all steps </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_removing_files">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_removing_files','ProGit');">
                         Removing Files </a> - perform all steps </li>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_git_mv">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG:<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_git_mv','ProGit');">
                         Moving Files </a> - perform all steps </li>
                     <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; Push the updates to remote remote
                       repo:
@@ -857,7 +859,7 @@
                 </li>
                 <li> Read ProGit 2.3
                   <ol>
-                    <li class="Instruction_Todo"><u>Exercise</u>: PG: <a target="_blank" href="http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">
+                    <li class="Instruction_Todo"><u>Exercise</u>: PG: <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History','ProGit');">
                         Viewing the Commit History </a><br>
                       <br>
                       Do the first two exercises, cloning simplegit-progit into: <br>
@@ -958,7 +960,7 @@
           </ol>
           <p><strong>This completes the Full Git Tutorial.</strong></p>
          </section>
-         <section class="Instruction_Section" data-point-fraction="16.6666666"> <h1 class="Section" id="Micro_Git_Tutorial">Micro Git Tutorial</h1>
+         <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="16.6666666"><span id="Part1_OptionII"></span><h1 class="Section" id="Micro_Git_Tutorial">Micro Git Tutorial</h1>
         
             <p> The micro tutorial is a quick verification that you have full
               read/write access to your remote repository on the course's Git
@@ -1056,15 +1058,14 @@
                     subsection's described exercises in the shell:<u><br>
                     </u>
                     <ol>
-                      <li class="Instruction_Todo"><u>Exercise</u><b>:&nbsp; </b>PG:“<a target="_blank" href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity">Your
+                      <li class="Instruction_Todo"><u>Exercise</u><b>:&nbsp; </b>PG:“<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity','ProGit');">Your
                           Identity </a>” - perform all steps</li>
-                      <li class="Instruction_Todo"><u>Exercise</u><strong>:&nbsp; </strong>PG:<strong></strong>“<a
-        
-                          href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_editor">Your
+                      <li class="Instruction_Todo"><u>Exercise</u><strong>:&nbsp; </strong>PG:<strong></strong>“
+                        <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_editor','ProGit');">Your
                           Editor </a>” - perform all steps<em><br>
                           Note</em>: use whatever simple editor you prefer
                         (notepad.exe perhaps)</li>
-                      <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; PG:“<a target="_blank" href="http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_checking_your_settings">Checking
+                      <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; PG:“<a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_checking_your_settings','ProGit');">Checking
                           Your Settings </a>” - perform all steps </li>
                     </ol>
                   </li>
@@ -1186,21 +1187,21 @@
                 <div style="border: solid 1px" hidden="">              <p style="background-color: yellow; color: red; text-align: center;"><em>[3/12/2021                  - 12:05am] Section&nbsp; Under Construction<br>                </em></p>              This Tutorial is out of will be 160 total points<br>              The rubric is generated from the "<strong>[x pts]</strong>"<strong>              </strong>labels<strong> </strong>next to each of the tutorial<strong>              </strong><u>Exercise</u><strong>:'s.<br>                <br>              </strong>ZJW: 3/12/2021:&nbsp; The rubric is nearly complete<strong>.<br>              </strong>            </div>            -->
           <div id="Div_Rubric">
             <div>
-              <div>
-                <span id="Total">Max Points: &nbsp;&nbsp;&nbsp;</span><span data-total-points=""></span>
-              </div>
-              <div>
-                Awarded Points:&nbsp;&nbsp;&nbsp<span id="AwardedPoints">0.0</span>
-              </div>                            
-              <br>      
+              <table id="RubricAwardedPoints" class="RubricAwardedPoints">
+                <thead>
+                  <tr><th>Combination</th><!--<th>Completed</th> --> <th>Max Points</th><th>Awarded Points</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><!--</td><td>--></td><td><span data-total-points=""></span></td><td><span id="AwardedPoints">0.0</span></td></tr>
+                </tbody>
+              </table>                  
+              <br>
             </div>
-            <div style="align-content: right;">Note, students will receive either a max of 20 pts for the Micro Tutorial or a max of 100 pts for the Git Full tutorial
-            (recall <a href="#Full_vs_Micro_Tutorial">Full_vs_Micro_Tutorial</a>).
-            </div>
+
           <table class="Rubric" id="RubricTable">
             <tbody>
               <tr>
-                <th scope="col" width="43">Section</th>
+                <th scope="col" width="125">Section</th>
                 <th scope="col" width="43">Item</th>
                 <th scope="col" width="43">Category</th>
                 <th scope="col" width="100">Link</th>
@@ -1223,7 +1224,7 @@
                 target="_blank">https://webpages.charlotte.edu/~zwartell/Teaching/unix-primer/Unix%20Primer%20-%20Basic%20Commands%20In%20the%20Unix%20Shell.html</a>
             </li>
             <li id="Chacon2016"> [Chacon2016] Scott Chacon, Pro Git, Apress,&nbsp;<strong>
-                2<sup>nd</sup> Edition </strong> at <a target="_blank" href="http://git-scm.com/book/en/v2/">
+                2<sup>nd</sup> Edition </strong> at <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/','ProGit');">
                 http://git-scm.com/book/en/<span style="background:yellow">v2</span>/.</a>
             </li>
             <li id="Microsoft2016"> [Microsoft2016] "To add or change the values
@@ -1268,12 +1269,12 @@
           subsections in this Appendix.
           <!--
           <section display="none">          <h2 class="Appendix" id="Bitbucket_URL_List">Bitbucket URL List</h2>          [<em>YourServer</em>=<strong>Bitbucket</strong>]          <div class="Server_Bitbucket">            <p> Accessing <span class="Server_Name">Bitbucket </span>uses the              SSH protocol. Below is a list of the URL’s you will typically use              as well as instructions for creating a Bitbucket account. </p>            <ol class="Instruction">              <li> Each team member:&nbsp; Create an <u>academic account</u>                for yourself on <a href="https://bitbucket.org/">https://bitbucket.org/</a>&nbsp;                (If you do not already have one, of course).                <ol>                  <li><a href="https://bitbucket.org/account/signup/">https://bitbucket.org/account/signup/</a></li>                  <li> Details on their Academic Account Policy are at this <a                      href="https://confluence.atlassian.com/bitbucket/what-are-the-guidelines-for-academic-licenses-296094528.html"                      target="_blank">Link</a>.&nbsp;&nbsp; &nbsp;It is much                    better than the non-academic account!<br>                  </li>                </ol>              </li>              <li> <u>One</u> team member should create a Private Repository                for your Project then <u>share</u> that repo with:                <ol>                  <li>all other team members </li>                  <li> Dr. Wartell (Bitbucket UserID: zwartell)&nbsp; and TA’s                    Bitbucket UserID.<br>                  </li>                </ol>              </li>              <li> Instructions for setting access permission (“sharing”) your                Bitbucket repo are found the Bitbucket Website <br>              </li>            </ol>            Note, you will access Bitbucket using the ssh protocol.&nbsp;&nbsp;            This means the Bitbucket URL you should use will be something like,<span              class="File_Name"> git@bitbucket.org:<span class="User_Input">your_userid/your_reponame</span>.git              </span> <br> The course repo’s and material will be found at            URL’s such as:<span class="File_Name"> git@bitbucket.org:zwartell/<span                class="User_Input">reponame</span>.git&nbsp; </span> </div>        </section>        				-->
-          <section> <h2 class="Appendix" id="Git_Authenication_Protocols">Git Authentication Protocols </h2>
+          <section><h2 class="Appendix" id="Git_Authenication_Protocols">Git Authentication Protocols </h2>
             
   
             Git servers support numerous authentication protocols. Use the protocol in the sub-section below that is listed as being recommended
             for the Git server used in your class.<br>
-            <section> <h3 class="Appendix" id="Git_Server_Access_Token_Protocol"> Git Server Personal Access Token Protocol</h3>
+            <section><h3 class="Appendix" id="Git_Server_Access_Token_Protocol"> Git Server Personal Access Token Protocol</h3>
               
               [<em>YourServer</em>=<strong>cci-git</strong>]
               <div class="Server_Supports_HTTPS_PAT"><br>
@@ -1415,7 +1416,7 @@
                     However, it is worth the effort.&nbsp;&nbsp; The steps are as
                     follows:</p>
                   <ol>
-                    <li> Read ProGit <a target="_blank" href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
+                    <li> Read ProGit <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
                         Git Tools - Credential Storage </a>., but stop reading at
                       section "Under the Hood". <br>
                     </li>
@@ -1440,7 +1441,7 @@
                           </table>
                         </li>
                         <li> [<em>OS</em><strong>=<em>everything else</em></strong>]
-                          Follow links discussed in <a target="_blank" href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
+                          Follow links discussed in <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
                             Git Tools - Credential Storage </a>. </li>
                       </ol>
                     </li>
@@ -1801,7 +1802,7 @@
                     in this document Section <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.
                   </p>
                   <ol>
-                    <li> Read ProGit <a target="_blank" href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
+                    <li> Read ProGit <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
                         Git Tools - Credential Storage </a>.&nbsp; Stop at
                       section Under the Hood. <br>
                     </li>
@@ -1827,7 +1828,7 @@
                           </table>
                         </li>
                         <li> [<em>OS</em><strong>=<em>everything else</em></strong>]
-                          Follow links discussed in <a target="_blank" href="http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage">
+                          Follow links discussed in <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
                             Git Tools - Credential Storage </a>. </li>
                       </ol>
                     </li>
@@ -1873,185 +1874,282 @@
             </div>
           </section> 
         </section>
-        <section><h1 class="Appendix">Common Git Operations</h1>
-          <p> This appendix is a reference section, the tutorial itself (Sections
-            1-6) links to various subsections in this appendix.</p>
-          <p>This appendix is designed as a reference. The tutorial sequence
-            (found in Sections 1-6) and future class assignments refer to various
+        <section><h1 class="Appendix">Basic Git Operations
+          <ins datetime="9/23/2023"> <span class="Updated_Text_Popup_Note">Split out different git operations into different sub-section to clarify that the
+            these 3 git operations are independent git operations, and are not meant to be performed in sequence.
+        </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ins>
+        </h1><a id="Basic_Git_Operations" name="Basic_Git_Operations"></a>
+          
+          <p> This appendix is a reference section, the tutorial instruction text (Sections
+            1-6) links to various subsections in this appendix, and future class assignments may refer back to various
             subsections in this Appendix. </p>
-          <section><a id="Basic_Git_Operations" name="Basic_Git_Operations"></a>
-            <h2 class="Appendix">Basic Git Operations</h2>
-            <section>
-              <h3 class="Appendix" id="How_to_Create_New_Remote_Repository">How to Create New Remote Repository</h3>
-              Whenever you need to create new nemote repository, use the procedure below.
-              <em> Instructions below vary based on your server.</em>
-              <ol class="Instruction_Option Instruction_NonRubric">
-                <li><a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
+            
+          <section><h2 class="Appendix" id="How_to_Create_New_Remote_Repository">How to Create New Remote Repository</h2>
+            Whenever you need to create new nemote repository, use the procedure below.
+            <em> Instructions below vary based on your server.</em>
+            <ol class="Instruction_Option Instruction_NonRubric">
+              <li><a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
+                <div class="Server_Cci_Git">
+                  <ol>
+                    <li> Login to the cci-git Web Server (See 7.1 cci-git
+                      Server URL)&nbsp;&nbsp;&nbsp; </li>
+                    <li>First, make sure you are viewing your "dashboard" on
+                      cci-git by pressing the dashboard button (selection
+                      #1).&nbsp;&nbsp;&nbsp; Then create a new project by
+                      making the selection #2 in the screen capture below.
+                      &nbsp; In screen captures below whenever you must select
+                      multiple buttons, each button press is labeled with a
+                      red box.&nbsp; If multiple selections are needed each
+                      box is labeled with number indicating the sequence in
+                      which you should make the selections.<br>
+                      <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project.png"
+
+                          alt="TortoiseGit-untracked.png" width="500"></figure>
+                    </li>
+                    <li> Create a blank project<span class="Updated_Text_Popup_Note">3/14/2023:
+                        Separated step for clarifity </span><br>
+                      <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project2.png"
+
+                          alt="TortoiseGit-untracked.png" width="500"></figure>
+                    </li>
+                    <li>Set up a new project and repo:<br>
+                      &nbsp;&nbsp; <br>
+                      Note, in GitLab each repo has an <em>Owner</em>.&nbsp;&nbsp;&nbsp;
+                      The Owner can invite other GitLab users as <em>Members</em>
+                      to that repo.&nbsp;&nbsp; The Owner controls what access
+                      permissions each Member has.&nbsp; For this class, you
+                      must be the Owner of all your repo's.&nbsp;&nbsp; You
+                      will additionally invite the TAs and professor as
+                      Members of each repo so they can access your repos.<br>
+                      <span class="Updated_Text_Popup_Note" id="ins_03132023">
+                        3/13/2023: Elaborated details on "Owner" vs "Member"</span>
+                      <br>
+                      Create your new project by making the selection shown
+                      below.&nbsp;&nbsp;&nbsp;
+                      <ol>
+                        <li>For selection #1, enter the
+                          appropriate name for the repo you are
+                          creating.</li>
+                        <li>For selection #2 select your user
+                          name.&nbsp; (If you see a group name such as
+                          "itcs-3120-wartell/students/<em>FirstName</em> <em>LastName"</em>
+                          do <b><u>not</u></b> select it for selection #2).</li>
+                        <li>For selection #3, make sure your repo is private</li>
+                        <li>For selection #4, make sure your this box is <b>not</b> checked.
+                          (You want a completely empty repo on the server side.)
+                        </li>
+                      </ol>
+                      <br>
+                      <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Blank_Project.png"
+
+                          alt="TortoiseGit-untracked.png" width="500"></figure>
+                    </li>
+                    <li>Open the Members dialog by making the menu selections
+                      below.<br>
+                      <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Project-Infomration.png"
+
+                          alt="TortoiseGit-untracked.png" width="500"></figure>
+                    </li>
+                    <li>&nbsp;Next, you will add permission for the professor
+                      and TAs to access your project.&nbsp; Perform the
+                      actions indicated in the following screen captures.<br>
+                      <ol>
+                        <li><u>Select Invite Group</u>: <span class="Updated_Text_Popup_Note">
+                            2/13/2023: Updated course workflow to use private
+                            student groups. This simplifies student repo
+                            management and grading. </span>
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Invite-Group.png"
+
+                              alt="TortoiseGit-untracked.png" width="500"></figure>
+                        </li>
+                        <li>
+                          <u>Add Your Private Student Group:</u>
+                             <br>
+                          Each student in this course has a private group
+                          accessible only to the student (yourself) and the
+                          course grading staff (professor, TA's, graders,
+                          etc.).&nbsp;&nbsp;&nbsp; The group name will be
+                          similar to "itcs-3120-wartell/students/<em>FirstName</em>
+                          <em>LastName" </em>where <em>FirstName</em> and <em>LastName
+                            </em>are your name as recorded in your GitLab
+                          profile.&nbsp;&nbsp; (If a your GitLab profile does
+                          not record a name, then your private group name will
+                          be "itcs-3120-wartell/students/<em>uncc_user_id</em>").<br>
+                          <br>
+                          Invite your private group to your repo, using the
+                          dialog below and give that group "Reporter" access.<br>
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-Group.png"
+
+                              alt="TortoiseGit-untracked.png" width="500"></figure>
+                        </li>
+                      </ol>
+                    </li>
+                    <li> Finally, you should disable the Auto DevOps feature
+                      for your project. &nbsp; (Otherwise gitlab is likely to
+                      generate extra error messages later on when you perform
+                      git command line operations).<br>
+                      <br>
+                      <ol>
+                        <li>Open the&nbsp; <span class="File_Name">Settings</span>
+                          and <span class="File_Name"></span><span class="File_Name">CI/CD</span>.
+                          <figure class="Screen_Capture"><img src="images/cci-git-CI-CD.png"
+
+                              alt="TortoiseGit-untracked.png" width="500"></figure>
+                        </li>
+                        <li>. Under Auto DevOps click Open the <span class="File_Name">Expand.</span><span
+
+                            class="File_Name"></span>
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Expand.png"
+
+                              alt="TortoiseGit-untracked.png" width="500"></figure>
+                        </li>
+                        <li><u>Un</u>check the checkbox, <span class="File_Name">Default
+                            to AutoDevOps Pipeline</span>, and click <span class="File_Name">Save
+                            Changes.</span>
+                          <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Default.png"
+
+                              alt="TortoiseGit-untracked.png" width="500"></figure>
+                        </li>
+                      </ol>
+                      <br>
+                      <br>
+                    </li>
+                    <li>Finally, you should verify that you can clone this
+                      just created new repository.&nbsp;&nbsp; To determine
+                      the URL make the selection below:
+                      <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Get-URL.png"
+
+                          alt="TortoiseGit-untracked.png" width="500"></figure>
+                      Then clone the repo:
+                      <table class="Code_Example">
+                        <tbody>
+                          <tr>
+                            <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_7');">▽
+                              </button> </td>
+                            <td>
+                              <div style="height: 150px; background-color: black;">
+                                <code class="Shell_Code_Input"> <code class="Shell_Code_Input">
+                                    <code class="Shell_Code_Prompt"> ~/ITCS_<em>XYZ</em>/
+                                    </code> mkdir verify; cd verify <br>
+                                    <code class="Shell_Code_Prompt"> ~/ITCS_</code></code></code><code
+
+                                  class="Shell_Code_Input"><code class="Shell_Code_Input"><code
+
+                                      class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
+
+                                          class="Shell_Code_Input"><code class="Shell_Code_Prompt"><em>XYZ</em></code></code></code>/verify
+                                      </code> git clone <code class="User_Input">URL Prefix For The Repo</code>/my-first-repo.git <br>
+                                  </code> <code class="Shell_Code_Output">
+                                    Cloning into 'my-first-repo'...<br>
+                                    warning: You appear to have cloned an
+                                    empty repository.<br>
+                                    Checking connectivity... done. </code><br>
+                                  <code class="Shell_Code_Input"> $ ls
+                                    my-first-repo </code><br>
+                                </code></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+            </ol>
+          </li>
+          </section>
+          <section><h2 class="Appendix">How to Push New Remote Repository</h2>    
+              Whenever you need to push files to a new&nbsp;<u>empty</u>,&nbsp;<u>remote</u>&nbsp;repository, 
+              follow the procedure below.                
+              Assume the remote is called&nbsp;<u><span class="User_Input">Project_Example.git</span></u>:
+              <br>
+              <ol class="Instruction_Option">
+                <li> [<em>YourServer</em>=<strong>cci-git</strong>]
                   <div class="Server_Cci_Git">
                     <ol>
-                      <li> Login to the cci-git Web Server (See 7.1 cci-git
-                        Server URL)&nbsp;&nbsp;&nbsp; </li>
-                      <li>First, make sure you are viewing your "dashboard" on
-                        cci-git by pressing the dashboard button (selection
-                        #1).&nbsp;&nbsp;&nbsp; Then create a new project by
-                        making the selection #2 in the screen capture below.
-                        &nbsp; In screen captures below whenever you must select
-                        multiple buttons, each button press is labeled with a
-                        red box.&nbsp; If multiple selections are needed each
-                        box is labeled with number indicating the sequence in
-                        which you should make the selections.<br>
-                        <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project.png"
-
-                            alt="TortoiseGit-untracked.png" width="500"></figure>
-                      </li>
-                      <li> Create a blank project<span class="Updated_Text_Popup_Note">3/14/2023:
-                          Separated step for clarifity </span><br>
-                        <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-New_Project2.png"
-
-                            alt="TortoiseGit-untracked.png" width="500"></figure>
-                      </li>
-                      <li>Set up a new project and repo:<br>
-                        &nbsp;&nbsp; <br>
-                        Note, in GitLab each repo has an <em>Owner</em>.&nbsp;&nbsp;&nbsp;
-                        The Owner can invite other GitLab users as <em>Members</em>
-                        to that repo.&nbsp;&nbsp; The Owner controls what access
-                        permissions each Member has.&nbsp; For this class, you
-                        must be the Owner of all your repo's.&nbsp;&nbsp; You
-                        will additionally invite the TAs and professor as
-                        Members of each repo so they can access your repos.<br>
-                        <span class="Updated_Text_Popup_Note" id="ins_03132023">
-                          3/13/2023: Elaborated details on "Owner" vs "Member"</span>
-                        <br>
-                        Create your new project by making the selection shown
-                        below.&nbsp;&nbsp;&nbsp;
-                        <ol>
-                          <li>For selection #1, enter the
-                            appropriate name for the repo you are
-                            creating.</li>
-                          <li>For selection #2 select your user
-                            name.&nbsp; (If you see a group name such as
-                            "itcs-3120-wartell/students/<em>FirstName</em> <em>LastName"</em>
-                            do <b><u>not</u></b> select it for selection #2).</li>
-                          <li>For selection #3, make sure your repo is private</li>
-                          <li>For selection #4, make sure your this box is <b>not</b> checked.
-                            (You want a completely empty repo on the server side.)
-                          </li>
-                        </ol>
-                        <br>
-                        <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Blank_Project.png"
-
-                            alt="TortoiseGit-untracked.png" width="500"></figure>
-                      </li>
-                      <li>Open the Members dialog by making the menu selections
-                        below.<br>
-                        <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Project-Infomration.png"
-
-                            alt="TortoiseGit-untracked.png" width="500"></figure>
-                      </li>
-                      <li>&nbsp;Next, you will add permission for the professor
-                        and TAs to access your project.&nbsp; Perform the
-                        actions indicated in the following screen captures.<br>
-                        <ol>
-                          <li><u>Select Invite Group</u>: <span class="Updated_Text_Popup_Note">
-                              2/13/2023: Updated course workflow to use private
-                              student groups. This simplifies student repo
-                              management and grading. </span>
-                            <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Invite-Group.png"
-
-                                alt="TortoiseGit-untracked.png" width="500"></figure>
-                          </li>
-                          <li><ins>
-                            <span class="Updated_Text_Popup_Note">
-                              9/1/2023: Skip this step for the Tutorial 1 due date. 
-                              I will make a short 10 pt Canvas assignment after the due date for everyone to complete this step.
-                              4122:  See <a href="https://uncc.instructure.com/courses/204712/discussion_topics/1731326">discussion_topics/1731326</a>
-                              3120:  See <a href="https://uncc.instructure.com/courses/206743/discussion_topics/1731327">discussion_topics/1731327</a>                                
-                            </span> 
-                            <u>Add Your Private Student Group:</u>
-                             </ins> <br>
-                            Each student in this course has a private group
-                            accessible only to the student (yourself) and the
-                            course grading staff (professor, TA's, graders,
-                            etc.).&nbsp;&nbsp;&nbsp; The group name will be
-                            similar to "itcs-3120-wartell/students/<em>FirstName</em>
-                            <em>LastName" </em>where <em>FirstName</em> and <em>LastName
-                              </em>are your name as recorded in your GitLab
-                            profile.&nbsp;&nbsp; (If a your GitLab profile does
-                            not record a name, then your private group name will
-                            be "itcs-3120-wartell/students/<em>uncc_user_id</em>").<br>
-                            <br>
-                            Invite your private group to your repo, using the
-                            dialog below and give that group "Reporter" access.<br>
-                            <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Add-Group.png"
-
-                                alt="TortoiseGit-untracked.png" width="500"></figure>
-                          </li>
-                        </ol>
-                      </li>
-                      <li> Finally, you should disable the Auto DevOps feature
-                        for your project. &nbsp; (Otherwise gitlab is likely to
-                        generate extra error messages later on when you perform
-                        git command line operations).<br>
-                        <br>
-                        <ol>
-                          <li>Open the&nbsp; <span class="File_Name">Settings</span>
-                            and <span class="File_Name"></span><span class="File_Name">CI/CD</span>.
-                            <figure class="Screen_Capture"><img src="images/cci-git-CI-CD.png"
-
-                                alt="TortoiseGit-untracked.png" width="500"></figure>
-                          </li>
-                          <li>. Under Auto DevOps click Open the <span class="File_Name">Expand.</span><span
-
-                              class="File_Name"></span>
-                            <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Expand.png"
-
-                                alt="TortoiseGit-untracked.png" width="500"></figure>
-                          </li>
-                          <li><u>Un</u>check the checkbox, <span class="File_Name">Default
-                              to AutoDevOps Pipeline</span>, and click <span class="File_Name">Save
-                              Changes.</span>
-                            <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Default.png"
-
-                                alt="TortoiseGit-untracked.png" width="500"></figure>
-                          </li>
-                        </ol>
-                        <br>
-                        <br>
-                      </li>
-                      <li>Finally, you should verify that you can clone this
-                        just created new repository.&nbsp;&nbsp; To determine
-                        the URL make the selection below:
-                        <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Get-URL.png"
-
-                            alt="TortoiseGit-untracked.png" width="500"></figure>
-                        Then clone the repo:
+                      <li><strong>Option I</strong>:&nbsp;<strong>git clone</strong>:
+                        &nbsp;<br>
+                        If you have&nbsp;<u>not</u>&nbsp;already created files
+                        in a local directory that you want to import, performing
+                        the following:<br>
                         <table class="Code_Example">
                           <tbody>
                             <tr>
                               <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_7');">▽
                                 </button> </td>
-                              <td>
-                                <div style="height: 150px; background-color: black;">
-                                  <code class="Shell_Code_Input"> <code class="Shell_Code_Input">
-                                      <code class="Shell_Code_Prompt"> ~/ITCS_<em>XYZ</em>/
-                                      </code> mkdir verify; cd verify <br>
-                                      <code class="Shell_Code_Prompt"> ~/ITCS_</code></code></code><code
+                              <td>                                  
+                                <div style="height: 150px;"> <code class="Shell_Code_Input">
+                                    $ git clone <code class="User_Input">URL Prefix For The Repo</code>/Project_Example.git<br>
+                                  </code> <code class="Shell_Code_Output">
+                                    Cloning into 'Project_Example'...<br>
+                                    warning: You appear to have cloned an empty
+                                    repository.<br>
+                                    Checking connectivity... done. </code><br>
+                                  <code class="Shell_Code_Input"> $ cd
+                                    Project_Example </code><br>
+                                  <span class="Shell_Code_Comment">[… create,
+                                    add and commit files… below is just an
+                                    example] </span> $ touch README.md<br>
+                                  $ git add README.md<br>
+                                  $ git commit -m "add README"<br>
+                                  <code class="Shell_Code_Output"> [ main
+                                    (root-commit) dd8e1a0] add README<br>
+                                    &nbsp;1 file changed, 0 insertions(+), 0
+                                    deletions(-)<br>
+                                    &nbsp;create mode 100644 README.md </code>&nbsp;
+                                  &nbsp;&nbsp; $ git push -u origin main <code
 
-                                    class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-
-                                        class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
-
-                                            class="Shell_Code_Input"><code class="Shell_Code_Prompt"><em>XYZ</em></code></code></code>/verify
-                                        </code> git clone <code class="User_Input">URL Prefix For The Repo</code>/my-first-repo.git <br>
-                                    </code> <code class="Shell_Code_Output">
-                                      Cloning into 'my-first-repo'...<br>
-                                      warning: You appear to have cloned an
-                                      empty repository.<br>
-                                      Checking connectivity... done. </code><br>
-                                    <code class="Shell_Code_Input"> $ ls
-                                      my-first-repo </code><br>
-                                  </code></div>
+                                    class="Shell_Code_Input"><br>
+                                    $ git push -u origin main <ins datetime="2021-08-28">
+                                    </ins> </code><br>
+                                  <code class="Shell_Code_Output"> Counting
+                                    objects: 3, done.<br>
+                                    Writing objects: 100% (3/3), 219 bytes | 0
+                                    bytes/s, done.<br>
+                                    Total 3 (delta 0), reused 0 (delta 0)<br>
+                                    To
+                                    git@cci-git.uncc.edu:your_user_id/Project_Example.git
+                                  </code><br>
+                                </div>
                               </td>
+                            </tr>
+                          </tbody>
+                        </table>                                                    
+                      </li>
+                      <li><strong>Option II</strong>:&nbsp;&nbsp;<strong> git
+                          init: </strong><br>
+                        If you&nbsp;<u>already</u>&nbsp;created files in a local
+                        directory (call it <span class="File_Name">Project_Example</span>
+                        and that local directory is&nbsp;<u>not</u>&nbsp;already
+                        a local Git repo, perform the following: (1) initialize
+                        that directory as a local Git repo and (2) push it the
+                        remote Git repo:<br>
+                        <table class="Code_Example" id="Code_Example_9_1_8">
+                          <tbody>
+                            <tr>
+                              <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_8');">▽
+                                </button> </td>
+                              <td>
+                                <div style="height: 150px;"><code class="Shell_Code_Input">
+                                    $ cd Project_Example<br>
+                                    $ git init<br>
+                                  </code><code class="Shell_Code_Output">
+                                    Initialized empty Git repository in
+                                    Project_Example/.git/ </code><br>
+                                  <code class="Shell_Code_Input"> $ git remote
+                                    add origin
+                                    https://cci-git.uncc.edu/your_user_id/Project_Example.git<br>
+                                    $ git add -A<br>
+                                    $ git commit –m "-initial import" <br>
+                                    $ git push -u origin main </code><code class="Shell_Code_Input">
+                                    <br>
+                                  </code><code class="Shell_Code_Output">
+                                    Counting objects: 3, done.<br>
+                                    Writing objects: 100% (3/3), 219 bytes | 0
+                                    bytes/s, done.<br>
+                                    Total 3 (delta 0), reused 0 (delta 0)<br>
+                                    To git@cci-git.uncc.edu:<em>your_user_id</em>/Project_Example.git
+                                    </code></div> </td>
                             </tr>
                           </tbody>
                         </table>
@@ -2059,124 +2157,19 @@
                     </ol>
                   </div>
                 </li>
-              </ol>
-            </li>
-            </section>
-            <section>
-              <h3 class="Appendix">How to Push New Remote Repository</h3>    
-                Whenever you need to push files to a new&nbsp;<u>empty</u>,&nbsp;<u>remote</u>&nbsp;repository, 
-                follow the procedure below.                
-                Assume the remote is called&nbsp;<u><span class="User_Input">Project_Example.git</span></u>:
-                <br>
-                <ol class="Instruction_Option">
-                  <li> [<em>YourServer</em>=<strong>cci-git</strong>]
-                    <div class="Server_Cci_Git">
-                      <ol>
-                        <li><strong>Option I</strong>:&nbsp;<strong>git clone</strong>:
-                          &nbsp;<br>
-                          If you have&nbsp;<u>not</u>&nbsp;already created files
-                          in a local directory that you want to import, performing
-                          the following:<br>
-                          <table class="Code_Example">
-                            <tbody>
-                              <tr>
-                                <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_7');">▽
-                                  </button> </td>
-                                <td>                                  
-                                  <div style="height: 150px;"> <code class="Shell_Code_Input">
-                                      $ git clone <code class="User_Input">URL Prefix For The Repo</code>/Project_Example.git<br>
-                                    </code> <code class="Shell_Code_Output">
-                                      Cloning into 'Project_Example'...<br>
-                                      warning: You appear to have cloned an empty
-                                      repository.<br>
-                                      Checking connectivity... done. </code><br>
-                                    <code class="Shell_Code_Input"> $ cd
-                                      Project_Example </code><br>
-                                    <span class="Shell_Code_Comment">[… create,
-                                      add and commit files… below is just an
-                                      example] </span> $ touch README.md<br>
-                                    $ git add README.md<br>
-                                    $ git commit -m "add README"<br>
-                                    <code class="Shell_Code_Output"> [ main
-                                      (root-commit) dd8e1a0] add README<br>
-                                      &nbsp;1 file changed, 0 insertions(+), 0
-                                      deletions(-)<br>
-                                      &nbsp;create mode 100644 README.md </code>&nbsp;
-                                    &nbsp;&nbsp; $ git push -u origin main <code
-  
-                                      class="Shell_Code_Input"><br>
-                                      $ git push -u origin main <ins datetime="2021-08-28">
-                                      </ins> </code><br>
-                                    <code class="Shell_Code_Output"> Counting
-                                      objects: 3, done.<br>
-                                      Writing objects: 100% (3/3), 219 bytes | 0
-                                      bytes/s, done.<br>
-                                      Total 3 (delta 0), reused 0 (delta 0)<br>
-                                      To
-                                      git@cci-git.uncc.edu:your_user_id/Project_Example.git
-                                    </code><br>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>                                                    
-                        </li>
-                        <li><strong>Option II</strong>:&nbsp;&nbsp;<strong> git
-                            init: </strong><br>
-                          If you&nbsp;<u>already</u>&nbsp;created files in a local
-                          directory (call it <span class="File_Name">Project_Example</span>
-                          and that local directory is&nbsp;<u>not</u>&nbsp;already
-                          a local Git repo, perform the following: (1) initialize
-                          that directory as a local Git repo and (2) push it the
-                          remote Git repo:<br>
-                          <table class="Code_Example" id="Code_Example_9_1_8">
-                            <tbody>
-                              <tr>
-                                <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_8');">▽
-                                  </button> </td>
-                                <td>
-                                  <div style="height: 150px;"><code class="Shell_Code_Input">
-                                      $ cd Project_Example<br>
-                                      $ git init<br>
-                                    </code><code class="Shell_Code_Output">
-                                      Initialized empty Git repository in
-                                      Project_Example/.git/ </code><br>
-                                    <code class="Shell_Code_Input"> $ git remote
-                                      add origin
-                                      https://cci-git.uncc.edu/your_user_id/Project_Example.git<br>
-                                      $ git add -A<br>
-                                      $ git commit –m "-initial import" <br>
-                                      $ git push -u origin main </code><code class="Shell_Code_Input">
-                                      <br>
-                                    </code><code class="Shell_Code_Output">
-                                      Counting objects: 3, done.<br>
-                                      Writing objects: 100% (3/3), 219 bytes | 0
-                                      bytes/s, done.<br>
-                                      Total 3 (delta 0), reused 0 (delta 0)<br>
-                                      To git@cci-git.uncc.edu:<em>your_user_id</em>/Project_Example.git
-                                      </code></div> </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </li>
-                      </ol>
-                    </div>
-                  </li>
-                  <!--
-                              <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                    <div class="Server_Git_Viscenter Server_Bitbucket"> <br>                      <br>                      Perform the same instructions as above, Option II, for [<strong>cci-git</strong>]                      but replace:<br>                      &nbsp;&nbsp; &nbsp;&nbsp;<span class="Server_Name">                        https://cci-git.uncc.edu/<u> <span class="User_Input">your_uncc_user_id</span>                        </u>/ </span><br>                      with<br>                      &nbsp;[<strong>bitbucket</strong>]&nbsp;&nbsp;&nbsp;<span                        class="Server_Name"> git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u>&nbsp;                        </span><br> &nbsp; <span class="Server_Name"> <u><span                            class="User_Input"></span></u> </span> </div>                  </li>                  -->
-                </ol>              
-            </section>
-            <section>
-              <h3 class="Appendix">Deleting a remote repo</h3>              
-                <ol class="Instruction_Option">
-                  <li> [<em>YourServer=</em><strong>cci-git</strong>] See <a href="https://cci-git.uncc.edu/help"
-  
-                      target="_blank">https://cci-git.uncc.edu/help</a><br>
-                  </li>
-                  <!--
-                              <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;<em>                      See Bitbucket Website. </em>                  </li>                  -->
-                </ol>              
-            </section>
+                <!--
+                            <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                    <div class="Server_Git_Viscenter Server_Bitbucket"> <br>                      <br>                      Perform the same instructions as above, Option II, for [<strong>cci-git</strong>]                      but replace:<br>                      &nbsp;&nbsp; &nbsp;&nbsp;<span class="Server_Name">                        https://cci-git.uncc.edu/<u> <span class="User_Input">your_uncc_user_id</span>                        </u>/ </span><br>                      with<br>                      &nbsp;[<strong>bitbucket</strong>]&nbsp;&nbsp;&nbsp;<span                        class="Server_Name"> git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u>&nbsp;                        </span><br> &nbsp; <span class="Server_Name"> <u><span                            class="User_Input"></span></u> </span> </div>                  </li>                  -->
+              </ol>              
+          </section>
+          <section><h2 class="Appendix">Deleting a remote repo</h2>              
+              <ol class="Instruction_Option">
+                <li> [<em>YourServer=</em><strong>cci-git</strong>] See <a href="https://cci-git.uncc.edu/help"
+
+                    target="_blank">https://cci-git.uncc.edu/help</a><br>
+                </li>
+                <!--
+                            <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;<em>                      See Bitbucket Website. </em>                  </li>                  -->
+              </ol>              
           </section>
         </section>
         <section><h1 class="Appendix" id="CourseGitPolicies">Course Git Policies</h1>
@@ -2408,14 +2401,9 @@
               you if you have changes to local files that you have not commited to
               the local repo! </p>
           </section>
-        </section>                 
-        
-
+        </section>                   
         </article>
       </div>
-      <!--
-        <div class="side-read-bar">          <iframe src="https://developer.mozilla.org/en-US/html/zjwgi/Web/JavaScript/Guide/Expressions_and_Operators">          </iframe>        </div>                      
-       -->
     </div>  
   </body>  
   <template id="SectionRubricTemplate" data-version="1.0">
