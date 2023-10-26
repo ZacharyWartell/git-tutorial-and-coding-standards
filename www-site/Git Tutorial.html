@@ -84,7 +84,7 @@
       <div class="main-content" id="Content">
         <div class="toolbar" id="Toolbar">
           <div class="Menu">
-              <button id="help" class="DocButton" onclick='window.open("libs/zjw-generic-instructions/site/html/zjwgi/Help.html");'> Help </button>            
+              <button id="help" class="DocButton" onclick='window.open("html/zjwgi/Help.html");'> Help </button>            
             <b>|</b> 
             <div class="DocButton"> 
               <input name="Beta_Mode" id="Beta_Mode" type="checkbox"> 
@@ -242,7 +242,7 @@
             </ol>
           </section>
           <section><h1 class="Section" id="Guide_to_Reading_these_Instructions"> Guide to Reading these Instructions </h1>            
-            <object type="text/html" data="libs/zjw-generic-instructions/site/html/zjwgi/Typographic_Conventions.html" width="100%" height="1350px"></object>
+            <object type="text/html" data="html/zjwgi/Typographic_Conventions.html" width="100%" height="1350px"></object>
           </section>
           <section><h1 class="Section" id="Installing_Git"> Installing Git </h1>
             <p> Git is a command-line client program that runs on your computer
@@ -443,8 +443,10 @@
             </ol>         
             The with the above options, the possible combinations of options and the maximum points for this tutorial are shown in 
             table <a href="#RubricAwardedPoints">Rubric Awarded Points</a>            
+          </section>          
+          <section class="Instruction_Section" data-optionset='{"name":"Part 1new"}' data-point-fraction="10"><span id="Part1_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Full Git Tutorial</h1>
           </section>
-          <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="83.33333333333333"><span id="Part1_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Full Git Tutorial</h1>
+          <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="80"><span id="Part1_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Full Git Tutorial</h1>
          
           The instructions below guide you through reading chapters in the ProGit
           Book, 2<sup>nd</sup> Edition at <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/','ProGit');">
@@ -960,7 +962,7 @@
           </ol>
           <p><strong>This completes the Full Git Tutorial.</strong></p>
          </section>
-         <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="16.6666666"><span id="Part1_OptionII"></span><h1 class="Section" id="Micro_Git_Tutorial">Micro Git Tutorial</h1>
+         <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="10"><span id="Part1_OptionII"></span><h1 class="Section" id="Micro_Git_Tutorial">Micro Git Tutorial</h1>
         
             <p> The micro tutorial is a quick verification that you have full
               read/write access to your remote repository on the course's Git
@@ -1924,8 +1926,11 @@
                       <span class="Updated_Text_Popup_Note" id="ins_03132023">
                         3/13/2023: Elaborated details on "Owner" vs "Member"</span>
                       <br>
+                      <ins datatime="9/23/2023">
                       Create your new project by making the selection shown
                       below.&nbsp;&nbsp;&nbsp;
+                      <span class="Updated_Text_Popup_Note">Added explicit instruction list to complement original screen shot</span>
+                      </ins>
                       <ol>
                         <li>For selection #1, enter the
                           appropriate name for the repo you are
@@ -1950,7 +1955,7 @@
 
                           alt="TortoiseGit-untracked.png" width="500"></figure>
                     </li>
-                    <li>&nbsp;Next, you will add permission for the professor
+                    <li id="Private_Student_Group">&nbsp;Next, you will add permission for the professor
                       and TAs to access your project.&nbsp; Perform the
                       actions indicated in the following screen captures.<br>
                       <ol>
