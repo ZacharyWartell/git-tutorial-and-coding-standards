@@ -59,9 +59,9 @@
         {
             "AssignmentName" :
             {
-                "courseNumber" : "5122 & 3120",
+                "courseNumber" : "3120",
                 "number" : "t1",
-                "numberLongDir" : "5122-t1-git-tutorial",
+                "numberLongDir" : "3120-t1-git-tutorial",
                 "name" : "git-tutorial"
             }
         }
@@ -144,7 +144,7 @@
             <h2 class="nocount Title">Fall 2023</h2>
             <h3 class="nocount Title">Professor: Zachary Wartell</h3>
             <div style="display : block; text-align: center;">
-              <div>Revision: <span class="Revision">Mon Sep 4 23:41:28 2023 -0400</span>
+              <div>Revision: <span class="Revision">Thu Oct 26 09:24:06 2023 -0400</span>
                 <sup> (<a href="https://zwartell@gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards/-/commits/master"
                     target="_blank">git logs</a>) </sup><br>
                 <br>
@@ -244,7 +244,7 @@
           <section><h1 class="Section" id="Guide_to_Reading_these_Instructions"> Guide to Reading these Instructions </h1>            
             <object type="text/html" data="html/zjwgi/Typographic_Conventions.html" width="100%" height="1350px"></object>
           </section>
-          <section><h1 class="Section" id="Installing_Git"> Installing Git </h1>
+          <section><h1 class="Section" id="Installing_Git"> Installing Git Client </h1>
             <p> Git is a command-line client program that runs on your computer
               communicating to a Git server. Git servers uses various access
               protocols for security and authorization. Depending what access
@@ -370,10 +370,8 @@
                   </table>                      
                 </li>
               </ol>
-              </section>
-            </section>
-            <section>
-              <h2 class="Section">[Pre-Req.] Command-Line Interface Shell</h2>
+            </section>            
+            <section><h2 class="Section">[Pre-Req.] Command-Line Interface Shell</h2>
               <p>The remainder of this assignment assumes you have knowledge of
                 the material listed below.&nbsp; Each listed topic contains
                 recommended reading if you do not already know the topic.
@@ -398,9 +396,7 @@
                   for MacOS. </li>
               </ol>
             </section>
-
-            <section>
-              <h2 class="Section" id="Installation_and_Setup_of_Git_GUIs"> [Optional] Installation and Setup of Git GUI’s </h2>
+            <section><h2 class="Section" id="Installation_and_Setup_of_Git_GUIs"> [Optional] Installation and Setup of Git GUI’s </h2>
               <p> Generally, the Git instructions in this document and any Git
                 instructions given in this course will be given using Git
                 command-line examples.&nbsp; But many GUI Git tools are available as
@@ -417,26 +413,598 @@
               </ol>
             </section>
           </section>
-          <section><h1 class="Section" id="Full_vs_Micro_Tutorial" id="Tutorial_Structure">Tutorial Structure (Full vs Micro Tutorial)</h1>
+          <section><h1 class="Section" id="Git_Server_Access">Setting up Account on Git Server</h1>                                                     
+              Git servers support numerous communication protocols for connecting to a Git client. 
+              The sub-sections below list the communication protocols used for the git server in this in class.
+              <!--
+              Use the protocol in the sub-section below that is listed as being recommended              
+              for the Git server used in your class.<br>
+              -->
+              <section><h2 class="Section" id="Git_Server_Access_Token_Protocol"> Git Server Personal Access Token Protocol</h2>
+                
+                [<em>YourServer</em>=<strong>cci-git</strong>]
+                <div class="Server_Supports_HTTPS_PAT"><br>                  
+                  cci-git is a GitLab server.&nbsp; The recommended communication protocol is the
+                  Personal Access Token (PAT) protocol.                                
+                    <ol class="Instruction Instruction_NonRubric">
+                      <li> <b>Creating an Personal Access Token (PAT):</b><br>
+                        You only have to create the access token once for your cci-git
+                        account.&nbsp; You then save the token (like a password) and
+                        re-use it every time you access the cci-git server.<br>
+                        <ol>
+                          <li>In your browser sign in to <a href="https://cci-git.uncc.edu">cci-git.uncc.edu</a>.&nbsp;
+                            You will be prompted for by the UNCC SSO for your standard
+                            UNCC user id and password. </li>
+                          <li>In the upper-right corner, click your avatar and select <span
+        
+                              class="Program_Name">Preferences</span>. </li>
+                          <li>On the <span class="Program_Name">Preferences</span> menu
+                            (left side), select <span class="Program_Name"> Access
+                              Tokens</span>. </li>
+                          <li>In the new dialog "Personal Access Tokens", select <span
+        
+                              class="Program_Name">Add New Token</span></li>
+                          <li>In the new dialog "Add a personal access token", choose a
+                            name and optional expiry date for the token.
+                            <ol>
+                              <li>The suggested name is "git-bash"</li>
+                            </ol>
+                          </li>
+                          <li>For the <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#limiting-scopes-of-a-personal-access-token"
+        
+                              style="box-sizing: border-box; color: rgb(27, 105, 182); text-decoration: none; background-color: transparent;">desired
+                              scopes</a>, choose <span class="Program_Name">write_repository</span></li>
+                          <li>Click the <span class="Program_Name">Create personal
+                              access token</span></li>
+                          <li><b>Save</b> (copy and paste) the "Your new personal access
+                            token" somewhere safe. In the screen shot below (1) unhide
+                            the PAT and then (2) copy the PAT code.&nbsp; <br>
+                            This PAT code is essentially a password and you should treat
+                            it as such. (If you navigate away from or refresh the web
+                            page without saving the PAT (or lose the saved PAT), you
+                            will have to create a new one).
+                            <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-PAT.png"
+        
+                                alt="TortoiseGit-untracked.png" width="500"></figure>
+                          </li>
+                        </ol>    
+                      </li>
+                      <li> <b>Using the Access Token:</b><br>
+                        <ol>                        
+                          <li> <b>Verifying the Access Token:</b><br>                      
+                            <ol>
+                              <li> In order to test and verify read-access to the server, clone
+                                the welcome repo:<br>
+                                <table class="Code_Example">
+                                  <tbody style="height: 105px;">
+                                    <tr>
+                                      <td><br>
+                                      </td>
+                                      <td>
+                                        <div style="height: 105px;"><code class="Shell_Code_Input">$
+                                            git clone https://<span class="User_Input">Your
+                                              UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/zwartell/welcome.git
+                                            welcome </code><br>
+                                          <code class="Shell_Code_Output">Cloning into
+                                            'welcome'...<br>
+                                            remote: Counting objects: 6, done.<br>
+                                            remote: Compressing objects: 100% (4/4), done.<br>
+                                            remote: Total 6 (delta 0), reused 0 (delta 0)<br>
+                                            Unpacking objects: 100% (6/6), done.<br>
+                                            Checking connectivity... done. </code><br>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </li>
+                              <li> Note, the access token will be recorded in the git
+                                remote, which is demonstrated at follows.&nbsp;&nbsp; This
+                                implies you do <u>not</u> want to use the Access Token
+                                Protocol to clone into a directory that is not secure and
+                                only accessible by yourself.<br>
+                                <table class="Code_Example">
+                                  <tbody style="height: 60px;">
+                                    <tr>
+                                      <td><br>
+                                      </td>
+                                      <td>
+                                        <div style="height: 60px;"><code class="Shell_Code_Input">$
+                                            git remote -v</code><br>
+                                          <code class="Shell_Code_Output">origin&nbsp;
+                                            https://</code><code class="Shell_Code_Output"><code
             
-            <p>This tutorial has one Part. Students must complete exactly <u>one</u> of two options within this single part.  The options are very different in size and complexity and contain alternative options for students with prior knowledge of some of the Learning Objectives.<br>
+                                              class="Shell_Code_Input"><span class="User_Input">Your
+                                                UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
+                                            (fetch)<br>
+                                            origin&nbsp; https://</code><code class="Shell_Code_Output"><code
+            
+                                              class="Shell_Code_Input"><span class="User_Input">Your
+                                                UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
+                                            (push) </code><br>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </li>
+                            </ol>
+                          </li>    
+                          <li> <b>General Procedure:</b>
+                            The above step is generalized as follows.  Assume you want clone a git repo and the repo URL is as follows:<br>
+                            <br>
+                            <div style="margin-left: 40px;"> https://cci-git.uncc.edu/<span
+            
+                                class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
+                              </div> <br>
+                            To perform the git clone, you use augment the URL with the PAT using the syntax shown below:<br>
+                            <br>
+                            <div style="margin-left: 40px;">git clone https://<code class="Shell_Code_Output"></code><span
+            
+                                class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
+            
+                                class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
+                              </div> <br>
+                            However, entering this long augmented URL syntax can be avoided by installing a Git
+                            Credential Manager which is described next.<br>        
+                          </li>                        
+                        </ol>                    
+                      </li>
+  
+                      <li> <b>Setting up a Git Credential Manager:</b>
+                        <p> By default, the HTTPS with PAT protocol requires you to
+                          frequnetly enter your UNCC username and PAT
+                          password.&nbsp;&nbsp; This also leaves your PAT password
+                          visible via the command, git remote -v.</p>
+                        <p>Installing a Git Credential Manager can avoid these two
+                          issues&nbsp;&nbsp; Depending on your operating system, this
+                          may require installing additional software .&nbsp;&nbsp;
+                          However, it is worth the effort.&nbsp;&nbsp; The steps are as
+                          follows:</p>
+                        <ol>
+                          <li> Read ProGit <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
+                              Git Tools - Credential Storage </a>., but stop reading at
+                            section "Under the Hood". <br>
+                          </li>
+                          <li> Based on your operating system pick the appropriate
+                            credential system as described in the above ProGit chapter.<br>
+                            <br>
+                            <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
+                            "store mode" because this will save your UNCC password
+                            unencrypted on disk!
+                            <ol class="Instruction_Option">
+                              <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you
+                                are using Git-Bash
+                                <table class="Code_Example">
+                                  <tbody>
+                                    <tr>
+                                      <td> <button>▽</button> </td>
+                                      <td><code class="Shell_Code_Input"> $ &nbsp;git
+                                          config --global credential.helper manager<br>
+                                        </code></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </li>
+                              <li> [<em>OS</em><strong>=<em>everything else</em></strong>]
+                                Follow links discussed in <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
+                                  Git Tools - Credential Storage </a>. </li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                      <li> <b>Verify the Credential Manager </b><br>
+                        To test the Credential Manager, perform the following steps:<br>
+                        <ol class="Instructions">
+                          <li> To test read-access to the server by cloning the welcome
+                            repo:<br>
+                            <table class="Code_Example">
+                              <tbody style="height: 105px;">
+                                <tr>
+                                  <td><br>
+                                  </td>
+                                  <td>
+                                    <div style="height: 105px;"><code class="Shell_Code_Input">$
+                                        git clone
+                                        https://cci-git.uncc.edu/zwartell/welcome.git
+                                        welcome-2 </code><br>
+                                      <code class="Shell_Code_Output">Cloning into
+                                        'welcome'...<br>
+                                        remote: Counting objects: 6, done.<br>
+                                        remote: Compressing objects: 100% (4/4), done.<br>
+                                        remote: Total 6 (delta 0), reused 0 (delta 0)<br>
+                                        Unpacking objects: 100% (6/6), done.<br>
+                                        Checking connectivity... done. </code><br>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <ol class="Instructions">
+                              <li> A dialog box will appear, prompting you for a userid ID and password, you
+                                must enter you UNCC userid and your PAT password. </li>
+                            </ol>
+                          </li>
+                          <!--
+                                    <li> Note, the PAT is recorded by the Credential                    Manager and not visible via git remote -v.<br>                    <table class="Code_Example"  >                      <tbody style="height: 60px;">                        <tr>                          <td><br>                          </td>                          <td>                            <div style="height: 60px;"><code class="Shell_Code_Input">$                                git remote -v</code><br>                              <code class="Shell_Code_Output">origin&nbsp;                                https://</code><code class="Shell_Code_Output">cci-git.uncc.edu/zwartell/welcome.git                                (fetch)<br>                                origin&nbsp; https://</code><code class="Shell_Code_Output">@cci-git.uncc.edu/zwartell/welcome.git                                (push) </code><br>                            </div>                          </td>                        </tr>                      </tbody>                    </table>                  </li>									-->
+                        </ol>
+                        Henceforth when you perform git command-line operations, you can
+                        now use the standard repo URL, rather than the PAT augmented URL.<br>
+                      </li>
+                    </ol>
+                </div>
+              </section>            
+              <section hidden="true"><h2 class="Section" id="Accessing_Git_Server_Using_SSH_Keys">Git Server SSH Protocol </h2>
+                [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] - SSH is not
+                recommended for cci-git. Skip this section.
+                <div class="StaffNote">
+                  <ul>
+                    <li><em>Staff Note:&nbsp; </em>Since it's inception,
+                      cci-git.uncc.edu we had limited success using the ssh protocol.&nbsp;&nbsp; UNCC
+                      wireless seemed to block ssh or drop ssh connections
+                      intermittently.&nbsp; Further, sometime in 2019/2020 (?) UNCC
+                      OneIT seems to have blocked all off-campus ssh access, even
+                      for faculty connecting with VPN.&nbsp;&nbsp; 
+                      Experience with OneIT indicates their security lock down is unlikely to ever to be rescinded.<br>
+                    </li>
+                  </ul>
+                </div>
+                <br>
+                [<em>YourServer</em>=<strong>Bitbucket</strong>]
+                <div class="Server_Supports_SSH" hidden="true">
+                  <p>For servers using the SSH access method, this section covers:</p>
+                  <ol start="1" type="1">
+                    <li> Starting and logging into an <span class="Program_Name">ssh-agent</span>
+                      daemon in a command-line. <br>
+                    </li>
+                    <li>Example Git operations using the Git server.</li>
+                  </ol>                    
+                  <section>
+                    <h4 class="Appendix" id="LinuxMac_Starting_the_ssh-agent_daemon">
+                      <a name="LinuxMac_Starting_the_ssh-agent"></a>[Linux/Mac]
+                      Starting the ssh-agent daemon </h4>
+                    <div class="OS_Mac OS_Unix">
+                      <p> These steps much be done each time you login into a
+                        computer if you want to access the Git server. They start
+                        the ssh-agent daemon process which manages Git’s
+                        authentication to the Git server. </p>
+                      <p> These steps will only work after you submit you public key
+                        to the TA and he has confirmed that it has been added to the
+                        Git server. </p>
+                      <ol class="Instruction">
+                        <li>Start your command-line shell</li>
+                        <li> Start the <span class="Program_Name">ssh-agent</span>
+                          daemon process<br>
+                          This starts a <span class="Program_Name">ssh-agent</span>
+                          daemon and a new bash shell that is setup to communicate
+                          with the <span class="Program_Name">ssh-agent</span>
+                          daemon.<br>
+                          <br>
+                        </li>
+                        <li>Load your private key into the ssh-agent daemon.</li>
+                        <li> To verify ssh-agent access:&nbsp;
+                          <ol>
+                            <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
+                              <table class="Code_Example" id="Code_Example_741_4c">
+                                <tbody style="height: 105px;">
+                                  <tr>
+                                    <td> <button onclick="Code_Example_Toggle('Code_Example_741_4c');">
+                                        ▽ </button> </td>
+                                    <td>
+                                      <div style="height: 105px;"><code class="Shell_Code_Input">
+                                          $ ssh git@cci-git.uncc.edu<br>
+                                        </code> <code class="Shell_Code_Output"> <br>
+                                          The server's host key is not cached in the
+                                          registry. You <br>
+                                          have no guarantee that the server is the
+                                          computer you <br>
+                                          think it is. <br>
+                                          The server's rsa2 key fingerprint is: <br>
+                                          ssh-rsa 2048
+                                          aa:32:4a:f4:4e:96:bc:cb:46:3d:b9:de:64:bc:19:ef
+                                          ) <br>
+                                          <span class="Shell_Code_Comment"> [^ exact
+                                            number may differ ^] </span> <br>
+                                          If you trust this host, enter "y" to add
+                                          the key to <br>
+                                          PuTTY's cache and carry on connecting. <br>
+                                          If you want to carry on connecting just
+                                          once, without <br>
+                                          adding the key to the cache, enter "n". <br>
+                                          If you do not trust this host, press
+                                          Return to abandon the <br>
+                                          connection. <br>
+                                          Store key in cache? (y/n) <span class="Shell_Code_Comment">
+                                            [TYPE yes] </span> <br>
+                                          Warning: Permanently added
+                                          ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA)
+                                          to the list of known hosts. <br>
+                                          Using username "git". <br>
+                                          Server refused to allocate pty <br>
+                                          Welcome to GitLab, zwartell. <span class="Shell_Code_Comment">
+                                            [zwartell will be your username] </span>
+                                        </code></div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </li>
+                            <li> [<em>YourServer=</em><strong>bitbucket</strong>]<br>
+                              The above<strong> </strong>verifies<strong> </strong>your<strong>
+                              </strong>ssh-agent is successfully passing your key
+                              through ssh to Bitbucket. </li>
+                          </ol>
+                        </li>
+                        <li> To verify read-access to the welcome repo do as
+                          follows:<br>
+                          <br>
+                          For input text <span class="User_Input">welcome_repo_path</span>
+                          below, substitute the following based on your server::
+                          <ol class="Instruction_Option">
+                            <li> [<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              git@cci-git.uncc.edu:zwartell/welcome.git </li>
+                            <!--
+                                          <li> [<strong>bitbucket</strong>]                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git                      </li>                      -->
+                          </ol>
+                          <table class="Code_Example" id="Code_Example_741_5">
+                            <tbody style="height: 105px;">
+                              <tr>
+                                <td> <button onclick="Code_Example_Toggle('Code_Example_741_5');">▽</button>
+                                </td>
+                                <td>
+                                  <div style="height: 105px;"><code class="Shell_Code_Input">
+                                      $ git clone <span class="User_Input">welcome_repo_path</span>
+                                      <br>
+                                    </code> <code class="Shell_Code_Output"> <br>
+                                      The authenticity of host ‘cci-subv.uncc.edu’
+                                      (10.18.203.162)’ can’t be established.<br>
+                                      RSA key fingerprint is
+                                      e2:6f:ac:ff:a3:30:a2:0e:c2:d6:98:f4:78:55:c5:7f.<br>
+                                      Are you sure you want to continue connecting
+                                      (yes/no)? <span class="Shell_Code_Comment">
+                                        [type yes] </span><br>
+                                      Warning: Permanently added
+                                      ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA) to
+                                      the list of known hosts.<br>
+                                      <span class="Shell_Code_Comment"> […the above
+                                        will only appear the first time you connect
+                                        to the git-viscenter …] </span><br>
+                                      Cloning into 'welcome'...<br>
+                                      remote: Counting objects: 6, done.<br>
+                                      remote: Compressing objects: 100% (4/4), done.<br>
+                                      remote: Total 6 (delta 0), reused 0 (delta 0)<br>
+                                      Receiving objects: 100% (6/6), 5.50 KiB | 0
+                                      bytes/s, done.<br>
+                                    </code></div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <em> <u> <br>
+                              Possible Errors </u> </em>: If you are prompted for
+                          a password here, either the ssh-agent daemon is not setup
+                          right or your public key has not been registered yet. </li>
+                      </ol>
+                    </div>
+                  </section>
+                  <section>
+                    <h4 class="Appendix" id="Windows_Starting_the_ssh-agent_daemon">
+                      [Windows] Starting the ssh-agent daemon </h4>
+                    <div class="OS_Windows">
+                      <p> When you login into a computer from which want to connect
+                        to your Git server, you must perform these steps once. The
+                        steps start the ssh-agent daemon which manages Git’s
+                        authentication to the Git server. <br>
+                        <br>
+                        These steps will only work after you submit your public key
+                        to the Git server. <br>
+                        <br>
+                        These instructions allow both TortoiseGit and command-line
+                        Git to use the same <span class="Program_Name">ssh-agent</span>
+                        daemon. </p>
+                      <p><u>Start Pageant</u></p>
+                      <ol>
+                        <li> Run Pageant: <br>
+                          General:&nbsp;&nbsp; <span class="Program_Name"> Start
+                            Menu→Putty→Pagent </span>&nbsp; <br>
+                          This will create a Pageant system tray icon.<br>
+                        </li>
+                        <li> On the Pageant system tray icon, right-click and select
+                          <span class="Program_Name">Add Keys</span> from the menu.
+                          This will open a dialog box.&nbsp; </li>
+                        <li> Using the dialog, open your <span class="File_Name">id_rsa.ppk</span>
+                          file.&nbsp; You will be prompted for your passphrase. <br>
+                          <br>
+                          This starts PuTTY’s version of the ssh-agent daemon. The
+                          ssh-agent will continue to run until you log off your
+                          computer.
+                          <p><u>Start and Use the Command-Line Shell</u></p>
+                        </li>
+                        <li>Start the Git-Bash shell: Start Menu→Git→Git-Bash</li>
+                        <li> To tell git to use the ssh client compatible with
+                          TortoiseGit type the following: <br>
+                          <br>
+                          General:<br>
+                          <br>
+                          Optionally to avoid the requirement of setting the GIT_SSH
+                          variable each time you run Git-Bash, add the above line to
+                          the <span class="File_Name">.bash_profile</span> file
+                          (see Appendix 11.2). <br>
+                        </li>
+                        <li> To verify the Pagent ssh-agent daemon is working:
+                          <ol class="Instruction_Option Instruction_NonRubric">
+                            <li>[<em>YourServer</em>=<strong>bitbucket</strong>]</li>
+                            <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
+                            </li>
+                          </ol>
+                        </li>
+                        <li> To verify read-access to the <span class="File_Name">welcome</span>
+                          repo:<br>
+                          <br>
+                          For input text <span class="User_Input">welcome_repo_path</span>
+                          below, substitute the following based on your server::
+                          <ol class="Instruction_Option Instruction_NonRubric">
+                            <li> [<strong>bitbucket</strong>]
+                              &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git
+                            </li>
+                            <li> [<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              git@cci-git.uncc.edu:zwartell/welcome.git<br>
+                              <br>
+                            </li>
+                          </ol>
+                          <em><u>Possible Errors</u></em>: If you are prompted for a
+                          password here, either the ssh-agent daemon is not setup
+                          right or your public key has not been registered yet. </li>
+                      </ol>
+                    </div>
+                  </section>
+                </div>
+              </section>             
+              <section hidden="true"> <h2 class="Section" id="Accessing_Git_Server_Using_HTTPS_and_Credentials"><a name="Accessing_Git_Server_Using_HTTPS_and_Git"></a> with UNCC SSO and Credential Manager</h2>
+                [<em>YourServer</em>=<strong>cci-git</strong>] Use the <a href="#Git_Server_Access_Token_Protocol">Git
+                  Server Personal Access Token Protocol</a> instead.
+                <div class="StaffNote">
+                  <ul>
+                    <li><em>Staff Note</em>: The SSO protocol worked throughout the
+                      exitence of cci-git.uncc.edu until Spring 2020.&nbsp;&nbsp;
+                      Starting Fall 2020, cci-git no longer worked reliably with
+                      this protocol. </li>
+                  </ul>
+                </div>
+                <div class="Server_Supports_HTTPS">
+                  <section>
+                    <h4 class="Appendix" id="cci-git-activate-UNCC-account">
+                      Activate and Verify UNCC Account </h4>
+                    <p> If you have never used cci-git.uncc.edu before, your UNCC
+                      account will need to be activated.&nbsp;&nbsp; To activate
+                      your UNCC account you need to log into <a href="https://cci-git.uncc.edu/"
+    
+                        target="_blank">cci-git.uncc.edu</a> via a web browser.
+                      During this first login, cci-git.uncc.edu creates an account
+                      for you that will henceforth your UNCC's Single-Sign-On (SSO)
+                      username and password. </p>
+                    <p><u>Verify Activation of Account<em>:</em></u></p>
+                    <p> To verify activation you will clone a repo from <span class="Server_Name">cci-git</span>
+                      using the command-line.<br>
+                    </p>
+                    <p> First, as of September 2016, there is a problem with the <span
+    
+                        class="Server_Name">cci-git </span> server's SSL
+                      certificate.&nbsp;&nbsp; You should disable Git’s automatic
+                      checkings for a SSL certificate as follows: </p>
+                    <table class="Code_Example" id="Code_Example_751_1">
+                      <tbody>
+                        <tr>
+                          <td> <button onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button>
+                          </td>
+                          <td><code class="Shell_Code_Input"> $ git config --global
+                              http.sslVerify false<br>
+                            </code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    (The above Git setting is saved on your computer, so you only
+                    need to set it once).<br>
+                    <p></p>
+                    <p> Now, to test and verify read-access to the server, clone the
+                      welcome repo:&nbsp; </p>
+                    <table class="Code_Example">
+                      <tbody style="height: 105px;">
+                        <tr>
+                          <td> <button onclick="Code_Example_Toggle('Code_Example_75_1');"></button>
+                          </td>
+                          <td>
+                            <div style="height: 105px;"><code class="Shell_Code_Input">
+                                $ git clone
+                                https://cci-git.uncc.edu/zwartell/welcome.git </code><br>
+                              <span class="Shell_Code_Comment"> […you will prompted
+                                for you UNCC user id and password] </span><br>
+                              <code class="Shell_Code_Output"> Cloning into
+                                'welcome'...<br>
+                                remote: Counting objects: 6, done.<br>
+                                remote: Compressing objects: 100% (4/4), done.<br>
+                                remote: Total 6 (delta 0), reused 0 (delta 0)<br>
+                                Unpacking objects: 100% (6/6), done.<br>
+                                Checking connectivity... done. </code><br>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p></p>
+                    <p> The next section discusses how to avoid repeatedly entering
+                      your username and password when using the shell. </p>
+                  </section>
+                  <section>
+                    <h4 class="Appendix" id="Using_Git_Credentials"> Using Git HTTPS
+                      Protocol with Git Credential Manager</h4>
+                    <p> By default, the HTTPS protocol will require you to enter
+                      your UNCC username and password <u>everytime</u> you perform
+                      a <u>remote</u> Git operation (clone, push,
+                      etc.).&nbsp;&nbsp;&nbsp; To save typing, you may use the Git
+                      Credential Storage mechanism to avoid typing in a password
+                      over and over again.<br>
+                      <br>
+                      Note, the instructions below are a repetition of those found
+                      in this document Section <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.
+                    </p>
+                    <ol>
+                      <li> Read ProGit <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
+                          Git Tools - Credential Storage </a>.&nbsp; Stop at
+                        section Under the Hood. <br>
+                      </li>
+                      <li> Based on your operating system pick the appropriate
+                        credential system as described in the above ProGit chapter.<br>
+                        <br>
+                        <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
+                        "store mode" because this will save your UNCC password
+                        unencrypted on disk!
+                        <ol class="Instruction_Option Instruction_NonRubric">
+                          <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you
+                            are using Git-Bash
+                            <table class="Code_Example">
+                              <tbody>
+                                <tr>
+                                  <td> <button onclick="Code_Example_Toggle('Code_Example_751_2');">▽
+                                    </button> </td>
+                                  <td><code class="Shell_Code_Input"> $ &nbsp;git
+                                      config --global credential.helper manager<br>
+                                    </code></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </li>
+                          <li> [<em>OS</em><strong>=<em>everything else</em></strong>]
+                            Follow links discussed in <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
+                              Git Tools - Credential Storage </a>. </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </section>
+                </div>
+              </section>            
+          </section>
+          <section><h1 class="Section" id="Full_vs_Micro_Tutorial" id="Tutorial_Structure">Full Tutorial vs Micro Tutorial Option</h1>
+            
+            <p>Next, you must complete exactly <u>one</u> of two options below.              
             </p>
             <ol>                              
               <li>Part 1: Either Option I or Option II is required.<br>
                 <ol>                    
                   <li>Option I - <a href="#Part1_OptionI">Full Git Tutorial Tutorial</a>:&nbsp;&nbsp;  This option
-                    requires reading chapters in the ProGit book and completing a number of exercises.
+                    requires reading chapters in the ProGit book and completing a number of exercises.  Option I introduces you to
+                    git and the git command-line interface using the Bash command-line shell. 
                   </li>
-                  <li id="cursor">Option II - <u><a href="#Part1_OptionII">The Micro Git Tutorial:</a></u>  This option is only for students already familiar with
-                      Git and the Git command-line interface using the Bash, a particular command-line shell&nbsp;<a href="#WP2023">[WP2023]</a>.&nbsp;                                            
+                  <li>Option II - <u><a href="#Part1_OptionII">The Micro Git Tutorial:</a></u>  This option is only for students already familiar with
+                      Git and the Git command-line interface using Bash, a particular command-line shell&nbsp;<a href="#WP2023">[WP2023]</a>.&nbsp;                                            
                       <p>
                       Students in this course are either graduate students or junior or senior undergraduates.   Therefore, students are expected to be capable of
                       determining whether they have sufficient prior experience with a particular programming tool or tool set.   
                       </p>
                       <p>
-                      Skim over Chapter 1 and 2 of <a href="http://git-scm.com/book/en/v2/" target="_blank">http://git-scm.com/book/en/v2/</a>.
+                      Skim over Chapter 1 and 2 of the ProGit book (<a href="http://git-scm.com/book/en/v2/" target="_blank">http://git-scm.com/book/en/v2/</a>).
                       Also skim over "Unix Primer - Basic Commands In the Unix" <a href="WART2021">[WART2021]</a>.
-                      If you already know material covered in these readings, you should simply complete and submit the short <a href="#Part1_OptionII">The Micro Git Tutorial</a>.
+                      If you already know material covered in these readings, you have permission to just complete and submit Option II: <a href="#Part1_OptionII">The Micro Git Tutorial</a>.
                       </p>
                   </li>
                 </ol>
@@ -444,7 +1012,7 @@
             The with the above options, the possible combinations of options and the maximum points for this tutorial are shown in 
             table <a href="#RubricAwardedPoints">Rubric Awarded Points</a>            
           </section>          
-          <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="80"><span id="Part1_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Full Git Tutorial</h1>
+          <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="80"><span id="Part1_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Option I: Full Git Tutorial</h1>
          
           The instructions below guide you through reading chapters in the ProGit
           Book, 2<sup>nd</sup> Edition at <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/','ProGit');">
@@ -459,10 +1027,9 @@
               that will contain further sub-directories, one subdirectory per
               tutorial or project.&nbsp;&nbsp; You should create the course
               directory now.&nbsp;&nbsp; Name the course directory using your course
-              number, such as "ITCS_1201".&nbsp;&nbsp; In this and later assignments
-              the bash code examples will use the name ITCS_<em>XYZ </em>in order
-              keep the instruction text generic, but you should substitute the
-              appropriate course number for the <em><u>XYZ</u>.</em><br>
+              number, such as "ITCS_<span class="DataField" data-course-number=""></span>".&nbsp;&nbsp; In this and later assignments
+              the bash code examples will use the name ITCS_<span class="DataField" data-course-number=""></span> in order
+              keep the instruction text generic.  If your course number differs, you should substitute the appropriate course number after the <em>ITCS_.</em><br>
               <table class="Code_Example">
                 <tbody style="height: 75px;">
                   <tr>
@@ -473,15 +1040,15 @@
         
                           class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/<span
         
-                              style="color: white;"> </span></code>mkdir ITCS_<em>XYZ</em>
+                              style="color: white;"> </span></code>mkdir ITCS_<span class="DataField" data-course-number=""></span>
                         </code> <br>
                         <code class="Shell_Code_Input"></code><code class="Shell_Code_Input"><code
         
                             class="Shell_Code_Prompt">ada@turing42~/<span style="color: white;">
-                            </span></code>cd ITCS_<em>XYZ</em> </code> <br>
+                            </span></code>cd ITCS_<span class="DataField" data-course-number=""></span> </code> <br>
                         <code class="Shell_Code_Input"></code><code class="Shell_Code_Input"><code
         
-                            class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em><span
+                            class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span><span
         
                               style="color: white;"> </span></code></code> <br>
                       </div>
@@ -501,7 +1068,7 @@
                     <td>
                       <div style="height: 75px;"> <code class="Shell_Code_Input"><code
         
-                            class="Shell_Code_Prompt">ada@turing42~/ITCS_XYZ<span style="color: white;">
+                            class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span><span style="color: white;">
                             </span></code>mkdir git-tutorial<em></em> </code> <br>
                         <code class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/<span
         
@@ -509,12 +1076,12 @@
         
                             class="Shell_Code_Prompt"><span style="color: white;"><code
         
-                                class="Shell_Code_Input"><code class="Shell_Code_Prompt">ITCS_XYZ</code></code>
+                                class="Shell_Code_Input"><code class="Shell_Code_Prompt">ITCS_<span class="DataField" data-course-number=""></span></code></code>
                             </span></code>cd </code><code class="Shell_Code_Input"><code
         
                             class="Shell_Code_Input">git-tutorial</code><em></em> </code>
                         <br>
-                        <code class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-tutorial</code></code>
+                        <code class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial</code></code>
                         <br>
                       </div>
                     </td>
@@ -576,12 +1143,12 @@
                               <div style="height: 250px;"><code class="Shell_Code_Input"></code><code
         
                                   class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
-                                    ~/ITCS_XYZ/git-tutorial</code> tar -xf
+                                    ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial</code> tar -xf
                                   my-project.tar.gz </code> <br>
                                 <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
         
                                     class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
-                                      ~/ITCS_XYZ/git-tutorial</code></code> ls -R </code>
+                                      ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial</code></code> ls -R </code>
                                 <br>
                                 <code class="Shell_Code_Output"> .: <br>
                                   my-project my-project.tar.gz <br>
@@ -592,7 +1159,7 @@
                                 <code class="Shell_Code_Input"><code class="Shell_Code_Input"></code><code
         
                                     class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
-                                      ~/ITCS_XYZ/git-tutorial</code></code> cd
+                                      ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial</code></code> cd
                                   my-project </code> </div>
                             </td>
                           </tr>
@@ -633,12 +1200,12 @@
                                 <td>
                                   <div style="height: 150px;"> <code class="Shell_Code_Input">
                                       <code class="Shell_Code_Prompt">ada@turing42
-                                        ~/ITCS_XYZ/git-tutorial/my-project</code>
+                                        ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial/my-project</code>
                                       git remote add origin <span class="Server_Name"><span
         
                                           class="User_Input">URL of my-project</span></span><br>
                                     </code> <code class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
-                                        ~/ITCS_XYZ/git-tutorial</code></code><code class="Shell_Code_Input"><code
+                                        ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial</code></code><code class="Shell_Code_Input"><code
         
                                         class="Shell_Code_Input"><code class="Shell_Code_Prompt">/my-project
                                           </code></code></code><code class="Shell_Code_Input">git
@@ -697,35 +1264,16 @@
                           <tr>
                             <td> <button onclick="Code_Example_Toggle('Code_Example_0_3bi');">▽</button>
                             </td>
-                            <td> <span class="tag">1645</span>
-                              <div style="height: 110px;"> <code class="Shell_Code_Input"><code
-        
-                                    class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42
-                                      ~/ITCS_XYZ/git-tutorial</code><br>
-                                    <code class="Shell_Code_Prompt">ada@turing42
-                                      ~/ITCS_</code></code></code><code class="Shell_Code_Input"><code
-        
-                                    class="Shell_Code_Input"><code class="Shell_Code_Prompt"><code
-        
-                                        class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                            class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial</code><br>
-                                    <code class="Shell_Code_Input">tar -xf
-                                      ProGit_Chapter_2_2.tar.gz </code> </code><br>
-                                  <code class="Shell_Code_Prompt">ada@turing42
-                                    ~/ITCS_</code></code><code class="Shell_Code_Input"><code
-        
-                                    class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
-        
-                                        class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code></code><code
-        
-                                    class="Shell_Code_Prompt">/git-tutorial</code> <code
-        
-                                    class="Shell_Code_Input"> cd </code> <code class="Shell_Code_Input">
-                                    <code class="Shell_Code_Input">ProGit_Chapter_2_2</code>
-                                  </code></code> </div>
+                            <td>                               
+                              <div>                                   
+                                  <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial</code>
+                                    <code class="Shell_Code_Input">tar -xf ProGit_Chapter_2_2.tar.gz </code> </code><br>
+                                  <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial</code>
+                                    <code class="Shell_Code_Input"> cd ProGit_Chapter_2_2</code>                                  
+                              </div>
                               <code class="Shell_Code_Input"><code class="Shell_Code_Input">
-                                </code></code></td>
+                                </code></code>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -755,38 +1303,18 @@
                           <code class="Shell_Code_Input"></code> is the full URL of
                           the remote repo.<br>
                           <table class="Code_Example">
-                            <tbody style="height: 150px;">
+                            <tbody>
                               <tr>
                                 <td> <button>▽</button> </td>
-                                <td>
-                                  <div style="height: 150px;"> <code class="Shell_Code_Input"></code>
-                                    <code class="Shell_Code_Input"> <code class="Shell_Code_Prompt">ada@turing42
-                                        ~/ITCS_</code></code><code class="Shell_Code_Input"><code
-        
-                                        class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
-        
-                                            class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/ProGit_Chapter_2_2</code>
-                                      git remote add origin </code> <code class="Shell_Code_Input"><span
-        
-                                        class="Server_Name"> <span class="User_Input">URL
-                                          of my-project</span></span><br>
-                                    </code> <code class="Shell_Code_Input"> <code
-        
-                                        class="Shell_Code_Input"> <code class="Shell_Code_Prompt">ada@turing42
-                                          ~/ITCS_</code></code></code><code class="Shell_Code_Input"><code
-        
-                                        class="Shell_Code_Input"><code class="Shell_Code_Prompt"><code
-        
-                                            class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                                class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/ProGit_Chapter_2_2
-                                          </code> </code></code> <code class="Shell_Code_Input">git
-                                      push origin main <span style="color: black;">
-                                        <span style="font-family: serif;">t </span></span>
+                                <td>                                  
+                                  <div>
+                                     <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial/ProGit_Chapter_2_2</code>
+                                        <code class="Shell_Code_Input"> git remote add origin  <span class="User_Input">URL of my-project</span></code><br>
+                                      <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial/ProGit_Chapter_2_2</code>
+                                         <code class="Shell_Code_Input">git push origin main 
                                     </code> <br>
-                                    <code class="Shell_Code_Input"> <span class="Shell_Code_Comment">[
-                                        the credential manager that you install will
-                                        now prompt you for your username and PAT] </span>
+                                    <code class="Shell_Code_Input"> 
+                                      <span class="Shell_Code_Comment">[ the credential manager that you install will now prompt you for your username and PAT] </span>
                                     </code> </div>
                                 </td>
                               </tr>
@@ -829,27 +1357,11 @@
                             <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
                               </button> </td>
                             <td>
-                              <div style="height: 50px;"> <code class="Shell_Code_Input">
-                                  <code class="Shell_Code_Prompt">ada@turing42 ~/</code></code><code
-        
-                                  class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                      class="Shell_Code_Prompt">ITCS_</code></code></code><code
-        
-                                  class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                      class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
-        
-                                          class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial</code></code></code><code
-        
-                                  class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                      class="Shell_Code_Prompt">/ProGit_Chapter_2_2
-                                    </code></code></code><code class="Shell_Code_Input">git
-                                  push origin main <span style="color: black;"> <span
-        
-                                      style="font-family: serif;">t </span></span>
-                                </code> </div>
+                              <div id="cursor"></div>
+                              <div style="height: 50px;">                                 
+                                <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial/ProGit_Chapter_2_2</code>
+                                  <code class="Shell_Code_Input">git push origin main </code> 
+                              </div>
                             </td>
                           </tr>
                         </tbody>
@@ -886,63 +1398,19 @@
                           <table class="Code_Example">
                             <tbody style="height: 150px;">
                               <tr>
-                                <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
-                                  </button> </td>
+                                <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽ </button> </td>
                                 <td>
-                                  <div> <code class="Shell_Code_Prompt">ada@turing42
-                                      ~/</code><code class="Shell_Code_Prompt"><code
-        
-                                        class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                            class="Shell_Code_Prompt">ITCS_</code></code></code><code
-        
-                                        class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                            class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
-        
-                                                class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/</code></code></code>simplegit-progit</code>
-                                    <code class="Shell_Code_Input">git remote rename
-                                      origin upstream </code> <span class="Shell_Code_Comment">
-                                      [This renames the source repo to 'upstream', a
-                                      common convention] </span> <code class="Shell_Code_Prompt">ada@turing42
-                                      ~</code><code class="Shell_Code_Prompt">/</code><code
-        
-                                      class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
-        
-                                          class="Shell_Code_Input"><code class="Shell_Code_Prompt">ITCS_</code></code></code><code
-        
-                                        class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                            class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
-        
-                                                class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/</code></code></code></code><code
-        
-                                      class="Shell_Code_Prompt">simplegit-progit</code>
-                                    <code class="Shell_Code_Input">git remote add
-                                      origin <span class="User_Input">URL of your
-                                        repo created above </span> </code><br>
-                                    <span class="Shell_Code_Comment"> [This
-                                      associates the origin ref with your remote
-                                      repo] </span><br>
-                                    <code class="Shell_Code_Prompt">ada@turing42 ~</code><code
-        
-                                      class="Shell_Code_Prompt">/</code><code class="Shell_Code_Prompt"><code
-        
-                                        class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                            class="Shell_Code_Prompt">ITCS_</code></code></code><code
-        
-                                        class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-        
-                                            class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
-        
-                                                class="Shell_Code_Input"><code class="Shell_Code_Prompt">XYZ</code></code></code>/git-tutorial/</code></code></code></code><code
-        
-                                      class="Shell_Code_Prompt">simplegit-progit</code>
-                                    <code class="Shell_Code_Input">git push origin
-                                      --all </code><br>
-                                    <span class="Shell_Code_Comment"> [This pushes
-                                      all tags to your remote repo] </span> </div>
+                                  <div> 
+                                    <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial/simplegit-progit</code>
+                                    <code class="Shell_Code_Input">git remote rename origin upstream </code><br>
+                                     <span class="Shell_Code_Comment"> [This renames the source repo to 'upstream', a common convention] </span><br>
+                                    <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial/simplegit-progit</code>
+                                    <code class="Shell_Code_Input">git remote add origin <span class="User_Input">URL of your repo created above </span> </code><br>
+                                    <span class="Shell_Code_Comment"> [This associates the origin ref with your remote repo] </span><br>
+                                    <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial/simplegit-progit</code>
+                                    <code class="Shell_Code_Input">git push origin --all </code><br>
+                                    <span class="Shell_Code_Comment"> [This pushes all tags to your remote repo] </span> 
+                                  </div>
                                 </td>
                               </tr>
                             </tbody>
@@ -960,28 +1428,28 @@
           </ol>
           <p><strong>This completes the Full Git Tutorial.</strong></p>
          </section>
-         <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="10"><span id="Part1_OptionII"></span><h1 class="Section" id="Micro_Git_Tutorial">Micro Git Tutorial</h1>
+         <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="10"><span id="Part1_OptionII"></span><h1 class="Section" id="Micro_Git_Tutorial">Option II: Micro Git Tutorial</h1>
         
             <p> The micro tutorial is a quick verification that you have full
               read/write access to your remote repository on the course's Git
-              server.&nbsp; For most courses, students must ask the professor via
+              server.&nbsp;
+              <!--
+              For most courses, students must ask the professor via
               email for permission to perform this micro tutorial and to skip the
               full git tutorial.&nbsp; (At the professor's discretion, in certain
               advanced courses, all students will be directly instructed to just
-              perform the Micro Git Tutorial). </p>
+              perform the Micro Git Tutorial). 
+              -->
+            </p>
             <ol class="Instruction">
-              <li class="Instruction_Todo"><ins datetime="2023-08-28"><span
-        
-                class="Updated_Text_Popup_Note">Added step for consistency with
-                full git tutorial</span><u>Exercise</u><strong>:&nbsp; </strong></ins>This tutorial and all later projects in
+              <li class="Instruction_Todo"><u>Exercise</u><strong>:&nbsp; </strong>This tutorial and all later projects in
                 the course, assume you have created a 'course' directory that will
                 contain further sub-directories, one subdirectory per tutorial or
                 project.&nbsp;&nbsp; You should create the course directory
                 now.&nbsp;&nbsp; Name the course directory using your course number,
-                such as "ITCS_1201".&nbsp;&nbsp; In this and later assignments the
-                bash code examples will use the name ITCS_<em>XYZ </em>in order
-                keep the instruction text generic, but you should substitute the
-                appropriate course number for the <em><u>XYZ</u>.</em><br>
+                such as "ITCS_<span class="DataField" data-course-number=""></span>".&nbsp;&nbsp; In this and later assignments the
+                bash code examples will use the name ITCS_<span class="DataField" data-course-number=""></span> in order
+                keep the instruction text generic.  If your course number differs, you should substitute your course number after the <em>ITCS_.</em><br>
                 <table class="Code_Example">
                   <tbody style="height: 75px;">
                     <tr>
@@ -992,15 +1460,15 @@
         
                             class="Shell_Code_Input"><code class="Shell_Code_Prompt">ada@turing42~/<span
         
-                                style="color: white;"> </span></code>mkdir ITCS_<em>XYZ</em>
+                                style="color: white;"> </span></code>mkdir ITCS_<span class="DataField" data-course-number=""></span>
                           </code> <br>
                           <code class="Shell_Code_Input"></code><code class="Shell_Code_Input"><code
         
                               class="Shell_Code_Prompt">ada@turing42~/<span style="color: white;">
-                              </span></code>cd ITCS_<em>XYZ</em> </code> <br>
+                              </span></code>cd ITCS_<span class="DataField" data-course-number=""></span> </code> <br>
                           <code class="Shell_Code_Input"></code><code class="Shell_Code_Input"><code
         
-                              class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em><span
+                              class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span><span
         
                                 style="color: white;"> </span></code></code> <br>
                         </div>
@@ -1009,10 +1477,8 @@
                   </tbody>
                 </table>
               </li>
-              <li class="Instruction_Todo"><ins datetime="2023-08-28">
-                <span class="Updated_Text_Popup_Note">Added step for consistency with full git tutorial</span>
-                <u>Exercise</u><strong>:&nbsp; </strong></ins>Create a sub-directory for this tutorial
-                called 'git-micro-tutorial' and cd into that directory.&nbsp; Do all
+              <li class="Instruction_Todo"><u>Exercise</u><strong>:&nbsp; </strong>
+                Create a sub-directory for this tutorial called 'git-micro-tutorial' and cd into that directory.&nbsp; Do all
                 the exercises in the ProGit book inside that directory. <br>
                 <table class="Code_Example">
                   <tbody style="height: 75px;">
@@ -1022,7 +1488,7 @@
                       <td>
                         <div style="height: 75px;"> <code class="Shell_Code_Input"><code
         
-                              class="Shell_Code_Prompt">ada@turing42~/ITCS_XYZ<span
+                              class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span><span
         
                                 style="color: white;"> </span></code>mkdir
                             git-micro-tutorial<em></em> </code> <br>
@@ -1032,12 +1498,12 @@
         
                               class="Shell_Code_Prompt"><span style="color: white;"><code
         
-                                  class="Shell_Code_Input"><code class="Shell_Code_Prompt">ITCS_XYZ</code></code>
+                                  class="Shell_Code_Input"><code class="Shell_Code_Prompt">ITCS_<span class="DataField" data-course-number=""></span></code></code>
                               </span></code>cd </code><code class="Shell_Code_Input"><code
         
                               class="Shell_Code_Input">git-micro-tutorial</code><em></em>
                           </code> <br>
-                          <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code>
+                          <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span>/git-micro-tutorial</code>
                           <br>
                         </div>
                       </td>
@@ -1115,13 +1581,13 @@
                       <td> <button onclick="Code_Example_Toggle('Code_Example_6_3');">▽</button>
                       </td>
                       <td>
-                        <div style="height: 105px;"> <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code>&nbsp;<code
+                        <div style="height: 105px;"> <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span>/git-micro-tutorial</code>&nbsp;<code
         
                             class="Shell_Code_Input"> git init</code> <code class="Shell_Code_Output">
                             <br>
                             Initialized empty Git repository in
                             git-micro-tutorial/.git/ </code> <br>
-                          <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code><code
+                          <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span>/git-micro-tutorial</code><code
         
                             class="Shell_Code_Input">&nbsp; git remote add origin <span
         
@@ -1138,7 +1604,7 @@
                       <td> <button onclick="Code_Example_Toggle('Code_Example_6_4');">▽</button>
                       </td>
                       <td>
-                        <div style="height: 25px;"> <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code>&nbsp;<code
+                        <div style="height: 25px;"> <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span>/git-micro-tutorial</code>&nbsp;<code
         
                             class="Shell_Code_Input"> echo Hello &gt; Test.txt <br>
                           </code></div>
@@ -1154,16 +1620,16 @@
                       <td> <button onclick="Code_Example_Toggle('Code_Example_6_5');">▽</button>
                       </td>
                       <td>
-                        <div> <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code>&nbsp;
+                        <div> <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span>/git-micro-tutorial</code>&nbsp;
                           <code class="Shell_Code_Input"> git add . </code><br>
                           <div align="center"> <span class="Shell_Code_Comment">
                               [..misc output...] </span></div>
-                          <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code>&nbsp;
+                          <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span>/git-micro-tutorial</code>&nbsp;
                           <code class="Shell_Code_Input"> git commit -a -m
                             "-submitted git-micro-tutorial assignment" </code> <br>
                           <div align="center"> <span class="Shell_Code_Comment">
                               [..misc output...] </span></div>
-                          <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<em>XYZ</em>/git-micro-tutorial</code>&nbsp;
+                          <code class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span>/git-micro-tutorial</code>&nbsp;
                           <code class="Shell_Code_Input"> git push -u origin main</code><br>
                           <div align="center"> <span class="Shell_Code_Comment">
                               [..misc output...] </span></div>
@@ -1175,7 +1641,8 @@
               </li>
               <li class="Instruction_Todo"> Verify your Git server’s remote repository.&nbsp; (See Section
                 9.3 <a href="#Verify_Your_Remote_Repository"> Verify Your Remote
-                  Repository </a> ). </li>
+                  Repository </a> ). 
+              </li>
             </ol>
             <p><strong>This completes the Micro Git Tutorial.</strong></p>
             <ol>
@@ -1258,622 +1725,44 @@
               contributors, MIT license </li>
           </ul>
         </section>        
-        <section><h1 class="Appendix" id="Git_Server_Access">Git Server Access</h1>
-          This appendix describes access methods specifics for different Git
-          servers.&nbsp; Your instructor will tell you which server you should use
-          (review Section <a href="#Guide_to_Reading_these_Instructions"> Guide
-            to Reading these Instructions). </a><br>
-          <br>
-          This appendix is designed as a reference. The tutorial sequence (found
-          in Sections 1-6) and future class assignments refer to various
-          subsections in this Appendix.
-          <!--
-          <section display="none">          <h2 class="Appendix" id="Bitbucket_URL_List">Bitbucket URL List</h2>          [<em>YourServer</em>=<strong>Bitbucket</strong>]          <div class="Server_Bitbucket">            <p> Accessing <span class="Server_Name">Bitbucket </span>uses the              SSH protocol. Below is a list of the URL’s you will typically use              as well as instructions for creating a Bitbucket account. </p>            <ol class="Instruction">              <li> Each team member:&nbsp; Create an <u>academic account</u>                for yourself on <a href="https://bitbucket.org/">https://bitbucket.org/</a>&nbsp;                (If you do not already have one, of course).                <ol>                  <li><a href="https://bitbucket.org/account/signup/">https://bitbucket.org/account/signup/</a></li>                  <li> Details on their Academic Account Policy are at this <a                      href="https://confluence.atlassian.com/bitbucket/what-are-the-guidelines-for-academic-licenses-296094528.html"                      target="_blank">Link</a>.&nbsp;&nbsp; &nbsp;It is much                    better than the non-academic account!<br>                  </li>                </ol>              </li>              <li> <u>One</u> team member should create a Private Repository                for your Project then <u>share</u> that repo with:                <ol>                  <li>all other team members </li>                  <li> Dr. Wartell (Bitbucket UserID: zwartell)&nbsp; and TA’s                    Bitbucket UserID.<br>                  </li>                </ol>              </li>              <li> Instructions for setting access permission (“sharing”) your                Bitbucket repo are found the Bitbucket Website <br>              </li>            </ol>            Note, you will access Bitbucket using the ssh protocol.&nbsp;&nbsp;            This means the Bitbucket URL you should use will be something like,<span              class="File_Name"> git@bitbucket.org:<span class="User_Input">your_userid/your_reponame</span>.git              </span> <br> The course repo’s and material will be found at            URL’s such as:<span class="File_Name"> git@bitbucket.org:zwartell/<span                class="User_Input">reponame</span>.git&nbsp; </span> </div>        </section>        				-->
-          <section><h2 class="Appendix" id="Git_Authenication_Protocols">Git Authentication Protocols </h2>
-            
-  
-            Git servers support numerous authentication protocols. Use the protocol in the sub-section below that is listed as being recommended
-            for the Git server used in your class.<br>
-            <section><h3 class="Appendix" id="Git_Server_Access_Token_Protocol"> Git Server Personal Access Token Protocol</h3>
-              
-              [<em>YourServer</em>=<strong>cci-git</strong>]
-              <div class="Server_Supports_HTTPS_PAT"><br>
-                cci-git is a GitLab server.&nbsp; The recommended protocol is the
-                Personal Access Token (PAT) protocol.
-                <section>
-                  <h4 class="Appendix"> Creating an Access Token </h4>
-                  You only have to create the access token once for your cci-git
-                  account.&nbsp; You then save the token (like a password) and
-                  re-use it every time you access the cci-git server.<br>
-                  <ol class="Instruction_NonRubric">
-                    <li>In your browser sign in to <a href="https://cci-git.uncc.edu">cci-git.uncc.edu</a>.&nbsp;
-                      You will be prompted for by the UNCC SSO for your standard
-                      UNCC user id and password. </li>
-                    <li>In the upper-right corner, click your avatar and select <span
-  
-                        class="Program_Name">Preferences</span>. </li>
-                    <li>On the <span class="Program_Name">Preferences</span> menu
-                      (left side), select <span class="Program_Name"> Access
-                        Tokens</span>. </li>
-                    <li>In the new dialog "Personal Access Tokens", select <span
-  
-                        class="Program_Name">Add New Token</span></li>
-                    <li>In the new dialog "Add a personal access token", choose a
-                      name and optional expiry date for the token.
-                      <ol>
-                        <li>The suggested name is "git-bash"</li>
-                      </ol>
-                    </li>
-                    <li>For the <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#limiting-scopes-of-a-personal-access-token"
-  
-                        style="box-sizing: border-box; color: rgb(27, 105, 182); text-decoration: none; background-color: transparent;">desired
-                        scopes</a>, choose <span class="Program_Name">write_repository</span></li>
-                    <li>Click the <span class="Program_Name">Create personal
-                        access token</span></li>
-                    <li><b>Save</b> (copy and paste) the "Your new personal access
-                      token" somewhere safe. In the screen shot below (1) unhide
-                      the PAT and then (2) copy the PAT code.&nbsp; <br>
-                      This PAT code is essentially a password and you should treat
-                      it as such. (If you navigate away from or refresh the web
-                      page without saving the PAT (or loss the saved PAT), you
-                      will have to create a new one).
-                      <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-PAT.png"
-  
-                          alt="TortoiseGit-untracked.png" width="500"></figure>
-                    </li>
-                  </ol>
-                </section>
-                <section>
-                  <h4 class="Appendix">Verifying the Access Token </h4>
-                  <ol>
-                    <li> Now, to test and verify read-access to the server, clone
-                      the welcome repo:<br>
-                      <table class="Code_Example">
-                        <tbody style="height: 105px;">
-                          <tr>
-                            <td><br>
-                            </td>
-                            <td>
-                              <div style="height: 105px;"><code class="Shell_Code_Input">$
-                                  git clone https://<span class="User_Input">Your
-                                    UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/zwartell/welcome.git
-                                  welcome </code><br>
-                                <code class="Shell_Code_Output">Cloning into
-                                  'welcome'...<br>
-                                  remote: Counting objects: 6, done.<br>
-                                  remote: Compressing objects: 100% (4/4), done.<br>
-                                  remote: Total 6 (delta 0), reused 0 (delta 0)<br>
-                                  Unpacking objects: 100% (6/6), done.<br>
-                                  Checking connectivity... done. </code><br>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </li>
-                    <li> Note, the access token will be recorded in the git
-                      remote, which is demonstrated at follows.&nbsp;&nbsp; This
-                      implies you do <u>not</u> want to use the Access Token
-                      Protocol to clone into a directory that is not secure and
-                      only accessible by yourself.<br>
-                      <table class="Code_Example">
-                        <tbody style="height: 60px;">
-                          <tr>
-                            <td><br>
-                            </td>
-                            <td>
-                              <div style="height: 60px;"><code class="Shell_Code_Input">$
-                                  git remote -v</code><br>
-                                <code class="Shell_Code_Output">origin&nbsp;
-                                  https://</code><code class="Shell_Code_Output"><code
-  
-                                    class="Shell_Code_Input"><span class="User_Input">Your
-                                      UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
-                                  (fetch)<br>
-                                  origin&nbsp; https://</code><code class="Shell_Code_Output"><code
-  
-                                    class="Shell_Code_Input"><span class="User_Input">Your
-                                      UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
-                                  (push) </code><br>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </li>
-                  </ol>
-                </section>
-                <section>
-                  <h4 class="Appendix">Using of the Access Token </h4>
-                  In the future, whenever you use git bash to git clone a repo
-                  from cci-git.uncc.edu, you first determine the standard repo URL
-                  such as:<br>
-                  <br>
-                  <div style="margin-left: 40px;"> https://cci-git.uncc.edu/<span
-  
-                      class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
-                    </div> <br>
-                  When performing a git clone, you use the extended PAT syntax URL
-                  shown below:<br>
-                  <br>
-                  <div style="margin-left: 40px;">https://<code class="Shell_Code_Output"></code><span
-  
-                      class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
-  
-                      class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
-                    </div> <br>
-                  However, this extra typing can be avoided by installing a Git
-                  Credential Manager which is described next.<br>
-                  <h4 class="Appendix" id="Using_Git_Credentials">Using PAT with a
-                    Git Credential Manager</h4>
-                  <p> By default, the HTTPS with PAT protocol requires you to
-                    frequnetly enter your UNCC username and PAT
-                    password.&nbsp;&nbsp; This also leaves your PAT password
-                    visible via the command, git remote -v.</p>
-                  <p>Installing a Git Credential Manager can avoid these two
-                    issues&nbsp;&nbsp; Depending on your operating system, this
-                    may require installing additional software .&nbsp;&nbsp;
-                    However, it is worth the effort.&nbsp;&nbsp; The steps are as
-                    follows:</p>
-                  <ol>
-                    <li> Read ProGit <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
-                        Git Tools - Credential Storage </a>., but stop reading at
-                      section "Under the Hood". <br>
-                    </li>
-                    <li> Based on your operating system pick the appropriate
-                      credential system as described in the above ProGit chapter.<br>
-                      <br>
-                      <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
-                      "store mode" because this will save your UNCC password
-                      unencrypted on disk!
-                      <ol class="Instruction_Option">
-                        <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you
-                          are using Git-Bash
-                          <table class="Code_Example">
-                            <tbody>
-                              <tr>
-                                <td> <button>▽</button> </td>
-                                <td><code class="Shell_Code_Input"> $ &nbsp;git
-                                    config --global credential.helper manager<br>
-                                  </code></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </li>
-                        <li> [<em>OS</em><strong>=<em>everything else</em></strong>]
-                          Follow links discussed in <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
-                            Git Tools - Credential Storage </a>. </li>
-                      </ol>
-                    </li>
-                  </ol>
-                  To test the Credential Manager, perform the following steps:<br>
-                  <ol class="Instructions">
-                    <li> To test read-access to the server by cloning the welcome
-                      repo:<br>
-                      <table class="Code_Example">
-                        <tbody style="height: 105px;">
-                          <tr>
-                            <td><br>
-                            </td>
-                            <td>
-                              <div style="height: 105px;"><code class="Shell_Code_Input">$
-                                  git clone
-                                  https://cci-git.uncc.edu/zwartell/welcome.git
-                                  welcome </code><br>
-                                <code class="Shell_Code_Output">Cloning into
-                                  'welcome'...<br>
-                                  remote: Counting objects: 6, done.<br>
-                                  remote: Compressing objects: 100% (4/4), done.<br>
-                                  remote: Total 6 (delta 0), reused 0 (delta 0)<br>
-                                  Unpacking objects: 100% (6/6), done.<br>
-                                  Checking connectivity... done. </code><br>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <ol class="Instructions">
-                        <li> When prompted for you userid ID and password, you
-                          must enter you UNCC userid and your PAT password. </li>
-                      </ol>
-                    </li>
-                    <!--
-                              <li> Note, the PAT is recorded by the Credential                    Manager and not visible via git remote -v.<br>                    <table class="Code_Example"  >                      <tbody style="height: 60px;">                        <tr>                          <td><br>                          </td>                          <td>                            <div style="height: 60px;"><code class="Shell_Code_Input">$                                git remote -v</code><br>                              <code class="Shell_Code_Output">origin&nbsp;                                https://</code><code class="Shell_Code_Output">cci-git.uncc.edu/zwartell/welcome.git                                (fetch)<br>                                origin&nbsp; https://</code><code class="Shell_Code_Output">@cci-git.uncc.edu/zwartell/welcome.git                                (push) </code><br>                            </div>                          </td>                        </tr>                      </tbody>                    </table>                  </li>									-->
-                  </ol>
-                  Henceforth when you perform git command-line operations, you can
-                  now use the standard repo URL, rather than the extended PAT
-                  syntax URL.<br>
-                  <div style="margin-left: 80px;"></div>
-                </section>
-              </div>
-            </section>
-            <section><h3 class="Appendix" id="Accessing_Git_Server_Using_SSH_Keys">Git Server SSH Protocol </h3>
-              [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] - SSH is not
-              recommended for cci-git. Skip this section.
-              <div class="StaffNote">
-                <ul>
-                  <li><em>Staff Note:&nbsp; </em>Since it's inception,
-                    cci-git.uncc.edu we had limited success using the ssh protocol.&nbsp;&nbsp; UNCC
-                    wireless seemed to block ssh or drop ssh connections
-                    intermittently.&nbsp; Further, sometime in 2019/2020 (?) UNCC
-                    OneIT seems to have blocked all off-campus ssh access, even
-                    for faculty connecting with VPN.&nbsp;&nbsp; 
-                    Experience with OneIT indicates their security lock down is unlikely to ever to be rescinded.<br>
-                  </li>
-                </ul>
-              </div>
+        <section><h1 class="Appendix" id="cci-gitunccedu_URL_List">Misc: ??? </h1>
+        <section><h2 class="Appendix" id="cci-gitunccedu_URL_List">Course Git URL Lists</h2>
+          <p>This section is for reference only.&nbsp; There are no tutorial
+            instructional steps to be followed in this section.</p>
+          [<em>YourServer</em>=<strong>cci-git</strong>]
+          <div class="Server_Cci_Git">
+            <p>Below is a list of the git URL’s you will typically use. <br>
               <br>
-              [<em>YourServer</em>=<strong>Bitbucket</strong>]
-              <div class="Server_Supports_SSH" hidden="true">
-                <p>For servers using the SSH access method, this section covers:</p>
-                <ol start="1" type="1">
-                  <li> Starting and logging into an <span class="Program_Name">ssh-agent</span>
-                    daemon in a command-line. <br>
-                  </li>
-                  <li>Example Git operations using the Git server.</li>
-                </ol>                    
-                <section>
-                  <h4 class="Appendix" id="LinuxMac_Starting_the_ssh-agent_daemon">
-                    <a name="LinuxMac_Starting_the_ssh-agent"></a>[Linux/Mac]
-                    Starting the ssh-agent daemon </h4>
-                  <div class="OS_Mac OS_Unix">
-                    <p> These steps much be done each time you login into a
-                      computer if you want to access the Git server. They start
-                      the ssh-agent daemon process which manages Git’s
-                      authentication to the Git server. </p>
-                    <p> These steps will only work after you submit you public key
-                      to the TA and he has confirmed that it has been added to the
-                      Git server. </p>
-                    <ol class="Instruction">
-                      <li>Start your command-line shell</li>
-                      <li> Start the <span class="Program_Name">ssh-agent</span>
-                        daemon process<br>
-                        This starts a <span class="Program_Name">ssh-agent</span>
-                        daemon and a new bash shell that is setup to communicate
-                        with the <span class="Program_Name">ssh-agent</span>
-                        daemon.<br>
-                        <br>
-                      </li>
-                      <li>Load your private key into the ssh-agent daemon.</li>
-                      <li> To verify ssh-agent access:&nbsp;
-                        <ol>
-                          <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
-                            <table class="Code_Example" id="Code_Example_741_4c">
-                              <tbody style="height: 105px;">
-                                <tr>
-                                  <td> <button onclick="Code_Example_Toggle('Code_Example_741_4c');">
-                                      ▽ </button> </td>
-                                  <td>
-                                    <div style="height: 105px;"><code class="Shell_Code_Input">
-                                        $ ssh git@cci-git.uncc.edu<br>
-                                      </code> <code class="Shell_Code_Output"> <br>
-                                        The server's host key is not cached in the
-                                        registry. You <br>
-                                        have no guarantee that the server is the
-                                        computer you <br>
-                                        think it is. <br>
-                                        The server's rsa2 key fingerprint is: <br>
-                                        ssh-rsa 2048
-                                        aa:32:4a:f4:4e:96:bc:cb:46:3d:b9:de:64:bc:19:ef
-                                        ) <br>
-                                        <span class="Shell_Code_Comment"> [^ exact
-                                          number may differ ^] </span> <br>
-                                        If you trust this host, enter "y" to add
-                                        the key to <br>
-                                        PuTTY's cache and carry on connecting. <br>
-                                        If you want to carry on connecting just
-                                        once, without <br>
-                                        adding the key to the cache, enter "n". <br>
-                                        If you do not trust this host, press
-                                        Return to abandon the <br>
-                                        connection. <br>
-                                        Store key in cache? (y/n) <span class="Shell_Code_Comment">
-                                          [TYPE yes] </span> <br>
-                                        Warning: Permanently added
-                                        ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA)
-                                        to the list of known hosts. <br>
-                                        Using username "git". <br>
-                                        Server refused to allocate pty <br>
-                                        Welcome to GitLab, zwartell. <span class="Shell_Code_Comment">
-                                          [zwartell will be your username] </span>
-                                      </code></div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </li>
-                          <li> [<em>YourServer=</em><strong>bitbucket</strong>]<br>
-                            The above<strong> </strong>verifies<strong> </strong>your<strong>
-                            </strong>ssh-agent is successfully passing your key
-                            through ssh to Bitbucket. </li>
-                        </ol>
-                      </li>
-                      <li> To verify read-access to the welcome repo do as
-                        follows:<br>
-                        <br>
-                        For input text <span class="User_Input">welcome_repo_path</span>
-                        below, substitute the following based on your server::
-                        <ol class="Instruction_Option">
-                          <li> [<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            git@cci-git.uncc.edu:zwartell/welcome.git </li>
-                          <!--
-                                        <li> [<strong>bitbucket</strong>]                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git                      </li>                      -->
-                        </ol>
-                        <table class="Code_Example" id="Code_Example_741_5">
-                          <tbody style="height: 105px;">
-                            <tr>
-                              <td> <button onclick="Code_Example_Toggle('Code_Example_741_5');">▽</button>
-                              </td>
-                              <td>
-                                <div style="height: 105px;"><code class="Shell_Code_Input">
-                                    $ git clone <span class="User_Input">welcome_repo_path</span>
-                                    <br>
-                                  </code> <code class="Shell_Code_Output"> <br>
-                                    The authenticity of host ‘cci-subv.uncc.edu’
-                                    (10.18.203.162)’ can’t be established.<br>
-                                    RSA key fingerprint is
-                                    e2:6f:ac:ff:a3:30:a2:0e:c2:d6:98:f4:78:55:c5:7f.<br>
-                                    Are you sure you want to continue connecting
-                                    (yes/no)? <span class="Shell_Code_Comment">
-                                      [type yes] </span><br>
-                                    Warning: Permanently added
-                                    ‘cci-subv.uncc.edu,10.18.2013.162’ (RSA) to
-                                    the list of known hosts.<br>
-                                    <span class="Shell_Code_Comment"> […the above
-                                      will only appear the first time you connect
-                                      to the git-viscenter …] </span><br>
-                                    Cloning into 'welcome'...<br>
-                                    remote: Counting objects: 6, done.<br>
-                                    remote: Compressing objects: 100% (4/4), done.<br>
-                                    remote: Total 6 (delta 0), reused 0 (delta 0)<br>
-                                    Receiving objects: 100% (6/6), 5.50 KiB | 0
-                                    bytes/s, done.<br>
-                                  </code></div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <em> <u> <br>
-                            Possible Errors </u> </em>: If you are prompted for
-                        a password here, either the ssh-agent daemon is not setup
-                        right or your public key has not been registered yet. </li>
-                    </ol>
-                  </div>
-                </section>
-                <section>
-                  <h4 class="Appendix" id="Windows_Starting_the_ssh-agent_daemon">
-                    [Windows] Starting the ssh-agent daemon </h4>
-                  <div class="OS_Windows">
-                    <p> When you login into a computer from which want to connect
-                      to your Git server, you must perform these steps once. The
-                      steps start the ssh-agent daemon which manages Git’s
-                      authentication to the Git server. <br>
-                      <br>
-                      These steps will only work after you submit your public key
-                      to the Git server. <br>
-                      <br>
-                      These instructions allow both TortoiseGit and command-line
-                      Git to use the same <span class="Program_Name">ssh-agent</span>
-                      daemon. </p>
-                    <p><u>Start Pageant</u></p>
-                    <ol>
-                      <li> Run Pageant: <br>
-                        General:&nbsp;&nbsp; <span class="Program_Name"> Start
-                          Menu→Putty→Pagent </span>&nbsp; <br>
-                        This will create a Pageant system tray icon.<br>
-                      </li>
-                      <li> On the Pageant system tray icon, right-click and select
-                        <span class="Program_Name">Add Keys</span> from the menu.
-                        This will open a dialog box.&nbsp; </li>
-                      <li> Using the dialog, open your <span class="File_Name">id_rsa.ppk</span>
-                        file.&nbsp; You will be prompted for your passphrase. <br>
-                        <br>
-                        This starts PuTTY’s version of the ssh-agent daemon. The
-                        ssh-agent will continue to run until you log off your
-                        computer.
-                        <p><u>Start and Use the Command-Line Shell</u></p>
-                      </li>
-                      <li>Start the Git-Bash shell: Start Menu→Git→Git-Bash</li>
-                      <li> To tell git to use the ssh client compatible with
-                        TortoiseGit type the following: <br>
-                        <br>
-                        General:<br>
-                        <br>
-                        Optionally to avoid the requirement of setting the GIT_SSH
-                        variable each time you run Git-Bash, add the above line to
-                        the <span class="File_Name">.bash_profile</span> file
-                        (see Appendix 11.2). <br>
-                      </li>
-                      <li> To verify the Pagent ssh-agent daemon is working:
-                        <ol class="Instruction_Option Instruction_NonRubric">
-                          <li>[<em>YourServer</em>=<strong>bitbucket</strong>]</li>
-                          <li> [<em>YourServer=</em><strong>cci-git</strong>]<br>
-                          </li>
-                        </ol>
-                      </li>
-                      <li> To verify read-access to the <span class="File_Name">welcome</span>
-                        repo:<br>
-                        <br>
-                        For input text <span class="User_Input">welcome_repo_path</span>
-                        below, substitute the following based on your server::
-                        <ol class="Instruction_Option Instruction_NonRubric">
-                          <li> [<strong>bitbucket</strong>]
-                            &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git
-                          </li>
-                          <li> [<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            git@cci-git.uncc.edu:zwartell/welcome.git<br>
-                            <br>
-                          </li>
-                        </ol>
-                        <em><u>Possible Errors</u></em>: If you are prompted for a
-                        password here, either the ssh-agent daemon is not setup
-                        right or your public key has not been registered yet. </li>
-                    </ol>
-                  </div>
-                </section>
-              </div>
-            </section>
-            <section hidden="true"> <h3 class="Appendix" id="Accessing_Git_Server_Using_HTTPS_and_Credentials"><a name="Accessing_Git_Server_Using_HTTPS_and_Git"></a> with UNCC SSO and Credential Manager</h3>
-              [<em>YourServer</em>=<strong>cci-git</strong>] Use the <a href="#Git_Server_Access_Token_Protocol">Git
-                Server Personal Access Token Protocol</a> instead.
-              <div class="StaffNote">
-                <ul>
-                  <li><em>Staff Note</em>: The SSO protocol worked throughout the
-                    exitence of cci-git.uncc.edu until Spring 2020.&nbsp;&nbsp;
-                    Starting Fall 2020, cci-git no longer worked reliably with
-                    this protocol. </li>
-                </ul>
-              </div>
-              <div class="Server_Supports_HTTPS">
-                <section>
-                  <h4 class="Appendix" id="cci-git-activate-UNCC-account">
-                    Activate and Verify UNCC Account </h4>
-                  <p> If you have never used cci-git.uncc.edu before, your UNCC
-                    account will need to be activated.&nbsp;&nbsp; To activate
-                    your UNCC account you need to log into <a href="https://cci-git.uncc.edu/"
-  
-                      target="_blank">cci-git.uncc.edu</a> via a web browser.
-                    During this first login, cci-git.uncc.edu creates an account
-                    for you that will henceforth your UNCC's Single-Sign-On (SSO)
-                    username and password. </p>
-                  <p><u>Verify Activation of Account<em>:</em></u></p>
-                  <p> To verify activation you will clone a repo from <span class="Server_Name">cci-git</span>
-                    using the command-line.<br>
-                  </p>
-                  <p> First, as of September 2016, there is a problem with the <span
-  
-                      class="Server_Name">cci-git </span> server's SSL
-                    certificate.&nbsp;&nbsp; You should disable Git’s automatic
-                    checkings for a SSL certificate as follows: </p>
-                  <table class="Code_Example" id="Code_Example_751_1">
-                    <tbody>
-                      <tr>
-                        <td> <button onclick="Code_Example_Toggle('Code_Example_751_1');">▽</button>
-                        </td>
-                        <td><code class="Shell_Code_Input"> $ git config --global
-                            http.sslVerify false<br>
-                          </code></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  (The above Git setting is saved on your computer, so you only
-                  need to set it once).<br>
-                  <p></p>
-                  <p> Now, to test and verify read-access to the server, clone the
-                    welcome repo:&nbsp; </p>
-                  <table class="Code_Example">
-                    <tbody style="height: 105px;">
-                      <tr>
-                        <td> <button onclick="Code_Example_Toggle('Code_Example_75_1');"></button>
-                        </td>
-                        <td>
-                          <div style="height: 105px;"><code class="Shell_Code_Input">
-                              $ git clone
-                              https://cci-git.uncc.edu/zwartell/welcome.git </code><br>
-                            <span class="Shell_Code_Comment"> […you will prompted
-                              for you UNCC user id and password] </span><br>
-                            <code class="Shell_Code_Output"> Cloning into
-                              'welcome'...<br>
-                              remote: Counting objects: 6, done.<br>
-                              remote: Compressing objects: 100% (4/4), done.<br>
-                              remote: Total 6 (delta 0), reused 0 (delta 0)<br>
-                              Unpacking objects: 100% (6/6), done.<br>
-                              Checking connectivity... done. </code><br>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p></p>
-                  <p> The next section discusses how to avoid repeatedly entering
-                    your username and password when using the shell. </p>
-                </section>
-                <section>
-                  <h4 class="Appendix" id="Using_Git_Credentials"> Using Git HTTPS
-                    Protocol with Git Credential Manager</h4>
-                  <p> By default, the HTTPS protocol will require you to enter
-                    your UNCC username and password <u>everytime</u> you perform
-                    a <u>remote</u> Git operation (clone, push,
-                    etc.).&nbsp;&nbsp;&nbsp; To save typing, you may use the Git
-                    Credential Storage mechanism to avoid typing in a password
-                    over and over again.<br>
-                    <br>
-                    Note, the instructions below are a repetition of those found
-                    in this document Section <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.
-                  </p>
-                  <ol>
-                    <li> Read ProGit <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
-                        Git Tools - Credential Storage </a>.&nbsp; Stop at
-                      section Under the Hood. <br>
-                    </li>
-                    <li> Based on your operating system pick the appropriate
-                      credential system as described in the above ProGit chapter.<br>
-                      <br>
-                      <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
-                      "store mode" because this will save your UNCC password
-                      unencrypted on disk!
-                      <ol class="Instruction_Option Instruction_NonRubric">
-                        <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you
-                          are using Git-Bash
-                          <table class="Code_Example">
-                            <tbody>
-                              <tr>
-                                <td> <button onclick="Code_Example_Toggle('Code_Example_751_2');">▽
-                                  </button> </td>
-                                <td><code class="Shell_Code_Input"> $ &nbsp;git
-                                    config --global credential.helper manager<br>
-                                  </code></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </li>
-                        <li> [<em>OS</em><strong>=<em>everything else</em></strong>]
-                          Follow links discussed in <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
-                            Git Tools - Credential Storage </a>. </li>
-                      </ol>
-                    </li>
-                  </ol>
-                </section>
-              </div>
-            </section>
-          </section>
-          <section><h2 class="Appendix" id="cci-gitunccedu_URL_List">Course Git URL Lists</h2>
-            <p>This section is for reference only.&nbsp; There are no tutorial
-              instructional steps to be followed in this section.</p>
-            [<em>YourServer</em>=<strong>cci-git</strong>]
-            <div class="Server_Cci_Git">
-              <p>Below is a list of the git URL’s you will typically use. <br>
+              Your user name and password for all access to the cci-git website
+              is your UNCC username and password. </p>
+            <ol>
+              <li><u>Student Repository</u>:&nbsp;&nbsp; The Git URL is:<br>
+                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
+
+                    class="User_Input">name_of_repo_you_created</span>.git <br>
+                </span><br>
+              </li>
+              <li><u>Course Repository</u>: The course repo’s and material will
+                be found at URL’s such as:<br>
                 <br>
-                Your user name and password for all access to the cci-git website
-                is your UNCC username and password. </p>
-              <ol>
-                <li><u>Student Repository</u>:&nbsp;&nbsp; The Git URL is:<br>
-                  <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
-  
-                      class="User_Input">name_of_repo_you_created</span>.git <br>
-                  </span><br>
-                </li>
-                <li><u>Course Repository</u>: The course repo’s and material will
-                  be found at URL’s such as:<br>
-                  <br>
-                  <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
-  
-                      class="User_Input">the_repo_name</span>.git </span> <br>
-                  <br>
-                  The <span class="User_Input">ITCS_Class_URL_Name</span> will be
-                  given you with your assignments or tutorial instructions. <br>
-                  <br>
-                </li>
-                <li><u>Web Server</u>:&nbsp;&nbsp; <a href="https://cci-git.uncc.edu">https://cci-git.uncc.edu</a><br>
-                  <br>
-                  You only need to access the website via web browser when
-                  creating new repositories and for GitLab specific
-                  operations.&nbsp;&nbsp; Most, git operations will be performed
-                  using the Git command-line. </li>
-              </ol>
-            </div>
-          </section> 
-        </section>
+                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
+
+                    class="User_Input">the_repo_name</span>.git </span> <br>
+                <br>
+                The <span class="User_Input">ITCS_Class_URL_Name</span> will be
+                given you with your assignments or tutorial instructions. <br>
+                <br>
+              </li>
+              <li><u>Web Server</u>:&nbsp;&nbsp; <a href="https://cci-git.uncc.edu">https://cci-git.uncc.edu</a><br>
+                <br>
+                You only need to access the website via web browser when
+                creating new repositories and for GitLab specific
+                operations.&nbsp;&nbsp; Most, git operations will be performed
+                using the Git command-line. </li>
+            </ol>
+          </div>
+        </section> 
+      </section>
         <section><h1 class="Appendix">Basic Git Operations
           <ins datetime="9/23/2023"> <span class="Updated_Text_Popup_Note">Split out different git operations into different sub-section to clarify that the
             these 3 git operations are independent git operations, and are not meant to be performed in sequence.
@@ -2032,9 +1921,9 @@
                             <td>
                               <div style="height: 150px; background-color: black;">
                                 <code class="Shell_Code_Input"> <code class="Shell_Code_Input">
-                                    <code class="Shell_Code_Prompt"> ~/ITCS_<em>XYZ</em>/
+                                    <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/
                                     </code> mkdir verify; cd verify <br>
-                                    <code class="Shell_Code_Prompt"> ~/ITCS_</code></code></code><code
+                                    <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span></code></code></code><code
 
                                   class="Shell_Code_Input"><code class="Shell_Code_Input"><code
 
@@ -2376,6 +2265,7 @@
                 deadline.&nbsp;<br>
                 <br>
               </li>
+              <!-- Keeping this up to date with tortoisegit or whatever is the current 'popular' cross-platform git gui is too tedious
               <li><strong>[Optional] TortoiseGit</strong>&nbsp;– Optionally,
                 another good way to check with the TortoiseGit shell extension is
                 using&nbsp;Check for Modifications. This will show you whether you
@@ -2399,6 +2289,7 @@
                     alt="images/TortoiseGit-Nonversioned.png" width="500"></figure>
                 <br>
               </li>
+              -->
             </ul>
             <p> However, <span class="Program_Name">Git Sync</span> does not show
               you if you have changes to local files that you have not commited to

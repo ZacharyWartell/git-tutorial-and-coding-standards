@@ -1,4 +1,11 @@
-# tmp files created in Windows
-~*
-/new/new/nbproject/private/
-*.html~
+**/node_modules
+*.bak
+*.*~
+*.swp
+*.js.map
+www-site-mirror
+scripts/zjwgi
+site/css/zjwgi
+site/images/zjwgi
+site/scripts/zjwgi
+site/html/zjwgi
