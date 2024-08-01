@@ -141,10 +141,10 @@
           <div>
             <h2 class="nocount Title">ITCS <span data-course-number=""></span> :
               Git Tutorial and "Coding" Standards </h2>
-            <h2 class="nocount Title">Fall 2023</h2>
+            <h2 class="nocount Title">Spring 2024</h2>
             <h3 class="nocount Title">Professor: Zachary Wartell</h3>
             <div style="display : block; text-align: center;">
-              <div>Revision: <span class="Revision">Thu Oct 26 09:24:06 2023 -0400</span>
+              <div>Revision: <span class="Revision">Sat Jan 6 16:08:29 2024 -0500</span>
                 <sup> (<a href="https://zwartell@gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards/-/commits/master"
                     target="_blank">git logs</a>) </sup><br>
                 <br>
@@ -181,29 +181,37 @@
               what operating systems are allowable in your class. </p>
             <p> Information for some specific courses is also given below: </p>
             <ul>
+              <!--
               <li> [<i>Course</i>=ITCS 5122/4122- Fall 2023] In this course all
                 student submissions are to <span class="File_Name">cci-git.charlotte.edu</span>.
                 Regarding operating systems, any OS is acceptable as long as it
                 supports command-line git and the Chrome browser. </li>
-              <li> [<i>Course</i>=ITCS 3120 - Fall 2023] In this course all student
+              -->
+              <li> [<i>Course</i>=ITCS 3120] In this course all student
                 submissions are to <span class="File_Name">cci-git.charlotte.edu</span>.
                 Regarding operating systems, any OS is acceptable as long as it
                 supports command-line git and the Chrome browser. </li>
             </ul>
             <p></p>
+            <!-- disabling this feature for now
+              
             <p> Using the course specific information, select the Git server and
               operating system you are using in the dialog below.&nbsp;&nbsp; Doing
               this will display the relevant sections of this document and hide the
               non-relevant ones.
-              <!--
-              <span style="color: red; background: yellow">Note: Circa Fall            2021,only one Git server is being used by any courses using this            tutorial. Therefore instructions related to other git servers have            been (mostly) disabled and/or removed from this tutorial. <br>          </span>          -->
+            < !--
+              <span style="color: red; background: yellow">Note: Circa Fall            2021,only one Git server is being used by any courses using this            tutorial. Therefore instructions related to other git servers have            been (mostly) disabled and/or removed from this tutorial. <br>          </span>        
+              --- >
             </p>
+             -->
             <!--
             <button class="Text_Button" onclick="Div_Toggle('Server_Git_Viscenter');Div_Toggle('Server_Supports_SSH');"> git-viscenter </button>           <button class="Text_Button" onclick="Div_Toggle('Server_Bitbucket');Div_Toggle('Server_Supports_SSH');"> Bitbucket </button>                 <button class="Text_Button" onclick="Div_Toggle('Server_Cci_Git');"> cci-git </button>           -->
+            <!-- disabling this feature for now
             <form name="System_Configuration">
               <fieldset> <legend>Display Instructions For:&nbsp;</legend>
-                <!-- 
-                <p><label>Git Server: </label> <input name="Git_Server" id="cci_git" value="cci_git" checked="checked" onchange="onchange_Git_Server()" type="radio">              <label for="cci_git">cci-git</label> <input name="Git_Server" id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()" disabled="disabled"                type="radio"> <label for="bitbucket">Bitbucket</label> </p>						-->
+                < !-- 
+                <p><label>Git Server: </label> <input name="Git_Server" id="cci_git" value="cci_git" checked="checked" onchange="onchange_Git_Server()" type="radio">              <label for="cci_git">cci-git</label> <input name="Git_Server" id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()" disabled="disabled"                type="radio"> <label for="bitbucket">Bitbucket</label> </p>						
+                -- >
                 <p><label>Operating System: </label> <input name="Operating_System"
         
                     id="Windows" value="Windows" checked="checked" onchange="Div_Toggle('OS_Windows');"
@@ -219,6 +227,7 @@
                     type="checkbox"> <label for="Mac">Mac</label></p>
               </fieldset>
             </form>
+            -->
             <hr> 
           </section>
           <section><h1 class="Section" id="Prerequisites">Prerequisites</h1>
@@ -244,89 +253,98 @@
           <section><h1 class="Section" id="Guide_to_Reading_these_Instructions"> Guide to Reading these Instructions </h1>            
             <object type="text/html" data="html/zjwgi/Typographic_Conventions.html" width="100%" height="1350px"></object>
           </section>
-          <section><h1 class="Section" id="Installing_Git"> Installing Git Client </h1>
+          <section class="Instruction_Section" data-optionset='{"name":"Part 1"}'  data-point-fraction="10"><h1 class="Section" id="Installing_Git">Part 1: Installing Git Client </h1>
             <p> Git is a command-line client program that runs on your computer
-              communicating to a Git server. Git servers uses various access
+              and communicates to the Git server.
+              <!-- 
+              Git servers uses various access
               protocols for security and authorization. Depending what access
               protocol your designated Git server uses you may need to have or
               install additional software beyond command-line Git.&nbsp;
+              -->
               <!--
                 You will be told which access protocol your designated Git server uses          by your instructor. Generally, it will be either SSH or HTTPS.<br>          -->
             </p>
-            <p>Depending on what computer you are working on, you may need to
-              install the Git client tools.</p>
-            <p><u><i>Woodward Labs</i></u>:&nbsp; Windows computers in Woodward labs
-              should have both the command-line Git, Bash, OpenSSH and TortoiseGit
-              installed. Most Linux installations install these tools by default.
-              &nbsp; <br>
-              If you are using UNCC computers with a different operating system
-              please email the TA.
-              <!--
-                If your designated Git server is either <span class="File_Name">Bitbucket</span>,          go to&nbsp;<a href="#Download_and_Install_OpenSSH">Download_and_Install_OpenSSH</a>.&nbsp;          For <span class="File_Name">cci-git</span> skip to <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.          -->
+            <!-- 
+                <p>Depending on what computer you are working on, you may need to
+                  install the Git client tools.</p>
+                <p><u><i>CCI Labs</i></u>:&nbsp; Windows computers in CCI student labs
+                  should have both the command-line Git and Bash installed. Most Linux installations install these tools by default.
+                  &nbsp; <br>
+                  If you are using UNCC computers with a different operating system
+                  please email the TA.
+                  <!-
+                    If your designated Git server is either <span class="File_Name">Bitbucket</span>,          go to&nbsp;<a href="#Download_and_Install_OpenSSH">Download_and_Install_OpenSSH</a>.&nbsp;          For <span class="File_Name">cci-git</span> skip to <a href="#Full_Git_Tutorial">Full_Git_Tutorial</a>.          ->
+                </p> 
+            -->           
+                <!-- 
+            <p><u><i>Personal Computer</i></u>:&nbsp; If you are working on a personal computer, you need to install the Git client tools.&nbsp;
+              Installation are below.
+                <!- in <a href="#Installation_and_Setup_of_Command-Line">Installation_and_Setup_of_Command-Line</a>
+                and <a href="#Installation_and_Setup_of_Git_GUIs">Installation_and_Setup_of_Git_GUIs</a>.&nbsp;
+                ->
+                <!-
+                  After performing these installations, if your designated Git server is          <span class="Server_Name"> cci-git </span>you can proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.          If your server is either&nbsp; <span class="File_Name">Bitbucket</span><span            class="File_Name"></span>, you also need to also perform <a href="#Installation_and_Setup_of_OpenSSH">Installation_and_Setup_of_OpenSSH</a>          and then proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.          
+                ->
             </p>
-            <p><u><i>Home Computer</i></u>:&nbsp; If you are working on a personal
-              home computer, you need to install the Git client tools.&nbsp;
-              Installation instructions are below in <a href="#Installation_and_Setup_of_Command-Line">Installation_and_Setup_of_Command-Line</a>
-              and <a href="#Installation_and_Setup_of_Git_GUIs">Installation_and_Setup_of_Git_GUIs</a>.&nbsp;
-              <!--
-                After performing these installations, if your designated Git server is          <span class="Server_Name"> cci-git </span>you can proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.          If your server is either&nbsp; <span class="File_Name">Bitbucket</span><span            class="File_Name"></span>, you also need to also perform <a href="#Installation_and_Setup_of_OpenSSH">Installation_and_Setup_of_OpenSSH</a>          and then proceed to <a href="file:///D:/Users/Zachary/Dropbox%20%28UNC%20Charlotte%29/classes/Repository_Usage/new/new/Git%20Tutorial.html#Full_Git_Tutorial">Full_Git_Tutorial</a>.          -->
-            </p>
-            <section><h2 class="Section" id="Installation_and_Setup_of_Command-Line_Git"><a name="Installation_and_Setup_of_Command-Line"></a>Installation of Command-Line Git </h2>
+              -->
+            <section class="Instruction_Section" data-point-fraction="100"><h2 class="Section" id="Installation_and_Setup_of_Command-Line_Git"><a name="Installation_and_Setup_of_Command-Line"></a>Installation of Command-Line Git </h2>
               <p>This section walks you through installing Git client tools on your
-                computer, if your computer does not already have them installed.</p>
-              <p><em>Instructions below vary with your operating system.</em></p>
-              <ol class="Instruction_Option Instruction Instruction_NonRubric">
-                <li class="Instruction_NonRubric"> [<em>YourOS</em>=<strong>Windows</strong>]
-                  <div class="OS_Windows">
-                    <ol class="Instruction">
-                      <li> Download and Install Git for Windows, <a href="https://git-for-windows.github.io/" target="_blank">https://git-for-windows.github.io/</a>.
-                        <br>
-                        <br>
-                        This installs a minimal Unix style shell (called
-                        ‘git-bash’), the basic OpenSSH tools and git.&nbsp; During
-                        install select the options indicated in the sequence below:<br>
-                        <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/247202/sp/24720200/embedIframeJs/uiconf_id/28089382/partner_id/247202?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_91pwepnf&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_v56pw0kc"
-        
-                          allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
-        
-                          allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
-        
-                          title="Git Tutorial Install 1" height="285" frameborder="0"
-        
-                          width="400"></iframe> </li>
-                      <li> Note, git-bash does not install the standard Unix 'man'
-                        command which allows you to read the standard "Manual" pages
-                        for all Unix commands.&nbsp;&nbsp; You can get some basic
-                        information for any command by typing a command name with
-                        just the parameter <em>--help</em>.&nbsp;&nbsp;&nbsp; To
-                        find the complete man pages for a given Unix command, we
-                        suggest using <a class="WindowOpenLeft" onclick="windowOpenLeft('https://www.gnu.org/manual/manual.en.html','GNU');">https://www.gnu.org/manual/manual.en.html</a>.&nbsp;&nbsp;&nbsp;
-                        (There are ways to install the Unix man command and man
-                        pages into git-bash, but it is generally <u>not</u> worth
-                        the effort). <br>
-                        <br>
-                        Students who are advanced Windows users can alternatively
-                        install the much more complex "Unix emulators" <a href="https://www.cygwin.com/" target="_blank">
-                          https://www.cygwin.com<span style="color: black;"></span>
-                        </a> or the comprehensive <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux" target="_blank">https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux</a>.&nbsp;&nbsp;
-                        However, the TA and professor cannot provide support for
-                        these other options, but if you have <u>already</u>
-                        installed them and are <u>already</u> familiar with them,
-                        you can these system's version of git instead of git-bash.</li>
-                      <br>
-                    </ol>
-                  </div>
-                </li>                
-                <li class="Instruction_NonRubric"> [<em>YourOS</em>=<strong>Linux</strong>] Typically, default  Linux/Unix installations include Git.&nbsp; If Git is not installed, then download and install Git from <a target="_blank" href="http://git-scm.com">http://git-scm.com/</a>.
+                computer.</p>              
+              <ol class="Instruction">
+                <li class="Instruction_Option_Set"> <em>Instructions below vary with your operating system.</em>
+                  <ol>
+                    <li> [<em>YourOS</em>=<strong>Windows</strong>]
+                    <div class="OS_Windows">
+                      <ol>
+                          <li> Download and Install Git for Windows, <a href="https://git-for-windows.github.io/" target="_blank">https://git-for-windows.github.io/</a>.
+                            <br>
+                            <br>
+                            This installs a minimal Unix style shell (called
+                            ‘git-bash’), the basic OpenSSH tools and git.&nbsp; During
+                            install select the options indicated in the sequence below:<br>
+                            <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/247202/sp/24720200/embedIframeJs/uiconf_id/28089382/partner_id/247202?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_91pwepnf&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_v56pw0kc"
+            
+                              allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
+            
+                              allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
+            
+                              title="Git Tutorial Install 1" height="285" frameborder="0"
+            
+                              width="400"></iframe> 
+                          </li>
+                          <li> Note, git-bash does not install the standard Unix 'man'
+                            command which allows you to read the standard "Manual" pages
+                            for all Unix commands.&nbsp;&nbsp; You can get some basic
+                            information for any command by typing a command name with
+                            just the parameter <em>--help</em>.&nbsp;&nbsp;&nbsp; To
+                            find the complete man pages for a given Unix command, we
+                            suggest using <a class="WindowOpenLeft" onclick="windowOpenLeft('https://www.gnu.org/manual/manual.en.html','GNU');">https://www.gnu.org/manual/manual.en.html</a>.&nbsp;&nbsp;&nbsp;
+                            (There are ways to install the Unix man command and man
+                            pages into git-bash, but it is generally <u>not</u> worth
+                            the effort). <br>
+                            <br>
+                            Students who are advanced Windows users can alternatively
+                            install the much more complex "Unix emulators" <a href="https://www.cygwin.com/" target="_blank">
+                              https://www.cygwin.com<span style="color: black;"></span>
+                            </a> or the comprehensive <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux" target="_blank">https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux</a>.&nbsp;&nbsp;
+                            However, the TA and professor cannot provide support for
+                            these other options, but if you have <u>already</u>
+                            installed them and are <u>already</u> familiar with them,
+                            you can these system's version of git instead of git-bash.
+                          </li>
+                          <br>
+                      </ol>
+                    </div>
+                    </li>                
+                    <li> [<em>YourOS</em>=<strong>Linux</strong>] Typically, default  Linux/Unix installations include Git.&nbsp; If Git is not installed, then download and install Git from <a target="_blank" href="http://git-scm.com">http://git-scm.com/</a>.
+                    </li>
+                    <li> [<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp; Download and install Git from <a href="http://git-scm.com" target="_blank">http://git-scm.com/</a>.                    
+                    </li>
+                  </ol>
                 </li>
-                <li class="Instruction_NonRubric"> [<em>YourOS</em>=<strong>Mac</strong>]&nbsp;&nbsp; Download and install Git from <a href="http://git-scm.com" target="_blank">http://git-scm.com/</a>.
-                  </li>
-              </ol>
-              
-              <ins>
-                <i id="Default_Refspec">Default "refspec"</i>
-                <span class="Updated_Text_Popup_Note">9/12/2023:  Added the bash shell code below to make sure the installed git client defaults to 'main' to avoid inconsistency with the typical git server's default.</span>
-              </ins>
+              </ol>              
+              <u><i id="Default_Refspec">Default "refspec": main vs master</i></u>
               <p>
                 When you create a git repository, it is given a default name,
                 technically called a "refspec". A refspec is a string that
@@ -337,11 +355,14 @@
                 The original convention was that a repo was initialized to default name "master" (as in a <a href="https://en.wikipedia.org/wiki/Mastering_%28audio%29" target="_blank">master
                 recording</a> or a <a href="https://www.etymonline.com/word/master" target="_blank">master
                 key</a>). Circa the 2020's, it is more common to instead use the default name
-                "main".&nbsp;&nbsp; Various documentation on git use one convention or
+                "main".&nbsp;&nbsp; Different documentation on git use one convention or
                 the other.&nbsp; WWW git servers typically allow you to set the
                 default to whatever you choose.  
               </p>
-
+              <p>
+                UNCC CCI's GitLab server, to which you will be submitting your course work, defaults all newly created repo's to use tag 'main'.   Therefore, you should make sure that your git client is also set to use 'main' as the default.
+                The git client can be configured as described below:
+              </p>
               <ol>
                 <li>
                   <table class="Code_Example">
@@ -377,14 +398,14 @@
                 recommended reading if you do not already know the topic.
               </p>
               <ol>
-                <li><em>Bash Command-Line Shell</em>:&nbsp; The git instructions
+                <li><em><u>Bash Command-Line Shell</u></em>:&nbsp; The git instructions
                   in this assignment and in the <em>Pro Git</em> book use Bash, a
                   particular command-line shell&nbsp;<a href="#WP2023">[WP2023]</a>.&nbsp;
                   You need to have a basic understanding of the Bash shell.&nbsp;
                   If you are <u>not</u> already familiar with Bash, read the
                   short introduction at <a class="Citation" href="#WART2021">[WART2021]</a>.
                 </li>
-                <li><em>Environment Variables</em>:&nbsp;&nbsp; Regarding
+                <li><em><u>Environment Variables</u></em>:&nbsp;&nbsp; Regarding
                   environment variables, you should know what they are and how to
                   modify them.&nbsp; In particular knowledge of the PATH
                   environment variable is required.&nbsp;&nbsp; A general
@@ -396,9 +417,11 @@
                   for MacOS. </li>
               </ol>
             </section>
-            <section><h2 class="Section" id="Installation_and_Setup_of_Git_GUIs"> [Optional] Installation and Setup of Git GUI’s </h2>
+            <!-- to shorten and simplify instructions I removed the item below.   Also increasingly folks are using git plugins for their favored IDE -->
+            <!--
+            <section><h2 class="Section" id="Installation_and_Setup_of_Git_GUIs"> [Optional] Installation and Setup of Git GUI’s </h2>              
               <p> Generally, the Git instructions in this document and any Git
-                instructions given in this course will be given using Git
+                instructions given in this course will be presented using Git
                 command-line examples.&nbsp; But many GUI Git tools are available as
                 well for different operating systems and different IDE's.&nbsp; Use
                 of GUI Git tools is <u>optional</u>. </p>
@@ -412,22 +435,26 @@
                 </li>
               </ol>
             </section>
+            -->
           </section>
-          <section><h1 class="Section" id="Git_Server_Access">Setting up Account on Git Server</h1>                                                     
-              Git servers support numerous communication protocols for connecting to a Git client. 
-              The sub-sections below list the communication protocols used for the git server in this in class.
+          <section class="Instruction_Section" data-optionset='{"name":"Part 2"}' data-point-fraction="10"><h1 class="Section" id="Git_Server_Access">Part 2: Setting up Account on Git Server</h1>                                                                 
+              Git servers support numerous communication protocols for connecting to a Git client and various methods for user authentication.
+              For this class you will submit your work to CCI GitLab server, cci-git.uncc.edu, and use the "Personal Access Token" protocol for authentication.
+              
               <!--
+              The sub-sections below list the communication protocols used for the git server in this in class.
               Use the protocol in the sub-section below that is listed as being recommended              
               for the Git server used in your class.<br>
               -->
-              <section><h2 class="Section" id="Git_Server_Access_Token_Protocol"> Git Server Personal Access Token Protocol</h2>
-                
+              <section class="Instruction_Section" data-point-fraction="100"><h2 class="Section" id="Git_Server_Access_Token_Protocol"> Git Server Personal Access Token Protocol</h2>
+                <!-- I've stopped try to have this document support instructions for multiple servers
                 [<em>YourServer</em>=<strong>cci-git</strong>]
-                <div class="Server_Supports_HTTPS_PAT"><br>                  
-                  cci-git is a GitLab server.&nbsp; The recommended communication protocol is the
-                  Personal Access Token (PAT) protocol.                                
-                    <ol class="Instruction Instruction_NonRubric">
-                      <li> <b>Creating an Personal Access Token (PAT):</b><br>
+                -->
+                <!-- <div class="Server_Supports_HTTPS_PAT"><br> [bug] comment out because the div is causing the rubric generation to fail -->                   
+                  CCI git server, cci-git.uncc.edu, is GitLab product.  For user authentication from the git client, CCI requires you to create Personal Access Token (PAT).                                
+                  Follow the instructions below to create your Personal Access Token and to test that it works.
+                    <ol class="Instruction">
+                      <li class="Instruction_Todo"><u>Exercise</u>: <b>Creating a Personal Access Token (PAT):</b><br>
                         You only have to create the access token once for your cci-git
                         account.&nbsp; You then save the token (like a password) and
                         re-use it every time you access the cci-git server.<br>
@@ -469,66 +496,32 @@
                           </li>
                         </ol>    
                       </li>
-                      <li> <b>Using the Access Token:</b><br>
+                      <li class="Instruction_Todo"> <b>Using the Access Token:</b><br>                        
                         <ol>                        
-                          <li> <b>Verifying the Access Token:</b><br>                      
-                            <ol>
-                              <li> In order to test and verify read-access to the server, clone
-                                the welcome repo:<br>
-                                <table class="Code_Example">
-                                  <tbody style="height: 105px;">
-                                    <tr>
-                                      <td><br>
-                                      </td>
-                                      <td>
-                                        <div style="height: 105px;"><code class="Shell_Code_Input">$
-                                            git clone https://<span class="User_Input">Your
-                                              UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/zwartell/welcome.git
-                                            welcome </code><br>
-                                          <code class="Shell_Code_Output">Cloning into
-                                            'welcome'...<br>
-                                            remote: Counting objects: 6, done.<br>
-                                            remote: Compressing objects: 100% (4/4), done.<br>
-                                            remote: Total 6 (delta 0), reused 0 (delta 0)<br>
-                                            Unpacking objects: 100% (6/6), done.<br>
-                                            Checking connectivity... done. </code><br>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </li>
-                              <li> Note, the access token will be recorded in the git
-                                remote, which is demonstrated at follows.&nbsp;&nbsp; This
-                                implies you do <u>not</u> want to use the Access Token
-                                Protocol to clone into a directory that is not secure and
-                                only accessible by yourself.<br>
-                                <table class="Code_Example">
-                                  <tbody style="height: 60px;">
-                                    <tr>
-                                      <td><br>
-                                      </td>
-                                      <td>
-                                        <div style="height: 60px;"><code class="Shell_Code_Input">$
-                                            git remote -v</code><br>
-                                          <code class="Shell_Code_Output">origin&nbsp;
-                                            https://</code><code class="Shell_Code_Output"><code
-            
-                                              class="Shell_Code_Input"><span class="User_Input">Your
-                                                UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
-                                            (fetch)<br>
-                                            origin&nbsp; https://</code><code class="Shell_Code_Output"><code
-            
-                                              class="Shell_Code_Input"><span class="User_Input">Your
-                                                UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span></code>@cci-git.uncc.edu/zwartell/welcome.git
-                                            (push) </code><br>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </li>
-                            </ol>
+                          <li> <b>Verifying the Access Token:</b><br>                                                  
+                            In order to test and verify access to the server, clone the welcome repo:<br>
+                            <table class="Code_Example">
+                              <tbody style="height: 105px;">
+                                <tr>
+                                  <td><br>
+                                  </td>
+                                  <td>
+                                    <div style="height: 105px;"><code class="Shell_Code_Input">$
+                                        git clone https://<span class="User_Input">Your
+                                          UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/uncc_graphics_teaching/welcome.git
+                                        welcome </code><br>
+                                      <code class="Shell_Code_Output">Cloning into
+                                        'welcome'...<br>
+                                        remote: Counting objects: 6, done.<br>
+                                        remote: Compressing objects: 100% (4/4), done.<br>
+                                        remote: Total 6 (delta 0), reused 0 (delta 0)<br>
+                                        Unpacking objects: 100% (6/6), done.<br>
+                                        Checking connectivity... done. </code><br>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </li>    
                           <li> <b>General Procedure:</b>
                             The above step is generalized as follows.  Assume you want clone a git repo and the repo URL is as follows:<br>
@@ -537,11 +530,11 @@
             
                                 class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
                               </div> <br>
-                            To perform the git clone, you use augment the URL with the PAT using the syntax shown below:<br>
+                            To perform the git clone, you modify the repo URL using the PAT syntax shown below:<br>
                             <br>
                             <div style="margin-left: 40px;">git clone https://<code class="Shell_Code_Output"></code><span
             
-                                class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/<span
+                                class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">Your_PAT</span>@cci-git.uncc.edu/<span
             
                                 class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
                               </div> <br>
@@ -551,23 +544,23 @@
                         </ol>                    
                       </li>
   
-                      <li> <b>Setting up a Git Credential Manager:</b>
+                      <li class="Instruction_Todo"> <b>Setting up a Git Credential Manager:</b>
                         <p> By default, the HTTPS with PAT protocol requires you to
-                          frequnetly enter your UNCC username and PAT
+                          frequently enter your UNCC username and PAT
                           password.&nbsp;&nbsp; This also leaves your PAT password
                           visible via the command, git remote -v.</p>
-                        <p>Installing a Git Credential Manager can avoid these two
-                          issues&nbsp;&nbsp; Depending on your operating system, this
-                          may require installing additional software .&nbsp;&nbsp;
-                          However, it is worth the effort.&nbsp;&nbsp; The steps are as
-                          follows:</p>
+                        <p>Therefore you should install a Git Credential Manager which will securely store your PAT and 
+                          minimize how often git requires you to enter you user id and PAT.
+                          To install a Git Credential Manager do the following:</p>
                         <ol>
                           <li> Read ProGit <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
-                              Git Tools - Credential Storage </a>., but stop reading at
-                            section "Under the Hood". <br>
+                              Git Tools - Credential Storage</a>, stopping at section "Under the Hood". <br>
+                              Based on your operating system pick the appropriate
+                              credential system as described in the above ProGit chapter.<br>
                           </li>
-                          <li> Based on your operating system pick the appropriate
-                            credential system as described in the above ProGit chapter.<br>
+                            <!--
+                          <li>
+                          
                             <br>
                             <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use
                             "store mode" because this will save your UNCC password
@@ -590,14 +583,15 @@
                                 Follow links discussed in <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">
                                   Git Tools - Credential Storage </a>. </li>
                             </ol>
+                            
                           </li>
+                          -->
                         </ol>
                       </li>
-                      <li> <b>Verify the Credential Manager </b><br>
+                      <li class="Instruction_Todo"> <b>Verify the Credential Manager </b><br>
                         To test the Credential Manager, perform the following steps:<br>
                         <ol class="Instructions">
-                          <li> To test read-access to the server by cloning the welcome
-                            repo:<br>
+                          <li> To test read-access to the server, clone the welcome repo:<br>
                             <table class="Code_Example">
                               <tbody style="height: 105px;">
                                 <tr>
@@ -605,9 +599,7 @@
                                   </td>
                                   <td>
                                     <div style="height: 105px;"><code class="Shell_Code_Input">$
-                                        git clone
-                                        https://cci-git.uncc.edu/zwartell/welcome.git
-                                        welcome-2 </code><br>
+                                        git clone https://cci-git.uncc.edu/uncc_graphics_teaching/welcome.git welcome-2 </code><br>
                                       <code class="Shell_Code_Output">Cloning into
                                         'welcome'...<br>
                                         remote: Counting objects: 6, done.<br>
@@ -620,20 +612,28 @@
                                 </tr>
                               </tbody>
                             </table>
-                            <ol class="Instructions">
-                              <li> A dialog box will appear, prompting you for a userid ID and password, you
-                                must enter you UNCC userid and your PAT password. </li>
-                            </ol>
                           </li>
+                          <li> A dialog box will appear, prompting you for a user id ID and password. 
+                            Enter your UNCC user id and your PAT password. <br><br>
+                            The Credential Manager will record your PAT and store it on your computer.  Afterwards, when you give the git client a git repo URL of the form:
+                            <blockquote>
+                                https://cci-git.uncc.edu/<span class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
+                            </blockquote>    
+                            
+                            the git client will automatically retrieve your PAT from the Credential Manager.  <br><br>
+                            
+                            If problems arise with the Credential Manager, you can always fallback on specifying the repo URL 
+                            using the PAT syntax discussed in 2.b <b>General Procedure</b> above.
+                          </li>
+
                           <!--
                                     <li> Note, the PAT is recorded by the Credential                    Manager and not visible via git remote -v.<br>                    <table class="Code_Example"  >                      <tbody style="height: 60px;">                        <tr>                          <td><br>                          </td>                          <td>                            <div style="height: 60px;"><code class="Shell_Code_Input">$                                git remote -v</code><br>                              <code class="Shell_Code_Output">origin&nbsp;                                https://</code><code class="Shell_Code_Output">cci-git.uncc.edu/zwartell/welcome.git                                (fetch)<br>                                origin&nbsp; https://</code><code class="Shell_Code_Output">@cci-git.uncc.edu/zwartell/welcome.git                                (push) </code><br>                            </div>                          </td>                        </tr>                      </tbody>                    </table>                  </li>									-->
                         </ol>
-                        Henceforth when you perform git command-line operations, you can
-                        now use the standard repo URL, rather than the PAT augmented URL.<br>
                       </li>
                     </ol>
-                </div>
-              </section>            
+                <!-- </div> -->
+              </section>    
+              <!--
               <section hidden="true"><h2 class="Section" id="Accessing_Git_Server_Using_SSH_Keys">Git Server SSH Protocol </h2>
                 [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] - SSH is not
                 recommended for cci-git. Skip this section.
@@ -743,8 +743,8 @@
                           <ol class="Instruction_Option">
                             <li> [<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                               git@cci-git.uncc.edu:zwartell/welcome.git </li>
-                            <!--
-                                          <li> [<strong>bitbucket</strong>]                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git                      </li>                      -->
+                            <li hidden="true"> [<strong>bitbucket</strong>]                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git                      
+                            </li>                      
                           </ol>
                           <table class="Code_Example" id="Code_Example_741_5">
                             <tbody style="height: 105px;">
@@ -860,6 +860,8 @@
                   </section>
                 </div>
               </section>             
+              -->  
+              <!--
               <section hidden="true"> <h2 class="Section" id="Accessing_Git_Server_Using_HTTPS_and_Credentials"><a name="Accessing_Git_Server_Using_HTTPS_and_Git"></a> with UNCC SSO and Credential Manager</h2>
                 [<em>YourServer</em>=<strong>cci-git</strong>] Use the <a href="#Git_Server_Access_Token_Protocol">Git
                   Server Personal Access Token Protocol</a> instead.
@@ -983,36 +985,33 @@
                   </section>
                 </div>
               </section>            
+               -->     
           </section>
-          <section><h1 class="Section" id="Full_vs_Micro_Tutorial" id="Tutorial_Structure">Full Tutorial vs Micro Tutorial Option</h1>
-            
-            <p>Next, you must complete exactly <u>one</u> of two options below.              
+          <section><h1 class="Section" id="Full_vs_Micro_Tutorial" id="Tutorial_Structure">Full Tutorial vs Micro Tutorial Option</h1>            
+            <p>For Part 3, you must complete exactly <u>one</u> of two options below.              
             </p>
-            <ol>                              
-              <li>Part 1: Either Option I or Option II is required.<br>
-                <ol>                    
-                  <li>Option I - <a href="#Part1_OptionI">Full Git Tutorial Tutorial</a>:&nbsp;&nbsp;  This option
-                    requires reading chapters in the ProGit book and completing a number of exercises.  Option I introduces you to
-                    git and the git command-line interface using the Bash command-line shell. 
-                  </li>
-                  <li>Option II - <u><a href="#Part1_OptionII">The Micro Git Tutorial:</a></u>  This option is only for students already familiar with
-                      Git and the Git command-line interface using Bash, a particular command-line shell&nbsp;<a href="#WP2023">[WP2023]</a>.&nbsp;                                            
-                      <p>
-                      Students in this course are either graduate students or junior or senior undergraduates.   Therefore, students are expected to be capable of
-                      determining whether they have sufficient prior experience with a particular programming tool or tool set.   
-                      </p>
-                      <p>
-                      Skim over Chapter 1 and 2 of the ProGit book (<a href="http://git-scm.com/book/en/v2/" target="_blank">http://git-scm.com/book/en/v2/</a>).
-                      Also skim over "Unix Primer - Basic Commands In the Unix" <a href="WART2021">[WART2021]</a>.
-                      If you already know material covered in these readings, you have permission to just complete and submit Option II: <a href="#Part1_OptionII">The Micro Git Tutorial</a>.
-                      </p>
-                  </li>
-                </ol>
-            </ol>         
+            <ol>                    
+              <li>Option I - <a href="#Part3_OptionI">Full Git Tutorial Tutorial</a>:&nbsp;&nbsp;  This option
+                requires reading chapters in the ProGit book and completing a number of exercises.  Option I introduces you to
+                git and the git command-line interface using the Bash command-line shell. 
+              </li>
+              <li>Option II - <u><a href="#Part3_OptionII">The Micro Git Tutorial:</a></u>  This option is only for students already familiar with
+                  Git and the Git command-line interface using Bash, a particular command-line shell&nbsp;<a href="#WP2023">[WP2023]</a>.&nbsp;                                            
+                  <p>
+                  Students in this course are either graduate students or junior or senior undergraduates.   Therefore, students are expected to be capable of
+                  determining whether they have sufficient prior experience with a particular programming tool or tool set.   
+                  </p>
+                  <p>
+                  Skim over Chapter 1 and 2 of the ProGit book (<a href="http://git-scm.com/book/en/v2/" target="_blank">http://git-scm.com/book/en/v2/</a>).
+                  Also skim over "Unix Primer - Basic Commands In the Unix" <a href="WART2021">[WART2021]</a>.
+                  If you already know material covered in these readings, you have permission to just complete and submit Option II: <a href="#Part3_OptionII">The Micro Git Tutorial</a>.
+                  </p>
+              </li>
+            </ol>
             The with the above options, the possible combinations of options and the maximum points for this tutorial are shown in 
             table <a href="#RubricAwardedPoints">Rubric Awarded Points</a>            
           </section>          
-          <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="80"><span id="Part1_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Option I: Full Git Tutorial</h1>
+          <section class="Instruction_Section" data-optionset='{"name":"Part 3"}' data-point-fraction="80"><span id="Part3_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Part 3: Option I: Full Git Tutorial</h1>
          
           The instructions below guide you through reading chapters in the ProGit
           Book, 2<sup>nd</sup> Edition at <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/','ProGit');">
@@ -1050,7 +1049,7 @@
         
                             class="Shell_Code_Prompt">ada@turing42~/ITCS_<span class="DataField" data-course-number=""></span><span
         
-                              style="color: white;"> </span></code></code> <br>
+                              style="color: whdite;"> </span></code></code> <br>
                       </div>
                     </td>
                   </tr>
@@ -1356,8 +1355,7 @@
                           <tr>
                             <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽
                               </button> </td>
-                            <td>
-                              <div id="cursor"></div>
+                            <td>                              
                               <div style="height: 50px;">                                 
                                 <code class="Shell_Code_Prompt">ada@turing42 ~/ITCS_<span class="DataField" data-course-number=""></span>/git-tutorial/ProGit_Chapter_2_2</code>
                                   <code class="Shell_Code_Input">git push origin main </code> 
@@ -1428,7 +1426,7 @@
           </ol>
           <p><strong>This completes the Full Git Tutorial.</strong></p>
          </section>
-         <section class="Instruction_Section" data-optionset='{"name":"Part 1"}' data-point-fraction="10"><span id="Part1_OptionII"></span><h1 class="Section" id="Micro_Git_Tutorial">Option II: Micro Git Tutorial</h1>
+         <section class="Instruction_Section" data-optionset='{"name":"Part 3"}' data-point-fraction="10"><span id="Part3_OptionII"></span><h1 class="Section" id="Micro_Git_Tutorial">Part 3: Option II: Micro Git Tutorial</h1>
         
             <p> The micro tutorial is a quick verification that you have full
               read/write access to your remote repository on the course's Git
@@ -1724,7 +1722,8 @@
             <li> https://jquery.org/, Copyright jQuery Foundation and other
               contributors, MIT license </li>
           </ul>
-        </section>        
+        </section>  
+        <!--
         <section><h1 class="Appendix" id="cci-gitunccedu_URL_List">Misc: ??? </h1>
         <section><h2 class="Appendix" id="cci-gitunccedu_URL_List">Course Git URL Lists</h2>
           <p>This section is for reference only.&nbsp; There are no tutorial
@@ -1762,26 +1761,23 @@
             </ol>
           </div>
         </section> 
-      </section>
-        <section><h1 class="Appendix">Basic Git Operations
-          <ins datetime="9/23/2023"> <span class="Updated_Text_Popup_Note">Split out different git operations into different sub-section to clarify that the
-            these 3 git operations are independent git operations, and are not meant to be performed in sequence.
-        </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ins>
-        </h1><a id="Basic_Git_Operations" name="Basic_Git_Operations"></a>
+        </section>
+        -->      
+        <section><h1 class="Appendix">Basic Git Operations </h1><a id="Basic_Git_Operations" name="Basic_Git_Operations"></a>
           
           <p> This appendix is a reference section, the tutorial instruction text (Sections
             1-6) links to various subsections in this appendix, and future class assignments may refer back to various
             subsections in this Appendix. </p>
             
           <section><h2 class="Appendix" id="How_to_Create_New_Remote_Repository">How to Create New Remote Repository</h2>
-            Whenever you need to create new nemote repository, use the procedure below.
-            <em> Instructions below vary based on your server.</em>
+            Whenever you need to create new remote repository, use the procedure below.
+            <!-- <em> Instructions below vary based on your server.</em> -->
+            
             <ol class="Instruction_Option Instruction_NonRubric">
               <li><a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
                 <div class="Server_Cci_Git">
                   <ol>
-                    <li> Login to the cci-git Web Server (See 7.1 cci-git
-                      Server URL)&nbsp;&nbsp;&nbsp; </li>
+                    <li> Login to the cci-git.uncc.edu Web Server </li>
                     <li>First, make sure you are viewing your "dashboard" on
                       cci-git by pressing the dashboard button (selection
                       #1).&nbsp;&nbsp;&nbsp; Then create a new project by
@@ -1803,31 +1799,34 @@
                     </li>
                     <li>Set up a new project and repo:<br>
                       &nbsp;&nbsp; <br>
-                      Note, in GitLab each repo has an <em>Owner</em>.&nbsp;&nbsp;&nbsp;
-                      The Owner can invite other GitLab users as <em>Members</em>
-                      to that repo.&nbsp;&nbsp; The Owner controls what access
-                      permissions each Member has.&nbsp; For this class, you
-                      must be the Owner of all your repo's.&nbsp;&nbsp; You
-                      will additionally invite the TAs and professor as
-                      Members of each repo so they can access your repos.<br>
-                      <span class="Updated_Text_Popup_Note" id="ins_03132023">
-                        3/13/2023: Elaborated details on "Owner" vs "Member"</span>
-                      <br>
-                      <ins datatime="9/23/2023">
-                      Create your new project by making the selection shown
-                      below.&nbsp;&nbsp;&nbsp;
-                      <span class="Updated_Text_Popup_Note">Added explicit instruction list to complement original screen shot</span>
-                      </ins>
+                      <p>
+                        On the GitLab server, each repo has at least one <em>Owner</em>.&nbsp;&nbsp;&nbsp;
+                        The Owner can invite other GitLab users as <em>Members</em>
+                        to that repo. The Owner controls what access
+                        permissions a Member has. Further, GitLab allows Members to be composed into GitLab Groups.  
+                      </p>                      
+                      <p>
+                        <em id="Private_Student_Group">Student (Individual) Private Group:</em> The instructor for this class has created a unique GitLab Group for each student.
+                        These groups are referred to as Student Private Group's.  Each group has its visiblity set to <a href="https://docs.gitlab.com/ee/user/public_access.html">private</a>.
+                        It is visible only to the associated student and the instructor and TAs.
+                        When you create any your GitLab repositories for this course, you must place the git repository inside your
+                        private GitLab Group so that your coursework remains visible only to yourself and the course staff.  
+                      </p>                      
                       <ol>
                         <li>For selection #1, enter the
                           appropriate name for the repo you are
                           creating.</li>
-                        <li>For selection #2 select your user
-                          name.&nbsp; (If you see a group name such as
-                          "itcs-3120-wartell/students/<em>FirstName</em> <em>LastName"</em>
-                          do <b><u>not</u></b> select it for selection #2).</li>
+                        <li>For selection #2 select your Private Group.<br>
+                          Your Private Group name will appear similar to the following:
+                          <blockquote>                            
+                            itcs-<span class="DataField" data-course-number=""></span>-wartell/students/<em>FirstName</em> <em>LastName</em>
+                            <br><br>
+                            or
+                            <br><br>
+                            itcs-<span class="DataField" data-course-number=""></span>-wartell/students/<em>Your UserID</em>                                                  
+                          </blockquote>
                         <li>For selection #3, make sure your repo is private</li>
-                        <li>For selection #4, make sure your this box is <b>not</b> checked.
+                        <li>For selection #4, make sure the "README.md" box is <b>not</b> checked.
                           (You want a completely empty repo on the server side.)
                         </li>
                       </ol>
@@ -1836,13 +1835,14 @@
 
                           alt="TortoiseGit-untracked.png" width="500"></figure>
                     </li>
-                    <li>Open the Members dialog by making the menu selections
+
+                    <li hidden="true">Open the Members dialog by making the menu selections
                       below.<br>
                       <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Project-Infomration.png"
 
                           alt="TortoiseGit-untracked.png" width="500"></figure>
                     </li>
-                    <li id="Private_Student_Group">&nbsp;Next, you will add permission for the professor
+                    <li hidden="true">&nbsp;Next, you will add permission for the professor
                       and TAs to access your project.&nbsp; Perform the
                       actions indicated in the following screen captures.<br>
                       <ol>
@@ -1876,7 +1876,7 @@
                         </li>
                       </ol>
                     </li>
-                    <li> Finally, you should disable the Auto DevOps feature
+                    <li> Next, you should disable the Auto DevOps feature
                       for your project. &nbsp; (Otherwise gitlab is likely to
                       generate extra error messages later on when you perform
                       git command line operations).<br>
@@ -1888,7 +1888,7 @@
 
                               alt="TortoiseGit-untracked.png" width="500"></figure>
                         </li>
-                        <li>. Under Auto DevOps click Open the <span class="File_Name">Expand.</span><span
+                        <li>Under Auto DevOps click Open the <span class="File_Name">Expand.</span><span
 
                             class="File_Name"></span>
                           <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-ADO-Expand.png"
@@ -1906,8 +1906,7 @@
                       <br>
                       <br>
                     </li>
-                    <li>Finally, you should verify that you can clone this
-                      just created new repository.&nbsp;&nbsp; To determine
+                    <li>Finally, you should verify that you can clone the new repository.&nbsp;&nbsp; To determine
                       the URL make the selection below:
                       <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-Get-URL.png"
 
@@ -1923,14 +1922,8 @@
                                 <code class="Shell_Code_Input"> <code class="Shell_Code_Input">
                                     <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/
                                     </code> mkdir verify; cd verify <br>
-                                    <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span></code></code></code><code
-
-                                  class="Shell_Code_Input"><code class="Shell_Code_Input"><code
-
-                                      class="Shell_Code_Prompt"><code class="Shell_Code_Input"><code
-
-                                          class="Shell_Code_Input"><code class="Shell_Code_Prompt"><em>XYZ</em></code></code></code>/verify
-                                      </code> git clone <code class="User_Input">URL Prefix For The Repo</code>/my-first-repo.git <br>
+                                    <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/verify </code>
+                                  <code class="Shell_Code_Input"> $ git clone <code class="User_Input">URL Prefix For The Repo</code>/my-first-repo.git <br>
                                   </code> <code class="Shell_Code_Output">
                                     Cloning into 'my-first-repo'...<br>
                                     warning: You appear to have cloned an
@@ -1950,10 +1943,10 @@
             </ol>
           </li>
           </section>
-          <section><h2 class="Appendix">How to Push New Remote Repository</h2>    
-              Whenever you need to push files to a new&nbsp;<u>empty</u>,&nbsp;<u>remote</u>&nbsp;repository, 
+          <section><h2 class="Appendix">How to Push New Remote Repository</h2>                
+              Whenever you need to push files to a new&nbsp;<u>empty</u>,&nbsp; server-side  repository, 
               follow the procedure below.                
-              Assume the remote is called&nbsp;<u><span class="User_Input">Project_Example.git</span></u>:
+              Assume the remote is called&nbsp;<span class="File_Name">Project_Example.git</span>:
               <br>
               <ol class="Instruction_Option">
                 <li> [<em>YourServer</em>=<strong>cci-git</strong>]
@@ -1961,16 +1954,15 @@
                     <ol>
                       <li><strong>Option I</strong>:&nbsp;<strong>git clone</strong>:
                         &nbsp;<br>
-                        If you have&nbsp;<u>not</u>&nbsp;already created files
-                        in a local directory that you want to import, performing
-                        the following:<br>
+                        Use Option I, if you have&nbsp;<u>not</u>&nbsp;previously created files in a local directory.  Perform the following:<br>
                         <table class="Code_Example">
                           <tbody>
                             <tr>
                               <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_7');">▽
                                 </button> </td>
                               <td>                                  
-                                <div style="height: 150px;"> <code class="Shell_Code_Input">
+                                <div style="height: 150px;">                                                                     
+                                  <code class="Shell_Code_Input">
                                     $ git clone <code class="User_Input">URL Prefix For The Repo</code>/Project_Example.git<br>
                                   </code> <code class="Shell_Code_Output">
                                     Cloning into 'Project_Example'...<br>
@@ -2008,40 +2000,43 @@
                           </tbody>
                         </table>                                                    
                       </li>
-                      <li><strong>Option II</strong>:&nbsp;&nbsp;<strong> git
-                          init: </strong><br>
-                        If you&nbsp;<u>already</u>&nbsp;created files in a local
-                        directory (call it <span class="File_Name">Project_Example</span>
-                        and that local directory is&nbsp;<u>not</u>&nbsp;already
-                        a local Git repo, perform the following: (1) initialize
-                        that directory as a local Git repo and (2) push it the
-                        remote Git repo:<br>
+                      <li><strong>Option II</strong>:&nbsp;&nbsp;<strong> git init: </strong><br>
+                        Use Option II, if you&nbsp;<u>already</u>&nbsp;have files in a local
+                        directory, and you want to make the local directory local git repo and then 
+                        push it to your pre-existing remote repo.  Perform the following:<br>
                         <table class="Code_Example" id="Code_Example_9_1_8">
                           <tbody>
                             <tr>
                               <td> <button onclick="Code_Example_Toggle('Code_Example_9_1_8');">▽
                                 </button> </td>
                               <td>
-                                <div style="height: 150px;"><code class="Shell_Code_Input">
-                                    $ cd Project_Example<br>
+                                <div>
+                                  <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/Project_Example
+                                  <code class="Shell_Code_Input">                                    
                                     $ git init<br>
-                                  </code><code class="Shell_Code_Output">
+                                  </code>
+                                  <code class="Shell_Code_Output">
                                     Initialized empty Git repository in
                                     Project_Example/.git/ </code><br>
+                                    <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/Project_Example
                                   <code class="Shell_Code_Input"> $ git remote
                                     add origin
                                     https://cci-git.uncc.edu/your_user_id/Project_Example.git<br>
-                                    $ git add -A<br>
-                                    $ git commit –m "-initial import" <br>
-                                    $ git push -u origin main </code><code class="Shell_Code_Input">
-                                    <br>
-                                  </code><code class="Shell_Code_Output">
+                                  <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/Project_Example </code>
+                                  <code class="Shell_Code_Input"> $ git add -A<br> </code>
+                                  <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/Project_Example </code>
+                                  <code class="Shell_Code_Input">$ git commit –m "-initial import" </code><br>
+                                  <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/Project_Example </code>
+                                  <code class="Shell_Code_Input">$ git push -u origin main </code><br>
+                                  <code class="Shell_Code_Output">
                                     Counting objects: 3, done.<br>
                                     Writing objects: 100% (3/3), 219 bytes | 0
                                     bytes/s, done.<br>
                                     Total 3 (delta 0), reused 0 (delta 0)<br>
                                     To git@cci-git.uncc.edu:<em>your_user_id</em>/Project_Example.git
-                                    </code></div> </td>
+                                  </code>
+                                </div> 
+                              </td>
                             </tr>
                           </tbody>
                         </table>
