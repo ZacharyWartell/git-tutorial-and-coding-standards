@@ -297,25 +297,16 @@
                     <li> [<em>YourOS</em>=<strong>Windows</strong>]
                     <div class="OS_Windows">
                       <ol>
-                          <li> Download and Install Git for Windows, <a href="https://git-for-windows.github.io/" target="_blank">https://git-for-windows.github.io/</a>.
+                          <li> Download and Install Git for Windows, <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>.
                             <br>
                             <br>
                             This installs a minimal Unix style shell (called
                             ‘git-bash’), the basic OpenSSH tools and git.&nbsp; During
                             install select the options indicated in the sequence below:<br>
-                            <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/247202/sp/24720200/embedIframeJs/uiconf_id/28089382/partner_id/247202?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=1_91pwepnf&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_v56pw0kc"
-            
-                              allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""
-            
-                              allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
-            
-                              title="Git Tutorial Install 1" height="285" frameborder="0"
-            
-                              width="400"></iframe> 
+                            <iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="Install Git for Windows" src="https://uncc.instructuremedia.com/embed/29fbb42f-1284-4c4e-b3ad-dc0fefccd13b" frameborder="0"></iframe>                            
                           </li>
-                          <li> Note, git-bash does not install the standard Unix 'man'
-                            command which allows you to read the standard "Manual" pages
-                            for all Unix commands.&nbsp;&nbsp; You can get some basic
+                          <li> Note, git-bash does not install the full Unix help documentation (
+                            .e.g. the 'man' command).  However, you can get some basic
                             information for any command by typing a command name with
                             just the parameter <em>--help</em>.&nbsp;&nbsp;&nbsp; To
                             find the complete man pages for a given Unix command, we
@@ -451,26 +442,26 @@
                 [<em>YourServer</em>=<strong>cci-git</strong>]
                 -->
                 <!-- <div class="Server_Supports_HTTPS_PAT"><br> [bug] comment out because the div is causing the rubric generation to fail -->                   
-                  CCI git server, cci-git.uncc.edu, is GitLab product.  For user authentication from the git client, CCI requires you to create Personal Access Token (PAT).                                
+                  CCI git server, cci-git.uncc.edu, is GitLab server.  For user authentication from the git client, CCI requires you to create Personal Access Token (PAT).                                
                   Follow the instructions below to create your Personal Access Token and to test that it works.
                     <ol class="Instruction">
                       <li class="Instruction_Todo"><u>Exercise</u>: <b>Creating a Personal Access Token (PAT):</b><br>
                         You only have to create the access token once for your cci-git
-                        account.&nbsp; You then save the token (like a password) and
-                        re-use it every time you access the cci-git server.<br>
+                        account.&nbsp; You then write down the PAT token and keep it safe like a password. You will 
+                        re-use your PAT token when you access the cci-git server.<br>
                         <ol>
                           <li>In your browser sign in to <a href="https://cci-git.uncc.edu">cci-git.uncc.edu</a>.&nbsp;
                             You will be prompted for by the UNCC SSO for your standard
                             UNCC user id and password. </li>
                           <li>In the upper-right corner, click your avatar and select <span
         
-                              class="Program_Name">Preferences</span>. </li>
+                              class="File_Name">Preferences</span>. </li>
                           <li>On the <span class="Program_Name">Preferences</span> menu
-                            (left side), select <span class="Program_Name"> Access
+                            (left side), select <span class="File_Name"> Access
                               Tokens</span>. </li>
                           <li>In the new dialog "Personal Access Tokens", select <span
         
-                              class="Program_Name">Add New Token</span></li>
+                              class="File_Name">Add New Token</span></li>
                           <li>In the new dialog "Add a personal access token", choose a
                             name and optional expiry date for the token.
                             <ol>
@@ -480,19 +471,17 @@
                           <li>For the <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#limiting-scopes-of-a-personal-access-token"
         
                               style="box-sizing: border-box; color: rgb(27, 105, 182); text-decoration: none; background-color: transparent;">desired
-                              scopes</a>, choose <span class="Program_Name">write_repository</span></li>
-                          <li>Click the <span class="Program_Name">Create personal
+                              scopes</a>, choose <span class="File_Name">write_repository</span></li>
+                          <li>Click the <span class="File_Name">Create personal
                               access token</span></li>
-                          <li><b>Save</b> (copy and paste) the "Your new personal access
-                            token" somewhere safe. In the screen shot below (1) unhide
-                            the PAT and then (2) copy the PAT code.&nbsp; <br>
-                            This PAT code is essentially a password and you should treat
-                            it as such. (If you navigate away from or refresh the web
-                            page without saving the PAT (or lose the saved PAT), you
-                            will have to create a new one).
-                            <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-PAT.png"
-        
-                                alt="TortoiseGit-untracked.png" width="500"></figure>
+                          <li>You should see a dialog similar to the one below:
+                            <figure class="Screen_Capture" tabindex="1"><img src="images/cci-git-your-PAT.png"  alt="cci-git-your-PAT.png" width="500"></figure>
+                            <ol>
+                               <li>Click the "eye" button (#1) to unhide the PAT.</li>
+                               <li>Copy the PAT token (#2).</li>
+                               <li>Save</b> (copy and paste) your PAT token somewhere safe, such as using whatever mechanism you use
+                                to store your various computer passwords.</li>
+                            </ol>
                           </li>
                         </ol>    
                       </li>
@@ -545,9 +534,8 @@
                       </li>
   
                       <li class="Instruction_Todo"> <b>Setting up a Git Credential Manager:</b>
-                        <p> By default, the HTTPS with PAT protocol requires you to
-                          frequently enter your UNCC username and PAT
-                          password.&nbsp;&nbsp; This also leaves your PAT password
+                        <p> By default, the PAT protocol requires you to
+                          frequently enter your UNCC username and PAT token.&nbsp;&nbsp; This also leaves your PAT password
                           visible via the command, git remote -v.</p>
                         <p>Therefore you should install a Git Credential Manager which will securely store your PAT and 
                           minimize how often git requires you to enter you user id and PAT.
