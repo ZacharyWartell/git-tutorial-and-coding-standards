@@ -59,9 +59,9 @@
         {
             "AssignmentName" :
             {
-                "courseNumber" : "3120",
+                "courseNumber" : "5122",
                 "number" : "t1",
-                "numberLongDir" : "3120-t1-git-tutorial",
+                "numberLongDir" : "5122-t1-git-tutorial",
                 "name" : "git-tutorial"
             }
         }
@@ -141,10 +141,10 @@
           <div>
             <h2 class="nocount Title">ITCS <span data-course-number=""></span> :
               Git Tutorial and "Coding" Standards </h2>
-            <h2 class="nocount Title">Spring 2024</h2>
+            <h2 class="nocount Title">Fall 2024</h2>
             <h3 class="nocount Title">Professor: Zachary Wartell</h3>
             <div style="display : block; text-align: center;">
-              <div>Revision: <span class="Revision">Sat Jan 6 16:08:29 2024 -0500</span>
+              <div>Revision: <span class="Revision">Thu Aug 1 16:40:08 2024 -0400</span>
                 <sup> (<a href="https://zwartell@gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards/-/commits/master"
                     target="_blank">git logs</a>) </sup><br>
                 <br>
@@ -428,9 +428,26 @@
             </section>
             -->
           </section>
-          <section class="Instruction_Section" data-optionset='{"name":"Part 2"}' data-point-fraction="10"><h1 class="Section" id="Git_Server_Access">Part 2: Setting up Account on Git Server</h1>                                                                 
-              Git servers support numerous communication protocols for connecting to a Git client and various methods for user authentication.
-              For this class you will submit your work to CCI GitLab server, cci-git.uncc.edu, and use the "Personal Access Token" protocol for authentication.
+          <section class="Instruction_Section" data-optionset='{"name":"Part 2"}' data-point-fraction="5"><h1 class="Section" id="Git_Server_Access">Part 2: Setting up Virtual Private Network (VPN)</h1>                                                                 
+              A Virtual Private Network (VPN) is a common technology use to ensure a private, encrypted connection over the public Internet between a personal computer and enterprise's internal network.
+              In order to access the CCI GitLab server, cci-git.charlotte.edu, from off-campus you need to connect to UNCC through a VPN.
+              <section class="Instruction_Section" data-point-fraction="50"><h2 class="Section" id="Git_Server_Access">Installation</h2>                                                                 
+                  Instructions for installing the required UNCC VPN software are at this link:
+                  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://services.help.charlotte.edu/TDClient/33/Portal/KB/ArticleDet?ID=674','VPN');">
+                    How do I download and install the UNC Charlotte VPN on my personal computer?
+                  </a>
+              </section>
+              <section class="Instruction_Section" data-point-fraction="50"><h2 class="Section" id="Git_Server_Access">Connecting</h2>                                                                 
+                In order to reach cci-git.charlotte.edu either in the web browser or using the Git client you must
+                connect to UNCC the VPN.  Instructions for connecting to the UNCC VPN are at link below.  
+                  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://services.help.charlotte.edu/TDClient/33/Portal/KB/ArticleDet?ID=677','VPN');">
+                    How do I connect to the UNC Charlotte VPN?
+                  </a>
+              </section>              
+          </section>
+          <section class="Instruction_Section" data-optionset='{"name":"Part 3"}' data-point-fraction="5"><h1 class="Section" id="Git_Server_Access">Part 3: Setting up Account on Git Server</h1>                                                                 
+            For this class you will submit your work to the CCI GitLab server, cci-git.charlotte.edu.  For user authentication you will 
+            use the git "Personal Access Token" (PAT) protocol.              
               
               <!--
               The sub-sections below list the communication protocols used for the git server in this in class.
@@ -442,26 +459,23 @@
                 [<em>YourServer</em>=<strong>cci-git</strong>]
                 -->
                 <!-- <div class="Server_Supports_HTTPS_PAT"><br> [bug] comment out because the div is causing the rubric generation to fail -->                   
-                  CCI git server, cci-git.uncc.edu, is GitLab server.  For user authentication from the git client, CCI requires you to create Personal Access Token (PAT).                                
-                  Follow the instructions below to create your Personal Access Token and to test that it works.
+                    Follow the instructions below to create your Personal Access Token (PAT) on cci-git.charlotte.edu.
                     <ol class="Instruction">
                       <li class="Instruction_Todo"><u>Exercise</u>: <b>Creating a Personal Access Token (PAT):</b><br>
                         You only have to create the access token once for your cci-git
-                        account.&nbsp; You then write down the PAT token and keep it safe like a password. You will 
-                        re-use your PAT token when you access the cci-git server.<br>
+                        account.&nbsp; You then write down the PAT token and store it somewhere safe.  The PAT is the password that you will 
+                        need when you access the cci-git server from the git client.<br>
                         <ol>
-                          <li>In your browser sign in to <a href="https://cci-git.uncc.edu">cci-git.uncc.edu</a>.&nbsp;
+                          <li>In your browser sign in to <a href="https://cci-git.charlotte.edu">cci-git.charlotte.edu</a>.&nbsp;
                             You will be prompted for by the UNCC SSO for your standard
-                            UNCC user id and password. </li>
-                          <li>In the upper-right corner, click your avatar and select <span
+                            UNCC user id and password. Most likely you will also be prompted a second time for you UNCC dual-factor authentication. </li>
+                          <li>In the upper-left corner of the cci-git.charlotte.edu webpage , click on the avatar icon. A dropdown menu will appear. In that menu, select <span
         
                               class="File_Name">Preferences</span>. </li>
-                          <li>On the <span class="Program_Name">Preferences</span> menu
-                            (left side), select <span class="File_Name"> Access
-                              Tokens</span>. </li>
-                          <li>In the new dialog "Personal Access Tokens", select <span
-        
-                              class="File_Name">Add New Token</span></li>
+                          <li>On the <span class="Program_Name">Preferences</span> menu (left side), select <span class="File_Name"> Access Tokens</span>. 
+                          </li>
+                          <li>In the new dialog "Personal Access Tokens", select  <span class="File_Name">Add New Token</span>
+                          </li>
                           <li>In the new dialog "Add a personal access token", choose a
                             name and optional expiry date for the token.
                             <ol>
@@ -485,9 +499,9 @@
                           </li>
                         </ol>    
                       </li>
-                      <li class="Instruction_Todo"> <b>Using the Access Token:</b><br>                        
+                      <li class="Instruction_Todo"> <b>Using the Personal Access Token:</b><br>                        
                         <ol>                        
-                          <li> <b>Verifying the Access Token:</b><br>                                                  
+                          <li> <b>Verifying the Personal Access Token:</b><br>                                                  
                             In order to test and verify access to the server, clone the welcome repo:<br>
                             <table class="Code_Example">
                               <tbody style="height: 105px;">
@@ -497,7 +511,7 @@
                                   <td>
                                     <div style="height: 105px;"><code class="Shell_Code_Input">$
                                         git clone https://<span class="User_Input">Your
-                                          UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.uncc.edu/uncc_graphics_teaching/welcome.git
+                                          UNCC user id&gt;</span>:<span class="User_Input">your_access_token</span>@cci-git.charlotte.edu/uncc_graphics_teaching/welcome.git
                                         welcome </code><br>
                                       <code class="Shell_Code_Output">Cloning into
                                         'welcome'...<br>
@@ -515,7 +529,7 @@
                           <li> <b>General Procedure:</b>
                             The above step is generalized as follows.  Assume you want clone a git repo and the repo URL is as follows:<br>
                             <br>
-                            <div style="margin-left: 40px;"> https://cci-git.uncc.edu/<span
+                            <div style="margin-left: 40px;"> https://cci-git.charlotte.edu/<span
             
                                 class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
                               </div> <br>
@@ -523,7 +537,7 @@
                             <br>
                             <div style="margin-left: 40px;">git clone https://<code class="Shell_Code_Output"></code><span
             
-                                class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">Your_PAT</span>@cci-git.uncc.edu/<span
+                                class="User_Input">Your UNCC user id&gt;</span>:<span class="User_Input">Your_PAT</span>@cci-git.charlotte.edu/<span
             
                                 class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
                               </div> <br>
@@ -535,7 +549,7 @@
   
                       <li class="Instruction_Todo"> <b>Setting up a Git Credential Manager:</b>
                         <p> By default, the PAT protocol requires you to
-                          frequently enter your UNCC username and PAT token.&nbsp;&nbsp; This also leaves your PAT password
+                          frequently enter your UNCC username and PAT token.&nbsp;&nbsp; This also leaves your PAT token
                           visible via the command, git remote -v.</p>
                         <p>Therefore you should install a Git Credential Manager which will securely store your PAT and 
                           minimize how often git requires you to enter you user id and PAT.
@@ -587,7 +601,7 @@
                                   </td>
                                   <td>
                                     <div style="height: 105px;"><code class="Shell_Code_Input">$
-                                        git clone https://cci-git.uncc.edu/uncc_graphics_teaching/welcome.git welcome-2 </code><br>
+                                        git clone https://cci-git.charlotte.edu/uncc_graphics_teaching/welcome.git welcome-2 </code><br>
                                       <code class="Shell_Code_Output">Cloning into
                                         'welcome'...<br>
                                         remote: Counting objects: 6, done.<br>
@@ -601,21 +615,21 @@
                               </tbody>
                             </table>
                           </li>
-                          <li> A dialog box will appear, prompting you for a user id ID and password. 
-                            Enter your UNCC user id and your PAT password. <br><br>
+                          <li> A dialog box will appear, prompting you for a UNCC user id ID and PAT token. 
+                            Enter this information. <br><br>
                             The Credential Manager will record your PAT and store it on your computer.  Afterwards, when you give the git client a git repo URL of the form:
                             <blockquote>
-                                https://cci-git.uncc.edu/<span class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
+                                https://cci-git.charlotte.edu/<span class="User_Input">user_or_group_name</span>/<span class="User_Input">repo_name</span>.git
                             </blockquote>    
                             
                             the git client will automatically retrieve your PAT from the Credential Manager.  <br><br>
                             
-                            If problems arise with the Credential Manager, you can always fallback on specifying the repo URL 
+                            If problems arise with the Credential Manager, you can fallback on specifying the repo URL 
                             using the PAT syntax discussed in 2.b <b>General Procedure</b> above.
                           </li>
 
                           <!--
-                                    <li> Note, the PAT is recorded by the Credential                    Manager and not visible via git remote -v.<br>                    <table class="Code_Example"  >                      <tbody style="height: 60px;">                        <tr>                          <td><br>                          </td>                          <td>                            <div style="height: 60px;"><code class="Shell_Code_Input">$                                git remote -v</code><br>                              <code class="Shell_Code_Output">origin&nbsp;                                https://</code><code class="Shell_Code_Output">cci-git.uncc.edu/zwartell/welcome.git                                (fetch)<br>                                origin&nbsp; https://</code><code class="Shell_Code_Output">@cci-git.uncc.edu/zwartell/welcome.git                                (push) </code><br>                            </div>                          </td>                        </tr>                      </tbody>                    </table>                  </li>									-->
+                                    <li> Note, the PAT is recorded by the Credential                    Manager and not visible via git remote -v.<br>                    <table class="Code_Example"  >                      <tbody style="height: 60px;">                        <tr>                          <td><br>                          </td>                          <td>                            <div style="height: 60px;"><code class="Shell_Code_Input">$                                git remote -v</code><br>                              <code class="Shell_Code_Output">origin&nbsp;                                https://</code><code class="Shell_Code_Output">cci-git.charlotte.edu/zwartell/welcome.git                                (fetch)<br>                                origin&nbsp; https://</code><code class="Shell_Code_Output">@cci-git.charlotte.edu/zwartell/welcome.git                                (push) </code><br>                            </div>                          </td>                        </tr>                      </tbody>                    </table>                  </li>									-->
                         </ol>
                       </li>
                     </ol>
@@ -623,12 +637,12 @@
               </section>    
               <!--
               <section hidden="true"><h2 class="Section" id="Accessing_Git_Server_Using_SSH_Keys">Git Server SSH Protocol </h2>
-                [<em>YourServer</em>=<strong>cci-git.uncc.edu</strong>] - SSH is not
+                [<em>YourServer</em>=<strong>cci-git.charlotte.edu</strong>] - SSH is not
                 recommended for cci-git. Skip this section.
                 <div class="StaffNote">
                   <ul>
                     <li><em>Staff Note:&nbsp; </em>Since it's inception,
-                      cci-git.uncc.edu we had limited success using the ssh protocol.&nbsp;&nbsp; UNCC
+                      cci-git.charlotte.edu we had limited success using the ssh protocol.&nbsp;&nbsp; UNCC
                       wireless seemed to block ssh or drop ssh connections
                       intermittently.&nbsp; Further, sometime in 2019/2020 (?) UNCC
                       OneIT seems to have blocked all off-campus ssh access, even
@@ -680,7 +694,7 @@
                                         ▽ </button> </td>
                                     <td>
                                       <div style="height: 105px;"><code class="Shell_Code_Input">
-                                          $ ssh git@cci-git.uncc.edu<br>
+                                          $ ssh git@cci-git.charlotte.edu<br>
                                         </code> <code class="Shell_Code_Output"> <br>
                                           The server's host key is not cached in the
                                           registry. You <br>
@@ -730,7 +744,7 @@
                           below, substitute the following based on your server::
                           <ol class="Instruction_Option">
                             <li> [<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              git@cci-git.uncc.edu:zwartell/welcome.git </li>
+                              git@cci-git.charlotte.edu:zwartell/welcome.git </li>
                             <li hidden="true"> [<strong>bitbucket</strong>]                        &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git                      
                             </li>                      
                           </ol>
@@ -836,7 +850,7 @@
                               &nbsp;&nbsp;&nbsp;git@bitbucket.org:zwartell/welcome.git
                             </li>
                             <li> [<strong>cci-git</strong>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              git@cci-git.uncc.edu:zwartell/welcome.git<br>
+                              git@cci-git.charlotte.edu:zwartell/welcome.git<br>
                               <br>
                             </li>
                           </ol>
@@ -856,7 +870,7 @@
                 <div class="StaffNote">
                   <ul>
                     <li><em>Staff Note</em>: The SSO protocol worked throughout the
-                      exitence of cci-git.uncc.edu until Spring 2020.&nbsp;&nbsp;
+                      exitence of cci-git.charlotte.edu until Spring 2020.&nbsp;&nbsp;
                       Starting Fall 2020, cci-git no longer worked reliably with
                       this protocol. </li>
                   </ul>
@@ -865,12 +879,12 @@
                   <section>
                     <h4 class="Appendix" id="cci-git-activate-UNCC-account">
                       Activate and Verify UNCC Account </h4>
-                    <p> If you have never used cci-git.uncc.edu before, your UNCC
+                    <p> If you have never used cci-git.charlotte.edu before, your UNCC
                       account will need to be activated.&nbsp;&nbsp; To activate
-                      your UNCC account you need to log into <a href="https://cci-git.uncc.edu/"
+                      your UNCC account you need to log into <a href="https://cci-git.charlotte.edu/"
     
-                        target="_blank">cci-git.uncc.edu</a> via a web browser.
-                      During this first login, cci-git.uncc.edu creates an account
+                        target="_blank">cci-git.charlotte.edu</a> via a web browser.
+                      During this first login, cci-git.charlotte.edu creates an account
                       for you that will henceforth your UNCC's Single-Sign-On (SSO)
                       username and password. </p>
                     <p><u>Verify Activation of Account<em>:</em></u></p>
@@ -906,7 +920,7 @@
                           <td>
                             <div style="height: 105px;"><code class="Shell_Code_Input">
                                 $ git clone
-                                https://cci-git.uncc.edu/zwartell/welcome.git </code><br>
+                                https://cci-git.charlotte.edu/zwartell/welcome.git </code><br>
                               <span class="Shell_Code_Comment"> […you will prompted
                                 for you UNCC user id and password] </span><br>
                               <code class="Shell_Code_Output"> Cloning into
@@ -976,30 +990,28 @@
                -->     
           </section>
           <section><h1 class="Section" id="Full_vs_Micro_Tutorial" id="Tutorial_Structure">Full Tutorial vs Micro Tutorial Option</h1>            
-            <p>For Part 3, you must complete exactly <u>one</u> of two options below.              
+            <p>For Part 4, you must complete exactly <u>one</u> of the two options below.              
             </p>
             <ol>                    
-              <li>Option I - <a href="#Part3_OptionI">Full Git Tutorial Tutorial</a>:&nbsp;&nbsp;  This option
+              <li>Option I - <a href="#Part4_OptionI">Full Git Tutorial Tutorial</a>:&nbsp;&nbsp;  This option
                 requires reading chapters in the ProGit book and completing a number of exercises.  Option I introduces you to
                 git and the git command-line interface using the Bash command-line shell. 
+
+                With Option I, this assignment is worth 120 pts total (<a href="#RubricAwardedPoints">Rubric Awarded Points</a>).
               </li>
-              <li>Option II - <u><a href="#Part3_OptionII">The Micro Git Tutorial:</a></u>  This option is only for students already familiar with
-                  Git and the Git command-line interface using Bash, a particular command-line shell&nbsp;<a href="#WP2023">[WP2023]</a>.&nbsp;                                            
-                  <p>
-                  Students in this course are either graduate students or junior or senior undergraduates.   Therefore, students are expected to be capable of
-                  determining whether they have sufficient prior experience with a particular programming tool or tool set.   
-                  </p>
-                  <p>
-                  Skim over Chapter 1 and 2 of the ProGit book (<a href="http://git-scm.com/book/en/v2/" target="_blank">http://git-scm.com/book/en/v2/</a>).
-                  Also skim over "Unix Primer - Basic Commands In the Unix" <a href="WART2021">[WART2021]</a>.
-                  If you already know material covered in these readings, you have permission to just complete and submit Option II: <a href="#Part3_OptionII">The Micro Git Tutorial</a>.
-                  </p>
+              <li>Option II - <u><a href="#Part4_OptionII">The Micro Git Tutorial:</a></u>  This option is only for students already familiar with
+                  Git and the Git command-line interface using Bash.                  
+
+                With Option II, this assignment is worth 36 pts total (<a href="#RubricAwardedPoints">Rubric Awarded Points</a>).
               </li>
             </ol>
-            The with the above options, the possible combinations of options and the maximum points for this tutorial are shown in 
-            table <a href="#RubricAwardedPoints">Rubric Awarded Points</a>            
+            <p>
+              If you are uncertain about which option to choose, skim over Chapter 1 and 2 of the ProGit book (<a href="http://git-scm.com/book/en/v2/" target="_blank">http://git-scm.com/book/en/v2/</a>),
+              and skim over "Unix Primer - Basic Commands In the Unix" <a href="WART2021">[WART2021]</a>.              
+              If you already know the material covered in these readings, you should complete Option II; otherwise you should complete Option I.
+              </p>
           </section>          
-          <section class="Instruction_Section" data-optionset='{"name":"Part 3"}' data-point-fraction="80"><span id="Part3_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Part 3: Option I: Full Git Tutorial</h1>
+          <section class="Instruction_Section" data-optionset='{"name":"Part 4"}' data-point-fraction="80"><span id="Part4_OptionI"></span><h1 id="Full_Git_Tutorial" class="Section">Part 4: Option I: Full Git Tutorial</h1>
          
           The instructions below guide you through reading chapters in the ProGit
           Book, 2<sup>nd</sup> Edition at <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/','ProGit');">
@@ -1044,7 +1056,7 @@
                 </tbody>
               </table>
             </li>
-            <li class="Instruction_Todo" data-point-fraction="5"><u>Exercise</u><strong>:&nbsp; </strong>Create a sub-directory for
+            <li class="Instruction_Todo" data-point-fraction="10"><u>Exercise</u><strong>:&nbsp; </strong>Create a sub-directory for
               this tutorial called 'git-tutorial' and cd into that directory.&nbsp;
               Do all the exercises in the ProGit book inside that directory. <br>
               <table class="Code_Example">
@@ -1076,6 +1088,8 @@
                 </tbody>
               </table>
             </li>
+
+            <!--
             <li data-point-fraction="5"><u>Exercise</u><strong>:&nbsp; </strong>Create and Setup Git Server
               Access.<br>
               <ol>
@@ -1083,6 +1097,8 @@
                   Appendix I <a href="#Git_Server_Access">Git_Server_Access</a>, </li>
               </ol>
             </li>
+            -->
+
             <li data-point-fraction="20"><strong> ProGit - Chapter 1</strong>:
               <ol>
                 <li class="Instruction_Read">Read ProGit sections 1.1 – 1.4</li>
@@ -1107,10 +1123,10 @@
             </li>
             <li data-point-fraction="60"><strong>ProGit - Chapter 2:</strong>
               <ol>
-                <li> Read ProGit 2.1:
+                <li> Read 
+                  <a class="WindowOpenLeft" onclick="windowOpenLeft('https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository','ProGit');">ProGit 2.1:</a>
+                  
                   <ol>
-                    <li class="Instruction_Read">Read the first few paragraphs, until sub-section <strong>Initializing
-                        a Repository in an Existing Directory</strong></li>
                     <li class="Instruction_Todo"><u>Exercise</u>:&nbsp; Sub-section "<strong>Initializing a
                         Repository in an Existing Directory" </strong>assumes you
                       have created a set of files in a directory called
@@ -1414,7 +1430,7 @@
           </ol>
           <p><strong>This completes the Full Git Tutorial.</strong></p>
          </section>
-         <section class="Instruction_Section" data-optionset='{"name":"Part 3"}' data-point-fraction="10"><span id="Part3_OptionII"></span><h1 class="Section" id="Micro_Git_Tutorial">Part 3: Option II: Micro Git Tutorial</h1>
+         <section class="Instruction_Section" data-optionset='{"name":"Part 4"}' data-point-fraction="10"><span id="Part4_OptionII"></span><h1 class="Section" id="Micro_Git_Tutorial">Part 4: Option II: Micro Git Tutorial</h1>
         
             <p> The micro tutorial is a quick verification that you have full
               read/write access to your remote repository on the course's Git
@@ -1724,7 +1740,7 @@
               is your UNCC username and password. </p>
             <ol>
               <li><u>Student Repository</u>:&nbsp;&nbsp; The Git URL is:<br>
-                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
+                <span class="Server_Name"> https://cci-git.charlotte.edu/<span class="User_Input">your_uncc_user_id</span><b>/</b><span
 
                     class="User_Input">name_of_repo_you_created</span>.git <br>
                 </span><br>
@@ -1732,7 +1748,7 @@
               <li><u>Course Repository</u>: The course repo’s and material will
                 be found at URL’s such as:<br>
                 <br>
-                <span class="Server_Name"> https://cci-git.uncc.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
+                <span class="Server_Name"> https://cci-git.charlotte.edu/<span class="User_Input">ITCS_Class_URL_Name</span><b>/</b><span
 
                     class="User_Input">the_repo_name</span>.git </span> <br>
                 <br>
@@ -1740,7 +1756,7 @@
                 given you with your assignments or tutorial instructions. <br>
                 <br>
               </li>
-              <li><u>Web Server</u>:&nbsp;&nbsp; <a href="https://cci-git.uncc.edu">https://cci-git.uncc.edu</a><br>
+              <li><u>Web Server</u>:&nbsp;&nbsp; <a href="https://cci-git.charlotte.edu">https://cci-git.charlotte.edu</a><br>
                 <br>
                 You only need to access the website via web browser when
                 creating new repositories and for GitLab specific
@@ -1765,7 +1781,7 @@
               <li><a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
                 <div class="Server_Cci_Git">
                   <ol>
-                    <li> Login to the cci-git.uncc.edu Web Server </li>
+                    <li> Login to the cci-git.charlotte.edu Web Server </li>
                     <li>First, make sure you are viewing your "dashboard" on
                       cci-git by pressing the dashboard button (selection
                       #1).&nbsp;&nbsp;&nbsp; Then create a new project by
@@ -1797,8 +1813,8 @@
                         <em id="Private_Student_Group">Student (Individual) Private Group:</em> The instructor for this class has created a unique GitLab Group for each student.
                         These groups are referred to as Student Private Group's.  Each group has its visiblity set to <a href="https://docs.gitlab.com/ee/user/public_access.html">private</a>.
                         It is visible only to the associated student and the instructor and TAs.
-                        When you create any your GitLab repositories for this course, you must place the git repository inside your
-                        private GitLab Group so that your coursework remains visible only to yourself and the course staff.  
+                        When you create any GitLab repository for this course, you must place the git repository inside your
+                        private GitLab Group so that the repository remains visible only to yourself and to the course staff.  
                       </p>                      
                       <ol>
                         <li>For selection #1, enter the
@@ -1980,7 +1996,7 @@
                                     bytes/s, done.<br>
                                     Total 3 (delta 0), reused 0 (delta 0)<br>
                                     To
-                                    git@cci-git.uncc.edu:your_user_id/Project_Example.git
+                                    git@cci-git.charlotte.edu:your_user_id/Project_Example.git
                                   </code><br>
                                 </div>
                               </td>
@@ -2009,7 +2025,7 @@
                                     <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/Project_Example
                                   <code class="Shell_Code_Input"> $ git remote
                                     add origin
-                                    https://cci-git.uncc.edu/your_user_id/Project_Example.git<br>
+                                    https://cci-git.charlotte.edu/your_user_id/Project_Example.git<br>
                                   <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/Project_Example </code>
                                   <code class="Shell_Code_Input"> $ git add -A<br> </code>
                                   <code class="Shell_Code_Prompt"> ~/ITCS_<span class="DataField" data-course-number=""></span>/Project_Example </code>
@@ -2021,7 +2037,7 @@
                                     Writing objects: 100% (3/3), 219 bytes | 0
                                     bytes/s, done.<br>
                                     Total 3 (delta 0), reused 0 (delta 0)<br>
-                                    To git@cci-git.uncc.edu:<em>your_user_id</em>/Project_Example.git
+                                    To git@cci-git.charlotte.edu:<em>your_user_id</em>/Project_Example.git
                                   </code>
                                 </div> 
                               </td>
@@ -2033,14 +2049,14 @@
                   </div>
                 </li>
                 <!--
-                            <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                    <div class="Server_Git_Viscenter Server_Bitbucket"> <br>                      <br>                      Perform the same instructions as above, Option II, for [<strong>cci-git</strong>]                      but replace:<br>                      &nbsp;&nbsp; &nbsp;&nbsp;<span class="Server_Name">                        https://cci-git.uncc.edu/<u> <span class="User_Input">your_uncc_user_id</span>                        </u>/ </span><br>                      with<br>                      &nbsp;[<strong>bitbucket</strong>]&nbsp;&nbsp;&nbsp;<span                        class="Server_Name"> git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u>&nbsp;                        </span><br> &nbsp; <span class="Server_Name"> <u><span                            class="User_Input"></span></u> </span> </div>                  </li>                  -->
+                            <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                    <div class="Server_Git_Viscenter Server_Bitbucket"> <br>                      <br>                      Perform the same instructions as above, Option II, for [<strong>cci-git</strong>]                      but replace:<br>                      &nbsp;&nbsp; &nbsp;&nbsp;<span class="Server_Name">                        https://cci-git.charlotte.edu/<u> <span class="User_Input">your_uncc_user_id</span>                        </u>/ </span><br>                      with<br>                      &nbsp;[<strong>bitbucket</strong>]&nbsp;&nbsp;&nbsp;<span                        class="Server_Name"> git@bitbucket.org:<u><span class="User_Input">your_user_id</span></u>&nbsp;                        </span><br> &nbsp; <span class="Server_Name"> <u><span                            class="User_Input"></span></u> </span> </div>                  </li>                  -->
               </ol>              
           </section>
           <section><h2 class="Appendix">Deleting a remote repo</h2>              
               <ol class="Instruction_Option">
-                <li> [<em>YourServer=</em><strong>cci-git</strong>] See <a href="https://cci-git.uncc.edu/help"
+                <li> [<em>YourServer=</em><strong>cci-git</strong>] See <a href="https://cci-git.charlotte.edu/help"
 
-                    target="_blank">https://cci-git.uncc.edu/help</a><br>
+                    target="_blank">https://cci-git.charlotte.edu/help</a><br>
                 </li>
                 <!--
                             <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]&nbsp;<em>                      See Bitbucket Website. </em>                  </li>                  -->
