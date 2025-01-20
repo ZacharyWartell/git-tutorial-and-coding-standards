@@ -9,7 +9,7 @@
             "cwd": "C:\\Users\\zwart\\Dropbox (UNC Charlotte)\\classes\\ITCS_x120\\planning",
             "program": "${workspaceFolder}\\scripts\\gitlab-manage-students\\gitlab-student-repos.js",            
             "request": "launch",            
-            "args": ["createStudentsFile","--studentsEmailFile","Student Email.txt",],
+            "args": ["createStudentsFile","--studentsEmailFile","Student Email.txt","--students-file","Students.json","--course-number","3120"],
             //"args": ["--help"],
             "skipFiles": [
                 "<node_internals>/**"
