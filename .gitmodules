@@ -1,4 +1,4 @@
-[submodule "html/scripts/gitlab-manage-students"]
+[submodule "scripts/gitlab-manage-students"]
 	path = scripts/gitlab-manage-students
 	url = https://cci-git.charlotte.edu/zwartell/gitlab-student-repos.git
 	branch = main
