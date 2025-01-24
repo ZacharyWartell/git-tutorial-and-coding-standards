@@ -1,5 +1,5 @@
 [submodule "scripts/gitlab-manage-students"]
-	path = scripts/gitlab-manage-students
+	path = scripts/gitlab-student-repos
 	url = https://cci-git.charlotte.edu/zwartell/gitlab-student-repos.git
 	branch = main
 [submodule "www-site/git_modules/zjwgi"]
