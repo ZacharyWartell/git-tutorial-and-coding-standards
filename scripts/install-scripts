@@ -1,0 +1,4 @@
+#!/bin/bash
+SUFFIX="`pwd`"
+echo $SUFFIX
+PATH=$PATH:$SUFFIX

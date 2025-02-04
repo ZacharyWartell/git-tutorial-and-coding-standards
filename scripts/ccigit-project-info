@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PAT=$1
+OUTFILE=$2
+
+touch $OUTFILE
+
+page=1
+while [ $# -gt 0 ]
+do
+    echo curl --header "PRIVATE-TOKEN: $PAT"  --ssl-revoke-best-effort --request GET "https://cci-git.charlotte.edu/api/v4/projects?per_page=100&page=1" >> $OUTFILE
+    page=$(( page + 1 ))
+done   
