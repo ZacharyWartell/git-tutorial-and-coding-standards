@@ -7,7 +7,7 @@ pages:
     - mkdir .public/scripts
     - git submodule init
     - git submodule update
-    - cp -r html/Site\ Root/* .public
+    - cp -r www-site* .public
     - git show --no-patch --no-notes --pretty='%cd' $CI_COMMIT_SHA > REVISION.txt
     - . ./html/scripts/revision.sed
     - cp html/scripts/git-tutorial-troubleshooter .public/scripts/git-tutorial-troubleshooter.sh
