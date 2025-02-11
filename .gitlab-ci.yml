@@ -11,7 +11,9 @@ pages:
     - git show --no-patch --no-notes --pretty='%cd' $CI_COMMIT_SHA > REVISION.txt
     #- . ./html/scripts/revision.sed
     #- cp html/scripts/git-tutorial-troubleshooter .public/scripts/git-tutorial-troubleshooter.sh
-    - pushd .public/www-site/git_modules/zjwgi/scripts; init-template; popd
+    - pushd .public/www-site/git_modules/zjwgi/scripts
+    - init-template
+    - popd
     - mv .public public
   artifacts:
     paths:
