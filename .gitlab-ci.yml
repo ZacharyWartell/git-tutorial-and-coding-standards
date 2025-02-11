@@ -7,7 +7,7 @@ pages:
     - mkdir .public/scripts
     - git submodule init
     - git submodule update
-    - rm -rf www-site/git_modules/zjwgi/.git   # no need to deploy .git in www
+    - rm -rf www-site/git_modules/zjwgi/.git   # avoid deploying .git in www
     - cp -r www-site/* .public
     - git show --no-patch --no-notes --pretty='%cd' $CI_COMMIT_SHA > REVISION.txt
     - cat REVISION.txt
