@@ -10,9 +10,10 @@ pages:
     - rm -rf www-site/git_modules/zjwgi/.git   # no need to deploy 
     - cp -r www-site* .public
     - git show --no-patch --no-notes --pretty='%cd' $CI_COMMIT_SHA > REVISION.txt
+    - cat REVISION.txt
     #- . ./html/scripts/revision.sed
     #- cp html/scripts/git-tutorial-troubleshooter .public/scripts/git-tutorial-troubleshooter.sh
-    - pushd .public/git_modules/zjwgi/scripts
+    - pushd .public/www-site/git_modules/zjwgi/scripts
     - chmod u+x ./init-template
     - ./init-template -p www-
     - popd
