@@ -15,7 +15,7 @@ pages:
     #- cp html/scripts/git-tutorial-troubleshooter .public/scripts/git-tutorial-troubleshooter.sh
     - pushd .public/git_modules/zjwgi/scripts
     - chmod u+x ./init-template
-    - ./init-template -p null -r ../../..
+    - ./init-template -p "null" -r ../../..
     - popd
     - mv .public public
   artifacts:
