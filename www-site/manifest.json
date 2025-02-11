@@ -1,0 +1,19 @@
+{
+    "name": "git-tutorial",
+    "short_name": "git-tutorial",
+    "description": "",
+    "start_url": "/",
+    "theme_color": "#eeffee",
+    "background_color": "#eeffee",
+    "display": "standalone",
+    "icons": [
+        {
+        "src": "icons/icon48.png",
+        "sizes": "48x48"
+        },
+        {
+        "src": "icons/icon144.png",
+        "sizes": "144x144"
+        }      
+    ]
+}
