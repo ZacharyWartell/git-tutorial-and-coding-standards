@@ -12,6 +12,7 @@ pages:
     #- . ./html/scripts/revision.sed
     #- cp html/scripts/git-tutorial-troubleshooter .public/scripts/git-tutorial-troubleshooter.sh
     - pushd .public/www-site/git_modules/zjwgi/scripts
+    - chmod u+x ./init-template
     - ./init-template -p www-
     - popd
     - mv .public public
