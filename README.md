@@ -12,7 +12,7 @@ Instructions and interactive grading rubric for a Git tutorial based on readings
 
 - WWW: 
     - https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html
-    - ...others...
+    - https://zwartell.gitlab.io/Git_Tutorial_and_Coding_Standards/Git%20Tutorial.html
 - GIT: https://zwartell@gitlab.com/zwartell/Git_Tutorial_and_Coding_Standards.git
 
 
