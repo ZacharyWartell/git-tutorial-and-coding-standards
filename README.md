@@ -31,9 +31,11 @@ $ git submodule update
 
 # Running Git Tutorial.html locally
 
-[Windows] Run "Git Tutorial.bat"
+[OS: Windows] Run "Git Tutorial.bat"
     - software prerequisites : undocumented; see and decipher the .bat file
-[Other] Install a webserver and serve the page 'Git Tutorial.html' on the localhost 
+[OS: Other] Install a webserver and serve the page 'Git Tutorial.html' on the localhost 
 
 # Publishing Git Tutorial.html to a webserver
-See and decipher file://./scripts/zjwgi/publishWWW
+-See and decipher file://./scripts/zjwgi/publishWWW
+ ... but I'm moving back to using gitlab.com with GitLab Pages because I keep running out of space on my UNCC public_html webpages and I finally 
+     realized that personally paying $29 a month is more than worth the time I saved.
