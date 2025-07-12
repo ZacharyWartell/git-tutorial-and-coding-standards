@@ -8,19 +8,19 @@
     <title>Git Tutorial</title>
 
     <!-- BEGIN:  ZxW MVC <head> -->
-    <link type="text/css" rel="stylesheet" href="git-modules/zxw-mvc/style.css">
-    <link type="text/css" rel="stylesheet" href="git-modules/zxw-mvc/technical-writing.css">
-    <link type="text/css" rel="stylesheet" href="git-modules/zxw-mvc/annotation.css">    
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/style.css">
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/technical-writing.css">
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/annotation.css">    
     <!-- -->
     <script type="importmap">
           {
             "imports": {
-              "ZxW_MVC": "./modules/zxw-mvc/ZxW_MVC",
-              "ZxW_GUI": "./modules/zxw-mvc/ZxW_GUI",
-              "ZxW_TabContainer": "./modules/zxw-mvc/ZxW_TabContainer",
-              "ZxW_Annotation": "./modules/zxw-mvc/ZxW_Annotation",
-              "ZxW_Toolbar": "./modules/zxw-mvc/ZxW_Toolbar",
-              "ZxW_TextEditor": "./modules/zxw-mvc/ZxW_TextEditor"
+              "ZxW_MVC": "./modules/zxw-mvc/ZxW_MVC.js",
+              "ZxW_GUI": "./modules/zxw-mvc/ZxW_GUI.js",
+              "ZxW_TabContainer": "./modules/zxw-mvc/ZxW_TabContainer.js",
+              "ZxW_Annotation": "./modules/zxw-mvc/ZxW_Annotation.js",
+              "ZxW_Toolbar": "./modules/zxw-mvc/ZxW_Toolbar.js",
+              "ZxW_TextEditor": "./modules/zxw-mvc/ZxW_TextEditor.js"
             }
           }
       </script>
@@ -48,8 +48,6 @@
         Visibility_Toggle('Instructor_Mode', e.target.checked); Visibility_Toggle('Staff_Only', e.target.checked); document.getElementById("fileMenu").disabled
           = !e.target.checked;
       }); 
-      function onload_Body() { console.log("function onload_Body()");}
-      window.onload_Body = onload_Body;
       
       window.addEventListener("hashchange", (event) => 
       {
@@ -100,7 +98,7 @@
     <script async src="https://hypothes.is/embed.js"></script>
     -->
   </head>
-  <body onload="onload_Body();">
+  <body>
     <div class="window-container"> </div>
     <div class="main-container">
       <!-- disabled:  having problems getting HTML flexbox layout to open sidebar initially to show fit-content and still allow the sidebar to be shrunk
