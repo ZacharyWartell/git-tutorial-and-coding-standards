@@ -107,8 +107,6 @@
         <div></div>
       </div>
       <div class="main-content" id="Content">
-        <div id="UserDocument">        
-          <div class="SaveLoadContent">
           <div class="toolbar" id="Toolbar">
             <div class="Menu"> <button id="help" class="DocButton" onclick='window.open("html/zjwgi/Help.html");'> Help </button> <b>|</b>
               <div class="DocButton"> <input name="Beta_Mode" id="Beta_Mode" type="checkbox"> <label for="Beta_Mode">Beta Mode</label> </div>
@@ -136,6 +134,8 @@
               </div>
             </div>
           </div>
+        <div id="UserDocument">        
+          <div class="SaveLoadContent">
           <article>
             <div>
               <h2 class="nocount Title">ITCS <span data-course-number=""></span> : Git Tutorial and "Coding" Standards </h2>
@@ -179,7 +179,8 @@
                             <p> Using the course specific information, select the Git server and              operating system you are using in the dialog below.&nbsp;&nbsp; Doing              this will display the relevant sections of this document and hide the              non-relevant ones.            < !--              <span style="color: red; background: yellow">Note: Circa Fall            2021,only one Git server is being used by any courses using this            tutorial. Therefore instructions related to other git servers have            been (mostly) disabled and/or removed from this tutorial. <br>          </span>                      --- >            </p>             -->
               <!--
               <button class="Text_Button" onclick="Div_Toggle('Server_Git_Viscenter');Div_Toggle('Server_Supports_SSH');"> git-viscenter </button>           <button class="Text_Button" onclick="Div_Toggle('Server_Bitbucket');Div_Toggle('Server_Supports_SSH');"> Bitbucket </button>                 <button class="Text_Button" onclick="Div_Toggle('Server_Cci_Git');"> cci-git </button>           -->
-              <!-- disabling this feature for now
+              <!-- disabling this 
+               feature for now
               <form name="System_Configuration">              <fieldset> <legend>Display Instructions For:&nbsp;</legend>                < !--                 <p><label>Git Server: </label> <input name="Git_Server" id="cci_git" value="cci_git" checked="checked" onchange="onchange_Git_Server()" type="radio">              <label for="cci_git">cci-git</label> <input name="Git_Server" id="bitbucket" value="bitbucket" onchange="onchange_Git_Server()" disabled="disabled"                type="radio"> <label for="bitbucket">Bitbucket</label> </p>						                -- >                <p><label>Operating System: </label> <input name="Operating_System"                            id="Windows" value="Windows" checked="checked" onchange="Div_Toggle('OS_Windows');"                            type="checkbox"> <label for="Windows">Windows</label> <input name="Operating_System"                            id="Unix" value="Unix" checked="checked" onchange="Div_Toggle('OS_Unix');"                            type="checkbox"> <label for="Unix">Unix</label> <input name="Operating_System"                            id="Mac" value="Mac" checked="checked" onchange="Div_Toggle('OS_Mac');"                            type="checkbox"> <label for="Mac">Mac</label></p>              </fieldset>            </form>            -->
               <hr> </section>
             <section>
