@@ -36,8 +36,11 @@
     <script src="scripts/zjwgi/generic_instructions.js"></script>
 
     <script type="module" lang="javascript">      
+      import * as ZxW_GUI from "ZxW_GUI";
       import * as Rubric from "./scripts/zjwgi/Rubric.js";
       import * as CAW from "./scripts/zjwgi/ClassAssignmentWartell.js";
+
+      ZxW_GUI.DefaultApplication.fetchUserDocument(null, "Git Tutorial.zxw-doc.html");
       window.BreadCrumb = Rubric.BreadCrumb;
       CAW.main(120);
       
