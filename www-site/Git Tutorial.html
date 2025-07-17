@@ -10,8 +10,7 @@
     <!-- BEGIN:  ZxW MVC <head> -->
     <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/style.css">
     <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/technical-writing.css">
-    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/annotation.css">    
-    <!-- -->
+    <link type="text/css" rel="stylesheet" href="modules/zxw-mvc/annotation.css">        
     <script type="importmap">
           {
             "imports": {
@@ -23,17 +22,16 @@
               "ZxW_TextEditor": "./modules/zxw-mvc/ZxW_TextEditor.js"
             }
           }
-      </script>
-      
+      </script>      
     <!-- END:  ZxW MVC <head> -->
       
     <!-- BEGIN:  ZJWGI <head> -->
-
     <link href="css/zjwgi/GUI.css" rel="stylesheet" type="text/css">
     <link href="css/zjwgi/generic_instructions.css" rel="stylesheet" type="text/css">
     <link href="css/zjwgi/ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
     <link media="print" href="css/zjwgi/generic_instructions-print.css" rel="stylesheet" type="text/css">
     <script src="scripts/zjwgi/generic_instructions.js"></script>
+    <!-- END:  ZxW MVC <head> -->
 
     <script type="module" lang="javascript">      
       import * as ZxW_GUI from "ZxW_GUI";
@@ -105,13 +103,15 @@
     <div class="window-container"> </div>
     <div class="main-container">
       <!-- disabled:  having problems getting HTML flexbox layout to open sidebar initially to show fit-content and still allow the sidebar to be shrunk
-        using CSS resize.                                <div id="side-nav-bar" class="side_nav_bar">         <div></div>      </div>      -->
-      <div id="side-nav-bar" class="side_nav_bar" style="width: 74px;">
+        using CSS resize.                                <div id="side-nav-bar" class="side_nav_bar">         <div></div>      </div> 
+       -->
+      <div id="side-nav-bar" class="side_nav_bar" style="width: 30em;">
+        <!-- content are built dynamically by js code -->
         <div></div>
       </div>
       <div class="main-content" id="Content">
-          <div class="toolbar" id="Toolbar">
-            <div class="Menu"> <button id="help" class="DocButton" onclick='window.open("html/zjwgi/Help.html");'> Help </button> <b>|</b>
+          <div class="toolbar" style="border:unset;" id="Toolbar">
+            <div style="border:unset;" class="Menu"> <button id="help" class="DocButton" onclick='window.open("html/zjwgi/Help.html");'> Help </button> <b>|</b>
               <div class="DocButton"> <input name="Beta_Mode" id="Beta_Mode" type="checkbox"> <label for="Beta_Mode">Beta Mode</label> </div>
               <div id="BetaModeGUI" style="display:inherit;">
                 <div class="DocButton"> <button id="Question" class="DocButton" disabled="true">Q&amp;A</button> <span>Post question on <br>
