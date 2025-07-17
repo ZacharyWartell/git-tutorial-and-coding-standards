@@ -79,7 +79,7 @@
               Command-Line Git </h2>
             <p>This section walks you through installing Git client tools on your computer.</p>
             <ol class="Instruction">
-              <li class="Instruction_Option_Set" id="Section_3_1_Item_1">|<sup>[12 pt]</sup>|   <em>Instructions below vary with your operating system.</em>
+              <li class="Instruction_Option_Set" id="Section_3_1_Item_1">   <em>Instructions below vary with your operating system.</em>
                 <ol>
                   <li id="Section_3_1_Item_1_a"> [<em>YourOS</em>=<strong>Windows</strong>] <div class="OS_Windows">
                       <ol>
@@ -190,41 +190,41 @@
             <!--   I've stopped try to have this document support instructions for multiple servers                  [<em>YourServer</em>=<strong>cci-git</strong>]                -->
             <!--   <div class="Server_Supports_HTTPS_PAT"><br> [bug] comment out because the div is causing the rubric generation to fail --> Follow the
             instructions below to create your Personal Access Token (PAT) on cci-git.charlotte.edu. <ol class="Instruction">
-              <li class="Instruction_Todo" id="Section_5_1_Item_1">|<sup>[1.2 pt]</sup>|  <u>Exercise</u>: <b>Creating a Personal Access Token (PAT):</b><br>
+              <li class="Instruction_Todo" id="Section_5_1_Item_1">  <u>Exercise</u>: <b>Creating a Personal Access Token (PAT):</b><br>
                 You only have to create the access token once for your cci-git account.  You then write down the PAT token and store it somewhere safe. The PAT
                 is the password that you will need when you access the cci-git server from the git client.<br>
                 <ol>
-                  <li id="Section_5_1_Item_1_a">|<sup>[.2 pt]</sup>|  In your browser sign in to <a
+                  <li id="Section_5_1_Item_1_a">  In your browser sign in to <a
                       href="https://cci-git.charlotte.edu">cci-git.charlotte.edu</a>.  You will be prompted for by the UNCC SSO for your standard UNCC user id
                     and password. Most likely you will also be prompted a second time for you UNCC dual-factor authentication. </li>
-                  <li id="Section_5_1_Item_1_b">|<sup>[.2 pt]</sup>|  In the upper-left corner of the cci-git.charlotte.edu webpage , click on the avatar icon.
+                  <li id="Section_5_1_Item_1_b">  In the upper-left corner of the cci-git.charlotte.edu webpage , click on the avatar icon.
                     A dropdown menu will appear. In that menu, select <span class="File_Name">Preferences</span>. </li>
-                  <li id="Section_5_1_Item_1_c">|<sup>[.2 pt]</sup>|  On the <span class="Program_Name">Preferences</span> menu (left side), select <span
+                  <li id="Section_5_1_Item_1_c">  On the <span class="Program_Name">Preferences</span> menu (left side), select <span
                       class="File_Name"> Access Tokens</span>. </li>
-                  <li id="Section_5_1_Item_1_d">|<sup>[.2 pt]</sup>|  In the new dialog "Personal Access Tokens", select <span class="File_Name">Add New
+                  <li id="Section_5_1_Item_1_d">  In the new dialog "Personal Access Tokens", select <span class="File_Name">Add New
                       Token</span> </li>
-                  <li id="Section_5_1_Item_1_e">|<sup>[.2 pt]</sup>|  In the new dialog "Add a personal access token", choose a name and optional expiry date
+                  <li id="Section_5_1_Item_1_e">  In the new dialog "Add a personal access token", choose a name and optional expiry date
                     for the token. <ol>
-                      <li id="Section_5_1_Item_1_e_i">|<sup>[.2 pt]</sup>|  The suggested name is "git-bash"</li>
+                      <li id="Section_5_1_Item_1_e_i">  The suggested name is "git-bash"</li>
                     </ol>
                   </li>
-                  <li id="Section_5_1_Item_1_f">|<sup>[.2 pt]</sup>|  For the <a
+                  <li id="Section_5_1_Item_1_f">  For the <a
                       href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#limiting-scopes-of-a-personal-access-token"
                       style="box-sizing: border-box; color: rgb(27, 105, 182); text-decoration: none; background-color: transparent;">desired scopes</a>, choose
                     <span class="File_Name">write_repository</span></li>
-                  <li id="Section_5_1_Item_1_g">|<sup>[.2 pt]</sup>|  Click the <span class="File_Name">Create personal access token</span></li>
-                  <li id="Section_5_1_Item_1_h">|<sup>[.2 pt]</sup>|  You should see a dialog similar to the one below: <figure class="Screen_Capture"
+                  <li id="Section_5_1_Item_1_g">  Click the <span class="File_Name">Create personal access token</span></li>
+                  <li id="Section_5_1_Item_1_h">  You should see a dialog similar to the one below: <figure class="Screen_Capture"
                       tabindex="1"><img src="images/cci-git-your-PAT.png" alt="cci-git-your-PAT.png" width="500"></img></figure>
                     <ol>
-                      <li id="Section_5_1_Item_1_h_i">|<sup>[0 pt]</sup>|  Click the "eye" button (#1) to unhide the PAT.</li>
-                      <li id="Section_5_1_Item_1_h_ii">|<sup>[0 pt]</sup>|  Copy the PAT token (#2).</li>
-                      <li id="Section_5_1_Item_1_h_iii">|<sup>[0 pt]</sup>|  Save (copy and paste) your PAT token somewhere safe, such as using whatever
+                      <li id="Section_5_1_Item_1_h_i">  Click the "eye" button (#1) to unhide the PAT.</li>
+                      <li id="Section_5_1_Item_1_h_ii">  Copy the PAT token (#2).</li>
+                      <li id="Section_5_1_Item_1_h_iii">  Save (copy and paste) your PAT token somewhere safe, such as using whatever
                         mechanism you use to store your various computer passwords.</li>
                     </ol>
                   </li>
                 </ol>
               </li>
-              <li id="Section_5_1_Item_2">|<sup>[1.2 pt]</sup>|   <b>Verifying the Server </b><br> In order to test and verify access to the server, clone the
+              <li id="Section_5_1_Item_2">   <b>Verifying the Server </b><br> In order to test and verify access to the server, clone the
                 welcome repo:<br>
                 <table class="Code_Example">
                   <tbody style="height: 105px;">
@@ -242,9 +242,9 @@
                 </table> (Note, this welcome.git is <a href="https://docs.gitlab.com/ee/user/public_access.html#public-projects-and-groups">publicly</a>
                 accessible and therefore clone'ing will not trigger the credential manager.)
               </li>
-              <li class="Instruction_Todo" id="Section_5_1_Item_3">|<sup>[1.2 pt]</sup>|   <b>Using the Personal Access Token:</b><br>
+              <li class="Instruction_Todo" id="Section_5_1_Item_3">   <b>Using the Personal Access Token:</b><br>
                 <ol>
-                  <li id="Section_5_1_Item_3_a">|<sup>[.6 pt]</sup>|   <b>Verifying the Personal Access Token:</b><br> In order to test and verify access to the
+                  <li id="Section_5_1_Item_3_a">   <b>Verifying the Personal Access Token:</b><br> In order to test and verify access to the
                     server, clone the welcome-internal repo. This welcome-internal.git is <a
                       href="https://docs.gitlab.com/ee/user/public_access.html#internal-projects-and-groups"> internally </a> accessible and will trigger the
                     credential manager. <br>
@@ -263,7 +263,7 @@
                       </tbody>
                     </table>
                   </li>
-                  <li id="Section_5_1_Item_3_b">|<sup>[.6 pt]</sup>|   <b>General Procedure:</b> The above step is generalized as follows. Assume you want clone
+                  <li id="Section_5_1_Item_3_b">   <b>General Procedure:</b> The above step is generalized as follows. Assume you want clone
                     a git repo and the repo URL is as follows:<br> <br>
                     <div style="margin-left: 40px;"> https://cci-git.charlotte.edu/<span class="User_Input">user_or_group_name</span>/<span
                         class="User_Input">repo_name</span>.git </div> <br> To perform the git clone, you modify the repo URL using the PAT syntax shown
@@ -275,13 +275,13 @@
                   </li>
                 </ol>
               </li>
-              <li class="Instruction_Todo" id="Section_5_1_Item_4">|<sup>[1.2 pt]</sup>|   <b>Setting up a Git Credential Manager:</b>
+              <li class="Instruction_Todo" id="Section_5_1_Item_4">   <b>Setting up a Git Credential Manager:</b>
                 <p> By default, the PAT protocol requires you to frequently enter your UNCC username and PAT token.   This also leaves your PAT token visible
                   via the command, git remote -v.</p>
                 <p>Therefore you should install a Git Credential Manager which will securely store your PAT and minimize how often git requires you to enter you
                   user id and PAT. To install a Git Credential Manager do the following:</p>
                 <ol>
-                  <li id="Section_5_1_Item_4_a">|<sup>[1.2 pt]</sup>|   Read ProGit <a class="WindowOpenLeft"
+                  <li id="Section_5_1_Item_4_a">   Read ProGit <a class="WindowOpenLeft"
                       onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');"> Git Tools - Credential Storage</a>,
                     stopping <ins datetime="8/29/2024"><span class="Updated_Text_Popup_Note">⇖<b>8/29/2024:</b> grammar change for
                         clarification</span>before</ins> section "Under the Hood". <br> Based on your operating system pick the appropriate credential system as
@@ -289,10 +289,10 @@
                   <!--                              <li>                                                      <br>                            <strong><u>Warning</u></strong>: Do <strong>NOT </strong>use                            "store mode" because this will save your UNCC password                            unencrypted on disk!                            <ol class="Instruction_Option">                              <li> [<em>OS</em>=<strong>Windows</strong>] Assuming you                                are using Git-Bash                                <table class="Code_Example">                                  <tbody>                                    <tr>                                      <td> <button>▽</button> </td>                                      <td><code class="Shell_Code_Input"> $ &nbsp;git                                          config --global credential.helper manager<br>                                        </code></td>                                    </tr>                                  </tbody>                                </table>                              </li>                              <li> [<em>OS</em><strong>=<em>everything else</em></strong>]                                Follow links discussed in <a class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Tools-Credential-Storage','ProGit');">                                  Git Tools - Credential Storage </a>. </li>                            </ol>                                                      </li>                          -->
                 </ol>
               </li>
-              <li class="Instruction_Todo" id="Section_5_1_Item_5">|<sup>[1.2 pt]</sup>|   <b>Verify the Credential Manager </b><br> To test the Credential
+              <li class="Instruction_Todo" id="Section_5_1_Item_5">   <b>Verify the Credential Manager </b><br> To test the Credential
                 Manager, perform the following steps:<br>
                 <ol class="Instructions">
-                  <li id="Section_5_1_Item_5_a">|<sup>[.6 pt]</sup>|   To test read-access to the server, clone the
+                  <li id="Section_5_1_Item_5_a">   To test read-access to the server, clone the
                     <!--                             <ins datetime="8/28/2024">                       		<span class="Updated_Text_Popup_Note">A new welcome-internal repo with was created on 8/28 in order to generate the Credential Manager prompt                              (Because the original welcome repo is assigned "public" access, cloning it was not reliably triggering the Credential Manager).                          </span>                          internal                       	</ins>                         -->
                     welcome repo's below:<br>
                     <table class="Code_Example">
@@ -310,7 +310,7 @@
                       </tbody>
                     </table>
                   </li>
-                  <li id="Section_5_1_Item_5_b">|<sup>[.6 pt]</sup>|   A dialog box will appear, prompting you for a UNCC user id ID and PAT token. Enter this
+                  <li id="Section_5_1_Item_5_b">   A dialog box will appear, prompting you for a UNCC user id ID and PAT token. Enter this
                     information. <br> <br> The Credential Manager will record your PAT and store it on your computer. Afterwards, when you give the git client a
                     git repo URL of the form: <blockquote> https://cci-git.charlotte.edu/<span class="User_Input">user_or_group_name</span>/<span
                         class="User_Input">repo_name</span>.git </blockquote> the git client will automatically retrieve your PAT from the Credential Manager.
@@ -347,7 +347,7 @@
           <p>For the instructions steps that are labeled as “<u>Exercise</u>: PG: <i>Section_Name”</i>, you need to perform the details in the ProGit ("PG")
             book section named "<i>Section_Name" </i>and save your work to local files. </p>
           <ol class="Instruction">
-            <li class="Instruction_Todo" data-point-fraction="5" id="Section_7_Item_1">|<sup>[4.8 pt]</sup>|  <u>Exercise</u><strong>:  </strong>This tutorial
+            <li class="Instruction_Todo" data-point-fraction="5" id="Section_7_Item_1">  <u>Exercise</u><strong>:  </strong>This tutorial
               and all later projects in the course, assume you have created a 'course' directory that will contain further sub-directories, one subdirectory per
               tutorial or project.   You should create the course directory now.   Name the course directory using your course number, such as "ITCS_<span
                 class="" data-course-number="">3120</span>".   In this and later assignments the bash code examples will use the name ITCS_<span class=""
@@ -370,7 +370,7 @@
                 </tbody>
               </table>
             </li>
-            <li class="Instruction_Todo" data-point-fraction="10" id="Section_7_Item_2">|<sup>[9.6 pt]</sup>|  <u>Exercise</u><strong>:  </strong>Create a
+            <li class="Instruction_Todo" data-point-fraction="10" id="Section_7_Item_2">  <u>Exercise</u><strong>:  </strong>Create a
               sub-directory for this tutorial called 'git-tutorial' and cd into that directory.  Do all the exercises in the ProGit book inside that directory.
               <br>
               <table class="Code_Example">
@@ -392,32 +392,32 @@
               </table>
             </li>
             <!--                <li data-point-fraction="5"><u>Exercise</u><strong>:&nbsp; </strong>Create and Setup Git Server              Access.<br>              <ol>                <li class="Instruction_Todo">Create and setup your account on the Git server as described the                  Appendix I <a href="#Git_Server_Access">Git_Server_Access</a>, </li>              </ol>            </li>            -->
-            <li data-point-fraction="20" id="Section_7_Item_3">|<sup>[19.2 pt]</sup>|  <strong> ProGit - Chapter 1</strong>: <ol>
-                <li class="Instruction_Read" id="Section_7_Item_3_a">|<sup>[9.6 pt]</sup>|  Read ProGit sections 1.1 – 1.4</li>
+            <li data-point-fraction="20" id="Section_7_Item_3">  <strong> ProGit - Chapter 1</strong>: <ol>
+                <li class="Instruction_Read" id="Section_7_Item_3_a">  Read ProGit sections 1.1 – 1.4</li>
                 <li class="Instruction_NonRubric"> Skip ProGit 1.5 (this was covered in this tutorial’s <a href="#Installing_Git">Installing_Git</a>). </li>
-                <li id="Section_7_Item_3_b">|<sup>[9.6 pt]</sup>|   Read ProGit 1.6.  Also for the chapter subsections named below, perform the steps described
+                <li id="Section_7_Item_3_b">   Read ProGit 1.6.  Also for the chapter subsections named below, perform the steps described
                   in that name subsection using git.<br>
                   <ol>
-                    <li class="Instruction_Todo" id="Section_7_Item_3_b_i">|<sup>[3.2 pt]</sup>|  <u>Exercise</u><b>:  </b>PG:“<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_3_b_i">  <u>Exercise</u><b>:  </b>PG:“<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity','ProGit');">Your Identity
                       </a>” - perform all described steps </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_3_b_ii">|<sup>[3.2 pt]</sup>|  <u>Exercise</u><strong>:  </strong>PG:<strong></strong>“ <a
+                    <li class="Instruction_Todo" id="Section_7_Item_3_b_ii">  <u>Exercise</u><strong>:  </strong>PG:<strong></strong>“ <a
                         class="WindowOpenLeft" onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_editor','ProGit');"
                         target="_blank">Your Editor </a>” - perform all described steps<br> <em>Note</em>: use whatever simple editor you prefer (notepad.exe
                       perhaps) </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_3_b_iii">|<sup>[3.2 pt]</sup>|  <u>Exercise</u>:  PG:“<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_3_b_iii">  <u>Exercise</u>:  PG:“<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_checking_your_settings','ProGit');">Checking
                         Your Settings </a>” - perform all described steps </li>
                   </ol>
                 </li>
               </ol>
             </li>
-            <li data-point-fraction="60" id="Section_7_Item_4">|<sup>[57.6 pt]</sup>|  <strong>ProGit - Chapter 2:</strong>
+            <li data-point-fraction="60" id="Section_7_Item_4">  <strong>ProGit - Chapter 2:</strong>
               <ol>
-                <li id="Section_7_Item_4_a">|<sup>[19.2 pt]</sup>|   Read <a class="WindowOpenLeft"
+                <li id="Section_7_Item_4_a">   Read <a class="WindowOpenLeft"
                     onclick="windowOpenLeft('https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository','ProGit');">ProGit 2.1:</a>
                   <ol>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_a_i">|<sup>[4.8 pt]</sup>|  <u>Exercise</u>:  Sub-section "<strong>Initializing a
+                    <li class="Instruction_Todo" id="Section_7_Item_4_a_i">  <u>Exercise</u>:  Sub-section "<strong>Initializing a
                         Repository in an Existing Directory" </strong>assumes you have created a set of files in a directory called 'my-project'.   To create
                       and get these files, in your browser click the following link to download these files:   <a
                         href="./tutorial_example_files/my-project.tar.gz"><span class="File_Name">my-project.tar.gz</span> </a>.   After downloading, copy the
@@ -441,16 +441,16 @@
                         </tbody>
                       </table> <br>
                     </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_a_ii">|<sup>[4.8 pt]</sup>|  <u>Exercise</u>: PG: <a
+                    <li class="Instruction_Todo" id="Section_7_Item_4_a_ii">  <u>Exercise</u>: PG: <a
                         href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#_initializing_a_repository_in_an_existing_directory"
                         target="_blank">Initializing a Repository in an Existing Directory</a> <br> <br> Perform the instructions in the above section of the
                       book, inside the <span class="File_Name">my-project </span>directory you just created.<br> <br> </li>
-                    <li id="Section_7_Item_4_a_iii">|<sup>[4.8 pt]</sup>|  <u>Exercise</u>:  <i> Push the pre-existing local repo to a remote repo.</i>
+                    <li id="Section_7_Item_4_a_iii">  <u>Exercise</u>:  <i> Push the pre-existing local repo to a remote repo.</i>
                       <ol>
-                        <li class="Instruction_Todo" id="Section_7_Item_4_a_iii_1">|<sup>[2.4 pt]</sup>|  Create a remote repository on the git server called
+                        <li class="Instruction_Todo" id="Section_7_Item_4_a_iii_1">  Create a remote repository on the git server called
                           <span class="File_Name">my-project</span>.   <br> Follow the instructions in Appendix II <a
                             href="#How_to_Create_New_Remote_Repository">"How to Create New Remote Repository" </a> </li>
-                        <li class="Instruction_Todo" id="Section_7_Item_4_a_iii_2">|<sup>[2.4 pt]</sup>|  To connect your local repo to the remote repo do as
+                        <li class="Instruction_Todo" id="Section_7_Item_4_a_iii_2">  To connect your local repo to the remote repo do as
                           shown below, where <code class="Shell_Code_Input"></code><code
                             class="Shell_Code_Input"><span  class="Server_Name"><span  class="User_Input">URL of my-project</span></span></code> is the full URL
                           of the remote repo.<br>
@@ -477,15 +477,15 @@
                         </li>
                       </ol>
                     </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_a_iv">|<sup>[4.8 pt]</sup>|  <u>Exercise</u>: PG: “<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_a_iv">  <u>Exercise</u>: PG: “<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository','ProGit');">Cloning
                         an Existing Repository </a>”<br> Return to your <span class="File_Name">git-tutorial</span><strong> </strong>directory: <br> <br>
                       Perform the book’s exercises.  This will create various clones of a remote repo mentioned in the book in your <span
                         class="File_Name">git-tutorial</span> directory. </li>
                   </ol>
                 </li>
-                <li id="Section_7_Item_4_b">|<sup>[19.2 pt]</sup>|   Read ProGit 2.2: <ol>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_i">|<sup>[1.5 pt]</sup>|  Download the required practice files,
+                <li id="Section_7_Item_4_b">   Read ProGit 2.2: <ol>
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_i">  Download the required practice files,
                       'ProGit_Chapter_2_2.tar.gz'.  <br> In your browser click the following link:   <a
                         href="./tutorial_example_files/ProGit_Chapter_2_2.tar.gz"><span class="File_Name">ProGit_Chapter_2_2.tar.gz</span></a>.   After
                       downloading, copy the file to your git-tutorial directory.  Then uncompress the tar.gz file as follows:<br>
@@ -504,18 +504,18 @@
                         </tbody>
                       </table> <br> Perform the exercises below in the above directory. <br>
                     </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_ii">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG: “<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_ii">  <u>Exercise</u>: PG: “<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_checking_status','ProGit');">Checking
                         the Status of Your Files </a>” - perform all steps<br> <br> <em>Note</em>: Use whatever text file editor you are familiar with instead
                       of vim for the “$vim README“ and similar examples in this ProGit chapter.<br> <br> </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_iii">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_iii">  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_tracking_files','ProGit');">
                         Tracking New Files </a>  - perform all steps </li>
-                    <li id="Section_7_Item_4_b_iv">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>:  Push the pre-existing local repo to a remote repo: <ol>
-                        <li class="Instruction_Todo" id="Section_7_Item_4_b_iv_1">|<sup>[.7 pt]</sup>|  Create a remote repository on the git server called
+                    <li id="Section_7_Item_4_b_iv">  <u>Exercise</u>:  Push the pre-existing local repo to a remote repo: <ol>
+                        <li class="Instruction_Todo" id="Section_7_Item_4_b_iv_1">  Create a remote repository on the git server called
                           <span class="File_Name">progit-chapter-2-2</span>.   Follow the instructions in Appendix II <a
                             href="#How_to_Create_New_Remote_Repository">"How to Create New Remote Repository" </a> </li>
-                        <li class="Instruction_Todo" id="Section_7_Item_4_b_iv_2">|<sup>[.7 pt]</sup>|  To connect your local repo to the remote repo do as
+                        <li class="Instruction_Todo" id="Section_7_Item_4_b_iv_2">  To connect your local repo to the remote repo do as
                           shown below, where <code class="Shell_Code_Input"></code> <code class="Shell_Code_Input"></code> is the full URL of the remote
                           repo.<br>
                           <table class="Code_Example">
@@ -537,35 +537,35 @@
                         </li>
                       </ol>
                     </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_v">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_v">  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Tracking-New-Files','ProGit');">
                       </a> <a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_staging_modified_files','ProGit');">
                         Staging Modified Files </a> - perform all steps<br> <br> <em>Note:</em>  When the book discusses making changes to various files, just
                       make any small change to each file.<br> </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_vi">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG: <a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_vi">  <u>Exercise</u>: PG: <a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_short_status','ProGit');"> Short
                         Status </a> - perform all steps </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_vii">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG: <a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_vii">  <u>Exercise</u>: PG: <a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring','ProGit');"> Ignoring
                         Files </a> - perform all steps </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_viii">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG: <a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_viii">  <u>Exercise</u>: PG: <a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_git_diff_staged','ProGit');">
                         Viewing Your Staged and Unstaged Changes </a>  - perform all steps<br> <em> <br> Note: </em>  When the book discusses making changes to
                       various files, just make any small change to each file.<br> </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_ix">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_ix">  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_committing_changes','ProGit');">
                         Committing Your Change </a> - perform all steps </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_x">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_x">  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_skipping_the_staging_area','ProGit');">
                         Skipping the Staging Area </a> - perform all steps </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_xi">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_xi">  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_removing_files','ProGit');">
                         Removing Files </a> - perform all steps </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_xii">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_xii">  <u>Exercise</u>: PG:<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_git_mv','ProGit');"> Moving Files
                       </a> - perform all steps </li>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_b_xiii">|<sup>[1.5 pt]</sup>|  <u>Exercise</u>:  Push the updates to remote remote repo:
+                    <li class="Instruction_Todo" id="Section_7_Item_4_b_xiii">  <u>Exercise</u>:  Push the updates to remote remote repo:
                       <table class="Code_Example">
                         <tbody style="height: 50px;">
                           <tr>
@@ -581,23 +581,23 @@
                     </li>
                   </ol>
                 </li>
-                <li id="Section_7_Item_4_c">|<sup>[19.2 pt]</sup>|   Read ProGit 2.3 <ol>
-                    <li class="Instruction_Todo" id="Section_7_Item_4_c_i">|<sup>[9.6 pt]</sup>|  <u>Exercise</u>: PG: <a class="WindowOpenLeft"
+                <li id="Section_7_Item_4_c">   Read ProGit 2.3 <ol>
+                    <li class="Instruction_Todo" id="Section_7_Item_4_c_i">  <u>Exercise</u>: PG: <a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History','ProGit');"> Viewing the Commit History
                       </a><br> <br> Do the first two exercises, cloning simplegit-progit into: <br>
                       <div align="center"><span class="File_Name">git-tutorial\simplegit-progit</span></div> <u>Stop</u> at the chapter's instruction “$ git log
                       -p -2“.
                     </li>
-                    <li id="Section_7_Item_4_c_ii">|<sup>[9.6 pt]</sup>|   <u>Exercise:</u> Forking simplegit-progit<br> <i>Forking</i> is a more advanced
+                    <li id="Section_7_Item_4_c_ii">   <u>Exercise:</u> Forking simplegit-progit<br> <i>Forking</i> is a more advanced
                       concept used to contribute to a project developed by someone else. Forking is used when the original developer has made the project
                       available on a remote repo from which you may git clone, but to which you do <u>not</u> have permission to push. In many fork workflows,
                       your forked copy would reside on the same git server hosting the developer's remote repo. However, in this exercise you will use an
                       alternate fork workflow where your forked copy resides on the git server used in this course while the developer's repo resides on GitHub.
                       To fork simplegit-progit do as follows: <ol>
-                        <li class="Instruction_Todo" id="Section_7_Item_4_c_ii_1">|<sup>[4.8 pt]</sup>|  Create a remote repository on this course's git server
+                        <li class="Instruction_Todo" id="Section_7_Item_4_c_ii_1">  Create a remote repository on this course's git server
                           called <span class="File_Name">simplegit-progit</span>. Follow the instructions in Appendix II <a
                             href="#How_to_Create_New_Remote_Repository">"How to Create New Remote Repository" </a> </li>
-                        <li class="Instruction_Todo" id="Section_7_Item_4_c_ii_2">|<sup>[4.8 pt]</sup>|  Next do as follows: <table class="Code_Example">
+                        <li class="Instruction_Todo" id="Section_7_Item_4_c_ii_2">  Next do as follows: <table class="Code_Example">
                             <tbody style="height: 150px;">
                               <tr>
                                 <td> <button onclick="Code_Example_Toggle('Code_Example_0_3ai');">▽ </button> </td>
@@ -624,7 +624,7 @@
                 </li>
               </ol>
             </li>
-            <li data-point-fraction="5" class="Instruction_Todo" id="Section_7_Item_5">|<sup>[4.8 pt]</sup>|   <u> Exercise:</u> Verify all your remote
+            <li data-point-fraction="5" class="Instruction_Todo" id="Section_7_Item_5">   <u> Exercise:</u> Verify all your remote
               repositories on the course's git server following the instructions in Section <a href="#Verify_Your_Remote_Repository"> Verify Your Remote
                 Repository </a>. </li>
           </ol>
@@ -637,7 +637,7 @@
             <!--                  For most courses, students must ask the professor via              email for permission to perform this micro tutorial and to skip the              full git tutorial.&nbsp; (At the professor's discretion, in certain              advanced courses, all students will be directly instructed to just              perform the Micro Git Tutorial).               -->
           </p>
           <ol class="Instruction">
-            <li class="Instruction_Todo" id="Section_8_Item_1">|<sup>[1.3 pt]</sup>|  <u>Exercise</u><strong>:  </strong>This tutorial and all later projects in
+            <li class="Instruction_Todo" id="Section_8_Item_1">  <u>Exercise</u><strong>:  </strong>This tutorial and all later projects in
               the course, assume you have created a 'course' directory that will contain further sub-directories, one subdirectory per tutorial or project.  
               You should create the course directory now.   Name the course directory using your course number, such as "ITCS_<span class=""
                 data-course-number="">3120</span>".   In this and later assignments the bash code examples will use the name ITCS_<span class=""
@@ -660,7 +660,7 @@
                 </tbody>
               </table>
             </li>
-            <li class="Instruction_Todo" id="Section_8_Item_2">|<sup>[1.3 pt]</sup>|  <u>Exercise</u><strong>:  </strong> Create a sub-directory for this
+            <li class="Instruction_Todo" id="Section_8_Item_2">  <u>Exercise</u><strong>:  </strong> Create a sub-directory for this
               tutorial called 'git-micro-tutorial' and cd into that directory.  Do all the exercises in the ProGit book inside that directory. <br>
               <table class="Code_Example">
                 <tbody style="height: 75px;">
@@ -680,35 +680,35 @@
                 </tbody>
               </table>
             </li>
-            <li id="Section_8_Item_3">|<sup>[1.3 pt]</sup>|  <u>Exercise</u><strong>:  </strong>Shell / Git Setup<strong><br> </strong>The first time git is
+            <li id="Section_8_Item_3">  <u>Exercise</u><strong>:  </strong>Shell / Git Setup<strong><br> </strong>The first time git is
               used in bash (or in another equivalent shell)<strong>, </strong>you<strong> </strong>need to perform some git configuration steps<strong>.  
               </strong>If you<strong> </strong>installed bash<strong> </strong>for the first time<strong> </strong>on your computer, or if you are using git for
               the first time within another shell that you chose, then you need to perform the following:<br>
               <ol>
-                <li id="Section_8_Item_3_a">|<sup>[1.3 pt]</sup>|  Read ProGit 1.6.  This chapter subsection and do the subsection's described exercises in the
+                <li id="Section_8_Item_3_a">  Read ProGit 1.6.  This chapter subsection and do the subsection's described exercises in the
                   shell:<u><br> </u>
                   <ol>
-                    <li class="Instruction_Todo" id="Section_8_Item_3_a_i">|<sup>[.4 pt]</sup>|  <u>Exercise</u><b>:  </b>PG:“<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_8_Item_3_a_i">  <u>Exercise</u><b>:  </b>PG:“<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity','ProGit');">Your Identity
                       </a>” - perform all steps</li>
-                    <li class="Instruction_Todo" id="Section_8_Item_3_a_ii">|<sup>[.4 pt]</sup>|  <u>Exercise</u><strong>:  </strong>PG:<strong></strong>“ <a
+                    <li class="Instruction_Todo" id="Section_8_Item_3_a_ii">  <u>Exercise</u><strong>:  </strong>PG:<strong></strong>“ <a
                         class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_editor','ProGit');">Your Editor </a>” -
                       perform all steps<em><br> Note</em>: use whatever simple editor you prefer (notepad.exe perhaps)</li>
-                    <li class="Instruction_Todo" id="Section_8_Item_3_a_iii">|<sup>[.4 pt]</sup>|  <u>Exercise</u>:  PG:“<a class="WindowOpenLeft"
+                    <li class="Instruction_Todo" id="Section_8_Item_3_a_iii">  <u>Exercise</u>:  PG:“<a class="WindowOpenLeft"
                         onclick="windowOpenLeft('http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_checking_your_settings','ProGit');">Checking
                         Your Settings </a>” - perform all steps </li>
                   </ol>
                 </li>
               </ol> <strong><br> </strong>
             </li>
-            <li class="Instruction_Todo" id="Section_8_Item_4">|<sup>[1.3 pt]</sup>|  <u>Exercise</u><strong>:  </strong>Create and Setup Git Server Access.<br>
+            <li class="Instruction_Todo" id="Section_8_Item_4">  <u>Exercise</u><strong>:  </strong>Create and Setup Git Server Access.<br>
               Create and setup your account on the Git server used in your class and setup the recommended git client access method as described in the Appendix
               I <a href="#Git_Server_Access">Git_Server_Access</a>,   Then use the shell you opened when following that section’s instructions to perform the
               next steps.</li>
-            <li class="Instruction_Composite" id="Section_8_Item_5">|<sup>[1.3 pt]</sup>|   Create a new <u>remote</u> repo: <ol
+            <li class="Instruction_Composite" id="Section_8_Item_5">   Create a new <u>remote</u> repo: <ol
                 class="Instruction_Option Instruction_Todo">
-                <li id="Section_8_Item_5_a">|<sup>[1.3 pt]</sup>|   [<em>YourServer</em>=<strong>cci-git</strong>] <div class="Server_Cci_Git"> Create new
+                <li id="Section_8_Item_5_a">   [<em>YourServer</em>=<strong>cci-git</strong>] <div class="Server_Cci_Git"> Create new
                     remote repo on cci-git called,<span class="File_Name"> git-micro-tutorial</span>. using the procedures of Appendix I-3 <a
                       href="#Git_Server_Access">Git_Server_Access</a>.<br>   <br> Do not forget to to <strong><u>share</u></strong> your repo with the TA and
                     Professor (as discussed in the Appendix section <a href="#Basic_Git_Operations">Basic Git Operations).</a></div>
@@ -716,10 +716,10 @@
                 <!--                            <li> [<em>YourServer</em>=<strong>Bitbucket</strong>]                <div class="Server_Bitbucket"> <br>                  Create new remote repo on Bitbucket called,<span class="File_Name">                    git-micro-tutorial </span> . This is best done using the                  Web Browser interface to the server. Review&nbsp; <a href="#Bitbucket_URL_List">                    Bitbucket Server URL </a> and Section&nbsp;<a href="#Basic_Git_Operations">                    Basic Git Operations </a> on repo creation.&nbsp; Make sure                  to <strong><u>share</u></strong> it with the TA and Dr.                  Wartell’s Bitbucket accounts. <br>                  <br>                </div>              </li>              -->
               </ol>
             </li>
-            <li class="Instruction_Composite" id="Section_8_Item_6">|<sup>[1.3 pt]</sup>|   Create <u>local</u> repo and link to the new <u>remote</u> repo:<br>
+            <li class="Instruction_Composite" id="Section_8_Item_6">   Create <u>local</u> repo and link to the new <u>remote</u> repo:<br>
               <br> In the instructions below, for input <span class="User_Input">URL of remote repo</span> use the URL as listed on the server (see Appendix
               section <a href="#Basic_Git_Operations">Basic Git Operations).</a> for details). <ol class="Instruction_Option Instruction_Todo">
-                <li id="Section_8_Item_6_a">|<sup>[1.3 pt]</sup>|   [<em>YourServer</em>=<strong>cci-git</strong>]      <br> <br> </li>
+                <li id="Section_8_Item_6_a">   [<em>YourServer</em>=<strong>cci-git</strong>]      <br> <br> </li>
                 <!--                            <li> [<em>YourServer</em>=<strong>bitbucket</strong>]&nbsp;&nbsp;                git@bitbucket.org:<span class="User_Input">your_user_id</span>              </li>              -->
               </ol>
               <table class="Code_Example" id="Code_Example_6_3">
@@ -738,7 +738,7 @@
                 </tbody>
               </table>
             </li>
-            <li class="Instruction_Todo" id="Section_8_Item_7">|<sup>[1.3 pt]</sup>|   Create a new file:<br>
+            <li class="Instruction_Todo" id="Section_8_Item_7">   Create a new file:<br>
               <table class="Code_Example" id="Code_Example_6_4">
                 <tbody style="height: 25px;">
                   <tr>
@@ -752,7 +752,7 @@
                 </tbody>
               </table>
             </li>
-            <li class="Instruction_Todo" id="Section_8_Item_8">|<sup>[1.3 pt]</sup>|   Add, commit and push to the Git server remote repo. <table
+            <li class="Instruction_Todo" id="Section_8_Item_8">   Add, commit and push to the Git server remote repo. <table
                 class="Code_Example" id="Code_Example_6_5">
                 <tbody>
                   <tr>
@@ -773,7 +773,7 @@
                 </tbody>
               </table>
             </li>
-            <li class="Instruction_Todo" id="Section_8_Item_9">|<sup>[1.3 pt]</sup>|   Verify your Git server’s remote repository.  (See Section 9.3 <a
+            <li class="Instruction_Todo" id="Section_8_Item_9">   Verify your Git server’s remote repository.  (See Section 9.3 <a
                 href="#Verify_Your_Remote_Repository"> Verify Your Remote Repository </a> ). </li>
           </ol>
           <p><strong>This completes the Micro Git Tutorial.</strong></p>
@@ -1963,7 +1963,7 @@
             <h2 class="Appendix" id="How_to_Create_New_Remote_Repository">How to Create New Remote Repository</h2> Whenever you need to create new remote
             repository, use the procedure below. <!--   <em> Instructions below vary based on your server.</em> -->
             <ol class="Instruction Instruction_NonRubric">
-              <li id="Section_12_1_Item_1">|<sup>[120 pt]</sup>|  <a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
+              <li id="Section_12_1_Item_1">  <a name="_Ref431823815">[<em>YourServer</em><b>=cci-git</b>]</a>
                 <div class="Server_Cci_Git">
                   <ol>
                     <li> Login to the cci-git.charlotte.edu Web Server </li>
