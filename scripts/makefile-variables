@@ -1,1 +1,1 @@
-SRC_DIR = "$(ZJWP_PROJECT_GIT_ROOT)/www-site"
+SRC_DIR=$(_ZJWP_PROJECT_GIT_ROOT)/www-site
