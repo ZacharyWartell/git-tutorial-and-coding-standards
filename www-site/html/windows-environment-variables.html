@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>window-environment-variables</title>
+    <style>
+       header
+      	{
+          	text-align:center;
+          	font-weight:bold;
+            border: solid 1px black;
+      	}
+    </style>
+  </head>
+  <body> 
+    <header>Source: Microsoft Copilot, 7/25/2025</header>
+    <h3 data-pm-slice="1 1 []">⚙️ Method 1: Using the GUI (System Properties)</h3>
+    <ol>
+      <li>
+        <p><strong>Open System Properties</strong></p>
+        <ul data-tight="true">
+          <li>
+            <p>Press <code>Win + R</code>, type <a href="https://sysdm.cpl"><code>sysdm.cpl</code></a>, and hit Enter.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Go to Environment Variables</strong></p>
+        <ul data-tight="true">
+          <li>
+            <p>In the “System Properties” window, click the <strong>Advanced</strong> tab, then hit the <strong>Environment Variables</strong> button at the
+              bottom.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Create or Edit Variables</strong></p>
+        <ul data-tight="true">
+          <li>
+            <p>For a <strong>user variable</strong>, select your name under the top list.</p>
+          </li>
+          <li>
+            <p>For a <strong>system-wide variable</strong>, use the bottom list (requires admin rights).</p>
+          </li>
+          <li>
+            <p>Click <strong>New</strong> to create a variable, or <strong>Edit</strong> to modify an existing one.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Input Details</strong></p>
+        <ul data-tight="true">
+          <li>
+            <p>Set the <strong>Variable Name</strong> (e.g., <code>MY_VAR</code>) and <strong>Variable Value</strong> (e.g., <code>C:\MyPath</code>).</p>
+          </li>
+          <li>
+            <p>Click <strong>OK</strong> to save and close all dialogs.</p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <div>
+      <hr></div>
+    <h3>💻 Method 2: Using the Command Line</h3>
+    <h4>✅ To set a variable for the current session:</h4>
+    <pre data-params="cmd"><code>set MY_VAR=C:\MyPath</code></pre>
+    <h4>🧱 To make it permanent (registry-based):</h4>
+    <pre data-params="cmd"><code>setx MY_VAR "C:\MyPath"</code></pre>
+    <ul data-tight="true">
+      <li>
+        <p><code>setx</code> writes to the registry, so the variable persists across sessions.</p>
+      </li>
+      <li>
+        <p>Note: Changes from <code>setx</code> won't be visible in the current session—you'll need to restart your terminal.</p>
+      </li>
+    </ul>
+    <div>
+      <hr></div>
+    <h3>🧪 Bonus: Check If It’s Set</h3>
+    <ul data-tight="true">
+      <li>
+        <p>In Command Prompt:</p>
+      </li>
+    </ul>
+    <pre data-params="cmd"><code>echo %MY_VAR%</code></pre>
+    <p>Or use <a href="https://SystemPropertiesAdvanced.exe"><code>SystemPropertiesAdvanced.exe</code></a> to visually confirm from the GUI.</p>
+    <p>Want to script this via PowerShell or roll it into a batch operation? I can help craft something precise for you.</p>
+    <p></p>
+  </body>
+</html>
