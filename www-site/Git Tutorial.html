@@ -48,7 +48,7 @@
       await ZxW_GUI.DefaultApplication.fetchUserDocument(app, "Git Tutorial.zxw-doc.html");
       window.BreadCrumb = Rubric.BreadCrumb;
       CAW.main(120);
-      
+
       window.Visibility_Toggle = CAW.Visibility_Toggle; 
       console.log("window.rubricMain");
 
@@ -60,10 +60,10 @@
       window.addEventListener("hashchange", (event) => 
       {
         /*
-          alert(            
-      `"hashchange" 
-      location: ${document.location}, event: ${JSON.stringify(event)}`,); 
-      */
+          alert(
+            `"hashchange" 
+            location: ${document.location}, event: ${JSON.stringify(event)}`,); 
+        */
         console.log(event);        
         let split = event.newURL.split("#");
         let e = document.getElementById(split[1]);        
@@ -78,9 +78,11 @@
         //   document.getElementById(event.newURL.split("#")[1]).scrollIntoView();           
         //   console.log("2:",event.newURL.split("#")[1]);
         // }
-            
-      });      
-      
+      });
+
+      /**
+       *  developer tool | scroll to the cursor element
+       */
       const c = document.getElementById("cursor");
       if (c !== null) c.scrollIntoView();           
     </script>
