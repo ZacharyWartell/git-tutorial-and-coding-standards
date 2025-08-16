@@ -28,17 +28,17 @@
     <!-- END:  ZxW MVC <head> -->
       
     <!-- BEGIN:  ZJWGI <head> -->
-    <link href="css/zjwgi/GUI.css" rel="stylesheet" type="text/css">
-    <link href="css/zjwgi/generic_instructions.css" rel="stylesheet" type="text/css">
-    <link href="css/zjwgi/ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
-    <link media="print" href="css/zjwgi/generic_instructions-print.css" rel="stylesheet" type="text/css">
-    <script src="scripts/zjwgi/generic_instructions.js"></script>
+    <link href="modules/zjw-generic-instructions/css/GUI.css" rel="stylesheet" type="text/css">
+    <link href="modules/zjw-generic-instructions/css/generic_instructions.css" rel="stylesheet" type="text/css">
+    <link href="modules/zjw-generic-instructions/css/ClassAssignmentWartell.css" rel="stylesheet" type="text/css">
+    <link media="print" href="modules/zjw-generic-instructions/css/generic_instructions-print.css" rel="stylesheet" type="text/css">
+    <script src="modules/zjw-generic-instructions/scripts/generic_instructions.js"></script>
     <!-- END:  ZxW MVC <head> -->
 
     <script type="module" lang="javascript">      
       import * as ZxW_GUI from "ZxW_GUI";
-      import * as Rubric from "./scripts/zjwgi/Rubric.js";
-      import * as CAW from "./scripts/zjwgi/ClassAssignmentWartell.js";
+      import * as Rubric from "./modules/zjw-generic-instructions/scripts/Rubric.js";
+      import * as CAW from "./modules/zjw-generic-instructions/scripts/ClassAssignmentWartell.js";
 
       class App extends ZxW_GUI.DefaultApplication
       {
