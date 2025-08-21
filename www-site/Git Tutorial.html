@@ -48,14 +48,6 @@
       await ZxW_GUI.DefaultApplication.fetchUserDocument(app, "Git Tutorial.zxw-doc.html");
       window.BreadCrumb = Rubric.BreadCrumb;
       CAW.main(120);
-
-      window.Visibility_Toggle = CAW.Visibility_Toggle; 
-      console.log("window.rubricMain");
-
-      document.getElementById("Instructor_Mode").addEventListener('change', (e) => {
-        Visibility_Toggle('Instructor_Mode', e.target.checked); Visibility_Toggle('Staff_Only', e.target.checked); document.getElementById("fileMenu").disabled
-          = !e.target.checked;
-      }); 
       
       window.addEventListener("hashchange", (event) => 
       {
