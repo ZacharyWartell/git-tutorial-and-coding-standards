@@ -1,7 +1,3 @@
-[submodule "scripts/gitlab-student-repos"]
-	path = scripts/gitlab-student-repos
-	url = https://cci-git.charlotte.edu/zwartell/gitlab-student-repos.git
-	branch = main
 [submodule "git-modules/zjw-pwa-template.git"]
 	path = git-modules/zjw-pwa-template.git
 	url = git@gitlab.com:/zachary-wartell-public/zjw-pwa-template.git
