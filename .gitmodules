@@ -4,7 +4,7 @@
 	branch = main
 [submodule "git-modules/zjw-pwa-template.git"]
 	path = git-modules/zjw-pwa-template.git
-	url = https://gitlab.com/zachary-wartell-public/zjw-pwa-template.git
+	url = git@gitlab.com:/zachary-wartell-public/zjw-pwa-template.git
 	branch = main
 [submodule "git-modules/zjw-git-modules.git"]
 	path = git-modules/zjw-git-modules.git
