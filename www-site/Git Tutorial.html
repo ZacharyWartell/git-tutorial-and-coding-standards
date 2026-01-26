@@ -53,8 +53,9 @@
       console.log("window.rubricMain");
 
       document.getElementById("Instructor_Mode").addEventListener('change', (e) => {
-        Visibility_Toggle('Instructor_Mode', e.target.checked); Visibility_Toggle('Staff_Only', e.target.checked); document.getElementById("fileMenu").disabled
-          = !e.target.checked;
+        Visibility_Toggle('Instructor_Mode', e.target.checked);
+        Visibility_Toggle('Staff_Only', e.target.checked); 
+        document.getElementById("fileMenu").disabled = !e.target.checked;
       }); 
       
       window.addEventListener("hashchange", (event) => 
@@ -81,7 +82,7 @@
       });
 
       /**
-       *  developer tool | scroll to the cursor element
+       *  developer tool - scrolls to the element with id="cursor"
        */
       const c = document.getElementById("cursor");
       if (c !== null) c.scrollIntoView();           
@@ -93,7 +94,9 @@
                 "courseNumber" : "3120",
                 "number" : "t1",
                 "numberLongDir" : "3120-t1-git-tutorial",
-                "name" : "git-tutorial"
+                "name" : "git-tutorial",
+                "gitServerOptionA": "softspoken-sailor.metalseed.io",
+                "gitServerOptionB": "cci-git.charlotte.edu"
             }
         }
     </script>
