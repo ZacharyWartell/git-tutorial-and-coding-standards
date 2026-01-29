@@ -16,4 +16,4 @@
 	branch = master
 [submodule "git-modules/zxw-env.git"]
 	path = git-modules/zxw-env.git
-	url = git@gitlab.com:/zachary-wartell/zxw-env.git
+	url = git@github.com:ZacharyWartell/zxw-env.git
