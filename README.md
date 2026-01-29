@@ -8,20 +8,8 @@ License:
 <br>
 </div>
 
-Instructions and interactive grading rubric for a Git tutorial based on readings in https://git-scm.com/book/en/v2 along with instructions for various Git 'best-practices' required in Dr. Wartell's course work and research projects.
+Instructions and interactive grading rubric for a VS Code IDE configuration and setup for Dr. Wartell's courses plus a graded tutorial based on readings in [https://code.visualstudio.com/]
 
 - WWW: 
     - https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html    
-- GIT: https://github.com/ZacharyWartell/git-tutorial-and-coding-standards.git
-
-
-# Installation
-
-```
-[CLI Shell]
-$ git clone https://github.com/ZacharyWartell/git-tutorial-and-coding-standards.git
-$ git submodule init
-$ git submodule update
-
-... other stuff needs redocumentation ...
-
+- GIT: git@github.com:ZacharyWartell/zxw-git-modules.git
