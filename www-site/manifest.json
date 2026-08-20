@@ -1,10 +1,9 @@
 {
     "name": "git-tutorial",
     "short_name": "git-tutorial",
-    "version": "2.1.35",
+    "version": "2.1.38",
     "description": "",
-    "start_url": "/https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html",
-    // "start_url": "/",
+    "start_url": "/https://webpages.charlotte.edu/zwartell/Teaching/Git%20Tutorial/Git%20Tutorial.html",    
     "theme_color": "#eeffee",
     "background_color": "#eeffee",
     "display": "standalone",
